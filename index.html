@@ -69,6 +69,10 @@
     overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
   }
   .team.away .team-name { text-align:right; }
+  .team-code {
+    font-size:10px; font-weight:700; color:#94a3b8; background:#f1f5f9;
+    border-radius:4px; padding:1px 5px; letter-spacing:0.03em; flex-shrink:0;
+  }
   .score-box { min-width:54px; text-align:center; font-weight:700; font-size:18px; color:#1a1a2e; }
   .score-box.live { color:#CC0000; }
   .match-meta { display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:11px; color:#64748b; }
@@ -78,6 +82,32 @@
   .group-tag { background:#f1f5f9; border-radius:4px; padding:1px 6px; font-weight:600; }
   .empty-state { background:#fff; border-radius:12px; padding:30px; text-align:center; color:#94a3b8; }
   .footer { text-align:center; color:#64748b; font-size:11px; margin-top:24px; padding:0 24px; }
+  .search-wrap { padding:18px 24px 0; }
+  .search-box {
+    position:relative; max-width:480px; margin:0 auto;
+  }
+  .search-input {
+    width:100%; padding:13px 44px 13px 44px; border-radius:24px; border:none;
+    background:#1a1a1a; color:#fff; font-size:14px; font-family:inherit;
+    outline:none; box-shadow:0 0 0 1px #2a2a2a;
+    transition:box-shadow 0.15s;
+  }
+  .search-input:focus { box-shadow:0 0 0 2px #FFD700; }
+  .search-input::placeholder { color:#6b7280; }
+  .search-icon {
+    position:absolute; left:16px; top:50%; transform:translateY(-50%);
+    font-size:15px; opacity:0.6; pointer-events:none;
+  }
+  .search-clear {
+    position:absolute; right:14px; top:50%; transform:translateY(-50%);
+    background:none; border:none; color:#6b7280; font-size:16px; cursor:pointer;
+    display:none; padding:4px;
+  }
+  .search-clear.visible { display:block; }
+  .search-results-label {
+    text-align:center; color:#94a3b8; font-size:12px; margin-top:10px;
+  }
+  .search-results-label b { color:#FFD700; }
 </style>
 </head>
 <body>
@@ -93,6 +123,15 @@
     <div class="clock-label">Hora Argentina</div>
     <div class="clock-value" id="clock">--:--</div>
   </div>
+</div>
+
+<div class="search-wrap">
+  <div class="search-box">
+    <span class="search-icon">🔎</span>
+    <input type="text" class="search-input" id="search-input" placeholder="Buscar país o código FIFA (ej: Argentina, ARG...)" autocomplete="off">
+    <button class="search-clear" id="search-clear">✕</button>
+  </div>
+  <div class="search-results-label" id="search-label"></div>
 </div>
 
 <div class="stats-bar" id="stats-filters">
@@ -139,6 +178,23 @@ const ES_NAMES = {
   'ARGENTINA':'ARGENTINA','ALGERIA':'ARGELIA','AUSTRIA':'AUSTRIA','JORDAN':'JORDANIA',
   'PORTUGAL':'PORTUGAL','CONGO DR':'CONGO RD','COLOMBIA':'COLOMBIA','UZBEKISTAN':'UZBEKISTÁN',
   'ENGLAND':'INGLATERRA','GHANA':'GHANA','CROATIA':'CROACIA','PANAMA':'PANAMÁ',
+};
+
+// Official FIFA 3-letter codes for quick search (e.g. "MEX" finds Mexico)
+const COUNTRY_CODES = {
+  'MEXICO':['MEX'],'SOUTH AFRICA':['RSA'],'CANADA':['CAN'],
+  'BOSNIA & HERZEGOVINA':['BIH'],'SOUTH KOREA':['KOR'],'CZECHIA':['CZE'],
+  'USA':['USA'],'PARAGUAY':['PAR'],'QATAR':['QAT'],'SWITZERLAND':['SUI'],
+  'AUSTRALIA':['AUS'],'TURKIYE':['TUR'],'MOROCCO':['MAR'],'BRAZIL':['BRA'],
+  'HAITI':['HAI'],'SCOTLAND':['SCO'],'GERMANY':['GER'],'CURACAO':['CUW'],
+  'NETHERLANDS':['NED'],'JAPAN':['JPN'],'IVORY COAST':['CIV'],'ECUADOR':['ECU'],
+  'SWEDEN':['SWE'],'TUNISIA':['TUN'],'SPAIN':['ESP'],'CAPE VERDE':['CPV'],
+  'BELGIUM':['BEL'],'EGYPT':['EGY'],'SAUDI ARABIA':['KSA'],'URUGUAY':['URU'],
+  'IRAN':['IRN'],'NEW ZEALAND':['NZL'],'FRANCE':['FRA'],'SENEGAL':['SEN'],
+  'IRAQ':['IRQ'],'NORWAY':['NOR'],'ARGENTINA':['ARG'],'ALGERIA':['ALG'],
+  'AUSTRIA':['AUT'],'JORDAN':['JOR'],'PORTUGAL':['POR'],'CONGO DR':['COD'],
+  'COLOMBIA':['COL'],'UZBEKISTAN':['UZB'],'ENGLAND':['ENG'],'GHANA':['GHA'],
+  'CROATIA':['CRO'],'PANAMA':['PAN'],
 };
 
 const SCHEDULE = [
@@ -218,6 +274,7 @@ const SCHEDULE = [
 
 function flag(name){ return FLAGS[name] || '🏳'; }
 function esName(name){ return ES_NAMES[name] || name; }
+function countryCode(name){ return (COUNTRY_CODES[name] || [name.slice(0,3)])[0]; }
 function matchKey(home, away){ return home.toUpperCase() + '-' + away.toUpperCase(); }
 
 function utcToAR(utcStr){
@@ -241,6 +298,7 @@ function statusLabel(apiStatus, elapsed){
 let liveData = {};
 let lastUpdate = null;
 let currentFilter = 'all';
+let searchTerm = '';
 
 function buildMatchCard(m) {
   const key = matchKey(m.home, m.away);
@@ -292,11 +350,13 @@ function buildMatchCard(m) {
         '<div class="team">' +
           '<span class="team-flag">' + flag(m.home) + '</span>' +
           '<span class="team-name">' + esName(m.home) + '</span>' +
+          '<span class="team-code">' + countryCode(m.home) + '</span>' +
         '</div>' +
         '<div class="' + scoreClass + '">' + scoreText + '</div>' +
         '<div class="team away">' +
           '<span class="team-flag">' + flag(m.away) + '</span>' +
           '<span class="team-name">' + esName(m.away) + '</span>' +
+          '<span class="team-code">' + countryCode(m.away) + '</span>' +
         '</div>' +
       '</div>' +
       '<div class="match-meta">' +
@@ -328,6 +388,17 @@ function render() {
   const todayAR = toARDateStr(new Date().toISOString());
 
   const filtered = SCHEDULE.filter(m => {
+    if (searchTerm) {
+      const homeCodes = COUNTRY_CODES[m.home] || [];
+      const awayCodes = COUNTRY_CODES[m.away] || [];
+      const homeMatch = esName(m.home).toLowerCase().includes(searchTerm)
+        || m.home.toLowerCase().includes(searchTerm)
+        || homeCodes.some(c => c.toLowerCase() === searchTerm);
+      const awayMatch = esName(m.away).toLowerCase().includes(searchTerm)
+        || m.away.toLowerCase().includes(searchTerm)
+        || awayCodes.some(c => c.toLowerCase() === searchTerm);
+      return homeMatch || awayMatch;
+    }
     const status = getEffectiveStatus(m);
     const isToday = toARDateStr(m.kickoffUTC) === todayAR;
     if (currentFilter === 'all') return true;
@@ -359,16 +430,30 @@ function render() {
   document.getElementById('stat-total').textContent = SCHEDULE.length;
 
   let html = '';
-  const groupKeys = Object.keys(grouped).sort();
-  if (groupKeys.length === 0) {
-    html = '<div class="empty-state">No hay partidos en esta vista</div>';
+  if (searchTerm) {
+    const sorted = filtered.slice().sort((a,b) => new Date(a.kickoffUTC) - new Date(b.kickoffUTC));
+    if (sorted.length === 0) {
+      html = '<div class="empty-state">No se encontraron partidos para "' + searchTerm + '"</div>';
+      document.getElementById('search-label').innerHTML = '';
+    } else {
+      html += '<div class="match-grid">';
+      sorted.forEach(m => { html += buildMatchCard(m); });
+      html += '</div>';
+      document.getElementById('search-label').innerHTML = '<b>' + sorted.length + '</b> partido' + (sorted.length !== 1 ? 's' : '') + ' encontrado' + (sorted.length !== 1 ? 's' : '');
+    }
   } else {
-    groupKeys.forEach(g => {
-      const matches = grouped[g].sort((a,b) => new Date(a.kickoffUTC) - new Date(b.kickoffUTC));
-      html += '<div class="group-block"><div class="group-label">GRUPO ' + g + '</div><div class="match-grid">';
-      matches.forEach(m => { html += buildMatchCard(m); });
-      html += '</div></div>';
-    });
+    document.getElementById('search-label').innerHTML = '';
+    const groupKeys = Object.keys(grouped).sort();
+    if (groupKeys.length === 0) {
+      html = '<div class="empty-state">No hay partidos en esta vista</div>';
+    } else {
+      groupKeys.forEach(g => {
+        const matches = grouped[g].sort((a,b) => new Date(a.kickoffUTC) - new Date(b.kickoffUTC));
+        html += '<div class="group-block"><div class="group-label">GRUPO ' + g + '</div><div class="match-grid">';
+        matches.forEach(m => { html += buildMatchCard(m); });
+        html += '</div></div>';
+      });
+    }
   }
   document.getElementById('matches').innerHTML = html;
 
@@ -412,6 +497,23 @@ document.getElementById('filters').addEventListener('click', (e) => {
   const btn = e.target.closest('.filter-btn');
   if (!btn) return;
   setActiveFilter(btn.dataset.filter);
+});
+
+const searchInput = document.getElementById('search-input');
+const searchClear = document.getElementById('search-clear');
+
+searchInput.addEventListener('input', (e) => {
+  searchTerm = e.target.value.trim().toLowerCase();
+  searchClear.classList.toggle('visible', searchTerm.length > 0);
+  render();
+});
+
+searchClear.addEventListener('click', () => {
+  searchInput.value = '';
+  searchTerm = '';
+  searchClear.classList.remove('visible');
+  render();
+  searchInput.focus();
 });
 
 updateClock();
