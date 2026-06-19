@@ -1,1 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mundial 2026 - Fixture en Vivo</title>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:#0a0e1a;
+    color:#1a1a2e;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .scroll::-webkit-scrollbar { width:6px; }
+  .scroll::-webkit-scrollbar-thumb { background:#003087; border-radius:3px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
 
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+// ── DATA: Fixture schedule (static) ────────────────────────────────────────
+const FLAGS = {
+  'MEXICO':'🇲🇽','SOUTH AFRICA':'🇿🇦','CANADA':'🇨🇦','BOSNIA & HERZEGOVINA':'🇧🇦','SOUTH KOREA':'🇰🇷',
+  'CZECHIA':'🇨🇿','USA':'🇺🇸','PARAGUAY':'🇵🇾','QATAR':'🇶🇦','SWITZERLAND':'🇨🇭',
+  'AUSTRALIA':'🇦🇺','TURKIYE':'🇹🇷','MOROCCO':'🇲🇦','BRAZIL':'🇧🇷',
+  'HAITI':'🇭🇹','SCOTLAND':'🏴','GERMANY':'🇩🇪','CURACAO':'🇨🇼',
+  'NETHERLANDS':'🇳🇱','JAPAN':'🇯🇵','IVORY COAST':'🇨🇮','ECUADOR':'🇪🇨',
+  'SWEDEN':'🇸🇪','TUNISIA':'🇹🇳','SPAIN':'🇪🇸','CAPE VERDE':'🇨🇻',
+  'BELGIUM':'🇧🇪','EGYPT':'🇪🇬','SAUDI ARABIA':'🇸🇦','URUGUAY':'🇺🇾',
+  'IRAN':'🇮🇷','NEW ZEALAND':'🇳🇿','FRANCE':'🇫🇷','SENEGAL':'🇸🇳',
+  'IRAQ':'🇮🇶','NORWAY':'🇳🇴','ARGENTINA':'🇦🇷','ALGERIA':'🇩🇿',
+  'AUSTRIA':'🇦🇹','JORDAN':'🇯🇴','PORTUGAL':'🇵🇹','DR CONGO':'🇨🇩',
+  'COLOMBIA':'🇨🇴','UZBEKISTAN':'🇺🇿','ENGLAND':'🏴','GHANA':'🇬🇭',
+  'CROATIA':'🇭🇷','PANAMA':'🇵🇦',
+};
+
+// Display names in Spanish for the UI, keyed same as scores.json keys (UPPERCASE, hyphen-joined)
+const ES_NAMES = {
+  'MEXICO':'MÉXICO','SOUTH AFRICA':'SUDÁFRICA','CANADA':'CANADÁ','BOSNIA & HERZEGOVINA':'BOSNIA',
+  'SOUTH KOREA':'COREA DEL SUR','CZECHIA':'CHEQUIA','USA':'EE.UU.','PARAGUAY':'PARAGUAY',
+  'QATAR':'QATAR','SWITZERLAND':'SUIZA','AUSTRALIA':'AUSTRALIA','TURKIYE':'TURQUÍA',
+  'MOROCCO':'MARRUECOS','BRAZIL':'BRASIL','HAITI':'HAITÍ','SCOTLAND':'ESCOCIA',
+  'GERMANY':'ALEMANIA','CURACAO':'CURAZAO','NETHERLANDS':'PAÍSES BAJOS','JAPAN':'JAPÓN',
+  'IVORY COAST':'COSTA DE MARFIL','ECUADOR':'ECUADOR','SWEDEN':'SUECIA','TUNISIA':'TÚNEZ',
+  'SPAIN':'ESPAÑA','CAPE VERDE':'CABO VERDE','BELGIUM':'BÉLGICA','EGYPT':'EGIPTO',
+  'SAUDI ARABIA':'ARABIA SAUDITA','URUGUAY':'URUGUAY','IRAN':'IRÁN','NEW ZEALAND':'NUEVA ZELANDA',
+  'FRANCE':'FRANCIA','SENEGAL':'SENEGAL','IRAQ':'IRAK','NORWAY':'NORUEGA',
+  'ARGENTINA':'ARGENTINA','ALGERIA':'ARGELIA','AUSTRIA':'AUSTRIA','JORDAN':'JORDANIA',
+  'PORTUGAL':'PORTUGAL','DR CONGO':'CONGO RD','COLOMBIA':'COLOMBIA','UZBEKISTAN':'UZBEKISTÁN',
+  'ENGLAND':'INGLATERRA','GHANA':'GHANA','CROATIA':'CROACIA','PANAMA':'PANAMÁ',
+};
+
+// Static schedule: date/time/stadium per match. Score comes live from scores.json.
+const SCHEDULE = [
+  {home:'MEXICO',away:'SOUTH AFRICA',stadium:'Estadio Azteca',city:'Ciudad de México',kickoffUTC:'2026-06-11T19:00:00Z',group:'A'},
+  {home:'SOUTH KOREA',away:'CZECHIA',stadium:'SoFi Stadium',city:'Los Angeles',kickoffUTC:'2026-06-13T03:00:00Z',group:'A'},
+  {home:'CANADA',away:'BOSNIA & HERZEGOVINA',stadium:'BMO Field',city:'Toronto',kickoffUTC:'2026-06-12T19:00:00Z',group:'B'},
+  {home:'QATAR',away:'SWITZERLAND',stadium:"Levi's Stadium",city:'San Francisco',kickoffUTC:'2026-06-13T19:00:00Z',group:'B'},
+  {home:'BRAZIL',away:'MOROCCO',stadium:'MetLife Stadium',city:'New Jersey',kickoffUTC:'2026-06-13T22:00:00Z',group:'C'},
+  {home:'HAITI',away:'SCOTLAND',stadium:'Gillette Stadium',city:'Boston',kickoffUTC:'2026-06-14T01:00:00Z',group:'C'},
+  {home:'USA',away:'PARAGUAY',stadium:'SoFi Stadium',city:'Los Angeles',kickoffUTC:'2026-06-13T01:00:00Z',group:'D'},
+  {home:'AUSTRALIA',away:'TURKIYE',stadium:'BC Place',city:'Vancouver',kickoffUTC:'2026-06-14T04:00:00Z',group:'D'},
+  {home:'GERMANY',away:'CURACAO',stadium:'NRG Stadium',city:'Houston',kickoffUTC:'2026-06-14T17:00:00Z',group:'E'},
+  {home:'IVORY COAST',away:'ECUADOR',stadium:'Lincoln Financial Field',city:'Philadelphia',kickoffUTC:'2026-06-14T23:00:00Z',group:'E'},
+  {home:'NETHERLANDS',away:'JAPAN',stadium:'AT&T Stadium',city:'Dallas',kickoffUTC:'2026-06-14T20:00:00Z',group:'F'},
+  {home:'SWEDEN',away:'TUNISIA',stadium:'Estadio BBVA',city:'Monterrey',kickoffUTC:'2026-06-15T02:00:00Z',group:'F'},
+  {home:'BELGIUM',away:'EGYPT',stadium:'Lumen Field',city:'Seattle',kickoffUTC:'2026-06-15T19:00:00Z',group:'G'},
+  {home:'IRAN',away:'NEW ZEALAND',stadium:'SoFi Stadium',city:'Los Angeles',kickoffUTC:'2026-06-16T01:00:00Z',group:'G'},
+  {home:'SPAIN',away:'CAPE VERDE',stadium:'Mercedes-Benz Stadium',city:'Atlanta',kickoffUTC:'2026-06-15T16:00:00Z',group:'H'},
+  {home:'SAUDI ARABIA',away:'URUGUAY',stadium:'Hard Rock Stadium',city:'Miami',kickoffUTC:'2026-06-15T22:00:00Z',group:'H'},
+  {home:'FRANCE',away:'SENEGAL',stadium:'MetLife Stadium',city:'New Jersey',kickoffUTC:'2026-06-16T19:00:00Z',group:'I'},
+  {home:'IRAQ',away:'NORWAY',stadium:'Gillette Stadium',city:'Boston',kickoffUTC:'2026-06-16T22:00:00Z',group:'I'},
+  {home:'ARGENTINA',away:'ALGERIA',stadium:'Arrowhead Stadium',city:'Kansas City',kickoffUTC:'2026-06-17T01:00:00Z',group:'J'},
+  {home:'AUSTRIA',away:'JORDAN',stadium:"Levi's Stadium",city:'San Francisco',kickoffUTC:'2026-06-17T04:00:00Z',group:'J'},
+  {home:'PORTUGAL',away:'DR CONGO',stadium:'NRG Stadium',city:'Houston',kickoffUTC:'2026-06-17T17:00:00Z',group:'K'},
+  {home:'COLOMBIA',away:'UZBEKISTAN',stadium:'AT&T Stadium',city:'Dallas',kickoffUTC:'2026-06-17T20:00:00Z',group:'K'},
+  {home:'ENGLAND',away:'GHANA',stadium:'Lincoln Financial Field',city:'Philadelphia',kickoffUTC:'2026-06-17T23:00:00Z',group:'L'},
+  {home:'CROATIA',away:'PANAMA',stadium:'Arrowhead Stadium',city:'Kansas City',kickoffUTC:'2026-06-18T02:00:00Z',group:'L'},
+];
+
+function flag(name){ return FLAGS[name] || '🏳'; }
+function esName(name){ return ES_NAMES[name] || name; }
+function matchKey(home, away){ return home.toUpperCase() + '-' + away.toUpperCase(); }
+
+function utcToAR(utcStr){
+  return new Date(utcStr).toLocaleString('es-AR',{
+    weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',
+    hour12:false,timeZone:'America/Argentina/Buenos_Aires'
+  });
+}
+function toARDateStr(utcStr){
+  return new Date(utcStr).toLocaleDateString('en-CA',{timeZone:'America/Argentina/Buenos_Aires'});
+}
+
+function statusLabel(apiStatus, elapsed){
+  const liveStates = {'1H':'1ER TIEMPO','2H':'2DO TIEMPO','HT':'ENTRETIEMPO','ET':'TIEMPO EXTRA','P':'PENALES'};
+  if (liveStates[apiStatus]) return liveStates[apiStatus] + (elapsed ? ` · ${elapsed}'` : '');
+  if (apiStatus === 'FT' || apiStatus === 'AET' || apiStatus === 'PEN') return 'FINALIZADO';
+  if (apiStatus === 'NS') return null; // not started
+  return apiStatus;
+}
+function isLiveStatus(s){ return ['1H','2H','HT','ET','BT','P'].includes(s); }
+function isFinishedStatus(s){ return ['FT','AET','PEN'].includes(s); }
+
+// ── MatchCard ────────────────────────────────────────────────────────────────
+function MatchCard({ match, liveData }) {
+  const key = matchKey(match.home, match.away);
+  const live = liveData ? liveData[key] : null;
+  const apiStatus = live ? live.status : null;
+  const homeGoals = live ? live.homeGoals : null;
+  const awayGoals = live ? live.awayGoals : null;
+
+  const isLive = apiStatus && isLiveStatus(apiStatus);
+  const isFinished = apiStatus && isFinishedStatus(apiStatus);
+  const hasScore = homeGoals !== null && homeGoals !== undefined;
+
+  const arTime = utcToAR(match.kickoffUTC);
+  const timeOnly = arTime.split(' ').slice(-1)[0];
+  const label = statusLabel(apiStatus, live ? live.elapsed : null);
+
+  let borderColor = '#e2e8f0';
+  if (isLive) borderColor = '#CC0000';
+  else if (isFinished) borderColor = '#003087';
+
+  return (
+    <div style={{
+      background:'#fff', borderRadius:14, padding:'14px 16px',
+      borderLeft: `4px solid ${borderColor}`,
+      boxShadow:'0 1px 3px rgba(0,0,0,0.08)',
+      display:'flex', flexDirection:'column', gap:8,
+    }}>
+      <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', gap:10}}>
+        <div style={{display:'flex', alignItems:'center', gap:8, flex:1, minWidth:0}}>
+          <span style={{fontSize:24}}>{flag(match.home)}</span>
+          <span style={{fontSize:14, fontWeight:600, color:'#1a1a2e', overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap'}}>
+            {esName(match.home)}
+          </span>
+        </div>
+
+        <div style={{
+          minWidth:54, textAlign:'center', fontWeight:700, fontSize:18,
+          color: isLive ? '#CC0000' : '#1a1a2e',
+        }}>
+          {hasScore ? `${homeGoals} - ${awayGoals}` : timeOnly}
+        </div>
+
+        <div style={{display:'flex', alignItems:'center', gap:8, flex:1, minWidth:0, flexDirection:'row-reverse'}}>
+          <span style={{fontSize:24}}>{flag(match.away)}</span>
+          <span style={{fontSize:14, fontWeight:600, color:'#1a1a2e', textAlign:'right', overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap'}}>
+            {esName(match.away)}
+          </span>
+        </div>
+      </div>
+
+      <div style={{display:'flex', alignItems:'center', gap:8, flexWrap:'wrap', fontSize:11, color:'#64748b'}}>
+        {label && (
+          <span style={{
+            fontWeight:700, fontSize:10, letterSpacing:'0.04em',
+            color: isLive ? '#fff' : (isFinished ? '#fff' : '#64748b'),
+            background: isLive ? '#CC0000' : (isFinished ? '#003087' : 'transparent'),
+            borderRadius:4, padding: (isLive || isFinished) ? '2px 7px' : 0,
+          }}>
+            {isLive ? '● ' : ''}{label}
+          </span>
+        )}
+        <span>🕐 {arTime}</span>
+        <span>📍 {match.stadium}, {match.city}</span>
+        <span style={{
+          background:'#f1f5f9', borderRadius:4, padding:'1px 6px', fontWeight:600,
+        }}>GRUPO {match.group}</span>
+      </div>
+    </div>
+  );
+}
+
+// ── App ──────────────────────────────────────────────────────────────────────
+function App() {
+  const [liveData, setLiveData] = useState(null);
+  const [lastUpdate, setLastUpdate] = useState(null);
+  const [filter, setFilter] = useState('all');
+  const [now, setNow] = useState(new Date());
+
+  useEffect(() => {
+    fetchScores();
+    const dataInterval = setInterval(fetchScores, 60000); // refresh data every 1 min
+    const clockInterval = setInterval(() => setNow(new Date()), 30000);
+    return () => { clearInterval(dataInterval); clearInterval(clockInterval); };
+  }, []);
+
+  async function fetchScores() {
+    try {
+      const res = await fetch('./scores.json?t=' + Date.now());
+      const data = await res.json();
+      setLiveData(data.matches || {});
+      setLastUpdate(data.updated || null);
+    } catch (e) {
+      console.error('Error fetching scores:', e);
+    }
+  }
+
+  const todayAR = toARDateStr(new Date().toISOString());
+
+  const filtered = SCHEDULE.filter(m => {
+    const key = matchKey(m.home, m.away);
+    const live = liveData ? liveData[key] : null;
+    const status = live ? live.status : null;
+    if (filter === 'all') return true;
+    if (filter === 'live') return status && isLiveStatus(status);
+    if (filter === 'today') return toARDateStr(m.kickoffUTC) === todayAR;
+    if (filter === 'finished') return status && isFinishedStatus(status);
+    if (filter === 'scheduled') return !status || status === 'NS';
+    return true;
+  });
+
+  // group by "group" letter for display, in date order
+  const grouped = {};
+  filtered.forEach(m => {
+    if (!grouped[m.group]) grouped[m.group] = [];
+    grouped[m.group].push(m);
+  });
+
+  let liveCount = 0, finishedCount = 0, todayCount = 0;
+  SCHEDULE.forEach(m => {
+    const key = matchKey(m.home, m.away);
+    const live = liveData ? liveData[key] : null;
+    const status = live ? live.status : null;
+    if (status && isLiveStatus(status)) liveCount++;
+    if (status && isFinishedStatus(status)) finishedCount++;
+    if (toARDateStr(m.kickoffUTC) === todayAR) todayCount++;
+  });
+
+  const clockStr = now.toLocaleTimeString('es-AR', { hour:'2-digit', minute:'2-digit', hour12:false, timeZone:'America/Argentina/Buenos_Aires' });
+  const updateStr = lastUpdate ? new Date(lastUpdate).toLocaleTimeString('es-AR', { hour:'2-digit', minute:'2-digit', hour12:false, timeZone:'America/Argentina/Buenos_Aires' }) : '--:--';
+
+  return (
+    <div style={{ minHeight:'100vh', background:'linear-gradient(180deg, #0a0e1a 0%, #111827 100%)', paddingBottom:40 }}>
+
+      {/* Header */}
+      <div style={{ background:'#003087', padding:'20px 24px', display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:16 }}>
+        <div style={{ display:'flex', alignItems:'center', gap:14 }}>
+          <div style={{ width:46, height:46, background:'#FFD700', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', fontSize:24 }}>⚽</div>
+          <div>
+            <div style={{ color:'#fff', fontSize:20, fontWeight:700 }}>FIFA World Cup 2026</div>
+            <div style={{ color:'#cbd5e1', fontSize:12 }}>USA · Canadá · México</div>
+          </div>
+        </div>
+        <div style={{ textAlign:'right' }}>
+          <div style={{ color:'#cbd5e1', fontSize:11 }}>Hora Argentina</div>
+          <div style={{ color:'#FFD700', fontSize:26, fontWeight:700, fontVariantNumeric:'tabular-nums' }}>{clockStr}</div>
+        </div>
+      </div>
+
+      {/* Stats bar */}
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(4, 1fr)', gap:10, padding:'20px 24px 0' }}>
+        {[
+          ['🔴', liveCount, 'En vivo'],
+          ['📅', todayCount, 'Hoy'],
+          ['✅', finishedCount, 'Jugados'],
+          ['⚽', SCHEDULE.length, 'Total'],
+        ].map(([icon, num, label], i) => (
+          <div key={i} style={{ background:'#fff', borderRadius:12, padding:'14px 10px', textAlign:'center' }}>
+            <div style={{ fontSize:20 }}>{icon}</div>
+            <div style={{ fontSize:22, fontWeight:700, color:'#1a1a2e' }}>{num}</div>
+            <div style={{ fontSize:11, color:'#64748b' }}>{label}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Filters */}
+      <div style={{ display:'flex', gap:8, padding:'16px 24px 0', flexWrap:'wrap' }}>
+        {[
+          ['all','Todos'],['live','En vivo'],['today','Hoy'],['finished','Jugados'],['scheduled','Próximos'],
+        ].map(([key, label]) => (
+          <button key={key} onClick={() => setFilter(key)} style={{
+            padding:'7px 16px', borderRadius:20, border:'none', cursor:'pointer',
+            fontSize:13, fontWeight:600,
+            background: filter === key ? '#003087' : '#fff',
+            color: filter === key ? '#FFD700' : '#64748b',
+          }}>{label}</button>
+        ))}
+      </div>
+
+      {/* Matches grouped */}
+      <div style={{ padding:'16px 24px 0' }}>
+        {Object.keys(grouped).length === 0 && (
+          <div style={{ background:'#fff', borderRadius:12, padding:30, textAlign:'center', color:'#94a3b8' }}>
+            No hay partidos en esta vista
+          </div>
+        )}
+        {Object.entries(grouped).sort((a,b) => a[0].localeCompare(b[0])).map(([group, matches]) => (
+          <div key={group} style={{ marginBottom:18 }}>
+            <div style={{ color:'#fff', fontSize:13, fontWeight:700, marginBottom:8, opacity:0.85 }}>
+              GRUPO {group}
+            </div>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(320px, 1fr))', gap:10 }}>
+              {matches.sort((a,b) => new Date(a.kickoffUTC) - new Date(b.kickoffUTC)).map((m, i) => (
+                <MatchCard key={i} match={m} liveData={liveData} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Footer */}
+      <div style={{ textAlign:'center', color:'#64748b', fontSize:11, marginTop:24, padding:'0 24px' }}>
+        Datos: API-Football · Última actualización: {updateStr} hs AR
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
