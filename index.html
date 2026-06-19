@@ -115,7 +115,7 @@ const FLAGS = {
   'BELGIUM':'🇧🇪','EGYPT':'🇪🇬','SAUDI ARABIA':'🇸🇦','URUGUAY':'🇺🇾',
   'IRAN':'🇮🇷','NEW ZEALAND':'🇳🇿','FRANCE':'🇫🇷','SENEGAL':'🇸🇳',
   'IRAQ':'🇮🇶','NORWAY':'🇳🇴','ARGENTINA':'🇦🇷','ALGERIA':'🇩🇿',
-  'AUSTRIA':'🇦🇹','JORDAN':'🇯🇴','PORTUGAL':'🇵🇹','DR CONGO':'🇨🇩',
+  'AUSTRIA':'🇦🇹','JORDAN':'🇯🇴','PORTUGAL':'🇵🇹','CONGO DR':'🇨🇩',
   'COLOMBIA':'🇨🇴','UZBEKISTAN':'🇺🇿','ENGLAND':'🏴','GHANA':'🇬🇭',
   'CROATIA':'🇭🇷','PANAMA':'🇵🇦',
 };
@@ -131,7 +131,7 @@ const ES_NAMES = {
   'SAUDI ARABIA':'ARABIA SAUDITA','URUGUAY':'URUGUAY','IRAN':'IRÁN','NEW ZEALAND':'NUEVA ZELANDA',
   'FRANCE':'FRANCIA','SENEGAL':'SENEGAL','IRAQ':'IRAK','NORWAY':'NORUEGA',
   'ARGENTINA':'ARGENTINA','ALGERIA':'ARGELIA','AUSTRIA':'AUSTRIA','JORDAN':'JORDANIA',
-  'PORTUGAL':'PORTUGAL','DR CONGO':'CONGO RD','COLOMBIA':'COLOMBIA','UZBEKISTAN':'UZBEKISTÁN',
+  'PORTUGAL':'PORTUGAL','CONGO DR':'CONGO RD','COLOMBIA':'COLOMBIA','UZBEKISTAN':'UZBEKISTÁN',
   'ENGLAND':'INGLATERRA','GHANA':'GHANA','CROATIA':'CROACIA','PANAMA':'PANAMÁ',
 };
 
@@ -196,12 +196,12 @@ const SCHEDULE = [
   {home:'JORDAN',away:'ALGERIA',stadium:'Levi\'s Stadium',city:'San Francisco',kickoffUTC:'2026-06-23T03:00:00Z',group:'J'},
   {home:'ALGERIA',away:'AUSTRIA',stadium:'Arrowhead Stadium',city:'Kansas City',kickoffUTC:'2026-06-28T02:00:00Z',group:'J'},
   {home:'JORDAN',away:'ARGENTINA',stadium:'AT&T Stadium',city:'Dallas',kickoffUTC:'2026-06-28T02:00:00Z',group:'J'},
-  {home:'PORTUGAL',away:'DR CONGO',stadium:'NRG Stadium',city:'Houston',kickoffUTC:'2026-06-17T17:00:00Z',group:'K'},
+  {home:'PORTUGAL',away:'CONGO DR',stadium:'NRG Stadium',city:'Houston',kickoffUTC:'2026-06-17T17:00:00Z',group:'K'},
   {home:'UZBEKISTAN',away:'COLOMBIA',stadium:'Estadio Azteca',city:'Ciudad de México',kickoffUTC:'2026-06-18T02:00:00Z',group:'K'},
   {home:'PORTUGAL',away:'UZBEKISTAN',stadium:'NRG Stadium',city:'Houston',kickoffUTC:'2026-06-23T17:00:00Z',group:'K'},
-  {home:'COLOMBIA',away:'DR CONGO',stadium:'Estadio Akron',city:'Guadalajara',kickoffUTC:'2026-06-24T02:00:00Z',group:'K'},
+  {home:'COLOMBIA',away:'CONGO DR',stadium:'Estadio Akron',city:'Guadalajara',kickoffUTC:'2026-06-24T02:00:00Z',group:'K'},
   {home:'COLOMBIA',away:'PORTUGAL',stadium:'Hard Rock Stadium',city:'Miami',kickoffUTC:'2026-06-27T23:30:00Z',group:'K'},
-  {home:'DR CONGO',away:'UZBEKISTAN',stadium:'Mercedes-Benz Stadium',city:'Atlanta',kickoffUTC:'2026-06-27T23:30:00Z',group:'K'},
+  {home:'CONGO DR',away:'UZBEKISTAN',stadium:'Mercedes-Benz Stadium',city:'Atlanta',kickoffUTC:'2026-06-27T23:30:00Z',group:'K'},
   {home:'ENGLAND',away:'CROATIA',stadium:'AT&T Stadium',city:'Dallas',kickoffUTC:'2026-06-17T20:00:00Z',group:'L'},
   {home:'GHANA',away:'PANAMA',stadium:'BMO Field',city:'Toronto',kickoffUTC:'2026-06-17T23:00:00Z',group:'L'},
   {home:'ENGLAND',away:'GHANA',stadium:'Gillette Stadium',city:'Boston',kickoffUTC:'2026-06-23T20:00:00Z',group:'L'},
@@ -265,7 +265,14 @@ function buildMatchCard(m) {
   else if (isFinished) cardClass += ' finished';
 
   const scoreClass = isLive ? 'score-box live' : 'score-box';
-  const scoreText = hasScore ? (homeGoals + ' - ' + awayGoals) : timeOnly;
+  let scoreText;
+  if (hasScore) {
+    scoreText = homeGoals + ' - ' + awayGoals;
+  } else if (isFinished) {
+    scoreText = 'S/D';
+  } else {
+    scoreText = timeOnly;
+  }
 
   let badgeHtml = '';
   if (label) {
