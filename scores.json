@@ -1,4 +1,437 @@
 {
-  "updated": "2026-06-19T01:02:17.106240Z",
-  "matches": {}
+  "updated": "2026-06-19T01:27:19.686868Z",
+  "matches": {
+    "MEXICO-SOUTH KOREA": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "1H",
+      "elapsed": 27
+    },
+    "MEXICO-SOUTH AFRICA": {
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "SOUTH KOREA-CZECHIA": {
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "CANADA-BOSNIA & HERZEGOVINA": {
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "USA-PARAGUAY": {
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "QATAR-SWITZERLAND": {
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "BRAZIL-MOROCCO": {
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "HAITI-SCOTLAND": {
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "AUSTRALIA-T\u00dcRKIYE": {
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "GERMANY-CURA\u00c7AO": {
+      "homeGoals": 7,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "NETHERLANDS-JAPAN": {
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "IVORY COAST-ECUADOR": {
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "SWEDEN-TUNISIA": {
+      "homeGoals": 5,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "SPAIN-CAPE VERDE ISLANDS": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "BELGIUM-EGYPT": {
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "SAUDI ARABIA-URUGUAY": {
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "IRAN-NEW ZEALAND": {
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "FRANCE-SENEGAL": {
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "IRAQ-NORWAY": {
+      "homeGoals": 1,
+      "awayGoals": 4,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "ARGENTINA-ALGERIA": {
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "AUSTRIA-JORDAN": {
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "PORTUGAL-CONGO DR": {
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "ENGLAND-CROATIA": {
+      "homeGoals": 4,
+      "awayGoals": 2,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "GHANA-PANAMA": {
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "UZBEKISTAN-COLOMBIA": {
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "CZECHIA-SOUTH AFRICA": {
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "SWITZERLAND-BOSNIA & HERZEGOVINA": {
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "CANADA-QATAR": {
+      "homeGoals": 6,
+      "awayGoals": 0,
+      "status": "FT",
+      "elapsed": 90
+    },
+    "USA-AUSTRALIA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "SCOTLAND-MOROCCO": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "BRAZIL-HAITI": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "T\u00dcRKIYE-PARAGUAY": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "NETHERLANDS-SWEDEN": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "GERMANY-IVORY COAST": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "ECUADOR-CURA\u00c7AO": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "TUNISIA-JAPAN": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "SPAIN-SAUDI ARABIA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "BELGIUM-IRAN": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "URUGUAY-CAPE VERDE ISLANDS": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "NEW ZEALAND-EGYPT": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "ARGENTINA-AUSTRIA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "FRANCE-IRAQ": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "NORWAY-SENEGAL": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "JORDAN-ALGERIA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "PORTUGAL-UZBEKISTAN": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "ENGLAND-GHANA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "PANAMA-CROATIA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "COLOMBIA-CONGO DR": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "SWITZERLAND-CANADA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "BOSNIA & HERZEGOVINA-QATAR": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "MOROCCO-HAITI": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "SCOTLAND-BRAZIL": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "CZECHIA-MEXICO": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "SOUTH AFRICA-SOUTH KOREA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "ECUADOR-GERMANY": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "CURA\u00c7AO-IVORY COAST": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "JAPAN-SWEDEN": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "TUNISIA-NETHERLANDS": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "T\u00dcRKIYE-USA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "PARAGUAY-AUSTRALIA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "SENEGAL-IRAQ": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "NORWAY-FRANCE": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "URUGUAY-SPAIN": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "CAPE VERDE ISLANDS-SAUDI ARABIA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "EGYPT-IRAN": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "NEW ZEALAND-BELGIUM": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "CROATIA-GHANA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "PANAMA-ENGLAND": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "COLOMBIA-PORTUGAL": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "CONGO DR-UZBEKISTAN": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "ALGERIA-AUSTRIA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    },
+    "JORDAN-ARGENTINA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null
+    }
+  }
 }
