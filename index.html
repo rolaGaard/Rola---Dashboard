@@ -137,29 +137,77 @@ const ES_NAMES = {
 
 const SCHEDULE = [
   {home:'MEXICO',away:'SOUTH AFRICA',stadium:'Estadio Azteca',city:'Ciudad de México',kickoffUTC:'2026-06-11T19:00:00Z',group:'A'},
-  {home:'SOUTH KOREA',away:'CZECHIA',stadium:'SoFi Stadium',city:'Los Angeles',kickoffUTC:'2026-06-13T03:00:00Z',group:'A'},
+  {home:'SOUTH KOREA',away:'CZECHIA',stadium:'Estadio Akron',city:'Guadalajara',kickoffUTC:'2026-06-12T02:00:00Z',group:'A'},
+  {home:'CZECHIA',away:'SOUTH AFRICA',stadium:'Mercedes-Benz Stadium',city:'Atlanta',kickoffUTC:'2026-06-18T16:00:00Z',group:'A'},
+  {home:'MEXICO',away:'SOUTH KOREA',stadium:'Estadio Akron',city:'Guadalajara',kickoffUTC:'2026-06-19T01:00:00Z',group:'A'},
+  {home:'CZECHIA',away:'MEXICO',stadium:'Estadio Azteca',city:'Ciudad de México',kickoffUTC:'2026-06-25T01:00:00Z',group:'A'},
+  {home:'SOUTH AFRICA',away:'SOUTH KOREA',stadium:'Estadio BBVA',city:'Monterrey',kickoffUTC:'2026-06-25T01:00:00Z',group:'A'},
   {home:'CANADA',away:'BOSNIA & HERZEGOVINA',stadium:'BMO Field',city:'Toronto',kickoffUTC:'2026-06-12T19:00:00Z',group:'B'},
-  {home:'QATAR',away:'SWITZERLAND',stadium:"Levi's Stadium",city:'San Francisco',kickoffUTC:'2026-06-13T19:00:00Z',group:'B'},
+  {home:'QATAR',away:'SWITZERLAND',stadium:'Levi\'s Stadium',city:'San Francisco',kickoffUTC:'2026-06-13T19:00:00Z',group:'B'},
+  {home:'SWITZERLAND',away:'BOSNIA & HERZEGOVINA',stadium:'SoFi Stadium',city:'Los Angeles',kickoffUTC:'2026-06-18T19:00:00Z',group:'B'},
+  {home:'CANADA',away:'QATAR',stadium:'BC Place',city:'Vancouver',kickoffUTC:'2026-06-18T22:00:00Z',group:'B'},
+  {home:'SWITZERLAND',away:'CANADA',stadium:'BC Place',city:'Vancouver',kickoffUTC:'2026-06-24T19:00:00Z',group:'B'},
+  {home:'BOSNIA & HERZEGOVINA',away:'QATAR',stadium:'Lumen Field',city:'Seattle',kickoffUTC:'2026-06-24T19:00:00Z',group:'B'},
   {home:'BRAZIL',away:'MOROCCO',stadium:'MetLife Stadium',city:'New Jersey',kickoffUTC:'2026-06-13T22:00:00Z',group:'C'},
   {home:'HAITI',away:'SCOTLAND',stadium:'Gillette Stadium',city:'Boston',kickoffUTC:'2026-06-14T01:00:00Z',group:'C'},
+  {home:'SCOTLAND',away:'MOROCCO',stadium:'Gillette Stadium',city:'Boston',kickoffUTC:'2026-06-19T22:00:00Z',group:'C'},
+  {home:'BRAZIL',away:'HAITI',stadium:'Lincoln Financial Field',city:'Philadelphia',kickoffUTC:'2026-06-20T01:00:00Z',group:'C'},
+  {home:'SCOTLAND',away:'BRAZIL',stadium:'Hard Rock Stadium',city:'Miami',kickoffUTC:'2026-06-24T22:00:00Z',group:'C'},
+  {home:'MOROCCO',away:'HAITI',stadium:'Mercedes-Benz Stadium',city:'Atlanta',kickoffUTC:'2026-06-24T22:00:00Z',group:'C'},
   {home:'USA',away:'PARAGUAY',stadium:'SoFi Stadium',city:'Los Angeles',kickoffUTC:'2026-06-13T01:00:00Z',group:'D'},
   {home:'AUSTRALIA',away:'TURKIYE',stadium:'BC Place',city:'Vancouver',kickoffUTC:'2026-06-14T04:00:00Z',group:'D'},
+  {home:'USA',away:'AUSTRALIA',stadium:'Lumen Field',city:'Seattle',kickoffUTC:'2026-06-19T19:00:00Z',group:'D'},
+  {home:'TURKIYE',away:'PARAGUAY',stadium:'Levi\'s Stadium',city:'San Francisco',kickoffUTC:'2026-06-20T04:00:00Z',group:'D'},
+  {home:'TURKIYE',away:'USA',stadium:'SoFi Stadium',city:'Los Angeles',kickoffUTC:'2026-06-26T02:00:00Z',group:'D'},
+  {home:'PARAGUAY',away:'AUSTRALIA',stadium:'Levi\'s Stadium',city:'San Francisco',kickoffUTC:'2026-06-26T02:00:00Z',group:'D'},
   {home:'GERMANY',away:'CURACAO',stadium:'NRG Stadium',city:'Houston',kickoffUTC:'2026-06-14T17:00:00Z',group:'E'},
   {home:'IVORY COAST',away:'ECUADOR',stadium:'Lincoln Financial Field',city:'Philadelphia',kickoffUTC:'2026-06-14T23:00:00Z',group:'E'},
+  {home:'GERMANY',away:'IVORY COAST',stadium:'BMO Field',city:'Toronto',kickoffUTC:'2026-06-20T20:00:00Z',group:'E'},
+  {home:'ECUADOR',away:'CURACAO',stadium:'Arrowhead Stadium',city:'Kansas City',kickoffUTC:'2026-06-21T00:00:00Z',group:'E'},
+  {home:'CURACAO',away:'IVORY COAST',stadium:'Lincoln Financial Field',city:'Philadelphia',kickoffUTC:'2026-06-25T20:00:00Z',group:'E'},
+  {home:'ECUADOR',away:'GERMANY',stadium:'MetLife Stadium',city:'New Jersey',kickoffUTC:'2026-06-25T20:00:00Z',group:'E'},
   {home:'NETHERLANDS',away:'JAPAN',stadium:'AT&T Stadium',city:'Dallas',kickoffUTC:'2026-06-14T20:00:00Z',group:'F'},
-  {home:'SWEDEN',away:'TUNISIA',stadium:'Estadio BBVA',city:'Monterrey',kickoffUTC:'2026-06-15T02:00:00Z',group:'F'},
+  {home:'TUNISIA',away:'TUNISIA',stadium:'Estadio BBVA',city:'Monterrey',kickoffUTC:'2026-06-15T02:00:00Z',group:'F'},
+  {home:'NETHERLANDS',away:'TUNISIA',stadium:'NRG Stadium',city:'Houston',kickoffUTC:'2026-06-20T17:00:00Z',group:'F'},
+  {home:'TUNISIA',away:'JAPAN',stadium:'Estadio BBVA',city:'Monterrey',kickoffUTC:'2026-06-21T04:00:00Z',group:'F'},
+  {home:'JAPAN',away:'TUNISIA',stadium:'AT&T Stadium',city:'Dallas',kickoffUTC:'2026-06-25T23:00:00Z',group:'F'},
+  {home:'TUNISIA',away:'NETHERLANDS',stadium:'Arrowhead Stadium',city:'Kansas City',kickoffUTC:'2026-06-25T23:00:00Z',group:'F'},
   {home:'BELGIUM',away:'EGYPT',stadium:'Lumen Field',city:'Seattle',kickoffUTC:'2026-06-15T19:00:00Z',group:'G'},
   {home:'IRAN',away:'NEW ZEALAND',stadium:'SoFi Stadium',city:'Los Angeles',kickoffUTC:'2026-06-16T01:00:00Z',group:'G'},
+  {home:'BELGIUM',away:'IRAN',stadium:'SoFi Stadium',city:'Los Angeles',kickoffUTC:'2026-06-21T19:00:00Z',group:'G'},
+  {home:'NEW ZEALAND',away:'EGYPT',stadium:'BC Place',city:'Vancouver',kickoffUTC:'2026-06-22T01:00:00Z',group:'G'},
+  {home:'EGYPT',away:'IRAN',stadium:'Lumen Field',city:'Seattle',kickoffUTC:'2026-06-27T03:00:00Z',group:'G'},
+  {home:'NEW ZEALAND',away:'BELGIUM',stadium:'BC Place',city:'Vancouver',kickoffUTC:'2026-06-27T03:00:00Z',group:'G'},
   {home:'SPAIN',away:'CAPE VERDE',stadium:'Mercedes-Benz Stadium',city:'Atlanta',kickoffUTC:'2026-06-15T16:00:00Z',group:'H'},
   {home:'SAUDI ARABIA',away:'URUGUAY',stadium:'Hard Rock Stadium',city:'Miami',kickoffUTC:'2026-06-15T22:00:00Z',group:'H'},
+  {home:'SPAIN',away:'SAUDI ARABIA',stadium:'Mercedes-Benz Stadium',city:'Atlanta',kickoffUTC:'2026-06-21T16:00:00Z',group:'H'},
+  {home:'URUGUAY',away:'CAPE VERDE',stadium:'Hard Rock Stadium',city:'Miami',kickoffUTC:'2026-06-21T22:00:00Z',group:'H'},
+  {home:'CAPE VERDE',away:'SAUDI ARABIA',stadium:'NRG Stadium',city:'Houston',kickoffUTC:'2026-06-27T00:00:00Z',group:'H'},
+  {home:'URUGUAY',away:'SPAIN',stadium:'Estadio Akron',city:'Guadalajara',kickoffUTC:'2026-06-27T00:00:00Z',group:'H'},
   {home:'FRANCE',away:'SENEGAL',stadium:'MetLife Stadium',city:'New Jersey',kickoffUTC:'2026-06-16T19:00:00Z',group:'I'},
   {home:'IRAQ',away:'NORWAY',stadium:'Gillette Stadium',city:'Boston',kickoffUTC:'2026-06-16T22:00:00Z',group:'I'},
+  {home:'FRANCE',away:'IRAQ',stadium:'Lincoln Financial Field',city:'Philadelphia',kickoffUTC:'2026-06-22T21:00:00Z',group:'I'},
+  {home:'NORWAY',away:'SENEGAL',stadium:'MetLife Stadium',city:'New Jersey',kickoffUTC:'2026-06-23T00:00:00Z',group:'I'},
+  {home:'NORWAY',away:'FRANCE',stadium:'Gillette Stadium',city:'Boston',kickoffUTC:'2026-06-26T19:00:00Z',group:'I'},
+  {home:'SENEGAL',away:'IRAQ',stadium:'BMO Field',city:'Toronto',kickoffUTC:'2026-06-26T19:00:00Z',group:'I'},
   {home:'ARGENTINA',away:'ALGERIA',stadium:'Arrowhead Stadium',city:'Kansas City',kickoffUTC:'2026-06-17T01:00:00Z',group:'J'},
-  {home:'AUSTRIA',away:'JORDAN',stadium:"Levi's Stadium",city:'San Francisco',kickoffUTC:'2026-06-17T04:00:00Z',group:'J'},
+  {home:'AUSTRIA',away:'JORDAN',stadium:'Levi\'s Stadium',city:'San Francisco',kickoffUTC:'2026-06-17T04:00:00Z',group:'J'},
+  {home:'ARGENTINA',away:'AUSTRIA',stadium:'AT&T Stadium',city:'Dallas',kickoffUTC:'2026-06-22T17:00:00Z',group:'J'},
+  {home:'JORDAN',away:'ALGERIA',stadium:'Levi\'s Stadium',city:'San Francisco',kickoffUTC:'2026-06-23T03:00:00Z',group:'J'},
+  {home:'ALGERIA',away:'AUSTRIA',stadium:'Arrowhead Stadium',city:'Kansas City',kickoffUTC:'2026-06-28T02:00:00Z',group:'J'},
+  {home:'JORDAN',away:'ARGENTINA',stadium:'AT&T Stadium',city:'Dallas',kickoffUTC:'2026-06-28T02:00:00Z',group:'J'},
   {home:'PORTUGAL',away:'DR CONGO',stadium:'NRG Stadium',city:'Houston',kickoffUTC:'2026-06-17T17:00:00Z',group:'K'},
-  {home:'COLOMBIA',away:'UZBEKISTAN',stadium:'AT&T Stadium',city:'Dallas',kickoffUTC:'2026-06-17T20:00:00Z',group:'K'},
-  {home:'ENGLAND',away:'GHANA',stadium:'Lincoln Financial Field',city:'Philadelphia',kickoffUTC:'2026-06-17T23:00:00Z',group:'L'},
-  {home:'CROATIA',away:'PANAMA',stadium:'Arrowhead Stadium',city:'Kansas City',kickoffUTC:'2026-06-18T02:00:00Z',group:'L'},
+  {home:'UZBEKISTAN',away:'COLOMBIA',stadium:'Estadio Azteca',city:'Ciudad de México',kickoffUTC:'2026-06-18T02:00:00Z',group:'K'},
+  {home:'PORTUGAL',away:'UZBEKISTAN',stadium:'NRG Stadium',city:'Houston',kickoffUTC:'2026-06-23T17:00:00Z',group:'K'},
+  {home:'COLOMBIA',away:'DR CONGO',stadium:'Estadio Akron',city:'Guadalajara',kickoffUTC:'2026-06-24T02:00:00Z',group:'K'},
+  {home:'COLOMBIA',away:'PORTUGAL',stadium:'Hard Rock Stadium',city:'Miami',kickoffUTC:'2026-06-27T23:30:00Z',group:'K'},
+  {home:'DR CONGO',away:'UZBEKISTAN',stadium:'Mercedes-Benz Stadium',city:'Atlanta',kickoffUTC:'2026-06-27T23:30:00Z',group:'K'},
+  {home:'ENGLAND',away:'CROATIA',stadium:'AT&T Stadium',city:'Dallas',kickoffUTC:'2026-06-17T20:00:00Z',group:'L'},
+  {home:'GHANA',away:'PANAMA',stadium:'BMO Field',city:'Toronto',kickoffUTC:'2026-06-17T23:00:00Z',group:'L'},
+  {home:'ENGLAND',away:'GHANA',stadium:'Gillette Stadium',city:'Boston',kickoffUTC:'2026-06-23T20:00:00Z',group:'L'},
+  {home:'PANAMA',away:'CROATIA',stadium:'BMO Field',city:'Toronto',kickoffUTC:'2026-06-23T23:00:00Z',group:'L'},
+  {home:'PANAMA',away:'ENGLAND',stadium:'MetLife Stadium',city:'New Jersey',kickoffUTC:'2026-06-27T21:00:00Z',group:'L'},
+  {home:'CROATIA',away:'GHANA',stadium:'Lincoln Financial Field',city:'Philadelphia',kickoffUTC:'2026-06-27T21:00:00Z',group:'L'},
 ];
 
 function flag(name){ return FLAGS[name] || '🏳'; }
@@ -194,12 +242,23 @@ function buildMatchCard(m) {
   const apiStatus = live ? live.status : null;
   const homeGoals = live ? live.homeGoals : null;
   const awayGoals = live ? live.awayGoals : null;
-  const isLive = apiStatus && isLiveStatus(apiStatus);
-  const isFinished = apiStatus && isFinishedStatus(apiStatus);
+
+  // Infer status from time if API data is missing
+  const now = new Date();
+  const kickoff = new Date(m.kickoffUTC);
+  const estimatedEnd = new Date(kickoff.getTime() + 115 * 60000);
+  const timeInferredLive = now >= kickoff && now < estimatedEnd;
+  const timeInferredFinished = now >= estimatedEnd;
+
+  const isLive = (apiStatus && isLiveStatus(apiStatus)) || (!apiStatus && timeInferredLive);
+  const isFinished = (apiStatus && isFinishedStatus(apiStatus)) || (!apiStatus && timeInferredFinished);
   const hasScore = homeGoals !== null && homeGoals !== undefined;
+
   const arTime = utcToAR(m.kickoffUTC);
   const timeOnly = arTime.split(' ').slice(-1)[0];
-  const label = statusLabel(apiStatus, live ? live.elapsed : null);
+  let label = statusLabel(apiStatus, live ? live.elapsed : null);
+  if (!label && isLive) label = 'EN VIVO';
+  if (!label && isFinished) label = 'FINALIZADO';
 
   let cardClass = 'match-card';
   if (isLive) cardClass += ' live';
@@ -237,18 +296,31 @@ function buildMatchCard(m) {
   );
 }
 
+function getEffectiveStatus(m) {
+  const key = matchKey(m.home, m.away);
+  const live = liveData[key] || null;
+  const apiStatus = live ? live.status : null;
+  if (apiStatus && isLiveStatus(apiStatus)) return 'live';
+  if (apiStatus && isFinishedStatus(apiStatus)) return 'finished';
+
+  const now = new Date();
+  const kickoff = new Date(m.kickoffUTC);
+  const estimatedEnd = new Date(kickoff.getTime() + 115 * 60000);
+  if (now >= kickoff && now < estimatedEnd) return 'live';
+  if (now >= estimatedEnd) return 'finished';
+  return 'scheduled';
+}
+
 function render() {
   const todayAR = toARDateStr(new Date().toISOString());
 
   const filtered = SCHEDULE.filter(m => {
-    const key = matchKey(m.home, m.away);
-    const live = liveData[key] || null;
-    const status = live ? live.status : null;
+    const status = getEffectiveStatus(m);
     if (currentFilter === 'all') return true;
-    if (currentFilter === 'live') return status && isLiveStatus(status);
+    if (currentFilter === 'live') return status === 'live';
     if (currentFilter === 'today') return toARDateStr(m.kickoffUTC) === todayAR;
-    if (currentFilter === 'finished') return status && isFinishedStatus(status);
-    if (currentFilter === 'scheduled') return !status || status === 'NS';
+    if (currentFilter === 'finished') return status === 'finished';
+    if (currentFilter === 'scheduled') return status === 'scheduled';
     return true;
   });
 
@@ -260,11 +332,9 @@ function render() {
 
   let liveCount = 0, finishedCount = 0, todayCount = 0;
   SCHEDULE.forEach(m => {
-    const key = matchKey(m.home, m.away);
-    const live = liveData[key] || null;
-    const status = live ? live.status : null;
-    if (status && isLiveStatus(status)) liveCount++;
-    if (status && isFinishedStatus(status)) finishedCount++;
+    const status = getEffectiveStatus(m);
+    if (status === 'live') liveCount++;
+    if (status === 'finished') finishedCount++;
     if (toARDateStr(m.kickoffUTC) === todayAR) todayCount++;
   });
 
