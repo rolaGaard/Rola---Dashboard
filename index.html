@@ -254,11 +254,11 @@ const SCHEDULE = [
   {home:'CURACAO',away:'IVORY COAST',stadium:'Lincoln Financial Field',city:'Philadelphia',kickoffUTC:'2026-06-25T20:00:00Z',group:'E'},
   {home:'ECUADOR',away:'GERMANY',stadium:'MetLife Stadium',city:'New Jersey',kickoffUTC:'2026-06-25T20:00:00Z',group:'E'},
   {home:'NETHERLANDS',away:'JAPAN',stadium:'AT&T Stadium',city:'Dallas',kickoffUTC:'2026-06-14T20:00:00Z',group:'F'},
-  {home:'TUNISIA',away:'TUNISIA',stadium:'Estadio BBVA',city:'Monterrey',kickoffUTC:'2026-06-15T02:00:00Z',group:'F'},
-  {home:'NETHERLANDS',away:'TUNISIA',stadium:'NRG Stadium',city:'Houston',kickoffUTC:'2026-06-20T17:00:00Z',group:'F'},
-  {home:'TUNISIA',away:'JAPAN',stadium:'Estadio BBVA',city:'Monterrey',kickoffUTC:'2026-06-21T04:00:00Z',group:'F'},
-  {home:'JAPAN',away:'TUNISIA',stadium:'AT&T Stadium',city:'Dallas',kickoffUTC:'2026-06-25T23:00:00Z',group:'F'},
-  {home:'TUNISIA',away:'NETHERLANDS',stadium:'Arrowhead Stadium',city:'Kansas City',kickoffUTC:'2026-06-25T23:00:00Z',group:'F'},
+  {home:'SWEDEN',away:'TUNISIA',stadium:'Estadio BBVA',city:'Monterrey',kickoffUTC:'2026-06-15T02:00:00Z',group:'F'},
+  {home:'NETHERLANDS',away:'SWEDEN',stadium:'NRG Stadium',city:'Houston',kickoffUTC:'2026-06-20T18:00:00Z',group:'F'},
+  {home:'TUNISIA',away:'JAPAN',stadium:'Estadio BBVA',city:'Monterrey',kickoffUTC:'2026-06-21T05:00:00Z',group:'F'},
+  {home:'JAPAN',away:'SWEDEN',stadium:'AT&T Stadium',city:'Dallas',kickoffUTC:'2026-06-25T23:00:00Z',group:'F'},
+  {home:'TUNISIA',away:'NETHERLANDS',stadium:'Arrowhead Stadium',city:'Kansas City',kickoffUTC:'2026-06-26T00:00:00Z',group:'F'},
   {home:'BELGIUM',away:'EGYPT',stadium:'Lumen Field',city:'Seattle',kickoffUTC:'2026-06-15T19:00:00Z',group:'G'},
   {home:'IRAN',away:'NEW ZEALAND',stadium:'SoFi Stadium',city:'Los Angeles',kickoffUTC:'2026-06-16T01:00:00Z',group:'G'},
   {home:'BELGIUM',away:'IRAN',stadium:'SoFi Stadium',city:'Los Angeles',kickoffUTC:'2026-06-21T19:00:00Z',group:'G'},
@@ -469,16 +469,13 @@ function render() {
     }
   } else {
     document.getElementById('search-label').innerHTML = '';
-    const groupKeys = Object.keys(grouped).sort();
-    if (groupKeys.length === 0) {
+    const sortedAll = filtered.slice().sort((a,b) => new Date(a.kickoffUTC) - new Date(b.kickoffUTC));
+    if (sortedAll.length === 0) {
       html = '<div class="empty-state">No hay partidos en esta vista</div>';
     } else {
-      groupKeys.forEach(g => {
-        const matches = grouped[g].sort((a,b) => new Date(a.kickoffUTC) - new Date(b.kickoffUTC));
-        html += '<div class="group-block"><div class="group-label">GRUPO ' + g + '</div><div class="match-grid">';
-        matches.forEach(m => { html += buildMatchCard(m); });
-        html += '</div></div>';
-      });
+      html += '<div class="match-grid">';
+      sortedAll.forEach(m => { html += buildMatchCard(m); });
+      html += '</div>';
     }
   }
   document.getElementById('matches').innerHTML = html;
