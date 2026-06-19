@@ -4,27 +4,107 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mundial 2026 - Fixture en Vivo</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
-    background:#0a0e1a;
+    background:linear-gradient(180deg, #0a0e1a 0%, #111827 100%);
     color:#1a1a2e;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height:100vh;
+    padding-bottom:40px;
   }
-  .scroll::-webkit-scrollbar { width:6px; }
-  .scroll::-webkit-scrollbar-thumb { background:#003087; border-radius:3px; }
+  .header {
+    background:#003087; padding:20px 24px; display:flex; align-items:center;
+    justify-content:space-between; flex-wrap:wrap; gap:16px;
+  }
+  .header-left { display:flex; align-items:center; gap:14px; }
+  .header-icon {
+    width:46px; height:46px; background:#FFD700; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; font-size:24px;
+  }
+  .header-title { color:#fff; font-size:20px; font-weight:700; }
+  .header-sub { color:#cbd5e1; font-size:12px; }
+  .clock-label { color:#cbd5e1; font-size:11px; text-align:right; }
+  .clock-value { color:#FFD700; font-size:26px; font-weight:700; font-variant-numeric:tabular-nums; text-align:right; }
+  .stats-bar {
+    display:grid; grid-template-columns:repeat(4,1fr); gap:10px; padding:20px 24px 0;
+  }
+  .stat-card { background:#fff; border-radius:12px; padding:14px 10px; text-align:center; }
+  .stat-icon { font-size:20px; }
+  .stat-num { font-size:22px; font-weight:700; color:#1a1a2e; }
+  .stat-label { font-size:11px; color:#64748b; }
+  .filters { display:flex; gap:8px; padding:16px 24px 0; flex-wrap:wrap; }
+  .filter-btn {
+    padding:7px 16px; border-radius:20px; border:none; cursor:pointer;
+    font-size:13px; font-weight:600; background:#fff; color:#64748b;
+  }
+  .filter-btn.active { background:#003087; color:#FFD700; }
+  .matches-container { padding:16px 24px 0; }
+  .group-label { color:#fff; font-size:13px; font-weight:700; margin-bottom:8px; opacity:0.85; }
+  .group-block { margin-bottom:18px; }
+  .match-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:10px; }
+  .match-card {
+    background:#fff; border-radius:14px; padding:14px 16px;
+    border-left:4px solid #e2e8f0; box-shadow:0 1px 3px rgba(0,0,0,0.08);
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .match-card.live { border-left-color:#CC0000; }
+  .match-card.finished { border-left-color:#003087; }
+  .match-row { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  .team { display:flex; align-items:center; gap:8px; flex:1; min-width:0; }
+  .team.away { flex-direction:row-reverse; }
+  .team-flag { font-size:24px; }
+  .team-name {
+    font-size:14px; font-weight:600; color:#1a1a2e;
+    overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  }
+  .team.away .team-name { text-align:right; }
+  .score-box { min-width:54px; text-align:center; font-weight:700; font-size:18px; color:#1a1a2e; }
+  .score-box.live { color:#CC0000; }
+  .match-meta { display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:11px; color:#64748b; }
+  .status-badge { font-weight:700; font-size:10px; letter-spacing:0.04em; border-radius:4px; padding:2px 7px; }
+  .status-badge.live { color:#fff; background:#CC0000; }
+  .status-badge.finished { color:#fff; background:#003087; }
+  .group-tag { background:#f1f5f9; border-radius:4px; padding:1px 6px; font-weight:600; }
+  .empty-state { background:#fff; border-radius:12px; padding:30px; text-align:center; color:#94a3b8; }
+  .footer { text-align:center; color:#64748b; font-size:11px; margin-top:24px; padding:0 24px; }
 </style>
 </head>
 <body>
-<div id="root"></div>
+<div class="header">
+  <div class="header-left">
+    <div class="header-icon">⚽</div>
+    <div>
+      <div class="header-title">FIFA World Cup 2026</div>
+      <div class="header-sub">USA · Canadá · México</div>
+    </div>
+  </div>
+  <div>
+    <div class="clock-label">Hora Argentina</div>
+    <div class="clock-value" id="clock">--:--</div>
+  </div>
+</div>
 
-<script type="text/babel">
-const { useState, useEffect } = React;
+<div class="stats-bar">
+  <div class="stat-card"><div class="stat-icon">🔴</div><div class="stat-num" id="stat-live">0</div><div class="stat-label">En vivo</div></div>
+  <div class="stat-card"><div class="stat-icon">📅</div><div class="stat-num" id="stat-today">0</div><div class="stat-label">Hoy</div></div>
+  <div class="stat-card"><div class="stat-icon">✅</div><div class="stat-num" id="stat-finished">0</div><div class="stat-label">Jugados</div></div>
+  <div class="stat-card"><div class="stat-icon">⚽</div><div class="stat-num" id="stat-total">0</div><div class="stat-label">Total</div></div>
+</div>
 
-// ── DATA: Fixture schedule (static) ────────────────────────────────────────
+<div class="filters" id="filters">
+  <button class="filter-btn active" data-filter="all">Todos</button>
+  <button class="filter-btn" data-filter="live">En vivo</button>
+  <button class="filter-btn" data-filter="today">Hoy</button>
+  <button class="filter-btn" data-filter="finished">Jugados</button>
+  <button class="filter-btn" data-filter="scheduled">Próximos</button>
+</div>
+
+<div class="matches-container" id="matches"></div>
+
+<div class="footer" id="footer">Datos: API-Football · Última actualización: --:-- hs AR</div>
+
+<script>
 const FLAGS = {
   'MEXICO':'🇲🇽','SOUTH AFRICA':'🇿🇦','CANADA':'🇨🇦','BOSNIA & HERZEGOVINA':'🇧🇦','SOUTH KOREA':'🇰🇷',
   'CZECHIA':'🇨🇿','USA':'🇺🇸','PARAGUAY':'🇵🇾','QATAR':'🇶🇦','SWITZERLAND':'🇨🇭',
@@ -40,7 +120,6 @@ const FLAGS = {
   'CROATIA':'🇭🇷','PANAMA':'🇵🇦',
 };
 
-// Display names in Spanish for the UI, keyed same as scores.json keys (UPPERCASE, hyphen-joined)
 const ES_NAMES = {
   'MEXICO':'MÉXICO','SOUTH AFRICA':'SUDÁFRICA','CANADA':'CANADÁ','BOSNIA & HERZEGOVINA':'BOSNIA',
   'SOUTH KOREA':'COREA DEL SUR','CZECHIA':'CHEQUIA','USA':'EE.UU.','PARAGUAY':'PARAGUAY',
@@ -56,7 +135,6 @@ const ES_NAMES = {
   'ENGLAND':'INGLATERRA','GHANA':'GHANA','CROATIA':'CROACIA','PANAMA':'PANAMÁ',
 };
 
-// Static schedule: date/time/stadium per match. Score comes live from scores.json.
 const SCHEDULE = [
   {home:'MEXICO',away:'SOUTH AFRICA',stadium:'Estadio Azteca',city:'Ciudad de México',kickoffUTC:'2026-06-11T19:00:00Z',group:'A'},
   {home:'SOUTH KOREA',away:'CZECHIA',stadium:'SoFi Stadium',city:'Los Angeles',kickoffUTC:'2026-06-13T03:00:00Z',group:'A'},
@@ -97,128 +175,83 @@ function utcToAR(utcStr){
 function toARDateStr(utcStr){
   return new Date(utcStr).toLocaleDateString('en-CA',{timeZone:'America/Argentina/Buenos_Aires'});
 }
-
-function statusLabel(apiStatus, elapsed){
-  const liveStates = {'1H':'1ER TIEMPO','2H':'2DO TIEMPO','HT':'ENTRETIEMPO','ET':'TIEMPO EXTRA','P':'PENALES'};
-  if (liveStates[apiStatus]) return liveStates[apiStatus] + (elapsed ? ` · ${elapsed}'` : '');
-  if (apiStatus === 'FT' || apiStatus === 'AET' || apiStatus === 'PEN') return 'FINALIZADO';
-  if (apiStatus === 'NS') return null; // not started
-  return apiStatus;
-}
 function isLiveStatus(s){ return ['1H','2H','HT','ET','BT','P'].includes(s); }
 function isFinishedStatus(s){ return ['FT','AET','PEN'].includes(s); }
+function statusLabel(apiStatus, elapsed){
+  const liveStates = {'1H':'1ER TIEMPO','2H':'2DO TIEMPO','HT':'ENTRETIEMPO','ET':'TIEMPO EXTRA','P':'PENALES'};
+  if (liveStates[apiStatus]) return liveStates[apiStatus] + (elapsed ? ' · ' + elapsed + "'" : '');
+  if (apiStatus === 'FT' || apiStatus === 'AET' || apiStatus === 'PEN') return 'FINALIZADO';
+  return null;
+}
 
-// ── MatchCard ────────────────────────────────────────────────────────────────
-function MatchCard({ match, liveData }) {
-  const key = matchKey(match.home, match.away);
-  const live = liveData ? liveData[key] : null;
+let liveData = {};
+let lastUpdate = null;
+let currentFilter = 'all';
+
+function buildMatchCard(m) {
+  const key = matchKey(m.home, m.away);
+  const live = liveData[key] || null;
   const apiStatus = live ? live.status : null;
   const homeGoals = live ? live.homeGoals : null;
   const awayGoals = live ? live.awayGoals : null;
-
   const isLive = apiStatus && isLiveStatus(apiStatus);
   const isFinished = apiStatus && isFinishedStatus(apiStatus);
   const hasScore = homeGoals !== null && homeGoals !== undefined;
-
-  const arTime = utcToAR(match.kickoffUTC);
+  const arTime = utcToAR(m.kickoffUTC);
   const timeOnly = arTime.split(' ').slice(-1)[0];
   const label = statusLabel(apiStatus, live ? live.elapsed : null);
 
-  let borderColor = '#e2e8f0';
-  if (isLive) borderColor = '#CC0000';
-  else if (isFinished) borderColor = '#003087';
+  let cardClass = 'match-card';
+  if (isLive) cardClass += ' live';
+  else if (isFinished) cardClass += ' finished';
+
+  const scoreClass = isLive ? 'score-box live' : 'score-box';
+  const scoreText = hasScore ? (homeGoals + ' - ' + awayGoals) : timeOnly;
+
+  let badgeHtml = '';
+  if (label) {
+    const badgeClass = isLive ? 'status-badge live' : (isFinished ? 'status-badge finished' : 'status-badge');
+    badgeHtml = '<span class="' + badgeClass + '">' + (isLive ? '\u25CF ' : '') + label + '</span>';
+  }
 
   return (
-    <div style={{
-      background:'#fff', borderRadius:14, padding:'14px 16px',
-      borderLeft: `4px solid ${borderColor}`,
-      boxShadow:'0 1px 3px rgba(0,0,0,0.08)',
-      display:'flex', flexDirection:'column', gap:8,
-    }}>
-      <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', gap:10}}>
-        <div style={{display:'flex', alignItems:'center', gap:8, flex:1, minWidth:0}}>
-          <span style={{fontSize:24}}>{flag(match.home)}</span>
-          <span style={{fontSize:14, fontWeight:600, color:'#1a1a2e', overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap'}}>
-            {esName(match.home)}
-          </span>
-        </div>
-
-        <div style={{
-          minWidth:54, textAlign:'center', fontWeight:700, fontSize:18,
-          color: isLive ? '#CC0000' : '#1a1a2e',
-        }}>
-          {hasScore ? `${homeGoals} - ${awayGoals}` : timeOnly}
-        </div>
-
-        <div style={{display:'flex', alignItems:'center', gap:8, flex:1, minWidth:0, flexDirection:'row-reverse'}}>
-          <span style={{fontSize:24}}>{flag(match.away)}</span>
-          <span style={{fontSize:14, fontWeight:600, color:'#1a1a2e', textAlign:'right', overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap'}}>
-            {esName(match.away)}
-          </span>
-        </div>
-      </div>
-
-      <div style={{display:'flex', alignItems:'center', gap:8, flexWrap:'wrap', fontSize:11, color:'#64748b'}}>
-        {label && (
-          <span style={{
-            fontWeight:700, fontSize:10, letterSpacing:'0.04em',
-            color: isLive ? '#fff' : (isFinished ? '#fff' : '#64748b'),
-            background: isLive ? '#CC0000' : (isFinished ? '#003087' : 'transparent'),
-            borderRadius:4, padding: (isLive || isFinished) ? '2px 7px' : 0,
-          }}>
-            {isLive ? '● ' : ''}{label}
-          </span>
-        )}
-        <span>🕐 {arTime}</span>
-        <span>📍 {match.stadium}, {match.city}</span>
-        <span style={{
-          background:'#f1f5f9', borderRadius:4, padding:'1px 6px', fontWeight:600,
-        }}>GRUPO {match.group}</span>
-      </div>
-    </div>
+    '<div class="' + cardClass + '">' +
+      '<div class="match-row">' +
+        '<div class="team">' +
+          '<span class="team-flag">' + flag(m.home) + '</span>' +
+          '<span class="team-name">' + esName(m.home) + '</span>' +
+        '</div>' +
+        '<div class="' + scoreClass + '">' + scoreText + '</div>' +
+        '<div class="team away">' +
+          '<span class="team-flag">' + flag(m.away) + '</span>' +
+          '<span class="team-name">' + esName(m.away) + '</span>' +
+        '</div>' +
+      '</div>' +
+      '<div class="match-meta">' +
+        badgeHtml +
+        '<span>\u{1F550} ' + arTime + '</span>' +
+        '<span>\u{1F4CD} ' + m.stadium + ', ' + m.city + '</span>' +
+        '<span class="group-tag">GRUPO ' + m.group + '</span>' +
+      '</div>' +
+    '</div>'
   );
 }
 
-// ── App ──────────────────────────────────────────────────────────────────────
-function App() {
-  const [liveData, setLiveData] = useState(null);
-  const [lastUpdate, setLastUpdate] = useState(null);
-  const [filter, setFilter] = useState('all');
-  const [now, setNow] = useState(new Date());
-
-  useEffect(() => {
-    fetchScores();
-    const dataInterval = setInterval(fetchScores, 60000); // refresh data every 1 min
-    const clockInterval = setInterval(() => setNow(new Date()), 30000);
-    return () => { clearInterval(dataInterval); clearInterval(clockInterval); };
-  }, []);
-
-  async function fetchScores() {
-    try {
-      const res = await fetch('./scores.json?t=' + Date.now());
-      const data = await res.json();
-      setLiveData(data.matches || {});
-      setLastUpdate(data.updated || null);
-    } catch (e) {
-      console.error('Error fetching scores:', e);
-    }
-  }
-
+function render() {
   const todayAR = toARDateStr(new Date().toISOString());
 
   const filtered = SCHEDULE.filter(m => {
     const key = matchKey(m.home, m.away);
-    const live = liveData ? liveData[key] : null;
+    const live = liveData[key] || null;
     const status = live ? live.status : null;
-    if (filter === 'all') return true;
-    if (filter === 'live') return status && isLiveStatus(status);
-    if (filter === 'today') return toARDateStr(m.kickoffUTC) === todayAR;
-    if (filter === 'finished') return status && isFinishedStatus(status);
-    if (filter === 'scheduled') return !status || status === 'NS';
+    if (currentFilter === 'all') return true;
+    if (currentFilter === 'live') return status && isLiveStatus(status);
+    if (currentFilter === 'today') return toARDateStr(m.kickoffUTC) === todayAR;
+    if (currentFilter === 'finished') return status && isFinishedStatus(status);
+    if (currentFilter === 'scheduled') return !status || status === 'NS';
     return true;
   });
 
-  // group by "group" letter for display, in date order
   const grouped = {};
   filtered.forEach(m => {
     if (!grouped[m.group]) grouped[m.group] = [];
@@ -228,94 +261,69 @@ function App() {
   let liveCount = 0, finishedCount = 0, todayCount = 0;
   SCHEDULE.forEach(m => {
     const key = matchKey(m.home, m.away);
-    const live = liveData ? liveData[key] : null;
+    const live = liveData[key] || null;
     const status = live ? live.status : null;
     if (status && isLiveStatus(status)) liveCount++;
     if (status && isFinishedStatus(status)) finishedCount++;
     if (toARDateStr(m.kickoffUTC) === todayAR) todayCount++;
   });
 
-  const clockStr = now.toLocaleTimeString('es-AR', { hour:'2-digit', minute:'2-digit', hour12:false, timeZone:'America/Argentina/Buenos_Aires' });
-  const updateStr = lastUpdate ? new Date(lastUpdate).toLocaleTimeString('es-AR', { hour:'2-digit', minute:'2-digit', hour12:false, timeZone:'America/Argentina/Buenos_Aires' }) : '--:--';
+  document.getElementById('stat-live').textContent = liveCount;
+  document.getElementById('stat-today').textContent = todayCount;
+  document.getElementById('stat-finished').textContent = finishedCount;
+  document.getElementById('stat-total').textContent = SCHEDULE.length;
 
-  return (
-    <div style={{ minHeight:'100vh', background:'linear-gradient(180deg, #0a0e1a 0%, #111827 100%)', paddingBottom:40 }}>
+  let html = '';
+  const groupKeys = Object.keys(grouped).sort();
+  if (groupKeys.length === 0) {
+    html = '<div class="empty-state">No hay partidos en esta vista</div>';
+  } else {
+    groupKeys.forEach(g => {
+      const matches = grouped[g].sort((a,b) => new Date(a.kickoffUTC) - new Date(b.kickoffUTC));
+      html += '<div class="group-block"><div class="group-label">GRUPO ' + g + '</div><div class="match-grid">';
+      matches.forEach(m => { html += buildMatchCard(m); });
+      html += '</div></div>';
+    });
+  }
+  document.getElementById('matches').innerHTML = html;
 
-      {/* Header */}
-      <div style={{ background:'#003087', padding:'20px 24px', display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:16 }}>
-        <div style={{ display:'flex', alignItems:'center', gap:14 }}>
-          <div style={{ width:46, height:46, background:'#FFD700', borderRadius:'50%', display:'flex', alignItems:'center', justifyContent:'center', fontSize:24 }}>⚽</div>
-          <div>
-            <div style={{ color:'#fff', fontSize:20, fontWeight:700 }}>FIFA World Cup 2026</div>
-            <div style={{ color:'#cbd5e1', fontSize:12 }}>USA · Canadá · México</div>
-          </div>
-        </div>
-        <div style={{ textAlign:'right' }}>
-          <div style={{ color:'#cbd5e1', fontSize:11 }}>Hora Argentina</div>
-          <div style={{ color:'#FFD700', fontSize:26, fontWeight:700, fontVariantNumeric:'tabular-nums' }}>{clockStr}</div>
-        </div>
-      </div>
-
-      {/* Stats bar */}
-      <div style={{ display:'grid', gridTemplateColumns:'repeat(4, 1fr)', gap:10, padding:'20px 24px 0' }}>
-        {[
-          ['🔴', liveCount, 'En vivo'],
-          ['📅', todayCount, 'Hoy'],
-          ['✅', finishedCount, 'Jugados'],
-          ['⚽', SCHEDULE.length, 'Total'],
-        ].map(([icon, num, label], i) => (
-          <div key={i} style={{ background:'#fff', borderRadius:12, padding:'14px 10px', textAlign:'center' }}>
-            <div style={{ fontSize:20 }}>{icon}</div>
-            <div style={{ fontSize:22, fontWeight:700, color:'#1a1a2e' }}>{num}</div>
-            <div style={{ fontSize:11, color:'#64748b' }}>{label}</div>
-          </div>
-        ))}
-      </div>
-
-      {/* Filters */}
-      <div style={{ display:'flex', gap:8, padding:'16px 24px 0', flexWrap:'wrap' }}>
-        {[
-          ['all','Todos'],['live','En vivo'],['today','Hoy'],['finished','Jugados'],['scheduled','Próximos'],
-        ].map(([key, label]) => (
-          <button key={key} onClick={() => setFilter(key)} style={{
-            padding:'7px 16px', borderRadius:20, border:'none', cursor:'pointer',
-            fontSize:13, fontWeight:600,
-            background: filter === key ? '#003087' : '#fff',
-            color: filter === key ? '#FFD700' : '#64748b',
-          }}>{label}</button>
-        ))}
-      </div>
-
-      {/* Matches grouped */}
-      <div style={{ padding:'16px 24px 0' }}>
-        {Object.keys(grouped).length === 0 && (
-          <div style={{ background:'#fff', borderRadius:12, padding:30, textAlign:'center', color:'#94a3b8' }}>
-            No hay partidos en esta vista
-          </div>
-        )}
-        {Object.entries(grouped).sort((a,b) => a[0].localeCompare(b[0])).map(([group, matches]) => (
-          <div key={group} style={{ marginBottom:18 }}>
-            <div style={{ color:'#fff', fontSize:13, fontWeight:700, marginBottom:8, opacity:0.85 }}>
-              GRUPO {group}
-            </div>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(320px, 1fr))', gap:10 }}>
-              {matches.sort((a,b) => new Date(a.kickoffUTC) - new Date(b.kickoffUTC)).map((m, i) => (
-                <MatchCard key={i} match={m} liveData={liveData} />
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Footer */}
-      <div style={{ textAlign:'center', color:'#64748b', fontSize:11, marginTop:24, padding:'0 24px' }}>
-        Datos: API-Football · Última actualización: {updateStr} hs AR
-      </div>
-    </div>
-  );
+  const updateStr = lastUpdate
+    ? new Date(lastUpdate).toLocaleTimeString('es-AR', {hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'America/Argentina/Buenos_Aires'})
+    : '--:--';
+  document.getElementById('footer').textContent = 'Datos: API-Football · Última actualización: ' + updateStr + ' hs AR';
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+function updateClock() {
+  const clockStr = new Date().toLocaleTimeString('es-AR', {hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'America/Argentina/Buenos_Aires'});
+  document.getElementById('clock').textContent = clockStr;
+}
+
+async function fetchScores() {
+  try {
+    const res = await fetch('./scores.json?t=' + Date.now());
+    const data = await res.json();
+    liveData = data.matches || {};
+    lastUpdate = data.updated || null;
+    render();
+  } catch (e) {
+    console.error('Error fetching scores:', e);
+  }
+}
+
+document.getElementById('filters').addEventListener('click', (e) => {
+  const btn = e.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentFilter = btn.dataset.filter;
+  render();
+});
+
+updateClock();
+render();
+fetchScores();
+setInterval(fetchScores, 60000);
+setInterval(updateClock, 30000);
 </script>
 </body>
 </html>
