@@ -82,6 +82,31 @@
   .group-tag { background:#f1f5f9; border-radius:4px; padding:1px 6px; font-weight:600; }
   .empty-state { background:#fff; border-radius:12px; padding:30px; text-align:center; color:#94a3b8; }
   .footer { text-align:center; color:#64748b; font-size:11px; margin-top:24px; padding:0 24px; }
+
+  @keyframes goalFlash {
+    0%, 100% { box-shadow:0 1px 3px rgba(0,0,0,0.08); transform:scale(1); }
+    15% { box-shadow:0 0 0 4px #FFD700, 0 4px 16px rgba(255,215,0,0.5); transform:scale(1.02); }
+    30% { box-shadow:0 1px 3px rgba(0,0,0,0.08); transform:scale(1); }
+    45% { box-shadow:0 0 0 4px #FFD700, 0 4px 16px rgba(255,215,0,0.5); transform:scale(1.02); }
+  }
+  .match-card.goal-flash { animation:goalFlash 1.5s ease-in-out 2; }
+
+  .goal-banner {
+    position:fixed; top:24px; left:50%; transform:translateX(-50%);
+    background:linear-gradient(135deg, #FFD700, #C9A227); color:#0a0a0a;
+    font-weight:800; font-size:18px; padding:16px 32px; border-radius:14px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.4); z-index:1000;
+    animation:goalBannerIn 0.3s ease-out, goalBannerOut 0.4s ease-in 3.6s forwards;
+    text-align:center;
+  }
+  @keyframes goalBannerIn {
+    from { opacity:0; transform:translateX(-50%) translateY(-30px) scale(0.8); }
+    to { opacity:1; transform:translateX(-50%) translateY(0) scale(1); }
+  }
+  @keyframes goalBannerOut {
+    from { opacity:1; }
+    to { opacity:0; transform:translateX(-50%) translateY(-20px); }
+  }
   .search-wrap { padding:18px 24px 0; }
   .search-box {
     position:relative; max-width:480px; margin:0 auto;
@@ -327,6 +352,7 @@ function buildMatchCard(m) {
   let cardClass = 'match-card';
   if (isLive) cardClass += ' live';
   else if (isFinished) cardClass += ' finished';
+  if (pendingFlashKey === key) cardClass += ' goal-flash';
 
   const scoreClass = isLive ? 'score-box live' : 'score-box';
   let scoreText;
@@ -461,6 +487,10 @@ function render() {
     ? new Date(lastUpdate).toLocaleTimeString('es-AR', {hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'America/Argentina/Buenos_Aires'})
     : '--:--';
   document.getElementById('footer').textContent = 'Datos: API-Football · Última actualización: ' + updateStr + ' hs AR';
+
+  if (pendingFlashKey) {
+    setTimeout(() => { pendingFlashKey = null; }, 3000);
+  }
 }
 
 function updateClock() {
@@ -472,13 +502,75 @@ async function fetchScores() {
   try {
     const res = await fetch('./scores.json?t=' + Date.now());
     const data = await res.json();
-    liveData = data.matches || {};
+    const newLiveData = data.matches || {};
+    detectGoals(newLiveData);
+    liveData = newLiveData;
     lastUpdate = data.updated || null;
     render();
   } catch (e) {
     console.error('Error fetching scores:', e);
   }
 }
+
+function detectGoals(newData) {
+  Object.keys(newData).forEach(key => {
+    const prev = liveData[key];
+    const curr = newData[key];
+    if (!curr) return;
+    const prevHome = prev ? prev.homeGoals : null;
+    const prevAway = prev ? prev.awayGoals : null;
+    const currHome = curr.homeGoals;
+    const currAway = curr.awayGoals;
+    if (prevHome === null || prevHome === undefined) return; // first time seeing this match, skip
+    if (currHome > prevHome || currAway > prevAway) {
+      const match = SCHEDULE.find(m => matchKey(m.home, m.away) === key);
+      const scorer = currHome > prevHome ? (match ? esName(match.home) : key) : (match ? esName(match.away) : key);
+      triggerGoalAlert(scorer, currHome, currAway, key);
+    }
+  });
+}
+
+let audioCtx = null;
+function playGoalSound() {
+  try {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const now = audioCtx.currentTime;
+    [0, 0.18, 0.36].forEach((delay, i) => {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(i === 2 ? 1100 : 880, now + delay);
+      gain.gain.setValueAtTime(0.0001, now + delay);
+      gain.gain.exponentialRampToValueAtTime(0.3, now + delay + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + delay + 0.16);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start(now + delay);
+      osc.stop(now + delay + 0.18);
+    });
+  } catch (e) { /* audio not available */ }
+}
+
+function triggerGoalAlert(scorerName, homeGoals, awayGoals, key) {
+  playGoalSound();
+
+  // Visual flash banner
+  const banner = document.createElement('div');
+  banner.className = 'goal-banner';
+  banner.textContent = '\u26BD GOOOL de ' + scorerName + '!';
+  document.body.appendChild(banner);
+  setTimeout(() => banner.remove(), 4000);
+
+  // Flash the specific match card after next render
+  pendingFlashKey = key;
+
+  // Browser notification (if tab not focused and permission granted)
+  if (document.hidden && 'Notification' in window && Notification.permission === 'granted') {
+    new Notification('\u26BD ¡GOL!', { body: scorerName + ' marca. ' + homeGoals + ' - ' + awayGoals });
+  }
+}
+
+let pendingFlashKey = null;
 
 function setActiveFilter(filterValue) {
   currentFilter = filterValue;
@@ -521,6 +613,13 @@ render();
 fetchScores();
 setInterval(fetchScores, 60000);
 setInterval(updateClock, 30000);
+
+if ('Notification' in window && Notification.permission === 'default') {
+  document.addEventListener('click', function requestPerm() {
+    Notification.requestPermission();
+    document.removeEventListener('click', requestPerm);
+  }, { once: true });
+}
 </script>
 </body>
 </html>
