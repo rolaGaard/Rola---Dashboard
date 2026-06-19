@@ -1,6 +1,12 @@
 {
-  "updated": "2026-06-19T18:19:46.920918Z",
+  "updated": "2026-06-19T20:06:35.092531Z",
   "matches": {
+    "USA-AUSTRALIA": {
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "status": "HT",
+      "elapsed": 45
+    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -168,12 +174,6 @@
       "awayGoals": 0,
       "status": "FT",
       "elapsed": 90
-    },
-    "USA-AUSTRALIA": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null
     },
     "SCOTLAND-MOROCCO": {
       "homeGoals": null,
