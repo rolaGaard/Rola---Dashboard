@@ -49,6 +49,7 @@
     font-size:13px; font-weight:600; background:#fff; color:#64748b;
   }
   .filter-btn.active { background:#003087; color:#FFD700; }
+  #fixture-btn.active { background:#FFD700; color:#0a0a0a; }
   .matches-container { padding:16px 24px 0; }
   .group-label { color:#fff; font-size:13px; font-weight:700; margin-bottom:8px; opacity:0.85; }
   .group-block { margin-bottom:18px; }
@@ -82,6 +83,47 @@
   .group-tag { background:#f1f5f9; border-radius:4px; padding:1px 6px; font-weight:600; }
   .empty-state { background:#fff; border-radius:12px; padding:30px; text-align:center; color:#94a3b8; }
   .footer { text-align:center; color:#64748b; font-size:11px; margin-top:24px; padding:0 24px; }
+
+  .bracket-view { padding:20px 16px 0; overflow-x:auto; }
+  .bracket-layout {
+    display:grid; grid-template-columns:200px 1fr 200px; gap:16px;
+    min-width:880px; align-items:center;
+  }
+  .groups-col { display:flex; flex-direction:column; gap:10px; }
+  .group-card {
+    background:#fff; border-radius:10px; padding:8px 10px;
+  }
+  .group-card-title {
+    font-size:10px; font-weight:700; color:#94a3b8; margin-bottom:4px; letter-spacing:0.05em;
+  }
+  .group-team-row {
+    display:flex; align-items:center; gap:6px; font-size:11px; font-weight:600;
+    color:#1a1a2e; padding:2px 0;
+  }
+  .group-team-row .gflag { font-size:14px; }
+  .group-team-row .gcode { color:#94a3b8; font-size:9px; margin-left:auto; }
+
+  .bracket-center { display:flex; flex-direction:column; align-items:center; gap:18px; }
+  .bracket-trophy { font-size:46px; margin-bottom:6px; }
+  .bracket-title { color:#fff; font-size:13px; font-weight:700; letter-spacing:0.08em; }
+  .bracket-stage-label {
+    color:#94a3b8; font-size:10px; font-weight:700; letter-spacing:0.08em;
+    text-align:center; margin-bottom:6px;
+  }
+  .bracket-slot {
+    background:#fff; border-radius:8px; padding:6px 10px; font-size:11px;
+    font-weight:600; color:#1a1a2e; min-width:140px; text-align:center;
+    border:1px dashed #cbd5e1;
+  }
+  .bracket-final-box {
+    background:linear-gradient(135deg, #FFD700, #C9A227); color:#0a0a0a;
+    border-radius:10px; padding:14px 20px; text-align:center; font-weight:700;
+    font-size:13px; letter-spacing:0.05em;
+  }
+  .bracket-stage-col { display:flex; flex-direction:column; gap:14px; align-items:center; }
+  .bracket-note {
+    text-align:center; color:#94a3b8; font-size:11px; margin-top:18px; padding:0 16px 8px;
+  }
 
   @keyframes goalFlash {
     0%, 100% { box-shadow:0 1px 3px rgba(0,0,0,0.08); transform:scale(1); }
@@ -168,9 +210,12 @@
 
 <div class="filters" id="filters">
   <button class="filter-btn active" data-filter="scheduled">Próximos</button>
+  <button class="filter-btn" id="fixture-btn">🏆 Fixture</button>
 </div>
 
 <div class="matches-container" id="matches"></div>
+
+<div class="bracket-view" id="bracket-view" style="display:none;"></div>
 
 <div class="footer" id="footer">Datos: API-Football · Última actualización: --:-- hs AR</div>
 
@@ -583,9 +628,69 @@ document.getElementById('stats-filters').addEventListener('click', (e) => {
 });
 
 document.getElementById('filters').addEventListener('click', (e) => {
-  const btn = e.target.closest('.filter-btn');
+  const btn = e.target.closest('.filter-btn[data-filter]');
   if (!btn) return;
   setActiveFilter(btn.dataset.filter);
+});
+
+function buildGroupsColumn(groupLetters) {
+  let html = '';
+  groupLetters.forEach(g => {
+    const teamsInGroup = new Set();
+    SCHEDULE.forEach(m => { if (m.group === g) { teamsInGroup.add(m.home); teamsInGroup.add(m.away); } });
+    html += '<div class="group-card"><div class="group-card-title">GRUPO ' + g + '</div>';
+    Array.from(teamsInGroup).forEach(t => {
+      html += '<div class="group-team-row"><span class="gflag">' + flag(t) + '</span><span>' + esName(t) + '</span><span class="gcode">' + countryCode(t) + '</span></div>';
+    });
+    html += '</div>';
+  });
+  return html;
+}
+
+function buildBracketStage(count, label) {
+  let html = '<div class="bracket-stage-col"><div class="bracket-stage-label">' + label + '</div>';
+  for (let i = 0; i < count; i++) {
+    html += '<div class="bracket-slot">Por definir</div>';
+  }
+  html += '</div>';
+  return html;
+}
+
+function renderBracket() {
+  const leftGroups = ['A','B','C','D','E','F'];
+  const rightGroups = ['G','H','I','J','K','L'];
+
+  let html = '<div class="bracket-layout">';
+  html += '<div class="groups-col">' + buildGroupsColumn(leftGroups) + '</div>';
+
+  html += '<div class="bracket-center">';
+  html += '<div class="bracket-trophy">🏆</div>';
+  html += '<div class="bracket-title">CAMINO A LA FINAL</div>';
+  html += '<div style="display:flex; gap:24px; align-items:center;">';
+  html += buildBracketStage(16, 'OCTAVOS');
+  html += buildBracketStage(8, 'CUARTOS');
+  html += buildBracketStage(4, 'SEMIS');
+  html += '<div class="bracket-stage-col"><div class="bracket-stage-label">FINAL</div><div class="bracket-final-box">🏆<br>CAMPEÓN</div></div>';
+  html += '</div>';
+  html += '<div class="bracket-note">El cuadro de eliminación se completa automáticamente cuando termine la fase de grupos (28 de junio)</div>';
+  html += '</div>';
+
+  html += '<div class="groups-col">' + buildGroupsColumn(rightGroups) + '</div>';
+  html += '</div>';
+
+  document.getElementById('bracket-view').innerHTML = html;
+}
+
+let showingBracket = false;
+document.getElementById('fixture-btn').addEventListener('click', () => {
+  showingBracket = !showingBracket;
+  document.getElementById('fixture-btn').classList.toggle('active', showingBracket);
+  document.getElementById('matches').style.display = showingBracket ? 'none' : '';
+  document.querySelector('.search-wrap').style.display = showingBracket ? 'none' : '';
+  document.getElementById('stats-filters').style.display = showingBracket ? 'none' : '';
+  document.querySelector('#filters .filter-btn[data-filter]').style.display = showingBracket ? 'none' : '';
+  document.getElementById('bracket-view').style.display = showingBracket ? '' : 'none';
+  if (showingBracket) renderBracket();
 });
 
 const searchInput = document.getElementById('search-input');
