@@ -70,6 +70,9 @@
     overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
   }
   .team.away .team-name { text-align:right; }
+  .team-name-winner {
+    background:#1DB954; color:#fff !important; border-radius:4px; padding:1px 6px;
+  }
   .team-code {
     font-size:10px; font-weight:700; color:#94a3b8; background:#f1f5f9;
     border-radius:4px; padding:1px 5px; letter-spacing:0.03em; flex-shrink:0;
@@ -102,7 +105,11 @@
     display:flex; align-items:center; gap:4px; font-size:10px; font-weight:600;
     color:#1a1a2e; padding:2px 6px; min-width:0;
   }
-  .group-team-row span:nth-child(2) {
+  .group-team-row .gname {
+    overflow:hidden; text-overflow:ellipsis; white-space:nowrap; min-width:0;
+  }
+  .group-team-row .gname-qualified {
+    background:#1DB954; color:#fff; border-radius:4px; padding:1px 5px;
     overflow:hidden; text-overflow:ellipsis; white-space:nowrap; min-width:0;
   }
   .group-team-row .gflag { font-size:12px; flex-shrink:0; }
@@ -142,6 +149,25 @@
   }
   .bracket-trophy { font-size:42px; }
   .bracket-title { color:#fff; font-size:11px; font-weight:700; letter-spacing:0.06em; text-align:center; }
+
+  .qualifiers-summary { margin-top:20px; }
+  .qualifiers-grid {
+    display:grid; grid-template-columns:repeat(4,1fr); gap:8px;
+  }
+  .qualifier-card {
+    background:#fff; border-radius:8px; padding:0; overflow:hidden;
+    border:2px solid var(--gcolor, #94a3b8);
+  }
+  .qualifier-card-title {
+    font-size:9px; font-weight:700; color:#fff; letter-spacing:0.04em;
+    background:var(--gcolor, #94a3b8); padding:3px 8px;
+  }
+  .qualifier-row { font-size:10px; padding:3px 8px; color:#1a1a2e; }
+  .qteam { font-weight:700; background:#1DB954; color:#fff; border-radius:4px; padding:1px 5px; }
+  .qpending { color:#94a3b8; font-style:italic; }
+  @media (max-width:700px) {
+    .qualifiers-grid { grid-template-columns:repeat(2,1fr); }
+  }
 
   @media (max-width:700px) {
     .bracket-layout { grid-template-columns:1fr; gap:18px; }
@@ -318,7 +344,7 @@ const SCHEDULE = [
   {home:'USA',away:'PARAGUAY',stadium:'SoFi Stadium',city:'Los Angeles',kickoffUTC:'2026-06-13T01:00:00Z',group:'D'},
   {home:'AUSTRALIA',away:'TURKIYE',stadium:'BC Place',city:'Vancouver',kickoffUTC:'2026-06-14T04:00:00Z',group:'D'},
   {home:'USA',away:'AUSTRALIA',stadium:'Lumen Field',city:'Seattle',kickoffUTC:'2026-06-19T19:00:00Z',group:'D'},
-  {home:'TURKIYE',away:'PARAGUAY',stadium:'Levi\'s Stadium',city:'San Francisco',kickoffUTC:'2026-06-20T04:00:00Z',group:'D'},
+  {home:'TURKIYE',away:'PARAGUAY',stadium:'Levi\'s Stadium',city:'San Francisco',kickoffUTC:'2026-06-19T20:00:00Z',group:'D'},
   {home:'TURKIYE',away:'USA',stadium:'SoFi Stadium',city:'Los Angeles',kickoffUTC:'2026-06-26T02:00:00Z',group:'D'},
   {home:'PARAGUAY',away:'AUSTRALIA',stadium:'Levi\'s Stadium',city:'San Francisco',kickoffUTC:'2026-06-26T02:00:00Z',group:'D'},
   {home:'GERMANY',away:'CURACAO',stadium:'NRG Stadium',city:'Houston',kickoffUTC:'2026-06-14T17:00:00Z',group:'E'},
@@ -330,7 +356,7 @@ const SCHEDULE = [
   {home:'NETHERLANDS',away:'JAPAN',stadium:'AT&T Stadium',city:'Dallas',kickoffUTC:'2026-06-14T20:00:00Z',group:'F'},
   {home:'SWEDEN',away:'TUNISIA',stadium:'Estadio BBVA',city:'Monterrey',kickoffUTC:'2026-06-15T02:00:00Z',group:'F'},
   {home:'NETHERLANDS',away:'SWEDEN',stadium:'NRG Stadium',city:'Houston',kickoffUTC:'2026-06-20T18:00:00Z',group:'F'},
-  {home:'TUNISIA',away:'JAPAN',stadium:'Estadio BBVA',city:'Monterrey',kickoffUTC:'2026-06-21T05:00:00Z',group:'F'},
+  {home:'TUNISIA',away:'JAPAN',stadium:'Estadio BBVA',city:'Monterrey',kickoffUTC:'2026-06-20T22:00:00Z',group:'F'},
   {home:'JAPAN',away:'SWEDEN',stadium:'AT&T Stadium',city:'Dallas',kickoffUTC:'2026-06-25T23:00:00Z',group:'F'},
   {home:'TUNISIA',away:'NETHERLANDS',stadium:'Arrowhead Stadium',city:'Kansas City',kickoffUTC:'2026-06-26T00:00:00Z',group:'F'},
   {home:'BELGIUM',away:'EGYPT',stadium:'Lumen Field',city:'Seattle',kickoffUTC:'2026-06-15T19:00:00Z',group:'G'},
@@ -399,16 +425,80 @@ let lastUpdate = null;
 let currentFilter = 'all';
 let searchTerm = '';
 
+// Prefer the real kickoff time from the API (more reliable, auto-corrects if FIFA
+// changes a time) over our hardcoded SCHEDULE value, which is only a fallback
+// for matches the API hasn't returned data for yet.
+function getKickoffUTC(m) {
+  const key = matchKey(m.home, m.away);
+  const live = liveData[key] || null;
+  return (live && live.kickoffUTC) ? live.kickoffUTC : m.kickoffUTC;
+}
+
+function getMatchResult(m) {
+  const key = matchKey(m.home, m.away);
+  const live = liveData[key] || null;
+  const apiStatus = live ? live.status : null;
+  const homeGoals = live ? live.homeGoals : null;
+  const awayGoals = live ? live.awayGoals : null;
+  const now = new Date();
+  const kickoff = new Date(getKickoffUTC(m));
+  const estimatedEnd = new Date(kickoff.getTime() + 115 * 60000);
+  const isFinished = (apiStatus && isFinishedStatus(apiStatus)) || (!apiStatus && now >= estimatedEnd);
+  const hasScore = homeGoals !== null && homeGoals !== undefined;
+  return { isFinished, hasScore, homeGoals, awayGoals };
+}
+
+function computeStandings(groupLetter) {
+  const groupMatches = SCHEDULE.filter(m => m.group === groupLetter);
+  const teams = new Set();
+  groupMatches.forEach(m => { teams.add(m.home); teams.add(m.away); });
+
+  const table = {};
+  teams.forEach(t => { table[t] = { team:t, pts:0, gf:0, ga:0, played:0 }; });
+
+  groupMatches.forEach(m => {
+    const r = getMatchResult(m);
+    if (!r.isFinished || !r.hasScore) return;
+    const row1 = table[m.home], row2 = table[m.away];
+    row1.played++; row2.played++;
+    row1.gf += r.homeGoals; row1.ga += r.awayGoals;
+    row2.gf += r.awayGoals; row2.ga += r.homeGoals;
+    if (r.homeGoals > r.awayGoals) row1.pts += 3;
+    else if (r.homeGoals < r.awayGoals) row2.pts += 3;
+    else { row1.pts += 1; row2.pts += 1; }
+  });
+
+  const rows = Object.values(table).sort((a,b) => {
+    if (b.pts !== a.pts) return b.pts - a.pts;
+    const gdA = a.gf - a.ga, gdB = b.gf - b.ga;
+    if (gdB !== gdA) return gdB - gdA;
+    return b.gf - a.gf;
+  });
+  return rows; // rows[0] = 1st place, rows[1] = 2nd, etc.
+}
+
+// Returns the team name if mathematically guaranteed to finish in `position` (1 or 2), else null.
+// Conservative check: only confirms once all group matches are finished (no math project for partial groups,
+// to avoid wrong guesses — but updates immediately when the group's last match ends, not waiting for other groups).
+function getQualifier(groupLetter, position) {
+  const groupMatches = SCHEDULE.filter(m => m.group === groupLetter);
+  const allFinished = groupMatches.every(m => getMatchResult(m).isFinished && getMatchResult(m).hasScore);
+  if (!allFinished) return null;
+  const standings = computeStandings(groupLetter);
+  return standings[position - 1] ? standings[position - 1].team : null;
+}
+
 function buildMatchCard(m) {
   const key = matchKey(m.home, m.away);
   const live = liveData[key] || null;
   const apiStatus = live ? live.status : null;
   const homeGoals = live ? live.homeGoals : null;
   const awayGoals = live ? live.awayGoals : null;
+  const realKickoffUTC = getKickoffUTC(m);
 
   // Infer status from time if API data is missing
   const now = new Date();
-  const kickoff = new Date(m.kickoffUTC);
+  const kickoff = new Date(realKickoffUTC);
   const estimatedEnd = new Date(kickoff.getTime() + 115 * 60000);
   const timeInferredLive = now >= kickoff && now < estimatedEnd;
   const timeInferredFinished = now >= estimatedEnd;
@@ -417,7 +507,7 @@ function buildMatchCard(m) {
   const isFinished = (apiStatus && isFinishedStatus(apiStatus)) || (!apiStatus && timeInferredFinished);
   const hasScore = homeGoals !== null && homeGoals !== undefined;
 
-  const arTime = utcToAR(m.kickoffUTC);
+  const arTime = utcToAR(realKickoffUTC);
   const timeOnly = arTime.split(' ').slice(-1)[0];
   let label = statusLabel(apiStatus, live ? live.elapsed : null);
   if (!label && isLive) label = 'EN VIVO';
@@ -444,18 +534,25 @@ function buildMatchCard(m) {
     badgeHtml = '<span class="' + badgeClass + '">' + (isLive ? '\u25CF ' : '') + label + '</span>';
   }
 
+  let homeNameClass = 'team-name';
+  let awayNameClass = 'team-name';
+  if (isFinished && hasScore) {
+    if (homeGoals > awayGoals) homeNameClass = 'team-name team-name-winner';
+    else if (awayGoals > homeGoals) awayNameClass = 'team-name team-name-winner';
+  }
+
   return (
     '<div class="' + cardClass + '">' +
       '<div class="match-row">' +
         '<div class="team">' +
           '<span class="team-flag">' + flag(m.home) + '</span>' +
-          '<span class="team-name">' + esName(m.home) + '</span>' +
+          '<span class="' + homeNameClass + '">' + esName(m.home) + '</span>' +
           '<span class="team-code">' + countryCode(m.home) + '</span>' +
         '</div>' +
         '<div class="' + scoreClass + '">' + scoreText + '</div>' +
         '<div class="team away">' +
           '<span class="team-flag">' + flag(m.away) + '</span>' +
-          '<span class="team-name">' + esName(m.away) + '</span>' +
+          '<span class="' + awayNameClass + '">' + esName(m.away) + '</span>' +
           '<span class="team-code">' + countryCode(m.away) + '</span>' +
         '</div>' +
       '</div>' +
@@ -477,7 +574,7 @@ function getEffectiveStatus(m) {
   if (apiStatus && isFinishedStatus(apiStatus)) return 'finished';
 
   const now = new Date();
-  const kickoff = new Date(m.kickoffUTC);
+  const kickoff = new Date(getKickoffUTC(m));
   const estimatedEnd = new Date(kickoff.getTime() + 115 * 60000);
   if (now >= kickoff && now < estimatedEnd) return 'live';
   if (now >= estimatedEnd) return 'finished';
@@ -489,7 +586,7 @@ function updateCounters() {
   let liveCount = 0, finishedCount = 0, todayCount = 0, scheduledCount = 0;
   SCHEDULE.forEach(m => {
     const status = getEffectiveStatus(m);
-    const isToday = toARDateStr(m.kickoffUTC) === todayAR;
+    const isToday = toARDateStr(getKickoffUTC(m)) === todayAR;
     if (status === 'live') liveCount++;
     if (status === 'finished') finishedCount++;
     if (status === 'scheduled') scheduledCount++;
@@ -530,7 +627,7 @@ function render() {
       return homeMatch || awayMatch;
     }
     const status = getEffectiveStatus(m);
-    const isToday = toARDateStr(m.kickoffUTC) === todayAR;
+    const isToday = toARDateStr(getKickoffUTC(m)) === todayAR;
     if (currentFilter === 'all') return true;
     if (currentFilter === 'live') return status === 'live';
     if (currentFilter === 'today') return isToday;
@@ -549,7 +646,7 @@ function render() {
 
   let html = '';
   if (searchTerm) {
-    const sorted = filtered.slice().sort((a,b) => new Date(a.kickoffUTC) - new Date(b.kickoffUTC));
+    const sorted = filtered.slice().sort((a,b) => new Date(getKickoffUTC(a)) - new Date(getKickoffUTC(b)));
     if (sorted.length === 0) {
       html = '<div class="empty-state">No se encontraron partidos para "' + searchTerm + '"</div>';
       document.getElementById('search-label').innerHTML = '';
@@ -561,7 +658,7 @@ function render() {
     }
   } else {
     document.getElementById('search-label').innerHTML = '';
-    const sortedAll = filtered.slice().sort((a,b) => new Date(a.kickoffUTC) - new Date(b.kickoffUTC));
+    const sortedAll = filtered.slice().sort((a,b) => new Date(getKickoffUTC(a)) - new Date(getKickoffUTC(b)));
     if (sortedAll.length === 0) {
       html = '<div class="empty-state">No hay partidos en esta vista</div>';
     } else {
@@ -683,24 +780,49 @@ const GROUP_COLORS = {
 function buildGroupsColumn(groupLetters) {
   let html = '';
   groupLetters.forEach(g => {
-    const teamsInGroup = new Set();
-    SCHEDULE.forEach(m => { if (m.group === g) { teamsInGroup.add(m.home); teamsInGroup.add(m.away); } });
+    const standings = computeStandings(g);
     const color = GROUP_COLORS[g] || '#94a3b8';
     html += '<div class="group-card" style="--gcolor:' + color + '"><div class="group-card-title">GRUPO ' + g + '</div>';
-    Array.from(teamsInGroup).forEach(t => {
-      html += '<div class="group-team-row"><span class="gflag">' + flag(t) + '</span><span>' + esName(t) + '</span><span class="gcode">' + countryCode(t) + '</span></div>';
+    standings.forEach((row, idx) => {
+      const t = row.team;
+      const qualifying = idx < 2; // top 2 highlighted as currently qualifying
+      const nameClass = qualifying ? 'gname-qualified' : 'gname';
+      html += '<div class="group-team-row"><span class="gflag">' + flag(t) + '</span><span class="' + nameClass + '">' + esName(t) + '</span><span class="gcode">' + countryCode(t) + '</span></div>';
     });
     html += '</div>';
   });
   return html;
 }
 
+// Group qualification positions are shown per-group (1st/2nd) as soon as each
+// group finishes. Exact Round-of-32 crossings (especially for 3rd-place teams)
+// are only fixed once the full group stage ends, since they depend on comparing
+// all 12 groups' third-place finishers.
 function buildSlotsCol(count, cls, label) {
   let html = '<div class="bracket-side-col ' + cls + '"><div class="bracket-stage-label">' + label + '</div>';
   for (let i = 0; i < count; i++) {
     html += '<div class="bracket-slot">Por definir</div>';
   }
   html += '</div>';
+  return html;
+}
+
+function buildQualifiersSummary() {
+  const allGroups = ['A','B','C','D','E','F','G','H','I','J','K','L'];
+  let html = '<div class="qualifiers-summary">';
+  html += '<div class="bracket-stage-label" style="font-size:11px; margin-bottom:8px;">CLASIFICADOS A OCTAVOS (se completa por grupo a medida que termina)</div>';
+  html += '<div class="qualifiers-grid">';
+  allGroups.forEach(g => {
+    const first = getQualifier(g, 1);
+    const second = getQualifier(g, 2);
+    const color = GROUP_COLORS[g] || '#94a3b8';
+    html += '<div class="qualifier-card" style="--gcolor:' + color + '">';
+    html += '<div class="qualifier-card-title">GRUPO ' + g + '</div>';
+    html += '<div class="qualifier-row">1° ' + (first ? '<span class="qteam">' + flag(first) + ' ' + esName(first) + '</span>' : '<span class="qpending">Por definir</span>') + '</div>';
+    html += '<div class="qualifier-row">2° ' + (second ? '<span class="qteam">' + flag(second) + ' ' + esName(second) + '</span>' : '<span class="qpending">Por definir</span>') + '</div>';
+    html += '</div>';
+  });
+  html += '</div></div>';
   return html;
 }
 
@@ -745,6 +867,7 @@ function renderBracket() {
   mobileHtml += '</div>';
 
   html += '<div class="bracket-note">El cuadro de eliminación se completa automáticamente cuando termine la fase de grupos (28 de junio)</div>';
+  html += buildQualifiersSummary();
 
   let groupsHtml = '<div class="bracket-layout">';
   groupsHtml += '<div class="groups-col">' + buildGroupsColumn(leftGroups) + '</div>';
