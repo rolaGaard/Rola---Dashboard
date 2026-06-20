@@ -101,19 +101,23 @@
     font-size:9px; font-weight:700; color:#fff; letter-spacing:0.04em;
     background:var(--gcolor, #94a3b8); padding:3px 6px;
   }
-  .group-team-row {
-    display:flex; align-items:center; gap:4px; font-size:10px; font-weight:600;
-    color:#1a1a2e; padding:2px 6px; min-width:0;
+  .standings-header {
+    display:grid; grid-template-columns:1fr 18px 16px 16px 16px 22px 22px;
+    gap:2px; font-size:7px; font-weight:700; color:#94a3b8;
+    padding:4px 6px 2px; text-align:center;
   }
-  .group-team-row .gname {
-    overflow:hidden; text-overflow:ellipsis; white-space:nowrap; min-width:0;
+  .standings-header .sh-team { text-align:left; }
+  .standings-row {
+    display:grid; grid-template-columns:1fr 18px 16px 16px 16px 22px 22px;
+    gap:2px; font-size:9px; font-weight:600; color:#1a1a2e;
+    padding:2px 6px; align-items:center; text-align:center;
   }
-  .group-team-row .gname-qualified {
-    background:#1DB954; color:#fff; border-radius:4px; padding:1px 5px;
-    overflow:hidden; text-overflow:ellipsis; white-space:nowrap; min-width:0;
+  .st-team {
+    display:flex; align-items:center; gap:3px; min-width:0; text-align:left;
   }
-  .group-team-row .gflag { font-size:12px; flex-shrink:0; }
-  .group-team-row .gcode { color:#94a3b8; font-size:8px; margin-left:auto; flex-shrink:0; }
+  .gname { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; min-width:0; }
+  .gflag { font-size:11px; flex-shrink:0; }
+  .st-pts { font-weight:800; color:var(--gcolor, #1a1a2e); }
 
   .bracket-stage-label {
     color:#94a3b8; font-size:8px; font-weight:700; letter-spacing:0.05em;
@@ -454,7 +458,7 @@ function computeStandings(groupLetter) {
   groupMatches.forEach(m => { teams.add(m.home); teams.add(m.away); });
 
   const table = {};
-  teams.forEach(t => { table[t] = { team:t, pts:0, gf:0, ga:0, played:0 }; });
+  teams.forEach(t => { table[t] = { team:t, pts:0, gf:0, ga:0, played:0, w:0, d:0, l:0 }; });
 
   groupMatches.forEach(m => {
     const r = getMatchResult(m);
@@ -463,9 +467,9 @@ function computeStandings(groupLetter) {
     row1.played++; row2.played++;
     row1.gf += r.homeGoals; row1.ga += r.awayGoals;
     row2.gf += r.awayGoals; row2.ga += r.homeGoals;
-    if (r.homeGoals > r.awayGoals) row1.pts += 3;
-    else if (r.homeGoals < r.awayGoals) row2.pts += 3;
-    else { row1.pts += 1; row2.pts += 1; }
+    if (r.homeGoals > r.awayGoals) { row1.pts += 3; row1.w++; row2.l++; }
+    else if (r.homeGoals < r.awayGoals) { row2.pts += 3; row2.w++; row1.l++; }
+    else { row1.pts += 1; row2.pts += 1; row1.d++; row2.d++; }
   });
 
   const rows = Object.values(table).sort((a,b) => {
@@ -783,11 +787,20 @@ function buildGroupsColumn(groupLetters) {
     const standings = computeStandings(g);
     const color = GROUP_COLORS[g] || '#94a3b8';
     html += '<div class="group-card" style="--gcolor:' + color + '"><div class="group-card-title">GRUPO ' + g + '</div>';
-    standings.forEach((row, idx) => {
+    html += '<div class="standings-header"><span class="sh-team"></span><span>PJ</span><span>G</span><span>E</span><span>P</span><span>DG</span><span>PTS</span></div>';
+    standings.forEach((row) => {
       const t = row.team;
-      const qualifying = idx < 2; // top 2 highlighted as currently qualifying
-      const nameClass = qualifying ? 'gname-qualified' : 'gname';
-      html += '<div class="group-team-row"><span class="gflag">' + flag(t) + '</span><span class="' + nameClass + '">' + esName(t) + '</span><span class="gcode">' + countryCode(t) + '</span></div>';
+      const gd = row.gf - row.ga;
+      const gdStr = gd > 0 ? '+' + gd : String(gd);
+      html += '<div class="standings-row">' +
+        '<span class="st-team"><span class="gflag">' + flag(t) + '</span><span class="gname">' + esName(t) + '</span></span>' +
+        '<span>' + row.played + '</span>' +
+        '<span>' + row.w + '</span>' +
+        '<span>' + row.d + '</span>' +
+        '<span>' + row.l + '</span>' +
+        '<span>' + gdStr + '</span>' +
+        '<span class="st-pts">' + row.pts + '</span>' +
+      '</div>';
     });
     html += '</div>';
   });
