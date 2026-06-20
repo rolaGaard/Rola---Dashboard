@@ -1,6 +1,13 @@
 {
-  "updated": "2026-06-20T02:32:59.018843Z",
+  "updated": "2026-06-20T03:07:37.982652Z",
   "matches": {
+    "T\u00dcRKIYE-PARAGUAY": {
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "1H",
+      "elapsed": 7,
+      "kickoffUTC": "2026-06-20T03:00:00+00:00"
+    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -217,13 +224,6 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-20T00:30:00+00:00"
-    },
-    "T\u00dcRKIYE-PARAGUAY": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null,
-      "kickoffUTC": "2026-06-20T03:00:00+00:00"
     },
     "NETHERLANDS-SWEDEN": {
       "homeGoals": null,
