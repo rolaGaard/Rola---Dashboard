@@ -128,7 +128,7 @@
 
   .date-section { margin-bottom:18px; }
   .date-header {
-    color:#fff; font-size:13px; font-weight:700; margin-bottom:8px;
+    color:#fff; font-size:18px; font-weight:700; margin-bottom:10px;
     padding-left:10px; border-left:3px solid #FFD700;
     text-transform:capitalize;
   }
@@ -906,9 +906,9 @@ function render() {
 
     if (sortedAll.length === 0) {
       html = '<div class="empty-state">No hay partidos en esta vista</div>';
-    } else if (currentFilter === 'all' || currentFilter === 'scheduled') {
+    } else if (currentFilter === 'scheduled') {
       html += buildDateGroupedHtml(sortedAll);
-    } else if (currentFilter === 'finished') {
+    } else if (currentFilter === 'all' || currentFilter === 'finished') {
       html += buildGroupGroupedHtml(sortedAll);
     } else {
       html += '<div class="match-grid">';
