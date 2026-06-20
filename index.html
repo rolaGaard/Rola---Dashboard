@@ -708,6 +708,7 @@ function render() {
   document.getElementById('bracket-view').style.display = 'none';
 
   const filtered = SCHEDULE.filter(m => {
+    let matchesSearch = true;
     if (searchTerm) {
       const homeCodes = COUNTRY_CODES[m.home] || [];
       const awayCodes = COUNTRY_CODES[m.away] || [];
@@ -717,8 +718,10 @@ function render() {
       const awayMatch = esName(m.away).toLowerCase().includes(searchTerm)
         || m.away.toLowerCase().includes(searchTerm)
         || awayCodes.some(c => c.toLowerCase() === searchTerm);
-      return homeMatch || awayMatch;
+      matchesSearch = homeMatch || awayMatch;
     }
+    if (!matchesSearch) return false;
+
     const status = getEffectiveStatus(m);
     const isToday = toARDateStr(getKickoffUTC(m)) === todayAR;
     if (currentFilter === 'all') return true;
@@ -741,7 +744,7 @@ function render() {
   if (searchTerm) {
     const sorted = filtered.slice().sort((a,b) => new Date(getKickoffUTC(a)) - new Date(getKickoffUTC(b)));
     if (sorted.length === 0) {
-      html = '<div class="empty-state">No se encontraron partidos para "' + searchTerm + '"</div>';
+      html = '<div class="empty-state">No se encontraron partidos para "' + searchTerm + '" en esta vista</div>';
       document.getElementById('search-label').innerHTML = '';
     } else {
       html += '<div class="match-grid">';
