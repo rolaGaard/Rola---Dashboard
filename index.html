@@ -115,6 +115,13 @@
   .status-badge.finished { color:#fff; background:#003087; }
   .group-tag { background:#f1f5f9; border-radius:4px; padding:1px 6px; font-weight:600; }
   .empty-state { background:#fff; border-radius:12px; padding:30px; text-align:center; color:#94a3b8; }
+
+  .date-section { margin-bottom:18px; }
+  .date-header {
+    color:#fff; font-size:13px; font-weight:700; margin-bottom:8px;
+    padding-left:10px; border-left:3px solid #FFD700;
+    text-transform:capitalize;
+  }
   .footer { text-align:center; color:#64748b; font-size:11px; margin-top:24px; padding:0 24px; }
 
   .report-bug-wrap { text-align:center; padding:16px 24px 30px; }
@@ -295,9 +302,9 @@
   .search-results-label b { color:#FFD700; }
 
   .fullscreen-btn {
-    width:34px; height:34px; border-radius:8px;
+    width:68px; height:68px; border-radius:14px;
     background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12);
-    color:#94a3b8; font-size:16px; cursor:pointer;
+    color:#94a3b8; font-size:32px; cursor:pointer;
     display:flex; align-items:center; justify-content:center;
     transition:background 0.15s, color 0.15s;
     flex-shrink:0;
@@ -740,6 +747,52 @@ function updateCounters() {
   document.getElementById('stat-total').textContent = SCHEDULE.length;
 }
 
+function formatDateHeader(utcStr) {
+  const d = new Date(utcStr);
+  const str = d.toLocaleDateString('es-AR', {
+    weekday:'long', day:'numeric', month:'long',
+    timeZone:'America/Argentina/Buenos_Aires'
+  });
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function buildDateGroupedHtml(sortedMatches) {
+  let html = '';
+  let currentDateKey = null;
+  sortedMatches.forEach(m => {
+    const utc = getKickoffUTC(m);
+    const dateKey = toARDateStr(utc);
+    if (dateKey !== currentDateKey) {
+      if (currentDateKey !== null) html += '</div></div>';
+      currentDateKey = dateKey;
+      html += '<div class="date-section">';
+      html += '<div class="date-header">' + formatDateHeader(utc) + '</div>';
+      html += '<div class="match-grid">';
+    }
+    html += buildMatchCard(m);
+  });
+  if (currentDateKey !== null) html += '</div></div>';
+  return html;
+}
+
+function buildGroupGroupedHtml(sortedMatches) {
+  const byGroup = {};
+  sortedMatches.forEach(m => {
+    if (!byGroup[m.group]) byGroup[m.group] = [];
+    byGroup[m.group].push(m);
+  });
+  let html = '';
+  Object.keys(byGroup).sort().forEach(g => {
+    const color = GROUP_COLORS[g] || '#94a3b8';
+    html += '<div class="date-section">';
+    html += '<div class="date-header" style="border-left:3px solid ' + color + ';">GRUPO ' + g + '</div>';
+    html += '<div class="match-grid">';
+    byGroup[g].forEach(m => { html += buildMatchCard(m); });
+    html += '</div></div>';
+  });
+  return html;
+}
+
 function render() {
   const todayAR = toARDateStr(new Date().toISOString());
 
@@ -803,8 +856,13 @@ function render() {
   } else {
     document.getElementById('search-label').innerHTML = '';
     const sortedAll = filtered.slice().sort((a,b) => new Date(getKickoffUTC(a)) - new Date(getKickoffUTC(b)));
+
     if (sortedAll.length === 0) {
       html = '<div class="empty-state">No hay partidos en esta vista</div>';
+    } else if (currentFilter === 'all' || currentFilter === 'scheduled') {
+      html += buildDateGroupedHtml(sortedAll);
+    } else if (currentFilter === 'finished') {
+      html += buildGroupGroupedHtml(sortedAll);
     } else {
       html += '<div class="match-grid">';
       sortedAll.forEach(m => { html += buildMatchCard(m); });
