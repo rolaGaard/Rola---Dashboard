@@ -58,9 +58,39 @@
     background:#fff; border-radius:14px; padding:14px 16px;
     border-left:4px solid #e2e8f0; box-shadow:0 1px 3px rgba(0,0,0,0.08);
     display:flex; flex-direction:column; gap:8px;
+    transition:box-shadow 0.15s;
   }
   .match-card.live { border-left-color:#CC0000; }
   .match-card.finished { border-left-color:#003087; }
+  .match-card.clickable { cursor:pointer; }
+  .match-card.clickable:hover { box-shadow:0 2px 8px rgba(0,0,0,0.14); }
+  .match-card.expanded { box-shadow:0 2px 10px rgba(0,0,0,0.16); }
+  .detail-hint {
+    color:#94a3b8; font-size:10px; margin-left:auto; font-weight:600;
+  }
+  .match-detail {
+    margin-top:6px; padding-top:10px; border-top:1px solid #f1f5f9;
+    display:flex; flex-direction:column; gap:3px;
+    animation:detailExpand 0.2s ease-out;
+  }
+  @keyframes detailExpand {
+    from { opacity:0; transform:translateY(-4px); }
+    to { opacity:1; transform:translateY(0); }
+  }
+  .detail-section-label {
+    font-size:10px; font-weight:700; color:#94a3b8; letter-spacing:0.04em;
+    margin-bottom:2px;
+  }
+  .detail-row {
+    display:flex; align-items:center; gap:8px; font-size:12px; padding:2px 0;
+  }
+  .detail-row.detail-away { flex-direction:row-reverse; text-align:right; }
+  .detail-minute {
+    font-weight:700; color:#94a3b8; font-size:10px; min-width:32px;
+  }
+  .detail-row.detail-away .detail-minute { text-align:right; }
+  .detail-player { color:#1a1a2e; font-weight:600; }
+  .detail-empty { font-size:11px; color:#94a3b8; font-style:italic; text-align:center; padding:6px 0; }
   .match-row { display:flex; align-items:center; justify-content:space-between; gap:10px; }
   .team { display:flex; align-items:center; gap:8px; flex:1; min-width:0; }
   .team.away { flex-direction:row-reverse; }
@@ -404,7 +434,7 @@ const SCHEDULE = [
 function flag(name){ return FLAGS[name] || '🏳'; }
 function esName(name){ return ES_NAMES[name] || name; }
 function countryCode(name){ return (COUNTRY_CODES[name] || [name.slice(0,3)])[0]; }
-function matchKey(home, away){ return home.toUpperCase() + '-' + away.toUpperCase(); }
+function matchKey(home, away){ return stripAccents(home) + '-' + stripAccents(away); }
 
 function utcToAR(utcStr){
   return new Date(utcStr).toLocaleString('es-AR',{
@@ -547,8 +577,20 @@ function buildMatchCard(m) {
     else if (awayGoals > homeGoals) awayNameClass = 'team-name team-name-winner';
   }
 
+  const events = live ? (live.events || []) : [];
+  const hasDetail = (isLive || isFinished) && events.length > 0;
+  const isExpanded = expandedMatchKey === key;
+  if (isExpanded) cardClass += ' expanded';
+  const clickAttr = hasDetail ? ' onclick="toggleMatchDetail(\'' + key.replace(/'/g, "\\'") + '\')"' : '';
+  if (hasDetail) cardClass += ' clickable';
+
+  let detailHtml = '';
+  if (isExpanded && hasDetail) {
+    detailHtml = '<div class="match-detail">' + buildEventsDetail(events, m.home, m.away) + '</div>';
+  }
+
   return (
-    '<div class="' + cardClass + '">' +
+    '<div class="' + cardClass + '"' + clickAttr + '>' +
       '<div class="match-row">' +
         '<div class="team">' +
           '<span class="team-flag">' + flag(m.home) + '</span>' +
@@ -567,9 +609,51 @@ function buildMatchCard(m) {
         '<span>\u{1F550} ' + arTime + '</span>' +
         '<span>\u{1F4CD} ' + m.stadium + ', ' + m.city + '</span>' +
         '<span class="group-tag">GRUPO ' + m.group + '</span>' +
+        (hasDetail ? '<span class="detail-hint">' + (isExpanded ? '\u25B2 ocultar' : '\u25BC detalle') + '</span>' : '') +
       '</div>' +
+      detailHtml +
     '</div>'
   );
+}
+
+function buildEventsDetail(events, homeTeam, awayTeam) {
+  const goals = events.filter(e => e.type === 'Goal');
+  const cards = events.filter(e => e.type === 'Card');
+
+  let html = '';
+
+  if (goals.length > 0) {
+    html += '<div class="detail-section-label">\u26BD GOLES</div>';
+    goals.forEach(g => {
+      const sideClass = g.team === homeTeam ? 'detail-home' : 'detail-away';
+      const minuteStr = g.minute + (g.extra ? '+' + g.extra : '') + "'";
+      const ownGoal = g.detail === 'Own Goal' ? ' (en contra)' : '';
+      const penalty = g.detail === 'Penalty' ? ' (penal)' : '';
+      html += '<div class="detail-row ' + sideClass + '">' +
+        '<span class="detail-minute">' + minuteStr + '</span>' +
+        '<span class="detail-player">' + (g.player || 'Desconocido') + ownGoal + penalty + '</span>' +
+      '</div>';
+    });
+  }
+
+  if (cards.length > 0) {
+    html += '<div class="detail-section-label" style="margin-top:8px;">\u{1F7E8} TARJETAS</div>';
+    cards.forEach(c => {
+      const sideClass = c.team === homeTeam ? 'detail-home' : 'detail-away';
+      const minuteStr = c.minute + (c.extra ? '+' + c.extra : '') + "'";
+      const cardEmoji = c.detail === 'Red Card' ? '\u{1F7E5}' : '\u{1F7E8}';
+      html += '<div class="detail-row ' + sideClass + '">' +
+        '<span class="detail-minute">' + minuteStr + '</span>' +
+        '<span class="detail-player">' + cardEmoji + ' ' + (c.player || 'Desconocido') + '</span>' +
+      '</div>';
+    });
+  }
+
+  if (goals.length === 0 && cards.length === 0) {
+    html = '<div class="detail-empty">Sin eventos registrados todavía</div>';
+  }
+
+  return html;
 }
 
 function getEffectiveStatus(m) {
@@ -763,6 +847,12 @@ function triggerGoalAlert(scorerName, homeGoals, awayGoals, key) {
 }
 
 let pendingFlashKey = null;
+let expandedMatchKey = null;
+
+function toggleMatchDetail(key) {
+  expandedMatchKey = (expandedMatchKey === key) ? null : key;
+  render();
+}
 
 function setActiveFilter(filterValue) {
   currentFilter = filterValue;
