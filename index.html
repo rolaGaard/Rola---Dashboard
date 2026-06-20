@@ -117,6 +117,15 @@
   .empty-state { background:#fff; border-radius:12px; padding:30px; text-align:center; color:#94a3b8; }
   .footer { text-align:center; color:#64748b; font-size:11px; margin-top:24px; padding:0 24px; }
 
+  .report-bug-wrap { text-align:center; padding:16px 24px 30px; }
+  .report-bug-btn {
+    display:inline-block; background:#1a1a1a; color:#94a3b8;
+    border:1px solid #2a2a2a; border-radius:20px; padding:8px 18px;
+    font-size:12px; font-weight:600; text-decoration:none;
+    transition:background 0.15s, color 0.15s;
+  }
+  .report-bug-btn:hover { background:#2a2a2a; color:#FFD700; }
+
   .bracket-view { padding:20px 16px 0; }
   .bracket-layout {
     display:grid; grid-template-columns:1fr 3fr 1fr; gap:10px;
@@ -307,6 +316,12 @@
 <div class="bracket-view" id="bracket-view" style="display:none;"></div>
 
 <div class="footer" id="footer">Datos: API-Football · Última actualización: --:-- hs AR</div>
+
+<div class="report-bug-wrap">
+  <a id="report-bug-link" href="#" target="_blank" rel="noopener" class="report-bug-btn">
+    🐞 Reportar un problema
+  </a>
+</div>
 
 <script>
 const FLAGS = {
@@ -789,6 +804,7 @@ async function fetchScores() {
     liveData = newLiveData;
     lastUpdate = data.updated || null;
     render();
+    setupBugReportLink();
   } catch (e) {
     console.error('Error fetching scores:', e);
   }
@@ -1007,12 +1023,37 @@ searchClear.addEventListener('click', () => {
   searchInput.focus();
 });
 
+function setupBugReportLink() {
+  const nowStr = new Date().toLocaleString('es-AR', { timeZone:'America/Argentina/Buenos_Aires' });
+  const body = [
+    '**Describí el problema acá arriba** (borrá este texto y escribí qué viste mal):',
+    '',
+    '',
+    '---',
+    '_Información automática (no borrar):_',
+    '- Filtro activo: ' + currentFilter,
+    '- Hora local (AR): ' + nowStr,
+    '- Última actualización de datos: ' + (lastUpdate || 'sin datos'),
+    '- Navegador: ' + navigator.userAgent,
+    '- URL: ' + window.location.href,
+  ].join('\n');
+
+  const params = new URLSearchParams({
+    title: '[Bug] Reporte desde el dashboard',
+    body: body,
+    labels: 'bug-report',
+  });
+  document.getElementById('report-bug-link').href =
+    'https://github.com/rolaGaard/rola-dashboard/issues/new?' + params.toString();
+}
+
 document.querySelectorAll('.stat-card[data-filter]').forEach(b => b.classList.remove('active'));
 document.querySelectorAll('[data-filter="' + currentFilter + '"]').forEach(b => b.classList.add('active'));
 
 updateClock();
 render();
 fetchScores();
+setupBugReportLink();
 setInterval(fetchScores, 60000);
 setInterval(updateClock, 30000);
 
