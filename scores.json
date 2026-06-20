@@ -1,31 +1,6 @@
 {
-  "updated": "2026-06-20T03:14:06.783210Z",
+  "updated": "2026-06-20T05:52:40.182461Z",
   "matches": {
-    "TURKIYE-PARAGUAY": {
-      "homeGoals": 0,
-      "awayGoals": 1,
-      "status": "1H",
-      "elapsed": 14,
-      "kickoffUTC": "2026-06-20T03:00:00+00:00",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "M. Galarza",
-          "team": "PARAGUAY",
-          "minute": 2,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "M. Galarza",
-          "team": "PARAGUAY",
-          "minute": 4,
-          "extra": null
-        }
-      ]
-    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -1365,7 +1340,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "Johan Manzambi",
+          "player": "J. Manzambi",
           "team": "SWITZERLAND",
           "minute": 74,
           "extra": null
@@ -1381,23 +1356,15 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "Rub\u00e9n Vargas",
+          "player": "R. Vargas",
           "team": "SWITZERLAND",
           "minute": 84,
           "extra": null
         },
         {
           "type": "Goal",
-          "detail": "Penalty",
-          "player": "Granit Xhaka",
-          "team": "SWITZERLAND",
-          "minute": 90,
-          "extra": 7
-        },
-        {
-          "type": "Goal",
           "detail": "Normal Goal",
-          "player": "Johan Manzambi",
+          "player": "J. Manzambi",
           "team": "SWITZERLAND",
           "minute": 90,
           "extra": null
@@ -1405,10 +1372,18 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "Ermin Mahmi\u0107",
+          "player": "E. Mahmic",
           "team": "BOSNIA & HERZEGOVINA",
           "minute": 90,
-          "extra": 3
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Penalty",
+          "player": "G. Xhaka",
+          "team": "SWITZERLAND",
+          "minute": 90,
+          "extra": null
         }
       ]
     },
@@ -1511,7 +1486,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "Lee Kang-In",
+          "player": "Kang-in Lee",
           "team": "SOUTH KOREA",
           "minute": 4,
           "extra": null
@@ -1527,7 +1502,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "Paik Seung-Ho",
+          "player": "Seung Ho Paik",
           "team": "SOUTH KOREA",
           "minute": 58,
           "extra": null
@@ -1544,7 +1519,7 @@
         {
           "type": "Goal",
           "detail": "Own Goal",
-          "player": "C. Burgess",
+          "player": "Cameron Burgess",
           "team": "USA",
           "minute": 11,
           "extra": null
@@ -1552,7 +1527,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "J. Bos",
+          "player": "Jordan Bos",
           "team": "AUSTRALIA",
           "minute": 16,
           "extra": null
@@ -1560,7 +1535,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "A. Circati",
+          "player": "Alessandro Circati",
           "team": "AUSTRALIA",
           "minute": 32,
           "extra": null
@@ -1568,15 +1543,15 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "A. Freeman",
+          "player": "Alexander Freeman",
           "team": "USA",
-          "minute": 43,
+          "minute": 44,
           "extra": null
         },
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "A. Robinson",
+          "player": "Antonee Robinson",
           "team": "USA",
           "minute": 56,
           "extra": null
@@ -1584,15 +1559,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "H. Souttar",
-          "team": "AUSTRALIA",
-          "minute": 88,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "F. Balogun",
+          "player": "Folarin Balogun",
           "team": "USA",
           "minute": 89,
           "extra": null
@@ -1600,7 +1567,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "J. Italiano",
+          "player": "Harry Souttar",
           "team": "AUSTRALIA",
           "minute": 89,
           "extra": null
@@ -1608,7 +1575,15 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "C. Richards",
+          "player": "Jacob Italiano",
+          "team": "AUSTRALIA",
+          "minute": 89,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Chris Richards",
           "team": "USA",
           "minute": 90,
           "extra": 3
@@ -1625,7 +1600,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "I. Saibari",
+          "player": "Ismael Saibari",
           "team": "MOROCCO",
           "minute": 2,
           "extra": null
@@ -1633,7 +1608,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "I. Diop",
+          "player": "Issa Diop",
           "team": "MOROCCO",
           "minute": 23,
           "extra": null
@@ -1641,9 +1616,9 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "A. Robertson",
+          "player": "Andy Robertson",
           "team": "SCOTLAND",
-          "minute": 65,
+          "minute": 66,
           "extra": null
         }
       ]
@@ -1709,6 +1684,55 @@
           "player": "D. Jean Jacques",
           "team": "HAITI",
           "minute": 72,
+          "extra": null
+        }
+      ]
+    },
+    "TURKIYE-PARAGUAY": {
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-06-20T03:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Galarza",
+          "team": "PARAGUAY",
+          "minute": 2,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "M. Galarza",
+          "team": "PARAGUAY",
+          "minute": 4,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Red Card",
+          "player": "M. Almiron",
+          "team": "PARAGUAY",
+          "minute": 45,
+          "extra": 3
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "V. Montella",
+          "team": "TURKIYE",
+          "minute": 63,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "E. Elmali",
+          "team": "TURKIYE",
+          "minute": 71,
           "extra": null
         }
       ]
