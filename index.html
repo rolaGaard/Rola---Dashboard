@@ -101,28 +101,26 @@
   }
   .player-link:hover { color:#CC0000; border-bottom-color:#CC0000; }
   .detail-empty { font-size:11px; color:#94a3b8; font-style:italic; text-align:center; padding:6px 0; }
-  .match-row { display:flex; align-items:center; justify-content:space-between; gap:10px; }
-  .team { display:flex; align-items:center; gap:8px; flex:1; min-width:0; }
-  .team.away { flex-direction:row-reverse; }
-  .team-flag { font-size:24px; flex-shrink:0; }
-  .team-text-col { display:flex; flex-direction:column; min-width:0; gap:1px; }
-  .team.away .team-text-col { align-items:flex-end; }
-  .wc-stars { font-size:9px; letter-spacing:-1px; line-height:1; min-height:10px; display:block; }
-  .team-name-row { display:flex; align-items:center; gap:5px; min-width:0; }
-  .team.away .team-name-row { flex-direction:row-reverse; }
-  .team-name {
-    font-size:18px; font-weight:800; color:#1a1a2e; text-transform:uppercase;
-    overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  .match-row { display:flex; align-items:center; justify-content:space-between; gap:6px; }
+  .team {
+    display:flex; flex-direction:column; align-items:center; gap:3px;
+    flex:1; min-width:0; text-align:center;
   }
-  .team.away .team-name { text-align:right; }
+  .team-flag { font-size:26px; line-height:1; }
+  .team-name {
+    font-size:13px; font-weight:800; color:#1a1a2e; text-transform:uppercase;
+    line-height:1.15; max-width:100%; word-break:break-word;
+  }
   .team-name-winner {
     background:#1DB954; color:#fff !important; border-radius:4px; padding:1px 6px;
   }
   .team-code {
-    font-size:10px; font-weight:700; color:#94a3b8; background:#f1f5f9;
-    border-radius:4px; padding:1px 5px; letter-spacing:0.03em; flex-shrink:0;
+    font-size:9px; font-weight:700; color:#94a3b8; background:#f1f5f9;
+    border-radius:4px; padding:1px 5px; letter-spacing:0.03em;
   }
-  .score-box { min-width:54px; text-align:center; font-weight:700; font-size:18px; color:#1a1a2e; }
+  .wc-stars { font-size:9px; letter-spacing:-1px; line-height:1; min-height:10px; display:block; }
+  .score-center { display:flex; align-items:center; justify-content:center; flex-shrink:0; padding:0 4px; }
+  .score-box { min-width:46px; text-align:center; font-weight:800; font-size:19px; color:#1a1a2e; flex-shrink:0; }
   .score-box.live { color:#CC0000; }
   .match-meta { display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:11px; color:#64748b; }
   .status-badge { font-weight:700; font-size:10px; letter-spacing:0.04em; border-radius:4px; padding:2px 7px; }
@@ -720,26 +718,20 @@ function buildMatchCard(m) {
   return (
     '<div class="' + cardClass + '"' + clickAttr + '>' +
       '<div class="match-row">' +
-        '<div class="team">' +
+        '<div class="team" title="' + esName(m.home) + '">' +
           '<span class="team-flag">' + flag(m.home) + '</span>' +
-          '<div class="team-text-col">' +
-            worldCupStars(m.home) +
-            '<div class="team-name-row">' +
-              '<span class="' + homeNameClass + '">' + esNameShort(m.home) + '</span>' +
-              '<span class="team-code">' + countryCode(m.home) + '</span>' +
-            '</div>' +
-          '</div>' +
+          '<span class="' + homeNameClass + '">' + esNameShort(m.home) + '</span>' +
+          '<span class="team-code">' + countryCode(m.home) + '</span>' +
+          worldCupStars(m.home) +
         '</div>' +
-        '<div class="' + scoreClass + '">' + scoreText + '</div>' +
-        '<div class="team away">' +
+        '<div class="score-center">' +
+          '<div class="' + scoreClass + '">' + scoreText + '</div>' +
+        '</div>' +
+        '<div class="team" title="' + esName(m.away) + '">' +
           '<span class="team-flag">' + flag(m.away) + '</span>' +
-          '<div class="team-text-col">' +
-            worldCupStars(m.away) +
-            '<div class="team-name-row">' +
-              '<span class="' + awayNameClass + '">' + esNameShort(m.away) + '</span>' +
-              '<span class="team-code">' + countryCode(m.away) + '</span>' +
-            '</div>' +
-          '</div>' +
+          '<span class="' + awayNameClass + '">' + esNameShort(m.away) + '</span>' +
+          '<span class="team-code">' + countryCode(m.away) + '</span>' +
+          worldCupStars(m.away) +
         '</div>' +
       '</div>' +
       '<div class="match-meta">' +
@@ -1092,7 +1084,7 @@ function buildGroupsColumn(groupLetters) {
       const gd = row.gf - row.ga;
       const gdStr = gd > 0 ? '+' + gd : String(gd);
       html += '<div class="standings-row">' +
-        '<span class="st-team"><span class="gflag">' + flag(t) + '</span><span class="gname">' + esNameShort(t) + '</span></span>' +
+        '<span class="st-team" title="' + esName(t) + '"><span class="gflag">' + flag(t) + '</span><span class="gname">' + esNameShort(t) + '</span></span>' +
         '<span>' + row.played + '</span>' +
         '<span>' + row.w + '</span>' +
         '<span>' + row.d + '</span>' +
