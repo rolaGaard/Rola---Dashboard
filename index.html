@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mundial 2026 - Fixture en Vivo</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Mundial 2026">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
@@ -46,7 +52,7 @@
   .stat-icon { font-size:20px; }
   .fixture-icon { font-size:30px; margin:4px 0; }
   .stat-num { font-size:22px; font-weight:700; color:#1a1a2e; }
-  .stat-label { font-size:11px; color:#64748b; }
+  .stat-label { font-size:13px; font-weight:700; color:#64748b; }
   @media (max-width:760px) {
     .stats-bar { grid-template-columns:repeat(3,1fr); }
   }
@@ -315,6 +321,22 @@
   }
   .fullscreen-btn:hover { background:rgba(255,255,255,0.12); color:#FFD700; }
   .fullscreen-btn.active { color:#FFD700; border-color:#FFD700; }
+  .install-btn { background:rgba(255,215,0,0.12); border-color:rgba(255,215,0,0.3); }
+  .install-btn:hover { background:rgba(255,215,0,0.25); }
+
+  .ios-install-banner {
+    background:#1a1a1a; color:#fff; padding:10px 16px;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:10px; font-size:12px; border-bottom:1px solid #2a2a2a;
+  }
+  .ios-banner-text b { color:#FFD700; }
+  .ios-banner-close {
+    background:none; border:none; color:#94a3b8; font-size:16px; cursor:pointer;
+    flex-shrink:0; padding:4px;
+  }
+  @media (min-width:701px) {
+    .ios-install-banner { display:none !important; }
+  }
 </style>
 </head>
 <body>
@@ -331,8 +353,16 @@
       <div class="clock-label">Hora Argentina</div>
       <div class="clock-value" id="clock">--:--</div>
     </div>
+    <button id="install-btn" class="fullscreen-btn install-btn" aria-label="Instalar app" style="display:none;">📲</button>
     <button id="fullscreen-btn" class="fullscreen-btn" aria-label="Pantalla completa">⛶</button>
   </div>
+</div>
+
+<div id="ios-install-banner" class="ios-install-banner" style="display:none;">
+  <div class="ios-banner-text">
+    📲 Para instalar: tocá <b>Compartir</b> (□↑) y luego <b>"Agregar a pantalla de inicio"</b>
+  </div>
+  <button id="ios-banner-close" class="ios-banner-close">✕</button>
 </div>
 
 <div class="search-wrap">
@@ -1193,6 +1223,48 @@ fullscreenBtn.addEventListener('click', () => {
 });
 ['fullscreenchange', 'webkitfullscreenchange', 'msfullscreenchange'].forEach(evt => {
   document.addEventListener(evt, updateFullscreenBtn);
+});
+
+// ── PWA installation ──────────────────────────────────────────────────────
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW registration failed:', err));
+}
+
+const installBtn = document.getElementById('install-btn');
+let deferredInstallPrompt = null;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  installBtn.style.display = 'flex';
+});
+
+installBtn.addEventListener('click', async () => {
+  if (!deferredInstallPrompt) return;
+  deferredInstallPrompt.prompt();
+  const { outcome } = await deferredInstallPrompt.userChoice;
+  if (outcome === 'accepted') installBtn.style.display = 'none';
+  deferredInstallPrompt = null;
+});
+
+window.addEventListener('appinstalled', () => {
+  installBtn.style.display = 'none';
+  deferredInstallPrompt = null;
+});
+
+// iOS Safari has no install prompt API — show manual instructions instead.
+function isIOS() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+function isStandalone() {
+  return window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches;
+}
+if (isIOS() && !isStandalone() && !localStorage.getItem('iosInstallBannerDismissed')) {
+  document.getElementById('ios-install-banner').style.display = 'flex';
+}
+document.getElementById('ios-banner-close').addEventListener('click', () => {
+  document.getElementById('ios-install-banner').style.display = 'none';
+  localStorage.setItem('iosInstallBannerDismissed', '1');
 });
 
 if ('Notification' in window && Notification.permission === 'default') {
