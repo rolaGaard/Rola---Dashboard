@@ -1,31 +1,6 @@
 {
-  "updated": "2026-06-20T21:50:29.039142Z",
+  "updated": "2026-06-20T22:01:09.547383Z",
   "matches": {
-    "GERMANY-IVORY COAST": {
-      "homeGoals": 1,
-      "awayGoals": 1,
-      "status": "2H",
-      "elapsed": 88,
-      "kickoffUTC": "2026-06-20T20:00:00+00:00",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "F. Kessie",
-          "team": "IVORY COAST",
-          "minute": 30,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "D. Undav",
-          "team": "GERMANY",
-          "minute": 68,
-          "extra": null
-        }
-      ]
-    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -1515,32 +1490,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-19T01:00:00+00:00",
-      "events": [
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Kang-in Lee",
-          "team": "SOUTH KOREA",
-          "minute": 4,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "L. Romo",
-          "team": "MEXICO",
-          "minute": 50,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Seung Ho Paik",
-          "team": "SOUTH KOREA",
-          "minute": 58,
-          "extra": null
-        }
-      ]
+      "events": []
     },
     "USA-AUSTRALIA": {
       "homeGoals": 2,
@@ -1848,6 +1798,39 @@
           "team": "NETHERLANDS",
           "minute": 89,
           "extra": null
+        }
+      ]
+    },
+    "GERMANY-IVORY COAST": {
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-06-20T20:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "F. Kessie",
+          "team": "IVORY COAST",
+          "minute": 30,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "D. Undav",
+          "team": "GERMANY",
+          "minute": 68,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "D. Undav",
+          "team": "GERMANY",
+          "minute": 90,
+          "extra": 4
         }
       ]
     },
