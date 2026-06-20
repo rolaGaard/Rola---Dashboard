@@ -431,6 +431,9 @@ const SCHEDULE = [
   {home:'CROATIA',away:'GHANA',stadium:'Lincoln Financial Field',city:'Philadelphia',kickoffUTC:'2026-06-27T21:00:00Z',group:'L'},
 ];
 
+function stripAccents(s) {
+  return (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase();
+}
 function flag(name){ return FLAGS[name] || '🏳'; }
 function esName(name){ return ES_NAMES[name] || name; }
 function countryCode(name){ return (COUNTRY_CODES[name] || [name.slice(0,3)])[0]; }
