@@ -1,229 +1,1717 @@
 {
-  "updated": "2026-06-20T03:07:37.982652Z",
+  "updated": "2026-06-20T03:14:06.783210Z",
   "matches": {
-    "T\u00dcRKIYE-PARAGUAY": {
+    "TURKIYE-PARAGUAY": {
       "homeGoals": 0,
       "awayGoals": 1,
       "status": "1H",
-      "elapsed": 7,
-      "kickoffUTC": "2026-06-20T03:00:00+00:00"
+      "elapsed": 14,
+      "kickoffUTC": "2026-06-20T03:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Galarza",
+          "team": "PARAGUAY",
+          "minute": 2,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "M. Galarza",
+          "team": "PARAGUAY",
+          "minute": 4,
+          "extra": null
+        }
+      ]
     },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-11T19:00:00+00:00"
+      "kickoffUTC": "2026-06-11T19:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "J. Quinones",
+          "team": "MEXICO",
+          "minute": 9,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Teboho Mokoena",
+          "team": "SOUTH AFRICA",
+          "minute": 17,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Brian Guti\u00e9rrez",
+          "team": "MEXICO",
+          "minute": 23,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Red Card",
+          "player": "Siphephelo Sithole",
+          "team": "SOUTH AFRICA",
+          "minute": 49,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "R. Jimenez",
+          "team": "MEXICO",
+          "minute": 67,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Nkosinathi Sibisi",
+          "team": "SOUTH AFRICA",
+          "minute": 74,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Red Card",
+          "player": "Themba Zwane",
+          "team": "SOUTH AFRICA",
+          "minute": 84,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Red Card",
+          "player": "C\u00e9sar Montes",
+          "team": "MEXICO",
+          "minute": 90,
+          "extra": 2
+        }
+      ]
     },
     "SOUTH KOREA-CZECHIA": {
       "homeGoals": 2,
       "awayGoals": 1,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-12T02:00:00+00:00"
+      "kickoffUTC": "2026-06-12T02:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "L. Krejci",
+          "team": "CZECHIA",
+          "minute": 59,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Hwang In-Beom",
+          "team": "SOUTH KOREA",
+          "minute": 67,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Oh Hyeon-Gyu",
+          "team": "SOUTH KOREA",
+          "minute": 80,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Gi-Hyuk Lee",
+          "team": "SOUTH KOREA",
+          "minute": 90,
+          "extra": 6
+        }
+      ]
     },
     "CANADA-BOSNIA & HERZEGOVINA": {
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-12T19:00:00+00:00"
+      "kickoffUTC": "2026-06-12T19:00:00+00:00",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Alistair Johnston",
+          "team": "CANADA",
+          "minute": 11,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "J. Lukic",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 21,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Jovo Luki\u0107",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 45,
+          "extra": 1
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Ermedin Demirovi\u0107",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 45,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Luc De Fougerolles",
+          "team": "CANADA",
+          "minute": 53,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "C. Larin",
+          "team": "CANADA",
+          "minute": 78,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Nikola Kati\u0107",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 90,
+          "extra": 3
+        }
+      ]
     },
     "USA-PARAGUAY": {
       "homeGoals": 4,
       "awayGoals": 1,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-13T01:00:00+00:00"
+      "kickoffUTC": "2026-06-13T01:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Own Goal",
+          "player": "D. Bobadilla",
+          "team": "USA",
+          "minute": 7,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Juan C\u00e1ceres",
+          "team": "PARAGUAY",
+          "minute": 10,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "F. Balogun",
+          "team": "USA",
+          "minute": 31,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "F. Balogun",
+          "team": "USA",
+          "minute": 45,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Miguel Almir\u00f3n",
+          "team": "PARAGUAY",
+          "minute": 53,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Tyler Adams",
+          "team": "USA",
+          "minute": 59,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Mauricio",
+          "team": "PARAGUAY",
+          "minute": 73,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Diego G\u00f3mez",
+          "team": "PARAGUAY",
+          "minute": 79,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Alex Arce",
+          "team": "PARAGUAY",
+          "minute": 88,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Junior Alonso",
+          "team": "PARAGUAY",
+          "minute": 90,
+          "extra": 3
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "G. Reyna",
+          "team": "USA",
+          "minute": 90,
+          "extra": null
+        }
+      ]
     },
     "QATAR-SWITZERLAND": {
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-13T19:00:00+00:00"
+      "kickoffUTC": "2026-06-13T19:00:00+00:00",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Mahmud Abunada",
+          "team": "QATAR",
+          "minute": 16,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Penalty",
+          "player": "B. Embolo",
+          "team": "SWITZERLAND",
+          "minute": 17,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Jassem Gaber Abdulsallam",
+          "team": "QATAR",
+          "minute": 23,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Denis Zakaria",
+          "team": "SWITZERLAND",
+          "minute": 42,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Own Goal",
+          "player": "M. Muheim",
+          "team": "QATAR",
+          "minute": 90,
+          "extra": null
+        }
+      ]
     },
     "BRAZIL-MOROCCO": {
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-13T22:00:00+00:00"
+      "kickoffUTC": "2026-06-13T22:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "I. Saibari",
+          "team": "MOROCCO",
+          "minute": 21,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Vinicius Junior",
+          "team": "BRAZIL",
+          "minute": 32,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Casemiro",
+          "team": "BRAZIL",
+          "minute": 37,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Roger Iba\u00f1ez",
+          "team": "BRAZIL",
+          "minute": 43,
+          "extra": null
+        }
+      ]
     },
     "HAITI-SCOTLAND": {
       "homeGoals": 0,
       "awayGoals": 1,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-14T01:00:00+00:00"
+      "kickoffUTC": "2026-06-14T01:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "J. McGinn",
+          "team": "SCOTLAND",
+          "minute": 28,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Jean-Ricner Bellegarde",
+          "team": "HAITI",
+          "minute": 39,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Aaron Hickey",
+          "team": "SCOTLAND",
+          "minute": 46,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Kenny McLean",
+          "team": "SCOTLAND",
+          "minute": 90,
+          "extra": 5
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Findlay Curtis",
+          "team": "SCOTLAND",
+          "minute": 90,
+          "extra": 1
+        }
+      ]
     },
-    "AUSTRALIA-T\u00dcRKIYE": {
+    "AUSTRALIA-TURKIYE": {
       "homeGoals": 2,
       "awayGoals": 0,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-14T04:00:00+00:00"
+      "kickoffUTC": "2026-06-14T04:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "N. Irankunda",
+          "team": "AUSTRALIA",
+          "minute": 27,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "C. Metcalfe",
+          "team": "AUSTRALIA",
+          "minute": 75,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Yunus Akg\u00fcn",
+          "team": "TURKIYE",
+          "minute": 86,
+          "extra": null
+        }
+      ]
     },
-    "GERMANY-CURA\u00c7AO": {
+    "GERMANY-CURACAO": {
       "homeGoals": 7,
       "awayGoals": 1,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-14T17:00:00+00:00"
+      "kickoffUTC": "2026-06-14T17:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "F. Nmecha",
+          "team": "GERMANY",
+          "minute": 6,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "L. Comenencia",
+          "team": "CURACAO",
+          "minute": 21,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "N. Schlotterbeck",
+          "team": "GERMANY",
+          "minute": 38,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Penalty",
+          "player": "K. Havertz",
+          "team": "GERMANY",
+          "minute": 45,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "J. Musiala",
+          "team": "GERMANY",
+          "minute": 47,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "N. Brown",
+          "team": "GERMANY",
+          "minute": 68,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "D. Undav",
+          "team": "GERMANY",
+          "minute": 78,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "K. Havertz",
+          "team": "GERMANY",
+          "minute": 88,
+          "extra": null
+        }
+      ]
     },
     "NETHERLANDS-JAPAN": {
       "homeGoals": 2,
       "awayGoals": 2,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-14T20:00:00+00:00"
+      "kickoffUTC": "2026-06-14T20:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "V. van Dijk",
+          "team": "NETHERLANDS",
+          "minute": 51,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "K. Nakamura",
+          "team": "JAPAN",
+          "minute": 57,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Crysencio Summerville",
+          "team": "NETHERLANDS",
+          "minute": 61,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "C. Summerville",
+          "team": "NETHERLANDS",
+          "minute": 64,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Memphis Depay",
+          "team": "NETHERLANDS",
+          "minute": 83,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "D. Kamada",
+          "team": "JAPAN",
+          "minute": 89,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Micky van de Ven",
+          "team": "NETHERLANDS",
+          "minute": 90,
+          "extra": 1
+        }
+      ]
     },
     "IVORY COAST-ECUADOR": {
       "homeGoals": 1,
       "awayGoals": 0,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-14T23:00:00+00:00"
+      "kickoffUTC": "2026-06-14T23:00:00+00:00",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Seko Fofana",
+          "team": "IVORY COAST",
+          "minute": 28,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Franck Kessi\u00e9",
+          "team": "IVORY COAST",
+          "minute": 38,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Gu\u00e9la Dou\u00e9",
+          "team": "IVORY COAST",
+          "minute": 40,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Jackson Porozo",
+          "team": "ECUADOR",
+          "minute": 73,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Diallo",
+          "team": "IVORY COAST",
+          "minute": 90,
+          "extra": null
+        }
+      ]
     },
     "SWEDEN-TUNISIA": {
       "homeGoals": 5,
       "awayGoals": 1,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-15T02:00:00+00:00"
+      "kickoffUTC": "2026-06-15T02:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Y. Ayari",
+          "team": "SWEDEN",
+          "minute": 7,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Isak",
+          "team": "SWEDEN",
+          "minute": 30,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "O. Rekik",
+          "team": "TUNISIA",
+          "minute": 43,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Rani Khedira",
+          "team": "TUNISIA",
+          "minute": 54,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "V. Gyokeres",
+          "team": "SWEDEN",
+          "minute": 59,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Svanberg",
+          "team": "SWEDEN",
+          "minute": 84,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Y. Ayari",
+          "team": "SWEDEN",
+          "minute": 90,
+          "extra": null
+        }
+      ]
     },
-    "SPAIN-CAPE VERDE ISLANDS": {
+    "SPAIN-CAPE VERDE": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-15T16:00:00+00:00"
+      "kickoffUTC": "2026-06-15T16:00:00+00:00",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Sidny Lopes Cabral",
+          "team": "CAPE VERDE",
+          "minute": 16,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Pedri",
+          "team": "SPAIN",
+          "minute": 90,
+          "extra": 3
+        }
+      ]
     },
     "BELGIUM-EGYPT": {
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-15T19:00:00+00:00"
+      "kickoffUTC": "2026-06-15T19:00:00+00:00",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Marwan Attia",
+          "team": "EGYPT",
+          "minute": 13,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Timothy Castagne",
+          "team": "BELGIUM",
+          "minute": 14,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "E. Ashour",
+          "team": "EGYPT",
+          "minute": 20,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Ahmed Fatouh",
+          "team": "EGYPT",
+          "minute": 34,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Own Goal",
+          "player": "M. Hany",
+          "team": "BELGIUM",
+          "minute": 66,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Maxim De Cuyper",
+          "team": "BELGIUM",
+          "minute": 75,
+          "extra": null
+        }
+      ]
     },
     "SAUDI ARABIA-URUGUAY": {
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-15T22:00:00+00:00"
+      "kickoffUTC": "2026-06-15T22:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Al Amri",
+          "team": "SAUDI ARABIA",
+          "minute": 41,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Abdulelah Al-Amri",
+          "team": "SAUDI ARABIA",
+          "minute": 44,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Araujo",
+          "team": "URUGUAY",
+          "minute": 80,
+          "extra": null
+        }
+      ]
     },
     "IRAN-NEW ZEALAND": {
       "homeGoals": 2,
       "awayGoals": 2,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-16T01:00:00+00:00"
+      "kickoffUTC": "2026-06-16T01:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "E. Just",
+          "team": "NEW ZEALAND",
+          "minute": 7,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "R. Rezaeian",
+          "team": "IRAN",
+          "minute": 32,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "E. Just",
+          "team": "NEW ZEALAND",
+          "minute": 54,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Mohebi",
+          "team": "IRAN",
+          "minute": 64,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Ehsan Hajsafi",
+          "team": "IRAN",
+          "minute": 89,
+          "extra": null
+        }
+      ]
     },
     "FRANCE-SENEGAL": {
       "homeGoals": 3,
       "awayGoals": 1,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-16T19:00:00+00:00"
+      "kickoffUTC": "2026-06-16T19:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "K. Mbappe",
+          "team": "FRANCE",
+          "minute": 66,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "B. Barcola",
+          "team": "FRANCE",
+          "minute": 82,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "I. Mbaye",
+          "team": "SENEGAL",
+          "minute": 90,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "K. Mbappe",
+          "team": "FRANCE",
+          "minute": 90,
+          "extra": null
+        }
+      ]
     },
     "IRAQ-NORWAY": {
       "homeGoals": 1,
       "awayGoals": 4,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-16T22:00:00+00:00"
+      "kickoffUTC": "2026-06-16T22:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "E. Haaland",
+          "team": "NORWAY",
+          "minute": 29,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Hussein",
+          "team": "IRAQ",
+          "minute": 39,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "E. Haaland",
+          "team": "NORWAY",
+          "minute": 43,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "L. Ostigard",
+          "team": "NORWAY",
+          "minute": 76,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Zaid Tahseen",
+          "team": "IRAQ",
+          "minute": 86,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Own Goal",
+          "player": "A. Hussein",
+          "team": "NORWAY",
+          "minute": 90,
+          "extra": null
+        }
+      ]
     },
     "ARGENTINA-ALGERIA": {
       "homeGoals": 3,
       "awayGoals": 0,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-17T01:00:00+00:00"
+      "kickoffUTC": "2026-06-17T01:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "L. Messi",
+          "team": "ARGENTINA",
+          "minute": 17,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "L. Messi",
+          "team": "ARGENTINA",
+          "minute": 60,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "L. Messi",
+          "team": "ARGENTINA",
+          "minute": 76,
+          "extra": null
+        }
+      ]
     },
     "AUSTRIA-JORDAN": {
       "homeGoals": 3,
       "awayGoals": 1,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-17T04:00:00+00:00"
+      "kickoffUTC": "2026-06-17T04:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "R. Schmid",
+          "team": "AUSTRIA",
+          "minute": 21,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Olwan",
+          "team": "JORDAN",
+          "minute": 50,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Own Goal",
+          "player": "Y. Al Arab",
+          "team": "AUSTRIA",
+          "minute": 76,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Marcel Sabitzer",
+          "team": "AUSTRIA",
+          "minute": 77,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Penalty",
+          "player": "M. Arnautovic",
+          "team": "AUSTRIA",
+          "minute": 90,
+          "extra": null
+        }
+      ]
     },
     "PORTUGAL-CONGO DR": {
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-17T17:00:00+00:00"
+      "kickoffUTC": "2026-06-17T17:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "J. Neves",
+          "team": "PORTUGAL",
+          "minute": 6,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Bernardo Silva",
+          "team": "PORTUGAL",
+          "minute": 13,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Chancel Mbemba",
+          "team": "CONGO DR",
+          "minute": 32,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Y. Wissa",
+          "team": "CONGO DR",
+          "minute": 45,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "N\u00e9lson Semedo",
+          "team": "PORTUGAL",
+          "minute": 88,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Tom\u00e1s Ara\u00fajo",
+          "team": "PORTUGAL",
+          "minute": 90,
+          "extra": 2
+        }
+      ]
     },
     "ENGLAND-CROATIA": {
       "homeGoals": 4,
       "awayGoals": 2,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-17T20:00:00+00:00"
+      "kickoffUTC": "2026-06-17T20:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Penalty",
+          "player": "H. Kane",
+          "team": "ENGLAND",
+          "minute": 12,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Baturina",
+          "team": "CROATIA",
+          "minute": 36,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "H. Kane",
+          "team": "ENGLAND",
+          "minute": 42,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "P. Musa",
+          "team": "CROATIA",
+          "minute": 45,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "J. Bellingham",
+          "team": "ENGLAND",
+          "minute": 47,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Rashford",
+          "team": "ENGLAND",
+          "minute": 85,
+          "extra": null
+        }
+      ]
     },
     "GHANA-PANAMA": {
       "homeGoals": 1,
       "awayGoals": 0,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-17T23:00:00+00:00"
+      "kickoffUTC": "2026-06-17T23:00:00+00:00",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Caleb Yirenkyi",
+          "team": "GHANA",
+          "minute": 16,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "C\u00e9sar Blackman",
+          "team": "PANAMA",
+          "minute": 72,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Carlos Harvey",
+          "team": "PANAMA",
+          "minute": 90,
+          "extra": 9
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "C. Yirenkyi",
+          "team": "GHANA",
+          "minute": 90,
+          "extra": null
+        }
+      ]
     },
     "UZBEKISTAN-COLOMBIA": {
       "homeGoals": 1,
       "awayGoals": 3,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-18T02:00:00+00:00"
+      "kickoffUTC": "2026-06-18T02:00:00+00:00",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Johan Mojica",
+          "team": "COLOMBIA",
+          "minute": 7,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Abdukodir Khusanov",
+          "team": "UZBEKISTAN",
+          "minute": 34,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "D. Munoz",
+          "team": "COLOMBIA",
+          "minute": 40,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Fayzullaev",
+          "team": "UZBEKISTAN",
+          "minute": 60,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "L. Diaz",
+          "team": "COLOMBIA",
+          "minute": 65,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "J. Campaz",
+          "team": "COLOMBIA",
+          "minute": 90,
+          "extra": null
+        }
+      ]
     },
     "CZECHIA-SOUTH AFRICA": {
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-18T16:00:00+00:00"
+      "kickoffUTC": "2026-06-18T16:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Michal Sad\u00edlek",
+          "team": "CZECHIA",
+          "minute": 6,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Teboho Mokoena",
+          "team": "SOUTH AFRICA",
+          "minute": 33,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Thalente Mbatha",
+          "team": "SOUTH AFRICA",
+          "minute": 40,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Ladislav Krej\u010d\u00ed",
+          "team": "CZECHIA",
+          "minute": 75,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Penalty",
+          "player": "Teboho Mokoena",
+          "team": "SOUTH AFRICA",
+          "minute": 83,
+          "extra": null
+        }
+      ]
     },
     "SWITZERLAND-BOSNIA & HERZEGOVINA": {
       "homeGoals": 4,
       "awayGoals": 1,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-18T19:00:00+00:00"
+      "kickoffUTC": "2026-06-18T19:00:00+00:00",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Amar Dedi\u0107",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 59,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Edin D\u017eeko",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 61,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Nico Elvedi",
+          "team": "SWITZERLAND",
+          "minute": 65,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Johan Manzambi",
+          "team": "SWITZERLAND",
+          "minute": 74,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Red Card",
+          "player": "Tarik Muharemovi\u0107",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 80,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Rub\u00e9n Vargas",
+          "team": "SWITZERLAND",
+          "minute": 84,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Penalty",
+          "player": "Granit Xhaka",
+          "team": "SWITZERLAND",
+          "minute": 90,
+          "extra": 7
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Johan Manzambi",
+          "team": "SWITZERLAND",
+          "minute": 90,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Ermin Mahmi\u0107",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 90,
+          "extra": 3
+        }
+      ]
     },
     "CANADA-QATAR": {
       "homeGoals": 6,
       "awayGoals": 0,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-18T22:00:00+00:00"
+      "kickoffUTC": "2026-06-18T22:00:00+00:00",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Derek Cornelius",
+          "team": "CANADA",
+          "minute": 9,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Cyle Larin",
+          "team": "CANADA",
+          "minute": 16,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Jonathan David",
+          "team": "CANADA",
+          "minute": 29,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Red Card",
+          "player": "Homam Al-Amin",
+          "team": "QATAR",
+          "minute": 33,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Jonathan David",
+          "team": "CANADA",
+          "minute": 45,
+          "extra": 3
+        },
+        {
+          "type": "Card",
+          "detail": "Red Card",
+          "player": "Assim Madibo",
+          "team": "QATAR",
+          "minute": 53,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Ahmed Fathi",
+          "team": "QATAR",
+          "minute": 62,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Nathan-Dylan Saliba",
+          "team": "CANADA",
+          "minute": 64,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Own Goal",
+          "player": "Mohamed Naceur Almanai",
+          "team": "CANADA",
+          "minute": 75,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Jonathan David",
+          "team": "CANADA",
+          "minute": 90,
+          "extra": 2
+        }
+      ]
     },
     "MEXICO-SOUTH KOREA": {
       "homeGoals": 1,
       "awayGoals": 0,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-19T01:00:00+00:00"
+      "kickoffUTC": "2026-06-19T01:00:00+00:00",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Lee Kang-In",
+          "team": "SOUTH KOREA",
+          "minute": 4,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "L. Romo",
+          "team": "MEXICO",
+          "minute": 50,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Paik Seung-Ho",
+          "team": "SOUTH KOREA",
+          "minute": 58,
+          "extra": null
+        }
+      ]
     },
     "USA-AUSTRALIA": {
       "homeGoals": 2,
       "awayGoals": 0,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-19T19:00:00+00:00"
+      "kickoffUTC": "2026-06-19T19:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Own Goal",
+          "player": "C. Burgess",
+          "team": "USA",
+          "minute": 11,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "J. Bos",
+          "team": "AUSTRALIA",
+          "minute": 16,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Circati",
+          "team": "AUSTRALIA",
+          "minute": 32,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Freeman",
+          "team": "USA",
+          "minute": 43,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Robinson",
+          "team": "USA",
+          "minute": 56,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "H. Souttar",
+          "team": "AUSTRALIA",
+          "minute": 88,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "F. Balogun",
+          "team": "USA",
+          "minute": 89,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "J. Italiano",
+          "team": "AUSTRALIA",
+          "minute": 89,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "C. Richards",
+          "team": "USA",
+          "minute": 90,
+          "extra": 3
+        }
+      ]
     },
     "SCOTLAND-MOROCCO": {
       "homeGoals": 0,
       "awayGoals": 1,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-19T22:00:00+00:00"
+      "kickoffUTC": "2026-06-19T22:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "I. Saibari",
+          "team": "MOROCCO",
+          "minute": 2,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "I. Diop",
+          "team": "MOROCCO",
+          "minute": 23,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Robertson",
+          "team": "SCOTLAND",
+          "minute": 65,
+          "extra": null
+        }
+      ]
     },
     "BRAZIL-HAITI": {
       "homeGoals": 3,
       "awayGoals": 0,
       "status": "FT",
       "elapsed": 90,
-      "kickoffUTC": "2026-06-20T00:30:00+00:00"
+      "kickoffUTC": "2026-06-20T00:30:00+00:00",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "C. Arcus",
+          "team": "HAITI",
+          "minute": 4,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Cunha",
+          "team": "BRAZIL",
+          "minute": 23,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Cunha",
+          "team": "BRAZIL",
+          "minute": 36,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Vinicius Junior",
+          "team": "BRAZIL",
+          "minute": 45,
+          "extra": 3
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "F. Pierrot",
+          "team": "HAITI",
+          "minute": 45,
+          "extra": 4
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Douglas Santos",
+          "team": "BRAZIL",
+          "minute": 65,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "D. Jean Jacques",
+          "team": "HAITI",
+          "minute": 72,
+          "extra": null
+        }
+      ]
     },
     "NETHERLANDS-SWEDEN": {
       "homeGoals": null,
@@ -239,7 +1727,7 @@
       "elapsed": null,
       "kickoffUTC": "2026-06-20T20:00:00+00:00"
     },
-    "ECUADOR-CURA\u00c7AO": {
+    "ECUADOR-CURACAO": {
       "homeGoals": null,
       "awayGoals": null,
       "status": "NS",
@@ -267,7 +1755,7 @@
       "elapsed": null,
       "kickoffUTC": "2026-06-21T19:00:00+00:00"
     },
-    "URUGUAY-CAPE VERDE ISLANDS": {
+    "URUGUAY-CAPE VERDE": {
       "homeGoals": null,
       "awayGoals": null,
       "status": "NS",
@@ -386,7 +1874,7 @@
       "elapsed": null,
       "kickoffUTC": "2026-06-25T20:00:00+00:00"
     },
-    "CURA\u00c7AO-IVORY COAST": {
+    "CURACAO-IVORY COAST": {
       "homeGoals": null,
       "awayGoals": null,
       "status": "NS",
@@ -407,7 +1895,7 @@
       "elapsed": null,
       "kickoffUTC": "2026-06-25T23:00:00+00:00"
     },
-    "T\u00dcRKIYE-USA": {
+    "TURKIYE-USA": {
       "homeGoals": null,
       "awayGoals": null,
       "status": "NS",
@@ -442,7 +1930,7 @@
       "elapsed": null,
       "kickoffUTC": "2026-06-27T00:00:00+00:00"
     },
-    "CAPE VERDE ISLANDS-SAUDI ARABIA": {
+    "CAPE VERDE-SAUDI ARABIA": {
       "homeGoals": null,
       "awayGoals": null,
       "status": "NS",
