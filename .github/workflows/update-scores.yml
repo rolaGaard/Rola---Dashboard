@@ -41,26 +41,92 @@ jobs:
           # Parse into our simplified scores.json format using python
           python3 << 'EOF'
           import json
+          import urllib.request
+          import unicodedata
           from datetime import datetime
+
+          def strip_accents(s):
+              return ''.join(c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn').upper()
+
+          # The API sometimes uses different team name variants than our SCHEDULE.
+          # Map any known alias to the exact name used in SCHEDULE (after accent stripping).
+          NAME_ALIASES = {
+              'CAPE VERDE ISLANDS': 'CAPE VERDE',
+              'IVORY COAST': 'IVORY COAST',
+              'COTE DIVOIRE': 'IVORY COAST',
+              'DR CONGO': 'CONGO DR',
+              'CONGO DR': 'CONGO DR',
+              'REPUBLIC OF IRELAND': 'IRELAND',
+              'SOUTH KOREA': 'SOUTH KOREA',
+              'KOREA REPUBLIC': 'SOUTH KOREA',
+              'USA': 'USA',
+              'UNITED STATES': 'USA',
+              'BOSNIA AND HERZEGOVINA': 'BOSNIA & HERZEGOVINA',
+          }
+
+          def normalize_team(name):
+              clean = strip_accents(name)
+              return NAME_ALIASES.get(clean, clean)
 
           with open('raw_fixtures.json') as f:
               data = json.load(f)
+
+          API_KEY = "${{ secrets.API_FOOTBALL_KEY }}"
+          LIVE_STATUSES = {'1H', '2H', 'HT', 'ET', 'BT', 'P'}
+          FINISHED_STATUSES = {'FT', 'AET', 'PEN'}
+
+          def fetch_events(fixture_id):
+              url = f"https://v3.football.api-sports.io/fixtures/events?fixture={fixture_id}"
+              req = urllib.request.Request(url, headers={"x-apisports-key": API_KEY})
+              try:
+                  with urllib.request.urlopen(req, timeout=10) as resp:
+                      body = json.loads(resp.read())
+                  events = []
+                  for ev in body.get('response', []):
+                      etype = ev.get('type')  # Goal, Card, subst, Var
+                      detail = ev.get('detail')  # Normal Goal, Yellow Card, Red Card, etc
+                      player = (ev.get('player') or {}).get('name')
+                      team = normalize_team((ev.get('team') or {}).get('name', ''))
+                      minute = (ev.get('time') or {}).get('elapsed')
+                      extra = (ev.get('time') or {}).get('extra')
+                      if etype in ('Goal', 'Card'):
+                          events.append({
+                              'type': etype,
+                              'detail': detail,
+                              'player': player,
+                              'team': team,
+                              'minute': minute,
+                              'extra': extra,
+                          })
+                  return events
+              except Exception as e:
+                  print(f"Could not fetch events for fixture {fixture_id}: {e}")
+                  return []
 
           scores = {}
           for fx in data.get('response', []):
               fixture = fx['fixture']
               teams = fx['teams']
               goals = fx['goals']
-              home = teams['home']['name'].upper()
-              away = teams['away']['name'].upper()
+              home = normalize_team(teams['home']['name'])
+              away = normalize_team(teams['away']['name'])
               key = home + '-' + away
-              scores[key] = {
+              status = fixture['status']['short']
+
+              entry = {
                   'homeGoals': goals['home'],
                   'awayGoals': goals['away'],
-                  'status': fixture['status']['short'],  # NS, 1H, HT, 2H, FT, etc
+                  'status': status,
                   'elapsed': fixture['status'].get('elapsed'),
-                  'kickoffUTC': fixture.get('date'),  # ISO8601 UTC timestamp from API, e.g. 2026-06-20T22:00:00+00:00
+                  'kickoffUTC': fixture.get('date'),
               }
+
+              # Only fetch events (goals/cards) for matches that are live or finished,
+              # to avoid wasting API quota on matches that haven't started.
+              if status in LIVE_STATUSES or status in FINISHED_STATUSES:
+                  entry['events'] = fetch_events(fixture['id'])
+
+              scores[key] = entry
 
           output = {
               'updated': datetime.utcnow().isoformat() + 'Z',
