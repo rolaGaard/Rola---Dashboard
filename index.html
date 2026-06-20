@@ -117,6 +117,7 @@
     font-size:10px; font-weight:700; color:#94a3b8; background:#f1f5f9;
     border-radius:4px; padding:1px 5px; letter-spacing:0.03em; flex-shrink:0;
   }
+  .wc-stars { font-size:9px; flex-shrink:0; white-space:nowrap; letter-spacing:-1px; }
   .score-box { min-width:54px; text-align:center; font-weight:700; font-size:18px; color:#1a1a2e; }
   .score-box.live { color:#CC0000; }
   .match-meta { display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:11px; color:#64748b; }
@@ -525,6 +526,22 @@ function stripAccents(s) {
 }
 function flag(name){ return FLAGS[name] || '🏳'; }
 function esName(name){ return ES_NAMES[name] || name; }
+
+// FIFA World Cup titles won historically, for teams participating in 2026
+const WORLD_CUP_TITLES = {
+  'BRAZIL': 5,
+  'GERMANY': 4,
+  'ARGENTINA': 3,
+  'FRANCE': 2,
+  'URUGUAY': 2,
+  'ENGLAND': 1,
+  'SPAIN': 1,
+};
+function worldCupStars(teamName) {
+  const titles = WORLD_CUP_TITLES[teamName] || 0;
+  if (titles === 0) return '';
+  return '<span class="wc-stars" title="' + titles + ' título' + (titles !== 1 ? 's' : '') + ' mundial' + (titles !== 1 ? 'es' : '') + '">' + '\u2B50'.repeat(titles) + '</span>';
+}
 function countryCode(name){ return (COUNTRY_CODES[name] || [name.slice(0,3)])[0]; }
 function matchKey(home, away){ return stripAccents(home) + '-' + stripAccents(away); }
 
@@ -687,12 +704,14 @@ function buildMatchCard(m) {
         '<div class="team">' +
           '<span class="team-flag">' + flag(m.home) + '</span>' +
           '<span class="' + homeNameClass + '">' + esName(m.home) + '</span>' +
+          worldCupStars(m.home) +
           '<span class="team-code">' + countryCode(m.home) + '</span>' +
         '</div>' +
         '<div class="' + scoreClass + '">' + scoreText + '</div>' +
         '<div class="team away">' +
           '<span class="team-flag">' + flag(m.away) + '</span>' +
           '<span class="' + awayNameClass + '">' + esName(m.away) + '</span>' +
+          worldCupStars(m.away) +
           '<span class="team-code">' + countryCode(m.away) + '</span>' +
         '</div>' +
       '</div>' +
