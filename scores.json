@@ -1,6 +1,31 @@
 {
-  "updated": "2026-06-20T16:43:02.324203Z",
+  "updated": "2026-06-20T18:00:46.211272Z",
   "matches": {
+    "NETHERLANDS-SWEDEN": {
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "status": "HT",
+      "elapsed": 45,
+      "kickoffUTC": "2026-06-20T17:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "B. Brobbey",
+          "team": "NETHERLANDS",
+          "minute": 5,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "B. Brobbey",
+          "team": "NETHERLANDS",
+          "minute": 17,
+          "extra": null
+        }
+      ]
+    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -1744,13 +1769,6 @@
           "extra": null
         }
       ]
-    },
-    "NETHERLANDS-SWEDEN": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null,
-      "kickoffUTC": "2026-06-20T17:00:00+00:00"
     },
     "GERMANY-IVORY COAST": {
       "homeGoals": null,
