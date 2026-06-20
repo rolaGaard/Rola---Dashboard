@@ -59,6 +59,7 @@ jobs:
                   'awayGoals': goals['away'],
                   'status': fixture['status']['short'],  # NS, 1H, HT, 2H, FT, etc
                   'elapsed': fixture['status'].get('elapsed'),
+                  'kickoffUTC': fixture.get('date'),  # ISO8601 UTC timestamp from API, e.g. 2026-06-20T22:00:00+00:00
               }
 
           output = {
