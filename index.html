@@ -293,6 +293,17 @@
     text-align:center; color:#94a3b8; font-size:12px; margin-top:10px;
   }
   .search-results-label b { color:#FFD700; }
+
+  .fullscreen-btn {
+    width:34px; height:34px; border-radius:8px;
+    background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12);
+    color:#94a3b8; font-size:16px; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    transition:background 0.15s, color 0.15s;
+    flex-shrink:0;
+  }
+  .fullscreen-btn:hover { background:rgba(255,255,255,0.12); color:#FFD700; }
+  .fullscreen-btn.active { color:#FFD700; border-color:#FFD700; }
 </style>
 </head>
 <body>
@@ -304,9 +315,12 @@
       <div class="header-sub">USA · Canadá · México</div>
     </div>
   </div>
-  <div>
-    <div class="clock-label">Hora Argentina</div>
-    <div class="clock-value" id="clock">--:--</div>
+  <div style="display:flex; align-items:center; gap:14px;">
+    <div>
+      <div class="clock-label">Hora Argentina</div>
+      <div class="clock-value" id="clock">--:--</div>
+    </div>
+    <button id="fullscreen-btn" class="fullscreen-btn" aria-label="Pantalla completa">⛶</button>
   </div>
 </div>
 
@@ -1082,6 +1096,28 @@ window.addEventListener('scroll', () => {
 });
 scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+const fullscreenBtn = document.getElementById('fullscreen-btn');
+function isFullscreen() {
+  return !!(document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement);
+}
+function updateFullscreenBtn() {
+  const active = isFullscreen();
+  fullscreenBtn.classList.toggle('active', active);
+  fullscreenBtn.textContent = active ? '⤬' : '⛶';
+  fullscreenBtn.setAttribute('aria-label', active ? 'Salir de pantalla completa' : 'Pantalla completa');
+}
+fullscreenBtn.addEventListener('click', () => {
+  if (!isFullscreen()) {
+    const el = document.documentElement;
+    (el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen).call(el);
+  } else {
+    (document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen).call(document);
+  }
+});
+['fullscreenchange', 'webkitfullscreenchange', 'msfullscreenchange'].forEach(evt => {
+  document.addEventListener(evt, updateFullscreenBtn);
 });
 
 if ('Notification' in window && Notification.permission === 'default') {
