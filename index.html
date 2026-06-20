@@ -104,9 +104,14 @@
   .match-row { display:flex; align-items:center; justify-content:space-between; gap:10px; }
   .team { display:flex; align-items:center; gap:8px; flex:1; min-width:0; }
   .team.away { flex-direction:row-reverse; }
-  .team-flag { font-size:24px; }
+  .team-flag { font-size:24px; flex-shrink:0; }
+  .team-text-col { display:flex; flex-direction:column; min-width:0; gap:1px; }
+  .team.away .team-text-col { align-items:flex-end; }
+  .wc-stars { font-size:9px; letter-spacing:-1px; line-height:1; min-height:10px; display:block; }
+  .team-name-row { display:flex; align-items:center; gap:5px; min-width:0; }
+  .team.away .team-name-row { flex-direction:row-reverse; }
   .team-name {
-    font-size:14px; font-weight:600; color:#1a1a2e;
+    font-size:18px; font-weight:800; color:#1a1a2e; text-transform:uppercase;
     overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
   }
   .team.away .team-name { text-align:right; }
@@ -117,7 +122,6 @@
     font-size:10px; font-weight:700; color:#94a3b8; background:#f1f5f9;
     border-radius:4px; padding:1px 5px; letter-spacing:0.03em; flex-shrink:0;
   }
-  .wc-stars { font-size:9px; flex-shrink:0; white-space:nowrap; letter-spacing:-1px; }
   .score-box { min-width:54px; text-align:center; font-weight:700; font-size:18px; color:#1a1a2e; }
   .score-box.live { color:#CC0000; }
   .match-meta { display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:11px; color:#64748b; }
@@ -429,6 +433,21 @@ const ES_NAMES = {
   'ENGLAND':'INGLATERRA','GHANA':'GHANA','CROATIA':'CROACIA','PANAMA':'PANAMÁ',
 };
 
+// Shortened versions for teams with long names — abbreviate the first word only,
+// used in tight-space contexts (match cards). Falls back to full ES_NAMES if absent.
+const ES_NAMES_SHORT = {
+  'IVORY COAST':'C. de Marfil',
+  'NETHERLANDS':'P. Bajos',
+  'SAUDI ARABIA':'A. Saudita',
+  'NEW ZEALAND':'N. Zelanda',
+  'SOUTH AFRICA':'S. Africa',
+  'SOUTH KOREA':'C. del Sur',
+  'BOSNIA & HERZEGOVINA':'Bosnia',
+};
+function esNameShort(name) {
+  return ES_NAMES_SHORT[name] || esName(name);
+}
+
 // Official FIFA 3-letter codes for quick search (e.g. "MEX" finds Mexico)
 const COUNTRY_CODES = {
   'MEXICO':['MEX'],'SOUTH AFRICA':['RSA'],'CANADA':['CAN'],
@@ -539,7 +558,7 @@ const WORLD_CUP_TITLES = {
 };
 function worldCupStars(teamName) {
   const titles = WORLD_CUP_TITLES[teamName] || 0;
-  if (titles === 0) return '';
+  if (titles === 0) return '<span class="wc-stars wc-stars-empty">&nbsp;</span>';
   return '<span class="wc-stars" title="' + titles + ' título' + (titles !== 1 ? 's' : '') + ' mundial' + (titles !== 1 ? 'es' : '') + '">' + '\u2B50'.repeat(titles) + '</span>';
 }
 function countryCode(name){ return (COUNTRY_CODES[name] || [name.slice(0,3)])[0]; }
@@ -703,16 +722,24 @@ function buildMatchCard(m) {
       '<div class="match-row">' +
         '<div class="team">' +
           '<span class="team-flag">' + flag(m.home) + '</span>' +
-          '<span class="' + homeNameClass + '">' + esName(m.home) + '</span>' +
-          worldCupStars(m.home) +
-          '<span class="team-code">' + countryCode(m.home) + '</span>' +
+          '<div class="team-text-col">' +
+            worldCupStars(m.home) +
+            '<div class="team-name-row">' +
+              '<span class="' + homeNameClass + '">' + esNameShort(m.home) + '</span>' +
+              '<span class="team-code">' + countryCode(m.home) + '</span>' +
+            '</div>' +
+          '</div>' +
         '</div>' +
         '<div class="' + scoreClass + '">' + scoreText + '</div>' +
         '<div class="team away">' +
           '<span class="team-flag">' + flag(m.away) + '</span>' +
-          '<span class="' + awayNameClass + '">' + esName(m.away) + '</span>' +
-          worldCupStars(m.away) +
-          '<span class="team-code">' + countryCode(m.away) + '</span>' +
+          '<div class="team-text-col">' +
+            worldCupStars(m.away) +
+            '<div class="team-name-row">' +
+              '<span class="' + awayNameClass + '">' + esNameShort(m.away) + '</span>' +
+              '<span class="team-code">' + countryCode(m.away) + '</span>' +
+            '</div>' +
+          '</div>' +
         '</div>' +
       '</div>' +
       '<div class="match-meta">' +
@@ -1065,7 +1092,7 @@ function buildGroupsColumn(groupLetters) {
       const gd = row.gf - row.ga;
       const gdStr = gd > 0 ? '+' + gd : String(gd);
       html += '<div class="standings-row">' +
-        '<span class="st-team"><span class="gflag">' + flag(t) + '</span><span class="gname">' + esName(t) + '</span></span>' +
+        '<span class="st-team"><span class="gflag">' + flag(t) + '</span><span class="gname">' + esNameShort(t) + '</span></span>' +
         '<span>' + row.played + '</span>' +
         '<span>' + row.w + '</span>' +
         '<span>' + row.d + '</span>' +
