@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-19T23:15:31.230700Z",
+  "updated": "2026-06-20T01:28:58.128924Z",
   "matches": {
-    "SCOTLAND-MOROCCO": {
-      "homeGoals": 0,
-      "awayGoals": 1,
-      "status": "2H",
-      "elapsed": 53
+    "BRAZIL-HAITI": {
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "status": "HT",
+      "elapsed": 45
     },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -181,11 +181,11 @@
       "status": "FT",
       "elapsed": 90
     },
-    "BRAZIL-HAITI": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null
+    "SCOTLAND-MOROCCO": {
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90
     },
     "T\u00dcRKIYE-PARAGUAY": {
       "homeGoals": null,
