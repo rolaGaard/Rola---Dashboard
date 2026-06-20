@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-20T21:30:43.526391Z",
+  "updated": "2026-06-20T21:40:32.218113Z",
   "matches": {
     "GERMANY-IVORY COAST": {
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 68,
+      "elapsed": 78,
       "kickoffUTC": "2026-06-20T20:00:00+00:00",
       "events": [
         {
@@ -14,6 +14,14 @@
           "player": "F. Kessie",
           "team": "IVORY COAST",
           "minute": 30,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "D. Undav",
+          "team": "GERMANY",
+          "minute": 68,
           "extra": null
         }
       ]
