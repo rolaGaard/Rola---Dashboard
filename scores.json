@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T20:01:19.418630Z",
+  "updated": "2026-06-21T20:10:31.941723Z",
   "matches": {
     "BELGIUM-IRAN": {
       "homeGoals": 0,
@@ -618,7 +618,48 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-14T23:00:00+00:00",
-      "events": []
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Seko Fofana",
+          "team": "IVORY COAST",
+          "minute": 28,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Franck Kessi\u00e9",
+          "team": "IVORY COAST",
+          "minute": 38,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Gu\u00e9la Dou\u00e9",
+          "team": "IVORY COAST",
+          "minute": 40,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Jackson Porozo",
+          "team": "ECUADOR",
+          "minute": 73,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Diallo",
+          "team": "IVORY COAST",
+          "minute": 90,
+          "extra": null
+        }
+      ]
     },
     "SWEDEN-TUNISIA": {
       "homeGoals": 5,
