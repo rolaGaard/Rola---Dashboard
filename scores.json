@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-21T04:30:40.275470Z",
+  "updated": "2026-06-21T04:40:31.171728Z",
   "matches": {
     "TUNISIA-JAPAN": {
       "homeGoals": 0,
-      "awayGoals": 1,
+      "awayGoals": 2,
       "status": "1H",
-      "elapsed": 30,
+      "elapsed": 40,
       "kickoffUTC": "2026-06-21T04:00:00+00:00",
       "events": [
         {
@@ -14,6 +14,14 @@
           "player": "D. Kamada",
           "team": "JAPAN",
           "minute": 4,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Ueda",
+          "team": "JAPAN",
+          "minute": 31,
           "extra": null
         }
       ]
@@ -1658,7 +1666,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "C. Arcus",
+          "player": "Carlens Arcus",
           "team": "HAITI",
           "minute": 4,
           "extra": null
@@ -1680,20 +1688,20 @@
           "extra": null
         },
         {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Frantzdy Pierrot",
+          "team": "HAITI",
+          "minute": 45,
+          "extra": 4
+        },
+        {
           "type": "Goal",
           "detail": "Normal Goal",
           "player": "Vinicius Junior",
           "team": "BRAZIL",
           "minute": 45,
-          "extra": 3
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "F. Pierrot",
-          "team": "HAITI",
-          "minute": 45,
-          "extra": 4
+          "extra": null
         },
         {
           "type": "Card",
@@ -1706,7 +1714,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "D. Jean Jacques",
+          "player": "Danley Jean Jacques",
           "team": "HAITI",
           "minute": 72,
           "extra": null
@@ -1772,7 +1780,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "B. Brobbey",
+          "player": "Brian Brobbey",
           "team": "NETHERLANDS",
           "minute": 5,
           "extra": null
@@ -1780,7 +1788,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "B. Brobbey",
+          "player": "Brian Brobbey",
           "team": "NETHERLANDS",
           "minute": 17,
           "extra": null
@@ -1788,7 +1796,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "C. Gakpo",
+          "player": "Cody Gakpo",
           "team": "NETHERLANDS",
           "minute": 47,
           "extra": null
@@ -1796,7 +1804,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "G. Gudmundsson",
+          "player": "Gabriel Gudmundsson",
           "team": "SWEDEN",
           "minute": 53,
           "extra": null
@@ -1804,7 +1812,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "C. Gakpo",
+          "player": "Cody Gakpo",
           "team": "NETHERLANDS",
           "minute": 54,
           "extra": null
@@ -1812,7 +1820,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "A. Elanga",
+          "player": "Anthony Elanga",
           "team": "SWEDEN",
           "minute": 59,
           "extra": null
@@ -1820,7 +1828,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "Y. Ayari",
+          "player": "Yasin Ayari",
           "team": "SWEDEN",
           "minute": 75,
           "extra": null
@@ -1828,7 +1836,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "L. Bergvall",
+          "player": "Lucas Bergvall",
           "team": "SWEDEN",
           "minute": 80,
           "extra": null
@@ -1836,7 +1844,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "C. Summerville",
+          "player": "Crysencio Summerville",
           "team": "NETHERLANDS",
           "minute": 89,
           "extra": null
@@ -1853,7 +1861,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "F. Kessie",
+          "player": "Franck Kessi\u00e9",
           "team": "IVORY COAST",
           "minute": 30,
           "extra": null
@@ -1861,7 +1869,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "D. Undav",
+          "player": "Deniz Undav",
           "team": "GERMANY",
           "minute": 68,
           "extra": null
@@ -1869,7 +1877,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "D. Undav",
+          "player": "Deniz Undav",
           "team": "GERMANY",
           "minute": 90,
           "extra": 4
