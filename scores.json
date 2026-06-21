@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-21T17:10:28.869995Z",
+  "updated": "2026-06-21T17:20:29.221372Z",
   "matches": {
     "SPAIN-SAUDI ARABIA": {
-      "homeGoals": 3,
+      "homeGoals": 4,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 47,
+      "elapsed": 58,
       "kickoffUTC": "2026-06-21T16:00:00+00:00",
       "events": [
         {
@@ -38,6 +38,14 @@
           "player": "S. Al Dawsari",
           "team": "SAUDI ARABIA",
           "minute": 30,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Own Goal",
+          "player": "H. Tambakti",
+          "team": "SPAIN",
+          "minute": 49,
           "extra": null
         }
       ]
