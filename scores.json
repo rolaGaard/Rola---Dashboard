@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-21T16:21:16.180821Z",
+  "updated": "2026-06-21T16:30:45.635701Z",
   "matches": {
     "SPAIN-SAUDI ARABIA": {
-      "homeGoals": 1,
+      "homeGoals": 3,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 20,
+      "elapsed": 30,
       "kickoffUTC": "2026-06-21T16:00:00+00:00",
       "events": [
         {
@@ -14,6 +14,22 @@
           "player": "Lamine Yamal",
           "team": "SPAIN",
           "minute": 10,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Oyarzabal",
+          "team": "SPAIN",
+          "minute": 21,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Oyarzabal",
+          "team": "SPAIN",
+          "minute": 24,
           "extra": null
         }
       ]
