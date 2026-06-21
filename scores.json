@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-21T22:20:32.568728Z",
+  "updated": "2026-06-21T22:30:41.183126Z",
   "matches": {
     "URUGUAY-CAPE VERDE": {
       "homeGoals": 0,
-      "awayGoals": 0,
+      "awayGoals": 1,
       "status": "1H",
-      "elapsed": 20,
+      "elapsed": 30,
       "kickoffUTC": "2026-06-21T22:00:00+00:00",
       "events": [
         {
@@ -19,9 +19,17 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "M. Ugarte",
+          "player": "R. Bentancur",
           "team": "URUGUAY",
           "minute": 20,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "K. Lenini",
+          "team": "CAPE VERDE",
+          "minute": 21,
           "extra": null
         }
       ]
