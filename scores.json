@@ -1,39 +1,6 @@
 {
-  "updated": "2026-06-21T21:01:23.238563Z",
+  "updated": "2026-06-21T21:10:29.222241Z",
   "matches": {
-    "BELGIUM-IRAN": {
-      "homeGoals": 0,
-      "awayGoals": 0,
-      "status": "2H",
-      "elapsed": 90,
-      "kickoffUTC": "2026-06-21T19:00:00+00:00",
-      "events": [
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "R. Lukaku",
-          "team": "BELGIUM",
-          "minute": 3,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "S. Ezatolahi",
-          "team": "IRAN",
-          "minute": 33,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Red Card",
-          "player": "N. Ngoy",
-          "team": "BELGIUM",
-          "minute": 66,
-          "extra": null
-        }
-      ]
-    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -2035,6 +2002,39 @@
           "player": "M. Kanno",
           "team": "SAUDI ARABIA",
           "minute": 60,
+          "extra": null
+        }
+      ]
+    },
+    "BELGIUM-IRAN": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-06-21T19:00:00+00:00",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "R. Lukaku",
+          "team": "BELGIUM",
+          "minute": 3,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "S. Ezatolahi",
+          "team": "IRAN",
+          "minute": 33,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Red Card",
+          "player": "N. Ngoy",
+          "team": "BELGIUM",
+          "minute": 66,
           "extra": null
         }
       ]
