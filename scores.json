@@ -1,55 +1,6 @@
 {
-  "updated": "2026-06-21T01:50:29.368222Z",
+  "updated": "2026-06-21T02:00:54.989191Z",
   "matches": {
-    "ECUADOR-CURACAO": {
-      "homeGoals": 0,
-      "awayGoals": 0,
-      "status": "2H",
-      "elapsed": 90,
-      "kickoffUTC": "2026-06-21T00:00:00+00:00",
-      "events": [
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "J. Alcivar",
-          "team": "ECUADOR",
-          "minute": 38,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "L. Bacuna",
-          "team": "CURACAO",
-          "minute": 39,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "J. Bacuna",
-          "team": "CURACAO",
-          "minute": 53,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "L. Comenencia",
-          "team": "CURACAO",
-          "minute": 56,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "J. Gaari",
-          "team": "CURACAO",
-          "minute": 75,
-          "extra": null
-        }
-      ]
-    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -1905,6 +1856,63 @@
           "team": "GERMANY",
           "minute": 90,
           "extra": 4
+        }
+      ]
+    },
+    "ECUADOR-CURACAO": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-06-21T00:00:00+00:00",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "J. Alcivar",
+          "team": "ECUADOR",
+          "minute": 38,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "L. Bacuna",
+          "team": "CURACAO",
+          "minute": 39,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "J. Bacuna",
+          "team": "CURACAO",
+          "minute": 53,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "L. Comenencia",
+          "team": "CURACAO",
+          "minute": 56,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "J. Gaari",
+          "team": "CURACAO",
+          "minute": 75,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "G. Kastaneer",
+          "team": "CURACAO",
+          "minute": 90,
+          "extra": 1
         }
       ]
     },
