@@ -1,6 +1,23 @@
 {
-  "updated": "2026-06-21T04:00:57.990970Z",
+  "updated": "2026-06-21T04:10:27.385917Z",
   "matches": {
+    "TUNISIA-JAPAN": {
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "1H",
+      "elapsed": 10,
+      "kickoffUTC": "2026-06-21T04:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "D. Kamada",
+          "team": "JAPAN",
+          "minute": 4,
+          "extra": null
+        }
+      ]
+    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -1915,13 +1932,6 @@
           "extra": 1
         }
       ]
-    },
-    "TUNISIA-JAPAN": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null,
-      "kickoffUTC": "2026-06-21T04:00:00+00:00"
     },
     "SPAIN-SAUDI ARABIA": {
       "homeGoals": null,
