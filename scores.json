@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T03:30:43.802146Z",
+  "updated": "2026-06-21T03:40:27.116949Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -1523,80 +1523,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-19T19:00:00+00:00",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Own Goal",
-          "player": "Cameron Burgess",
-          "team": "USA",
-          "minute": 11,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Jordan Bos",
-          "team": "AUSTRALIA",
-          "minute": 16,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Alessandro Circati",
-          "team": "AUSTRALIA",
-          "minute": 32,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "Alexander Freeman",
-          "team": "USA",
-          "minute": 44,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Antonee Robinson",
-          "team": "USA",
-          "minute": 56,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Folarin Balogun",
-          "team": "USA",
-          "minute": 89,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Harry Souttar",
-          "team": "AUSTRALIA",
-          "minute": 89,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Jacob Italiano",
-          "team": "AUSTRALIA",
-          "minute": 89,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Chris Richards",
-          "team": "USA",
-          "minute": 90,
-          "extra": 3
-        }
-      ]
+      "events": []
     },
     "SCOTLAND-MOROCCO": {
       "homeGoals": 0,
