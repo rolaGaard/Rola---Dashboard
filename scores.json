@@ -1,13 +1,22 @@
 {
-  "updated": "2026-06-21T19:01:18.124318Z",
+  "updated": "2026-06-21T19:10:33.147558Z",
   "matches": {
     "BELGIUM-IRAN": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 1,
+      "elapsed": 10,
       "kickoffUTC": "2026-06-21T19:00:00+00:00",
-      "events": []
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "R. Lukaku",
+          "team": "BELGIUM",
+          "minute": 3,
+          "extra": null
+        }
+      ]
     },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
