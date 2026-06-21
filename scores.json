@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-21T01:10:27.960606Z",
+  "updated": "2026-06-21T01:20:26.848915Z",
   "matches": {
     "ECUADOR-CURACAO": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 51,
+      "elapsed": 60,
       "kickoffUTC": "2026-06-21T00:00:00+00:00",
       "events": [
         {
@@ -22,6 +22,22 @@
           "player": "L. Bacuna",
           "team": "CURACAO",
           "minute": 39,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "J. Bacuna",
+          "team": "CURACAO",
+          "minute": 53,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "L. Comenencia",
+          "team": "CURACAO",
+          "minute": 56,
           "extra": null
         }
       ]
