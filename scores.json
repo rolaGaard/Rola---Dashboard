@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-21T16:01:22.945379Z",
+  "updated": "2026-06-21T16:10:30.219522Z",
   "matches": {
+    "SPAIN-SAUDI ARABIA": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "1H",
+      "elapsed": 10,
+      "kickoffUTC": "2026-06-21T16:00:00+00:00",
+      "events": []
+    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -422,7 +430,32 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-14T04:00:00+00:00",
-      "events": []
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "N. Irankunda",
+          "team": "AUSTRALIA",
+          "minute": 27,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "C. Metcalfe",
+          "team": "AUSTRALIA",
+          "minute": 75,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Yunus Akg\u00fcn",
+          "team": "TURKIYE",
+          "minute": 86,
+          "extra": null
+        }
+      ]
     },
     "GERMANY-CURACAO": {
       "homeGoals": 7,
@@ -430,7 +463,72 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-14T17:00:00+00:00",
-      "events": []
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "F. Nmecha",
+          "team": "GERMANY",
+          "minute": 6,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "L. Comenencia",
+          "team": "CURACAO",
+          "minute": 21,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "N. Schlotterbeck",
+          "team": "GERMANY",
+          "minute": 38,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Penalty",
+          "player": "K. Havertz",
+          "team": "GERMANY",
+          "minute": 45,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "J. Musiala",
+          "team": "GERMANY",
+          "minute": 47,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "N. Brown",
+          "team": "GERMANY",
+          "minute": 68,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "D. Undav",
+          "team": "GERMANY",
+          "minute": 78,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "K. Havertz",
+          "team": "GERMANY",
+          "minute": 88,
+          "extra": null
+        }
+      ]
     },
     "NETHERLANDS-JAPAN": {
       "homeGoals": 2,
@@ -732,7 +830,48 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-16T01:00:00+00:00",
-      "events": []
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "E. Just",
+          "team": "NEW ZEALAND",
+          "minute": 7,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "R. Rezaeian",
+          "team": "IRAN",
+          "minute": 32,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "E. Just",
+          "team": "NEW ZEALAND",
+          "minute": 54,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Mohebi",
+          "team": "IRAN",
+          "minute": 64,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Ehsan Hajsafi",
+          "team": "IRAN",
+          "minute": 89,
+          "extra": null
+        }
+      ]
     },
     "FRANCE-SENEGAL": {
       "homeGoals": 3,
@@ -1817,13 +1956,6 @@
           "extra": null
         }
       ]
-    },
-    "SPAIN-SAUDI ARABIA": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null,
-      "kickoffUTC": "2026-06-21T16:00:00+00:00"
     },
     "BELGIUM-IRAN": {
       "homeGoals": null,
