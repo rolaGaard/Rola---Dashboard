@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-21T01:30:41.438714Z",
+  "updated": "2026-06-21T01:40:29.359003Z",
   "matches": {
     "ECUADOR-CURACAO": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 71,
+      "elapsed": 81,
       "kickoffUTC": "2026-06-21T00:00:00+00:00",
       "events": [
         {
@@ -38,6 +38,14 @@
           "player": "L. Comenencia",
           "team": "CURACAO",
           "minute": 56,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "J. Gaari",
+          "team": "CURACAO",
+          "minute": 75,
           "extra": null
         }
       ]
