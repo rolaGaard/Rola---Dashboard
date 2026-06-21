@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-21T05:40:30.811460Z",
+  "updated": "2026-06-21T05:50:28.111420Z",
   "matches": {
     "TUNISIA-JAPAN": {
       "homeGoals": 0,
-      "awayGoals": 3,
+      "awayGoals": 4,
       "status": "2H",
-      "elapsed": 80,
+      "elapsed": 90,
       "kickoffUTC": "2026-06-21T04:00:00+00:00",
       "events": [
         {
@@ -30,6 +30,14 @@
           "player": "J. Ito",
           "team": "JAPAN",
           "minute": 69,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Ueda",
+          "team": "JAPAN",
+          "minute": 83,
           "extra": null
         }
       ]
