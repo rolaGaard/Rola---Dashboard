@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-21T20:30:42.988732Z",
+  "updated": "2026-06-21T20:40:33.514159Z",
   "matches": {
     "BELGIUM-IRAN": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 65,
+      "elapsed": 75,
       "kickoffUTC": "2026-06-21T19:00:00+00:00",
       "events": [
         {
@@ -22,6 +22,14 @@
           "player": "S. Ezatolahi",
           "team": "IRAN",
           "minute": 33,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Red Card",
+          "player": "N. Ngoy",
+          "team": "BELGIUM",
+          "minute": 66,
           "extra": null
         }
       ]
