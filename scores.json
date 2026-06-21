@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T18:00:13.597784Z",
+  "updated": "2026-06-21T18:01:17.016274Z",
   "matches": {
     "SPAIN-SAUDI ARABIA": {
       "homeGoals": 4,
@@ -764,24 +764,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-15T16:00:00+00:00",
-      "events": [
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Sidny Lopes Cabral",
-          "team": "CAPE VERDE",
-          "minute": 16,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Pedri",
-          "team": "SPAIN",
-          "minute": 90,
-          "extra": 3
-        }
-      ]
+      "events": []
     },
     "BELGIUM-EGYPT": {
       "homeGoals": 1,
