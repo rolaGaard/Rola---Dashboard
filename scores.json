@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-21T18:50:29.611075Z",
+  "updated": "2026-06-21T19:01:18.124318Z",
   "matches": {
+    "BELGIUM-IRAN": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "1H",
+      "elapsed": 1,
+      "kickoffUTC": "2026-06-21T19:00:00+00:00",
+      "events": []
+    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -2005,13 +2013,6 @@
           "extra": null
         }
       ]
-    },
-    "BELGIUM-IRAN": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null,
-      "kickoffUTC": "2026-06-21T19:00:00+00:00"
     },
     "URUGUAY-CAPE VERDE": {
       "homeGoals": null,
