@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22T03:50:27.442135Z",
+  "updated": "2026-06-22T04:01:09.123017Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -969,32 +969,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-17T01:00:00+00:00",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "L. Messi",
-          "team": "ARGENTINA",
-          "minute": 17,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "L. Messi",
-          "team": "ARGENTINA",
-          "minute": 60,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "L. Messi",
-          "team": "ARGENTINA",
-          "minute": 76,
-          "extra": null
-        }
-      ]
+      "events": []
     },
     "AUSTRIA-JORDAN": {
       "homeGoals": 3,
