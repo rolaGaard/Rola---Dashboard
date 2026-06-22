@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-22T02:10:28.383936Z",
+  "updated": "2026-06-22T02:20:32.996854Z",
   "matches": {
     "NEW ZEALAND-EGYPT": {
       "homeGoals": 1,
-      "awayGoals": 0,
+      "awayGoals": 1,
       "status": "2H",
-      "elapsed": 50,
+      "elapsed": 60,
       "kickoffUTC": "2026-06-22T01:00:00+00:00",
       "events": [
         {
@@ -38,6 +38,14 @@
           "player": "C. McCowatt",
           "team": "NEW ZEALAND",
           "minute": 34,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Ziko",
+          "team": "EGYPT",
+          "minute": 58,
           "extra": null
         }
       ]
