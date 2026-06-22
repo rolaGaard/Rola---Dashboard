@@ -336,6 +336,40 @@
   .install-btn { background:rgba(255,215,0,0.12); border-color:rgba(255,215,0,0.3); }
   .install-btn:hover { background:rgba(255,215,0,0.25); }
 
+  .settings-menu-wrap { position:relative; }
+  .settings-dropdown {
+    position:absolute; top:calc(100% + 8px); right:0; z-index:200;
+    background:#15151a; border:1px solid #2a2a2a; border-radius:10px;
+    min-width:230px; padding:6px; box-shadow:0 8px 24px rgba(0,0,0,0.5);
+  }
+  .settings-option {
+    display:flex; align-items:center; gap:10px; width:100%;
+    background:none; border:none; cursor:pointer; text-align:left;
+    padding:10px 10px; border-radius:8px; color:#fff; font-family:inherit;
+  }
+  .settings-option:hover { background:rgba(255,255,255,0.06); }
+  .settings-option-icon { font-size:18px; flex-shrink:0; }
+  .settings-option-text { display:flex; flex-direction:column; gap:1px; }
+  .settings-option-title { font-size:13px; font-weight:700; }
+  .settings-option-desc { font-size:11px; color:#94a3b8; }
+
+  .shortcut-instructions {
+    position:fixed; inset:0; z-index:1001;
+    background:rgba(0,0,0,0.6);
+    display:flex; align-items:center; justify-content:center; padding:24px;
+  }
+  .shortcut-instructions-box {
+    position:relative; background:#15151a; border:1px solid #2a2a2a;
+    border-radius:14px; padding:24px 22px; max-width:360px;
+  }
+  .shortcut-instructions-text { font-size:14px; line-height:1.6; color:#e2e8f0; }
+  .shortcut-instructions-text b { color:#FFD700; }
+  .cookie-banner-close {
+    position:absolute; top:10px; right:10px; background:none; border:none;
+    color:#94a3b8; font-size:16px; cursor:pointer; padding:4px;
+  }
+  .cookie-banner-close:hover { color:#fff; }
+
   .ios-install-banner {
     background:#1a1a1a; color:#fff; padding:10px 16px;
     display:flex; align-items:center; justify-content:space-between;
@@ -372,16 +406,34 @@
       <div class="clock-label" id="hora-local-label">Hora Argentina</div>
       <div class="clock-value" id="clock">--:--</div>
     </div>
-    <button id="install-btn" class="fullscreen-btn install-btn" aria-label="Instalar app" style="display:none;">📲</button>
+    <div class="settings-menu-wrap" id="settings-menu-wrap" style="display:none;">
+      <button id="settings-btn" class="fullscreen-btn" aria-label="Configuración" aria-haspopup="true" aria-expanded="false">⚙️</button>
+      <div id="settings-dropdown" class="settings-dropdown" style="display:none;">
+        <button id="install-btn" class="settings-option">
+          <span class="settings-option-icon">📲</span>
+          <span class="settings-option-text">
+            <span class="settings-option-title" data-i18n="instalarApp">Instalar app</span>
+            <span class="settings-option-desc" data-i18n="instalarAppDesc">Abre como app, ícono propio</span>
+          </span>
+        </button>
+        <button id="shortcut-btn" class="settings-option">
+          <span class="settings-option-icon">🔖</span>
+          <span class="settings-option-text">
+            <span class="settings-option-title" data-i18n="agregarAcceso">Agregar acceso directo</span>
+            <span class="settings-option-desc" data-i18n="agregarAccesoDesc">Guarda el link en el escritorio</span>
+          </span>
+        </button>
+      </div>
+    </div>
     <button id="fullscreen-btn" class="fullscreen-btn" aria-label="Pantalla completa">⛶</button>
   </div>
 </div>
 
-<div id="ios-install-banner" class="ios-install-banner" style="display:none;">
-  <div class="ios-banner-text" id="ios-banner-text">
-    📲 Para instalar: tocá <b>Compartir</b> (□↑) y luego <b>"Agregar a pantalla de inicio"</b>
+<div id="shortcut-instructions" class="shortcut-instructions" style="display:none;">
+  <div class="shortcut-instructions-box">
+    <button id="shortcut-instructions-close" class="cookie-banner-close" aria-label="Cerrar">✕</button>
+    <div id="shortcut-instructions-text" class="shortcut-instructions-text"></div>
   </div>
-  <button id="ios-banner-close" class="ios-banner-close">✕</button>
 </div>
 
 <div class="search-wrap">
@@ -449,6 +501,12 @@ const I18N = {
     instalarApp: 'Instalar app', pantallaCompleta: 'Pantalla completa', salirPantallaCompleta: 'Salir de pantalla completa',
     volverArriba: 'Volver arriba',
     iosInstallText: '📲 Para instalar: tocá <b>Compartir</b> (□↑) y luego <b>"Agregar a pantalla de inicio"</b>',
+    configuracion: 'Configuración', instalarAppDesc: 'Abre como app, ícono propio',
+    agregarAcceso: 'Agregar acceso directo', agregarAccesoDesc: 'Guarda el link en el escritorio',
+    instalarAppManual: '📲 Para instalar: tocá el menú <b>⋮</b> de tu navegador y elegí <b>"Instalar app"</b> o <b>"Agregar a pantalla de inicio"</b>.',
+    accesoDirectoIOS: '🔖 Tocá <b>Compartir</b> (□↑) y luego <b>"Agregar a pantalla de inicio"</b>. Esto guarda un acceso directo sin instalar la app.',
+    accesoDirectoAndroid: '🔖 Tocá el menú <b>⋮</b> de Chrome → <b>"Más herramientas"</b> → <b>"Crear acceso directo"</b>. Destildá <b>"Abrir como ventana"</b> para que sea solo un acceso directo, sin instalar la app.',
+    accesoDirectoDesktop: '🔖 Agregá esta página a tus favoritos con <b>Ctrl/Cmd + D</b>, o arrastrá el ícono de la barra de direcciones a tu escritorio.',
     tituloMundo: 'títulos mundiales', tituloMundoSingular: 'título mundial',
     pj: 'PJ', g: 'G', e: 'E', p: 'P', dg: 'DG', pts: 'PTS',
   },
@@ -481,6 +539,12 @@ const I18N = {
     instalarApp: 'Install app', pantallaCompleta: 'Fullscreen', salirPantallaCompleta: 'Exit fullscreen',
     volverArriba: 'Back to top',
     iosInstallText: '📲 To install: tap <b>Share</b> (□↑) then <b>"Add to Home Screen"</b>',
+    configuracion: 'Settings', instalarAppDesc: 'Opens as an app, own icon',
+    agregarAcceso: 'Add shortcut', agregarAccesoDesc: 'Saves the link to your home screen',
+    instalarAppManual: '📲 To install: tap your browser\'s <b>⋮</b> menu and choose <b>"Install app"</b> or <b>"Add to Home screen"</b>.',
+    accesoDirectoIOS: '🔖 Tap <b>Share</b> (□↑) then <b>"Add to Home Screen"</b>. This saves a shortcut without installing the app.',
+    accesoDirectoAndroid: '🔖 Tap Chrome\'s <b>⋮</b> menu → <b>"More tools"</b> → <b>"Create shortcut"</b>. Uncheck <b>"Open as window"</b> so it\'s just a shortcut, not an app install.',
+    accesoDirectoDesktop: '🔖 Bookmark this page with <b>Ctrl/Cmd + D</b>, or drag the address bar icon to your desktop.',
     tituloMundo: 'World Cup titles', tituloMundoSingular: 'World Cup title',
     pj: 'P', g: 'W', e: 'D', p: 'L', dg: 'GD', pts: 'PTS',
   },
@@ -513,6 +577,12 @@ const I18N = {
     instalarApp: 'Instalar app', pantallaCompleta: 'Tela cheia', salirPantallaCompleta: 'Sair da tela cheia',
     volverArriba: 'Voltar ao topo',
     iosInstallText: '📲 Para instalar: toque em <b>Compartilhar</b> (□↑) e depois <b>"Adicionar à Tela de Início"</b>',
+    configuracion: 'Configurações', instalarAppDesc: 'Abre como app, ícone próprio',
+    agregarAcceso: 'Adicionar atalho', agregarAccesoDesc: 'Salva o link na tela de início',
+    instalarAppManual: '📲 Para instalar: toque no menu <b>⋮</b> do navegador e escolha <b>"Instalar app"</b> ou <b>"Adicionar à tela de início"</b>.',
+    accesoDirectoIOS: '🔖 Toque em <b>Compartilhar</b> (□↑) e depois <b>"Adicionar à Tela de Início"</b>. Isso salva um atalho sem instalar o app.',
+    accesoDirectoAndroid: '🔖 Toque no menu <b>⋮</b> do Chrome → <b>"Mais ferramentas"</b> → <b>"Criar atalho"</b>. Desmarque <b>"Abrir como janela"</b> para ser apenas um atalho.',
+    accesoDirectoDesktop: '🔖 Adicione esta página aos favoritos com <b>Ctrl/Cmd + D</b>, ou arraste o ícone da barra de endereços para a área de trabalho.',
     tituloMundo: 'títulos mundiais', tituloMundoSingular: 'título mundial',
     pj: 'PJ', g: 'V', e: 'E', p: 'D', dg: 'SG', pts: 'PTS',
   },
@@ -545,6 +615,12 @@ const I18N = {
     instalarApp: 'App installieren', pantallaCompleta: 'Vollbild', salirPantallaCompleta: 'Vollbild beenden',
     volverArriba: 'Nach oben',
     iosInstallText: '📲 Zum Installieren: <b>Teilen</b> (□↑) tippen, dann <b>"Zum Home-Bildschirm"</b>',
+    configuracion: 'Einstellungen', instalarAppDesc: 'Öffnet als App, eigenes Symbol',
+    agregarAcceso: 'Verknüpfung hinzufügen', agregarAccesoDesc: 'Speichert den Link auf dem Startbildschirm',
+    instalarAppManual: '📲 Zum Installieren: Browser-Menü <b>⋮</b> öffnen und <b>"App installieren"</b> oder <b>"Zum Startbildschirm"</b> wählen.',
+    accesoDirectoIOS: '🔖 <b>Teilen</b> (□↑) tippen, dann <b>"Zum Home-Bildschirm"</b>. Das speichert eine Verknüpfung, ohne die App zu installieren.',
+    accesoDirectoAndroid: '🔖 Chrome-Menü <b>⋮</b> → <b>"Weitere Tools"</b> → <b>"Verknüpfung erstellen"</b>. <b>"Als Fenster öffnen"</b> deaktivieren, damit es nur eine Verknüpfung ist.',
+    accesoDirectoDesktop: '🔖 Lesezeichen mit <b>Strg/Cmd + D</b> setzen oder das Adressleisten-Symbol auf den Desktop ziehen.',
     tituloMundo: 'Weltmeistertitel', tituloMundoSingular: 'Weltmeistertitel',
     pj: 'Sp', g: 'S', e: 'U', p: 'N', dg: 'TD', pts: 'Pkt',
   },
@@ -577,6 +653,12 @@ const I18N = {
     instalarApp: 'App installeren', pantallaCompleta: 'Volledig scherm', salirPantallaCompleta: 'Volledig scherm sluiten',
     volverArriba: 'Terug naar boven',
     iosInstallText: '📲 Om te installeren: tik op <b>Delen</b> (□↑) en dan <b>"Voeg toe aan beginscherm"</b>',
+    configuracion: 'Instellingen', instalarAppDesc: 'Opent als app, eigen icoon',
+    agregarAcceso: 'Snelkoppeling toevoegen', agregarAccesoDesc: 'Slaat de link op je beginscherm op',
+    instalarAppManual: '📲 Om te installeren: open het <b>⋮</b> menu van je browser en kies <b>"App installeren"</b> of <b>"Toevoegen aan beginscherm"</b>.',
+    accesoDirectoIOS: '🔖 Tik op <b>Delen</b> (□↑) en dan <b>"Voeg toe aan beginscherm"</b>. Dit slaat een snelkoppeling op zonder de app te installeren.',
+    accesoDirectoAndroid: '🔖 Tik op het <b>⋮</b> menu van Chrome → <b>"Meer tools"</b> → <b>"Snelkoppeling maken"</b>. Schakel <b>"Openen als venster"</b> uit zodat het enkel een snelkoppeling is.',
+    accesoDirectoDesktop: '🔖 Voeg deze pagina toe aan je favorieten met <b>Ctrl/Cmd + D</b>, of sleep het pictogram van de adresbalk naar je bureaublad.',
     tituloMundo: 'wereldtitels', tituloMundoSingular: 'wereldtitel',
     pj: 'G', g: 'W', e: 'G', p: 'V', dg: 'DV', pts: 'Pt',
   },
@@ -1433,7 +1515,11 @@ function applyTranslations() {
   document.getElementById('report-bug-link').textContent = t('reportarProblema');
   document.getElementById('scroll-top-btn').setAttribute('aria-label', t('volverArriba'));
   document.getElementById('install-btn').setAttribute('aria-label', t('instalarApp'));
-  document.getElementById('ios-banner-text').innerHTML = t('iosInstallText');
+  document.querySelector('#install-btn .settings-option-title').textContent = t('instalarApp');
+  document.querySelector('#install-btn .settings-option-desc').textContent = t('instalarAppDesc');
+  document.querySelector('#shortcut-btn .settings-option-title').textContent = t('agregarAcceso');
+  document.querySelector('#shortcut-btn .settings-option-desc').textContent = t('agregarAccesoDesc');
+  document.getElementById('settings-btn').setAttribute('aria-label', t('configuracion'));
   updateFullscreenBtn();
   document.getElementById('lang-select').value = currentLang;
   document.documentElement.lang = currentLang;
@@ -1493,42 +1579,87 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW registration failed:', err));
 }
 
+const settingsMenuWrap = document.getElementById('settings-menu-wrap');
+const settingsBtn = document.getElementById('settings-btn');
+const settingsDropdown = document.getElementById('settings-dropdown');
 const installBtn = document.getElementById('install-btn');
+const shortcutBtn = document.getElementById('shortcut-btn');
+const shortcutInstructions = document.getElementById('shortcut-instructions');
+const shortcutInstructionsText = document.getElementById('shortcut-instructions-text');
+const shortcutInstructionsClose = document.getElementById('shortcut-instructions-close');
 let deferredInstallPrompt = null;
 
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredInstallPrompt = e;
-  installBtn.style.display = 'flex';
-});
-
-installBtn.addEventListener('click', async () => {
-  if (!deferredInstallPrompt) return;
-  deferredInstallPrompt.prompt();
-  const { outcome } = await deferredInstallPrompt.userChoice;
-  if (outcome === 'accepted') installBtn.style.display = 'none';
-  deferredInstallPrompt = null;
-});
-
-window.addEventListener('appinstalled', () => {
-  installBtn.style.display = 'none';
-  deferredInstallPrompt = null;
-});
-
-// iOS Safari has no install prompt API — show manual instructions instead.
 function isIOS() {
   return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 }
 function isStandalone() {
   return window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches;
 }
-if (isIOS() && !isStandalone() && !localStorage.getItem('iosInstallBannerDismissed')) {
-  document.getElementById('ios-install-banner').style.display = 'flex';
+function isAndroid() {
+  return /Android/.test(navigator.userAgent);
 }
-document.getElementById('ios-banner-close').addEventListener('click', () => {
-  document.getElementById('ios-install-banner').style.display = 'none';
-  localStorage.setItem('iosInstallBannerDismissed', '1');
+
+// Mostrar el ícono de configuración salvo que ya esté instalada como app
+if (!isStandalone()) {
+  settingsMenuWrap.style.display = 'block';
+}
+
+settingsBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  const open = settingsDropdown.style.display === 'block';
+  settingsDropdown.style.display = open ? 'none' : 'block';
+  settingsBtn.setAttribute('aria-expanded', String(!open));
 });
+document.addEventListener('click', (e) => {
+  if (!settingsMenuWrap.contains(e.target)) {
+    settingsDropdown.style.display = 'none';
+    settingsBtn.setAttribute('aria-expanded', 'false');
+  }
+});
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+});
+
+installBtn.addEventListener('click', async () => {
+  settingsDropdown.style.display = 'none';
+  if (deferredInstallPrompt) {
+    deferredInstallPrompt.prompt();
+    const { outcome } = await deferredInstallPrompt.userChoice;
+    if (outcome === 'accepted') settingsMenuWrap.style.display = 'none';
+    deferredInstallPrompt = null;
+    return;
+  }
+  // Sin prompt nativo disponible (iOS, o navegador sin soporte) → instrucciones manuales
+  showShortcutInstructions(t('instalarAppManual'));
+});
+
+shortcutBtn.addEventListener('click', () => {
+  settingsDropdown.style.display = 'none';
+  showShortcutInstructions(
+    isIOS() ? t('accesoDirectoIOS') :
+    isAndroid() ? t('accesoDirectoAndroid') :
+    t('accesoDirectoDesktop')
+  );
+});
+
+function showShortcutInstructions(html) {
+  shortcutInstructionsText.innerHTML = html;
+  shortcutInstructions.style.display = 'flex';
+}
+shortcutInstructionsClose.addEventListener('click', () => {
+  shortcutInstructions.style.display = 'none';
+});
+shortcutInstructions.addEventListener('click', (e) => {
+  if (e.target === shortcutInstructions) shortcutInstructions.style.display = 'none';
+});
+
+window.addEventListener('appinstalled', () => {
+  settingsMenuWrap.style.display = 'none';
+  deferredInstallPrompt = null;
+});
+
 
 if ('Notification' in window && Notification.permission === 'default') {
   document.addEventListener('click', function requestPerm() {
