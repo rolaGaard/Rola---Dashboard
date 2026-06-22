@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-22T02:40:31.161047Z",
+  "updated": "2026-06-22T02:50:28.186964Z",
   "matches": {
     "NEW ZEALAND-EGYPT": {
       "homeGoals": 1,
-      "awayGoals": 2,
+      "awayGoals": 3,
       "status": "2H",
-      "elapsed": 80,
+      "elapsed": 90,
       "kickoffUTC": "2026-06-22T01:00:00+00:00",
       "events": [
         {
@@ -54,6 +54,14 @@
           "player": "M. Salah",
           "team": "EGYPT",
           "minute": 67,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Trezeguet",
+          "team": "EGYPT",
+          "minute": 82,
           "extra": null
         }
       ]
