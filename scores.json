@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-22T21:10:32.387354Z",
+  "updated": "2026-06-22T21:20:31.821207Z",
   "matches": {
     "FRANCE-IRAQ": {
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 10,
+      "elapsed": 20,
       "kickoffUTC": "2026-06-22T21:00:00+00:00",
       "events": [
         {
@@ -14,6 +14,14 @@
           "player": "A. Al Ammari",
           "team": "IRAQ",
           "minute": 6,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "K. Mbappe",
+          "team": "FRANCE",
+          "minute": 14,
           "extra": null
         }
       ]
