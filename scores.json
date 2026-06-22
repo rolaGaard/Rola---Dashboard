@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-22T21:40:36.457631Z",
+  "updated": "2026-06-22T21:50:31.039761Z",
   "matches": {
     "FRANCE-IRAQ": {
       "homeGoals": 1,
       "awayGoals": 0,
-      "status": "1H",
-      "elapsed": 40,
+      "status": "HT",
+      "elapsed": 45,
       "kickoffUTC": "2026-06-22T21:00:00+00:00",
       "events": [
         {
