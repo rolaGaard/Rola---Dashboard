@@ -1,6 +1,23 @@
 {
-  "updated": "2026-06-22T17:00:59.841042Z",
+  "updated": "2026-06-22T17:10:41.078285Z",
   "matches": {
+    "ARGENTINA-AUSTRIA": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "1H",
+      "elapsed": 9,
+      "kickoffUTC": "2026-06-22T17:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Missed Penalty",
+          "player": "L. Messi",
+          "team": "ARGENTINA",
+          "minute": 9,
+          "extra": null
+        }
+      ]
+    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -2168,13 +2185,6 @@
           "extra": null
         }
       ]
-    },
-    "ARGENTINA-AUSTRIA": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null,
-      "kickoffUTC": "2026-06-22T17:00:00+00:00"
     },
     "FRANCE-IRAQ": {
       "homeGoals": null,
