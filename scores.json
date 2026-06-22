@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-22T18:30:55.930093Z",
+  "updated": "2026-06-22T18:40:39.596642Z",
   "matches": {
     "ARGENTINA-AUSTRIA": {
       "homeGoals": 1,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 66,
+      "elapsed": 76,
       "kickoffUTC": "2026-06-22T17:00:00+00:00",
       "events": [
         {
@@ -30,6 +30,14 @@
           "player": "S. Posch",
           "team": "AUSTRIA",
           "minute": 40,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "F. Medina",
+          "team": "ARGENTINA",
+          "minute": 76,
           "extra": null
         }
       ]
