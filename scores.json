@@ -1,79 +1,6 @@
 {
-  "updated": "2026-06-22T00:01:22.638943Z",
+  "updated": "2026-06-22T00:10:28.538093Z",
   "matches": {
-    "URUGUAY-CAPE VERDE": {
-      "homeGoals": 2,
-      "awayGoals": 2,
-      "status": "2H",
-      "elapsed": 90,
-      "kickoffUTC": "2026-06-21T22:00:00+00:00",
-      "events": [
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "S. Lopes Cabral",
-          "team": "CAPE VERDE",
-          "minute": 5,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "R. Bentancur",
-          "team": "URUGUAY",
-          "minute": 20,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "K. Lenini",
-          "team": "CAPE VERDE",
-          "minute": 21,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "M. Araujo",
-          "team": "URUGUAY",
-          "minute": 44,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "A. Canobbio",
-          "team": "URUGUAY",
-          "minute": 45,
-          "extra": 6
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "M. Olivera",
-          "team": "URUGUAY",
-          "minute": 58,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "H. Varela",
-          "team": "CAPE VERDE",
-          "minute": 61,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "D. Borges",
-          "team": "CAPE VERDE",
-          "minute": 90,
-          "extra": 3
-        }
-      ]
-    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -356,7 +283,48 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-13T19:00:00+00:00",
-      "events": []
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Mahmud Abunada",
+          "team": "QATAR",
+          "minute": 16,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Penalty",
+          "player": "B. Embolo",
+          "team": "SWITZERLAND",
+          "minute": 17,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Jassem Gaber Abdulsallam",
+          "team": "QATAR",
+          "minute": 23,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Denis Zakaria",
+          "team": "SWITZERLAND",
+          "minute": 42,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Own Goal",
+          "player": "M. Muheim",
+          "team": "QATAR",
+          "minute": 90,
+          "extra": null
+        }
+      ]
     },
     "BRAZIL-MOROCCO": {
       "homeGoals": 1,
@@ -2068,6 +2036,79 @@
           "team": "BELGIUM",
           "minute": 66,
           "extra": null
+        }
+      ]
+    },
+    "URUGUAY-CAPE VERDE": {
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-06-21T22:00:00+00:00",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "S. Lopes Cabral",
+          "team": "CAPE VERDE",
+          "minute": 5,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "R. Bentancur",
+          "team": "URUGUAY",
+          "minute": 20,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "K. Lenini",
+          "team": "CAPE VERDE",
+          "minute": 21,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Araujo",
+          "team": "URUGUAY",
+          "minute": 44,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Canobbio",
+          "team": "URUGUAY",
+          "minute": 45,
+          "extra": 6
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "M. Olivera",
+          "team": "URUGUAY",
+          "minute": 58,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "H. Varela",
+          "team": "CAPE VERDE",
+          "minute": 61,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "D. Borges",
+          "team": "CAPE VERDE",
+          "minute": 90,
+          "extra": 3
         }
       ]
     },
