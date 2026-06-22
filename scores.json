@@ -1,13 +1,38 @@
 {
-  "updated": "2026-06-22T01:10:29.814095Z",
+  "updated": "2026-06-22T01:20:27.124836Z",
   "matches": {
     "NEW ZEALAND-EGYPT": {
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 10,
+      "elapsed": 21,
       "kickoffUTC": "2026-06-22T01:00:00+00:00",
-      "events": []
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "F. Surman",
+          "team": "NEW ZEALAND",
+          "minute": 15,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "M. Lasheen",
+          "team": "EGYPT",
+          "minute": 17,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "S. Singh",
+          "team": "NEW ZEALAND",
+          "minute": 20,
+          "extra": null
+        }
+      ]
     },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
