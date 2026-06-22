@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-22T17:30:45.597772Z",
+  "updated": "2026-06-22T17:40:35.925082Z",
   "matches": {
     "ARGENTINA-AUSTRIA": {
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 30,
+      "elapsed": 40,
       "kickoffUTC": "2026-06-22T17:00:00+00:00",
       "events": [
         {
@@ -14,6 +14,14 @@
           "player": "L. Messi",
           "team": "ARGENTINA",
           "minute": 9,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "L. Messi",
+          "team": "ARGENTINA",
+          "minute": 38,
           "extra": null
         }
       ]
