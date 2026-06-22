@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22T05:50:29.831221Z",
+  "updated": "2026-06-22T06:01:13.983176Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -1861,7 +1861,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "J. Alcivar",
+          "player": "Jordy Alcivar",
           "team": "ECUADOR",
           "minute": 38,
           "extra": null
@@ -1869,7 +1869,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "L. Bacuna",
+          "player": "Leandro Bacuna",
           "team": "CURACAO",
           "minute": 39,
           "extra": null
@@ -1877,7 +1877,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "J. Bacuna",
+          "player": "Juninho Bacuna",
           "team": "CURACAO",
           "minute": 53,
           "extra": null
@@ -1885,7 +1885,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "L. Comenencia",
+          "player": "Livano Comenencia",
           "team": "CURACAO",
           "minute": 56,
           "extra": null
@@ -1893,7 +1893,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "J. Gaari",
+          "player": "Jurien Gaari",
           "team": "CURACAO",
           "minute": 75,
           "extra": null
@@ -1901,7 +1901,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "G. Kastaneer",
+          "player": "Gervane Kastaneer",
           "team": "CURACAO",
           "minute": 90,
           "extra": 1
@@ -1918,7 +1918,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "D. Kamada",
+          "player": "Daichi Kamada",
           "team": "JAPAN",
           "minute": 4,
           "extra": null
@@ -1926,7 +1926,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "A. Ueda",
+          "player": "Ayase Ueda",
           "team": "JAPAN",
           "minute": 31,
           "extra": null
@@ -1934,7 +1934,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "J. Ito",
+          "player": "Junya Ito",
           "team": "JAPAN",
           "minute": 69,
           "extra": null
@@ -1942,7 +1942,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "A. Ueda",
+          "player": "Ayase Ueda",
           "team": "JAPAN",
           "minute": 83,
           "extra": null
