@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-22T02:20:32.996854Z",
+  "updated": "2026-06-22T02:30:43.120361Z",
   "matches": {
     "NEW ZEALAND-EGYPT": {
       "homeGoals": 1,
-      "awayGoals": 1,
+      "awayGoals": 2,
       "status": "2H",
-      "elapsed": 60,
+      "elapsed": 70,
       "kickoffUTC": "2026-06-22T01:00:00+00:00",
       "events": [
         {
@@ -46,6 +46,14 @@
           "player": "M. Ziko",
           "team": "EGYPT",
           "minute": 58,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Salah",
+          "team": "EGYPT",
+          "minute": 67,
           "extra": null
         }
       ]
