@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-22T17:40:35.925082Z",
+  "updated": "2026-06-22T17:50:31.480034Z",
   "matches": {
     "ARGENTINA-AUSTRIA": {
       "homeGoals": 1,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 40,
+      "elapsed": 45,
       "kickoffUTC": "2026-06-22T17:00:00+00:00",
       "events": [
         {
@@ -22,6 +22,14 @@
           "player": "L. Messi",
           "team": "ARGENTINA",
           "minute": 38,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "S. Posch",
+          "team": "AUSTRIA",
+          "minute": 40,
           "extra": null
         }
       ]
