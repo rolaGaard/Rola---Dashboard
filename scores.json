@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22T04:20:32.864002Z",
+  "updated": "2026-06-22T04:30:46.485498Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -1967,7 +1967,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "M. Oyarzabal",
+          "player": "Mikel Oyarzabal",
           "team": "SPAIN",
           "minute": 21,
           "extra": null
@@ -1975,7 +1975,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "M. Oyarzabal",
+          "player": "Mikel Oyarzabal",
           "team": "SPAIN",
           "minute": 24,
           "extra": null
@@ -1983,7 +1983,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "S. Al Dawsari",
+          "player": "Salem Al-Dawsari",
           "team": "SAUDI ARABIA",
           "minute": 30,
           "extra": null
@@ -1991,7 +1991,7 @@
         {
           "type": "Goal",
           "detail": "Own Goal",
-          "player": "H. Tambakti",
+          "player": "Hassan Tambakti",
           "team": "SPAIN",
           "minute": 49,
           "extra": null
@@ -1999,7 +1999,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "M. Kanno",
+          "player": "Mohamed Kanno",
           "team": "SAUDI ARABIA",
           "minute": 60,
           "extra": null
@@ -2016,7 +2016,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "R. Lukaku",
+          "player": "Romelu Lukaku",
           "team": "BELGIUM",
           "minute": 3,
           "extra": null
@@ -2024,7 +2024,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "S. Ezatolahi",
+          "player": "Saeid Ezatolahi",
           "team": "IRAN",
           "minute": 33,
           "extra": null
@@ -2032,7 +2032,7 @@
         {
           "type": "Card",
           "detail": "Red Card",
-          "player": "N. Ngoy",
+          "player": "Nathan Ngoy",
           "team": "BELGIUM",
           "minute": 66,
           "extra": null
