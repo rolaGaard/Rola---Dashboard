@@ -1,71 +1,6 @@
 {
-  "updated": "2026-06-22T03:01:19.237202Z",
+  "updated": "2026-06-22T03:10:33.272609Z",
   "matches": {
-    "NEW ZEALAND-EGYPT": {
-      "homeGoals": 1,
-      "awayGoals": 3,
-      "status": "2H",
-      "elapsed": 90,
-      "kickoffUTC": "2026-06-22T01:00:00+00:00",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "F. Surman",
-          "team": "NEW ZEALAND",
-          "minute": 15,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "M. Lasheen",
-          "team": "EGYPT",
-          "minute": 17,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "S. Singh",
-          "team": "NEW ZEALAND",
-          "minute": 20,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "C. McCowatt",
-          "team": "NEW ZEALAND",
-          "minute": 34,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "M. Ziko",
-          "team": "EGYPT",
-          "minute": 58,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "M. Salah",
-          "team": "EGYPT",
-          "minute": 67,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "Trezeguet",
-          "team": "EGYPT",
-          "minute": 82,
-          "extra": null
-        }
-      ]
-    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -2174,6 +2109,71 @@
           "team": "CAPE VERDE",
           "minute": 90,
           "extra": 3
+        }
+      ]
+    },
+    "NEW ZEALAND-EGYPT": {
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-06-22T01:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "F. Surman",
+          "team": "NEW ZEALAND",
+          "minute": 15,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "M. Lasheen",
+          "team": "EGYPT",
+          "minute": 17,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "S. Singh",
+          "team": "NEW ZEALAND",
+          "minute": 20,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "C. McCowatt",
+          "team": "NEW ZEALAND",
+          "minute": 34,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Ziko",
+          "team": "EGYPT",
+          "minute": 58,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Salah",
+          "team": "EGYPT",
+          "minute": 67,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Trezeguet",
+          "team": "EGYPT",
+          "minute": 82,
+          "extra": null
         }
       ]
     },
