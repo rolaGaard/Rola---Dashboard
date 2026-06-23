@@ -43,7 +43,7 @@
   .clock-label { color:#94a3b8; font-size:11px; text-align:right; }
   .clock-value { color:#FFD700; font-size:26px; font-weight:700; font-variant-numeric:tabular-nums; text-align:right; }
   .stats-bar {
-    display:grid; grid-template-columns:repeat(6,1fr); gap:10px; padding:20px 24px 0;
+    display:grid; grid-template-columns:repeat(7,1fr); gap:10px; padding:20px 24px 0;
   }
   .stat-card {
     background:#fff; border-radius:12px; padding:14px 10px; text-align:center;
@@ -54,12 +54,14 @@
   .stat-card.active .stat-num, .stat-card.active .stat-label { color:#FFD700; }
   .stat-card[data-filter="fixture"].active { background:#FFD700; box-shadow:0 0 0 2px #003087; }
   .stat-card[data-filter="fixture"].active .stat-label { color:#0a0a0a; }
+  .stat-card[data-filter="paises"].active { background:#1a1a1a; box-shadow:0 0 0 2px #FFD700; }
+  .stat-card[data-filter="paises"].active .stat-label { color:#FFD700; }
   .stat-icon { font-size:20px; }
   .fixture-icon { font-size:30px; margin:4px 0; }
   .stat-num { font-size:22px; font-weight:700; color:#1a1a2e; }
   .stat-label { font-size:13px; font-weight:700; color:#64748b; }
   @media (max-width:760px) {
-    .stats-bar { grid-template-columns:repeat(3,1fr); }
+    .stats-bar { grid-template-columns:repeat(4,1fr); }
   }
   .matches-container { padding:16px 24px 0; }
   .group-label { color:#fff; font-size:13px; font-weight:700; margin-bottom:8px; opacity:0.85; }
@@ -230,6 +232,39 @@
   }
 
   .bracket-view { padding:20px 16px 0; }
+
+  .countries-view { padding:20px 24px 0; }
+  .cl-header {
+    color:#fff; font-size:clamp(16px,2vw,22px); font-weight:700; text-align:center;
+    margin-bottom:16px;
+  }
+  .cl-columns { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .cl-col {
+    background:#fff; border-radius:14px; padding:16px; box-shadow:0 1px 3px rgba(0,0,0,0.08);
+  }
+  .cl-col-title {
+    font-size:13px; font-weight:800; padding-bottom:10px; margin-bottom:8px;
+    border-bottom:2px solid #f1f5f9; display:flex; align-items:center; gap:6px;
+  }
+  .cl-col-in { color:#1DB954; }
+  .cl-col-out { color:#CC0000; }
+  .cl-count { color:#94a3b8; font-weight:600; }
+  .cl-list { display:flex; flex-direction:column; gap:1px; max-height:480px; overflow-y:auto; }
+  .cl-row {
+    display:flex; align-items:center; gap:8px; padding:7px 6px; border-radius:6px;
+    font-size:13px; color:#1a1a2e;
+  }
+  .cl-row.team-clickable:hover { background:#f1f5f9; }
+  .cl-row.cl-out { color:#64748b; }
+  .cl-flag { font-size:16px; flex-shrink:0; }
+  .cl-disclaimer {
+    color:#94a3b8; font-size:11px; font-style:italic; text-align:center;
+    margin-top:14px; padding:0 16px;
+  }
+  @media (max-width:700px) {
+    .cl-columns { grid-template-columns:1fr; }
+    .cl-list { max-height:300px; }
+  }
   .bracket-layout {
     display:grid; grid-template-columns:1fr 3fr 1fr; gap:10px;
     align-items:start; width:100%;
@@ -566,11 +601,14 @@
   <button class="stat-card" data-filter="live"><div class="stat-icon">🔴</div><div class="stat-num" id="stat-live">0</div><div class="stat-label" id="label-live">En vivo</div></button>
   <button class="stat-card" data-filter="scheduled"><div class="stat-icon">🕐</div><div class="stat-num" id="stat-scheduled">0</div><div class="stat-label" id="label-scheduled">Próximos</div></button>
   <button class="stat-card" data-filter="fixture"><div class="stat-icon fixture-icon">🏆</div><div class="stat-label" id="label-fixture">Fixture</div></button>
+  <button class="stat-card" data-filter="paises"><div class="stat-icon">🚫</div><div class="stat-num" style="visibility:hidden;">0</div><div class="stat-label" id="label-paises">Países Fuera</div></button>
 </div>
 
 <div class="matches-container" id="matches"></div>
 
 <div class="bracket-view" id="bracket-view" style="display:none;"></div>
+
+<div class="countries-view" id="countries-view" style="display:none;"></div>
 
 <div class="footer" id="footer">Última actualización: --:--</div>
 
@@ -591,7 +629,7 @@ const I18N = {
     searchPlaceholder: 'Buscar país o código FIFA (ej: Argentina, ARG...)',
     horaLocal: 'Hora Local',
     filterAll: 'Todos', filterFinished: 'Jugados', filterToday: 'Hoy',
-    filterLive: 'En vivo', filterScheduled: 'Próximos', filterFixture: 'Fixture',
+    filterLive: 'En vivo', filterScheduled: 'Próximos', filterFixture: 'Fixture', filterPaises: 'Países Fuera',
     grupo: 'GRUPO',
     finalizado: 'FINALIZADO', enVivo: 'EN VIVO', primerTiempo: '1ER TIEMPO',
     segundoTiempo: '2DO TIEMPO', entretiempo: 'ENTRETIEMPO', tiempoExtra: 'TIEMPO EXTRA',
@@ -625,6 +663,8 @@ const I18N = {
     regionLabel: 'Ubicación', mundialesParticipados: 'Mundiales jugados', mundialesGanados: 'Mundiales ganados',
     datosAproximados: 'Datos aproximados. Fuente oficial: FIFA.', datosNoDisponibles: 'Datos no disponibles para este equipo.',
     plantilla: 'Plantilla', plantillaNoDisponible: 'Plantilla no disponible por el momento.',
+    paisesTitulo: 'Selecciones del Mundial 2026', paisesCompiten: 'Países que compiten', paisesAfuera: 'Quedaron fuera de la Copa',
+    paisesDisclaimer: 'Lista no exhaustiva ni verificada de forma oficial. Para el listado completo y definitivo, consultá FIFA.com.',
     pj: 'PJ', g: 'G', e: 'E', p: 'P', dg: 'DG', pts: 'PTS',
   },
   en: {
@@ -632,7 +672,7 @@ const I18N = {
     searchPlaceholder: 'Search country or FIFA code (e.g. Argentina, ARG...)',
     horaLocal: 'Local Time',
     filterAll: 'All', filterFinished: 'Finished', filterToday: 'Today',
-    filterLive: 'Live', filterScheduled: 'Upcoming', filterFixture: 'Fixture',
+    filterLive: 'Live', filterScheduled: 'Upcoming', filterFixture: 'Fixture', filterPaises: 'Countries Out',
     grupo: 'GROUP',
     finalizado: 'FINISHED', enVivo: 'LIVE', primerTiempo: '1ST HALF',
     segundoTiempo: '2ND HALF', entretiempo: 'HALFTIME', tiempoExtra: 'EXTRA TIME',
@@ -666,6 +706,8 @@ const I18N = {
     regionLabel: 'Location', mundialesParticipados: 'World Cup appearances', mundialesGanados: 'World Cup titles',
     datosAproximados: 'Approximate data. Official source: FIFA.', datosNoDisponibles: 'No data available for this team.',
     plantilla: 'Squad', plantillaNoDisponible: 'Squad not available yet.',
+    paisesTitulo: '2026 World Cup teams', paisesCompiten: 'Teams competing', paisesAfuera: 'Missed out on the Cup',
+    paisesDisclaimer: 'Not an exhaustive or officially verified list. For the complete, definitive list, check FIFA.com.',
     pj: 'P', g: 'W', e: 'D', p: 'L', dg: 'GD', pts: 'PTS',
   },
   pt: {
@@ -673,7 +715,7 @@ const I18N = {
     searchPlaceholder: 'Buscar país ou código FIFA (ex: Argentina, ARG...)',
     horaLocal: 'Horário Local',
     filterAll: 'Todos', filterFinished: 'Encerrados', filterToday: 'Hoje',
-    filterLive: 'Em jogo', filterScheduled: 'Próximos', filterFixture: 'Tabela',
+    filterLive: 'Em jogo', filterScheduled: 'Próximos', filterFixture: 'Tabela', filterPaises: 'Fora da Copa',
     grupo: 'GRUPO',
     finalizado: 'ENCERRADO', enVivo: 'EM JOGO', primerTiempo: '1º TEMPO',
     segundoTiempo: '2º TEMPO', entretiempo: 'INTERVALO', tiempoExtra: 'PRORROGAÇÃO',
@@ -707,6 +749,8 @@ const I18N = {
     regionLabel: 'Localização', mundialesParticipados: 'Copas do Mundo disputadas', mundialesGanados: 'Copas do Mundo conquistadas',
     datosAproximados: 'Dados aproximados. Fonte oficial: FIFA.', datosNoDisponibles: 'Dados não disponíveis para esta seleção.',
     plantilla: 'Elenco', plantillaNoDisponible: 'Elenco não disponível por enquanto.',
+    paisesTitulo: 'Seleções da Copa do Mundo 2026', paisesCompiten: 'Países que disputam', paisesAfuera: 'Ficaram de fora da Copa',
+    paisesDisclaimer: 'Lista não exaustiva nem verificada oficialmente. Para a lista completa e definitiva, consulte a FIFA.com.',
     pj: 'PJ', g: 'V', e: 'E', p: 'D', dg: 'SG', pts: 'PTS',
   },
   de: {
@@ -714,7 +758,7 @@ const I18N = {
     searchPlaceholder: 'Land oder FIFA-Code suchen (z.B. Argentinien, ARG...)',
     horaLocal: 'Ortszeit',
     filterAll: 'Alle', filterFinished: 'Beendet', filterToday: 'Heute',
-    filterLive: 'Live', filterScheduled: 'Kommend', filterFixture: 'Turnierplan',
+    filterLive: 'Live', filterScheduled: 'Kommend', filterFixture: 'Turnierplan', filterPaises: 'Ausgeschiedene',
     grupo: 'GRUPPE',
     finalizado: 'BEENDET', enVivo: 'LIVE', primerTiempo: '1. HALBZEIT',
     segundoTiempo: '2. HALBZEIT', entretiempo: 'HALBZEITPAUSE', tiempoExtra: 'VERLÄNGERUNG',
@@ -748,6 +792,8 @@ const I18N = {
     regionLabel: 'Lage', mundialesParticipados: 'WM-Teilnahmen', mundialesGanados: 'WM-Titel',
     datosAproximados: 'Ungefähre Angaben. Offizielle Quelle: FIFA.', datosNoDisponibles: 'Keine Daten für dieses Team verfügbar.',
     plantilla: 'Kader', plantillaNoDisponible: 'Kader derzeit nicht verfügbar.',
+    paisesTitulo: 'Teams der WM 2026', paisesCompiten: 'Teilnehmende Länder', paisesAfuera: 'Verpasste Qualifikation',
+    paisesDisclaimer: 'Keine vollständige oder offiziell geprüfte Liste. Die vollständige, endgültige Liste findest du auf FIFA.com.',
     pj: 'Sp', g: 'S', e: 'U', p: 'N', dg: 'TD', pts: 'Pkt',
   },
   nl: {
@@ -755,7 +801,7 @@ const I18N = {
     searchPlaceholder: 'Zoek land of FIFA-code (bijv. Argentinië, ARG...)',
     horaLocal: 'Lokale tijd',
     filterAll: 'Alle', filterFinished: 'Gespeeld', filterToday: 'Vandaag',
-    filterLive: 'Live', filterScheduled: 'Aankomend', filterFixture: 'Schema',
+    filterLive: 'Live', filterScheduled: 'Aankomend', filterFixture: 'Schema', filterPaises: 'Niet Gekwalificeerd',
     grupo: 'GROEP',
     finalizado: 'AFGELOPEN', enVivo: 'LIVE', primerTiempo: '1E HELFT',
     segundoTiempo: '2E HELFT', entretiempo: 'RUST', tiempoExtra: 'VERLENGING',
@@ -789,6 +835,8 @@ const I18N = {
     regionLabel: 'Locatie', mundialesParticipados: 'WK-deelnames', mundialesGanados: 'WK-titels',
     datosAproximados: 'Geschatte gegevens. Officiële bron: FIFA.', datosNoDisponibles: 'Geen gegevens beschikbaar voor dit land.',
     plantilla: 'Selectie', plantillaNoDisponible: 'Selectie momenteel niet beschikbaar.',
+    paisesTitulo: 'WK 2026-landen', paisesCompiten: 'Deelnemende landen', paisesAfuera: 'Niet gekwalificeerd',
+    paisesDisclaimer: 'Geen volledige of officieel gecontroleerde lijst. Voor de volledige, definitieve lijst, raadpleeg FIFA.com.',
     pj: 'G', g: 'W', e: 'G', p: 'V', dg: 'DV', pts: 'Pt',
   },
 };
@@ -938,6 +986,29 @@ const REGION_NAMES = {
         NAF:'Noord-Afrika', SSA:'Sub-Saharaans Afrika', WAS:'West-Azië / Midden-Oosten',
         CAS:'Centraal-Azië', EAS:'Oost-Azië', OCE:'Oceanië', TUR:'Europa en Azië (transcontinentaal)' },
 };
+
+// ── Selecciones que NO clasificaron al Mundial 2026 ─────────────────────
+// IMPORTANTE: esta lista es de referencia, armada con información disponible
+// al momento de escribir el código — no está garantizado que sea exhaustiva
+// ni 100% exacta (las eliminatorias de algunas confederaciones, repechajes,
+// etc. pueden tener matices). Es fácil de editar: cada línea es un país.
+// Para el listado oficial y definitivo, la fuente de verdad es FIFA.com.
+const NOT_QUALIFIED = [
+  {name:'Italy', flag:'🇮🇹'},
+  {name:'Chile', flag:'🇨🇱'},
+  {name:'Peru', flag:'🇵🇪'},
+  {name:'Venezuela', flag:'🇻🇪'},
+  {name:'Bolivia', flag:'🇧🇴'},
+  {name:'Nigeria', flag:'🇳🇬'},
+  {name:'Cameroon', flag:'🇨🇲'},
+  {name:'Costa Rica', flag:'🇨🇷'},
+  {name:'China', flag:'🇨🇳'},
+  {name:'Wales', flag:'🏴'},
+  {name:'Denmark', flag:'🇩🇰'},
+  {name:'Poland', flag:'🇵🇱'},
+  {name:'Ukraine', flag:'🇺🇦'},
+  {name:'Greece', flag:'🇬🇷'},
+];
 
 // Official FIFA 3-letter codes for quick search (e.g. "MEX" finds Mexico)
 const COUNTRY_CODES = {
@@ -1382,6 +1453,17 @@ function buildGroupGroupedHtml(sortedMatches) {
 function render() {
   const todayAR = toARDateStr(new Date().toISOString());
 
+  if (currentFilter === 'paises') {
+    document.querySelector('.search-wrap').style.display = 'none';
+    document.getElementById('matches').style.display = 'none';
+    document.getElementById('bracket-view').style.display = 'none';
+    document.getElementById('countries-view').style.display = '';
+    renderCountriesList();
+    updateCounters();
+    return;
+  }
+  document.getElementById('countries-view').style.display = 'none';
+
   if (currentFilter === 'fixture') {
     document.querySelector('.search-wrap').style.display = 'none';
     document.getElementById('matches').style.display = 'none';
@@ -1655,6 +1737,39 @@ function buildMobileStage(count, label) {
   return html;
 }
 
+function renderCountriesList() {
+  const competing = Object.keys(INTL_NAMES)
+    .map(code => ({ code, name: esName(code) }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  const notQualified = NOT_QUALIFIED.slice().sort((a, b) => a.name.localeCompare(b.name));
+
+  const leftRows = competing.map(c =>
+    '<div class="cl-row team-clickable" onclick="openCountryInfo(\'' + c.code.replace(/'/g, "\\'") + '\')">' +
+      '<span class="cl-flag">' + flag(c.code) + '</span><span>' + c.name + '</span>' +
+    '</div>'
+  ).join('');
+
+  const rightRows = notQualified.map(c =>
+    '<div class="cl-row cl-out">' +
+      '<span class="cl-flag">' + c.flag + '</span><span>' + c.name + '</span>' +
+    '</div>'
+  ).join('');
+
+  document.getElementById('countries-view').innerHTML =
+    '<div class="cl-header">🚪 ' + t('paisesTitulo') + '</div>' +
+    '<div class="cl-columns">' +
+      '<div class="cl-col">' +
+        '<div class="cl-col-title cl-col-in">✅ ' + t('paisesCompiten') + ' <span class="cl-count">(' + competing.length + ')</span></div>' +
+        '<div class="cl-list">' + leftRows + '</div>' +
+      '</div>' +
+      '<div class="cl-col">' +
+        '<div class="cl-col-title cl-col-out">🚪 ' + t('paisesAfuera') + ' <span class="cl-count">(' + notQualified.length + ')</span></div>' +
+        '<div class="cl-list">' + rightRows + '</div>' +
+      '</div>' +
+    '</div>' +
+    '<div class="cl-disclaimer">' + t('paisesDisclaimer') + '</div>';
+}
+
 function renderBracket() {
   const allGroups = ['A','B','C','D','E','F','G','H','I','J','K','L'];
   const leftGroups = ['A','B','C','D','E','F'];
@@ -1749,6 +1864,7 @@ function applyTranslations() {
   document.getElementById('label-live').textContent = t('filterLive');
   document.getElementById('label-scheduled').textContent = t('filterScheduled');
   document.getElementById('label-fixture').textContent = t('filterFixture');
+  document.getElementById('label-paises').textContent = t('filterPaises');
   document.getElementById('report-bug-link').textContent = t('reportarProblema');
   document.getElementById('scroll-top-btn').setAttribute('aria-label', t('volverArriba'));
   document.getElementById('install-btn').setAttribute('aria-label', t('instalarApp'));
