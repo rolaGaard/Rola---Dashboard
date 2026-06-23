@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-23T00:10:34.177740Z",
+  "updated": "2026-06-23T00:20:32.066936Z",
   "matches": {
     "NORWAY-SENEGAL": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 10,
+      "elapsed": 21,
       "kickoffUTC": "2026-06-23T00:00:00+00:00",
       "events": []
     },
@@ -2449,7 +2449,7 @@
       "homeGoals": 2,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 55,
+      "elapsed": 65,
       "kickoffUTC": "2026-06-22T21:00:00+00:00",
       "events": [
         {
