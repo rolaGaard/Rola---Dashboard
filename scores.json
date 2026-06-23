@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T06:01:14.702057Z",
+  "updated": "2026-06-23T06:10:28.856091Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -121,7 +121,64 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-12T19:00:00+00:00",
-      "events": []
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Alistair Johnston",
+          "team": "CANADA",
+          "minute": 11,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "J. Lukic",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 21,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Jovo Luki\u0107",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 45,
+          "extra": 1
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Ermedin Demirovi\u0107",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 45,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Luc De Fougerolles",
+          "team": "CANADA",
+          "minute": 53,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "C. Larin",
+          "team": "CANADA",
+          "minute": 78,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Nikola Kati\u0107",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 90,
+          "extra": 3
+        }
+      ]
     },
     "USA-PARAGUAY": {
       "homeGoals": 4,
