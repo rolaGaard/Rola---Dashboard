@@ -1,55 +1,6 @@
 {
-  "updated": "2026-06-23T04:50:33.415828Z",
+  "updated": "2026-06-23T05:01:01.428895Z",
   "matches": {
-    "JORDAN-ALGERIA": {
-      "homeGoals": 1,
-      "awayGoals": 2,
-      "status": "2H",
-      "elapsed": 88,
-      "kickoffUTC": "2026-06-23T03:00:00+00:00",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "N. Al Rashdan",
-          "team": "JORDAN",
-          "minute": 36,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "R. Zerrouki",
-          "team": "ALGERIA",
-          "minute": 44,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "H. Abu Dahab",
-          "team": "JORDAN",
-          "minute": 64,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "N. Benbouali",
-          "team": "ALGERIA",
-          "minute": 69,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "A. Gouiri",
-          "team": "ALGERIA",
-          "minute": 82,
-          "extra": null
-        }
-      ]
-    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -2370,6 +2321,55 @@
           "team": "SENEGAL",
           "minute": 90,
           "extra": 3
+        }
+      ]
+    },
+    "JORDAN-ALGERIA": {
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-06-23T03:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "N. Al Rashdan",
+          "team": "JORDAN",
+          "minute": 36,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "R. Zerrouki",
+          "team": "ALGERIA",
+          "minute": 44,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "H. Abu Dahab",
+          "team": "JORDAN",
+          "minute": 64,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "N. Benbouali",
+          "team": "ALGERIA",
+          "minute": 69,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Gouiri",
+          "team": "ALGERIA",
+          "minute": 82,
+          "extra": null
         }
       ]
     },
