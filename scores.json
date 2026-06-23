@@ -1,13 +1,22 @@
 {
-  "updated": "2026-06-23T03:30:47.425564Z",
+  "updated": "2026-06-23T03:40:28.479451Z",
   "matches": {
     "JORDAN-ALGERIA": {
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 30,
+      "elapsed": 40,
       "kickoffUTC": "2026-06-23T03:00:00+00:00",
-      "events": []
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "N. Al Rashdan",
+          "team": "JORDAN",
+          "minute": 36,
+          "extra": null
+        }
+      ]
     },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
