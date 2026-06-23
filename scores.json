@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-23T17:10:36.673939Z",
+  "updated": "2026-06-23T17:20:34.322749Z",
   "matches": {
     "PORTUGAL-UZBEKISTAN": {
-      "homeGoals": 1,
+      "homeGoals": 2,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 10,
+      "elapsed": 20,
       "kickoffUTC": "2026-06-23T17:00:00+00:00",
       "events": [
         {
@@ -14,6 +14,22 @@
           "player": "C. Ronaldo",
           "team": "PORTUGAL",
           "minute": 6,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "O. Khamrobekov",
+          "team": "UZBEKISTAN",
+          "minute": 14,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "N. Mendes",
+          "team": "PORTUGAL",
+          "minute": 17,
           "extra": null
         }
       ]
