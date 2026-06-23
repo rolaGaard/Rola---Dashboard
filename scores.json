@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-23T00:20:32.066936Z",
+  "updated": "2026-06-23T00:30:46.972734Z",
   "matches": {
     "NORWAY-SENEGAL": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 21,
+      "elapsed": 30,
       "kickoffUTC": "2026-06-23T00:00:00+00:00",
       "events": []
     },
@@ -2446,10 +2446,10 @@
       "kickoffUTC": "2026-06-28T02:00:00+00:00"
     },
     "FRANCE-IRAQ": {
-      "homeGoals": 2,
+      "homeGoals": 3,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 65,
+      "elapsed": 75,
       "kickoffUTC": "2026-06-22T21:00:00+00:00",
       "events": [
         {
@@ -2474,6 +2474,14 @@
           "player": "Kylian Mbapp\u00e9",
           "team": "FRANCE",
           "minute": 54,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Ousmane Demb\u00e9l\u00e9",
+          "team": "FRANCE",
+          "minute": 66,
           "extra": null
         }
       ]
