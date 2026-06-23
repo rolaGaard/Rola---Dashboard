@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-23T01:10:32.391789Z",
+  "updated": "2026-06-23T01:20:32.944195Z",
   "matches": {
     "NORWAY-SENEGAL": {
-      "homeGoals": 2,
-      "awayGoals": 0,
+      "homeGoals": 3,
+      "awayGoals": 1,
       "status": "2H",
-      "elapsed": 51,
+      "elapsed": 61,
       "kickoffUTC": "2026-06-23T00:00:00+00:00",
       "events": [
         {
@@ -22,6 +22,22 @@
           "player": "E. Haaland",
           "team": "NORWAY",
           "minute": 48,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "I. Sarr",
+          "team": "SENEGAL",
+          "minute": 53,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "E. Haaland",
+          "team": "NORWAY",
+          "minute": 58,
           "extra": null
         }
       ]
