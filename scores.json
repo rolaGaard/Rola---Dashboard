@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-23T16:50:36.999982Z",
+  "updated": "2026-06-23T17:01:14.484115Z",
   "matches": {
+    "PORTUGAL-UZBEKISTAN": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "1H",
+      "elapsed": 1,
+      "kickoffUTC": "2026-06-23T17:00:00+00:00",
+      "events": []
+    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -2380,13 +2388,6 @@
           "extra": null
         }
       ]
-    },
-    "PORTUGAL-UZBEKISTAN": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null,
-      "kickoffUTC": "2026-06-23T17:00:00+00:00"
     },
     "ENGLAND-GHANA": {
       "homeGoals": null,
