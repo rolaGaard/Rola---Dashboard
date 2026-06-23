@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-23T18:20:31.778380Z",
+  "updated": "2026-06-23T18:30:56.330432Z",
   "matches": {
     "PORTUGAL-UZBEKISTAN": {
-      "homeGoals": 3,
+      "homeGoals": 4,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 56,
+      "elapsed": 67,
       "kickoffUTC": "2026-06-23T17:00:00+00:00",
       "events": [
         {
@@ -38,6 +38,14 @@
           "player": "C. Ronaldo",
           "team": "PORTUGAL",
           "minute": 39,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Own Goal",
+          "player": "A. Nematov",
+          "team": "PORTUGAL",
+          "minute": 60,
           "extra": null
         }
       ]
