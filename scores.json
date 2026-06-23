@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T07:50:39.175656Z",
+  "updated": "2026-06-23T16:01:16.474370Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -1918,7 +1918,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "Daichi Kamada",
+          "player": "D. Kamada",
           "team": "JAPAN",
           "minute": 4,
           "extra": null
@@ -1926,7 +1926,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "Ayase Ueda",
+          "player": "A. Ueda",
           "team": "JAPAN",
           "minute": 31,
           "extra": null
@@ -1934,7 +1934,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "Junya Ito",
+          "player": "J. Ito",
           "team": "JAPAN",
           "minute": 69,
           "extra": null
@@ -1942,7 +1942,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "Ayase Ueda",
+          "player": "A. Ueda",
           "team": "JAPAN",
           "minute": 83,
           "extra": null
