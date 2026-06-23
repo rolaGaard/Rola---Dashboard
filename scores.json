@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-23T20:36:47.253355Z",
+  "updated": "2026-06-23T20:40:31.828411Z",
   "matches": {
     "ENGLAND-GHANA": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 37,
+      "elapsed": 40,
       "kickoffUTC": "2026-06-23T20:00:00+00:00",
       "events": []
     },
@@ -2191,7 +2191,64 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-22T17:00:00+00:00",
-      "events": []
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Missed Penalty",
+          "player": "L. Messi",
+          "team": "ARGENTINA",
+          "minute": 9,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "L. Messi",
+          "team": "ARGENTINA",
+          "minute": 38,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "S. Posch",
+          "team": "AUSTRIA",
+          "minute": 40,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "F. Medina",
+          "team": "ARGENTINA",
+          "minute": 76,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "K. Laimer",
+          "team": "AUSTRIA",
+          "minute": 76,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "L. Paredes",
+          "team": "ARGENTINA",
+          "minute": 90,
+          "extra": 2
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "L. Messi",
+          "team": "ARGENTINA",
+          "minute": 90,
+          "extra": 5
+        }
+      ]
     },
     "FRANCE-IRAQ": {
       "homeGoals": 3,
