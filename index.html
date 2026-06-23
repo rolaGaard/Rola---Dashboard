@@ -65,6 +65,7 @@
     border-left:4px solid #e2e8f0; box-shadow:0 1px 3px rgba(0,0,0,0.08);
     display:flex; flex-direction:column; gap:8px;
     transition:box-shadow 0.15s;
+    container-type:inline-size; container-name:card;
   }
   .match-card.live { border-left-color:#CC0000; }
   .match-card.finished { border-left-color:#003087; }
@@ -127,6 +128,62 @@
   .status-badge.live { color:#fff; background:#CC0000; }
   .status-badge.finished { color:#fff; background:#003087; }
   .group-tag { background:#f1f5f9; border-radius:4px; padding:1px 6px; font-weight:600; }
+
+  /* ── Tipografía dinámica según el ancho real de cada tarjeta ──────────────
+     Si hay pocos partidos en pantalla (TV, monitor grande, 1 sola tarjeta),
+     el grid estira la tarjeta y el texto crece. Si hay muchos partidos a la
+     vez, cada tarjeta queda angosta y el texto se mantiene compacto. */
+  @container card (min-width: 420px) {
+    .team-flag { font-size:32px; }
+    .team-name { font-size:15px; }
+    .team-code { font-size:10px; }
+    .wc-stars { font-size:10px; }
+    .score-box { font-size:23px; min-width:54px; }
+    .match-meta { font-size:12px; }
+    .status-badge { font-size:11px; padding:3px 8px; }
+    .detail-row { font-size:13px; }
+  }
+  @container card (min-width: 560px) {
+    .match-card { padding:18px 22px; gap:10px; }
+    .team-flag { font-size:42px; }
+    .team-name { font-size:18px; }
+    .team-code { font-size:12px; }
+    .wc-stars { font-size:12px; }
+    .score-box { font-size:30px; min-width:66px; }
+    .match-meta { font-size:13px; }
+    .status-badge { font-size:12px; padding:4px 10px; }
+    .detail-row { font-size:14px; }
+    .group-label { font-size:15px; }
+  }
+  @container card (min-width: 760px) {
+    .match-card { padding:24px 30px; gap:14px; }
+    .team-flag { font-size:58px; }
+    .team-name { font-size:24px; }
+    .team-code { font-size:14px; padding:2px 8px; }
+    .wc-stars { font-size:15px; }
+    .score-box { font-size:42px; min-width:90px; }
+    .match-meta { font-size:16px; gap:12px; }
+    .status-badge { font-size:14px; padding:5px 12px; }
+    .detail-row { font-size:16px; }
+  }
+  @container card (min-width: 1000px) {
+    .match-card { padding:32px 40px; gap:18px; }
+    .team-flag { font-size:78px; }
+    .team-name { font-size:32px; }
+    .team-code { font-size:16px; padding:3px 10px; }
+    .wc-stars { font-size:18px; }
+    .score-box { font-size:56px; min-width:120px; }
+    .match-meta { font-size:19px; gap:16px; }
+    .status-badge { font-size:16px; padding:6px 14px; }
+    .detail-row { font-size:18px; }
+  }
+  /* Fallback para navegadores sin soporte de container queries (raro en 2026):
+     al menos escala un poco con el ancho del viewport. */
+  @supports not (container-type: inline-size) {
+    .team-name { font-size:clamp(13px, 2.2vw, 20px); }
+    .score-box { font-size:clamp(19px, 3.2vw, 34px); }
+    .team-flag { font-size:clamp(26px, 4.5vw, 48px); }
+  }
   .empty-state { background:#fff; border-radius:12px; padding:30px; text-align:center; color:#94a3b8; }
 
   .date-section { margin-bottom:18px; }
