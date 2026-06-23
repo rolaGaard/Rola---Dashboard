@@ -73,7 +73,9 @@
     container-type:inline-size; container-name:card;
   }
   .match-card.live { border-left-color:#CC0000; }
-  .match-card.finished { border-left-color:#003087; }
+  .match-card.finished { border-left-color:#003087; background:#e9eaed; }
+  .match-card.finished .team-name, .match-card.finished .score-box,
+  .match-card.finished .detail-player { color:#1a1a2e; }
   .match-card.clickable { cursor:pointer; }
   .match-card.clickable:hover { box-shadow:0 2px 8px rgba(0,0,0,0.14); }
   .match-card.expanded { box-shadow:0 2px 10px rgba(0,0,0,0.16); }
@@ -129,6 +131,8 @@
   .score-box { min-width:46px; text-align:center; font-weight:800; font-size:19px; color:#1a1a2e; flex-shrink:0; }
   .score-box.live { color:#CC0000; }
   .match-meta { display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:11px; color:#64748b; }
+  .stadium-link { color:#64748b; text-decoration:none; }
+  .stadium-link:hover { color:#003087; text-decoration:underline; }
   .status-badge { font-weight:700; font-size:10px; letter-spacing:0.04em; border-radius:4px; padding:2px 7px; }
   .status-badge.live { color:#fff; background:#CC0000; }
   .status-badge.finished { color:#fff; background:#003087; }
@@ -423,8 +427,46 @@
   .shortcut-instructions-box {
     position:relative; background:#15151a; border:1px solid #2a2a2a;
     border-radius:14px; padding:24px 22px; max-width:360px;
+    max-height:85vh; overflow-y:auto;
   }
   .shortcut-instructions-text { font-size:14px; line-height:1.6; color:#e2e8f0; }
+
+  .team-clickable { cursor:pointer; border-radius:8px; transition:background 0.15s; }
+  .team-clickable:hover { background:rgba(0,0,0,0.04); }
+  .st-team.team-clickable:hover, .qteam.team-clickable:hover { background:rgba(255,255,255,0.08); }
+
+  .country-info-box { text-align:center; max-width:320px; }
+  .ci-flag { font-size:54px; line-height:1; margin-bottom:8px; }
+  .ci-name { color:#fff; font-size:19px; font-weight:700; margin-bottom:4px; }
+  .ci-region { color:#94a3b8; font-size:13px; margin-bottom:18px; }
+  .ci-stats { display:flex; gap:12px; justify-content:center; margin-bottom:14px; }
+  .ci-stat {
+    background:rgba(255,255,255,0.06); border-radius:10px; padding:14px 18px; flex:1;
+  }
+  .ci-stat-num { color:#FFD700; font-size:26px; font-weight:800; line-height:1; }
+  .ci-stat-label { color:#94a3b8; font-size:11px; margin-top:4px; }
+  .ci-disclaimer { color:#64748b; font-size:11px; font-style:italic; line-height:1.4; }
+
+  .ci-squad-title {
+    color:#fff; font-size:14px; font-weight:700; text-align:left;
+    margin:18px 0 8px; padding-top:14px; border-top:1px solid #2a2a2a;
+  }
+  .ci-squad-empty { color:#64748b; font-size:12px; font-style:italic; text-align:left; padding:6px 0; }
+  .ci-squad-list { display:flex; flex-direction:column; gap:2px; text-align:left; }
+  .ci-player-row {
+    display:flex; align-items:center; gap:10px; padding:6px 4px;
+    border-bottom:1px solid rgba(255,255,255,0.05); font-size:13px;
+  }
+  .ci-player-num {
+    color:#FFD700; font-weight:800; font-size:13px; min-width:22px; text-align:center;
+    flex-shrink:0;
+  }
+  .ci-player-name {
+    color:#e2e8f0; text-decoration:none; flex:1; min-width:0;
+    border-bottom:1px dotted rgba(226,232,240,0.4);
+  }
+  .ci-player-name:hover { color:#FFD700; border-bottom-color:#FFD700; }
+  .ci-player-pos { color:#64748b; font-size:10px; flex-shrink:0; text-transform:uppercase; }
   .shortcut-instructions-text b { color:#FFD700; }
   .cookie-banner-close {
     position:absolute; top:10px; right:10px; background:none; border:none;
@@ -501,6 +543,13 @@
   </div>
 </div>
 
+<div id="country-info-modal" class="shortcut-instructions" style="display:none;">
+  <div class="shortcut-instructions-box country-info-box">
+    <button id="country-info-close" class="cookie-banner-close" aria-label="Cerrar">✕</button>
+    <div id="country-info-content"></div>
+  </div>
+</div>
+
 <div class="search-wrap">
   <div class="search-box">
     <span class="search-icon">🔎</span>
@@ -523,7 +572,7 @@
 
 <div class="bracket-view" id="bracket-view" style="display:none;"></div>
 
-<div class="footer" id="footer">Datos: API-Football · Última actualización: --:-- hs AR</div>
+<div class="footer" id="footer">Última actualización: --:--</div>
 
 <div class="report-bug-wrap">
   <a id="report-bug-link" href="#" target="_blank" rel="noopener" class="report-bug-btn">
@@ -561,7 +610,7 @@ const I18N = {
     cuartosDeFinal: 'CUARTOS DE FINAL', octavosDeFinal: 'OCTAVOS DE FINAL',
     bracketNote: 'El cuadro de eliminación se completa automáticamente cuando termine la fase de grupos (28 de junio)',
     clasificadosTitle: 'CLASIFICADOS A OCTAVOS (se completa por grupo a medida que termina)',
-    datosFooter: 'Datos: API-Football · Última actualización:', hsAR: '',
+    datosFooter: 'Última actualización:', hsAR: '',
     reportarProblema: '🐞 Reportar un problema',
     instalarApp: 'Instalar app', pantallaCompleta: 'Pantalla completa', salirPantallaCompleta: 'Salir de pantalla completa',
     volverArriba: 'Volver arriba',
@@ -573,6 +622,9 @@ const I18N = {
     accesoDirectoAndroid: '🔖 En Chrome para Android, "Agregar a pantalla de inicio" instala la app igual que la opción anterior — no hay un acceso directo más liviano. Si preferís no instalar nada, guardá esta página como <b>Favorito</b> (☆ en el menú ⋮) en vez de agregarla a la pantalla de inicio.',
     accesoDirectoDesktop: '🔖 Agregá esta página a tus favoritos con <b>Ctrl/Cmd + D</b>, o arrastrá el ícono de la barra de direcciones a tu escritorio.',
     tituloMundo: 'títulos mundiales', tituloMundoSingular: 'título mundial',
+    regionLabel: 'Ubicación', mundialesParticipados: 'Mundiales jugados', mundialesGanados: 'Mundiales ganados',
+    datosAproximados: 'Datos aproximados. Fuente oficial: FIFA.', datosNoDisponibles: 'Datos no disponibles para este equipo.',
+    plantilla: 'Plantilla', plantillaNoDisponible: 'Plantilla no disponible por el momento.',
     pj: 'PJ', g: 'G', e: 'E', p: 'P', dg: 'DG', pts: 'PTS',
   },
   en: {
@@ -599,7 +651,7 @@ const I18N = {
     cuartosDeFinal: 'QUARTERFINALS', octavosDeFinal: 'ROUND OF 32',
     bracketNote: 'The knockout bracket fills in automatically once the group stage ends (June 28)',
     clasificadosTitle: 'QUALIFIED FOR ROUND OF 32 (fills in per group as it finishes)',
-    datosFooter: 'Data: API-Football · Last update:', hsAR: '',
+    datosFooter: 'Last update:', hsAR: '',
     reportarProblema: '🐞 Report a problem',
     instalarApp: 'Install app', pantallaCompleta: 'Fullscreen', salirPantallaCompleta: 'Exit fullscreen',
     volverArriba: 'Back to top',
@@ -611,6 +663,9 @@ const I18N = {
     accesoDirectoAndroid: '🔖 On Chrome for Android, "Add to Home screen" installs the app, same as the option above — there is no lighter shortcut option. If you would rather not install anything, save this page as a <b>Bookmark</b> (☆ in the ⋮ menu) instead.',
     accesoDirectoDesktop: '🔖 Bookmark this page with <b>Ctrl/Cmd + D</b>, or drag the address bar icon to your desktop.',
     tituloMundo: 'World Cup titles', tituloMundoSingular: 'World Cup title',
+    regionLabel: 'Location', mundialesParticipados: 'World Cup appearances', mundialesGanados: 'World Cup titles',
+    datosAproximados: 'Approximate data. Official source: FIFA.', datosNoDisponibles: 'No data available for this team.',
+    plantilla: 'Squad', plantillaNoDisponible: 'Squad not available yet.',
     pj: 'P', g: 'W', e: 'D', p: 'L', dg: 'GD', pts: 'PTS',
   },
   pt: {
@@ -637,7 +692,7 @@ const I18N = {
     cuartosDeFinal: 'QUARTAS DE FINAL', octavosDeFinal: 'OITAVAS DE FINAL',
     bracketNote: 'O mata-mata é completado automaticamente quando a fase de grupos terminar (28 de junho)',
     clasificadosTitle: 'CLASSIFICADOS PARA AS OITAVAS (completado por grupo conforme termina)',
-    datosFooter: 'Dados: API-Football · Última atualização:', hsAR: '',
+    datosFooter: 'Última atualização:', hsAR: '',
     reportarProblema: '🐞 Reportar um problema',
     instalarApp: 'Instalar app', pantallaCompleta: 'Tela cheia', salirPantallaCompleta: 'Sair da tela cheia',
     volverArriba: 'Voltar ao topo',
@@ -649,6 +704,9 @@ const I18N = {
     accesoDirectoAndroid: '🔖 No Chrome para Android, "Adicionar à tela de início" instala o app, igual à opção anterior — não existe um atalho mais leve. Se preferir não instalar nada, salve esta página como <b>Favorito</b> (☆ no menu ⋮).',
     accesoDirectoDesktop: '🔖 Adicione esta página aos favoritos com <b>Ctrl/Cmd + D</b>, ou arraste o ícone da barra de endereços para a área de trabalho.',
     tituloMundo: 'títulos mundiais', tituloMundoSingular: 'título mundial',
+    regionLabel: 'Localização', mundialesParticipados: 'Copas do Mundo disputadas', mundialesGanados: 'Copas do Mundo conquistadas',
+    datosAproximados: 'Dados aproximados. Fonte oficial: FIFA.', datosNoDisponibles: 'Dados não disponíveis para esta seleção.',
+    plantilla: 'Elenco', plantillaNoDisponible: 'Elenco não disponível por enquanto.',
     pj: 'PJ', g: 'V', e: 'E', p: 'D', dg: 'SG', pts: 'PTS',
   },
   de: {
@@ -675,7 +733,7 @@ const I18N = {
     cuartosDeFinal: 'VIERTELFINALE', octavosDeFinal: 'ACHTELFINALE',
     bracketNote: 'Der K.O.-Plan wird automatisch ausgefüllt, sobald die Gruppenphase endet (28. Juni)',
     clasificadosTitle: 'QUALIFIZIERT FÜR DAS ACHTELFINALE (wird pro Gruppe ausgefüllt)',
-    datosFooter: 'Daten: API-Football · Letzte Aktualisierung:', hsAR: '',
+    datosFooter: 'Letzte Aktualisierung:', hsAR: '',
     reportarProblema: '🐞 Problem melden',
     instalarApp: 'App installieren', pantallaCompleta: 'Vollbild', salirPantallaCompleta: 'Vollbild beenden',
     volverArriba: 'Nach oben',
@@ -687,6 +745,9 @@ const I18N = {
     accesoDirectoAndroid: '🔖 In Chrome für Android installiert "Zum Startbildschirm hinzufügen" die App, genau wie die Option oben — eine leichtere Verknüpfung gibt es nicht. Wenn du nichts installieren möchtest, speichere diese Seite stattdessen als <b>Lesezeichen</b> (☆ im ⋮-Menü).',
     accesoDirectoDesktop: '🔖 Lesezeichen mit <b>Strg/Cmd + D</b> setzen oder das Adressleisten-Symbol auf den Desktop ziehen.',
     tituloMundo: 'Weltmeistertitel', tituloMundoSingular: 'Weltmeistertitel',
+    regionLabel: 'Lage', mundialesParticipados: 'WM-Teilnahmen', mundialesGanados: 'WM-Titel',
+    datosAproximados: 'Ungefähre Angaben. Offizielle Quelle: FIFA.', datosNoDisponibles: 'Keine Daten für dieses Team verfügbar.',
+    plantilla: 'Kader', plantillaNoDisponible: 'Kader derzeit nicht verfügbar.',
     pj: 'Sp', g: 'S', e: 'U', p: 'N', dg: 'TD', pts: 'Pkt',
   },
   nl: {
@@ -713,7 +774,7 @@ const I18N = {
     cuartosDeFinal: 'KWARTFINALES', octavosDeFinal: 'ACHTSTE FINALES',
     bracketNote: 'Het knock-outschema wordt automatisch aangevuld zodra de groepsfase is afgelopen (28 juni)',
     clasificadosTitle: 'GEKWALIFICEERD VOOR ACHTSTE FINALES (per groep aangevuld zodra deze afloopt)',
-    datosFooter: 'Gegevens: API-Football · Laatste update:', hsAR: '',
+    datosFooter: 'Laatste update:', hsAR: '',
     reportarProblema: '🐞 Probleem melden',
     instalarApp: 'App installeren', pantallaCompleta: 'Volledig scherm', salirPantallaCompleta: 'Volledig scherm sluiten',
     volverArriba: 'Terug naar boven',
@@ -725,6 +786,9 @@ const I18N = {
     accesoDirectoAndroid: '🔖 In Chrome voor Android installeert "Toevoegen aan beginscherm" de app, net als de optie hierboven — een lichtere snelkoppeling bestaat niet. Wil je niets installeren, sla deze pagina dan op als <b>Bladwijzer</b> (☆ in het ⋮-menu).',
     accesoDirectoDesktop: '🔖 Voeg deze pagina toe aan je favorieten met <b>Ctrl/Cmd + D</b>, of sleep het pictogram van de adresbalk naar je bureaublad.',
     tituloMundo: 'wereldtitels', tituloMundoSingular: 'wereldtitel',
+    regionLabel: 'Locatie', mundialesParticipados: 'WK-deelnames', mundialesGanados: 'WK-titels',
+    datosAproximados: 'Geschatte gegevens. Officiële bron: FIFA.', datosNoDisponibles: 'Geen gegevens beschikbaar voor dit land.',
+    plantilla: 'Selectie', plantillaNoDisponible: 'Selectie momenteel niet beschikbaar.',
     pj: 'G', g: 'W', e: 'G', p: 'V', dg: 'DV', pts: 'Pt',
   },
 };
@@ -794,8 +858,85 @@ const INTL_NAMES = {
   'SAUDI ARABIA':'Saudi Arabia','URUGUAY':'Uruguay','IRAN':'Iran (Islamic Republic of)','NEW ZEALAND':'New Zealand',
   'FRANCE':'France','SENEGAL':'Senegal','IRAQ':'Iraq','NORWAY':'Norway',
   'ARGENTINA':'Argentina','ALGERIA':'Algeria','AUSTRIA':'Austria','JORDAN':'Jordan',
-  'PORTUGAL':'Portugal','CONGO DR':'Democratic Republic of the Congo','COLOMBIA':'Colombia','UZBEKISTAN':'Uzbekistan',
+  'PORTUGAL':'Portugal','CONGO DR':'D.R. Congo','COLOMBIA':'Colombia','UZBEKISTAN':'Uzbekistan',
   'ENGLAND':'England','GHANA':'Ghana','CROATIA':'Croatia','PANAMA':'Panama',
+};
+
+// ── Info breve por país: región, mundiales jugados (incl. 2026) y ganados ──
+// Nota: los conteos de mundiales son aproximados (historia + 2026); ante
+// cualquier duda puntual, la FIFA es la fuente oficial.
+const COUNTRY_INFO = {
+  'MEXICO':{region:'NA', appearances:18, titles:0},
+  'SOUTH AFRICA':{region:'SSA', appearances:4, titles:0},
+  'CANADA':{region:'NA', appearances:3, titles:0},
+  'BOSNIA & HERZEGOVINA':{region:'EEU', appearances:2, titles:0},
+  'SOUTH KOREA':{region:'EAS', appearances:11, titles:0},
+  'CZECHIA':{region:'EEU', appearances:10, titles:0},
+  'USA':{region:'NA', appearances:11, titles:0},
+  'PARAGUAY':{region:'SA', appearances:9, titles:0},
+  'QATAR':{region:'WAS', appearances:2, titles:0},
+  'SWITZERLAND':{region:'WEU', appearances:12, titles:0},
+  'AUSTRALIA':{region:'OCE', appearances:6, titles:0},
+  'TURKIYE':{region:'TUR', appearances:3, titles:0},
+  'MOROCCO':{region:'NAF', appearances:7, titles:0},
+  'BRAZIL':{region:'SA', appearances:22, titles:5},
+  'HAITI':{region:'CAR', appearances:2, titles:0},
+  'SCOTLAND':{region:'NEU', appearances:9, titles:0},
+  'GERMANY':{region:'WEU', appearances:20, titles:4},
+  'CURACAO':{region:'CAR', appearances:1, titles:0},
+  'NETHERLANDS':{region:'WEU', appearances:11, titles:0},
+  'JAPAN':{region:'EAS', appearances:8, titles:0},
+  'IVORY COAST':{region:'SSA', appearances:4, titles:0},
+  'ECUADOR':{region:'SA', appearances:5, titles:0},
+  'SWEDEN':{region:'NEU', appearances:13, titles:0},
+  'TUNISIA':{region:'NAF', appearances:7, titles:0},
+  'SPAIN':{region:'SEU', appearances:16, titles:1},
+  'CAPE VERDE':{region:'SSA', appearances:1, titles:0},
+  'BELGIUM':{region:'WEU', appearances:15, titles:0},
+  'EGYPT':{region:'NAF', appearances:4, titles:0},
+  'SAUDI ARABIA':{region:'WAS', appearances:7, titles:0},
+  'URUGUAY':{region:'SA', appearances:15, titles:2},
+  'IRAN':{region:'WAS', appearances:7, titles:0},
+  'NEW ZEALAND':{region:'OCE', appearances:3, titles:0},
+  'FRANCE':{region:'WEU', appearances:17, titles:2},
+  'SENEGAL':{region:'SSA', appearances:4, titles:0},
+  'IRAQ':{region:'WAS', appearances:2, titles:0},
+  'NORWAY':{region:'NEU', appearances:4, titles:0},
+  'ARGENTINA':{region:'SA', appearances:19, titles:3},
+  'ALGERIA':{region:'NAF', appearances:5, titles:0},
+  'AUSTRIA':{region:'WEU', appearances:8, titles:0},
+  'JORDAN':{region:'WAS', appearances:1, titles:0},
+  'PORTUGAL':{region:'SEU', appearances:9, titles:0},
+  'CONGO DR':{region:'SSA', appearances:1, titles:0},
+  'COLOMBIA':{region:'SA', appearances:7, titles:0},
+  'UZBEKISTAN':{region:'CAS', appearances:1, titles:0},
+  'ENGLAND':{region:'NEU', appearances:16, titles:1},
+  'GHANA':{region:'SSA', appearances:4, titles:0},
+  'CROATIA':{region:'EEU', appearances:6, titles:0},
+  'PANAMA':{region:'CA', appearances:2, titles:0},
+};
+
+const REGION_NAMES = {
+  es: { NA:'América del Norte', CA:'América Central', SA:'América del Sur', CAR:'El Caribe',
+        WEU:'Europa Occidental', EEU:'Europa del Este', NEU:'Europa del Norte', SEU:'Europa del Sur',
+        NAF:'Norte de África', SSA:'África Subsahariana', WAS:'Asia Occidental / Medio Oriente',
+        CAS:'Asia Central', EAS:'Asia Oriental', OCE:'Oceanía', TUR:'Europa y Asia (transcontinental)' },
+  en: { NA:'North America', CA:'Central America', SA:'South America', CAR:'The Caribbean',
+        WEU:'Western Europe', EEU:'Eastern Europe', NEU:'Northern Europe', SEU:'Southern Europe',
+        NAF:'North Africa', SSA:'Sub-Saharan Africa', WAS:'Western Asia / Middle East',
+        CAS:'Central Asia', EAS:'East Asia', OCE:'Oceania', TUR:'Europe and Asia (transcontinental)' },
+  pt: { NA:'América do Norte', CA:'América Central', SA:'América do Sul', CAR:'O Caribe',
+        WEU:'Europa Ocidental', EEU:'Europa Oriental', NEU:'Europa do Norte', SEU:'Europa do Sul',
+        NAF:'Norte da África', SSA:'África Subsaariana', WAS:'Ásia Ocidental / Oriente Médio',
+        CAS:'Ásia Central', EAS:'Ásia Oriental', OCE:'Oceania', TUR:'Europa e Ásia (transcontinental)' },
+  de: { NA:'Nordamerika', CA:'Mittelamerika', SA:'Südamerika', CAR:'Die Karibik',
+        WEU:'Westeuropa', EEU:'Osteuropa', NEU:'Nordeuropa', SEU:'Südeuropa',
+        NAF:'Nordafrika', SSA:'Subsahara-Afrika', WAS:'Westasien / Naher Osten',
+        CAS:'Zentralasien', EAS:'Ostasien', OCE:'Ozeanien', TUR:'Europa und Asien (transkontinental)' },
+  nl: { NA:'Noord-Amerika', CA:'Centraal-Amerika', SA:'Zuid-Amerika', CAR:'Het Caribisch Gebied',
+        WEU:'West-Europa', EEU:'Oost-Europa', NEU:'Noord-Europa', SEU:'Zuid-Europa',
+        NAF:'Noord-Afrika', SSA:'Sub-Saharaans Afrika', WAS:'West-Azië / Midden-Oosten',
+        CAS:'Centraal-Azië', EAS:'Oost-Azië', OCE:'Oceanië', TUR:'Europa en Azië (transcontinentaal)' },
 };
 
 // Official FIFA 3-letter codes for quick search (e.g. "MEX" finds Mexico)
@@ -1071,7 +1212,7 @@ function buildMatchCard(m) {
   return (
     '<div class="' + cardClass + '"' + clickAttr + '>' +
       '<div class="match-row">' +
-        '<div class="team" title="' + esName(m.home) + '">' +
+        '<div class="team team-clickable" title="' + esName(m.home) + '" onclick="event.stopPropagation(); openCountryInfo(\'' + m.home.replace(/'/g, "\\'") + '\')">' +
           '<span class="team-flag">' + flag(m.home) + '</span>' +
           '<span class="' + homeNameClass + '">' + esName(m.home) + '</span>' +
           '<span class="team-code">' + countryCode(m.home) + '</span>' +
@@ -1080,7 +1221,7 @@ function buildMatchCard(m) {
         '<div class="score-center">' +
           '<div class="' + scoreClass + '">' + scoreText + '</div>' +
         '</div>' +
-        '<div class="team" title="' + esName(m.away) + '">' +
+        '<div class="team team-clickable" title="' + esName(m.away) + '" onclick="event.stopPropagation(); openCountryInfo(\'' + m.away.replace(/'/g, "\\'") + '\')">' +
           '<span class="team-flag">' + flag(m.away) + '</span>' +
           '<span class="' + awayNameClass + '">' + esName(m.away) + '</span>' +
           '<span class="team-code">' + countryCode(m.away) + '</span>' +
@@ -1090,7 +1231,7 @@ function buildMatchCard(m) {
       '<div class="match-meta">' +
         badgeHtml +
         '<span>\u{1F550} ' + arTime + '</span>' +
-        '<span>\u{1F4CD} ' + m.stadium + ', ' + m.city + '</span>' +
+        '<a href="' + mapsLink(m.stadium, m.city) + '" target="_blank" rel="noopener" class="stadium-link" onclick="event.stopPropagation()">\u{1F4CD} ' + m.stadium + ', ' + m.city + '</a>' +
         '<span class="group-tag">' + t('grupo') + ' ' + m.group + '</span>' +
         (hasDetail ? '<span class="detail-hint">' + (isExpanded ? t('detalleOcultar') : t('detalleMostrar')) + '</span>' : '') +
       '</div>' +
@@ -1102,6 +1243,14 @@ function buildMatchCard(m) {
 function googleSearchLink(playerName, teamName) {
   const query = encodeURIComponent(playerName + ' ' + esName(teamName) + ' futbolista');
   return 'https://www.google.com/search?q=' + query;
+}
+
+// Link universal de Google Maps — funciona igual en PC, iPhone y Android:
+// si el dispositivo tiene la app de Maps, el navegador la abre automáticamente;
+// si no, abre el resultado en la web.
+function mapsLink(stadium, city) {
+  const query = encodeURIComponent(stadium + ', ' + city);
+  return 'https://www.google.com/maps/search/?api=1&query=' + query;
 }
 
 function buildEventsDetail(events, homeTeam, awayTeam) {
@@ -1312,7 +1461,7 @@ function render() {
   const updateStr = lastUpdate
     ? new Date(lastUpdate).toLocaleTimeString(dateLocale(), {hour:'2-digit',minute:'2-digit',hour12:false})
     : '--:--';
-  document.getElementById('footer').textContent = t('datosFooter') + ' ' + updateStr + ' ' + t('hsAR');
+  document.getElementById('footer').textContent = t('datosFooter') + ' ' + updateStr;
 
   if (pendingFlashKey) {
     setTimeout(() => { pendingFlashKey = null; }, 3000);
@@ -1336,6 +1485,20 @@ async function fetchScores() {
     setupBugReportLink();
   } catch (e) {
     console.error('Error fetching scores:', e);
+  }
+}
+
+// Las plantillas no cambian como los resultados — se cargan una sola vez
+// al abrir el sitio, no en cada intervalo de refresco.
+let squadsData = null;
+async function fetchSquads() {
+  try {
+    const res = await fetch('./squads.json?t=' + Date.now());
+    const data = await res.json();
+    squadsData = data.squads || {};
+  } catch (e) {
+    console.error('Error fetching squads:', e);
+    squadsData = {};
   }
 }
 
@@ -1437,7 +1600,7 @@ function buildGroupsColumn(groupLetters) {
       const gd = row.gf - row.ga;
       const gdStr = gd > 0 ? '+' + gd : String(gd);
       html += '<div class="standings-row">' +
-        '<span class="st-team" title="' + esName(t) + '"><span class="gflag">' + flag(t) + '</span><span class="gname">' + esName(t) + '</span></span>' +
+        '<span class="st-team team-clickable" title="' + esName(t) + '" onclick="event.stopPropagation(); openCountryInfo(\'' + t.replace(/'/g, "\\'") + '\')"><span class="gflag">' + flag(t) + '</span><span class="gname">' + esName(t) + '</span></span>' +
         '<span>' + row.played + '</span>' +
         '<span>' + row.w + '</span>' +
         '<span>' + row.d + '</span>' +
@@ -1475,8 +1638,8 @@ function buildQualifiersSummary() {
     const color = GROUP_COLORS[g] || '#94a3b8';
     html += '<div class="qualifier-card" style="--gcolor:' + color + '">';
     html += '<div class="qualifier-card-title">' + t('grupo') + ' ' + g + '</div>';
-    html += '<div class="qualifier-row">1° ' + (first ? '<span class="qteam">' + flag(first) + ' ' + esName(first) + '</span>' : '<span class="qpending">' + t('porDefinir') + '</span>') + '</div>';
-    html += '<div class="qualifier-row">2° ' + (second ? '<span class="qteam">' + flag(second) + ' ' + esName(second) + '</span>' : '<span class="qpending">' + t('porDefinir') + '</span>') + '</div>';
+    html += '<div class="qualifier-row">1° ' + (first ? '<span class="qteam team-clickable" onclick="event.stopPropagation(); openCountryInfo(\'' + first.replace(/'/g, "\\'") + '\')">' + flag(first) + ' ' + esName(first) + '</span>' : '<span class="qpending">' + t('porDefinir') + '</span>') + '</div>';
+    html += '<div class="qualifier-row">2° ' + (second ? '<span class="qteam team-clickable" onclick="event.stopPropagation(); openCountryInfo(\'' + second.replace(/'/g, "\\'") + '\')">' + flag(second) + ' ' + esName(second) + '</span>' : '<span class="qpending">' + t('porDefinir') + '</span>') + '</div>';
     html += '</div>';
   });
   html += '</div></div>';
@@ -1614,6 +1777,7 @@ document.querySelectorAll('[data-filter="' + currentFilter + '"]').forEach(b => 
 updateClock();
 render();
 fetchScores();
+fetchSquads();
 setupBugReportLink();
 setInterval(fetchScores, 60000);
 setInterval(updateClock, 30000);
@@ -1727,6 +1891,62 @@ shortcutInstructionsClose.addEventListener('click', () => {
 });
 shortcutInstructions.addEventListener('click', (e) => {
   if (e.target === shortcutInstructions) shortcutInstructions.style.display = 'none';
+});
+
+// ── Modal de información de país ────────────────────────────────────────
+const countryInfoModal = document.getElementById('country-info-modal');
+const countryInfoContent = document.getElementById('country-info-content');
+const countryInfoClose = document.getElementById('country-info-close');
+
+function buildSquadHtml(code) {
+  const squad = squadsData ? squadsData[code] : null;
+  if (!squad || squad.length === 0) {
+    return '<div class="ci-squad-empty">' + t('plantillaNoDisponible') + '</div>';
+  }
+  // Ordenamos por número de camiseta (los sin número, al final)
+  const sorted = squad.slice().sort((a, b) => {
+    const na = (a.number === null || a.number === undefined) ? 999 : a.number;
+    const nb = (b.number === null || b.number === undefined) ? 999 : b.number;
+    return na - nb;
+  });
+  let rows = sorted.map(p => {
+    const num = (p.number === null || p.number === undefined) ? '–' : p.number;
+    const link = googleSearchLink(p.name, code);
+    return '<div class="ci-player-row">' +
+      '<span class="ci-player-num">' + num + '</span>' +
+      '<a href="' + link + '" target="_blank" rel="noopener" class="ci-player-name">' + p.name + '</a>' +
+      (p.position ? '<span class="ci-player-pos">' + p.position + '</span>' : '') +
+    '</div>';
+  }).join('');
+  return '<div class="ci-squad-list">' + rows + '</div>';
+}
+
+function openCountryInfo(code) {
+  const name = esName(code);
+  const flagEmoji = flag(code);
+  const info = COUNTRY_INFO[code];
+  let html = '<div class="ci-flag">' + flagEmoji + '</div>' +
+             '<div class="ci-name">' + name + '</div>';
+  if (info) {
+    const regionLabel = (REGION_NAMES[currentLang] && REGION_NAMES[currentLang][info.region]) || info.region;
+    html += '<div class="ci-region">📍 ' + t('regionLabel') + ': ' + regionLabel + '</div>' +
+            '<div class="ci-stats">' +
+              '<div class="ci-stat"><div class="ci-stat-num">' + info.appearances + '</div><div class="ci-stat-label">' + t('mundialesParticipados') + '</div></div>' +
+              '<div class="ci-stat"><div class="ci-stat-num">' + info.titles + '</div><div class="ci-stat-label">' + t('mundialesGanados') + '</div></div>' +
+            '</div>' +
+            '<div class="ci-disclaimer">' + t('datosAproximados') + '</div>';
+  } else {
+    html += '<div class="ci-disclaimer">' + t('datosNoDisponibles') + '</div>';
+  }
+  html += '<div class="ci-squad-title">' + t('plantilla') + '</div>' + buildSquadHtml(code);
+  countryInfoContent.innerHTML = html;
+  countryInfoModal.style.display = 'flex';
+}
+countryInfoClose.addEventListener('click', () => {
+  countryInfoModal.style.display = 'none';
+});
+countryInfoModal.addEventListener('click', (e) => {
+  if (e.target === countryInfoModal) countryInfoModal.style.display = 'none';
 });
 
 window.addEventListener('appinstalled', () => {
