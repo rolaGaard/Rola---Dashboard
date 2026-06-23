@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-23T21:20:36.263764Z",
+  "updated": "2026-06-23T21:30:56.285221Z",
   "matches": {
     "ENGLAND-GHANA": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 56,
+      "elapsed": 67,
       "kickoffUTC": "2026-06-23T20:00:00+00:00",
       "events": [
         {
@@ -14,6 +14,14 @@
           "player": "D. Rice",
           "team": "ENGLAND",
           "minute": 41,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "I. Williams",
+          "team": "GHANA",
+          "minute": 60,
           "extra": null
         }
       ]
