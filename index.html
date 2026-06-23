@@ -21,20 +21,22 @@
     padding-bottom:40px;
   }
   .header {
-    background:#0a0a0a; padding:20px 24px; display:flex; align-items:center;
+    background:#0a0a0a; padding:clamp(14px,2.2vw,26px) clamp(16px,3vw,32px);
+    display:flex; align-items:center;
     justify-content:space-between; flex-wrap:wrap; gap:16px;
     border-bottom:1px solid #1f1f1f;
+    container-type:inline-size; container-name:header;
   }
-  .header-left { display:flex; align-items:center; gap:14px; }
+  .header-left { display:flex; align-items:center; gap:clamp(10px,1.6vw,18px); }
   .header-icon {
-    width:46px; height:46px; border-radius:50%;
-    display:flex; align-items:center; justify-content:center; font-size:22px;
-    background:linear-gradient(135deg, #FFD700 0%, #C9A227 100%);
+    width:clamp(40px,5.5vw,64px); height:clamp(40px,5.5vw,64px);
+    border-radius:22%; object-fit:cover; flex-shrink:0;
     box-shadow:0 0 0 2px #0a0a0a, 0 0 0 3px #FFD700;
   }
-  .header-title { color:#fff; font-size:19px; font-weight:700; }
-  .header-title .by { color:#94a3b8; font-size:13px; font-weight:500; }
-  .header-sub { color:#94a3b8; font-size:12px; }
+  .header-text { display:flex; flex-direction:column; gap:1px; }
+  .header-title { color:#fff; font-size:clamp(17px,2.4vw,28px); font-weight:700; line-height:1.15; }
+  .header-by { color:#94a3b8; font-size:clamp(11px,1.3vw,15px); font-weight:500; }
+  .header-sub { color:#94a3b8; font-size:clamp(11px,1.3vw,15px); margin-top:2px; }
   .clock-label { color:#94a3b8; font-size:11px; text-align:right; }
   .clock-value { color:#FFD700; font-size:26px; font-weight:700; font-variant-numeric:tabular-nums; text-align:right; }
   .stats-bar {
@@ -381,9 +383,9 @@
     background:#1a1a1a; color:#fff;
   }
   .fullscreen-btn {
-    width:68px; height:68px; border-radius:14px;
+    width:48px; height:48px; border-radius:10px;
     background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12);
-    color:#94a3b8; font-size:32px; cursor:pointer;
+    color:#94a3b8; font-size:22px; cursor:pointer;
     display:flex; align-items:center; justify-content:center;
     transition:background 0.15s, color 0.15s;
     flex-shrink:0;
@@ -445,9 +447,10 @@
 <body>
 <div class="header">
   <div class="header-left">
-    <div class="header-icon">🏆</div>
-    <div>
-      <div class="header-title">Mundial 2026 <span class="by">by rolaGaard</span></div>
+    <img class="header-icon" src="icons/icon-192.png" alt="rolaGaard">
+    <div class="header-text">
+      <div class="header-title">Mundial 2026</div>
+      <div class="header-by">by rolaGaard</div>
       <div class="header-sub" id="header-sub">USA · Canadá · México</div>
     </div>
   </div>
@@ -723,8 +726,35 @@ const I18N = {
 
 let currentLang = localStorage.getItem('wcLang');
 if (!currentLang) {
+  currentLang = detectLangByLocation();
+}
+function detectLangByLocation() {
+  // 1) Intentamos inferir el país por la zona horaria del dispositivo —
+  //    esto refleja dónde está físicamente el usuario, no el idioma configurado
+  //    en el navegador (que puede no coincidir, ej: tel con OS en inglés en Argentina).
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    const tzRules = [
+      [/^America\/(Argentina|Montevideo|Asuncion|Santiago|Lima|Bogota|Caracas|La_Paz|Guayaquil|Mexico_City|Tijuana|Cancun|Merida|Monterrey|Hermosillo|Mazatlan|Bahia_Banderas|Chihuahua|Ojinaga|Matamoros|Costa_Rica|Panama|Managua|Tegucigalpa|San_Salvador|Guatemala|Santo_Domingo|Havana)/, 'es'],
+      [/^Europe\/(Madrid)/, 'es'],
+      [/^Africa\/(Ceuta)/, 'es'],
+      [/^America\/(Sao_Paulo|Bahia|Fortaleza|Recife|Manaus|Belem|Maceio|Campo_Grande|Cuiaba|Boa_Vista|Porto_Velho|Araguaina|Rio_Branco|Noronha)/, 'pt'],
+      [/^Atlantic\/(Azores|Madeira)/, 'pt'],
+      [/^Europe\/(Lisbon)/, 'pt'],
+      [/^Europe\/(Berlin|Vienna|Zurich|Vaduz|Luxembourg)/, 'de'],
+      [/^Europe\/(Amsterdam|Brussels)/, 'nl'],
+    ];
+    for (const [re, lang] of tzRules) {
+      if (re.test(tz)) return lang;
+    }
+  } catch (e) { /* Intl no disponible — seguimos con el fallback */ }
+
+  // 2) Si la zona horaria no matcheó nada conocido, usamos el idioma del navegador
   const browserLang = (navigator.language || 'es').slice(0, 2).toLowerCase();
-  currentLang = I18N[browserLang] ? browserLang : 'es';
+  if (I18N[browserLang]) return browserLang;
+
+  // 3) Default final
+  return 'es';
 }
 function t(key) { return (I18N[currentLang] && I18N[currentLang][key]) || I18N.es[key] || key; }
 
@@ -762,24 +792,6 @@ const INTL_NAMES = {
   'PORTUGAL':'Portugal','CONGO DR':'Democratic Republic of the Congo','COLOMBIA':'Colombia','UZBEKISTAN':'Uzbekistan',
   'ENGLAND':'England','GHANA':'Ghana','CROATIA':'Croatia','PANAMA':'Panama',
 };
-
-// Shortened versions for teams with long names — abbreviate the first word only,
-// used in tight-space contexts (match cards). Falls back to full INTL_NAMES if absent.
-const ES_NAMES_SHORT = {
-  'IVORY COAST':"Côte d'Iv.",
-  'NETHERLANDS':'Netherl.',
-  'SAUDI ARABIA':'S. Arabia',
-  'NEW ZEALAND':'N. Zealand',
-  'SOUTH AFRICA':'S. Africa',
-  'SOUTH KOREA':'Korea Rep.',
-  'BOSNIA & HERZEGOVINA':'Bosnia & H.',
-  'CONGO DR':'DR Congo',
-  'IRAN':'Iran',
-  'USA':'United St.',
-};
-function esNameShort(name) {
-  return ES_NAMES_SHORT[name] || esName(name);
-}
 
 // Official FIFA 3-letter codes for quick search (e.g. "MEX" finds Mexico)
 const COUNTRY_CODES = {
@@ -1056,7 +1068,7 @@ function buildMatchCard(m) {
       '<div class="match-row">' +
         '<div class="team" title="' + esName(m.home) + '">' +
           '<span class="team-flag">' + flag(m.home) + '</span>' +
-          '<span class="' + homeNameClass + '">' + esNameShort(m.home) + '</span>' +
+          '<span class="' + homeNameClass + '">' + esName(m.home) + '</span>' +
           '<span class="team-code">' + countryCode(m.home) + '</span>' +
           worldCupStars(m.home) +
         '</div>' +
@@ -1065,7 +1077,7 @@ function buildMatchCard(m) {
         '</div>' +
         '<div class="team" title="' + esName(m.away) + '">' +
           '<span class="team-flag">' + flag(m.away) + '</span>' +
-          '<span class="' + awayNameClass + '">' + esNameShort(m.away) + '</span>' +
+          '<span class="' + awayNameClass + '">' + esName(m.away) + '</span>' +
           '<span class="team-code">' + countryCode(m.away) + '</span>' +
           worldCupStars(m.away) +
         '</div>' +
@@ -1420,7 +1432,7 @@ function buildGroupsColumn(groupLetters) {
       const gd = row.gf - row.ga;
       const gdStr = gd > 0 ? '+' + gd : String(gd);
       html += '<div class="standings-row">' +
-        '<span class="st-team" title="' + esName(t) + '"><span class="gflag">' + flag(t) + '</span><span class="gname">' + esNameShort(t) + '</span></span>' +
+        '<span class="st-team" title="' + esName(t) + '"><span class="gflag">' + flag(t) + '</span><span class="gname">' + esName(t) + '</span></span>' +
         '<span>' + row.played + '</span>' +
         '<span>' + row.w + '</span>' +
         '<span>' + row.d + '</span>' +
