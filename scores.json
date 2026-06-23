@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-23T22:50:35.232573Z",
+  "updated": "2026-06-23T23:00:56.511018Z",
   "matches": {
+    "PANAMA-CROATIA": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "1H",
+      "elapsed": 1,
+      "kickoffUTC": "2026-06-23T23:00:00+00:00",
+      "events": []
+    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -2470,13 +2478,6 @@
           "extra": null
         }
       ]
-    },
-    "PANAMA-CROATIA": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null,
-      "kickoffUTC": "2026-06-23T23:00:00+00:00"
     },
     "COLOMBIA-CONGO DR": {
       "homeGoals": null,
