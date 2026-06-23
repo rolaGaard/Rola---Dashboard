@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-23T03:01:14.171475Z",
+  "updated": "2026-06-23T03:10:28.930964Z",
   "matches": {
+    "JORDAN-ALGERIA": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "1H",
+      "elapsed": 10,
+      "kickoffUTC": "2026-06-23T03:00:00+00:00",
+      "events": []
+    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -332,7 +340,40 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-13T22:00:00+00:00",
-      "events": []
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "I. Saibari",
+          "team": "MOROCCO",
+          "minute": 21,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Vinicius Junior",
+          "team": "BRAZIL",
+          "minute": 32,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Casemiro",
+          "team": "BRAZIL",
+          "minute": 37,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Roger Iba\u00f1ez",
+          "team": "BRAZIL",
+          "minute": 43,
+          "extra": null
+        }
+      ]
     },
     "HAITI-SCOTLAND": {
       "homeGoals": 0,
@@ -2290,13 +2331,6 @@
           "extra": 3
         }
       ]
-    },
-    "JORDAN-ALGERIA": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null,
-      "kickoffUTC": "2026-06-23T03:00:00+00:00"
     },
     "PORTUGAL-UZBEKISTAN": {
       "homeGoals": null,
