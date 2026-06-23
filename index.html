@@ -22,7 +22,7 @@
   }
   .header {
     background:#0a0a0a; padding:clamp(14px,2.2vw,26px) clamp(16px,3vw,32px);
-    display:flex; align-items:center;
+    display:flex; align-items:flex-start;
     justify-content:space-between; flex-wrap:wrap; gap:16px;
     border-bottom:1px solid #1f1f1f;
     container-type:inline-size; container-name:header;
@@ -37,6 +37,9 @@
   .header-title { color:#fff; font-size:clamp(17px,2.4vw,28px); font-weight:700; line-height:1.15; }
   .header-by { color:#94a3b8; font-size:clamp(11px,1.3vw,15px); font-weight:500; }
   .header-sub { color:#94a3b8; font-size:clamp(11px,1.3vw,15px); margin-top:2px; }
+  .header-right { display:flex; flex-direction:column; align-items:flex-end; gap:10px; }
+  .header-clock { text-align:right; }
+  .header-controls { display:flex; align-items:center; gap:10px; }
   .clock-label { color:#94a3b8; font-size:11px; text-align:right; }
   .clock-value { color:#FFD700; font-size:26px; font-weight:700; font-variant-numeric:tabular-nums; text-align:right; }
   .stats-bar {
@@ -454,20 +457,21 @@
       <div class="header-sub" id="header-sub">USA · Canadá · México</div>
     </div>
   </div>
-  <div style="display:flex; align-items:center; gap:14px;">
-    <select id="lang-select" class="lang-select" aria-label="Idioma / Language">
-      <option value="es">🇦🇷 ES</option>
-      <option value="en">🇬🇧 EN</option>
-      <option value="pt">🇧🇷 PT</option>
-      <option value="de">🇩🇪 DE</option>
-      <option value="nl">🇳🇱 NL</option>
-    </select>
-    <div>
+  <div class="header-right">
+    <div class="header-clock">
       <div class="clock-label" id="hora-local-label">Hora Argentina</div>
       <div class="clock-value" id="clock">--:--</div>
     </div>
-    <div class="settings-menu-wrap" id="settings-menu-wrap" style="display:none;">
-      <button id="settings-btn" class="fullscreen-btn" aria-label="Configuración" aria-haspopup="true" aria-expanded="false">⚙️</button>
+    <div class="header-controls">
+      <select id="lang-select" class="lang-select" aria-label="Idioma / Language">
+        <option value="es">🇦🇷 ES</option>
+        <option value="en">🇬🇧 EN</option>
+        <option value="pt">🇧🇷 PT</option>
+        <option value="de">🇩🇪 DE</option>
+        <option value="nl">🇳🇱 NL</option>
+      </select>
+      <div class="settings-menu-wrap" id="settings-menu-wrap" style="display:none;">
+        <button id="settings-btn" class="fullscreen-btn" aria-label="Configuración" aria-haspopup="true" aria-expanded="false">⚙️</button>
       <div id="settings-dropdown" class="settings-dropdown" style="display:none;">
         <button id="install-btn" class="settings-option">
           <span class="settings-option-icon">📲</span>
@@ -486,6 +490,7 @@
       </div>
     </div>
     <button id="fullscreen-btn" class="fullscreen-btn" aria-label="Pantalla completa">⛶</button>
+    </div>
   </div>
 </div>
 
