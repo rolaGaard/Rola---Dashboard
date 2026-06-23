@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-23T03:10:28.930964Z",
+  "updated": "2026-06-23T03:20:29.720808Z",
   "matches": {
     "JORDAN-ALGERIA": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 10,
+      "elapsed": 20,
       "kickoffUTC": "2026-06-23T03:00:00+00:00",
       "events": []
     },
