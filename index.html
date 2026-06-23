@@ -257,6 +257,7 @@
   .cl-row.team-clickable:hover { background:#f1f5f9; }
   .cl-row.cl-out { color:#64748b; }
   .cl-flag { font-size:16px; flex-shrink:0; }
+  .cl-empty { color:#94a3b8; font-size:12px; font-style:italic; text-align:center; padding:20px 8px; }
   .cl-disclaimer {
     color:#94a3b8; font-size:11px; font-style:italic; text-align:center;
     margin-top:14px; padding:0 16px;
@@ -663,8 +664,8 @@ const I18N = {
     regionLabel: 'Ubicación', mundialesParticipados: 'Mundiales jugados', mundialesGanados: 'Mundiales ganados',
     datosAproximados: 'Datos aproximados. Fuente oficial: FIFA.', datosNoDisponibles: 'Datos no disponibles para este equipo.',
     plantilla: 'Plantilla', plantillaNoDisponible: 'Plantilla no disponible por el momento.',
-    paisesTitulo: 'Selecciones del Mundial 2026', paisesCompiten: 'Países que compiten', paisesAfuera: 'Quedaron fuera de la Copa',
-    paisesDisclaimer: 'Lista no exhaustiva ni verificada de forma oficial. Para el listado completo y definitivo, consultá FIFA.com.',
+    paisesTitulo: 'Estado del Mundial 2026', paisesCompiten: 'Siguen en carrera', paisesAfuera: 'Quedaron eliminados',
+    paisesDisclaimer: 'Un equipo pasa a "Eliminados" cuando su grupo terminó los 6 partidos y quedó 3° o 4°. Por ahora no incluye eliminaciones de fases posteriores a la de grupos.', paisesSinEliminados: 'Todavía no hay equipos eliminados.',
     pj: 'PJ', g: 'G', e: 'E', p: 'P', dg: 'DG', pts: 'PTS',
   },
   en: {
@@ -706,8 +707,8 @@ const I18N = {
     regionLabel: 'Location', mundialesParticipados: 'World Cup appearances', mundialesGanados: 'World Cup titles',
     datosAproximados: 'Approximate data. Official source: FIFA.', datosNoDisponibles: 'No data available for this team.',
     plantilla: 'Squad', plantillaNoDisponible: 'Squad not available yet.',
-    paisesTitulo: '2026 World Cup teams', paisesCompiten: 'Teams competing', paisesAfuera: 'Missed out on the Cup',
-    paisesDisclaimer: 'Not an exhaustive or officially verified list. For the complete, definitive list, check FIFA.com.',
+    paisesTitulo: '2026 World Cup status', paisesCompiten: 'Still in the running', paisesAfuera: 'Eliminated',
+    paisesDisclaimer: 'A team moves to "Eliminated" once its group finishes all 6 matches and it placed 3rd or 4th. Doesn\'t yet account for eliminations beyond the group stage.', paisesSinEliminados: 'No teams eliminated yet.',
     pj: 'P', g: 'W', e: 'D', p: 'L', dg: 'GD', pts: 'PTS',
   },
   pt: {
@@ -749,8 +750,8 @@ const I18N = {
     regionLabel: 'Localização', mundialesParticipados: 'Copas do Mundo disputadas', mundialesGanados: 'Copas do Mundo conquistadas',
     datosAproximados: 'Dados aproximados. Fonte oficial: FIFA.', datosNoDisponibles: 'Dados não disponíveis para esta seleção.',
     plantilla: 'Elenco', plantillaNoDisponible: 'Elenco não disponível por enquanto.',
-    paisesTitulo: 'Seleções da Copa do Mundo 2026', paisesCompiten: 'Países que disputam', paisesAfuera: 'Ficaram de fora da Copa',
-    paisesDisclaimer: 'Lista não exaustiva nem verificada oficialmente. Para a lista completa e definitiva, consulte a FIFA.com.',
+    paisesTitulo: 'Situação da Copa do Mundo 2026', paisesCompiten: 'Seguem na disputa', paisesAfuera: 'Foram eliminados',
+    paisesDisclaimer: 'Uma seleção passa para "Eliminados" quando seu grupo termina os 6 jogos e ela fica em 3° ou 4°. Por enquanto não considera eliminações além da fase de grupos.', paisesSinEliminados: 'Ainda não há seleções eliminadas.',
     pj: 'PJ', g: 'V', e: 'E', p: 'D', dg: 'SG', pts: 'PTS',
   },
   de: {
@@ -792,8 +793,8 @@ const I18N = {
     regionLabel: 'Lage', mundialesParticipados: 'WM-Teilnahmen', mundialesGanados: 'WM-Titel',
     datosAproximados: 'Ungefähre Angaben. Offizielle Quelle: FIFA.', datosNoDisponibles: 'Keine Daten für dieses Team verfügbar.',
     plantilla: 'Kader', plantillaNoDisponible: 'Kader derzeit nicht verfügbar.',
-    paisesTitulo: 'Teams der WM 2026', paisesCompiten: 'Teilnehmende Länder', paisesAfuera: 'Verpasste Qualifikation',
-    paisesDisclaimer: 'Keine vollständige oder offiziell geprüfte Liste. Die vollständige, endgültige Liste findest du auf FIFA.com.',
+    paisesTitulo: 'WM-2026-Stand', paisesCompiten: 'Noch im Turnier', paisesAfuera: 'Ausgeschieden',
+    paisesDisclaimer: 'Ein Team gilt als "Ausgeschieden", sobald seine Gruppe alle 6 Spiele beendet hat und es Platz 3 oder 4 belegte. Ausscheiden nach der Gruppenphase wird derzeit nicht berücksichtigt.', paisesSinEliminados: 'Noch keine Teams ausgeschieden.',
     pj: 'Sp', g: 'S', e: 'U', p: 'N', dg: 'TD', pts: 'Pkt',
   },
   nl: {
@@ -835,8 +836,8 @@ const I18N = {
     regionLabel: 'Locatie', mundialesParticipados: 'WK-deelnames', mundialesGanados: 'WK-titels',
     datosAproximados: 'Geschatte gegevens. Officiële bron: FIFA.', datosNoDisponibles: 'Geen gegevens beschikbaar voor dit land.',
     plantilla: 'Selectie', plantillaNoDisponible: 'Selectie momenteel niet beschikbaar.',
-    paisesTitulo: 'WK 2026-landen', paisesCompiten: 'Deelnemende landen', paisesAfuera: 'Niet gekwalificeerd',
-    paisesDisclaimer: 'Geen volledige of officieel gecontroleerde lijst. Voor de volledige, definitieve lijst, raadpleeg FIFA.com.',
+    paisesTitulo: 'WK 2026-status', paisesCompiten: 'Nog in de strijd', paisesAfuera: 'Uitgeschakeld',
+    paisesDisclaimer: 'Een land verhuist naar "Uitgeschakeld" zodra zijn groep alle 6 wedstrijden heeft afgerond en het 3e of 4e werd. Uitschakelingen na de groepsfase worden nog niet meegenomen.', paisesSinEliminados: 'Nog geen landen uitgeschakeld.',
     pj: 'G', g: 'W', e: 'G', p: 'V', dg: 'DV', pts: 'Pt',
   },
 };
@@ -986,29 +987,6 @@ const REGION_NAMES = {
         NAF:'Noord-Afrika', SSA:'Sub-Saharaans Afrika', WAS:'West-Azië / Midden-Oosten',
         CAS:'Centraal-Azië', EAS:'Oost-Azië', OCE:'Oceanië', TUR:'Europa en Azië (transcontinentaal)' },
 };
-
-// ── Selecciones que NO clasificaron al Mundial 2026 ─────────────────────
-// IMPORTANTE: esta lista es de referencia, armada con información disponible
-// al momento de escribir el código — no está garantizado que sea exhaustiva
-// ni 100% exacta (las eliminatorias de algunas confederaciones, repechajes,
-// etc. pueden tener matices). Es fácil de editar: cada línea es un país.
-// Para el listado oficial y definitivo, la fuente de verdad es FIFA.com.
-const NOT_QUALIFIED = [
-  {name:'Italy', flag:'🇮🇹'},
-  {name:'Chile', flag:'🇨🇱'},
-  {name:'Peru', flag:'🇵🇪'},
-  {name:'Venezuela', flag:'🇻🇪'},
-  {name:'Bolivia', flag:'🇧🇴'},
-  {name:'Nigeria', flag:'🇳🇬'},
-  {name:'Cameroon', flag:'🇨🇲'},
-  {name:'Costa Rica', flag:'🇨🇷'},
-  {name:'China', flag:'🇨🇳'},
-  {name:'Wales', flag:'🏴'},
-  {name:'Denmark', flag:'🇩🇰'},
-  {name:'Poland', flag:'🇵🇱'},
-  {name:'Ukraine', flag:'🇺🇦'},
-  {name:'Greece', flag:'🇬🇷'},
-];
 
 // Official FIFA 3-letter codes for quick search (e.g. "MEX" finds Mexico)
 const COUNTRY_CODES = {
@@ -1737,33 +1715,50 @@ function buildMobileStage(count, label) {
   return html;
 }
 
+// Un equipo se considera eliminado cuando su grupo terminó los 6 partidos
+// y quedó 3° o 4°. Mientras el grupo no esté 100% completo, no se asume
+// eliminación (no hay datos de fase eliminatoria real en este momento).
+function isTeamEliminated(code) {
+  const anyMatch = SCHEDULE.find(m => m.home === code || m.away === code);
+  if (!anyMatch) return false;
+  const groupLetter = anyMatch.group;
+  const groupMatches = SCHEDULE.filter(m => m.group === groupLetter);
+  const allFinished = groupMatches.every(m => {
+    const r = getMatchResult(m);
+    return r.isFinished && r.hasScore;
+  });
+  if (!allFinished) return false;
+  const standings = computeStandings(groupLetter);
+  const idx = standings.findIndex(row => row.team === code);
+  return idx >= 2; // posición 3 o 4 del grupo
+}
+
 function renderCountriesList() {
-  const competing = Object.keys(INTL_NAMES)
+  const allTeams = Object.keys(INTL_NAMES)
     .map(code => ({ code, name: esName(code) }))
     .sort((a, b) => a.name.localeCompare(b.name));
-  const notQualified = NOT_QUALIFIED.slice().sort((a, b) => a.name.localeCompare(b.name));
 
-  const leftRows = competing.map(c =>
-    '<div class="cl-row team-clickable" onclick="openCountryInfo(\'' + c.code.replace(/'/g, "\\'") + '\')">' +
+  const stillIn = allTeams.filter(c => !isTeamEliminated(c.code));
+  const eliminated = allTeams.filter(c => isTeamEliminated(c.code));
+
+  const rowHtml = (c, isOut) =>
+    '<div class="cl-row team-clickable' + (isOut ? ' cl-out' : '') + '" onclick="openCountryInfo(\'' + c.code.replace(/'/g, "\\'") + '\')">' +
       '<span class="cl-flag">' + flag(c.code) + '</span><span>' + c.name + '</span>' +
-    '</div>'
-  ).join('');
+    '</div>';
 
-  const rightRows = notQualified.map(c =>
-    '<div class="cl-row cl-out">' +
-      '<span class="cl-flag">' + c.flag + '</span><span>' + c.name + '</span>' +
-    '</div>'
-  ).join('');
+  const leftRows = stillIn.map(c => rowHtml(c, false)).join('');
+  const rightRows = eliminated.map(c => rowHtml(c, true)).join('') ||
+    '<div class="cl-empty">' + t('paisesSinEliminados') + '</div>';
 
   document.getElementById('countries-view').innerHTML =
-    '<div class="cl-header">🚪 ' + t('paisesTitulo') + '</div>' +
+    '<div class="cl-header">🚫 ' + t('paisesTitulo') + '</div>' +
     '<div class="cl-columns">' +
       '<div class="cl-col">' +
-        '<div class="cl-col-title cl-col-in">✅ ' + t('paisesCompiten') + ' <span class="cl-count">(' + competing.length + ')</span></div>' +
+        '<div class="cl-col-title cl-col-in">✅ ' + t('paisesCompiten') + ' <span class="cl-count">(' + stillIn.length + ')</span></div>' +
         '<div class="cl-list">' + leftRows + '</div>' +
       '</div>' +
       '<div class="cl-col">' +
-        '<div class="cl-col-title cl-col-out">🚪 ' + t('paisesAfuera') + ' <span class="cl-count">(' + notQualified.length + ')</span></div>' +
+        '<div class="cl-col-title cl-col-out">🚫 ' + t('paisesAfuera') + ' <span class="cl-count">(' + eliminated.length + ')</span></div>' +
         '<div class="cl-list">' + rightRows + '</div>' +
       '</div>' +
     '</div>' +
