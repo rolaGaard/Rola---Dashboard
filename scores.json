@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-23T20:10:35.763562Z",
+  "updated": "2026-06-23T20:20:39.475447Z",
   "matches": {
     "ENGLAND-GHANA": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 10,
+      "elapsed": 20,
       "kickoffUTC": "2026-06-23T20:00:00+00:00",
       "events": []
     },
