@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-22T23:50:32.044085Z",
+  "updated": "2026-06-23T00:01:25.090632Z",
   "matches": {
+    "NORWAY-SENEGAL": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "1H",
+      "elapsed": 1,
+      "kickoffUTC": "2026-06-23T00:00:00+00:00",
+      "events": []
+    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -2240,13 +2248,6 @@
       "status": "INT",
       "elapsed": null,
       "kickoffUTC": "2026-06-22T21:00:00+00:00"
-    },
-    "NORWAY-SENEGAL": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null,
-      "kickoffUTC": "2026-06-23T00:00:00+00:00"
     },
     "JORDAN-ALGERIA": {
       "homeGoals": null,
