@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-23T18:32:27.006337Z",
+  "updated": "2026-06-23T18:40:37.819050Z",
   "matches": {
     "PORTUGAL-UZBEKISTAN": {
       "homeGoals": 4,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 68,
+      "elapsed": 77,
       "kickoffUTC": "2026-06-23T17:00:00+00:00",
       "events": [
         {
@@ -46,6 +46,14 @@
           "player": "A. Nematov",
           "team": "PORTUGAL",
           "minute": 60,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "R. Veiga",
+          "team": "PORTUGAL",
+          "minute": 68,
           "extra": null
         }
       ]
