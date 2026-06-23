@@ -1,13 +1,22 @@
 {
-  "updated": "2026-06-23T17:01:14.484115Z",
+  "updated": "2026-06-23T17:10:36.673939Z",
   "matches": {
     "PORTUGAL-UZBEKISTAN": {
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 1,
+      "elapsed": 10,
       "kickoffUTC": "2026-06-23T17:00:00+00:00",
-      "events": []
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "C. Ronaldo",
+          "team": "PORTUGAL",
+          "minute": 6,
+          "extra": null
+        }
+      ]
     },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
