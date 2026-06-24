@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-24T03:30:57.998580Z",
+  "updated": "2026-06-24T03:40:37.536423Z",
   "matches": {
     "COLOMBIA-CONGO DR": {
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 69,
+      "elapsed": 79,
       "kickoffUTC": "2026-06-24T02:00:00+00:00",
       "events": [
         {
@@ -14,6 +14,14 @@
           "player": "J. Lucumi",
           "team": "COLOMBIA",
           "minute": 56,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "D. Munoz",
+          "team": "COLOMBIA",
+          "minute": 76,
           "extra": null
         }
       ],
@@ -28,6 +36,16 @@
             "out": "C. Bakambu",
             "in": "S. Banza",
             "minute": 57
+          },
+          {
+            "out": "A. Masuaku",
+            "in": "J. Kayembe",
+            "minute": 72
+          },
+          {
+            "out": "E. Kayembe",
+            "in": "C. Pickel",
+            "minute": 72
           }
         ],
         "COLOMBIA": [
@@ -40,6 +58,11 @@
             "out": "J. Rodriguez",
             "in": "J. Quintero",
             "minute": 58
+          },
+          {
+            "out": "J. Arias",
+            "in": "R. Rios",
+            "minute": 78
           }
         ]
       },
