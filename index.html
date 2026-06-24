@@ -1154,7 +1154,13 @@ function utcToAR(utcStr){
   return sAdjusted.replace(/00:00$/, '24:00');
 }
 function toARDateStr(utcStr){
-  return new Date(utcStr).toLocaleDateString('en-CA',{});
+  const d = new Date(utcStr);
+  // Mismo criterio que utcToAR: si la hora local es exactamente medianoche,
+  // ese partido se considera parte del día anterior (el "24:00" que se
+  // muestra en pantalla), no del día siguiente que marca el reloj.
+  const timeStr = d.toLocaleTimeString('en-GB', { hour:'2-digit', minute:'2-digit', hour12:false });
+  const effectiveDate = (timeStr === '00:00') ? new Date(d.getTime() - 24 * 60 * 60 * 1000) : d;
+  return effectiveDate.toLocaleDateString('en-CA', {});
 }
 function isLiveStatus(s){ return ['1H','2H','HT','ET','BT','P'].includes(s); }
 function isFinishedStatus(s){ return ['FT','AET','PEN'].includes(s); }
@@ -1224,15 +1230,98 @@ function computeStandings(groupLetter) {
   return rows; // rows[0] = 1st place, rows[1] = 2nd, etc.
 }
 
-// Returns the team name if mathematically guaranteed to finish in `position` (1 or 2), else null.
-// Conservative check: only confirms once all group matches are finished (no math project for partial groups,
-// to avoid wrong guesses — but updates immediately when the group's last match ends, not waiting for other groups).
+// Simula TODOS los resultados posibles (ganó local / empate / ganó visitante)
+// de los partidos pendientes de un grupo, y para cada combinación calcula
+// los puntos finales de cada equipo. Esto respeta que los partidos
+// restantes son entre los mismos 4 equipos (si dos rivales juegan entre sí,
+// no pueden ganar los dos a la vez) — a diferencia de evaluar a cada equipo
+// de forma aislada, que sobreestimaría cuántos puntos pueden sumar los rivales.
+function simulateGroupOutcomes(groupLetter) {
+  const groupMatches = SCHEDULE.filter(m => m.group === groupLetter);
+  const teams = [...new Set(groupMatches.flatMap(m => [m.home, m.away]))];
+  const basePts = {};
+  teams.forEach(t => { basePts[t] = 0; });
+
+  const pending = [];
+  groupMatches.forEach(m => {
+    const r = getMatchResult(m);
+    if (r.isFinished && r.hasScore) {
+      if (r.homeGoals > r.awayGoals) basePts[m.home] += 3;
+      else if (r.homeGoals < r.awayGoals) basePts[m.away] += 3;
+      else { basePts[m.home] += 1; basePts[m.away] += 1; }
+    } else {
+      pending.push(m);
+    }
+  });
+
+  const outcomes = [];
+  function backtrack(idx, deltas) {
+    if (idx === pending.length) { outcomes.push(deltas); return; }
+    const m = pending[idx];
+    backtrack(idx + 1, { ...deltas, [m.home]: (deltas[m.home] || 0) + 3 });
+    backtrack(idx + 1, { ...deltas, [m.home]: (deltas[m.home] || 0) + 1, [m.away]: (deltas[m.away] || 0) + 1 });
+    backtrack(idx + 1, { ...deltas, [m.away]: (deltas[m.away] || 0) + 3 });
+  }
+  backtrack(0, {});
+
+  return { teams, basePts, pending, outcomes };
+}
+
+// Un equipo está matemáticamente asegurado en el top 2 si, en TODOS los
+// escenarios posibles de los partidos restantes, como máximo 1 rival puede
+// terminar con puntos iguales o superiores a los suyos. Un empate de puntos
+// con otro equipo se trata como "riesgo" (no garantizado), porque ahí
+// definiría la diferencia de gol, que no estamos simulando con precisión.
+function isGuaranteedTop2(team, simData) {
+  const { teams, basePts, outcomes } = simData;
+  return outcomes.every(outcome => {
+    const finals = teams.map(t => basePts[t] + (outcome[t] || 0));
+    const myIdx = teams.indexOf(team);
+    const myPts = finals[myIdx];
+    let riskyRivals = 0;
+    teams.forEach((rival, i) => {
+      if (rival === team) return;
+      if (finals[i] >= myPts) riskyRivals++;
+    });
+    return riskyRivals <= 1;
+  });
+}
+
+// Igual que arriba, pero exige asegurar el 1° puesto exacto: ningún rival
+// puede igualar ni superar sus puntos en ningún escenario posible.
+function isGuaranteedFirst(team, simData) {
+  const { teams, basePts, outcomes } = simData;
+  return outcomes.every(outcome => {
+    const finals = teams.map(t => basePts[t] + (outcome[t] || 0));
+    const myIdx = teams.indexOf(team);
+    const myPts = finals[myIdx];
+    return teams.every((rival, i) => rival === team || finals[i] < myPts);
+  });
+}
+
+// Devuelve el equipo que ya tiene asegurado el puesto 1 o 2 del grupo, o
+// null si todavía no está matemáticamente garantizado. Si el grupo ya
+// terminó todos sus partidos, usa la tabla final real (con diferencia de
+// gol incluida). Si no, simula los resultados posibles restantes y va
+// completando los cupos a medida que se confirman matemáticamente — no
+// hace falta que los dos estén asegurados al mismo tiempo: si solo uno de
+// los dos clasificados ya está garantizado, se muestra ese y el otro cupo
+// queda "Por definir" hasta que también se confirme.
 function getQualifier(groupLetter, position) {
   const groupMatches = SCHEDULE.filter(m => m.group === groupLetter);
   const allFinished = groupMatches.every(m => getMatchResult(m).isFinished && getMatchResult(m).hasScore);
-  if (!allFinished) return null;
   const standings = computeStandings(groupLetter);
-  return standings[position - 1] ? standings[position - 1].team : null;
+
+  if (allFinished) {
+    return standings[position - 1] ? standings[position - 1].team : null;
+  }
+
+  const simData = simulateGroupOutcomes(groupLetter);
+  const guaranteedInOrder = standings
+    .map(row => row.team)
+    .filter(team => isGuaranteedTop2(team, simData));
+
+  return guaranteedInOrder[position - 1] || null;
 }
 
 function buildMatchCard(m) {
