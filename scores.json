@@ -1,387 +1,11 @@
 {
-  "updated": "2026-06-24T20:50:37.592805Z",
+  "updated": "2026-06-24T20:56:47.388199Z",
   "matches": {
-    "SWITZERLAND-CANADA": {
-      "homeGoals": 2,
-      "awayGoals": 1,
-      "status": "2H",
-      "elapsed": 90,
-      "kickoffUTC": "2026-06-24T19:00:00+00:00",
-      "events": [
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "C. Larin",
-          "team": "CANADA",
-          "minute": 32,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "G. Xhaka",
-          "team": "SWITZERLAND",
-          "minute": 32,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "R. Vargas",
-          "team": "SWITZERLAND",
-          "minute": 46,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "J. Manzambi",
-          "team": "SWITZERLAND",
-          "minute": 57,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "P. David",
-          "team": "CANADA",
-          "minute": 76,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "L. Millar",
-          "team": "CANADA",
-          "minute": 87,
-          "extra": null
-        }
-      ],
-      "substitutions": {
-        "CANADA": [
-          {
-            "out": "M. Choiniere",
-            "in": "S. Eustaquio",
-            "minute": 58
-          },
-          {
-            "out": "A. Ahmed",
-            "in": "L. Millar",
-            "minute": 58
-          },
-          {
-            "out": "C. Larin",
-            "in": "T. Oluwaseyi",
-            "minute": 58
-          },
-          {
-            "out": "T. Buchanan",
-            "in": "P. David",
-            "minute": 75
-          },
-          {
-            "out": "R. Laryea",
-            "in": "J. Shaffelburg",
-            "minute": 83
-          }
-        ],
-        "SWITZERLAND": [
-          {
-            "out": "L. Jaquez",
-            "in": "S. Widmer",
-            "minute": 74
-          },
-          {
-            "out": "D. Sow",
-            "in": "M. Aebischer",
-            "minute": 74
-          },
-          {
-            "out": "R. Vargas",
-            "in": "D. Ndoye",
-            "minute": 80
-          },
-          {
-            "out": "J. Manzambi",
-            "in": "C. Fassnacht",
-            "minute": 85
-          },
-          {
-            "out": "B. Embolo",
-            "in": "C. Itten",
-            "minute": 85
-          }
-        ]
-      },
-      "lineups": {
-        "SWITZERLAND": {
-          "formation": "4-2-3-1",
-          "coach": "Murat Yakin",
-          "startXI": [
-            {
-              "name": "Gregor Kobel",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Luca Jaquez",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "Nico Elvedi",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Manuel Akanji",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Ricardo Rodr\u00edguez",
-              "number": 13,
-              "pos": "D"
-            },
-            {
-              "name": "Remo Freuler",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Granit Xhaka",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Djibril Sow",
-              "number": 15,
-              "pos": "M"
-            },
-            {
-              "name": "Johan Manzambi",
-              "number": 9,
-              "pos": "M"
-            },
-            {
-              "name": "Rub\u00e9n Vargas",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Breel Embolo",
-              "number": 7,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Marvin Keller",
-              "number": 21,
-              "pos": "G"
-            },
-            {
-              "name": "Yvon Mvogo",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Eray C\u00f6mert",
-              "number": 18,
-              "pos": "D"
-            },
-            {
-              "name": "Aur\u00e8le Amenda",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Silvan Widmer",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Denis Zakaria",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Dan Ndoye",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "Michel Aebischer",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Christian Fassnacht",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "Ardon Jashari",
-              "number": 14,
-              "pos": "M"
-            },
-            {
-              "name": "Fabian Rieder",
-              "number": 22,
-              "pos": "M"
-            },
-            {
-              "name": "Noah Okafor",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Zeki Amdouni",
-              "number": 23,
-              "pos": "F"
-            },
-            {
-              "name": "C\u00e9dric Itten",
-              "number": 26,
-              "pos": "F"
-            }
-          ]
-        },
-        "CANADA": {
-          "formation": "4-4-2",
-          "coach": "Jesse Marsch",
-          "startXI": [
-            {
-              "name": "Maxime Cr\u00e9peau",
-              "number": 16,
-              "pos": "G"
-            },
-            {
-              "name": "Alistair Johnston",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Luc De Fougerolles",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Derek Cornelius",
-              "number": 13,
-              "pos": "D"
-            },
-            {
-              "name": "Richie Laryea",
-              "number": 22,
-              "pos": "D"
-            },
-            {
-              "name": "Tajon Buchanan",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Nathan-Dylan Saliba",
-              "number": 25,
-              "pos": "M"
-            },
-            {
-              "name": "Mathieu Choini\u00e8re",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Ali Ahmed",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Jonathan David",
-              "number": 10,
-              "pos": "F"
-            },
-            {
-              "name": "Cyle Larin",
-              "number": 9,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Stephen Eustaquio",
-              "number": 7,
-              "pos": "M"
-            },
-            {
-              "name": "Liam Millar",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "Tani Oluwaseyi",
-              "number": 12,
-              "pos": "F"
-            },
-            {
-              "name": "Dayne St. Clair",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Owen Goodman",
-              "number": 18,
-              "pos": "G"
-            },
-            {
-              "name": "Joel Waterman",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Niko Sigur",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "Moise Bombito",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Alphonso Davies",
-              "number": 19,
-              "pos": "D"
-            },
-            {
-              "name": "Jonathan Osorio",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "Jacob Shaffelburg",
-              "number": 14,
-              "pos": "F"
-            },
-            {
-              "name": "Promise David",
-              "number": 24,
-              "pos": "F"
-            },
-            {
-              "name": "Jayden Nelson",
-              "number": 26,
-              "pos": "F"
-            }
-          ]
-        }
-      }
-    },
     "BOSNIA & HERZEGOVINA-QATAR": {
       "homeGoals": 3,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 88,
+      "elapsed": 90,
       "kickoffUTC": "2026-06-24T19:00:00+00:00",
       "events": [
         {
@@ -19094,19 +18718,946 @@
         }
       }
     },
+    "SWITZERLAND-CANADA": {
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-06-24T19:00:00+00:00",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "C. Larin",
+          "team": "CANADA",
+          "minute": 32,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "G. Xhaka",
+          "team": "SWITZERLAND",
+          "minute": 32,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "R. Vargas",
+          "team": "SWITZERLAND",
+          "minute": 46,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "J. Manzambi",
+          "team": "SWITZERLAND",
+          "minute": 57,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "P. David",
+          "team": "CANADA",
+          "minute": 76,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "L. Millar",
+          "team": "CANADA",
+          "minute": 87,
+          "extra": null
+        }
+      ],
+      "substitutions": {
+        "CANADA": [
+          {
+            "out": "M. Choiniere",
+            "in": "S. Eustaquio",
+            "minute": 58
+          },
+          {
+            "out": "A. Ahmed",
+            "in": "L. Millar",
+            "minute": 58
+          },
+          {
+            "out": "C. Larin",
+            "in": "T. Oluwaseyi",
+            "minute": 58
+          },
+          {
+            "out": "T. Buchanan",
+            "in": "P. David",
+            "minute": 75
+          },
+          {
+            "out": "R. Laryea",
+            "in": "J. Shaffelburg",
+            "minute": 83
+          }
+        ],
+        "SWITZERLAND": [
+          {
+            "out": "L. Jaquez",
+            "in": "S. Widmer",
+            "minute": 74
+          },
+          {
+            "out": "D. Sow",
+            "in": "M. Aebischer",
+            "minute": 74
+          },
+          {
+            "out": "R. Vargas",
+            "in": "D. Ndoye",
+            "minute": 80
+          },
+          {
+            "out": "J. Manzambi",
+            "in": "C. Fassnacht",
+            "minute": 85
+          },
+          {
+            "out": "B. Embolo",
+            "in": "C. Itten",
+            "minute": 85
+          }
+        ]
+      },
+      "lineups": {
+        "SWITZERLAND": {
+          "formation": "4-2-3-1",
+          "coach": "Murat Yakin",
+          "startXI": [
+            {
+              "name": "Gregor Kobel",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Luca Jaquez",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Nico Elvedi",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Manuel Akanji",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Ricardo Rodr\u00edguez",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Remo Freuler",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Granit Xhaka",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Djibril Sow",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Johan Manzambi",
+              "number": 9,
+              "pos": "M"
+            },
+            {
+              "name": "Rub\u00e9n Vargas",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Breel Embolo",
+              "number": 7,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Marvin Keller",
+              "number": 21,
+              "pos": "G"
+            },
+            {
+              "name": "Yvon Mvogo",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Eray C\u00f6mert",
+              "number": 18,
+              "pos": "D"
+            },
+            {
+              "name": "Aur\u00e8le Amenda",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Silvan Widmer",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Denis Zakaria",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Dan Ndoye",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Michel Aebischer",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Christian Fassnacht",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Ardon Jashari",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Fabian Rieder",
+              "number": 22,
+              "pos": "M"
+            },
+            {
+              "name": "Noah Okafor",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Zeki Amdouni",
+              "number": 23,
+              "pos": "F"
+            },
+            {
+              "name": "C\u00e9dric Itten",
+              "number": 26,
+              "pos": "F"
+            }
+          ]
+        },
+        "CANADA": {
+          "formation": "4-4-2",
+          "coach": "Jesse Marsch",
+          "startXI": [
+            {
+              "name": "Maxime Cr\u00e9peau",
+              "number": 16,
+              "pos": "G"
+            },
+            {
+              "name": "Alistair Johnston",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Luc De Fougerolles",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Derek Cornelius",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Richie Laryea",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "Tajon Buchanan",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Nathan-Dylan Saliba",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "Mathieu Choini\u00e8re",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Ali Ahmed",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Jonathan David",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Cyle Larin",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Stephen Eustaquio",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Liam Millar",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Tani Oluwaseyi",
+              "number": 12,
+              "pos": "F"
+            },
+            {
+              "name": "Dayne St. Clair",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Owen Goodman",
+              "number": 18,
+              "pos": "G"
+            },
+            {
+              "name": "Joel Waterman",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Niko Sigur",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Moise Bombito",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Alphonso Davies",
+              "number": 19,
+              "pos": "D"
+            },
+            {
+              "name": "Jonathan Osorio",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Jacob Shaffelburg",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "Promise David",
+              "number": 24,
+              "pos": "F"
+            },
+            {
+              "name": "Jayden Nelson",
+              "number": 26,
+              "pos": "F"
+            }
+          ]
+        }
+      }
+    },
     "MOROCCO-HAITI": {
       "homeGoals": null,
       "awayGoals": null,
       "status": "NS",
       "elapsed": null,
-      "kickoffUTC": "2026-06-24T22:00:00+00:00"
+      "kickoffUTC": "2026-06-24T22:00:00+00:00",
+      "lineups": {
+        "MOROCCO": {
+          "formation": "4-2-3-1",
+          "coach": "Mohamed Ouahbi",
+          "startXI": [
+            {
+              "name": "Yassine Bounou",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Achraf Hakimi",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Redouane Halhal",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Chadi Riad",
+              "number": 18,
+              "pos": "D"
+            },
+            {
+              "name": "Anass Salah-Eddine",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Sofyan Amrabat",
+              "number": 4,
+              "pos": "M"
+            },
+            {
+              "name": "Neil El Aynaoui",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "Brahim D\u00edaz",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Ismael Saibari",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Bilal El Khannouss",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Ayoub El Kaabi",
+              "number": 20,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Munir El Kajoui",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Ahmed Reda Tagnaouti",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Noussair Mazraoui",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Marwane Saadane",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Zakaria El Ouahdi",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Issa Diop",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "Youssef Belammari",
+              "number": 19,
+              "pos": "D"
+            },
+            {
+              "name": "Ayyoub Bouaddi",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Chemsdine Talbi",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Azzedine Ounahi",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Samir El Mourabet",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Gessime Yassine",
+              "number": 16,
+              "pos": "F"
+            },
+            {
+              "name": "Amine Sbai",
+              "number": 17,
+              "pos": "F"
+            },
+            {
+              "name": "Soufiane Rahimi",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Ayoube Amaimouni Echghouyab",
+              "number": 21,
+              "pos": "F"
+            }
+          ]
+        },
+        "HAITI": {
+          "formation": "4-4-2",
+          "coach": "Sebastien Migne",
+          "startXI": [
+            {
+              "name": "Johny Placide",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Jean-K\u00e9vin Duverne",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "Ricardo Ad\u00e9",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Hannes Delcroix",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Martin Exp\u00e9rience",
+              "number": 8,
+              "pos": "D"
+            },
+            {
+              "name": "Josu\u00e9 Casimir",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Danley Jean Jacques",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Jean-Ricner Bellegarde",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Ruben Providence",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Wilson Isidor",
+              "number": 18,
+              "pos": "F"
+            },
+            {
+              "name": "Lenny Joseph",
+              "number": 16,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Alexandre Pierre",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Josu\u00e9 Duverger",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Carlens Arcus",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Keeto Thermoncy",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Garven-Michee Metusala",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "Duke Lacroix",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Carl Fred Saint\u00e9",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Wilguens Paugain",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Woodensky Pierre",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "Dominique Simon",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "Derrick Etienne",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Frantzdy Pierrot",
+              "number": 20,
+              "pos": "F"
+            },
+            {
+              "name": "Louicius Don Deedson",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Yassin Fortune",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Duckens Nazon",
+              "number": 9,
+              "pos": "F"
+            }
+          ]
+        }
+      }
     },
     "SCOTLAND-BRAZIL": {
       "homeGoals": null,
       "awayGoals": null,
       "status": "NS",
       "elapsed": null,
-      "kickoffUTC": "2026-06-24T22:00:00+00:00"
+      "kickoffUTC": "2026-06-24T22:00:00+00:00",
+      "lineups": {
+        "SCOTLAND": {
+          "formation": "4-4-1-1",
+          "coach": "Steve Clarke",
+          "startXI": [
+            {
+              "name": "Angus Gunn",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Nathan Patterson",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "Scott McKenna",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Jack Hendry",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Andy Robertson",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Ben Gannon-Doak",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Kenny McLean",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Lewis Ferguson",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "John McGinn",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Scott McTominay",
+              "number": 4,
+              "pos": "F"
+            },
+            {
+              "name": "Lawrence Shankland",
+              "number": 20,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Liam Kelly",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Craig Gordon",
+              "number": 21,
+              "pos": "G"
+            },
+            {
+              "name": "Aaron Hickey",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Grant Hanley",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Kieran Tierney",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "John Souttar",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Dominic Hyam",
+              "number": 16,
+              "pos": "D"
+            },
+            {
+              "name": "Tony Ralston",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Tyler Fletcher",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Ryan Christie",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Findlay Curtis",
+              "number": 25,
+              "pos": "F"
+            },
+            {
+              "name": "Lyndon Dykes",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Che Adams",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Ross Stewart",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "George Hirst",
+              "number": 18,
+              "pos": "F"
+            }
+          ]
+        },
+        "BRAZIL": {
+          "formation": "4-3-3",
+          "coach": "Carlo Ancelotti",
+          "startXI": [
+            {
+              "name": "Alisson",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Danilo",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Marquinhos",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Gabriel Magalh\u00e3es",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Douglas Santos",
+              "number": 16,
+              "pos": "D"
+            },
+            {
+              "name": "Bruno Guimar\u00e3es",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Casemiro",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "Lucas Paquet\u00e1",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Rayan",
+              "number": 26,
+              "pos": "F"
+            },
+            {
+              "name": "Matheus Cunha",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Vin\u00edcius J\u00fanior",
+              "number": 7,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Weverton",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Ederson",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Alex Sandro",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "Bremer",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "L\u00e9o Pereira",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Roger Iba\u00f1ez",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "\u00c9derson",
+              "number": 2,
+              "pos": "M"
+            },
+            {
+              "name": "Fabinho",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Danilo Santos",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Luiz Henrique",
+              "number": 21,
+              "pos": "F"
+            },
+            {
+              "name": "Neymar",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Endrick",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Gabriel Martinelli",
+              "number": 22,
+              "pos": "F"
+            },
+            {
+              "name": "Igor Thiago",
+              "number": 25,
+              "pos": "F"
+            }
+          ]
+        }
+      }
     },
     "CZECHIA-MEXICO": {
       "homeGoals": null,
