@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T07:50:42.635815Z",
+  "updated": "2026-06-24T16:01:17.509238Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -17331,8 +17331,8 @@
           },
           {
             "out": "Prince Kwabena Adu",
-            "in": "Abdul Rahman Baba",
-            "minute": 95
+            "in": "Rahman Baba",
+            "minute": 90
           }
         ]
       },
@@ -17399,13 +17399,28 @@
           ],
           "substitutes": [
             {
+              "name": "Bukayo Saka",
+              "number": 7,
+              "pos": "F"
+            },
+            {
               "name": "Nico O'Reilly",
               "number": 3,
               "pos": "D"
             },
             {
-              "name": "Bukayo Saka",
-              "number": 7,
+              "name": "Morgan Rogers",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Eberechi Eze",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Marcus Rashford",
+              "number": 11,
               "pos": "F"
             },
             {
@@ -17444,18 +17459,8 @@
               "pos": "M"
             },
             {
-              "name": "Eberechi Eze",
-              "number": 21,
-              "pos": "M"
-            },
-            {
               "name": "Kobbie Mainoo",
               "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "Morgan Rogers",
-              "number": 17,
               "pos": "M"
             },
             {
@@ -17466,11 +17471,6 @@
             {
               "name": "Ollie Watkins",
               "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Marcus Rashford",
-              "number": 11,
               "pos": "F"
             }
           ]
@@ -17547,6 +17547,16 @@
               "pos": "F"
             },
             {
+              "name": "Kojo Peprah Oppong",
+              "number": 21,
+              "pos": "D"
+            },
+            {
+              "name": "Rahman Baba",
+              "number": 17,
+              "pos": "D"
+            },
+            {
               "name": "Lawrence Ati Zigi",
               "number": 1,
               "pos": "G"
@@ -17555,11 +17565,6 @@
               "name": "Joseph Anang",
               "number": 12,
               "pos": "G"
-            },
-            {
-              "name": "Kojo Peprah Oppong",
-              "number": 21,
-              "pos": "D"
             },
             {
               "name": "Derrick Luckassen",
@@ -17574,11 +17579,6 @@
             {
               "name": "Abdul Mumin",
               "number": 6,
-              "pos": "D"
-            },
-            {
-              "name": "Rahman Baba",
-              "number": 17,
               "pos": "D"
             },
             {
