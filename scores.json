@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T17:50:39.326446Z",
+  "updated": "2026-06-24T18:01:26.927067Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -18347,14 +18347,540 @@
       "awayGoals": null,
       "status": "NS",
       "elapsed": null,
-      "kickoffUTC": "2026-06-24T19:00:00+00:00"
+      "kickoffUTC": "2026-06-24T19:00:00+00:00",
+      "lineups": {
+        "SWITZERLAND": {
+          "formation": "4-2-3-1",
+          "coach": "Murat Yakin",
+          "startXI": [
+            {
+              "name": "Gregor Kobel",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Luca Jaquez",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Nico Elvedi",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Manuel Akanji",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Ricardo Rodr\u00edguez",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Remo Freuler",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Granit Xhaka",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Johan Manzambi",
+              "number": 9,
+              "pos": "M"
+            },
+            {
+              "name": "Djibril Sow",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Rub\u00e9n Vargas",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Breel Embolo",
+              "number": 7,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Marvin Keller",
+              "number": 21,
+              "pos": "G"
+            },
+            {
+              "name": "Yvon Mvogo",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Eray C\u00f6mert",
+              "number": 18,
+              "pos": "D"
+            },
+            {
+              "name": "Aur\u00e8le Amenda",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Silvan Widmer",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Denis Zakaria",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Dan Ndoye",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Michel Aebischer",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Christian Fassnacht",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Ardon Jashari",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Fabian Rieder",
+              "number": 22,
+              "pos": "M"
+            },
+            {
+              "name": "Noah Okafor",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Zeki Amdouni",
+              "number": 23,
+              "pos": "F"
+            },
+            {
+              "name": "C\u00e9dric Itten",
+              "number": 26,
+              "pos": "F"
+            }
+          ]
+        },
+        "CANADA": {
+          "formation": "4-4-2",
+          "coach": "Jesse Marsch",
+          "startXI": [
+            {
+              "name": "Maxime Cr\u00e9peau",
+              "number": 16,
+              "pos": "G"
+            },
+            {
+              "name": "Alistair Johnston",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Luc De Fougerolles",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Derek Cornelius",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Richie Laryea",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "Tajon Buchanan",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Mathieu Choini\u00e8re",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Nathan-Dylan Saliba",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "Ali Ahmed",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Jonathan David",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Cyle Larin",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Dayne St. Clair",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Owen Goodman",
+              "number": 18,
+              "pos": "G"
+            },
+            {
+              "name": "Joel Waterman",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Niko Sigur",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Moise Bombito",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Alphonso Davies",
+              "number": 19,
+              "pos": "D"
+            },
+            {
+              "name": "Stephen Eustaquio",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Liam Millar",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Jonathan Osorio",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Jacob Shaffelburg",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "Tani Oluwaseyi",
+              "number": 12,
+              "pos": "F"
+            },
+            {
+              "name": "Promise David",
+              "number": 24,
+              "pos": "F"
+            },
+            {
+              "name": "Jayden Nelson",
+              "number": 26,
+              "pos": "F"
+            }
+          ]
+        }
+      }
     },
     "BOSNIA & HERZEGOVINA-QATAR": {
       "homeGoals": null,
       "awayGoals": null,
       "status": "NS",
       "elapsed": null,
-      "kickoffUTC": "2026-06-24T19:00:00+00:00"
+      "kickoffUTC": "2026-06-24T19:00:00+00:00",
+      "lineups": {
+        "BOSNIA & HERZEGOVINA": {
+          "formation": "4-4-2",
+          "coach": "Sergej Barbarez",
+          "startXI": [
+            {
+              "name": "Nikola Vasilj",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Arjan Mali\u0107",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Nikola Kati\u0107",
+              "number": 18,
+              "pos": "D"
+            },
+            {
+              "name": "Stjepan Radelji\u0107",
+              "number": 21,
+              "pos": "D"
+            },
+            {
+              "name": "Sead Kola\u0161inac",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Esmir Bajraktarevi\u0107",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Ivan \u0160unji\u0107",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Ivan Ba\u0161i\u0107",
+              "number": 13,
+              "pos": "M"
+            },
+            {
+              "name": "Kerim Alajbegovi\u0107",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "Ermedin Demirovi\u0107",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Edin D\u017eeko",
+              "number": 11,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Martin Zlomisli\u0107",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Mladen Jurkas",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Nihad Mujaki\u0107",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Dennis Had\u017eikaduni\u0107",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Amar Dedi\u0107",
+              "number": 7,
+              "pos": "D"
+            },
+            {
+              "name": "Amir Had\u017eiahmetovi\u0107",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Armin Gigovi\u0107",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Benjamin Tahirovi\u0107",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "D\u017eenis Burni\u0107",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Ermin Mahmi\u0107",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "Amar Memi\u0107",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Jovo Luki\u0107",
+              "number": 25,
+              "pos": "F"
+            },
+            {
+              "name": "Samed Ba\u017edar",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Haris Tabakovi\u0107",
+              "number": 23,
+              "pos": "F"
+            }
+          ]
+        },
+        "QATAR": {
+          "formation": "4-3-3",
+          "coach": "Julen Lopetegui",
+          "startXI": [
+            {
+              "name": "Mahmud Abunada",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Pedro Miguel",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Boualem Khoukhi",
+              "number": 16,
+              "pos": "D"
+            },
+            {
+              "name": "Issa Laye",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Sultan Al-Brake",
+              "number": 18,
+              "pos": "D"
+            },
+            {
+              "name": "Jassem Gaber Abdulsallam",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "Ahmed Fathi",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Karim Boudiaf",
+              "number": 12,
+              "pos": "M"
+            },
+            {
+              "name": "Hassan Al Haydos",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Akram Afif",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Edmilson Junior",
+              "number": 8,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Meshaal Barsham",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Salah Zakaria",
+              "number": 21,
+              "pos": "G"
+            },
+            {
+              "name": "Lucas Mendes",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Al-Hashmi Al-Hussain",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Ayoub Al Oui",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Almoez Ali",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Mohamed Naceur Almanai",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "Abdelaziz Hatem",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Ahmed Al-Ganehi",
+              "number": 17,
+              "pos": "F"
+            },
+            {
+              "name": "Tahsin Mohammed Jamshid",
+              "number": 24,
+              "pos": "F"
+            },
+            {
+              "name": "Mohammed Muntari",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Ahmed Alaaeldin",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Yusuf Abdurisag",
+              "number": 15,
+              "pos": "F"
+            }
+          ]
+        }
+      }
     },
     "MOROCCO-HAITI": {
       "homeGoals": null,
