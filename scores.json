@@ -1,382 +1,6 @@
 {
-  "updated": "2026-06-24T20:56:47.388199Z",
+  "updated": "2026-06-24T21:01:24.950842Z",
   "matches": {
-    "BOSNIA & HERZEGOVINA-QATAR": {
-      "homeGoals": 3,
-      "awayGoals": 1,
-      "status": "2H",
-      "elapsed": 90,
-      "kickoffUTC": "2026-06-24T19:00:00+00:00",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "K. Alajbegovic",
-          "team": "BOSNIA & HERZEGOVINA",
-          "minute": 29,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Own Goal",
-          "player": "M. Abunada",
-          "team": "BOSNIA & HERZEGOVINA",
-          "minute": 34,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "H. Al Haydos",
-          "team": "QATAR",
-          "minute": 42,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "A. Fathi",
-          "team": "QATAR",
-          "minute": 78,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "E. Mahmic",
-          "team": "BOSNIA & HERZEGOVINA",
-          "minute": 80,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "E. Mahmic",
-          "team": "BOSNIA & HERZEGOVINA",
-          "minute": 82,
-          "extra": null
-        }
-      ],
-      "substitutions": {
-        "BOSNIA & HERZEGOVINA": [
-          {
-            "out": "I. Sunjic",
-            "in": "B. Tahirovic",
-            "minute": 46
-          },
-          {
-            "out": "A. Malic",
-            "in": "A. Memic",
-            "minute": 46
-          },
-          {
-            "out": "N. Katic",
-            "in": "D. Hadzikadunic",
-            "minute": 63
-          },
-          {
-            "out": "E. Dzeko",
-            "in": "E. Mahmic",
-            "minute": 64
-          },
-          {
-            "out": "K. Alajbegovic",
-            "in": "D. Burnic",
-            "minute": 82
-          }
-        ],
-        "QATAR": [
-          {
-            "out": "J. Gaber",
-            "in": "A. Hatem",
-            "minute": 46
-          },
-          {
-            "out": "H. Al Haydos",
-            "in": "A. Al Ganehi",
-            "minute": 56
-          },
-          {
-            "out": "K. Boudiaf",
-            "in": "A. Ali",
-            "minute": 72
-          },
-          {
-            "out": "Edmilson Junior",
-            "in": "A. Alaaeldin",
-            "minute": 79
-          },
-          {
-            "out": "A. Fathi",
-            "in": "M. Al Mannai",
-            "minute": 79
-          }
-        ]
-      },
-      "lineups": {
-        "BOSNIA & HERZEGOVINA": {
-          "formation": "4-4-2",
-          "coach": "Sergej Barbarez",
-          "startXI": [
-            {
-              "name": "Nikola Vasilj",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Arjan Mali\u0107",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Nikola Kati\u0107",
-              "number": 18,
-              "pos": "D"
-            },
-            {
-              "name": "Stjepan Radelji\u0107",
-              "number": 21,
-              "pos": "D"
-            },
-            {
-              "name": "Sead Kola\u0161inac",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Esmir Bajraktarevi\u0107",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Ivan Ba\u0161i\u0107",
-              "number": 13,
-              "pos": "M"
-            },
-            {
-              "name": "Ivan \u0160unji\u0107",
-              "number": 14,
-              "pos": "M"
-            },
-            {
-              "name": "Kerim Alajbegovi\u0107",
-              "number": 19,
-              "pos": "M"
-            },
-            {
-              "name": "Ermedin Demirovi\u0107",
-              "number": 10,
-              "pos": "F"
-            },
-            {
-              "name": "Edin D\u017eeko",
-              "number": 11,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Benjamin Tahirovi\u0107",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Amar Memi\u0107",
-              "number": 15,
-              "pos": "M"
-            },
-            {
-              "name": "Dennis Had\u017eikaduni\u0107",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Ermin Mahmi\u0107",
-              "number": 26,
-              "pos": "M"
-            },
-            {
-              "name": "Martin Zlomisli\u0107",
-              "number": 22,
-              "pos": "G"
-            },
-            {
-              "name": "Mladen Jurkas",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Nihad Mujaki\u0107",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Amar Dedi\u0107",
-              "number": 7,
-              "pos": "D"
-            },
-            {
-              "name": "Amir Had\u017eiahmetovi\u0107",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "Armin Gigovi\u0107",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "D\u017eenis Burni\u0107",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Jovo Luki\u0107",
-              "number": 25,
-              "pos": "F"
-            },
-            {
-              "name": "Samed Ba\u017edar",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Haris Tabakovi\u0107",
-              "number": 23,
-              "pos": "F"
-            }
-          ]
-        },
-        "QATAR": {
-          "formation": "4-3-3",
-          "coach": "Julen Lopetegui",
-          "startXI": [
-            {
-              "name": "Mahmud Abunada",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Pedro Miguel",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Boualem Khoukhi",
-              "number": 16,
-              "pos": "D"
-            },
-            {
-              "name": "Issa Laye",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Sultan Al-Brake",
-              "number": 18,
-              "pos": "D"
-            },
-            {
-              "name": "Jassem Gaber Abdulsallam",
-              "number": 5,
-              "pos": "M"
-            },
-            {
-              "name": "Ahmed Fathi",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Karim Boudiaf",
-              "number": 12,
-              "pos": "M"
-            },
-            {
-              "name": "Edmilson Junior",
-              "number": 8,
-              "pos": "F"
-            },
-            {
-              "name": "Akram Afif",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "Hassan Al Haydos",
-              "number": 10,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Abdelaziz Hatem",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Ahmed Al-Ganehi",
-              "number": 17,
-              "pos": "F"
-            },
-            {
-              "name": "Meshaal Barsham",
-              "number": 22,
-              "pos": "G"
-            },
-            {
-              "name": "Salah Zakaria",
-              "number": 21,
-              "pos": "G"
-            },
-            {
-              "name": "Lucas Mendes",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Al-Hashmi Al-Hussain",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "Ayoub Al Oui",
-              "number": 13,
-              "pos": "D"
-            },
-            {
-              "name": "Almoez Ali",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Mohamed Naceur Almanai",
-              "number": 26,
-              "pos": "M"
-            },
-            {
-              "name": "Tahsin Mohammed Jamshid",
-              "number": 24,
-              "pos": "F"
-            },
-            {
-              "name": "Mohammed Muntari",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Ahmed Alaaeldin",
-              "number": 7,
-              "pos": "F"
-            },
-            {
-              "name": "Yusuf Abdurisag",
-              "number": 15,
-              "pos": "F"
-            }
-          ]
-        }
-      }
-    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -869,284 +493,6 @@
             "minute": 84
           }
         ]
-      },
-      "lineups": {
-        "SOUTH KOREA": {
-          "formation": "3-4-2-1",
-          "coach": "Myung-Bo Hong",
-          "startXI": [
-            {
-              "name": "Kim Seung-Gyu",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Lee Han-Beom",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Kim Min-Jae",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Lee Gi-Hyuk",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Seol Young-Woo",
-              "number": 22,
-              "pos": "M"
-            },
-            {
-              "name": "Hwang In-Beom",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Paik Seung-Ho",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Lee Tae-Seok",
-              "number": 13,
-              "pos": "M"
-            },
-            {
-              "name": "Lee Kang-In",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Lee Jae-Sung",
-              "number": 10,
-              "pos": "F"
-            },
-            {
-              "name": "Son Heung-Min",
-              "number": 7,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Jo Hyeon-Woo",
-              "number": 21,
-              "pos": "G"
-            },
-            {
-              "name": "Song Bum-Keun",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Hwang Hee-Chan",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "Kim Jin-Gyu",
-              "number": 24,
-              "pos": "M"
-            },
-            {
-              "name": "Park Jin-Seob",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "Lee Dong-Gyeong",
-              "number": 26,
-              "pos": "M"
-            },
-            {
-              "name": "Cho Gue-Sung",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Oh Hyeon-Gyu",
-              "number": 18,
-              "pos": "F"
-            },
-            {
-              "name": "Eom Ji-Sung",
-              "number": 25,
-              "pos": "F"
-            },
-            {
-              "name": "J. Castrop",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "Kim Moon-Hwan",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Kim Tae-Hyeon",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Yang Hyun-Jun",
-              "number": 20,
-              "pos": "F"
-            },
-            {
-              "name": "Bae Jun-Ho",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Cho Wi-Je",
-              "number": 14,
-              "pos": null
-            }
-          ]
-        },
-        "CZECHIA": {
-          "formation": "3-4-2-1",
-          "coach": "Miroslav Koubek",
-          "startXI": [
-            {
-              "name": "M. Kovar",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "S. Chaloupek",
-              "number": 6,
-              "pos": "D"
-            },
-            {
-              "name": "R. Hranac",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "L. Krejci",
-              "number": 7,
-              "pos": "D"
-            },
-            {
-              "name": "V. Coufal",
-              "number": 5,
-              "pos": "M"
-            },
-            {
-              "name": "T. Soucek",
-              "number": 22,
-              "pos": "M"
-            },
-            {
-              "name": "A. Sojka",
-              "number": 24,
-              "pos": "M"
-            },
-            {
-              "name": "J. Zeleny",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "L. Provod",
-              "number": 17,
-              "pos": "F"
-            },
-            {
-              "name": "P. Sulc",
-              "number": 15,
-              "pos": "F"
-            },
-            {
-              "name": "P. Schick",
-              "number": 10,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "J. Stanek",
-              "number": 16,
-              "pos": "G"
-            },
-            {
-              "name": "L. Hornicek",
-              "number": 23,
-              "pos": "G"
-            },
-            {
-              "name": "T. Holes",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "J. Kuchta",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "D. Doudera",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "D. Zima",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "D. Jurasek",
-              "number": 14,
-              "pos": "D"
-            },
-            {
-              "name": "A. Hlozek",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "L. Cerv",
-              "number": 12,
-              "pos": "M"
-            },
-            {
-              "name": "D. Visinsky",
-              "number": 26,
-              "pos": "M"
-            },
-            {
-              "name": "V. Darida",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "T. Chory",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "M. Sadilek",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "M. Chytil",
-              "number": 13,
-              "pos": "F"
-            },
-            {
-              "name": "H. Sochurek",
-              "number": 25,
-              "pos": "M"
-            }
-          ]
-        }
       }
     },
     "CANADA-BOSNIA & HERZEGOVINA": {
@@ -19088,6 +18434,382 @@
             {
               "name": "Jayden Nelson",
               "number": 26,
+              "pos": "F"
+            }
+          ]
+        }
+      }
+    },
+    "BOSNIA & HERZEGOVINA-QATAR": {
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-06-24T19:00:00+00:00",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "K. Alajbegovic",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 29,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Own Goal",
+          "player": "M. Abunada",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 34,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "H. Al Haydos",
+          "team": "QATAR",
+          "minute": 42,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Fathi",
+          "team": "QATAR",
+          "minute": 78,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "E. Mahmic",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 80,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "E. Mahmic",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 82,
+          "extra": null
+        }
+      ],
+      "substitutions": {
+        "BOSNIA & HERZEGOVINA": [
+          {
+            "out": "I. Sunjic",
+            "in": "B. Tahirovic",
+            "minute": 46
+          },
+          {
+            "out": "A. Malic",
+            "in": "A. Memic",
+            "minute": 46
+          },
+          {
+            "out": "N. Katic",
+            "in": "D. Hadzikadunic",
+            "minute": 63
+          },
+          {
+            "out": "E. Dzeko",
+            "in": "E. Mahmic",
+            "minute": 64
+          },
+          {
+            "out": "K. Alajbegovic",
+            "in": "D. Burnic",
+            "minute": 82
+          }
+        ],
+        "QATAR": [
+          {
+            "out": "J. Gaber",
+            "in": "A. Hatem",
+            "minute": 46
+          },
+          {
+            "out": "H. Al Haydos",
+            "in": "A. Al Ganehi",
+            "minute": 56
+          },
+          {
+            "out": "K. Boudiaf",
+            "in": "A. Ali",
+            "minute": 72
+          },
+          {
+            "out": "Edmilson Junior",
+            "in": "A. Alaaeldin",
+            "minute": 79
+          },
+          {
+            "out": "A. Fathi",
+            "in": "M. Al Mannai",
+            "minute": 79
+          }
+        ]
+      },
+      "lineups": {
+        "BOSNIA & HERZEGOVINA": {
+          "formation": "4-4-2",
+          "coach": "Sergej Barbarez",
+          "startXI": [
+            {
+              "name": "Nikola Vasilj",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Arjan Mali\u0107",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Nikola Kati\u0107",
+              "number": 18,
+              "pos": "D"
+            },
+            {
+              "name": "Stjepan Radelji\u0107",
+              "number": 21,
+              "pos": "D"
+            },
+            {
+              "name": "Sead Kola\u0161inac",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Esmir Bajraktarevi\u0107",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Ivan Ba\u0161i\u0107",
+              "number": 13,
+              "pos": "M"
+            },
+            {
+              "name": "Ivan \u0160unji\u0107",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Kerim Alajbegovi\u0107",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "Ermedin Demirovi\u0107",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Edin D\u017eeko",
+              "number": 11,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Benjamin Tahirovi\u0107",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Amar Memi\u0107",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Dennis Had\u017eikaduni\u0107",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Ermin Mahmi\u0107",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "Martin Zlomisli\u0107",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Mladen Jurkas",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Nihad Mujaki\u0107",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Amar Dedi\u0107",
+              "number": 7,
+              "pos": "D"
+            },
+            {
+              "name": "Amir Had\u017eiahmetovi\u0107",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Armin Gigovi\u0107",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "D\u017eenis Burni\u0107",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Jovo Luki\u0107",
+              "number": 25,
+              "pos": "F"
+            },
+            {
+              "name": "Samed Ba\u017edar",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Haris Tabakovi\u0107",
+              "number": 23,
+              "pos": "F"
+            }
+          ]
+        },
+        "QATAR": {
+          "formation": "4-3-3",
+          "coach": "Julen Lopetegui",
+          "startXI": [
+            {
+              "name": "Mahmud Abunada",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Pedro Miguel",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Boualem Khoukhi",
+              "number": 16,
+              "pos": "D"
+            },
+            {
+              "name": "Issa Laye",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Sultan Al-Brake",
+              "number": 18,
+              "pos": "D"
+            },
+            {
+              "name": "Jassem Gaber Abdulsallam",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "Ahmed Fathi",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Karim Boudiaf",
+              "number": 12,
+              "pos": "M"
+            },
+            {
+              "name": "Edmilson Junior",
+              "number": 8,
+              "pos": "F"
+            },
+            {
+              "name": "Akram Afif",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Hassan Al Haydos",
+              "number": 10,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Abdelaziz Hatem",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Ahmed Al-Ganehi",
+              "number": 17,
+              "pos": "F"
+            },
+            {
+              "name": "Meshaal Barsham",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Salah Zakaria",
+              "number": 21,
+              "pos": "G"
+            },
+            {
+              "name": "Lucas Mendes",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Al-Hashmi Al-Hussain",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Ayoub Al Oui",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Almoez Ali",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Mohamed Naceur Almanai",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "Tahsin Mohammed Jamshid",
+              "number": 24,
+              "pos": "F"
+            },
+            {
+              "name": "Mohammed Muntari",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Ahmed Alaaeldin",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Yusuf Abdurisag",
+              "number": 15,
               "pos": "F"
             }
           ]
