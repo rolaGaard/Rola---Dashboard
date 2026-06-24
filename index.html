@@ -123,6 +123,7 @@
     flex:1; min-width:0; text-align:center;
   }
   .team-flag { font-size:26px; line-height:1; }
+  .flag-img { width:1em; height:0.68em; vertical-align:-0.12em; display:inline-block; object-fit:cover; border-radius:1px; }
   .team-name {
     font-size:13px; font-weight:800; color:#1a1a2e; text-transform:uppercase;
     line-height:1.15; max-width:100%; word-break:break-word;
@@ -1089,7 +1090,29 @@ const SCHEDULE = [
 function stripAccents(s) {
   return (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase();
 }
-function flag(name){ return FLAGS[name] || '🏳'; }
+// Los emojis de bandera dependen de fuentes que no todos los sistemas tienen
+// instaladas (Windows/Chrome/Edge de escritorio, por ejemplo, suelen mostrar
+// el código de 2 letras en vez de la bandera). Para evitar eso, usamos
+// archivos SVG propios (carpeta /flags) en vez de emojis, para las 48 selecciones.
+const FLAG_FILES = {
+  'MEXICO':'mx', 'SOUTH AFRICA':'za', 'CANADA':'ca', 'BOSNIA & HERZEGOVINA':'ba',
+  'SOUTH KOREA':'kr', 'CZECHIA':'cz', 'USA':'us', 'PARAGUAY':'py', 'QATAR':'qa',
+  'SWITZERLAND':'ch', 'AUSTRALIA':'au', 'TURKIYE':'tr', 'MOROCCO':'ma', 'BRAZIL':'br',
+  'HAITI':'ht', 'SCOTLAND':'gb-sct', 'GERMANY':'de', 'CURACAO':'cw', 'NETHERLANDS':'nl',
+  'JAPAN':'jp', 'IVORY COAST':'ci', 'ECUADOR':'ec', 'SWEDEN':'se', 'TUNISIA':'tn',
+  'SPAIN':'es', 'CAPE VERDE':'cv', 'BELGIUM':'be', 'EGYPT':'eg', 'SAUDI ARABIA':'sa',
+  'URUGUAY':'uy', 'IRAN':'ir', 'NEW ZEALAND':'nz', 'FRANCE':'fr', 'SENEGAL':'sn',
+  'IRAQ':'iq', 'NORWAY':'no', 'ARGENTINA':'ar', 'ALGERIA':'dz', 'AUSTRIA':'at',
+  'JORDAN':'jo', 'PORTUGAL':'pt', 'CONGO DR':'cd', 'COLOMBIA':'co', 'UZBEKISTAN':'uz',
+  'ENGLAND':'gb-eng', 'GHANA':'gh', 'CROATIA':'hr', 'PANAMA':'pa',
+};
+function flag(name){
+  const code = FLAG_FILES[name];
+  if (code) {
+    return '<img class="flag-img" src="flags/' + encodeURIComponent(name) + '.svg" alt="' + name + '" loading="lazy">';
+  }
+  return FLAGS[name] || '🏳';
+}
 function esName(name){ return INTL_NAMES[name] || name; }
 
 // FIFA World Cup titles won historically, for teams participating in 2026
