@@ -2081,13 +2081,39 @@ function openCountryInfo(code) {
   html += '<div class="ci-squad-title">' + t('plantilla') + '</div>' + buildSquadHtml(code);
   countryInfoContent.innerHTML = html;
   countryInfoModal.style.display = 'flex';
+  // Agregamos una entrada al historial — así el botón "atrás" del celular
+  // (o el gesto equivalente) cierra el modal en vez de salir de la página.
+  history.pushState({ modal: 'country-info' }, '');
 }
-countryInfoClose.addEventListener('click', () => {
-  countryInfoModal.style.display = 'none';
-});
+
+// Cierra el modal. Si fuimos nosotros quienes empujamos la entrada al
+// historial al abrirlo, retrocedemos un paso (eso dispara 'popstate', que
+// también oculta el modal) para no dejar entradas "fantasma" en el historial.
+function closeCountryInfo() {
+  if (countryInfoModal.style.display === 'none') return;
+  if (history.state && history.state.modal === 'country-info') {
+    history.back();
+  } else {
+    countryInfoModal.style.display = 'none';
+  }
+}
+countryInfoClose.addEventListener('click', closeCountryInfo);
 countryInfoModal.addEventListener('click', (e) => {
-  if (e.target === countryInfoModal) countryInfoModal.style.display = 'none';
+  if (e.target === countryInfoModal) closeCountryInfo();
 });
+window.addEventListener('popstate', (e) => {
+  // Llega tanto al usar el botón "atrás" físico/del navegador como al
+  // llamar nosotros a history.back() — en ambos casos, solo ocultamos.
+  if (countryInfoModal.style.display !== 'none') {
+    countryInfoModal.style.display = 'none';
+  }
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && countryInfoModal.style.display !== 'none') {
+    closeCountryInfo();
+  }
+});
+
 
 window.addEventListener('appinstalled', () => {
   settingsMenuWrap.style.display = 'none';
