@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-24T19:20:44.776655Z",
+  "updated": "2026-06-24T19:30:52.766215Z",
   "matches": {
     "SWITZERLAND-CANADA": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 20,
+      "elapsed": 30,
       "kickoffUTC": "2026-06-24T19:00:00+00:00",
       "events": [],
       "lineups": {
@@ -49,13 +49,13 @@
               "pos": "M"
             },
             {
-              "name": "Johan Manzambi",
-              "number": 9,
+              "name": "Djibril Sow",
+              "number": 15,
               "pos": "M"
             },
             {
-              "name": "Djibril Sow",
-              "number": 15,
+              "name": "Johan Manzambi",
+              "number": 9,
               "pos": "M"
             },
             {
@@ -177,13 +177,13 @@
               "pos": "M"
             },
             {
-              "name": "Mathieu Choini\u00e8re",
-              "number": 6,
+              "name": "Nathan-Dylan Saliba",
+              "number": 25,
               "pos": "M"
             },
             {
-              "name": "Nathan-Dylan Saliba",
-              "number": 25,
+              "name": "Mathieu Choini\u00e8re",
+              "number": 6,
               "pos": "M"
             },
             {
@@ -273,12 +273,21 @@
       }
     },
     "BOSNIA & HERZEGOVINA-QATAR": {
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 20,
+      "elapsed": 30,
       "kickoffUTC": "2026-06-24T19:00:00+00:00",
-      "events": [],
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "K. Alajbegovic",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 29,
+          "extra": null
+        }
+      ],
       "lineups": {
         "BOSNIA & HERZEGOVINA": {
           "formation": "4-4-2",
@@ -315,13 +324,13 @@
               "pos": "M"
             },
             {
-              "name": "Ivan \u0160unji\u0107",
-              "number": 14,
+              "name": "Ivan Ba\u0161i\u0107",
+              "number": 13,
               "pos": "M"
             },
             {
-              "name": "Ivan Ba\u0161i\u0107",
-              "number": 13,
+              "name": "Ivan \u0160unji\u0107",
+              "number": 14,
               "pos": "M"
             },
             {
@@ -458,8 +467,8 @@
               "pos": "M"
             },
             {
-              "name": "Hassan Al Haydos",
-              "number": 10,
+              "name": "Edmilson Junior",
+              "number": 8,
               "pos": "F"
             },
             {
@@ -468,8 +477,8 @@
               "pos": "F"
             },
             {
-              "name": "Edmilson Junior",
-              "number": 8,
+              "name": "Hassan Al Haydos",
+              "number": 10,
               "pos": "F"
             }
           ],
