@@ -103,6 +103,46 @@ jobs:
                   print(f"Could not fetch events for fixture {fixture_id}: {e}")
                   return []
 
+          # Las alineaciones (titulares + suplentes + DT) las publica la API
+          # recién ~1 hora antes del partido — por eso solo las pedimos para
+          # partidos próximos a arrancar, en vivo, o ya finalizados, igual
+          # criterio que ya usamos para los eventos (goles/tarjetas).
+          def fetch_lineups(fixture_id):
+              url = f"https://v3.football.api-sports.io/fixtures/lineups?fixture={fixture_id}"
+              req = urllib.request.Request(url, headers={"x-apisports-key": API_KEY})
+              try:
+                  with urllib.request.urlopen(req, timeout=10) as resp:
+                      body = json.loads(resp.read())
+                  result = {}
+                  for side in body.get('response', []):
+                      team_name = normalize_team((side.get('team') or {}).get('name', ''))
+                      start_xi = []
+                      for p in side.get('startXI', []):
+                          info = p.get('player', {})
+                          start_xi.append({
+                              'name': info.get('name'),
+                              'number': info.get('number'),
+                              'pos': info.get('pos'),
+                          })
+                      subs = []
+                      for p in side.get('substitutes', []):
+                          info = p.get('player', {})
+                          subs.append({
+                              'name': info.get('name'),
+                              'number': info.get('number'),
+                              'pos': info.get('pos'),
+                          })
+                      result[team_name] = {
+                          'formation': side.get('formation'),
+                          'coach': (side.get('coach') or {}).get('name'),
+                          'startXI': start_xi,
+                          'substitutes': subs,
+                      }
+                  return result
+              except Exception as e:
+                  print(f"Could not fetch lineups for fixture {fixture_id}: {e}")
+                  return {}
+
           scores = {}
           for fx in data.get('response', []):
               fixture = fx['fixture']
@@ -125,6 +165,25 @@ jobs:
               # to avoid wasting API quota on matches that haven't started.
               if status in LIVE_STATUSES or status in FINISHED_STATUSES:
                   entry['events'] = fetch_events(fixture['id'])
+
+              # Las alineaciones se piden si el partido ya está en vivo/finalizado,
+              # o si está a 2 horas o menos de arrancar (la API recién las publica
+              # ~1h antes, pero pedimos con margen para no perder el momento exacto
+              # entre dos corridas del workflow, que se ejecuta cada 10 minutos).
+              kickoff_dt = None
+              try:
+                  kickoff_dt = datetime.fromisoformat(fixture.get('date').replace('Z', '+00:00'))
+              except Exception:
+                  pass
+              is_near_kickoff = False
+              if kickoff_dt:
+                  hours_to_kickoff = (kickoff_dt - datetime.now(kickoff_dt.tzinfo)).total_seconds() / 3600
+                  is_near_kickoff = hours_to_kickoff <= 2
+
+              if status in LIVE_STATUSES or status in FINISHED_STATUSES or is_near_kickoff:
+                  lineups = fetch_lineups(fixture['id'])
+                  if lineups:
+                      entry['lineups'] = lineups
 
               scores[key] = entry
 
