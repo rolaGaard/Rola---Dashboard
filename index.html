@@ -490,30 +490,50 @@
   .team-clickable:hover { background:rgba(0,0,0,0.04); }
   .st-team.team-clickable:hover, .qteam.team-clickable:hover { background:rgba(255,255,255,0.08); }
 
-  .country-info-box { text-align:center; max-width:320px; }
-  .ci-flag { font-size:54px; line-height:1; margin-bottom:8px; }
-  .ci-name { color:#fff; font-size:19px; font-weight:700; margin-bottom:4px; }
-  .ci-region { color:#94a3b8; font-size:13px; margin-bottom:18px; }
-  .ci-stats { display:flex; gap:12px; justify-content:center; margin-bottom:14px; }
-  .ci-stat {
-    background:rgba(255,255,255,0.06); border-radius:10px; padding:14px 18px; flex:1;
+  .country-info-box {
+    text-align:left; width:min(94vw, 980px); max-width:980px;
+    max-height:92vh; padding:20px 22px;
   }
-  .ci-stat-num { color:#FFD700; font-size:26px; font-weight:800; line-height:1; }
-  .ci-stat-label { color:#94a3b8; font-size:11px; margin-top:4px; }
-  .ci-disclaimer { color:#64748b; font-size:11px; font-style:italic; line-height:1.4; }
 
-  .ci-squad-title {
-    color:#fff; font-size:14px; font-weight:700; text-align:left;
-    margin:18px 0 8px; padding-top:14px; border-top:1px solid #2a2a2a;
+  /* ── Header compacto: bandera + nombre + código + estrellas ──────────── */
+  .ci-header { display:flex; align-items:center; gap:12px; margin-bottom:4px; padding-right:28px; }
+  .ci-flag-img { width:48px; height:32px; object-fit:cover; border-radius:3px; flex-shrink:0; }
+  .ci-header-text { display:flex; flex-direction:column; gap:2px; min-width:0; }
+  .ci-name-row { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .ci-name { color:#fff; font-size:18px; font-weight:800; line-height:1.1; }
+  .ci-code { color:#64748b; font-size:11px; font-weight:700; background:rgba(255,255,255,0.08); padding:1px 6px; border-radius:4px; }
+  .ci-stars-row { font-size:12px; line-height:1; }
+  .ci-region { color:#94a3b8; font-size:12px; }
+
+  /* ── Estadísticas chicas, en línea, no como antes ────────────────────── */
+  .ci-stats-inline { display:flex; gap:14px; align-items:baseline; margin:8px 0 2px; font-size:12px; color:#94a3b8; }
+  .ci-stats-inline b { color:#FFD700; font-size:14px; }
+  .ci-disclaimer { color:#64748b; font-size:10px; font-style:italic; line-height:1.3; margin-bottom:12px; }
+
+  /* ── Cuerpo: dos columnas (alineación | plantilla) ───────────────────── */
+  .ci-body {
+    display:grid; grid-template-columns:1fr 1fr; gap:18px;
+    border-top:1px solid #2a2a2a; padding-top:14px;
+    max-height:calc(92vh - 150px); overflow:hidden;
   }
-  .ci-squad-empty { color:#64748b; font-size:12px; font-style:italic; text-align:left; padding:6px 0; }
-  .ci-squad-list { display:flex; flex-direction:column; gap:2px; text-align:left; }
+  .ci-col { display:flex; flex-direction:column; min-height:0; }
+  .ci-col-title { color:#fff; font-size:13px; font-weight:700; margin-bottom:8px; flex-shrink:0; }
+  .ci-col-scroll { overflow-y:auto; flex:1; min-height:0; }
+
+  .ci-lineup-meta { color:#94a3b8; font-size:11px; margin-bottom:8px; display:flex; gap:10px; flex-wrap:wrap; }
+  .ci-lineup-meta b { color:#e2e8f0; }
+  .ci-lineup-empty { color:#64748b; font-size:12px; font-style:italic; padding:6px 0; }
+  .ci-lineup-list { display:flex; flex-direction:column; gap:1px; }
+  .ci-lineup-sub-title { color:#64748b; font-size:10px; font-weight:700; text-transform:uppercase; margin:10px 0 4px; }
+
+  .ci-squad-empty { color:#64748b; font-size:12px; font-style:italic; padding:6px 0; }
+  .ci-squad-list { display:flex; flex-direction:column; gap:1px; }
   .ci-player-row {
-    display:flex; align-items:center; gap:10px; padding:6px 4px;
+    display:flex; align-items:center; gap:10px; padding:5px 4px;
     border-bottom:1px solid rgba(255,255,255,0.05); font-size:13px;
   }
   .ci-player-num {
-    color:#FFD700; font-weight:800; font-size:13px; min-width:22px; text-align:center;
+    color:#FFD700; font-weight:800; font-size:13px; min-width:20px; text-align:center;
     flex-shrink:0;
   }
   .ci-player-name {
@@ -522,6 +542,27 @@
   }
   .ci-player-name:hover { color:#FFD700; border-bottom-color:#FFD700; }
   .ci-player-pos { color:#64748b; font-size:10px; flex-shrink:0; text-transform:uppercase; }
+
+  /* En pantallas angostas, las dos columnas se apilan en vez de forzar la rotación */
+  @media (max-width:640px) {
+    .ci-body { grid-template-columns:1fr; max-height:calc(92vh - 170px); overflow-y:auto; }
+    .ci-col-scroll { overflow-y:visible; }
+  }
+
+  /* En celular en vertical, si la pantalla es angosta Y baja preferimos
+     forzar al usuario a rotar a horizontal, donde las dos columnas entran
+     cómodas — en vez de un modal larguísimo difícil de navegar con el dedo. */
+  @media (max-width:560px) and (orientation:portrait) {
+    #country-info-modal .country-info-box {
+      position:fixed; top:50%; left:50%;
+      width:92vh; max-width:92vh; height:92vw; max-height:92vw;
+      transform:translate(-50%, -50%) rotate(90deg);
+      transform-origin:center center;
+      overflow-y:auto;
+    }
+    .ci-body { grid-template-columns:1fr 1fr; max-height:none; }
+    .ci-col-scroll { overflow-y:auto; max-height:50vh; }
+  }
   .shortcut-instructions-text b { color:#FFD700; }
   .cookie-banner-close {
     position:absolute; top:10px; right:10px; background:none; border:none;
@@ -681,6 +722,9 @@ const I18N = {
     regionLabel: 'Ubicación', mundialesParticipados: 'Mundiales jugados', mundialesGanados: 'Mundiales ganados',
     datosAproximados: 'Datos aproximados. Fuente oficial: FIFA.', datosNoDisponibles: 'Datos no disponibles para este equipo.',
     plantilla: 'Plantilla', plantillaNoDisponible: 'Plantilla no disponible por el momento.',
+    alineacion: 'Alineación', proximoRival: 'Rival', formacion: 'Formación', suplentes: 'Suplentes',
+    alineacionSinPartidos: 'No hay partidos cargados para este equipo.',
+    alineacionNoDisponible: 'Todavía no está confirmada. La FIFA la publica aproximadamente 1 hora antes del partido.',
     paisesTitulo: 'Estado del Mundial 2026', paisesCompiten: 'Siguen en carrera', paisesAfuera: 'Quedaron eliminados',
     paisesDisclaimer: 'Un equipo pasa a "Eliminados" cuando su grupo terminó los 6 partidos y quedó 3° o 4°. Por ahora no incluye eliminaciones de fases posteriores a la de grupos.', paisesSinEliminados: 'Todavía no hay equipos eliminados.',
     pj: 'PJ', g: 'G', e: 'E', p: 'P', dg: 'DG', pts: 'PTS',
@@ -726,6 +770,9 @@ const I18N = {
     regionLabel: 'Location', mundialesParticipados: 'World Cup appearances', mundialesGanados: 'World Cup titles',
     datosAproximados: 'Approximate data. Official source: FIFA.', datosNoDisponibles: 'No data available for this team.',
     plantilla: 'Squad', plantillaNoDisponible: 'Squad not available yet.',
+    alineacion: 'Lineup', proximoRival: 'Opponent', formacion: 'Formation', suplentes: 'Substitutes',
+    alineacionSinPartidos: 'No matches loaded for this team.',
+    alineacionNoDisponible: 'Not confirmed yet. FIFA publishes it about 1 hour before kickoff.',
     paisesTitulo: '2026 World Cup status', paisesCompiten: 'Still in the running', paisesAfuera: 'Eliminated',
     paisesDisclaimer: 'A team moves to "Eliminated" once its group finishes all 6 matches and it placed 3rd or 4th. Doesn\'t yet account for eliminations beyond the group stage.', paisesSinEliminados: 'No teams eliminated yet.',
     pj: 'P', g: 'W', e: 'D', p: 'L', dg: 'GD', pts: 'PTS',
@@ -771,6 +818,9 @@ const I18N = {
     regionLabel: 'Localização', mundialesParticipados: 'Copas do Mundo disputadas', mundialesGanados: 'Copas do Mundo conquistadas',
     datosAproximados: 'Dados aproximados. Fonte oficial: FIFA.', datosNoDisponibles: 'Dados não disponíveis para esta seleção.',
     plantilla: 'Elenco', plantillaNoDisponible: 'Elenco não disponível por enquanto.',
+    alineacion: 'Escalação', proximoRival: 'Adversário', formacion: 'Formação', suplentes: 'Reservas',
+    alineacionSinPartidos: 'Não há jogos carregados para esta seleção.',
+    alineacionNoDisponible: 'Ainda não confirmada. A FIFA publica cerca de 1 hora antes do jogo.',
     paisesTitulo: 'Situação da Copa do Mundo 2026', paisesCompiten: 'Seguem na disputa', paisesAfuera: 'Foram eliminados',
     paisesDisclaimer: 'Uma seleção passa para "Eliminados" quando seu grupo termina os 6 jogos e ela fica em 3° ou 4°. Por enquanto não considera eliminações além da fase de grupos.', paisesSinEliminados: 'Ainda não há seleções eliminadas.',
     pj: 'PJ', g: 'V', e: 'E', p: 'D', dg: 'SG', pts: 'PTS',
@@ -816,6 +866,9 @@ const I18N = {
     regionLabel: 'Lage', mundialesParticipados: 'WM-Teilnahmen', mundialesGanados: 'WM-Titel',
     datosAproximados: 'Ungefähre Angaben. Offizielle Quelle: FIFA.', datosNoDisponibles: 'Keine Daten für dieses Team verfügbar.',
     plantilla: 'Kader', plantillaNoDisponible: 'Kader derzeit nicht verfügbar.',
+    alineacion: 'Aufstellung', proximoRival: 'Gegner', formacion: 'Formation', suplentes: 'Ersatzbank',
+    alineacionSinPartidos: 'Keine Spiele für dieses Team geladen.',
+    alineacionNoDisponible: 'Noch nicht bestätigt. Die FIFA veröffentlicht sie etwa 1 Stunde vor dem Spiel.',
     paisesTitulo: 'WM-2026-Stand', paisesCompiten: 'Noch im Turnier', paisesAfuera: 'Ausgeschieden',
     paisesDisclaimer: 'Ein Team gilt als "Ausgeschieden", sobald seine Gruppe alle 6 Spiele beendet hat und es Platz 3 oder 4 belegte. Ausscheiden nach der Gruppenphase wird derzeit nicht berücksichtigt.', paisesSinEliminados: 'Noch keine Teams ausgeschieden.',
     pj: 'Sp', g: 'S', e: 'U', p: 'N', dg: 'TD', pts: 'Pkt',
@@ -861,6 +914,9 @@ const I18N = {
     regionLabel: 'Locatie', mundialesParticipados: 'WK-deelnames', mundialesGanados: 'WK-titels',
     datosAproximados: 'Geschatte gegevens. Officiële bron: FIFA.', datosNoDisponibles: 'Geen gegevens beschikbaar voor dit land.',
     plantilla: 'Selectie', plantillaNoDisponible: 'Selectie momenteel niet beschikbaar.',
+    alineacion: 'Opstelling', proximoRival: 'Tegenstander', formacion: 'Formatie', suplentes: 'Wisselspelers',
+    alineacionSinPartidos: 'Geen wedstrijden geladen voor dit land.',
+    alineacionNoDisponible: 'Nog niet bevestigd. FIFA publiceert dit ongeveer 1 uur voor de wedstrijd.',
     paisesTitulo: 'WK 2026-status', paisesCompiten: 'Nog in de strijd', paisesAfuera: 'Uitgeschakeld',
     paisesDisclaimer: 'Een land verhuist naar "Uitgeschakeld" zodra zijn groep alle 6 wedstrijden heeft afgerond en het 3e of 4e werd. Uitschakelingen na de groepsfase worden nog niet meegenomen.', paisesSinEliminados: 'Nog geen landen uitgeschakeld.',
     pj: 'G', g: 'W', e: 'G', p: 'V', dg: 'DV', pts: 'Pt',
@@ -2185,24 +2241,118 @@ function buildSquadHtml(code) {
   return '<div class="ci-squad-list">' + rows + '</div>';
 }
 
+// Busca, entre todos los partidos del equipo, el más relevante para mostrar
+// alineación: preferimos uno en vivo o recién finalizado: si no hay,
+// el próximo programado (aunque la alineación ahí puede no estar
+// disponible todavía — la API la publica ~1h antes del partido).
+function findRelevantLineupMatch(code) {
+  const teamMatches = SCHEDULE.filter(m => m.home === code || m.away === code);
+  if (teamMatches.length === 0) return null;
+
+  const withLineups = teamMatches.filter(m => {
+    const live = liveData[matchKey(m.home, m.away)];
+    return live && live.lineups && live.lineups[code];
+  });
+  if (withLineups.length > 0) {
+    // El más reciente/actual: el de mayor kickoff entre los que ya tienen datos
+    return withLineups.sort((a, b) => new Date(getKickoffUTC(b)) - new Date(getKickoffUTC(a)))[0];
+  }
+  // Si ninguno tiene alineación todavía, mostramos el próximo partido sin jugar
+  const upcoming = teamMatches
+    .filter(m => !getMatchResult(m).isFinished)
+    .sort((a, b) => new Date(getKickoffUTC(a)) - new Date(getKickoffUTC(b)));
+  return upcoming[0] || null;
+}
+
+function buildLineupHtml(code) {
+  const match = findRelevantLineupMatch(code);
+  if (!match) {
+    return '<div class="ci-lineup-empty">' + t('alineacionSinPartidos') + '</div>';
+  }
+  const live = liveData[matchKey(match.home, match.away)];
+  const lineup = live && live.lineups ? live.lineups[code] : null;
+  const rivalCode = match.home === code ? match.away : match.home;
+  const rivalName = esName(rivalCode);
+
+  if (!lineup || !lineup.startXI || lineup.startXI.length === 0) {
+    return '<div class="ci-lineup-meta">' + t('proximoRival') + ': <b>' + rivalName + '</b></div>' +
+           '<div class="ci-lineup-empty">' + t('alineacionNoDisponible') + '</div>';
+  }
+
+  let html = '<div class="ci-lineup-meta">' +
+    '<span>' + t('proximoRival') + ': <b>' + rivalName + '</b></span>' +
+    (lineup.formation ? '<span>' + t('formacion') + ': <b>' + lineup.formation + '</b></span>' : '') +
+    (lineup.coach ? '<span>DT: <b>' + lineup.coach + '</b></span>' : '') +
+  '</div>';
+
+  const sortedXI = lineup.startXI.slice().sort((a, b) => {
+    const na = (a.number === null || a.number === undefined) ? 999 : a.number;
+    const nb = (b.number === null || b.number === undefined) ? 999 : b.number;
+    return na - nb;
+  });
+  html += '<div class="ci-lineup-list">' + sortedXI.map(p => {
+    const num = (p.number === null || p.number === undefined) ? '–' : p.number;
+    const link = googleSearchLink(p.name, code);
+    return '<div class="ci-player-row">' +
+      '<span class="ci-player-num">' + num + '</span>' +
+      '<a href="' + link + '" target="_blank" rel="noopener" class="ci-player-name">' + p.name + '</a>' +
+      (p.pos ? '<span class="ci-player-pos">' + p.pos + '</span>' : '') +
+    '</div>';
+  }).join('') + '</div>';
+
+  if (lineup.substitutes && lineup.substitutes.length > 0) {
+    html += '<div class="ci-lineup-sub-title">' + t('suplentes') + '</div>';
+    html += '<div class="ci-lineup-list">' + lineup.substitutes.map(p => {
+      const num = (p.number === null || p.number === undefined) ? '–' : p.number;
+      const link = googleSearchLink(p.name, code);
+      return '<div class="ci-player-row">' +
+        '<span class="ci-player-num">' + num + '</span>' +
+        '<a href="' + link + '" target="_blank" rel="noopener" class="ci-player-name">' + p.name + '</a>' +
+        (p.pos ? '<span class="ci-player-pos">' + p.pos + '</span>' : '') +
+      '</div>';
+    }).join('') + '</div>';
+  }
+
+  return html;
+}
+
 function openCountryInfo(code) {
   const name = esName(code);
-  const flagEmoji = flag(code);
+  const flagHtml = flag(code);
+  const code3 = countryCode(code);
+  const stars = worldCupStars(code);
   const info = COUNTRY_INFO[code];
-  let html = '<div class="ci-flag">' + flagEmoji + '</div>' +
-             '<div class="ci-name">' + name + '</div>';
+
+  let html = '<div class="ci-header">' + flagHtml.replace('flag-img', 'flag-img ci-flag-img') +
+    '<div class="ci-header-text">' +
+      '<div class="ci-name-row"><span class="ci-name">' + name + '</span><span class="ci-code">' + code3 + '</span></div>' +
+      '<div class="ci-stars-row">' + stars + '</div>' +
+    '</div>' +
+  '</div>';
+
   if (info) {
     const regionLabel = (REGION_NAMES[currentLang] && REGION_NAMES[currentLang][info.region]) || info.region;
     html += '<div class="ci-region">📍 ' + t('regionLabel') + ': ' + regionLabel + '</div>' +
-            '<div class="ci-stats">' +
-              '<div class="ci-stat"><div class="ci-stat-num">' + info.appearances + '</div><div class="ci-stat-label">' + t('mundialesParticipados') + '</div></div>' +
-              '<div class="ci-stat"><div class="ci-stat-num">' + info.titles + '</div><div class="ci-stat-label">' + t('mundialesGanados') + '</div></div>' +
+            '<div class="ci-stats-inline">' +
+              '<span><b>' + info.appearances + '</b> ' + t('mundialesParticipados') + '</span>' +
+              '<span><b>' + info.titles + '</b> ' + t('mundialesGanados') + '</span>' +
             '</div>' +
             '<div class="ci-disclaimer">' + t('datosAproximados') + '</div>';
   } else {
     html += '<div class="ci-disclaimer">' + t('datosNoDisponibles') + '</div>';
   }
-  html += '<div class="ci-squad-title">' + t('plantilla') + '</div>' + buildSquadHtml(code);
+
+  html += '<div class="ci-body">' +
+    '<div class="ci-col">' +
+      '<div class="ci-col-title">⚽ ' + t('alineacion') + '</div>' +
+      '<div class="ci-col-scroll">' + buildLineupHtml(code) + '</div>' +
+    '</div>' +
+    '<div class="ci-col">' +
+      '<div class="ci-col-title">' + t('plantilla') + '</div>' +
+      '<div class="ci-col-scroll">' + buildSquadHtml(code) + '</div>' +
+    '</div>' +
+  '</div>';
+
   countryInfoContent.innerHTML = html;
   countryInfoModal.style.display = 'flex';
   // Agregamos una entrada al historial — así el botón "atrás" del celular
