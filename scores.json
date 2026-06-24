@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T19:50:37.433518Z",
+  "updated": "2026-06-24T20:01:32.918047Z",
   "matches": {
     "SWITZERLAND-CANADA": {
       "homeGoals": 0,
@@ -292,7 +292,7 @@
     "BOSNIA & HERZEGOVINA-QATAR": {
       "homeGoals": 2,
       "awayGoals": 1,
-      "status": "1H",
+      "status": "HT",
       "elapsed": 45,
       "kickoffUTC": "2026-06-24T19:00:00+00:00",
       "events": [
@@ -993,91 +993,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-12T02:00:00+00:00",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "L. Krejci",
-          "team": "CZECHIA",
-          "minute": 59,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "Hwang In-Beom",
-          "team": "SOUTH KOREA",
-          "minute": 67,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "Oh Hyeon-Gyu",
-          "team": "SOUTH KOREA",
-          "minute": 80,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Gi-Hyuk Lee",
-          "team": "SOUTH KOREA",
-          "minute": 90,
-          "extra": 6
-        }
-      ],
-      "substitutions": {
-        "SOUTH KOREA": [
-          {
-            "out": "Lee Jae-Sung",
-            "in": "Hwang Hee-Chan",
-            "minute": 62
-          },
-          {
-            "out": "Son Heung-Min",
-            "in": "Oh Hyeon-Gyu",
-            "minute": 69
-          },
-          {
-            "out": "Lee Tae-Seok",
-            "in": "Eom Ji-Sung",
-            "minute": 69
-          },
-          {
-            "out": "Hwang In-Beom",
-            "in": "Kim Jin-Gyu",
-            "minute": 84
-          },
-          {
-            "out": "Paik Seung-Ho",
-            "in": "Park Jin-Seob",
-            "minute": 84
-          }
-        ],
-        "CZECHIA": [
-          {
-            "out": "P. Sulc",
-            "in": "A. Hlozek",
-            "minute": 64
-          },
-          {
-            "out": "P. Schick",
-            "in": "T. Chory",
-            "minute": 64
-          },
-          {
-            "out": "L. Provod",
-            "in": "M. Sadilek",
-            "minute": 64
-          },
-          {
-            "out": "A. Sojka",
-            "in": "M. Chytil",
-            "minute": 84
-          }
-        ]
-      },
+      "events": [],
       "lineups": {
         "SOUTH KOREA": {
           "formation": "3-4-2-1",
