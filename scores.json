@@ -1,13 +1,30 @@
 {
-  "updated": "2026-06-24T19:30:52.766215Z",
+  "updated": "2026-06-24T19:40:45.411465Z",
   "matches": {
     "SWITZERLAND-CANADA": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 30,
+      "elapsed": 40,
       "kickoffUTC": "2026-06-24T19:00:00+00:00",
-      "events": [],
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "G. Xhaka",
+          "team": "SWITZERLAND",
+          "minute": 32,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "C. Larin",
+          "team": "CANADA",
+          "minute": 32,
+          "extra": null
+        }
+      ],
       "lineups": {
         "SWITZERLAND": {
           "formation": "4-2-3-1",
@@ -273,10 +290,10 @@
       }
     },
     "BOSNIA & HERZEGOVINA-QATAR": {
-      "homeGoals": 1,
+      "homeGoals": 2,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 30,
+      "elapsed": 40,
       "kickoffUTC": "2026-06-24T19:00:00+00:00",
       "events": [
         {
@@ -285,6 +302,14 @@
           "player": "K. Alajbegovic",
           "team": "BOSNIA & HERZEGOVINA",
           "minute": 29,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Own Goal",
+          "player": "S. Al Brake",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 34,
           "extra": null
         }
       ],
