@@ -474,6 +474,19 @@
   }
   .shortcut-instructions-text { font-size:14px; line-height:1.6; color:#e2e8f0; }
 
+  .install-confirm-box { text-align:center; max-width:300px; }
+  .install-confirm-icon { font-size:40px; margin-bottom:10px; }
+  .install-confirm-text { color:#fff; font-size:15px; font-weight:600; line-height:1.5; margin-bottom:20px; }
+  .install-confirm-actions { display:flex; gap:10px; }
+  .install-confirm-btn {
+    flex:1; border:none; border-radius:8px; padding:11px 0; font-size:14px;
+    font-weight:700; cursor:pointer; font-family:inherit;
+  }
+  .install-confirm-cancel { background:rgba(255,255,255,0.08); color:#cbd5e1; }
+  .install-confirm-cancel:hover { background:rgba(255,255,255,0.14); }
+  .install-confirm-accept { background:#FFD700; color:#0a0a0a; }
+  .install-confirm-accept:hover { background:#e6c200; }
+
   .team-clickable { cursor:pointer; border-radius:8px; transition:background 0.15s; }
   .team-clickable:hover { background:rgba(0,0,0,0.04); }
   .st-team.team-clickable:hover, .qteam.team-clickable:hover { background:rgba(255,255,255,0.08); }
@@ -552,24 +565,8 @@
         <option value="nl">🇳🇱 NL</option>
       </select>
       <div class="settings-menu-wrap" id="settings-menu-wrap" style="display:none;">
-        <button id="settings-btn" class="fullscreen-btn" aria-label="Configuración" aria-haspopup="true" aria-expanded="false">⚙️</button>
-      <div id="settings-dropdown" class="settings-dropdown" style="display:none;">
-        <button id="install-btn" class="settings-option">
-          <span class="settings-option-icon">📲</span>
-          <span class="settings-option-text">
-            <span class="settings-option-title" data-i18n="instalarApp">Instalar app</span>
-            <span class="settings-option-desc" data-i18n="instalarAppDesc">Abre como app, ícono propio</span>
-          </span>
-        </button>
-        <button id="shortcut-btn" class="settings-option">
-          <span class="settings-option-icon">🔖</span>
-          <span class="settings-option-text">
-            <span class="settings-option-title" data-i18n="agregarAcceso">Agregar acceso directo</span>
-            <span class="settings-option-desc" data-i18n="agregarAccesoDesc">Guarda el link en el escritorio</span>
-          </span>
-        </button>
+        <button id="settings-btn" class="fullscreen-btn" aria-label="Instalar app">⚙️</button>
       </div>
-    </div>
     <button id="fullscreen-btn" class="fullscreen-btn" aria-label="Pantalla completa">⛶</button>
     </div>
     <div class="header-clock">
@@ -583,6 +580,18 @@
   <div class="shortcut-instructions-box">
     <button id="shortcut-instructions-close" class="cookie-banner-close" aria-label="Cerrar">✕</button>
     <div id="shortcut-instructions-text" class="shortcut-instructions-text"></div>
+  </div>
+</div>
+
+<div id="install-confirm-modal" class="shortcut-instructions" style="display:none;">
+  <div class="shortcut-instructions-box install-confirm-box">
+    <button id="install-confirm-close" class="cookie-banner-close" aria-label="Cerrar">✕</button>
+    <div class="install-confirm-icon">📲</div>
+    <div class="install-confirm-text" id="install-confirm-text">¿Querés instalar la app?</div>
+    <div class="install-confirm-actions">
+      <button id="install-confirm-cancel" class="install-confirm-btn install-confirm-cancel">Cancelar</button>
+      <button id="install-confirm-accept" class="install-confirm-btn install-confirm-accept">Instalar</button>
+    </div>
   </div>
 </div>
 
@@ -664,6 +673,7 @@ const I18N = {
     configuracion: 'Configuración', instalarAppDesc: 'Abre como app, ícono propio',
     agregarAcceso: 'Agregar acceso directo', agregarAccesoDesc: 'Guarda el link en el escritorio',
     instalarAppManual: '📲 Para instalar: tocá el menú <b>⋮</b> de tu navegador y elegí <b>"Instalar app"</b> o <b>"Agregar a pantalla de inicio"</b>.',
+    instalarAppConfirm: '¿Querés instalar Fixture rolaGaard como app? Va a quedar con ícono propio en tu pantalla de inicio.', instalarAppAceptar: 'Instalar', instalarAppCancelar: 'Cancelar',
     instalarAppIOS: '📲 En iPhone: tocá <b>Compartir</b> (□↑) en la barra de Safari y luego <b>"Agregar a pantalla de inicio"</b>. Así queda instalada como app, con ícono propio.',
     accesoDirectoIOS: '🔖 Tocá <b>Compartir</b> (□↑) y luego <b>"Agregar a pantalla de inicio"</b>. Esto guarda un acceso directo sin instalar la app.',
     accesoDirectoAndroid: '🔖 En Chrome para Android, "Agregar a pantalla de inicio" instala la app igual que la opción anterior — no hay un acceso directo más liviano. Si preferís no instalar nada, guardá esta página como <b>Favorito</b> (☆ en el menú ⋮) en vez de agregarla a la pantalla de inicio.',
@@ -708,6 +718,7 @@ const I18N = {
     configuracion: 'Settings', instalarAppDesc: 'Opens as an app, own icon',
     agregarAcceso: 'Add shortcut', agregarAccesoDesc: 'Saves the link to your home screen',
     instalarAppManual: '📲 To install: tap your browser\'s <b>⋮</b> menu and choose <b>"Install app"</b> or <b>"Add to Home screen"</b>.',
+    instalarAppConfirm: 'Install Fixture rolaGaard as an app? It will get its own icon on your home screen.', instalarAppAceptar: 'Install', instalarAppCancelar: 'Cancel',
     instalarAppIOS: '📲 On iPhone: tap <b>Share</b> (□↑) in Safari\'s toolbar, then <b>"Add to Home Screen"</b>. That installs it as an app, with its own icon.',
     accesoDirectoIOS: '🔖 Tap <b>Share</b> (□↑) then <b>"Add to Home Screen"</b>. This saves a shortcut without installing the app.',
     accesoDirectoAndroid: '🔖 On Chrome for Android, "Add to Home screen" installs the app, same as the option above — there is no lighter shortcut option. If you would rather not install anything, save this page as a <b>Bookmark</b> (☆ in the ⋮ menu) instead.',
@@ -752,6 +763,7 @@ const I18N = {
     configuracion: 'Configurações', instalarAppDesc: 'Abre como app, ícone próprio',
     agregarAcceso: 'Adicionar atalho', agregarAccesoDesc: 'Salva o link na tela de início',
     instalarAppManual: '📲 Para instalar: toque no menu <b>⋮</b> do navegador e escolha <b>"Instalar app"</b> ou <b>"Adicionar à tela de início"</b>.',
+    instalarAppConfirm: 'Quer instalar o Fixture rolaGaard como app? Ele ficará com ícone próprio na sua tela de início.', instalarAppAceptar: 'Instalar', instalarAppCancelar: 'Cancelar',
     instalarAppIOS: '📲 No iPhone: toque em <b>Compartilhar</b> (□↑) na barra do Safari e depois em <b>"Adicionar à Tela de Início"</b>. Assim fica instalado como app, com ícone próprio.',
     accesoDirectoIOS: '🔖 Toque em <b>Compartilhar</b> (□↑) e depois <b>"Adicionar à Tela de Início"</b>. Isso salva um atalho sem instalar o app.',
     accesoDirectoAndroid: '🔖 No Chrome para Android, "Adicionar à tela de início" instala o app, igual à opção anterior — não existe um atalho mais leve. Se preferir não instalar nada, salve esta página como <b>Favorito</b> (☆ no menu ⋮).',
@@ -796,6 +808,7 @@ const I18N = {
     configuracion: 'Einstellungen', instalarAppDesc: 'Öffnet als App, eigenes Symbol',
     agregarAcceso: 'Verknüpfung hinzufügen', agregarAccesoDesc: 'Speichert den Link auf dem Startbildschirm',
     instalarAppManual: '📲 Zum Installieren: Browser-Menü <b>⋮</b> öffnen und <b>"App installieren"</b> oder <b>"Zum Startbildschirm"</b> wählen.',
+    instalarAppConfirm: 'Fixture rolaGaard als App installieren? Sie erhält ein eigenes Symbol auf deinem Startbildschirm.', instalarAppAceptar: 'Installieren', instalarAppCancelar: 'Abbrechen',
     instalarAppIOS: '📲 Auf dem iPhone: in der Safari-Symbolleiste auf <b>Teilen</b> (□↑) tippen, dann <b>"Zum Home-Bildschirm"</b>. So wird die App mit eigenem Symbol installiert.',
     accesoDirectoIOS: '🔖 <b>Teilen</b> (□↑) tippen, dann <b>"Zum Home-Bildschirm"</b>. Das speichert eine Verknüpfung, ohne die App zu installieren.',
     accesoDirectoAndroid: '🔖 In Chrome für Android installiert "Zum Startbildschirm hinzufügen" die App, genau wie die Option oben — eine leichtere Verknüpfung gibt es nicht. Wenn du nichts installieren möchtest, speichere diese Seite stattdessen als <b>Lesezeichen</b> (☆ im ⋮-Menü).',
@@ -840,6 +853,7 @@ const I18N = {
     configuracion: 'Instellingen', instalarAppDesc: 'Opent als app, eigen icoon',
     agregarAcceso: 'Snelkoppeling toevoegen', agregarAccesoDesc: 'Slaat de link op je beginscherm op',
     instalarAppManual: '📲 Om te installeren: open het <b>⋮</b> menu van je browser en kies <b>"App installeren"</b> of <b>"Toevoegen aan beginscherm"</b>.',
+    instalarAppConfirm: 'Fixture rolaGaard installeren als app? Het krijgt een eigen icoon op je beginscherm.', instalarAppAceptar: 'Installeren', instalarAppCancelar: 'Annuleren',
     instalarAppIOS: '📲 Op iPhone: tik op <b>Delen</b> (□↑) in de Safari-werkbalk en dan op <b>"Voeg toe aan beginscherm"</b>. Zo wordt de app geïnstalleerd met een eigen icoon.',
     accesoDirectoIOS: '🔖 Tik op <b>Delen</b> (□↑) en dan <b>"Voeg toe aan beginscherm"</b>. Dit slaat een snelkoppeling op zonder de app te installeren.',
     accesoDirectoAndroid: '🔖 In Chrome voor Android installeert "Toevoegen aan beginscherm" de app, net als de optie hierboven — een lichtere snelkoppeling bestaat niet. Wil je niets installeren, sla deze pagina dan op als <b>Bladwijzer</b> (☆ in het ⋮-menu).',
@@ -1993,11 +2007,9 @@ function applyTranslations() {
   document.getElementById('label-paises').textContent = t('filterPaises');
   document.getElementById('report-bug-link').textContent = t('reportarProblema');
   document.getElementById('scroll-top-btn').setAttribute('aria-label', t('volverArriba'));
-  document.getElementById('install-btn').setAttribute('aria-label', t('instalarApp'));
-  document.querySelector('#install-btn .settings-option-title').textContent = t('instalarApp');
-  document.querySelector('#install-btn .settings-option-desc').textContent = t('instalarAppDesc');
-  document.querySelector('#shortcut-btn .settings-option-title').textContent = t('agregarAcceso');
-  document.querySelector('#shortcut-btn .settings-option-desc').textContent = t('agregarAccesoDesc');
+  document.getElementById('install-confirm-text').textContent = t('instalarAppConfirm');
+  document.getElementById('install-confirm-accept').textContent = t('instalarAppAceptar');
+  document.getElementById('install-confirm-cancel').textContent = t('instalarAppCancelar');
   document.getElementById('settings-btn').setAttribute('aria-label', t('configuracion'));
   updateFullscreenBtn();
   document.getElementById('lang-select').value = currentLang;
@@ -2061,12 +2073,13 @@ if ('serviceWorker' in navigator) {
 
 const settingsMenuWrap = document.getElementById('settings-menu-wrap');
 const settingsBtn = document.getElementById('settings-btn');
-const settingsDropdown = document.getElementById('settings-dropdown');
-const installBtn = document.getElementById('install-btn');
-const shortcutBtn = document.getElementById('shortcut-btn');
 const shortcutInstructions = document.getElementById('shortcut-instructions');
 const shortcutInstructionsText = document.getElementById('shortcut-instructions-text');
 const shortcutInstructionsClose = document.getElementById('shortcut-instructions-close');
+const installConfirmModal = document.getElementById('install-confirm-modal');
+const installConfirmAccept = document.getElementById('install-confirm-accept');
+const installConfirmCancel = document.getElementById('install-confirm-cancel');
+const installConfirmClose = document.getElementById('install-confirm-close');
 let deferredInstallPrompt = null;
 
 function isIOS() {
@@ -2091,26 +2104,36 @@ if (isStandalone()) {
   fullscreenBtn.style.display = 'none';
 }
 
-settingsBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  const open = settingsDropdown.style.display === 'block';
-  settingsDropdown.style.display = open ? 'none' : 'block';
-  settingsBtn.setAttribute('aria-expanded', String(!open));
-});
-document.addEventListener('click', (e) => {
-  if (!settingsMenuWrap.contains(e.target)) {
-    settingsDropdown.style.display = 'none';
-    settingsBtn.setAttribute('aria-expanded', 'false');
-  }
-});
-
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   deferredInstallPrompt = e;
 });
 
-installBtn.addEventListener('click', async () => {
-  settingsDropdown.style.display = 'none';
+// El engranaje ahora tiene una sola función: pedir instalar la app, con
+// confirmación previa del usuario (no instala nada hasta que confirme).
+function openInstallConfirm() {
+  installConfirmModal.style.display = 'flex';
+  history.pushState({ modal: 'install-confirm' }, '');
+}
+function closeInstallConfirm() {
+  if (installConfirmModal.style.display === 'none') return;
+  if (history.state && history.state.modal === 'install-confirm') {
+    history.back();
+  } else {
+    installConfirmModal.style.display = 'none';
+  }
+}
+settingsBtn.addEventListener('click', () => {
+  openInstallConfirm();
+});
+installConfirmCancel.addEventListener('click', closeInstallConfirm);
+installConfirmClose.addEventListener('click', closeInstallConfirm);
+installConfirmModal.addEventListener('click', (e) => {
+  if (e.target === installConfirmModal) closeInstallConfirm();
+});
+
+installConfirmAccept.addEventListener('click', async () => {
+  closeInstallConfirm();
   if (deferredInstallPrompt) {
     deferredInstallPrompt.prompt();
     const { outcome } = await deferredInstallPrompt.userChoice;
@@ -2122,15 +2145,6 @@ installBtn.addEventListener('click', async () => {
   // opción de "Instalar app" — el único camino real es Compartir → Agregar
   // a inicio, así que mostramos ESA instrucción, no la genérica de Android/desktop.
   showShortcutInstructions(isIOS() ? t('instalarAppIOS') : t('instalarAppManual'));
-});
-
-shortcutBtn.addEventListener('click', () => {
-  settingsDropdown.style.display = 'none';
-  showShortcutInstructions(
-    isIOS() ? t('accesoDirectoIOS') :
-    isAndroid() ? t('accesoDirectoAndroid') :
-    t('accesoDirectoDesktop')
-  );
 });
 
 function showShortcutInstructions(html) {
@@ -2218,11 +2232,14 @@ window.addEventListener('popstate', (e) => {
   if (countryInfoModal.style.display !== 'none') {
     countryInfoModal.style.display = 'none';
   }
+  if (installConfirmModal.style.display !== 'none') {
+    installConfirmModal.style.display = 'none';
+  }
 });
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && countryInfoModal.style.display !== 'none') {
-    closeCountryInfo();
-  }
+  if (e.key !== 'Escape') return;
+  if (countryInfoModal.style.display !== 'none') closeCountryInfo();
+  if (installConfirmModal.style.display !== 'none') closeInstallConfirm();
 });
 
 
