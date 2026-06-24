@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-24T20:20:37.716005Z",
+  "updated": "2026-06-24T20:31:05.177666Z",
   "matches": {
     "SWITZERLAND-CANADA": {
       "homeGoals": 2,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 61,
+      "elapsed": 70,
       "kickoffUTC": "2026-06-24T19:00:00+00:00",
       "events": [
         {
@@ -328,7 +328,7 @@
       "homeGoals": 2,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 58,
+      "elapsed": 67,
       "kickoffUTC": "2026-06-24T19:00:00+00:00",
       "events": [
         {
@@ -367,6 +367,16 @@
             "out": "A. Malic",
             "in": "A. Memic",
             "minute": 46
+          },
+          {
+            "out": "N. Katic",
+            "in": "D. Hadzikadunic",
+            "minute": 63
+          },
+          {
+            "out": "E. Dzeko",
+            "in": "E. Mahmic",
+            "minute": 64
           }
         ],
         "QATAR": [
