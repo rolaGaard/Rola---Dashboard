@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-24T20:40:44.141843Z",
+  "updated": "2026-06-24T20:50:37.592805Z",
   "matches": {
     "SWITZERLAND-CANADA": {
       "homeGoals": 2,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 82,
+      "elapsed": 90,
       "kickoffUTC": "2026-06-24T19:00:00+00:00",
       "events": [
         {
@@ -47,6 +47,14 @@
           "team": "CANADA",
           "minute": 76,
           "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "L. Millar",
+          "team": "CANADA",
+          "minute": 87,
+          "extra": null
         }
       ],
       "substitutions": {
@@ -70,6 +78,11 @@
             "out": "T. Buchanan",
             "in": "P. David",
             "minute": 75
+          },
+          {
+            "out": "R. Laryea",
+            "in": "J. Shaffelburg",
+            "minute": 83
           }
         ],
         "SWITZERLAND": [
@@ -87,6 +100,16 @@
             "out": "R. Vargas",
             "in": "D. Ndoye",
             "minute": 80
+          },
+          {
+            "out": "J. Manzambi",
+            "in": "C. Fassnacht",
+            "minute": 85
+          },
+          {
+            "out": "B. Embolo",
+            "in": "C. Itten",
+            "minute": 85
           }
         ]
       },
@@ -355,10 +378,10 @@
       }
     },
     "BOSNIA & HERZEGOVINA-QATAR": {
-      "homeGoals": 2,
+      "homeGoals": 3,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 78,
+      "elapsed": 88,
       "kickoffUTC": "2026-06-24T19:00:00+00:00",
       "events": [
         {
@@ -384,6 +407,30 @@
           "team": "QATAR",
           "minute": 42,
           "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Fathi",
+          "team": "QATAR",
+          "minute": 78,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "E. Mahmic",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 80,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "E. Mahmic",
+          "team": "BOSNIA & HERZEGOVINA",
+          "minute": 82,
+          "extra": null
         }
       ],
       "substitutions": {
@@ -407,6 +454,11 @@
             "out": "E. Dzeko",
             "in": "E. Mahmic",
             "minute": 64
+          },
+          {
+            "out": "K. Alajbegovic",
+            "in": "D. Burnic",
+            "minute": 82
           }
         ],
         "QATAR": [
@@ -424,6 +476,16 @@
             "out": "K. Boudiaf",
             "in": "A. Ali",
             "minute": 72
+          },
+          {
+            "out": "Edmilson Junior",
+            "in": "A. Alaaeldin",
+            "minute": 79
+          },
+          {
+            "out": "A. Fathi",
+            "in": "M. Al Mannai",
+            "minute": 79
           }
         ]
       },
