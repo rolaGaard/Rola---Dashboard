@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-24T19:01:13.234631Z",
+  "updated": "2026-06-24T19:10:37.540773Z",
   "matches": {
     "SWITZERLAND-CANADA": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 1,
+      "elapsed": 10,
       "kickoffUTC": "2026-06-24T19:00:00+00:00",
       "events": [],
       "lineups": {
@@ -276,7 +276,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 1,
+      "elapsed": 10,
       "kickoffUTC": "2026-06-24T19:00:00+00:00",
       "events": [],
       "lineups": {
