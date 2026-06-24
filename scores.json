@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-24T00:01:20.891425Z",
+  "updated": "2026-06-24T00:10:32.197135Z",
   "matches": {
     "PANAMA-CROATIA": {
       "homeGoals": 0,
       "awayGoals": 0,
-      "status": "HT",
-      "elapsed": 45,
+      "status": "2H",
+      "elapsed": 52,
       "kickoffUTC": "2026-06-23T23:00:00+00:00",
       "events": []
     },
