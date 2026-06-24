@@ -1,19 +1,45 @@
 {
-  "updated": "2026-06-24T03:10:36.203298Z",
+  "updated": "2026-06-24T03:20:42.976061Z",
   "matches": {
     "COLOMBIA-CONGO DR": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 49,
+      "elapsed": 59,
       "kickoffUTC": "2026-06-24T02:00:00+00:00",
-      "events": [],
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "J. Lucumi",
+          "team": "COLOMBIA",
+          "minute": 56,
+          "extra": null
+        }
+      ],
       "substitutions": {
         "CONGO DR": [
           {
             "out": "N. Mukau",
             "in": "N. Sadiki",
             "minute": 46
+          },
+          {
+            "out": "C. Bakambu",
+            "in": "S. Banza",
+            "minute": 57
+          }
+        ],
+        "COLOMBIA": [
+          {
+            "out": "L. Suarez",
+            "in": "J. Cordoba",
+            "minute": 58
+          },
+          {
+            "out": "J. Rodriguez",
+            "in": "J. Quintero",
+            "minute": 58
           }
         ]
       },
