@@ -1250,18 +1250,37 @@ let currentFilter = localStorage.getItem('wcFilter');
 if (!VALID_FILTERS.includes(currentFilter)) currentFilter = 'all';
 let searchTerm = '';
 
+// Busca el partido en liveData probando el orden home-away tal como lo
+// tenemos en SCHEDULE, pero si no lo encuentra, prueba también el orden
+// invertido (away-home) — por si la API nos devuelve local/visitante al
+// revés de lo que hardcodeamos. Si lo encuentra invertido, reacomoda los
+// goles para que sigan correspondiendo a m.home/m.away correctamente.
+function getLiveData(m) {
+  const key = matchKey(m.home, m.away);
+  const direct = liveData[key];
+  if (direct) return direct;
+  const keyRev = matchKey(m.away, m.home);
+  const reversed = liveData[keyRev];
+  if (reversed) {
+    return {
+      ...reversed,
+      homeGoals: reversed.awayGoals,
+      awayGoals: reversed.homeGoals,
+    };
+  }
+  return null;
+}
+
 // Prefer the real kickoff time from the API (more reliable, auto-corrects if FIFA
 // changes a time) over our hardcoded SCHEDULE value, which is only a fallback
 // for matches the API hasn't returned data for yet.
 function getKickoffUTC(m) {
-  const key = matchKey(m.home, m.away);
-  const live = liveData[key] || null;
+  const live = getLiveData(m);
   return (live && live.kickoffUTC) ? live.kickoffUTC : m.kickoffUTC;
 }
 
 function getMatchResult(m) {
-  const key = matchKey(m.home, m.away);
-  const live = liveData[key] || null;
+  const live = getLiveData(m);
   const apiStatus = live ? live.status : null;
   const homeGoals = live ? live.homeGoals : null;
   const awayGoals = live ? live.awayGoals : null;
@@ -1398,7 +1417,7 @@ function getQualifier(groupLetter, position) {
 
 function buildMatchCard(m) {
   const key = matchKey(m.home, m.away);
-  const live = liveData[key] || null;
+  const live = getLiveData(m);
   const apiStatus = live ? live.status : null;
   const homeGoals = live ? live.homeGoals : null;
   const awayGoals = live ? live.awayGoals : null;
@@ -1432,6 +1451,12 @@ function buildMatchCard(m) {
     scoreText = homeGoals + ' - ' + awayGoals;
   } else if (isFinished) {
     scoreText = t('sinDatos');
+  } else if (isLive) {
+    // Sabemos que ya arrancó (por horario), pero todavía no llegó el
+    // marcador real de la API — mostrar la hora de inicio acá confunde
+    // (parece que no arrancó). 0-0 es la situación más probable hasta que
+    // se actualice scores.json con el dato real.
+    scoreText = '0 - 0';
   } else {
     scoreText = timeOnly;
   }
@@ -1554,8 +1579,7 @@ function buildEventsDetail(events, homeTeam, awayTeam) {
 }
 
 function getEffectiveStatus(m) {
-  const key = matchKey(m.home, m.away);
-  const live = liveData[key] || null;
+  const live = getLiveData(m);
   const apiStatus = live ? live.status : null;
   if (apiStatus && isLiveStatus(apiStatus)) return 'live';
   if (apiStatus && isFinishedStatus(apiStatus)) return 'finished';
@@ -1776,8 +1800,19 @@ function detectGoals(newData) {
     const currAway = curr.awayGoals;
     if (prevHome === null || prevHome === undefined) return; // first time seeing this match, skip
     if (currHome > prevHome || currAway > prevAway) {
-      const match = SCHEDULE.find(m => matchKey(m.home, m.away) === key);
-      const scorer = currHome > prevHome ? (match ? esName(match.home) : key) : (match ? esName(match.away) : key);
+      // Probamos el orden tal cual viene la clave, y si no hay match en
+      // SCHEDULE, probamos invertido (por si la API nos da local/visitante
+      // al revés de cómo lo tenemos hardcodeado).
+      let match = SCHEDULE.find(m => matchKey(m.home, m.away) === key);
+      let homeIsScheduleHome = true;
+      if (!match) {
+        match = SCHEDULE.find(m => matchKey(m.away, m.home) === key);
+        homeIsScheduleHome = false;
+      }
+      const goalWasOnKeyHomeSide = currHome > prevHome;
+      const scorer = match
+        ? esName(goalWasOnKeyHomeSide === homeIsScheduleHome ? match.home : match.away)
+        : key;
       triggerGoalAlert(scorer, currHome, currAway, key);
     }
   });
@@ -2253,7 +2288,7 @@ function findRelevantLineupMatch(code) {
   if (teamMatches.length === 0) return null;
 
   const withLineups = teamMatches.filter(m => {
-    const live = liveData[matchKey(m.home, m.away)];
+    const live = getLiveData(m);
     return live && live.lineups && live.lineups[code];
   });
   if (withLineups.length > 0) {
@@ -2273,7 +2308,7 @@ function getLineupData(code) {
   const match = findRelevantLineupMatch(code);
   if (!match) return { match: null };
 
-  const live = liveData[matchKey(match.home, match.away)];
+  const live = getLiveData(match);
   const lineup = live && live.lineups ? live.lineups[code] : null;
   const rivalCode = match.home === code ? match.away : match.home;
   const rivalName = esName(rivalCode);
