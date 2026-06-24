@@ -522,9 +522,12 @@
 
   .ci-lineup-meta { color:#94a3b8; font-size:11px; margin-bottom:8px; display:flex; gap:10px; flex-wrap:wrap; }
   .ci-lineup-meta b { color:#e2e8f0; }
+  .ci-coach-link { color:#e2e8f0; text-decoration:none; border-bottom:1px dotted rgba(226,232,240,0.4); }
+  .ci-coach-link:hover { color:#FFD700; border-bottom-color:#FFD700; }
   .ci-lineup-empty { color:#64748b; font-size:12px; font-style:italic; padding:6px 0; }
   .ci-lineup-list { display:flex; flex-direction:column; gap:1px; }
   .ci-lineup-sub-title { color:#64748b; font-size:10px; font-weight:700; text-transform:uppercase; margin:10px 0 4px; }
+  .ci-sub-tag { color:#1DB954; font-size:10px; font-weight:700; flex-shrink:0; }
 
   .ci-squad-empty { color:#64748b; font-size:12px; font-style:italic; padding:6px 0; }
   .ci-squad-list { display:flex; flex-direction:column; gap:1px; }
@@ -722,7 +725,7 @@ const I18N = {
     regionLabel: 'Ubicación', mundialesParticipados: 'Mundiales jugados', mundialesGanados: 'Mundiales ganados',
     datosAproximados: 'Datos aproximados. Fuente oficial: FIFA.', datosNoDisponibles: 'Datos no disponibles para este equipo.',
     plantilla: 'Plantilla', plantillaNoDisponible: 'Plantilla no disponible por el momento.',
-    alineacion: 'Alineación', proximoRival: 'Rival', formacion: 'Formación', suplentes: 'Suplentes',
+    alineacion: 'Alineación', proximoRival: 'Rival', formacion: 'Formación', enCancha: 'En cancha', banco: 'Banco', entroMin: 'min', sinSuplentesDisponibles: 'No quedan suplentes sin usar.',
     alineacionSinPartidos: 'No hay partidos cargados para este equipo.',
     alineacionNoDisponible: 'Todavía no está confirmada. La FIFA la publica aproximadamente 1 hora antes del partido.',
     paisesTitulo: 'Estado del Mundial 2026', paisesCompiten: 'Siguen en carrera', paisesAfuera: 'Quedaron eliminados',
@@ -770,7 +773,7 @@ const I18N = {
     regionLabel: 'Location', mundialesParticipados: 'World Cup appearances', mundialesGanados: 'World Cup titles',
     datosAproximados: 'Approximate data. Official source: FIFA.', datosNoDisponibles: 'No data available for this team.',
     plantilla: 'Squad', plantillaNoDisponible: 'Squad not available yet.',
-    alineacion: 'Lineup', proximoRival: 'Opponent', formacion: 'Formation', suplentes: 'Substitutes',
+    alineacion: 'Lineup', proximoRival: 'Opponent', formacion: 'Formation', enCancha: 'On the pitch', banco: 'Bench', entroMin: 'min', sinSuplentesDisponibles: 'No unused substitutes left.',
     alineacionSinPartidos: 'No matches loaded for this team.',
     alineacionNoDisponible: 'Not confirmed yet. FIFA publishes it about 1 hour before kickoff.',
     paisesTitulo: '2026 World Cup status', paisesCompiten: 'Still in the running', paisesAfuera: 'Eliminated',
@@ -818,7 +821,7 @@ const I18N = {
     regionLabel: 'Localização', mundialesParticipados: 'Copas do Mundo disputadas', mundialesGanados: 'Copas do Mundo conquistadas',
     datosAproximados: 'Dados aproximados. Fonte oficial: FIFA.', datosNoDisponibles: 'Dados não disponíveis para esta seleção.',
     plantilla: 'Elenco', plantillaNoDisponible: 'Elenco não disponível por enquanto.',
-    alineacion: 'Escalação', proximoRival: 'Adversário', formacion: 'Formação', suplentes: 'Reservas',
+    alineacion: 'Escalação', proximoRival: 'Adversário', formacion: 'Formação', enCancha: 'Em campo', banco: 'Banco', entroMin: 'min', sinSuplentesDisponibles: 'Não há mais reservas disponíveis.',
     alineacionSinPartidos: 'Não há jogos carregados para esta seleção.',
     alineacionNoDisponible: 'Ainda não confirmada. A FIFA publica cerca de 1 hora antes do jogo.',
     paisesTitulo: 'Situação da Copa do Mundo 2026', paisesCompiten: 'Seguem na disputa', paisesAfuera: 'Foram eliminados',
@@ -866,7 +869,7 @@ const I18N = {
     regionLabel: 'Lage', mundialesParticipados: 'WM-Teilnahmen', mundialesGanados: 'WM-Titel',
     datosAproximados: 'Ungefähre Angaben. Offizielle Quelle: FIFA.', datosNoDisponibles: 'Keine Daten für dieses Team verfügbar.',
     plantilla: 'Kader', plantillaNoDisponible: 'Kader derzeit nicht verfügbar.',
-    alineacion: 'Aufstellung', proximoRival: 'Gegner', formacion: 'Formation', suplentes: 'Ersatzbank',
+    alineacion: 'Aufstellung', proximoRival: 'Gegner', formacion: 'Formation', enCancha: 'Auf dem Feld', banco: 'Ersatzbank', entroMin: 'Min.', sinSuplentesDisponibles: 'Keine ungenutzten Ersatzspieler mehr.',
     alineacionSinPartidos: 'Keine Spiele für dieses Team geladen.',
     alineacionNoDisponible: 'Noch nicht bestätigt. Die FIFA veröffentlicht sie etwa 1 Stunde vor dem Spiel.',
     paisesTitulo: 'WM-2026-Stand', paisesCompiten: 'Noch im Turnier', paisesAfuera: 'Ausgeschieden',
@@ -914,7 +917,7 @@ const I18N = {
     regionLabel: 'Locatie', mundialesParticipados: 'WK-deelnames', mundialesGanados: 'WK-titels',
     datosAproximados: 'Geschatte gegevens. Officiële bron: FIFA.', datosNoDisponibles: 'Geen gegevens beschikbaar voor dit land.',
     plantilla: 'Selectie', plantillaNoDisponible: 'Selectie momenteel niet beschikbaar.',
-    alineacion: 'Opstelling', proximoRival: 'Tegenstander', formacion: 'Formatie', suplentes: 'Wisselspelers',
+    alineacion: 'Opstelling', proximoRival: 'Tegenstander', formacion: 'Formatie', enCancha: 'Op het veld', banco: 'Bank', entroMin: 'min', sinSuplentesDisponibles: 'Geen ongebruikte wissels meer over.',
     alineacionSinPartidos: 'Geen wedstrijden geladen voor dit land.',
     alineacionNoDisponible: 'Nog niet bevestigd. FIFA publiceert dit ongeveer 1 uur voor de wedstrijd.',
     paisesTitulo: 'WK 2026-status', paisesCompiten: 'Nog in de strijd', paisesAfuera: 'Uitgeschakeld',
@@ -2264,56 +2267,87 @@ function findRelevantLineupMatch(code) {
   return upcoming[0] || null;
 }
 
-function buildLineupHtml(code) {
+// Calcula una sola vez los datos cruzados (titulares, cambios, banco) para
+// no repetir la misma lógica en las dos columnas del modal.
+function getLineupData(code) {
   const match = findRelevantLineupMatch(code);
-  if (!match) {
-    return '<div class="ci-lineup-empty">' + t('alineacionSinPartidos') + '</div>';
-  }
+  if (!match) return { match: null };
+
   const live = liveData[matchKey(match.home, match.away)];
   const lineup = live && live.lineups ? live.lineups[code] : null;
   const rivalCode = match.home === code ? match.away : match.home;
   const rivalName = esName(rivalCode);
 
   if (!lineup || !lineup.startXI || lineup.startXI.length === 0) {
-    return '<div class="ci-lineup-meta">' + t('proximoRival') + ': <b>' + rivalName + '</b></div>' +
-           '<div class="ci-lineup-empty">' + t('alineacionNoDisponible') + '</div>';
+    return { match, lineup: null, rivalName };
   }
 
-  let html = '<div class="ci-lineup-meta">' +
-    '<span>' + t('proximoRival') + ': <b>' + rivalName + '</b></span>' +
-    (lineup.formation ? '<span>' + t('formacion') + ': <b>' + lineup.formation + '</b></span>' : '') +
-    (lineup.coach ? '<span>DT: <b>' + lineup.coach + '</b></span>' : '') +
-  '</div>';
+  // Cruzamos la alineación inicial con los cambios reales del partido
+  // (vienen del mismo endpoint de eventos que ya usamos para goles/tarjetas)
+  // para saber quién sigue en cancha y quién ya entró desde el banco.
+  const subs = (live && live.substitutions && live.substitutions[code]) || [];
+  const subbedOutNames = new Set(subs.map(s => s.out).filter(Boolean));
+  const subbedInMinuteByName = {};
+  subs.forEach(s => { if (s.in) subbedInMinuteByName[s.in] = s.minute; });
 
-  const sortedXI = lineup.startXI.slice().sort((a, b) => {
+  const onPitch = lineup.startXI
+    .filter(p => !subbedOutNames.has(p.name))
+    .map(p => ({ ...p, inMinute: null }));
+
+  const enteredFromBench = (lineup.substitutes || [])
+    .filter(p => subbedInMinuteByName[p.name] !== undefined)
+    .map(p => ({ ...p, inMinute: subbedInMinuteByName[p.name] }));
+
+  const stillOnBench = (lineup.substitutes || [])
+    .filter(p => subbedInMinuteByName[p.name] === undefined);
+
+  const onPitchSorted = onPitch.concat(enteredFromBench).sort((a, b) => {
     const na = (a.number === null || a.number === undefined) ? 999 : a.number;
     const nb = (b.number === null || b.number === undefined) ? 999 : b.number;
     return na - nb;
   });
-  html += '<div class="ci-lineup-list">' + sortedXI.map(p => {
-    const num = (p.number === null || p.number === undefined) ? '–' : p.number;
-    const link = googleSearchLink(p.name, code);
-    return '<div class="ci-player-row">' +
-      '<span class="ci-player-num">' + num + '</span>' +
-      '<a href="' + link + '" target="_blank" rel="noopener" class="ci-player-name">' + p.name + '</a>' +
-      (p.pos ? '<span class="ci-player-pos">' + p.pos + '</span>' : '') +
-    '</div>';
-  }).join('') + '</div>';
 
-  if (lineup.substitutes && lineup.substitutes.length > 0) {
-    html += '<div class="ci-lineup-sub-title">' + t('suplentes') + '</div>';
-    html += '<div class="ci-lineup-list">' + lineup.substitutes.map(p => {
-      const num = (p.number === null || p.number === undefined) ? '–' : p.number;
-      const link = googleSearchLink(p.name, code);
-      return '<div class="ci-player-row">' +
-        '<span class="ci-player-num">' + num + '</span>' +
-        '<a href="' + link + '" target="_blank" rel="noopener" class="ci-player-name">' + p.name + '</a>' +
-        (p.pos ? '<span class="ci-player-pos">' + p.pos + '</span>' : '') +
-      '</div>';
-    }).join('') + '</div>';
+  return { match, lineup, rivalName, onPitchSorted, stillOnBench };
+}
+
+function playerRow(code, p) {
+  const num = (p.number === null || p.number === undefined) ? '–' : p.number;
+  const link = googleSearchLink(p.name, code);
+  return '<div class="ci-player-row">' +
+    '<span class="ci-player-num">' + num + '</span>' +
+    '<a href="' + link + '" target="_blank" rel="noopener" class="ci-player-name">' + p.name + '</a>' +
+    (p.inMinute !== null && p.inMinute !== undefined ? '<span class="ci-sub-tag">↳ ' + t('entroMin') + ' ' + p.inMinute + '\'</span>' : '') +
+    (p.pos ? '<span class="ci-player-pos">' + p.pos + '</span>' : '') +
+  '</div>';
+}
+
+function buildLineupHtml(code, data) {
+  if (!data.match) {
+    return '<div class="ci-lineup-empty">' + t('alineacionSinPartidos') + '</div>';
   }
-
+  if (!data.lineup) {
+    return '<div class="ci-lineup-meta">' + t('proximoRival') + ': <b>' + data.rivalName + '</b></div>' +
+           '<div class="ci-lineup-empty">' + t('alineacionNoDisponible') + '</div>';
+  }
+  const lineup = data.lineup;
+  const coachLink = lineup.coach ? googleSearchLink(lineup.coach, code) : null;
+  let html = '<div class="ci-lineup-meta">' +
+    '<span>' + t('proximoRival') + ': <b>' + data.rivalName + '</b></span>' +
+    (lineup.formation ? '<span>' + t('formacion') + ': <b>' + lineup.formation + '</b></span>' : '') +
+    (coachLink ? '<span>DT: <a href="' + coachLink + '" target="_blank" rel="noopener" class="ci-coach-link">' + lineup.coach + '</a></span>' : '') +
+  '</div>';
+  html += '<div class="ci-lineup-list">' + data.onPitchSorted.map(p => playerRow(code, p)).join('') + '</div>';
   return html;
+}
+
+function buildBenchHtml(code, data) {
+  if (!data.match || !data.lineup) {
+    return '<div class="ci-lineup-empty">' + t('alineacionNoDisponible') + '</div>';
+  }
+  if (data.stillOnBench.length === 0) {
+    return '<div class="ci-lineup-empty">' + t('sinSuplentesDisponibles') + '</div>';
+  }
+  return '<div class="ci-lineup-list">' + data.stillOnBench.map(p => playerRow(code, p)).join('') + '</div>';
 }
 
 function openCountryInfo(code) {
@@ -2342,14 +2376,15 @@ function openCountryInfo(code) {
     html += '<div class="ci-disclaimer">' + t('datosNoDisponibles') + '</div>';
   }
 
+  const lineupData = getLineupData(code);
   html += '<div class="ci-body">' +
     '<div class="ci-col">' +
       '<div class="ci-col-title">⚽ ' + t('alineacion') + '</div>' +
-      '<div class="ci-col-scroll">' + buildLineupHtml(code) + '</div>' +
+      '<div class="ci-col-scroll">' + buildLineupHtml(code, lineupData) + '</div>' +
     '</div>' +
     '<div class="ci-col">' +
-      '<div class="ci-col-title">' + t('plantilla') + '</div>' +
-      '<div class="ci-col-scroll">' + buildSquadHtml(code) + '</div>' +
+      '<div class="ci-col-title">' + t('banco') + '</div>' +
+      '<div class="ci-col-scroll">' + buildBenchHtml(code, lineupData) + '</div>' +
     '</div>' +
   '</div>';
 
