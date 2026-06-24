@@ -82,6 +82,7 @@ jobs:
                   with urllib.request.urlopen(req, timeout=10) as resp:
                       body = json.loads(resp.read())
                   events = []
+                  substitutions = {}  # team -> [{'out':, 'in':, 'minute':}, ...]
                   for ev in body.get('response', []):
                       etype = ev.get('type')  # Goal, Card, subst, Var
                       detail = ev.get('detail')  # Normal Goal, Yellow Card, Red Card, etc
@@ -98,10 +99,19 @@ jobs:
                               'minute': minute,
                               'extra': extra,
                           })
-                  return events
+                      elif etype == 'subst':
+                          # En los eventos de cambio, la API usa "player" para el
+                          # que SALE y "assist" para el que ENTRA.
+                          player_in = (ev.get('assist') or {}).get('name')
+                          substitutions.setdefault(team, []).append({
+                              'out': player,
+                              'in': player_in,
+                              'minute': minute,
+                          })
+                  return events, substitutions
               except Exception as e:
                   print(f"Could not fetch events for fixture {fixture_id}: {e}")
-                  return []
+                  return [], {}
 
           # Las alineaciones (titulares + suplentes + DT) las publica la API
           # recién ~1 hora antes del partido — por eso solo las pedimos para
@@ -164,7 +174,9 @@ jobs:
               # Only fetch events (goals/cards) for matches that are live or finished,
               # to avoid wasting API quota on matches that haven't started.
               if status in LIVE_STATUSES or status in FINISHED_STATUSES:
-                  entry['events'] = fetch_events(fixture['id'])
+                  entry['events'], subs = fetch_events(fixture['id'])
+                  if subs:
+                      entry['substitutions'] = subs
 
               # Las alineaciones se piden si el partido ya está en vivo/finalizado,
               # o si está a 2 horas o menos de arrancar (la API recién las publica
