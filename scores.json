@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T01:50:29.551950Z",
+  "updated": "2026-06-24T02:01:19.281571Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -7,72 +7,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-11T19:00:00+00:00",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "J. Quinones",
-          "team": "MEXICO",
-          "minute": 9,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Teboho Mokoena",
-          "team": "SOUTH AFRICA",
-          "minute": 17,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Brian Guti\u00e9rrez",
-          "team": "MEXICO",
-          "minute": 23,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Red Card",
-          "player": "Siphephelo Sithole",
-          "team": "SOUTH AFRICA",
-          "minute": 49,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "R. Jimenez",
-          "team": "MEXICO",
-          "minute": 67,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Nkosinathi Sibisi",
-          "team": "SOUTH AFRICA",
-          "minute": 74,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Red Card",
-          "player": "Themba Zwane",
-          "team": "SOUTH AFRICA",
-          "minute": 84,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Red Card",
-          "player": "C\u00e9sar Montes",
-          "team": "MEXICO",
-          "minute": 90,
-          "extra": 2
-        }
-      ]
+      "events": []
     },
     "SOUTH KOREA-CZECHIA": {
       "homeGoals": 2,
