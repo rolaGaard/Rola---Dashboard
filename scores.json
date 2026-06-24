@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T04:10:35.852555Z",
+  "updated": "2026-06-24T04:20:34.667572Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -18136,6 +18136,11 @@
               "pos": "F"
             },
             {
+              "name": "Richard R\u00edos",
+              "number": 6,
+              "pos": "M"
+            },
+            {
               "name": "\u00c1lvaro Montero",
               "number": 24,
               "pos": "G"
@@ -18168,11 +18173,6 @@
             {
               "name": "Jaminton Campaz",
               "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "Richard R\u00edos",
-              "number": 6,
               "pos": "M"
             },
             {
@@ -18274,6 +18274,21 @@
               "pos": "F"
             },
             {
+              "name": "Joris Kayembe",
+              "number": 12,
+              "pos": "D"
+            },
+            {
+              "name": "Charles Pickel",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Nathana\u00ebl Mbuku",
+              "number": 7,
+              "pos": "F"
+            },
+            {
               "name": "Matthieu Epolo",
               "number": 21,
               "pos": "G"
@@ -18286,11 +18301,6 @@
             {
               "name": "Gedeon Kalulu",
               "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Joris Kayembe",
-              "number": 12,
               "pos": "D"
             },
             {
@@ -18309,18 +18319,8 @@
               "pos": "M"
             },
             {
-              "name": "Charles Pickel",
-              "number": 18,
-              "pos": "M"
-            },
-            {
               "name": "Brian Cipenga",
               "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Nathana\u00ebl Mbuku",
-              "number": 7,
               "pos": "F"
             },
             {
