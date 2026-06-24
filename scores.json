@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T07:20:36.364943Z",
+  "updated": "2026-06-24T07:30:54.300884Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -17761,6 +17761,26 @@
           ],
           "substitutes": [
             {
+              "name": "Cecilio Waterman",
+              "number": 18,
+              "pos": "F"
+            },
+            {
+              "name": "Azarias Londo\u00f1o",
+              "number": 24,
+              "pos": "F"
+            },
+            {
+              "name": "\u00c9ric Davis",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Tom\u00e1s Rodr\u00edguez",
+              "number": 9,
+              "pos": "F"
+            },
+            {
               "name": "Luis Mej\u00eda",
               "number": 1,
               "pos": "G"
@@ -17778,11 +17798,6 @@
             {
               "name": "Edgardo Fari\u00f1a",
               "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "\u00c9ric Davis",
-              "number": 15,
               "pos": "D"
             },
             {
@@ -17818,21 +17833,6 @@
             {
               "name": "C\u00e9sar Yanis",
               "number": 21,
-              "pos": "F"
-            },
-            {
-              "name": "Azarias Londo\u00f1o",
-              "number": 24,
-              "pos": "F"
-            },
-            {
-              "name": "Tom\u00e1s Rodr\u00edguez",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Cecilio Waterman",
-              "number": 18,
               "pos": "F"
             }
           ]
@@ -17899,6 +17899,31 @@
           ],
           "substitutes": [
             {
+              "name": "Andrej Kramari\u0107",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Ante Budimir",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Petar Su\u010di\u0107",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Luka Su\u010di\u0107",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Mario Pa\u0161ali\u0107",
+              "number": 15,
+              "pos": "M"
+            },
+            {
               "name": "Ivor Pandur",
               "number": 12,
               "pos": "G"
@@ -17939,34 +17964,9 @@
               "pos": "M"
             },
             {
-              "name": "Mario Pa\u0161ali\u0107",
-              "number": 15,
-              "pos": "M"
-            },
-            {
-              "name": "Petar Su\u010di\u0107",
-              "number": 17,
-              "pos": "M"
-            },
-            {
               "name": "Toni Fruk",
               "number": 19,
               "pos": "M"
-            },
-            {
-              "name": "Luka Su\u010di\u0107",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "Andrej Kramari\u0107",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Ante Budimir",
-              "number": 11,
-              "pos": "F"
             },
             {
               "name": "Igor Matanovi\u0107",
