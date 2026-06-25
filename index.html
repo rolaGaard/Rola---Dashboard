@@ -2491,8 +2491,15 @@ function cardForPlayer(events, name) {
 }
 
 function buildPitchSvg(myCode, data) {
-  const myPositions = formationPositions(data.onPitchSorted, 'left');
-  const rivalPositions = data.rivalOnPitch ? formationPositions(data.rivalOnPitch, 'right') : [];
+  // El lado en la cancha respeta cómo se ve el partido en la tarjeta real
+  // (local a la izquierda, visitante a la derecha) — no depende de cuál
+  // país abriste el modal.
+  const isHome = data.match && data.match.home === myCode;
+  const mySide = isHome ? 'left' : 'right';
+  const rivalSide = isHome ? 'right' : 'left';
+
+  const myPositions = formationPositions(data.onPitchSorted, mySide);
+  const rivalPositions = data.rivalOnPitch ? formationPositions(data.rivalOnPitch, rivalSide) : [];
 
   if (myPositions.length === 0) {
     return '<div class="ci-pitch-empty">' + t('alineacionNoDisponible') + '</div>';
@@ -2642,15 +2649,20 @@ function openCountryInfo(code) {
 
   // Si hay un partido relevante (en vivo, recién jugado, o el próximo) con
   // marcador disponible, lo mostramos al lado del nombre — en amarillo el
-  // gol del país que estás mirando, en gris el del rival.
+  // gol del país que estás mirando, en gris el del rival. El orden respeta
+  // cómo se ve en la tarjeta real del partido (local izquierda, visitante
+  // derecha), no cuál país abriste.
   const relevantMatch = findRelevantLineupMatch(code);
   let scoreHtml = '';
   if (relevantMatch) {
     const live = getLiveData(relevantMatch);
     if (live && live.homeGoals !== null && live.homeGoals !== undefined) {
-      const myGoals = relevantMatch.home === code ? live.homeGoals : live.awayGoals;
-      const rivalGoals = relevantMatch.home === code ? live.awayGoals : live.homeGoals;
-      scoreHtml = '<div class="ci-live-score"><span class="mine">' + myGoals + '</span> - <span class="rival">' + rivalGoals + '</span></div>';
+      const isHome = relevantMatch.home === code;
+      const myGoals = isHome ? live.homeGoals : live.awayGoals;
+      const rivalGoals = isHome ? live.awayGoals : live.homeGoals;
+      scoreHtml = isHome
+        ? '<div class="ci-live-score"><span class="mine">' + myGoals + '</span> - <span class="rival">' + rivalGoals + '</span></div>'
+        : '<div class="ci-live-score"><span class="rival">' + rivalGoals + '</span> - <span class="mine">' + myGoals + '</span></div>';
     }
   }
 
