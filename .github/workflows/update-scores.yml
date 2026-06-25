@@ -153,6 +153,18 @@ jobs:
                   print(f"Could not fetch lineups for fixture {fixture_id}: {e}")
                   return {}
 
+          # Leemos el scores.json anterior (si existe) por dos motivos:
+          # 1) Si esta corrida falla o viene vacía, no lo pisamos con la nada.
+          # 2) Si ya teníamos la alineación de un partido, no la volvemos a
+          #    pedir en cada corrida — no cambia durante el partido, y así
+          #    ahorramos muchísimas llamadas a la API.
+          previous_scores = {}
+          try:
+              with open('scores.json') as f:
+                  previous_scores = json.load(f).get('matches', {})
+          except Exception:
+              pass
+
           scores = {}
           for fx in data.get('response', []):
               fixture = fx['fixture']
@@ -162,6 +174,7 @@ jobs:
               away = normalize_team(teams['away']['name'])
               key = home + '-' + away
               status = fixture['status']['short']
+              prev_entry = previous_scores.get(key, {})
 
               entry = {
                   'homeGoals': goals['home'],
@@ -171,33 +184,55 @@ jobs:
                   'kickoffUTC': fixture.get('date'),
               }
 
-              # Only fetch events (goals/cards) for matches that are live or finished,
-              # to avoid wasting API quota on matches that haven't started.
-              if status in LIVE_STATUSES or status in FINISHED_STATUSES:
+              # Los eventos (goles/tarjetas/cambios) solo cambian mientras el
+              # partido está en vivo. Una vez finalizado, ya no cambian más —
+              # así que si ya los tenemos guardados de una corrida anterior,
+              # los reutilizamos en vez de volver a pedirlos. Esto era el
+              # principal motivo de consumo excesivo de cuota: sin este
+              # chequeo, se re-pedían los eventos de TODOS los partidos ya
+              # terminados en cada corrida, para siempre.
+              if status in FINISHED_STATUSES and prev_entry.get('events') is not None:
+                  entry['events'] = prev_entry['events']
+                  if prev_entry.get('substitutions'):
+                      entry['substitutions'] = prev_entry['substitutions']
+              elif status in LIVE_STATUSES or status in FINISHED_STATUSES:
                   entry['events'], subs = fetch_events(fixture['id'])
                   if subs:
                       entry['substitutions'] = subs
 
-              # Las alineaciones se piden si el partido ya está en vivo/finalizado,
-              # o si está a 2 horas o menos de arrancar (la API recién las publica
-              # ~1h antes, pero pedimos con margen para no perder el momento exacto
-              # entre dos corridas del workflow, que se ejecuta cada 10 minutos).
-              kickoff_dt = None
-              try:
-                  kickoff_dt = datetime.fromisoformat(fixture.get('date').replace('Z', '+00:00'))
-              except Exception:
-                  pass
-              is_near_kickoff = False
-              if kickoff_dt:
-                  hours_to_kickoff = (kickoff_dt - datetime.now(kickoff_dt.tzinfo)).total_seconds() / 3600
-                  is_near_kickoff = hours_to_kickoff <= 2
+              # Las alineaciones se piden recién cuando falta poco para
+              # arrancar (30 min o menos), o si el partido ya está en vivo —
+              # pedirlas con 2hs de anticipación generaba muchos pedidos
+              # "en vano" antes de que la API las publique. Una vez
+              # encontradas, se guardan en caché y nunca se vuelven a pedir.
+              if prev_entry.get('lineups'):
+                  entry['lineups'] = prev_entry['lineups']
+              else:
+                  kickoff_dt = None
+                  try:
+                      kickoff_dt = datetime.fromisoformat(fixture.get('date').replace('Z', '+00:00'))
+                  except Exception:
+                      pass
+                  is_near_kickoff = False
+                  if kickoff_dt:
+                      hours_to_kickoff = (kickoff_dt - datetime.now(kickoff_dt.tzinfo)).total_seconds() / 3600
+                      is_near_kickoff = 0 <= hours_to_kickoff <= (30 / 60)  # 30 minutos o menos
 
-              if status in LIVE_STATUSES or status in FINISHED_STATUSES or is_near_kickoff:
-                  lineups = fetch_lineups(fixture['id'])
-                  if lineups:
-                      entry['lineups'] = lineups
+                  if status in LIVE_STATUSES or status in FINISHED_STATUSES or is_near_kickoff:
+                      lineups = fetch_lineups(fixture['id'])
+                      if lineups:
+                          entry['lineups'] = lineups
 
               scores[key] = entry
+
+          # Si la API no devolvió ningún partido (falla, rate limit, error
+          # transitorio), NO pisamos el archivo bueno que ya teníamos —
+          # mejor mantener el último dato válido que borrar todo.
+          if len(scores) == 0:
+              print("ADVERTENCIA: la API no devolvió partidos en esta corrida.")
+              print("Respuesta cruda:", json.dumps(data)[:500])
+              print("Se mantiene el scores.json anterior sin cambios.")
+              raise SystemExit(0)
 
           output = {
               'updated': datetime.utcnow().isoformat() + 'Z',
