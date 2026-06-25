@@ -546,25 +546,39 @@
   .ci-player-name:hover { color:#FFD700; border-bottom-color:#FFD700; }
   .ci-player-pos { color:#64748b; font-size:10px; flex-shrink:0; text-transform:uppercase; }
 
-  /* En pantallas angostas, las dos columnas se apilan en vez de forzar la rotación */
-  @media (max-width:640px) {
+  /* En pantallas angostas (en vertical), apilamos las columnas en vez de
+     forzar la rotación — alcanza con scroll normal de toda la ventana. */
+  @media (max-width:640px) and (orientation:portrait) {
     .ci-body { grid-template-columns:1fr; max-height:calc(92vh - 170px); overflow-y:auto; }
     .ci-col-scroll { overflow-y:visible; }
   }
 
-  /* En celular en vertical, si la pantalla es angosta Y baja preferimos
-     forzar al usuario a rotar a horizontal, donde las dos columnas entran
-     cómodas — en vez de un modal larguísimo difícil de navegar con el dedo. */
+  /* En celular angosto Y en vertical, antes de que el usuario rote: usamos
+     el truco de CSS para mostrarlo "de costado" — esto lo empuja a girar
+     el teléfono para poder leerlo cómodo en las dos columnas. */
   @media (max-width:560px) and (orientation:portrait) {
     #country-info-modal .country-info-box {
       position:fixed; top:50%; left:50%;
       width:92vh; max-width:92vh; height:92vw; max-height:92vw;
       transform:translate(-50%, -50%) rotate(90deg);
       transform-origin:center center;
-      overflow-y:auto;
+      overflow:hidden;
+      display:flex; flex-direction:column;
     }
-    .ci-body { grid-template-columns:1fr 1fr; max-height:none; }
-    .ci-col-scroll { overflow-y:auto; max-height:50vh; }
+    .ci-body { grid-template-columns:1fr 1fr; max-height:none; flex:1; min-height:0; overflow:hidden; }
+    .ci-col-scroll { overflow-y:auto; max-height:none; }
+  }
+
+  /* Una vez que el usuario YA rotó el teléfono de verdad, el navegador
+     reporta orientación landscape (deja de aplicar la regla de arriba) —
+     acá nos asguramos de que, ya en landscape real, las columnas sigan
+     teniendo su propio scroll en vez de cortarse sin forma de verlas.
+     Usamos max-height (no max-width) porque en landscape el ancho es el
+     lado largo del teléfono — lo angosto pasa a ser la altura. */
+  @media (orientation:landscape) and (max-height:560px) {
+    .country-info-box { max-height:94vh; }
+    .ci-body { grid-template-columns:1fr 1fr; max-height:calc(94vh - 150px); overflow:hidden; }
+    .ci-col-scroll { overflow-y:auto; max-height:none; flex:1; min-height:0; }
   }
   .shortcut-instructions-text b { color:#FFD700; }
   .cookie-banner-close {
