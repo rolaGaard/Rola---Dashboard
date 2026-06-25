@@ -1,6 +1,563 @@
 {
-  "updated": "2026-06-25T01:00:50.150128Z",
+  "updated": "2026-06-25T01:10:22.074881Z",
   "matches": {
+    "CZECHIA-MEXICO": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "1H",
+      "elapsed": 10,
+      "kickoffUTC": "2026-06-25T01:00:00+00:00",
+      "events": [],
+      "lineups": {
+        "CZECHIA": {
+          "formation": "3-4-2-1",
+          "coach": "Miroslav Koubek",
+          "startXI": [
+            {
+              "name": "Mat\u011bj Kov\u00e1\u0159",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Tom\u00e1\u0161 Hole\u0161",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Robin Hran\u00e1\u010d",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Ladislav Krej\u010d\u00ed",
+              "number": 7,
+              "pos": "D"
+            },
+            {
+              "name": "Vladim\u00edr Coufal",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "Michal Sad\u00edlek",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Luk\u00e1\u0161 \u010cerv",
+              "number": 12,
+              "pos": "M"
+            },
+            {
+              "name": "David Doud\u011bra",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Pavel \u0160ulc",
+              "number": 15,
+              "pos": "F"
+            },
+            {
+              "name": "Denis Vi\u0161insk\u00fd",
+              "number": 26,
+              "pos": "F"
+            },
+            {
+              "name": "Adam Hlo\u017eek",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Jind\u0159ich Stan\u011bk",
+              "number": 16,
+              "pos": "G"
+            },
+            {
+              "name": "Luk\u00e1\u0161 Horn\u00ed\u010dek",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "\u0160t\u011bp\u00e1n Chaloupek",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "David Zima",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Jaroslav Zelen\u00fd",
+              "number": 20,
+              "pos": "D"
+            },
+            {
+              "name": "Alexandr Sojka",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "Hugo Sochurek",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "Tom\u00e1\u0161 Sou\u010dek",
+              "number": 22,
+              "pos": "M"
+            },
+            {
+              "name": "Vladim\u00edr Darida",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Patrik Schick",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Jan Kuchta",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Luk\u00e1\u0161 Provod",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Tom\u00e1\u0161 Chor\u00fd",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Mojm\u00edr Chytil",
+              "number": 13,
+              "pos": "F"
+            }
+          ]
+        },
+        "MEXICO": {
+          "formation": "4-3-3",
+          "coach": "Javier Aguirre",
+          "startXI": [
+            {
+              "name": "Ra\u00fal Rangel",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Jorge S\u00e1nchez",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Israel Reyes",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "C\u00e9sar Montes",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Mateo Ch\u00e1vez",
+              "number": 20,
+              "pos": "D"
+            },
+            {
+              "name": "Gilberto Mora",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "Edson \u00c1lvarez",
+              "number": 4,
+              "pos": "M"
+            },
+            {
+              "name": "Luis Romo",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Roberto Alvarado",
+              "number": 25,
+              "pos": "F"
+            },
+            {
+              "name": "Guillermo Mart\u00ednez",
+              "number": 22,
+              "pos": "F"
+            },
+            {
+              "name": "Juli\u00e1n Qui\u00f1ones",
+              "number": 16,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Carlos Acevedo",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Guillermo Ochoa",
+              "number": 13,
+              "pos": "G"
+            },
+            {
+              "name": "Johan V\u00e1squez",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Jes\u00fas Gallardo",
+              "number": 23,
+              "pos": "D"
+            },
+            {
+              "name": "Erik Lira",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "\u00c1lvaro Fidalgo",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Orbel\u00edn Pineda",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Obed Vargas",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Luis Ch\u00e1vez",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "Brian Guti\u00e9rrez",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "Alexis Vega",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "C\u00e9sar Huerta",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Ra\u00fal Jim\u00e9nez",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Santiago Gim\u00e9nez",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Armando Gonz\u00e1lez",
+              "number": 14,
+              "pos": "F"
+            }
+          ]
+        }
+      }
+    },
+    "SOUTH AFRICA-SOUTH KOREA": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "1H",
+      "elapsed": 10,
+      "kickoffUTC": "2026-06-25T01:00:00+00:00",
+      "events": [],
+      "lineups": {
+        "SOUTH AFRICA": {
+          "formation": "4-2-3-1",
+          "coach": "Hugo Broos",
+          "startXI": [
+            {
+              "name": "Ronwen Williams",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Khuliso Mudau",
+              "number": 20,
+              "pos": "D"
+            },
+            {
+              "name": "Ime Okon",
+              "number": 21,
+              "pos": "D"
+            },
+            {
+              "name": "Mbekezeli Mbokazi",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "Aubrey Modiba",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "Thalente Mbatha",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "Sphephelo Sithole",
+              "number": 13,
+              "pos": "M"
+            },
+            {
+              "name": "Thapelo Maseko",
+              "number": 12,
+              "pos": "M"
+            },
+            {
+              "name": "Relebohile Mofokeng",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Oswin Appollis",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Evidence Makgopa",
+              "number": 17,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Ricardo Goss",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Sipho Chaine",
+              "number": 16,
+              "pos": "G"
+            },
+            {
+              "name": "Bradley Cross",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Khulumani Ndamane",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Nkosinathi Sibisi",
+              "number": 19,
+              "pos": "D"
+            },
+            {
+              "name": "Olwethu Makhanya",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Samukelo Kabini",
+              "number": 18,
+              "pos": "D"
+            },
+            {
+              "name": "Tholo Thabang Matuludi",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Jayden Adams",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Kamogelo Sebelebele",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "Tshepang Moremi",
+              "number": 8,
+              "pos": "F"
+            },
+            {
+              "name": "Iqraam Rayners",
+              "number": 15,
+              "pos": "F"
+            },
+            {
+              "name": "Lyle Foster",
+              "number": 9,
+              "pos": "F"
+            }
+          ]
+        },
+        "SOUTH KOREA": {
+          "formation": "3-4-2-1",
+          "coach": "Myung-Bo Hong",
+          "startXI": [
+            {
+              "name": "Kim Seung-gyu",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Han-Beom Lee",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Kim Min-jae",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Gi-Hyuk Lee",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Young-woo Seol",
+              "number": 22,
+              "pos": "M"
+            },
+            {
+              "name": "Seung Ho Paik",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Hwang In-beom",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Lee Tae-seok",
+              "number": 13,
+              "pos": "M"
+            },
+            {
+              "name": "Kang-in Lee",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Hwang Hee-chan",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Hyeon-gyu Oh",
+              "number": 18,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Jo Hyeonwoo",
+              "number": 21,
+              "pos": "G"
+            },
+            {
+              "name": "Song Bum-keun",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Kim Moon-hwan",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Kim Tae-hyeon",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Wi-je Cho",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "Dong-gyeong Lee",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "Jae-sung Lee",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Jens Castrop",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Ji-sung Eom",
+              "number": 25,
+              "pos": "F"
+            },
+            {
+              "name": "Jin-gyu Kim",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "Jin-seob Park",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Jun-Ho Bae",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Gue-sung Cho",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Yang Hyun-Jun",
+              "number": 20,
+              "pos": "F"
+            },
+            {
+              "name": "Son Heung-min",
+              "number": 7,
+              "pos": "F"
+            }
+          ]
+        }
+      }
+    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -19889,561 +20446,6 @@
             {
               "name": "Igor Thiago",
               "number": 25,
-              "pos": "F"
-            }
-          ]
-        }
-      }
-    },
-    "CZECHIA-MEXICO": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null,
-      "kickoffUTC": "2026-06-25T01:00:00+00:00",
-      "lineups": {
-        "CZECHIA": {
-          "formation": "3-4-2-1",
-          "coach": "Miroslav Koubek",
-          "startXI": [
-            {
-              "name": "Mat\u011bj Kov\u00e1\u0159",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Tom\u00e1\u0161 Hole\u0161",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Robin Hran\u00e1\u010d",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Ladislav Krej\u010d\u00ed",
-              "number": 7,
-              "pos": "D"
-            },
-            {
-              "name": "Vladim\u00edr Coufal",
-              "number": 5,
-              "pos": "M"
-            },
-            {
-              "name": "Michal Sad\u00edlek",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "Luk\u00e1\u0161 \u010cerv",
-              "number": 12,
-              "pos": "M"
-            },
-            {
-              "name": "David Doud\u011bra",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "Pavel \u0160ulc",
-              "number": 15,
-              "pos": "F"
-            },
-            {
-              "name": "Denis Vi\u0161insk\u00fd",
-              "number": 26,
-              "pos": "F"
-            },
-            {
-              "name": "Adam Hlo\u017eek",
-              "number": 9,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Jind\u0159ich Stan\u011bk",
-              "number": 16,
-              "pos": "G"
-            },
-            {
-              "name": "Luk\u00e1\u0161 Horn\u00ed\u010dek",
-              "number": 23,
-              "pos": "G"
-            },
-            {
-              "name": "\u0160t\u011bp\u00e1n Chaloupek",
-              "number": 6,
-              "pos": "D"
-            },
-            {
-              "name": "David Zima",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Jaroslav Zelen\u00fd",
-              "number": 20,
-              "pos": "D"
-            },
-            {
-              "name": "Alexandr Sojka",
-              "number": 24,
-              "pos": "M"
-            },
-            {
-              "name": "Hugo Sochurek",
-              "number": 25,
-              "pos": "M"
-            },
-            {
-              "name": "Tom\u00e1\u0161 Sou\u010dek",
-              "number": 22,
-              "pos": "M"
-            },
-            {
-              "name": "Vladim\u00edr Darida",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Patrik Schick",
-              "number": 10,
-              "pos": "F"
-            },
-            {
-              "name": "Jan Kuchta",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "Luk\u00e1\u0161 Provod",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Tom\u00e1\u0161 Chor\u00fd",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Mojm\u00edr Chytil",
-              "number": 13,
-              "pos": "F"
-            }
-          ]
-        },
-        "MEXICO": {
-          "formation": "4-3-3",
-          "coach": "Javier Aguirre",
-          "startXI": [
-            {
-              "name": "Ra\u00fal Rangel",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Jorge S\u00e1nchez",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Israel Reyes",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "C\u00e9sar Montes",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Mateo Ch\u00e1vez",
-              "number": 20,
-              "pos": "D"
-            },
-            {
-              "name": "Gilberto Mora",
-              "number": 19,
-              "pos": "M"
-            },
-            {
-              "name": "Edson \u00c1lvarez",
-              "number": 4,
-              "pos": "M"
-            },
-            {
-              "name": "Luis Romo",
-              "number": 7,
-              "pos": "M"
-            },
-            {
-              "name": "Roberto Alvarado",
-              "number": 25,
-              "pos": "F"
-            },
-            {
-              "name": "Guillermo Mart\u00ednez",
-              "number": 22,
-              "pos": "F"
-            },
-            {
-              "name": "Juli\u00e1n Qui\u00f1ones",
-              "number": 16,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Carlos Acevedo",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Guillermo Ochoa",
-              "number": 13,
-              "pos": "G"
-            },
-            {
-              "name": "Johan V\u00e1squez",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Jes\u00fas Gallardo",
-              "number": 23,
-              "pos": "D"
-            },
-            {
-              "name": "Erik Lira",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "\u00c1lvaro Fidalgo",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Orbel\u00edn Pineda",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Obed Vargas",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "Luis Ch\u00e1vez",
-              "number": 24,
-              "pos": "M"
-            },
-            {
-              "name": "Brian Guti\u00e9rrez",
-              "number": 26,
-              "pos": "M"
-            },
-            {
-              "name": "Alexis Vega",
-              "number": 10,
-              "pos": "F"
-            },
-            {
-              "name": "C\u00e9sar Huerta",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "Ra\u00fal Jim\u00e9nez",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Santiago Gim\u00e9nez",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "Armando Gonz\u00e1lez",
-              "number": 14,
-              "pos": "F"
-            }
-          ]
-        }
-      }
-    },
-    "SOUTH AFRICA-SOUTH KOREA": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null,
-      "kickoffUTC": "2026-06-25T01:00:00+00:00",
-      "lineups": {
-        "SOUTH AFRICA": {
-          "formation": "4-2-3-1",
-          "coach": "Hugo Broos",
-          "startXI": [
-            {
-              "name": "Ronwen Williams",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Khuliso Mudau",
-              "number": 20,
-              "pos": "D"
-            },
-            {
-              "name": "Ime Okon",
-              "number": 21,
-              "pos": "D"
-            },
-            {
-              "name": "Mbekezeli Mbokazi",
-              "number": 14,
-              "pos": "D"
-            },
-            {
-              "name": "Aubrey Modiba",
-              "number": 6,
-              "pos": "D"
-            },
-            {
-              "name": "Thalente Mbatha",
-              "number": 5,
-              "pos": "M"
-            },
-            {
-              "name": "Sphephelo Sithole",
-              "number": 13,
-              "pos": "M"
-            },
-            {
-              "name": "Thapelo Maseko",
-              "number": 12,
-              "pos": "M"
-            },
-            {
-              "name": "Relebohile Mofokeng",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Oswin Appollis",
-              "number": 7,
-              "pos": "M"
-            },
-            {
-              "name": "Evidence Makgopa",
-              "number": 17,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Ricardo Goss",
-              "number": 22,
-              "pos": "G"
-            },
-            {
-              "name": "Sipho Chaine",
-              "number": 16,
-              "pos": "G"
-            },
-            {
-              "name": "Bradley Cross",
-              "number": 26,
-              "pos": "D"
-            },
-            {
-              "name": "Khulumani Ndamane",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Nkosinathi Sibisi",
-              "number": 19,
-              "pos": "D"
-            },
-            {
-              "name": "Olwethu Makhanya",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Samukelo Kabini",
-              "number": 18,
-              "pos": "D"
-            },
-            {
-              "name": "Tholo Thabang Matuludi",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Jayden Adams",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "Kamogelo Sebelebele",
-              "number": 25,
-              "pos": "M"
-            },
-            {
-              "name": "Tshepang Moremi",
-              "number": 8,
-              "pos": "F"
-            },
-            {
-              "name": "Iqraam Rayners",
-              "number": 15,
-              "pos": "F"
-            },
-            {
-              "name": "Lyle Foster",
-              "number": 9,
-              "pos": "F"
-            }
-          ]
-        },
-        "SOUTH KOREA": {
-          "formation": "3-4-2-1",
-          "coach": "Myung-Bo Hong",
-          "startXI": [
-            {
-              "name": "Kim Seung-gyu",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Han-Beom Lee",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Kim Min-jae",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Gi-Hyuk Lee",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Young-woo Seol",
-              "number": 22,
-              "pos": "M"
-            },
-            {
-              "name": "Seung Ho Paik",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Hwang In-beom",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Lee Tae-seok",
-              "number": 13,
-              "pos": "M"
-            },
-            {
-              "name": "Kang-in Lee",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Hwang Hee-chan",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "Hyeon-gyu Oh",
-              "number": 18,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Jo Hyeonwoo",
-              "number": 21,
-              "pos": "G"
-            },
-            {
-              "name": "Song Bum-keun",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Kim Moon-hwan",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Kim Tae-hyeon",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Wi-je Cho",
-              "number": 14,
-              "pos": "D"
-            },
-            {
-              "name": "Dong-gyeong Lee",
-              "number": 26,
-              "pos": "M"
-            },
-            {
-              "name": "Jae-sung Lee",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Jens Castrop",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "Ji-sung Eom",
-              "number": 25,
-              "pos": "F"
-            },
-            {
-              "name": "Jin-gyu Kim",
-              "number": 24,
-              "pos": "M"
-            },
-            {
-              "name": "Jin-seob Park",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "Jun-Ho Bae",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Gue-sung Cho",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Yang Hyun-Jun",
-              "number": 20,
-              "pos": "F"
-            },
-            {
-              "name": "Son Heung-min",
-              "number": 7,
               "pos": "F"
             }
           ]
