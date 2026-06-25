@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T22:20:23.673913Z",
+  "updated": "2026-06-25T22:30:39.047912Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -21428,7 +21428,280 @@
       "status": "NS",
       "elapsed": null,
       "kickoffUTC": "2026-06-25T23:00:00+00:00",
-      "referee": "I. Barton"
+      "referee": "I. Barton",
+      "lineups": {
+        "JAPAN": {
+          "formation": "3-4-3",
+          "coach": "H. Moriyasu",
+          "startXI": [
+            {
+              "name": "Z. Suzuki",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "A. Seko",
+              "number": 20,
+              "pos": "D"
+            },
+            {
+              "name": "K. Itakura",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "H. Ito",
+              "number": 21,
+              "pos": "D"
+            },
+            {
+              "name": "Y. Sugawara",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "D. Kamada",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "A. Tanaka",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Keito Nakamura",
+              "number": 13,
+              "pos": "F"
+            },
+            {
+              "name": "R. D\u014dan",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "A. Ueda",
+              "number": 18,
+              "pos": "F"
+            },
+            {
+              "name": "D. Maeda",
+              "number": 11,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "S. Taniguchi",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Y. Nagatomo",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "J. Ito",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "T. Tomiyasu",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "Koki Ogawa",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "K. Osako",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "K. Sano",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "T. Watanabe",
+              "number": 16,
+              "pos": "D"
+            },
+            {
+              "name": "Y. Suzuki",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "T. Hayakawa",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "J. Suzuki",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "K. Goto",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "K. Shiogai",
+              "number": 26,
+              "pos": "F"
+            },
+            {
+              "name": "S. Machino",
+              "number": 6,
+              "pos": "F"
+            }
+          ]
+        },
+        "SWEDEN": {
+          "formation": "3-4-1-2",
+          "coach": "G. Potter",
+          "startXI": [
+            {
+              "name": "J. Widell Zetterstr\u00f6m",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "G. Lagerbielke",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "I. Hien",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "V. Lindel\u00f6f",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "A. Bernhardsson",
+              "number": 21,
+              "pos": "F"
+            },
+            {
+              "name": "E. Stroud",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Y. Ayari",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "G. Gudmundsson",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "A. Elanga",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "V. Gy\u00f6keres",
+              "number": 17,
+              "pos": "F"
+            },
+            {
+              "name": "A. Isak",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "B. Zeneli",
+              "number": 22,
+              "pos": "M"
+            },
+            {
+              "name": "L. Bergvall",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "D. Svensson",
+              "number": 8,
+              "pos": "D"
+            },
+            {
+              "name": "H. Johansson",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "T. Ali",
+              "number": 26,
+              "pos": "F"
+            },
+            {
+              "name": "B. Nygren",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "V. Johansson",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "H. Ekdal",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "M. Svanberg",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "G. Nilsson",
+              "number": 25,
+              "pos": "F"
+            },
+            {
+              "name": "E. Smith",
+              "number": 20,
+              "pos": "D"
+            },
+            {
+              "name": "C. Starfelt",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "K. Sema",
+              "number": 13,
+              "pos": "M"
+            },
+            {
+              "name": "J. Karlstr\u00f6m",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "K. Nordfeldt",
+              "number": 23,
+              "pos": "G"
+            }
+          ]
+        }
+      }
     },
     "TUNISIA-NETHERLANDS": {
       "homeGoals": null,
@@ -21436,7 +21709,275 @@
       "status": "NS",
       "elapsed": null,
       "kickoffUTC": "2026-06-25T23:00:00+00:00",
-      "referee": "K. I. Garcia Mendoza"
+      "referee": "K. I. Garcia Mendoza",
+      "lineups": {
+        "TUNISIA": {
+          "formation": "4-2-3-1",
+          "coach": "Herv\u00e9 Renard",
+          "startXI": [
+            {
+              "name": "A. Dahmen",
+              "number": 16,
+              "pos": "G"
+            },
+            {
+              "name": "Y. Valery",
+              "number": 20,
+              "pos": "D"
+            },
+            {
+              "name": "M. Talbi",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "A. Abdi",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "A. Ben Hmida",
+              "number": 21,
+              "pos": "D"
+            },
+            {
+              "name": "E. Skhiri",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "R. Khedira",
+              "number": 13,
+              "pos": "M"
+            },
+            {
+              "name": "A. Ben Slimane",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "H. Mejbri",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Isma\u00ebl Gharbi",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "H. Mastouri",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "S. Ben Hsan",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "D. Bronn",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "M. Ben Ouanes",
+              "number": 12,
+              "pos": "M"
+            },
+            {
+              "name": "F. Chaouat",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "O. Rekik",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "E. Achouri",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "S. Tounekti",
+              "number": 26,
+              "pos": "F"
+            },
+            {
+              "name": "H. Mahmoud",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "C. Abdelmouhib",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "E. Saad",
+              "number": 8,
+              "pos": "F"
+            },
+            {
+              "name": "R. Chikhaoui",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "K. Ayari",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "R. Elloumi",
+              "number": 18,
+              "pos": "F"
+            }
+          ]
+        },
+        "NETHERLANDS": {
+          "formation": "4-3-3",
+          "coach": "R. Koeman",
+          "startXI": [
+            {
+              "name": "B. Verbruggen",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "D. Dumfries",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "J. van Hecke",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "V. van Dijk",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "N. Ak\u00e9",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "R. Gravenberch",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "F. de Jong",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "T. Reijnders",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "D. Malen",
+              "number": 18,
+              "pos": "F"
+            },
+            {
+              "name": "B. Brobbey",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "C. Gakpo",
+              "number": 11,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "J. Hato",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "R. Roefs",
+              "number": 13,
+              "pos": "G"
+            },
+            {
+              "name": "M. van de Ven",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Q. Timber",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "M. Wieffer",
+              "number": 12,
+              "pos": "M"
+            },
+            {
+              "name": "C. Summerville",
+              "number": 24,
+              "pos": "F"
+            },
+            {
+              "name": "N. Lang",
+              "number": 17,
+              "pos": "F"
+            },
+            {
+              "name": "L. Geertruida",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "J. Kluivert",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "G. Til",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "T. Koopmeiners",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "W. Weghorst",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "M. Flekken",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "M. Depay",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "M. de Roon",
+              "number": 3,
+              "pos": "M"
+            }
+          ]
+        }
+      }
     },
     "TURKIYE-USA": {
       "homeGoals": null,
