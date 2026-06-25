@@ -1,14 +1,39 @@
 {
-  "updated": "2026-06-25T23:30:39.412827Z",
+  "updated": "2026-06-25T23:40:22.294361Z",
   "matches": {
     "JAPAN-SWEDEN": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 30,
+      "elapsed": 40,
       "kickoffUTC": "2026-06-25T23:00:00+00:00",
       "referee": "I. Barton",
-      "events": [],
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Isak Hien",
+          "team": "SWEDEN",
+          "minute": 32,
+          "extra": null
+        }
+      ],
+      "substitutions": {
+        "SWEDEN": [
+          {
+            "out": "Isak Hien",
+            "in": "Lucas Bergvall",
+            "minute": 37
+          }
+        ],
+        "JAPAN": [
+          {
+            "out": "Ko Itakura",
+            "in": "Shogo Taniguchi",
+            "minute": 39
+          }
+        ]
+      },
       "lineups": {
         "JAPAN": {
           "formation": "3-4-3",
@@ -287,7 +312,7 @@
       "homeGoals": 0,
       "awayGoals": 2,
       "status": "1H",
-      "elapsed": 31,
+      "elapsed": 41,
       "kickoffUTC": "2026-06-25T23:00:00+00:00",
       "referee": "K. I. Garcia Mendoza",
       "events": [
