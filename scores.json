@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T21:10:24.219079Z",
+  "updated": "2026-06-25T21:20:22.543237Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -20798,7 +20798,7 @@
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 50,
+      "elapsed": 60,
       "kickoffUTC": "2026-06-25T20:00:00+00:00",
       "referee": "Tori Penso, USA",
       "events": [
@@ -20832,6 +20832,14 @@
           "player": "Aleksandar Pavlovi\u0107",
           "team": "GERMANY",
           "minute": 44,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Alan Franco",
+          "team": "ECUADOR",
+          "minute": 50,
           "extra": null
         }
       ],
@@ -21117,7 +21125,7 @@
       "homeGoals": 0,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 49,
+      "elapsed": 59,
       "kickoffUTC": "2026-06-25T20:00:00+00:00",
       "referee": "Glenn Nyberg, Sweden",
       "events": [
