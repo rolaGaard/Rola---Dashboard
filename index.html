@@ -514,41 +514,76 @@
   .ci-body {
     display:grid; grid-template-columns:1fr 1fr; gap:18px;
     border-top:1px solid #2a2a2a; padding-top:14px;
-    max-height:calc(92vh - 150px); overflow:hidden;
+    height:calc(92vh - 150px); overflow:hidden;
   }
-  .ci-col { display:flex; flex-direction:column; min-height:0; }
-  .ci-col-title { color:#fff; font-size:13px; font-weight:700; margin-bottom:8px; flex-shrink:0; }
+  .ci-col {
+    display:flex; flex-direction:column; min-height:0;
+    container-type:inline-size; container-name:cicol;
+  }
+  .ci-col-title { color:#fff; font-size:14px; font-weight:700; margin-bottom:8px; flex-shrink:0; }
   .ci-col-scroll { overflow-y:auto; flex:1; min-height:0; }
 
-  .ci-lineup-meta { color:#94a3b8; font-size:11px; margin-bottom:8px; display:flex; gap:10px; flex-wrap:wrap; }
+  .ci-lineup-meta { color:#94a3b8; font-size:12px; margin-bottom:8px; display:flex; gap:10px; flex-wrap:wrap; }
   .ci-lineup-meta b { color:#e2e8f0; }
-  .ci-coach-link { color:#e2e8f0; text-decoration:none; border-bottom:1px dotted rgba(226,232,240,0.4); }
-  .ci-coach-link:hover { color:#FFD700; border-bottom-color:#FFD700; }
+  .ci-coach-link { color:#e2e8f0; text-decoration:none; }
+  .ci-coach-link:hover { color:#FFD700; text-decoration:underline; }
   .ci-lineup-empty { color:#64748b; font-size:12px; font-style:italic; padding:6px 0; }
   .ci-lineup-list { display:flex; flex-direction:column; gap:1px; }
-  .ci-lineup-sub-title { color:#64748b; font-size:10px; font-weight:700; text-transform:uppercase; margin:10px 0 4px; }
-  .ci-sub-tag { color:#1DB954; font-size:10px; font-weight:700; flex-shrink:0; }
+  .ci-lineup-sub-title { color:#64748b; font-size:11px; font-weight:700; text-transform:uppercase; margin:10px 0 4px; }
+  .ci-sub-tag { color:#1DB954; font-size:11px; font-weight:700; flex-shrink:0; }
 
   .ci-squad-empty { color:#64748b; font-size:12px; font-style:italic; padding:6px 0; }
   .ci-squad-list { display:flex; flex-direction:column; gap:1px; }
   .ci-player-row {
-    display:flex; align-items:center; gap:10px; padding:5px 4px;
-    border-bottom:1px solid rgba(255,255,255,0.05); font-size:13px;
+    display:flex; align-items:center; gap:10px; padding:6px 4px;
+    border-bottom:1px solid rgba(255,255,255,0.05); font-size:14px;
   }
   .ci-player-num {
-    color:#FFD700; font-weight:800; font-size:13px; min-width:20px; text-align:center;
+    color:#FFD700; font-weight:800; font-size:14px; min-width:22px; text-align:center;
     flex-shrink:0;
   }
   .ci-player-name {
     color:#e2e8f0; text-decoration:none; flex:1; min-width:0;
-    border-bottom:1px dotted rgba(226,232,240,0.4);
   }
-  .ci-player-name:hover { color:#FFD700; border-bottom-color:#FFD700; }
-  .ci-player-pos { color:#64748b; font-size:10px; flex-shrink:0; text-transform:uppercase; }
+  .ci-player-name:hover { color:#FFD700; text-decoration:underline; }
+  .ci-player-pos { color:#64748b; font-size:11px; flex-shrink:0; text-transform:uppercase; }
+
+  /* Tamaño de letra dinámico según el ancho real de cada columna — chico en
+     un celular angosto, más grande si hay espacio (pantalla grande, monitor,
+     o el celular rotado a horizontal con más ancho disponible por columna). */
+  @container cicol (min-width:260px) {
+    .ci-col-title { font-size:15px; }
+    .ci-player-row { font-size:15px; padding:7px 4px; }
+    .ci-player-num { font-size:15px; min-width:24px; }
+    .ci-player-pos { font-size:11px; }
+    .ci-lineup-meta { font-size:12px; }
+  }
+  @container cicol (min-width:360px) {
+    .ci-col-title { font-size:17px; }
+    .ci-player-row { font-size:17px; padding:8px 5px; gap:12px; }
+    .ci-player-num { font-size:17px; min-width:28px; }
+    .ci-player-pos { font-size:12px; }
+    .ci-lineup-meta { font-size:13px; }
+    .ci-sub-tag { font-size:12px; }
+  }
+  @container cicol (min-width:460px) {
+    .ci-col-title { font-size:19px; }
+    .ci-player-row { font-size:19px; padding:9px 6px; gap:14px; }
+    .ci-player-num { font-size:19px; min-width:32px; }
+    .ci-player-pos { font-size:13px; }
+    .ci-lineup-meta { font-size:14px; }
+  }
+  @container cicol (min-width:600px) {
+    .ci-col-title { font-size:22px; }
+    .ci-player-row { font-size:22px; padding:10px 6px; gap:16px; }
+    .ci-player-num { font-size:22px; min-width:36px; }
+    .ci-player-pos { font-size:14px; }
+    .ci-lineup-meta { font-size:15px; }
+  }
 
   /* En vertical: apilamos las columnas y se scrollea todo el cuadro normal. */
   @media (max-width:640px) and (orientation:portrait) {
-    .ci-body { grid-template-columns:1fr; max-height:calc(92vh - 170px); overflow-y:auto; }
+    .ci-body { grid-template-columns:1fr; height:auto; max-height:calc(92vh - 170px); overflow-y:auto; }
     .ci-col-scroll { overflow-y:visible; }
   }
 
@@ -558,7 +593,7 @@
      porque en horizontal lo angosto pasa a ser la altura del teléfono. */
   @media (orientation:landscape) and (max-height:560px) {
     .country-info-box { max-height:92vh; }
-    .ci-body { grid-template-columns:1fr 1fr; max-height:calc(92vh - 150px); overflow:hidden; }
+    .ci-body { grid-template-columns:1fr 1fr; height:calc(92vh - 150px); overflow:hidden; }
     .ci-col-scroll { overflow-y:auto; max-height:none; flex:1; min-height:0; }
   }
   .shortcut-instructions-text b { color:#FFD700; }
