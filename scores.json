@@ -1,6 +1,283 @@
 {
-  "updated": "2026-06-25T19:50:22.586611Z",
+  "updated": "2026-06-25T20:00:51.414098Z",
   "matches": {
+    "ECUADOR-GERMANY": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "1H",
+      "elapsed": 1,
+      "kickoffUTC": "2026-06-25T20:00:00+00:00",
+      "referee": "Tori Penso, USA",
+      "events": [],
+      "lineups": {
+        "ECUADOR": {
+          "formation": "4-4-2",
+          "coach": "S. Beccacece",
+          "startXI": [
+            {
+              "name": "H. Gal\u00edndez",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "A. Franco",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "J. Ordo\u00f1ez",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "W. Pacho",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "P. Hincapi\u00e9",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "J. Yeboah",
+              "number": 9,
+              "pos": "M"
+            },
+            {
+              "name": "M. Caicedo",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "P. Vite",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "N. Angulo",
+              "number": 20,
+              "pos": "F"
+            },
+            {
+              "name": "G. Plata",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "E. Valencia",
+              "number": 13,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "F. Torres",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "P. Estupi\u00f1\u00e1n",
+              "number": 7,
+              "pos": "D"
+            },
+            {
+              "name": "J. Caicedo",
+              "number": 16,
+              "pos": "F"
+            },
+            {
+              "name": "M. Ram\u00edrez",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "A. Preciado",
+              "number": 17,
+              "pos": "D"
+            },
+            {
+              "name": "J. Alc\u00edvar",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "G. Valle",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "J. Porozo",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "D. Castillo",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Y. Medina",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "A. Minda",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "Jeremy Ar\u00e9valo",
+              "number": 24,
+              "pos": "F"
+            },
+            {
+              "name": "A. Valencia",
+              "number": 8,
+              "pos": "F"
+            },
+            {
+              "name": "K. Rodr\u00edguez",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "K. P\u00e1ez",
+              "number": 10,
+              "pos": "M"
+            }
+          ]
+        },
+        "GERMANY": {
+          "formation": "4-2-3-1",
+          "coach": "J. Nagelsmann",
+          "startXI": [
+            {
+              "name": "M. Neuer",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "J. Kimmich",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "J. Tah",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "A. R\u00fcdiger",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "D. Raum",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "F. Nmecha",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "A. Pavlovi\u0107",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "L. San\u00e9",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "J. Musiala",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "F. Wirtz",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "K. Havertz",
+              "number": 7,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "A. Ou\u00e9draogo",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "M. Thiaw",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "J. Leweling",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "N. Woltemade",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "M. Beier",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "A. Stiller",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "W. Anton",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "D. Undav",
+              "number": 26,
+              "pos": "F"
+            },
+            {
+              "name": "A. N\u00fcbel",
+              "number": 21,
+              "pos": "G"
+            },
+            {
+              "name": "N. Amiri",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "L. Goretzka",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "P. Gro\u00df",
+              "number": 13,
+              "pos": "M"
+            },
+            {
+              "name": "O. Baumann",
+              "number": 12,
+              "pos": "G"
+            }
+          ]
+        }
+      }
+    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -20653,282 +20930,6 @@
               "name": "Son Heung-min",
               "number": 7,
               "pos": "F"
-            }
-          ]
-        }
-      }
-    },
-    "ECUADOR-GERMANY": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null,
-      "kickoffUTC": "2026-06-25T20:00:00+00:00",
-      "referee": "Tori Penso, USA",
-      "lineups": {
-        "ECUADOR": {
-          "formation": "4-4-2",
-          "coach": "S. Beccacece",
-          "startXI": [
-            {
-              "name": "H. Gal\u00edndez",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "A. Franco",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "J. Ordo\u00f1ez",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "W. Pacho",
-              "number": 6,
-              "pos": "D"
-            },
-            {
-              "name": "P. Hincapi\u00e9",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "J. Yeboah",
-              "number": 9,
-              "pos": "M"
-            },
-            {
-              "name": "M. Caicedo",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "P. Vite",
-              "number": 15,
-              "pos": "M"
-            },
-            {
-              "name": "N. Angulo",
-              "number": 20,
-              "pos": "F"
-            },
-            {
-              "name": "G. Plata",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "E. Valencia",
-              "number": 13,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "F. Torres",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "P. Estupi\u00f1\u00e1n",
-              "number": 7,
-              "pos": "D"
-            },
-            {
-              "name": "J. Caicedo",
-              "number": 16,
-              "pos": "F"
-            },
-            {
-              "name": "M. Ram\u00edrez",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "A. Preciado",
-              "number": 17,
-              "pos": "D"
-            },
-            {
-              "name": "J. Alc\u00edvar",
-              "number": 5,
-              "pos": "M"
-            },
-            {
-              "name": "G. Valle",
-              "number": 22,
-              "pos": "G"
-            },
-            {
-              "name": "J. Porozo",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "D. Castillo",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "Y. Medina",
-              "number": 26,
-              "pos": "D"
-            },
-            {
-              "name": "A. Minda",
-              "number": 14,
-              "pos": "F"
-            },
-            {
-              "name": "Jeremy Ar\u00e9valo",
-              "number": 24,
-              "pos": "F"
-            },
-            {
-              "name": "A. Valencia",
-              "number": 8,
-              "pos": "F"
-            },
-            {
-              "name": "K. Rodr\u00edguez",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "K. P\u00e1ez",
-              "number": 10,
-              "pos": "M"
-            }
-          ]
-        },
-        "GERMANY": {
-          "formation": "4-2-3-1",
-          "coach": "J. Nagelsmann",
-          "startXI": [
-            {
-              "name": "M. Neuer",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "J. Kimmich",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "J. Tah",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "A. R\u00fcdiger",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "D. Raum",
-              "number": 22,
-              "pos": "D"
-            },
-            {
-              "name": "F. Nmecha",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "A. Pavlovi\u0107",
-              "number": 5,
-              "pos": "M"
-            },
-            {
-              "name": "L. San\u00e9",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "J. Musiala",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "F. Wirtz",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "K. Havertz",
-              "number": 7,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "A. Ou\u00e9draogo",
-              "number": 25,
-              "pos": "M"
-            },
-            {
-              "name": "M. Thiaw",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "J. Leweling",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "N. Woltemade",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "M. Beier",
-              "number": 14,
-              "pos": "F"
-            },
-            {
-              "name": "A. Stiller",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "W. Anton",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "D. Undav",
-              "number": 26,
-              "pos": "F"
-            },
-            {
-              "name": "A. N\u00fcbel",
-              "number": 21,
-              "pos": "G"
-            },
-            {
-              "name": "N. Amiri",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "L. Goretzka",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "P. Gro\u00df",
-              "number": 13,
-              "pos": "M"
-            },
-            {
-              "name": "O. Baumann",
-              "number": 12,
-              "pos": "G"
             }
           ]
         }
