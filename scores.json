@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-25T23:10:23.082537Z",
+  "updated": "2026-06-25T23:16:55.333954Z",
   "matches": {
     "JAPAN-SWEDEN": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 10,
+      "elapsed": 17,
       "kickoffUTC": "2026-06-25T23:00:00+00:00",
       "referee": "I. Barton",
       "events": [],
@@ -287,7 +287,7 @@
       "homeGoals": 0,
       "awayGoals": 2,
       "status": "1H",
-      "elapsed": 11,
+      "elapsed": 17,
       "kickoffUTC": "2026-06-25T23:00:00+00:00",
       "referee": "K. I. Garcia Mendoza",
       "events": [
