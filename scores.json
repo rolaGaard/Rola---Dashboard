@@ -1,310 +1,6 @@
 {
-  "updated": "2026-06-25T20:50:23.395702Z",
+  "updated": "2026-06-25T21:00:54.084240Z",
   "matches": {
-    "CURACAO-IVORY COAST": {
-      "homeGoals": 0,
-      "awayGoals": 1,
-      "status": "1H",
-      "elapsed": 45,
-      "kickoffUTC": "2026-06-25T20:00:00+00:00",
-      "referee": "Glenn Nyberg, Sweden",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "Nicolas P\u00e9p\u00e9",
-          "team": "IVORY COAST",
-          "minute": 7,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Nicolas P\u00e9p\u00e9",
-          "team": "IVORY COAST",
-          "minute": 35,
-          "extra": null
-        }
-      ],
-      "lineups": {
-        "CURACAO": {
-          "formation": "5-3-2",
-          "coach": "D. Advocaat",
-          "startXI": [
-            {
-              "name": "E. Room",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "J. Brenet",
-              "number": 20,
-              "pos": "D"
-            },
-            {
-              "name": "J. Gaari",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "A. Obispo",
-              "number": 18,
-              "pos": "D"
-            },
-            {
-              "name": "S. Floranus",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Deveron Fonville",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "T. Chong",
-              "number": 21,
-              "pos": "F"
-            },
-            {
-              "name": "L. Bacuna",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "L. Comenencia",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "J. Locadia",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "J. Bacuna",
-              "number": 7,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "R. Bazoer",
-              "number": 23,
-              "pos": "D"
-            },
-            {
-              "name": "B. Kuwas",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "G. Kastaneer",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "K. Gorr\u00e9",
-              "number": 14,
-              "pos": "F"
-            },
-            {
-              "name": "R. van Eijma",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "G. Roemeratoe",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "T. Doornbusch",
-              "number": 26,
-              "pos": "G"
-            },
-            {
-              "name": "S. Sambo",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "J. Antonisse",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "K. Felida",
-              "number": 22,
-              "pos": "M"
-            },
-            {
-              "name": "S. Hansen",
-              "number": 12,
-              "pos": "F"
-            },
-            {
-              "name": "A. Martha",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "J. Margaritha",
-              "number": 16,
-              "pos": "F"
-            },
-            {
-              "name": "T. Bodak",
-              "number": 25,
-              "pos": "G"
-            },
-            {
-              "name": "T. Noslin",
-              "number": 13,
-              "pos": "D"
-            }
-          ]
-        },
-        "IVORY COAST": {
-          "formation": "4-4-2",
-          "coach": "E. Fa\u00e9",
-          "startXI": [
-            {
-              "name": "Y. Fofana",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "G. Dou\u00e9",
-              "number": 17,
-              "pos": "D"
-            },
-            {
-              "name": "O. Kossounou",
-              "number": 7,
-              "pos": "D"
-            },
-            {
-              "name": "O. Diomande",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "C. Operi",
-              "number": 13,
-              "pos": "D"
-            },
-            {
-              "name": "A. Diallo",
-              "number": 15,
-              "pos": "F"
-            },
-            {
-              "name": "I. Sangar\u00e9",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "F. Kessi\u00e9",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Y. Diomande",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "N. P\u00e9p\u00e9",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "A. Bonny",
-              "number": 9,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "C. Inao Oula\u00c3\u00af",
-              "number": 26,
-              "pos": "M"
-            },
-            {
-              "name": "B. Tour\u00e9",
-              "number": 24,
-              "pos": "M"
-            },
-            {
-              "name": "O. Diakit\u00e9",
-              "number": 14,
-              "pos": "F"
-            },
-            {
-              "name": "M. Kon\u00e9",
-              "number": 16,
-              "pos": "G"
-            },
-            {
-              "name": "S. Adingra",
-              "number": 10,
-              "pos": "F"
-            },
-            {
-              "name": "E. Wahi",
-              "number": 12,
-              "pos": "F"
-            },
-            {
-              "name": "E. Agbadou",
-              "number": 20,
-              "pos": "D"
-            },
-            {
-              "name": "P. Guiagon",
-              "number": 25,
-              "pos": "F"
-            },
-            {
-              "name": "E. Guessand",
-              "number": 22,
-              "pos": "F"
-            },
-            {
-              "name": "E. Ndicka",
-              "number": 21,
-              "pos": "D"
-            },
-            {
-              "name": "G. Konan",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "A. Lafont",
-              "number": 23,
-              "pos": "G"
-            },
-            {
-              "name": "J. Seri",
-              "number": 4,
-              "pos": "M"
-            },
-            {
-              "name": "S. Fofana",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "W. Singo",
-              "number": 5,
-              "pos": "D"
-            }
-          ]
-        }
-      }
-    },
     "ECUADOR-GERMANY": {
       "homeGoals": 1,
       "awayGoals": 1,
@@ -610,6 +306,310 @@
               "name": "O. Baumann",
               "number": 12,
               "pos": "G"
+            }
+          ]
+        }
+      }
+    },
+    "CURACAO-IVORY COAST": {
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "HT",
+      "elapsed": 45,
+      "kickoffUTC": "2026-06-25T20:00:00+00:00",
+      "referee": "Glenn Nyberg, Sweden",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Nicolas P\u00e9p\u00e9",
+          "team": "IVORY COAST",
+          "minute": 7,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Nicolas P\u00e9p\u00e9",
+          "team": "IVORY COAST",
+          "minute": 35,
+          "extra": null
+        }
+      ],
+      "lineups": {
+        "CURACAO": {
+          "formation": "5-3-2",
+          "coach": "D. Advocaat",
+          "startXI": [
+            {
+              "name": "E. Room",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "J. Brenet",
+              "number": 20,
+              "pos": "D"
+            },
+            {
+              "name": "J. Gaari",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "A. Obispo",
+              "number": 18,
+              "pos": "D"
+            },
+            {
+              "name": "S. Floranus",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Deveron Fonville",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "T. Chong",
+              "number": 21,
+              "pos": "F"
+            },
+            {
+              "name": "L. Bacuna",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "L. Comenencia",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "J. Locadia",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "J. Bacuna",
+              "number": 7,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "R. Bazoer",
+              "number": 23,
+              "pos": "D"
+            },
+            {
+              "name": "B. Kuwas",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "G. Kastaneer",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "K. Gorr\u00e9",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "R. van Eijma",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "G. Roemeratoe",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "T. Doornbusch",
+              "number": 26,
+              "pos": "G"
+            },
+            {
+              "name": "S. Sambo",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "J. Antonisse",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "K. Felida",
+              "number": 22,
+              "pos": "M"
+            },
+            {
+              "name": "S. Hansen",
+              "number": 12,
+              "pos": "F"
+            },
+            {
+              "name": "A. Martha",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "J. Margaritha",
+              "number": 16,
+              "pos": "F"
+            },
+            {
+              "name": "T. Bodak",
+              "number": 25,
+              "pos": "G"
+            },
+            {
+              "name": "T. Noslin",
+              "number": 13,
+              "pos": "D"
+            }
+          ]
+        },
+        "IVORY COAST": {
+          "formation": "4-4-2",
+          "coach": "E. Fa\u00e9",
+          "startXI": [
+            {
+              "name": "Y. Fofana",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "G. Dou\u00e9",
+              "number": 17,
+              "pos": "D"
+            },
+            {
+              "name": "O. Kossounou",
+              "number": 7,
+              "pos": "D"
+            },
+            {
+              "name": "O. Diomande",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "C. Operi",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "A. Diallo",
+              "number": 15,
+              "pos": "F"
+            },
+            {
+              "name": "I. Sangar\u00e9",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "F. Kessi\u00e9",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Y. Diomande",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "N. P\u00e9p\u00e9",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "A. Bonny",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "C. Inao Oula\u00c3\u00af",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "B. Tour\u00e9",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "O. Diakit\u00e9",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "M. Kon\u00e9",
+              "number": 16,
+              "pos": "G"
+            },
+            {
+              "name": "S. Adingra",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "E. Wahi",
+              "number": 12,
+              "pos": "F"
+            },
+            {
+              "name": "E. Agbadou",
+              "number": 20,
+              "pos": "D"
+            },
+            {
+              "name": "P. Guiagon",
+              "number": 25,
+              "pos": "F"
+            },
+            {
+              "name": "E. Guessand",
+              "number": 22,
+              "pos": "F"
+            },
+            {
+              "name": "E. Ndicka",
+              "number": 21,
+              "pos": "D"
+            },
+            {
+              "name": "G. Konan",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "A. Lafont",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "J. Seri",
+              "number": 4,
+              "pos": "M"
+            },
+            {
+              "name": "S. Fofana",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "W. Singo",
+              "number": 5,
+              "pos": "D"
             }
           ]
         }
