@@ -1,13 +1,31 @@
 {
-  "updated": "2026-06-25T02:10:22.024031Z",
+  "updated": "2026-06-25T02:20:22.726126Z",
   "matches": {
     "CZECHIA-MEXICO": {
       "homeGoals": 0,
-      "awayGoals": 0,
+      "awayGoals": 1,
       "status": "2H",
-      "elapsed": 50,
+      "elapsed": 60,
       "kickoffUTC": "2026-06-25T01:00:00+00:00",
-      "events": [],
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Chavez Garcia",
+          "team": "MEXICO",
+          "minute": 55,
+          "extra": null
+        }
+      ],
+      "substitutions": {
+        "CZECHIA": [
+          {
+            "out": "D. Visinsky",
+            "in": "L. Provod",
+            "minute": 56
+          }
+        ]
+      },
       "lineups": {
         "CZECHIA": {
           "formation": "3-4-2-1",
@@ -286,7 +304,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 50,
+      "elapsed": 60,
       "kickoffUTC": "2026-06-25T01:00:00+00:00",
       "events": [],
       "substitutions": {
