@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-25T20:10:23.313615Z",
+  "updated": "2026-06-25T20:20:26.176318Z",
   "matches": {
     "ECUADOR-GERMANY": {
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "1H",
-      "elapsed": 10,
+      "elapsed": 20,
       "kickoffUTC": "2026-06-25T20:00:00+00:00",
       "referee": "Tori Penso, USA",
       "events": [
@@ -299,7 +299,7 @@
       "homeGoals": 0,
       "awayGoals": 1,
       "status": "1H",
-      "elapsed": 10,
+      "elapsed": 20,
       "kickoffUTC": "2026-06-25T20:00:00+00:00",
       "referee": "Glenn Nyberg, Sweden",
       "events": [
