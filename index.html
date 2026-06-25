@@ -537,6 +537,17 @@
   }
   .ci-pitch-empty { color:#64748b; font-size:13px; font-style:italic; padding:10px 0; }
   .ci-pitch-rival-note { color:#64748b; font-size:11px; font-style:italic; margin-top:6px; }
+  .ci-pitch-wrap { width:100%; margin-bottom:4px; }
+  .pitch-dot-clickable { cursor:pointer; }
+  .pitch-dot-clickable:hover .pitch-name { fill:#FFD700; }
+  .pitch-dot-clickable:hover circle { stroke:#FFD700; }
+
+  /* Modo cancha: un solo bloque ancho (cancha + banco apilados), en vez de
+     las dos columnas — la cancha aprovecha todo el ancho del modal. */
+  .ci-body-pitch {
+    display:block; height:auto; max-height:calc(92vh - 150px);
+    overflow-y:auto; padding-right:4px;
+  }
   .ci-lineup-list { display:flex; flex-direction:column; gap:1px; }
   .ci-lineup-sub-title { color:#64748b; font-size:11px; font-weight:700; text-transform:uppercase; margin:10px 0 4px; }
   .ci-sub-tag { color:#1DB954; font-size:11px; font-weight:700; flex-shrink:0; }
@@ -2405,7 +2416,7 @@ function getLineupData(code) {
     rivalOnPitch = rOnPitch.concat(rEntered);
   }
 
-  return { match, lineup, rivalName, rivalCode, rivalLineup, rivalOnPitch, onPitchSorted, stillOnBench };
+  return { match, lineup, rivalName, rivalCode, rivalLineup, rivalOnPitch, onPitchSorted, stillOnBench, events: (live && live.events) || [] };
 }
 
 // Agrupamos jugadores por posición (arquero / defensa / mediocampo /
@@ -2441,6 +2452,15 @@ function formationPositions(players, side) {
   return positions;
 }
 
+// Busca si un jugador tiene tarjeta (amarilla o roja) entre los eventos
+// del partido — viene del mismo endpoint que ya usamos para goles/cambios.
+function cardForPlayer(events, name) {
+  const cards = (events || []).filter(e => e.type === 'Card' && e.player === name);
+  if (cards.length === 0) return null;
+  if (cards.some(e => (e.detail || '').toLowerCase().includes('red'))) return 'red';
+  return 'yellow';
+}
+
 function buildPitchSvg(myCode, data) {
   const myPositions = formationPositions(data.onPitchSorted, 'left');
   const rivalPositions = data.rivalOnPitch ? formationPositions(data.rivalOnPitch, 'right') : [];
@@ -2452,16 +2472,29 @@ function buildPitchSvg(myCode, data) {
   const W = 760, H = 480;
   const dotR = 18;
 
-  function dotsFor(positions, color) {
+  // clickable=true (mi equipo): color propio + link a Google.
+  // clickable=false (rival): gris, sin link — para interactuar con el rival
+  // hay que abrir su propio cuadro de país.
+  function dotsFor(positions, color, clickable) {
     return positions.map(pos => {
       const cx = (pos.x / 100) * W;
       const cy = (pos.y / 100) * H;
-      const shortName = pos.player.name.split(' ').slice(-1)[0]; // apellido, para que entre
-      return '<g class="pitch-dot">' +
+      const fullName = pos.player.name;
+      const card = cardForPlayer(data.events, fullName);
+      const cardHtml = card
+        ? '<rect x="' + (cx + dotR * 0.45) + '" y="' + (cy - dotR * 1.55) + '" width="11" height="15" rx="2" ' +
+          'fill="' + (card === 'red' ? '#E0263B' : '#FFD700') + '" stroke="#0a0a0a" stroke-width="1" transform="rotate(12 ' + (cx + dotR * 0.45 + 5.5) + ' ' + (cy - dotR * 1.55 + 7.5) + ')"/>'
+        : '';
+      const inner =
         '<circle cx="' + cx + '" cy="' + cy + '" r="' + dotR + '" fill="' + color + '" stroke="#0a0a0a" stroke-width="2"/>' +
         '<text x="' + cx + '" y="' + cy + '" text-anchor="middle" dominant-baseline="central" class="pitch-num">' + (pos.player.number ?? '') + '</text>' +
-        '<text x="' + cx + '" y="' + (cy + dotR + 13) + '" text-anchor="middle" class="pitch-name">' + shortName + '</text>' +
-      '</g>';
+        '<text x="' + cx + '" y="' + (cy + dotR + 13) + '" text-anchor="middle" class="pitch-name">' + fullName + '</text>' +
+        cardHtml;
+      if (clickable) {
+        const link = googleSearchLink(fullName, myCode);
+        return '<a href="' + link + '" target="_blank" rel="noopener" class="pitch-dot pitch-dot-clickable">' + inner + '</a>';
+      }
+      return '<g class="pitch-dot">' + inner + '</g>';
     }).join('');
   }
 
@@ -2476,15 +2509,15 @@ function buildPitchSvg(myCode, data) {
       '<circle cx="' + (W/2) + '" cy="' + (H/2) + '" r="60" fill="none" stroke="#fff" stroke-width="2" opacity="0.8"/>' +
       '<rect x="2" y="' + (H/2-90) + '" width="60" height="180" fill="none" stroke="#fff" stroke-width="2" opacity="0.8"/>' +
       '<rect x="' + (W-62) + '" y="' + (H/2-90) + '" width="60" height="180" fill="none" stroke="#fff" stroke-width="2" opacity="0.8"/>' +
-      dotsFor(myPositions, '#E0263B') +
-      (rivalPositions.length > 0 ? dotsFor(rivalPositions, '#2B6CE0') : '') +
+      (rivalPositions.length > 0 ? dotsFor(rivalPositions, '#6b7280', false) : '') +
+      dotsFor(myPositions, '#E0263B', true) +
     '</svg>';
 
   const rivalNote = rivalPositions.length === 0
     ? '<div class="ci-pitch-rival-note">' + t('alineacionRivalNoDisponible') + ' (' + data.rivalName + ')</div>'
     : '';
 
-  return pitchSvg + rivalNote;
+  return '<div class="ci-pitch-wrap">' + pitchSvg + rivalNote + '</div>';
 }
 
 // Mientras el modal de país está abierto, si el usuario rota el celular
@@ -2496,13 +2529,10 @@ function isPitchLayout() {
   return window.matchMedia('(orientation: landscape) and (max-height: 560px)').matches
     || window.matchMedia('(min-width: 900px)').matches;
 }
-function renderLineupColumn(code, lineupData) {
-  return isPitchLayout() ? buildPitchSvg(code, lineupData) : buildLineupHtml(code, lineupData);
-}
 function rerenderLineupColumnIfOpen() {
   if (countryInfoModal.style.display === 'none' || !currentCountryModalState) return;
-  const col = document.getElementById('ci-lineup-col');
-  if (col) col.innerHTML = renderLineupColumn(currentCountryModalState.code, currentCountryModalState.lineupData);
+  const body = document.getElementById('ci-body');
+  if (body) body.outerHTML = buildModalBodyHtml(currentCountryModalState.code, currentCountryModalState.lineupData);
 }
 window.addEventListener('orientationchange', rerenderLineupColumnIfOpen);
 window.addEventListener('resize', rerenderLineupColumnIfOpen);
@@ -2547,6 +2577,31 @@ function buildBenchHtml(code, data) {
   return '<div class="ci-lineup-list">' + data.stillOnBench.map(p => playerRow(code, p)).join('') + '</div>';
 }
 
+// Arma el cuerpo del modal (cancha+banco apilados de lado a lado, o las
+// dos columnas de texto) según el modo vigente. Se llama tanto al abrir el
+// modal como al rotar/cambiar tamaño de ventana mientras está abierto.
+function buildModalBodyHtml(code, lineupData) {
+  const pitchMode = isPitchLayout();
+  if (pitchMode) {
+    return '<div class="ci-body ci-body-pitch" id="ci-body">' +
+      '<div class="ci-col-title">⚽ ' + t('alineacion') + '</div>' +
+      buildPitchSvg(code, lineupData) +
+      '<div class="ci-col-title" style="margin-top:14px;">' + t('banco') + '</div>' +
+      buildBenchHtml(code, lineupData) +
+    '</div>';
+  }
+  return '<div class="ci-body" id="ci-body">' +
+    '<div class="ci-col">' +
+      '<div class="ci-col-title">⚽ ' + t('alineacion') + '</div>' +
+      '<div class="ci-col-scroll">' + buildLineupHtml(code, lineupData) + '</div>' +
+    '</div>' +
+    '<div class="ci-col">' +
+      '<div class="ci-col-title">' + t('banco') + '</div>' +
+      '<div class="ci-col-scroll">' + buildBenchHtml(code, lineupData) + '</div>' +
+    '</div>' +
+  '</div>';
+}
+
 function openCountryInfo(code) {
   const name = esName(code);
   const flagHtml = flag(code);
@@ -2575,16 +2630,7 @@ function openCountryInfo(code) {
 
   const lineupData = getLineupData(code);
   currentCountryModalState = { code, lineupData };
-  html += '<div class="ci-body">' +
-    '<div class="ci-col">' +
-      '<div class="ci-col-title">⚽ ' + t('alineacion') + '</div>' +
-      '<div class="ci-col-scroll" id="ci-lineup-col">' + renderLineupColumn(code, lineupData) + '</div>' +
-    '</div>' +
-    '<div class="ci-col">' +
-      '<div class="ci-col-title">' + t('banco') + '</div>' +
-      '<div class="ci-col-scroll">' + buildBenchHtml(code, lineupData) + '</div>' +
-    '</div>' +
-  '</div>';
+  html += buildModalBodyHtml(code, lineupData);
 
   countryInfoContent.innerHTML = html;
   countryInfoModal.style.display = 'flex';
