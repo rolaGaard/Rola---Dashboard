@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T21:30:41.606072Z",
+  "updated": "2026-06-25T21:40:23.290250Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -20795,10 +20795,10 @@
       "referee": null
     },
     "ECUADOR-GERMANY": {
-      "homeGoals": 1,
+      "homeGoals": 2,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 70,
+      "elapsed": 80,
       "kickoffUTC": "2026-06-25T20:00:00+00:00",
       "referee": "Tori Penso, USA",
       "events": [
@@ -20841,6 +20841,14 @@
           "team": "ECUADOR",
           "minute": 50,
           "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Gonzalo Plata",
+          "team": "ECUADOR",
+          "minute": 77,
+          "extra": null
         }
       ],
       "substitutions": {
@@ -20864,6 +20872,11 @@
             "out": "Felix Nmecha",
             "in": "Maximilian Beier",
             "minute": 64
+          },
+          {
+            "out": "Florian Wirtz",
+            "in": "Pascal Gro\u00df",
+            "minute": 73
           }
         ],
         "ECUADOR": [
@@ -20876,6 +20889,11 @@
             "out": "Alan Franco",
             "in": "Angelo Preciado",
             "minute": 64
+          },
+          {
+            "out": "Piero Hincapi\u00e9",
+            "in": "Pervis Estupinan",
+            "minute": 71
           }
         ]
       },
@@ -21152,7 +21170,7 @@
       "homeGoals": 0,
       "awayGoals": 2,
       "status": "2H",
-      "elapsed": 70,
+      "elapsed": 79,
       "kickoffUTC": "2026-06-25T20:00:00+00:00",
       "referee": "Glenn Nyberg, Sweden",
       "events": [
@@ -21179,6 +21197,14 @@
           "team": "IVORY COAST",
           "minute": 64,
           "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Juninho Bacuna",
+          "team": "CURACAO",
+          "minute": 75,
+          "extra": null
         }
       ],
       "substitutions": {
@@ -21202,6 +21228,11 @@
             "out": "Yan Diomande",
             "in": "Bazoumana Tour\u00e9",
             "minute": 67
+          },
+          {
+            "out": "Franck Kessi\u00e9",
+            "in": "Jean Micha\u00ebl Seri",
+            "minute": 77
           }
         ],
         "CURACAO": [
@@ -21209,6 +21240,16 @@
             "out": "Livano Comenencia",
             "in": "Jeremy Antonisse",
             "minute": 61
+          },
+          {
+            "out": "Jurien Gaari",
+            "in": "Gervane Kastaneer",
+            "minute": 77
+          },
+          {
+            "out": "Deveron Fonville",
+            "in": "Tyrese Noslin",
+            "minute": 77
           }
         ]
       },
