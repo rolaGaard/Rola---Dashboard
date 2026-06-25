@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-25T23:00:53.661428Z",
+  "updated": "2026-06-25T23:10:23.082537Z",
   "matches": {
     "JAPAN-SWEDEN": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 1,
+      "elapsed": 10,
       "kickoffUTC": "2026-06-25T23:00:00+00:00",
       "referee": "I. Barton",
       "events": [],
@@ -285,12 +285,29 @@
     },
     "TUNISIA-NETHERLANDS": {
       "homeGoals": 0,
-      "awayGoals": 0,
+      "awayGoals": 2,
       "status": "1H",
-      "elapsed": 1,
+      "elapsed": 11,
       "kickoffUTC": "2026-06-25T23:00:00+00:00",
       "referee": "K. I. Garcia Mendoza",
-      "events": [],
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Own Goal",
+          "player": "Ellyes Skhiri",
+          "team": "NETHERLANDS",
+          "minute": 3,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Brian Brobbey",
+          "team": "NETHERLANDS",
+          "minute": 7,
+          "extra": null
+        }
+      ],
       "lineups": {
         "TUNISIA": {
           "formation": "4-2-3-1",
