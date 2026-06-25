@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T21:20:22.543237Z",
+  "updated": "2026-06-25T21:30:41.606072Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -20798,7 +20798,7 @@
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 60,
+      "elapsed": 70,
       "kickoffUTC": "2026-06-25T20:00:00+00:00",
       "referee": "Tori Penso, USA",
       "events": [
@@ -20849,6 +20849,33 @@
             "out": "Aleksandar Pavlovi\u0107",
             "in": "Angelo Stiller",
             "minute": 45
+          },
+          {
+            "out": "Kai Havertz",
+            "in": "Deniz Undav",
+            "minute": 60
+          },
+          {
+            "out": "Joshua Kimmich",
+            "in": "Malick Thiaw",
+            "minute": 60
+          },
+          {
+            "out": "Felix Nmecha",
+            "in": "Maximilian Beier",
+            "minute": 64
+          }
+        ],
+        "ECUADOR": [
+          {
+            "out": "Enner Valencia",
+            "in": "Kevin Rodriguez",
+            "minute": 64
+          },
+          {
+            "out": "Alan Franco",
+            "in": "Angelo Preciado",
+            "minute": 64
           }
         ]
       },
@@ -21123,9 +21150,9 @@
     },
     "CURACAO-IVORY COAST": {
       "homeGoals": 0,
-      "awayGoals": 1,
+      "awayGoals": 2,
       "status": "2H",
-      "elapsed": 59,
+      "elapsed": 70,
       "kickoffUTC": "2026-06-25T20:00:00+00:00",
       "referee": "Glenn Nyberg, Sweden",
       "events": [
@@ -21144,6 +21171,14 @@
           "team": "IVORY COAST",
           "minute": 35,
           "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Nicolas P\u00e9p\u00e9",
+          "team": "IVORY COAST",
+          "minute": 64,
+          "extra": null
         }
       ],
       "substitutions": {
@@ -21152,6 +21187,28 @@
             "out": "Amad Diallo",
             "in": "Christ Inao Oula\u00ef",
             "minute": 45
+          },
+          {
+            "out": "Ange-Yoan Bonny",
+            "in": "Oumar Diakit\u00e9",
+            "minute": 67
+          },
+          {
+            "out": "Nicolas P\u00e9p\u00e9",
+            "in": "Sepe Elye Wahi",
+            "minute": 67
+          },
+          {
+            "out": "Yan Diomande",
+            "in": "Bazoumana Tour\u00e9",
+            "minute": 67
+          }
+        ],
+        "CURACAO": [
+          {
+            "out": "Livano Comenencia",
+            "in": "Jeremy Antonisse",
+            "minute": 61
           }
         ]
       },
