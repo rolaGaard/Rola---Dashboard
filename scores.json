@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T07:50:23.030923Z",
+  "updated": "2026-06-25T16:00:50.115862Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -19150,7 +19150,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-24T22:00:00+00:00",
-      "referee": "D. Makkelie",
+      "referee": "Danny Makkelie, Netherlands",
       "events": [
         {
           "type": "Goal",
@@ -19566,7 +19566,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-24T22:00:00+00:00",
-      "referee": "C. A. Ramos",
+      "referee": "C\u00e9sar Ramos Palazuelos, Mexico",
       "events": [
         {
           "type": "Goal",
@@ -19953,7 +19953,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-25T01:00:00+00:00",
-      "referee": "Y. Perez",
+      "referee": "Yael Falcon Perez, Argentina",
       "events": [
         {
           "type": "Goal",
@@ -20316,7 +20316,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-25T01:00:00+00:00",
-      "referee": "F. Tello",
+      "referee": "Facundo Raul Tello Figueroa, Argentina",
       "events": [
         {
           "type": "Goal",
