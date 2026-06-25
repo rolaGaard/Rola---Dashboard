@@ -493,16 +493,53 @@
   .country-info-box {
     text-align:left; width:min(94vw, 980px); max-width:980px;
     max-height:92vh; padding:20px 22px;
+    container-type:inline-size; container-name:cibox;
   }
 
   /* ── Header compacto: bandera + nombre + código + estrellas ──────────── */
   .ci-header { display:flex; align-items:center; gap:12px; margin-bottom:4px; padding-right:28px; }
   .ci-flag-img { width:48px; height:32px; object-fit:cover; border-radius:3px; flex-shrink:0; }
-  .ci-header-text { display:flex; flex-direction:column; gap:2px; min-width:0; }
+  .ci-header-text { display:flex; flex-direction:column; gap:2px; min-width:0; flex:1; }
   .ci-name-row { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
   .ci-name { color:#fff; font-size:18px; font-weight:800; line-height:1.1; }
   .ci-code { color:#64748b; font-size:11px; font-weight:700; background:rgba(255,255,255,0.08); padding:1px 6px; border-radius:4px; }
   .ci-stars-row { font-size:12px; line-height:1; }
+  .ci-live-score { font-size:18px; font-weight:800; margin-left:auto; padding-right:10px; white-space:nowrap; }
+  .ci-live-score .mine { color:#FFD700; }
+  .ci-live-score .rival { color:#9ca3af; }
+
+  /* El header escala junto con el ancho real del cuadro — chico en celular
+     angosto, más grande en PC/monitor/TV, igual criterio que la cancha. */
+  @container cibox (min-width:500px) {
+    .ci-flag-img { width:60px; height:40px; }
+    .ci-name { font-size:23px; }
+    .ci-code { font-size:13px; padding:2px 8px; }
+    .ci-stars-row { font-size:14px; }
+    .ci-live-score { font-size:23px; }
+    .ci-region { font-size:14px; }
+    .ci-stats-inline { font-size:14px; }
+    .ci-stats-inline b { font-size:16px; }
+  }
+  @container cibox (min-width:700px) {
+    .ci-flag-img { width:72px; height:48px; }
+    .ci-name { font-size:28px; }
+    .ci-code { font-size:15px; padding:3px 9px; }
+    .ci-stars-row { font-size:16px; }
+    .ci-live-score { font-size:28px; }
+    .ci-region { font-size:16px; }
+    .ci-stats-inline { font-size:16px; }
+    .ci-stats-inline b { font-size:18px; }
+  }
+  @container cibox (min-width:900px) {
+    .ci-flag-img { width:84px; height:56px; }
+    .ci-name { font-size:33px; }
+    .ci-code { font-size:17px; padding:3px 10px; }
+    .ci-stars-row { font-size:18px; }
+    .ci-live-score { font-size:33px; }
+    .ci-region { font-size:18px; }
+    .ci-stats-inline { font-size:18px; }
+    .ci-stats-inline b { font-size:20px; }
+  }
   .ci-region { color:#94a3b8; font-size:12px; }
 
   /* ── Estadísticas chicas, en línea, no como antes ────────────────────── */
@@ -608,20 +645,12 @@
     .ci-lineup-meta { font-size:19px; }
   }
 
-  /* En vertical: apilamos las columnas y se scrollea todo el cuadro normal. */
+  /* En vertical (modo texto): apilamos las columnas y se scrollea todo el
+     cuadro normal. El modo cancha (horizontal/PC) se decide por JS, no por
+     este media query, así que no hace falta una regla aparte para eso. */
   @media (max-width:640px) and (orientation:portrait) {
     .ci-body { grid-template-columns:1fr; height:auto; max-height:calc(92vh - 170px); overflow-y:auto; }
     .ci-col-scroll { overflow-y:visible; }
-  }
-
-  /* En horizontal real (el usuario rotó el teléfono por su cuenta, sin
-     forzarlo con ningún truco de CSS): mostramos las dos columnas lado a
-     lado, cada una con su propio scroll. Usamos max-height (no max-width)
-     porque en horizontal lo angosto pasa a ser la altura del teléfono. */
-  @media (orientation:landscape) and (max-height:560px) {
-    .country-info-box { max-height:92vh; }
-    .ci-body { grid-template-columns:1fr 1fr; height:calc(92vh - 150px); overflow:hidden; }
-    .ci-col-scroll { overflow-y:auto; max-height:none; flex:1; min-height:0; }
   }
   .shortcut-instructions-text b { color:#FFD700; }
   .cookie-banner-close {
@@ -2480,6 +2509,9 @@ function buildPitchSvg(myCode, data) {
       const cx = (pos.x / 100) * W;
       const cy = (pos.y / 100) * H;
       const fullName = pos.player.name;
+      const nameParts = fullName.split(' ');
+      const firstLine = nameParts[0];
+      const secondLine = nameParts.slice(1).join(' ');
       const card = cardForPlayer(data.events, fullName);
       const cardHtml = card
         ? '<rect x="' + (cx + dotR * 0.45) + '" y="' + (cy - dotR * 1.55) + '" width="11" height="15" rx="2" ' +
@@ -2488,7 +2520,8 @@ function buildPitchSvg(myCode, data) {
       const inner =
         '<circle cx="' + cx + '" cy="' + cy + '" r="' + dotR + '" fill="' + color + '" stroke="#0a0a0a" stroke-width="2"/>' +
         '<text x="' + cx + '" y="' + cy + '" text-anchor="middle" dominant-baseline="central" class="pitch-num">' + (pos.player.number ?? '') + '</text>' +
-        '<text x="' + cx + '" y="' + (cy + dotR + 13) + '" text-anchor="middle" class="pitch-name">' + fullName + '</text>' +
+        '<text x="' + cx + '" y="' + (cy + dotR + 12) + '" text-anchor="middle" class="pitch-name">' + firstLine + '</text>' +
+        (secondLine ? '<text x="' + cx + '" y="' + (cy + dotR + 24) + '" text-anchor="middle" class="pitch-name">' + secondLine + '</text>' : '') +
         cardHtml;
       if (clickable) {
         const link = googleSearchLink(fullName, myCode);
@@ -2520,14 +2553,12 @@ function buildPitchSvg(myCode, data) {
   return '<div class="ci-pitch-wrap">' + pitchSvg + rivalNote + '</div>';
 }
 
-// Mientras el modal de país está abierto, si el usuario rota el celular
-// (o agranda/achica la ventana en PC), volvemos a decidir si corresponde
-// mostrar la cancha gráfica o la lista de texto — sin tener que cerrar y
-// reabrir el modal.
+// El modo cancha aplica cualquier vez que la pantalla sea más ancha que
+// alta — sea PC, monitor, TV, o el celular rotado a horizontal. Así no
+// dependemos de umbrales de píxeles que varían según el dispositivo.
 let currentCountryModalState = null;
 function isPitchLayout() {
-  return window.matchMedia('(orientation: landscape) and (max-height: 560px)').matches
-    || window.matchMedia('(min-width: 900px)').matches;
+  return window.innerWidth > window.innerHeight;
 }
 function rerenderLineupColumnIfOpen() {
   if (countryInfoModal.style.display === 'none' || !currentCountryModalState) return;
@@ -2609,11 +2640,26 @@ function openCountryInfo(code) {
   const stars = worldCupStars(code);
   const info = COUNTRY_INFO[code];
 
+  // Si hay un partido relevante (en vivo, recién jugado, o el próximo) con
+  // marcador disponible, lo mostramos al lado del nombre — en amarillo el
+  // gol del país que estás mirando, en gris el del rival.
+  const relevantMatch = findRelevantLineupMatch(code);
+  let scoreHtml = '';
+  if (relevantMatch) {
+    const live = getLiveData(relevantMatch);
+    if (live && live.homeGoals !== null && live.homeGoals !== undefined) {
+      const myGoals = relevantMatch.home === code ? live.homeGoals : live.awayGoals;
+      const rivalGoals = relevantMatch.home === code ? live.awayGoals : live.homeGoals;
+      scoreHtml = '<div class="ci-live-score"><span class="mine">' + myGoals + '</span> - <span class="rival">' + rivalGoals + '</span></div>';
+    }
+  }
+
   let html = '<div class="ci-header">' + flagHtml.replace('flag-img', 'flag-img ci-flag-img') +
     '<div class="ci-header-text">' +
       '<div class="ci-name-row"><span class="ci-name">' + name + '</span><span class="ci-code">' + code3 + '</span></div>' +
       '<div class="ci-stars-row">' + stars + '</div>' +
     '</div>' +
+    scoreHtml +
   '</div>';
 
   if (info) {
