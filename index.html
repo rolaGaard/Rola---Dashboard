@@ -355,6 +355,37 @@
     .qualifiers-grid { grid-template-columns:repeat(2,1fr); }
   }
 
+  .thirds-disclaimer {
+    color:#94a3b8; font-size:10px; font-style:italic; margin-bottom:8px; line-height:1.4;
+  }
+  .thirds-table {
+    width:100%; border-collapse:collapse; background:#fff; border-radius:8px;
+    overflow:hidden; font-size:11px; margin-bottom:6px;
+  }
+  .thirds-table th {
+    background:#1a1a2e; color:#fff; padding:5px 6px; font-size:9px; text-align:center;
+  }
+  .thirds-table td { padding:5px 6px; text-align:center; color:#1a1a2e; border-bottom:1px solid #f1f5f9; }
+  .thirds-rank { font-weight:800; color:#94a3b8; }
+  .thirds-team { text-align:left; font-weight:700; cursor:pointer; }
+  .thirds-team:hover { background:#f1f5f9; }
+  .thirds-row.qualifies { background:rgba(29,185,84,0.06); }
+  .thirds-row.qualifies .thirds-rank { color:#1DB954; }
+  .thirds-row.eliminated { opacity:0.55; }
+
+  .r32-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:6px; margin-bottom:6px; }
+  .r32-card {
+    background:#fff; border-radius:8px; padding:8px 10px; font-size:11px;
+    display:flex; align-items:center; justify-content:space-between; gap:6px;
+  }
+  .r32-team { font-weight:700; color:#1a1a2e; cursor:pointer; }
+  .r32-team:hover { color:#003087; }
+  .r32-vs { color:#94a3b8; font-size:9px; flex-shrink:0; }
+  .r32-pending { color:#94a3b8; font-style:italic; font-size:10px; }
+  @media (max-width:700px) {
+    .r32-grid { grid-template-columns:1fr; }
+  }
+
   @media (max-width:700px) {
     .bracket-layout { grid-template-columns:1fr; gap:18px; }
     .groups-col { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }
@@ -803,6 +834,7 @@ const I18N = {
     cuartosDeFinal: 'CUARTOS DE FINAL', octavosDeFinal: 'OCTAVOS DE FINAL',
     bracketNote: 'El cuadro de eliminación se completa automáticamente cuando termine la fase de grupos (28 de junio)',
     clasificadosTitle: 'CLASIFICADOS A OCTAVOS (se completa por grupo a medida que termina)',
+    tercerosTitle: 'TABLA DE TERCEROS (los mejores 8 de 12 clasifican)', tercerosDisclaimer: 'Desempate oficial de FIFA: puntos → DG → goles a favor → conducta deportiva → ranking FIFA. No tenemos los últimos dos criterios cargados, así que en un empate exacto puede no coincidir con el orden oficial.', dieciseisavosTitle: 'DIECISEISAVOS DE FINAL (RONDA DE 32)',
     datosFooter: 'Última actualización:', hsAR: '',
     reportarProblema: '🐞 Reportar un problema',
     instalarApp: 'Instalar app', pantallaCompleta: 'Pantalla completa', salirPantallaCompleta: 'Salir de pantalla completa',
@@ -851,6 +883,7 @@ const I18N = {
     cuartosDeFinal: 'QUARTERFINALS', octavosDeFinal: 'ROUND OF 32',
     bracketNote: 'The knockout bracket fills in automatically once the group stage ends (June 28)',
     clasificadosTitle: 'QUALIFIED FOR ROUND OF 32 (fills in per group as it finishes)',
+    tercerosTitle: 'THIRD-PLACE TABLE (best 8 of 12 advance)', tercerosDisclaimer: "FIFA's official tiebreak: points → GD → goals scored → fair play → FIFA ranking. We don't have the last two loaded, so an exact tie may not match the official order.", dieciseisavosTitle: 'ROUND OF 32',
     datosFooter: 'Last update:', hsAR: '',
     reportarProblema: '🐞 Report a problem',
     instalarApp: 'Install app', pantallaCompleta: 'Fullscreen', salirPantallaCompleta: 'Exit fullscreen',
@@ -899,6 +932,7 @@ const I18N = {
     cuartosDeFinal: 'QUARTAS DE FINAL', octavosDeFinal: 'OITAVAS DE FINAL',
     bracketNote: 'O mata-mata é completado automaticamente quando a fase de grupos terminar (28 de junho)',
     clasificadosTitle: 'CLASSIFICADOS PARA AS OITAVAS (completado por grupo conforme termina)',
+    tercerosTitle: 'TABELA DE TERCEIROS (os 8 melhores de 12 avançam)', tercerosDisclaimer: 'Critério oficial da FIFA: pontos → SG → gols marcados → fair play → ranking FIFA. Não temos os dois últimos critérios carregados, então em um empate exato pode não coincidir com a ordem oficial.', dieciseisavosTitle: 'DEZESSEIS AVOS DE FINAL (RODADA DE 32)',
     datosFooter: 'Última atualização:', hsAR: '',
     reportarProblema: '🐞 Reportar um problema',
     instalarApp: 'Instalar app', pantallaCompleta: 'Tela cheia', salirPantallaCompleta: 'Sair da tela cheia',
@@ -947,6 +981,7 @@ const I18N = {
     cuartosDeFinal: 'VIERTELFINALE', octavosDeFinal: 'ACHTELFINALE',
     bracketNote: 'Der K.O.-Plan wird automatisch ausgefüllt, sobald die Gruppenphase endet (28. Juni)',
     clasificadosTitle: 'QUALIFIZIERT FÜR DAS ACHTELFINALE (wird pro Gruppe ausgefüllt)',
+    tercerosTitle: 'DRITTPLATZIERTEN-TABELLE (die besten 8 von 12 ziehen weiter)', tercerosDisclaimer: 'Offizielles FIFA-Tiebreak: Punkte → Tordifferenz → Tore → Fairplay → FIFA-Ranking. Die letzten beiden Kriterien fehlen uns, bei einem genauen Gleichstand kann die Reihenfolge daher abweichen.', dieciseisavosTitle: 'ACHTZEHNTELFINALE (RUNDE DER 32)',
     datosFooter: 'Letzte Aktualisierung:', hsAR: '',
     reportarProblema: '🐞 Problem melden',
     instalarApp: 'App installieren', pantallaCompleta: 'Vollbild', salirPantallaCompleta: 'Vollbild beenden',
@@ -995,6 +1030,7 @@ const I18N = {
     cuartosDeFinal: 'KWARTFINALES', octavosDeFinal: 'ACHTSTE FINALES',
     bracketNote: 'Het knock-outschema wordt automatisch aangevuld zodra de groepsfase is afgelopen (28 juni)',
     clasificadosTitle: 'GEKWALIFICEERD VOOR ACHTSTE FINALES (per groep aangevuld zodra deze afloopt)',
+    tercerosTitle: 'DERDE-PLAATSTABEL (beste 8 van 12 gaan door)', tercerosDisclaimer: 'Officiële FIFA-tiebreak: punten → doelsaldo → gescoorde doelpunten → fair play → FIFA-ranking. De laatste twee criteria hebben we niet geladen, bij een exacte gelijke stand kan de volgorde dus afwijken.', dieciseisavosTitle: 'ZESTIENDE FINALES (RONDE VAN 32)',
     datosFooter: 'Laatste update:', hsAR: '',
     reportarProblema: '🐞 Probleem melden',
     instalarApp: 'App installeren', pantallaCompleta: 'Volledig scherm', salirPantallaCompleta: 'Volledig scherm sluiten',
@@ -2077,6 +2113,126 @@ function buildSlotsCol(count, cls, label) {
   return html;
 }
 
+// ── Estructura fija del Mundial 2026 (32 equipos, dieciseisavos) ─────────
+// Esto NO depende de los resultados — la FIFA lo definió antes de que
+// arranque el torneo, en base a la posición de grupo (1°, 2° o 3°), no a
+// qué selección específica ocupe esa posición. Confirmado cruzando varias
+// fuentes (FIFA.com, ESPN, Sky Sports, CBS Sports) en junio de 2026.
+//
+// - 4 partidos 1° vs 2° de OTRO grupo (siempre los mismos grupos cruzados)
+// - 4 partidos 2° vs 2° (siempre los mismos grupos cruzados)
+// - 8 partidos 1° vs 3° de alguno de 5 grupos posibles (cuál de los 5
+//   exactamente, se define recién cuando termina la fase de grupos y se
+//   sabe cuáles son los 8 mejores terceros)
+const R32_WINNER_VS_RUNNERUP = [['C','F'], ['F','C'], ['H','J'], ['J','H']];
+const R32_RUNNERUP_VS_RUNNERUP = [['A','B'], ['D','G'], ['E','I'], ['K','L']];
+const R32_WINNER_VS_THIRD = {
+  A: ['C','E','F','H','I'],
+  B: ['E','F','G','I','J'],
+  D: ['B','E','F','I','J'],
+  E: ['A','B','C','D','F'],
+  G: ['A','E','H','I','J'],
+  I: ['C','D','F','G','H'],
+  K: ['D','E','I','J','L'],
+  L: ['E','H','I','J','K'],
+};
+
+// Tabla de los 12 terceros lugares, ordenados para ver cuáles 8 clasifican.
+// IMPORTANTE: el desempate oficial de FIFA usa puntos → DG → goles a favor →
+// comportamiento disciplinario (tarjetas) → ranking FIFA. No tenemos los
+// últimos dos criterios cargados, así que en un empate exacto de los
+// primeros tres, el orden acá puede no coincidir con el oficial.
+function buildThirdPlaceTable() {
+  const allGroups = ['A','B','C','D','E','F','G','H','I','J','K','L'];
+  const thirds = allGroups.map(g => {
+    const standings = computeStandings(g);
+    const row = standings[2]; // 3er lugar
+    return row ? { group: g, ...row, gd: row.gf - row.ga } : null;
+  }).filter(Boolean);
+
+  thirds.sort((a, b) => {
+    if (b.pts !== a.pts) return b.pts - a.pts;
+    if (b.gd !== a.gd) return b.gd - a.gd;
+    return b.gf - a.gf;
+  });
+
+  let html = '<div class="bracket-stage-label" style="font-size:11px; margin-bottom:8px;">' + t('tercerosTitle') + '</div>';
+  html += '<div class="thirds-disclaimer">' + t('tercerosDisclaimer') + '</div>';
+  html += '<table class="thirds-table"><tr><th></th><th>' + t('grupo') + '</th><th></th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>DG</th><th>PTS</th></tr>';
+  thirds.forEach((row, idx) => {
+    const qualifies = idx < 8;
+    const rowClass = qualifies ? 'thirds-row qualifies' : 'thirds-row eliminated';
+    html += '<tr class="' + rowClass + '">' +
+      '<td class="thirds-rank">' + (idx + 1) + '</td>' +
+      '<td>' + t('grupo') + ' ' + row.group + '</td>' +
+      '<td class="thirds-team team-clickable" onclick="event.stopPropagation(); openCountryInfo(\'' + row.team.replace(/'/g, "\\'") + '\')">' + flag(row.team) + ' ' + esName(row.team) + '</td>' +
+      '<td>' + row.played + '</td><td>' + row.w + '</td><td>' + row.d + '</td><td>' + row.l + '</td>' +
+      '<td>' + (row.gd > 0 ? '+' : '') + row.gd + '</td><td><b>' + row.pts + '</b></td>' +
+    '</tr>';
+  });
+  html += '</table>';
+  return html;
+}
+
+// Arma los 16 partidos de dieciseisavos. Para los 8 de tipo "1° vs 3°", solo
+// asigna un rival concreto si, entre los 8 mejores terceros ya confirmados
+// (fase de grupos 100% terminada), ese cupo puede llenarse sin ambigüedad
+// con un solo candidato posible — si hay más de una opción válida, prefiere
+// mostrar el conjunto de grupos candidatos en vez de arriesgar una
+// asignación que podría no coincidir con la tabla oficial de la FIFA.
+function buildRoundOf32() {
+  const allGroupsFinished = ['A','B','C','D','E','F','G','H','I','J','K','L'].every(g =>
+    SCHEDULE.filter(m => m.group === g).every(m => getMatchResult(m).isFinished && getMatchResult(m).hasScore)
+  );
+
+  let qualifiedThirdGroups = null; // null = todavía no se sabe
+  if (allGroupsFinished) {
+    const allGroups = ['A','B','C','D','E','F','G','H','I','J','K','L'];
+    const thirds = allGroups.map(g => {
+      const standings = computeStandings(g);
+      const row = standings[2];
+      return row ? { group: g, ...row, gd: row.gf - row.ga } : null;
+    }).filter(Boolean);
+    thirds.sort((a, b) => (b.pts - a.pts) || (b.gd - a.gd) || (b.gf - a.gf));
+    qualifiedThirdGroups = thirds.slice(0, 8).map(t => t.group);
+  }
+
+  function thirdTeamFor(slotGroup) {
+    if (!qualifiedThirdGroups) return null;
+    const candidates = R32_WINNER_VS_THIRD[slotGroup].filter(g => qualifiedThirdGroups.includes(g));
+    if (candidates.length !== 1) return null; // ambiguo o sin datos — no arriesgamos
+    return getQualifier(candidates[0], 3) || null;
+  }
+
+  const matches = [];
+  R32_WINNER_VS_RUNNERUP.forEach(([wG, rG]) => {
+    matches.push({ a: getQualifier(wG, 1), aLabel: t('grupo') + ' ' + wG + ' 1°', b: getQualifier(rG, 2), bLabel: t('grupo') + ' ' + rG + ' 2°' });
+  });
+  R32_RUNNERUP_VS_RUNNERUP.forEach(([g1, g2]) => {
+    matches.push({ a: getQualifier(g1, 2), aLabel: t('grupo') + ' ' + g1 + ' 2°', b: getQualifier(g2, 2), bLabel: t('grupo') + ' ' + g2 + ' 2°' });
+  });
+  Object.keys(R32_WINNER_VS_THIRD).forEach(wG => {
+    const third = thirdTeamFor(wG);
+    const candidateLabel = '3° (' + R32_WINNER_VS_THIRD[wG].join('/') + ')';
+    matches.push({ a: getQualifier(wG, 1), aLabel: t('grupo') + ' ' + wG + ' 1°', b: third, bLabel: candidateLabel });
+  });
+
+  function sideHtml(team, label) {
+    if (team) {
+      return '<span class="r32-team team-clickable" onclick="event.stopPropagation(); openCountryInfo(\'' + team.replace(/'/g, "\\'") + '\')">' + flag(team) + ' ' + esName(team) + '</span>';
+    }
+    return '<span class="r32-pending">' + label + '</span>';
+  }
+
+  let html = '<div class="bracket-stage-label" style="font-size:11px; margin:14px 0 8px;">' + t('dieciseisavosTitle') + '</div>';
+  html += '<div class="r32-grid">';
+  matches.forEach(m => {
+    html += '<div class="r32-card">' + sideHtml(m.a, m.aLabel) + '<span class="r32-vs">vs</span>' + sideHtml(m.b, m.bLabel) + '</div>';
+  });
+  html += '</div>';
+  return html;
+}
+
 function buildQualifiersSummary() {
   const allGroups = ['A','B','C','D','E','F','G','H','I','J','K','L'];
   let html = '<div class="qualifiers-summary">';
@@ -2187,6 +2343,8 @@ function renderBracket() {
   mobileHtml += '</div>';
 
   html += '<div class="bracket-note">' + t('bracketNote') + '</div>';
+  html += buildThirdPlaceTable();
+  html += buildRoundOf32();
   html += buildQualifiersSummary();
 
   let groupsHtml = '<div class="bracket-layout">';
