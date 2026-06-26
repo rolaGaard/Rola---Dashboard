@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-26T19:17:45.118411Z",
+  "updated": "2026-06-26T19:20:23.073165Z",
   "matches": {
     "SENEGAL-IRAQ": {
       "homeGoals": 1,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 16,
+      "elapsed": 18,
       "kickoffUTC": "2026-06-26T19:00:00+00:00",
       "referee": "Anthony Taylor, England",
       "events": [
@@ -26,6 +26,15 @@
           "extra": null
         }
       ],
+      "substitutions": {
+        "IRAQ": [
+          {
+            "out": "A. Qasem",
+            "in": "M. Younis",
+            "minute": 16
+          }
+        ]
+      },
       "lineups": {
         "SENEGAL": {
           "formation": "4-2-3-1",
@@ -304,7 +313,7 @@
       "homeGoals": 0,
       "awayGoals": 1,
       "status": "1H",
-      "elapsed": 16,
+      "elapsed": 19,
       "kickoffUTC": "2026-06-26T19:00:00+00:00",
       "referee": "Michael Oliver, England",
       "events": [
