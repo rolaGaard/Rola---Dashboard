@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-26T19:10:24.847889Z",
+  "updated": "2026-06-26T19:17:45.118411Z",
   "matches": {
     "SENEGAL-IRAQ": {
       "homeGoals": 1,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 8,
+      "elapsed": 16,
       "kickoffUTC": "2026-06-26T19:00:00+00:00",
       "referee": "Anthony Taylor, England",
       "events": [
@@ -15,6 +15,14 @@
           "player": "H. Diarra",
           "team": "SENEGAL",
           "minute": 4,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Red Card",
+          "player": "R. Sulaka",
+          "team": "IRAQ",
+          "minute": 13,
           "extra": null
         }
       ],
@@ -296,7 +304,7 @@
       "homeGoals": 0,
       "awayGoals": 1,
       "status": "1H",
-      "elapsed": 9,
+      "elapsed": 16,
       "kickoffUTC": "2026-06-26T19:00:00+00:00",
       "referee": "Michael Oliver, England",
       "events": [
@@ -306,6 +314,14 @@
           "player": "O. Dembele",
           "team": "FRANCE",
           "minute": 7,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "P. Berg",
+          "team": "NORWAY",
+          "minute": 10,
           "extra": null
         }
       ],
