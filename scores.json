@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-26T20:50:21.262625Z",
+  "updated": "2026-06-26T20:57:11.120060Z",
   "matches": {
     "SENEGAL-IRAQ": {
       "homeGoals": 5,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 83,
+      "elapsed": 89,
       "kickoffUTC": "2026-06-26T19:00:00+00:00",
       "referee": "Anthony Taylor, England",
       "events": [
@@ -416,7 +416,7 @@
       "homeGoals": 1,
       "awayGoals": 3,
       "status": "2H",
-      "elapsed": 86,
+      "elapsed": 90,
       "kickoffUTC": "2026-06-26T19:00:00+00:00",
       "referee": "Michael Oliver, England",
       "events": [
@@ -496,12 +496,12 @@
           },
           {
             "out": "A. Schjelderup",
-            "in": "J. Hauge",
+            "in": "A. Nusa",
             "minute": 83
           },
           {
             "out": "O. Bobb",
-            "in": "A. Nusa",
+            "in": "J. Hauge",
             "minute": 83
           }
         ],
@@ -520,6 +520,16 @@
             "out": "D. Upamecano",
             "in": "I. Konate",
             "minute": 76
+          },
+          {
+            "out": "J. Kounde",
+            "in": "M. Gusto",
+            "minute": 87
+          },
+          {
+            "out": "K. Mbappe",
+            "in": "J. Mateta",
+            "minute": 87
           }
         ]
       },
