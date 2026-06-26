@@ -43,7 +43,7 @@
   .clock-label { color:#94a3b8; font-size:11px; text-align:right; }
   .clock-value { color:#FFD700; font-size:26px; font-weight:700; font-variant-numeric:tabular-nums; text-align:right; }
   .stats-bar {
-    display:grid; grid-template-columns:repeat(7,1fr); gap:10px; padding:20px 24px 0;
+    display:grid; grid-template-columns:repeat(8,1fr); gap:10px; padding:20px 24px 0;
   }
   .stat-card {
     background:#fff; border-radius:12px; padding:14px 10px; text-align:center;
@@ -389,6 +389,10 @@
   .thirds-row.qualifies { background:rgba(29,185,84,0.06); }
   .thirds-row.qualifies .thirds-rank { color:#1DB954; }
   .thirds-row.eliminated { opacity:0.55; }
+  .stats-team-tag { color:#64748b; font-size:10px; font-weight:600; }
+  .badge { padding:2px 7px; border-radius:4px; font-size:10px; font-weight:700; white-space:nowrap; }
+  .badge-warn { background:rgba(224,38,59,0.12); color:#E0263B; }
+  .stats-view { padding:0 24px 30px; }
 
   .r32-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-bottom:6px; }
   .r32-card {
@@ -864,6 +868,7 @@
   <button class="stat-card" data-filter="scheduled"><div class="stat-icon">🕐</div><div class="stat-num" id="stat-scheduled">0</div><div class="stat-label" id="label-scheduled">Próximos</div></button>
   <button class="stat-card" data-filter="fixture"><div class="stat-icon fixture-icon">🏆</div><div class="stat-label" id="label-fixture">Fixture</div></button>
   <button class="stat-card" data-filter="paises"><div class="stat-icon exit-sign-wrap"><span class="exit-sign">EXIT</span></div><div class="stat-num" style="visibility:hidden;">0</div><div class="stat-label" id="label-paises">Países Fuera</div></button>
+  <button class="stat-card" data-filter="stats"><div class="stat-icon">📊</div><div class="stat-num" style="visibility:hidden;">0</div><div class="stat-label" id="label-stats">Estadísticas</div></button>
 </div>
 
 <div class="matches-container" id="matches"></div>
@@ -871,6 +876,8 @@
 <div class="bracket-view" id="bracket-view" style="display:none;"></div>
 
 <div class="countries-view" id="countries-view" style="display:none;"></div>
+
+<div class="stats-view" id="stats-view" style="display:none;"></div>
 
 <div class="footer" id="footer">Última actualización: --:--</div>
 
@@ -891,7 +898,9 @@ const I18N = {
     searchPlaceholder: 'Buscar país o código FIFA (ej: Argentina, ARG...)',
     horaLocal: 'Hora Local',
     filterAll: 'Todos', filterFinished: 'Jugados', filterToday: 'Hoy',
-    filterLive: 'En vivo', filterScheduled: 'Próximos', filterFixture: 'Fixture', filterPaises: 'Países Fuera',
+    filterLive: 'En vivo', filterScheduled: 'Próximos', filterFixture: 'Fixture', filterPaises: 'Países Fuera', filterStats: 'Estadísticas',
+    goleadoresTitle: 'Goleadores', tarjetasTitle: 'Tarjetas', sinDatosAun: 'Todavía no hay datos cargados.', estado: 'Estado', suspendido: 'Suspendido próximo partido',
+    tarjetasRuleExplainer: 'En este Mundial, acumular 2 amarillas en partidos distintos (desde el debut hasta cuartos de final) suspende al jugador para el partido siguiente. Las amarillas se limpian al llegar a semifinales. Una roja (directa o por doble amarilla) también suspende el próximo partido.',
     grupo: 'GRUPO',
     finalizado: 'FINALIZADO', enVivo: 'EN VIVO', primerTiempo: '1ER TIEMPO',
     segundoTiempo: '2DO TIEMPO', entretiempo: 'ENTRETIEMPO', tiempoExtra: 'TIEMPO EXTRA',
@@ -940,7 +949,9 @@ const I18N = {
     searchPlaceholder: 'Search country or FIFA code (e.g. Argentina, ARG...)',
     horaLocal: 'Local Time',
     filterAll: 'All', filterFinished: 'Finished', filterToday: 'Today',
-    filterLive: 'Live', filterScheduled: 'Upcoming', filterFixture: 'Fixture', filterPaises: 'Countries Out',
+    filterLive: 'Live', filterScheduled: 'Upcoming', filterFixture: 'Fixture', filterPaises: 'Countries Out', filterStats: 'Stats',
+    goleadoresTitle: 'Top Scorers', tarjetasTitle: 'Cards', sinDatosAun: 'No data loaded yet.', estado: 'Status', suspendido: 'Suspended next match',
+    tarjetasRuleExplainer: 'At this World Cup, picking up 2 yellow cards in different matches (from debut through the quarterfinals) suspends the player for the next match. Yellow cards reset once a team reaches the semifinals. A red card (direct or via a second yellow) also suspends the next match.',
     grupo: 'GROUP',
     finalizado: 'FINISHED', enVivo: 'LIVE', primerTiempo: '1ST HALF',
     segundoTiempo: '2ND HALF', entretiempo: 'HALFTIME', tiempoExtra: 'EXTRA TIME',
@@ -989,7 +1000,9 @@ const I18N = {
     searchPlaceholder: 'Buscar país ou código FIFA (ex: Argentina, ARG...)',
     horaLocal: 'Horário Local',
     filterAll: 'Todos', filterFinished: 'Encerrados', filterToday: 'Hoje',
-    filterLive: 'Em jogo', filterScheduled: 'Próximos', filterFixture: 'Tabela', filterPaises: 'Fora da Copa',
+    filterLive: 'Em jogo', filterScheduled: 'Próximos', filterFixture: 'Tabela', filterPaises: 'Fora da Copa', filterStats: 'Estatísticas',
+    goleadoresTitle: 'Artilheiros', tarjetasTitle: 'Cartões', sinDatosAun: 'Ainda não há dados carregados.', estado: 'Status', suspendido: 'Suspenso na próxima partida',
+    tarjetasRuleExplainer: 'Nesta Copa, acumular 2 cartões amarelos em partidas diferentes (desde o início até as quartas de final) suspende o jogador na partida seguinte. Os amarelos são zerados ao chegar às semifinais. Um cartão vermelho (direto ou por dois amarelos) também suspende a próxima partida.',
     grupo: 'GRUPO',
     finalizado: 'ENCERRADO', enVivo: 'EM JOGO', primerTiempo: '1º TEMPO',
     segundoTiempo: '2º TEMPO', entretiempo: 'INTERVALO', tiempoExtra: 'PRORROGAÇÃO',
@@ -1038,7 +1051,9 @@ const I18N = {
     searchPlaceholder: 'Land oder FIFA-Code suchen (z.B. Argentinien, ARG...)',
     horaLocal: 'Ortszeit',
     filterAll: 'Alle', filterFinished: 'Beendet', filterToday: 'Heute',
-    filterLive: 'Live', filterScheduled: 'Kommend', filterFixture: 'Turnierplan', filterPaises: 'Ausgeschiedene',
+    filterLive: 'Live', filterScheduled: 'Kommend', filterFixture: 'Turnierplan', filterPaises: 'Ausgeschiedene', filterStats: 'Statistiken',
+    goleadoresTitle: 'Torschützen', tarjetasTitle: 'Karten', sinDatosAun: 'Noch keine Daten vorhanden.', estado: 'Status', suspendido: 'Nächstes Spiel gesperrt',
+    tarjetasRuleExplainer: 'Bei diesem Turnier führt das Sammeln von 2 gelben Karten in verschiedenen Spielen (vom Debüt bis zum Viertelfinale) zur Sperre für das nächste Spiel. Die gelben Karten werden beim Erreichen des Halbfinales zurückgesetzt. Eine rote Karte (direkt oder durch zwei Gelbe) sperrt ebenfalls für das nächste Spiel.',
     grupo: 'GRUPPE',
     finalizado: 'BEENDET', enVivo: 'LIVE', primerTiempo: '1. HALBZEIT',
     segundoTiempo: '2. HALBZEIT', entretiempo: 'HALBZEITPAUSE', tiempoExtra: 'VERLÄNGERUNG',
@@ -1087,7 +1102,9 @@ const I18N = {
     searchPlaceholder: 'Zoek land of FIFA-code (bijv. Argentinië, ARG...)',
     horaLocal: 'Lokale tijd',
     filterAll: 'Alle', filterFinished: 'Gespeeld', filterToday: 'Vandaag',
-    filterLive: 'Live', filterScheduled: 'Aankomend', filterFixture: 'Schema', filterPaises: 'Niet Gekwalificeerd',
+    filterLive: 'Live', filterScheduled: 'Aankomend', filterFixture: 'Schema', filterPaises: 'Niet Gekwalificeerd', filterStats: 'Statistieken',
+    goleadoresTitle: 'Topscorers', tarjetasTitle: 'Kaarten', sinDatosAun: 'Nog geen gegevens beschikbaar.', estado: 'Status', suspendido: 'Geschorst volgende wedstrijd',
+    tarjetasRuleExplainer: 'Bij dit WK leidt het verzamelen van 2 gele kaarten in verschillende wedstrijden (vanaf het debuut tot de kwartfinale) tot een schorsing voor de volgende wedstrijd. Gele kaarten worden gewist bij het bereiken van de halve finale. Een rode kaart (direct of via een tweede gele) schorst ook voor de volgende wedstrijd.',
     grupo: 'GROEP',
     finalizado: 'AFGELOPEN', enVivo: 'LIVE', primerTiempo: '1E HELFT',
     segundoTiempo: '2E HELFT', entretiempo: 'RUST', tiempoExtra: 'VERLENGING',
@@ -1965,6 +1982,18 @@ function buildGroupGroupedHtml(sortedMatches) {
 function render() {
   const todayAR = toARDateStr(new Date().toISOString());
 
+  if (currentFilter === 'stats') {
+    document.querySelector('.search-wrap').style.display = 'none';
+    document.getElementById('matches').style.display = 'none';
+    document.getElementById('bracket-view').style.display = 'none';
+    document.getElementById('countries-view').style.display = 'none';
+    document.getElementById('stats-view').style.display = '';
+    renderStatsView();
+    updateCounters();
+    return;
+  }
+  document.getElementById('stats-view').style.display = 'none';
+
   if (currentFilter === 'paises') {
     document.querySelector('.search-wrap').style.display = 'none';
     document.getElementById('matches').style.display = 'none';
@@ -2613,6 +2642,136 @@ function isTeamEliminated(code) {
   return false; // 1° o 2° puesto
 }
 
+// ── Estadísticas del torneo: goleadores y tarjetas ──────────────────────
+// Juntamos los eventos de TODOS los partidos que ya tengan datos reales —
+// fase de grupos siempre, y de la eliminatoria los cupos que ya estén
+// resueltos (mismo scores.json, sin pedir nada nuevo a la API).
+function collectTournamentEvents() {
+  const all = [];
+  SCHEDULE.forEach(m => {
+    const live = getLiveData(m);
+    if (live && live.events) {
+      live.events.forEach(e => all.push({ ...e, round: 0 }));
+    }
+  });
+  const knockoutRounds = [
+    { cal: R32_CALENDAR, round: 1 },
+    { cal: R16_CALENDAR, round: 2 },
+    { cal: QF_CALENDAR, round: 3 },
+    { cal: SF_CALENDAR, round: 4 },
+    { cal: THIRD_PLACE_CALENDAR, round: 5 },
+    { cal: FINAL_CALENDAR, round: 5 },
+  ];
+  knockoutRounds.forEach(({ cal, round }) => {
+    cal.forEach(m => {
+      const teamA = resolveBracketSlot(m.a);
+      const teamB = resolveBracketSlot(m.b);
+      if (!teamA || !teamB) return;
+      const live = getLiveData({ home: teamA, away: teamB, kickoffUTC: m.kickoffUTC });
+      if (live && live.events) {
+        live.events.forEach(e => all.push({ ...e, round, matchId: m.match }));
+      }
+    });
+  });
+  return all;
+}
+
+// Ranking de goleadores — los autogoles no cuentan para el jugador.
+function buildScorersRanking(allEvents) {
+  const tally = {};
+  allEvents.forEach(e => {
+    if (e.type !== 'Goal' || !e.player || e.detail === 'Own Goal') return;
+    const key = e.player + '|' + e.team;
+    if (!tally[key]) tally[key] = { player: e.player, team: e.team, goals: 0 };
+    tally[key].goals++;
+  });
+  return Object.values(tally).sort((a, b) => b.goals - a.goals);
+}
+
+// Tarjetas + lógica de suspensión por amarillas acumuladas, según la regla
+// real de FIFA para este Mundial: 2 amarillas en partidos distintos entre
+// el debut y cuartos de final = suspensión para el próximo partido. Las
+// amarillas se "limpian" al llegar a semifinales (ronda 4 en adelante).
+function buildCardsData(allEvents) {
+  const players = {};
+  function getOrCreate(name, team) {
+    const key = name + '|' + team;
+    if (!players[key]) {
+      players[key] = { player: name, team, yellowMatches: [], redCount: 0 };
+    }
+    return players[key];
+  }
+  allEvents.forEach(e => {
+    if (e.type !== 'Card' || !e.player) return;
+    const p = getOrCreate(e.player, e.team);
+    const matchTag = (e.matchId !== undefined ? 'k' + e.matchId : matchKey(e.team, '')) + '_r' + e.round;
+    if ((e.detail || '').toLowerCase().includes('red')) {
+      p.redCount++;
+    } else {
+      p.yellowMatches.push({ matchTag, round: e.round });
+    }
+  });
+
+  return Object.values(players).map(p => {
+    // Contamos amarillas distintas por partido (si por algún motivo hubiera
+    // 2 eventos de amarilla en el mismo partido, cuentan como 1 acumulada,
+    // ya que la 2da amarilla en el mismo partido se resuelve como roja aparte).
+    const uniqueByMatch = [...new Map(p.yellowMatches.map(y => [y.matchTag, y])).values()];
+    const preSemis = uniqueByMatch.filter(y => y.round < 4).length;
+    const semisOnward = uniqueByMatch.filter(y => y.round >= 4).length;
+    const suspended = p.redCount > 0 || preSemis >= 2 || semisOnward >= 2;
+    return {
+      player: p.player, team: p.team,
+      yellowTotal: uniqueByMatch.length,
+      redCount: p.redCount,
+      suspended,
+    };
+  }).filter(p => p.yellowTotal > 0 || p.redCount > 0)
+    .sort((a, b) => (b.redCount - a.redCount) || (b.yellowTotal - a.yellowTotal));
+}
+
+function renderStatsView() {
+  const allEvents = collectTournamentEvents();
+  const scorers = buildScorersRanking(allEvents);
+  const cards = buildCardsData(allEvents);
+
+  let html = '<div class="bracket-stage-label" style="font-size:11px; margin-bottom:8px;">\u26BD ' + t('goleadoresTitle') + '</div>';
+  if (scorers.length === 0) {
+    html += '<div class="ci-pitch-empty">' + t('sinDatosAun') + '</div>';
+  } else {
+    html += '<table class="thirds-table"><tr><th>#</th><th></th><th>' + t('goles') + '</th></tr>';
+    scorers.forEach((s, idx) => {
+      html += '<tr class="thirds-row">' +
+        '<td class="thirds-rank">' + (idx + 1) + '</td>' +
+        '<td class="thirds-team">' + '<a href="' + googleSearchLink(s.player, s.team) + '" target="_blank" rel="noopener" class="player-link">' + s.player + '</a>' +
+          ' <span class="stats-team-tag">' + flag(s.team) + ' ' + esName(s.team) + '</span></td>' +
+        '<td><b>' + s.goals + '</b></td>' +
+      '</tr>';
+    });
+    html += '</table>';
+  }
+
+  html += '<div class="bracket-stage-label" style="font-size:11px; margin:18px 0 8px;">\u{1F7E8}\u{1F7E5} ' + t('tarjetasTitle') + '</div>';
+  html += '<div class="thirds-disclaimer">' + t('tarjetasRuleExplainer') + '</div>';
+  if (cards.length === 0) {
+    html += '<div class="ci-pitch-empty">' + t('sinDatosAun') + '</div>';
+  } else {
+    html += '<table class="thirds-table"><tr><th></th><th>\u{1F7E8}</th><th>\u{1F7E5}</th><th>' + t('estado') + '</th></tr>';
+    cards.forEach(c => {
+      html += '<tr class="thirds-row' + (c.suspended ? ' eliminated' : '') + '">' +
+        '<td class="thirds-team">' + '<a href="' + googleSearchLink(c.player, c.team) + '" target="_blank" rel="noopener" class="player-link">' + c.player + '</a>' +
+          ' <span class="stats-team-tag">' + flag(c.team) + ' ' + esName(c.team) + '</span></td>' +
+        '<td>' + (c.yellowTotal || '') + '</td>' +
+        '<td>' + (c.redCount || '') + '</td>' +
+        '<td>' + (c.suspended ? '<span class="badge badge-warn">' + t('suspendido') + '</span>' : '') + '</td>' +
+      '</tr>';
+    });
+    html += '</table>';
+  }
+
+  document.getElementById('stats-view').innerHTML = html;
+}
+
 function renderCountriesList() {
   const allTeams = Object.keys(INTL_NAMES)
     .map(code => ({ code, name: esName(code) }))
@@ -2742,6 +2901,7 @@ function applyTranslations() {
   document.getElementById('label-scheduled').textContent = t('filterScheduled');
   document.getElementById('label-fixture').textContent = t('filterFixture');
   document.getElementById('label-paises').textContent = t('filterPaises');
+  document.getElementById('label-stats').textContent = t('filterStats');
   document.getElementById('report-bug-link').textContent = t('reportarProblema');
   document.getElementById('scroll-top-btn').setAttribute('aria-label', t('volverArriba'));
   document.getElementById('install-confirm-text').textContent = t('instalarAppConfirm');
