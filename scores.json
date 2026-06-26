@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-26T19:20:23.073165Z",
+  "updated": "2026-06-26T19:30:41.569481Z",
   "matches": {
     "SENEGAL-IRAQ": {
       "homeGoals": 1,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 18,
+      "elapsed": 29,
       "kickoffUTC": "2026-06-26T19:00:00+00:00",
       "referee": "Anthony Taylor, England",
       "events": [
@@ -23,6 +23,14 @@
           "player": "R. Sulaka",
           "team": "IRAQ",
           "minute": 13,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Seck",
+          "team": "SENEGAL",
+          "minute": 18,
           "extra": null
         }
       ],
@@ -310,10 +318,10 @@
       }
     },
     "NORWAY-FRANCE": {
-      "homeGoals": 0,
-      "awayGoals": 1,
+      "homeGoals": 1,
+      "awayGoals": 2,
       "status": "1H",
-      "elapsed": 19,
+      "elapsed": 29,
       "kickoffUTC": "2026-06-26T19:00:00+00:00",
       "referee": "Michael Oliver, England",
       "events": [
@@ -331,6 +339,22 @@
           "player": "P. Berg",
           "team": "NORWAY",
           "minute": 10,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "O. Dembele",
+          "team": "FRANCE",
+          "minute": 20,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "T. Aasgaard",
+          "team": "NORWAY",
+          "minute": 21,
           "extra": null
         }
       ],
