@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T03:30:39.394744Z",
+  "updated": "2026-06-26T03:40:22.284231Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -22275,7 +22275,7 @@
       "homeGoals": 2,
       "awayGoals": 2,
       "status": "2H",
-      "elapsed": 68,
+      "elapsed": 78,
       "kickoffUTC": "2026-06-26T02:00:00+00:00",
       "referee": "M. Ghorbal",
       "events": [
@@ -22326,6 +22326,21 @@
             "out": "Timothy Weah",
             "in": "Christian Pulisic",
             "minute": 58
+          },
+          {
+            "out": "Giovanni Reyna",
+            "in": "Sergi\u00f1o Dest",
+            "minute": 76
+          },
+          {
+            "out": "Brenden Aaronson",
+            "in": "\u00c1lex Zendejas",
+            "minute": 77
+          },
+          {
+            "out": "Joe Scally",
+            "in": "Alex Freeman",
+            "minute": 77
           }
         ]
       },
@@ -22607,7 +22622,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 67,
+      "elapsed": 78,
       "kickoffUTC": "2026-06-26T02:00:00+00:00",
       "referee": "C. Turpin",
       "events": [
@@ -22628,7 +22643,7 @@
             "minute": 45
           },
           {
-            "out": "Julio Enciso",
+            "out": "Gabriel \u00c1valos",
             "in": "Alex Arce",
             "minute": 67
           }
