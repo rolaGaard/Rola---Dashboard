@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T04:50:21.428396Z",
+  "updated": "2026-06-26T05:00:50.157278Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -22892,6 +22892,14 @@
       "status": "NS",
       "elapsed": null,
       "kickoffUTC": "2026-06-30T01:00:00+00:00",
+      "referee": null
+    },
+    "USA-BOSNIA & HERZEGOVINA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null,
+      "kickoffUTC": "2026-07-02T00:00:00+00:00",
       "referee": null
     }
   }
