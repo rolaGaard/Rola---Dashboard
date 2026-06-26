@@ -1,10 +1,10 @@
 {
-  "updated": "2026-06-26T19:50:23.444127Z",
+  "updated": "2026-06-26T20:00:51.835742Z",
   "matches": {
     "SENEGAL-IRAQ": {
       "homeGoals": 1,
       "awayGoals": 0,
-      "status": "1H",
+      "status": "HT",
       "elapsed": 45,
       "kickoffUTC": "2026-06-26T19:00:00+00:00",
       "referee": "Anthony Taylor, England",
@@ -320,7 +320,7 @@
     "NORWAY-FRANCE": {
       "homeGoals": 1,
       "awayGoals": 3,
-      "status": "1H",
+      "status": "HT",
       "elapsed": 45,
       "kickoffUTC": "2026-06-26T19:00:00+00:00",
       "referee": "Michael Oliver, England",
