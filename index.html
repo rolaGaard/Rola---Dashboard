@@ -1608,7 +1608,7 @@ function buildMatchCard(m) {
   return (
     '<div class="' + cardClass + '"' + clickAttr + '>' +
       '<div class="match-row">' +
-        '<div class="team team-clickable" title="' + esName(m.home) + '" onclick="event.stopPropagation(); openCountryInfo(\'' + m.home.replace(/'/g, "\\'") + '\')">' +
+        '<div class="team team-clickable" title="' + esName(m.home) + '" onclick="event.stopPropagation(); openCountryInfo(\'' + m.home.replace(/'/g, "\\'") + '\', \'' + key.replace(/'/g, "\\'") + '\')">' +
           '<span class="team-flag">' + flag(m.home) + '</span>' +
           '<span class="' + homeNameClass + '">' + esName(m.home) + '</span>' +
           '<span class="team-code">' + countryCode(m.home) + '</span>' +
@@ -1617,7 +1617,7 @@ function buildMatchCard(m) {
         '<div class="score-center">' +
           '<div class="' + scoreClass + '">' + scoreText + '</div>' +
         '</div>' +
-        '<div class="team team-clickable" title="' + esName(m.away) + '" onclick="event.stopPropagation(); openCountryInfo(\'' + m.away.replace(/'/g, "\\'") + '\')">' +
+        '<div class="team team-clickable" title="' + esName(m.away) + '" onclick="event.stopPropagation(); openCountryInfo(\'' + m.away.replace(/'/g, "\\'") + '\', \'' + key.replace(/'/g, "\\'") + '\')">' +
           '<span class="team-flag">' + flag(m.away) + '</span>' +
           '<span class="' + awayNameClass + '">' + esName(m.away) + '</span>' +
           '<span class="team-code">' + countryCode(m.away) + '</span>' +
@@ -1856,7 +1856,7 @@ function render() {
 
     if (sortedAll.length === 0) {
       html = '<div class="empty-state">' + t('noHayPartidos') + '</div>';
-    } else if (currentFilter === 'scheduled') {
+    } else if (currentFilter === 'scheduled' || currentFilter === 'finished') {
       html += buildDateGroupedHtml(sortedAll);
     } else if (currentFilter === 'all') {
       html += buildGroupGroupedHtml(sortedAll);
@@ -2406,9 +2406,17 @@ function buildSquadHtml(code) {
 // alineación: preferimos uno en vivo o recién finalizado: si no hay,
 // el próximo programado (aunque la alineación ahí puede no estar
 // disponible todavía — la API la publica ~1h antes del partido).
-function findRelevantLineupMatch(code) {
+function findRelevantLineupMatch(code, forcedMatchKey) {
   const teamMatches = SCHEDULE.filter(m => m.home === code || m.away === code);
   if (teamMatches.length === 0) return null;
+
+  // Si nos llaman desde una tarjeta de partido puntual, mostramos ESE
+  // partido exacto — no "el más relevante en general" (que podía traer
+  // otro partido distinto del que el usuario estaba mirando).
+  if (forcedMatchKey) {
+    const forced = teamMatches.find(m => matchKey(m.home, m.away) === forcedMatchKey);
+    if (forced) return forced;
+  }
 
   const withLineups = teamMatches.filter(m => {
     const live = getLiveData(m);
@@ -2427,8 +2435,8 @@ function findRelevantLineupMatch(code) {
 
 // Calcula una sola vez los datos cruzados (titulares, cambios, banco) para
 // no repetir la misma lógica en las dos columnas del modal.
-function getLineupData(code) {
-  const match = findRelevantLineupMatch(code);
+function getLineupData(code, forcedMatchKey) {
+  const match = findRelevantLineupMatch(code, forcedMatchKey);
   if (!match) return { match: null };
 
   const live = getLiveData(match);
@@ -2674,7 +2682,7 @@ function buildModalBodyHtml(code, lineupData) {
   '</div>';
 }
 
-function openCountryInfo(code) {
+function openCountryInfo(code, forcedMatchKey) {
   const name = esName(code);
   const flagHtml = flag(code);
   const code3 = countryCode(code);
@@ -2685,8 +2693,9 @@ function openCountryInfo(code) {
   // marcador disponible, lo mostramos al lado del nombre — en amarillo el
   // gol del país que estás mirando, en gris el del rival. El orden respeta
   // cómo se ve en la tarjeta real del partido (local izquierda, visitante
-  // derecha), no cuál país abriste.
-  const relevantMatch = findRelevantLineupMatch(code);
+  // derecha), no cuál país abriste. Si nos llamaron desde una tarjeta
+  // puntual, mostramos ESE partido — no "el más relevante en general".
+  const relevantMatch = findRelevantLineupMatch(code, forcedMatchKey);
   let scoreHtml = '';
   let refereeHtml = '';
   if (relevantMatch) {
@@ -2734,7 +2743,7 @@ function openCountryInfo(code) {
     html += '<div class="ci-disclaimer">' + t('datosNoDisponibles') + '</div>';
   }
 
-  const lineupData = getLineupData(code);
+  const lineupData = getLineupData(code, forcedMatchKey);
   currentCountryModalState = { code, lineupData };
   html += buildModalBodyHtml(code, lineupData);
 
