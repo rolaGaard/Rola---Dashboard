@@ -2453,20 +2453,20 @@ function getLineupData(code, forcedMatchKey) {
   // (vienen del mismo endpoint de eventos que ya usamos para goles/tarjetas)
   // para saber quién sigue en cancha y quién ya entró desde el banco.
   const subs = (live && live.substitutions && live.substitutions[code]) || [];
-  const subbedOutNames = new Set(subs.map(s => s.out).filter(Boolean));
-  const subbedInMinuteByName = {};
-  subs.forEach(s => { if (s.in) subbedInMinuteByName[s.in] = s.minute; });
 
   const onPitch = lineup.startXI
-    .filter(p => !subbedOutNames.has(p.name))
+    .filter(p => !subs.some(s => sameNamePerson(s.out, p.name)))
     .map(p => ({ ...p, inMinute: null }));
 
   const enteredFromBench = (lineup.substitutes || [])
-    .filter(p => subbedInMinuteByName[p.name] !== undefined)
-    .map(p => ({ ...p, inMinute: subbedInMinuteByName[p.name] }));
+    .map(p => {
+      const sub = subs.find(s => sameNamePerson(s.in, p.name));
+      return sub ? { ...p, inMinute: sub.minute } : null;
+    })
+    .filter(Boolean);
 
   const stillOnBench = (lineup.substitutes || [])
-    .filter(p => subbedInMinuteByName[p.name] === undefined);
+    .filter(p => !subs.some(s => sameNamePerson(s.in, p.name)));
 
   const onPitchSorted = onPitch.concat(enteredFromBench).sort((a, b) => {
     const na = (a.number === null || a.number === undefined) ? 999 : a.number;
@@ -2479,11 +2479,8 @@ function getLineupData(code, forcedMatchKey) {
   let rivalOnPitch = null;
   if (rivalLineup && rivalLineup.startXI && rivalLineup.startXI.length > 0) {
     const rivalSubs = (live && live.substitutions && live.substitutions[rivalCode]) || [];
-    const rivalSubbedOut = new Set(rivalSubs.map(s => s.out).filter(Boolean));
-    const rivalSubbedInMin = {};
-    rivalSubs.forEach(s => { if (s.in) rivalSubbedInMin[s.in] = s.minute; });
-    const rOnPitch = rivalLineup.startXI.filter(p => !rivalSubbedOut.has(p.name));
-    const rEntered = (rivalLineup.substitutes || []).filter(p => rivalSubbedInMin[p.name] !== undefined);
+    const rOnPitch = rivalLineup.startXI.filter(p => !rivalSubs.some(s => sameNamePerson(s.out, p.name)));
+    const rEntered = (rivalLineup.substitutes || []).filter(p => rivalSubs.some(s => sameNamePerson(s.in, p.name)));
     rivalOnPitch = rOnPitch.concat(rEntered);
   }
 
@@ -2525,8 +2522,18 @@ function formationPositions(players, side) {
 
 // Busca si un jugador tiene tarjeta (amarilla o roja) entre los eventos
 // del partido — viene del mismo endpoint que ya usamos para goles/cambios.
+// Compara nombres por el conjunto de palabras, sin importar el orden —
+// la API a veces devuelve "Apellido Nombre" en /events y "Nombre Apellido"
+// en /lineups (pasa seguido con nombres coreanos, por ejemplo), así que una
+// comparación de texto exacta fallaba y no encontraba la tarjeta.
+function sameNamePerson(a, b) {
+  if (!a || !b) return false;
+  const norm = s => s.toLowerCase().split(/\s+/).filter(Boolean).sort().join(' ');
+  return norm(a) === norm(b);
+}
+
 function cardForPlayer(events, name) {
-  const cards = (events || []).filter(e => e.type === 'Card' && e.player === name);
+  const cards = (events || []).filter(e => e.type === 'Card' && sameNamePerson(e.player, name));
   if (cards.length === 0) return null;
   if (cards.some(e => (e.detail || '').toLowerCase().includes('red'))) return 'red';
   return 'yellow';
