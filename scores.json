@@ -1,14 +1,23 @@
 {
-  "updated": "2026-06-26T02:00:51.688870Z",
+  "updated": "2026-06-26T02:10:21.841175Z",
   "matches": {
     "TURKIYE-USA": {
       "homeGoals": 0,
-      "awayGoals": 0,
+      "awayGoals": 1,
       "status": "1H",
-      "elapsed": 1,
+      "elapsed": 10,
       "kickoffUTC": "2026-06-26T02:00:00+00:00",
       "referee": "M. Ghorbal",
-      "events": [],
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Auston Trusty",
+          "team": "USA",
+          "minute": 3,
+          "extra": null
+        }
+      ],
       "lineups": {
         "TURKIYE": {
           "formation": "4-2-3-1",
@@ -287,7 +296,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 1,
+      "elapsed": 10,
       "kickoffUTC": "2026-06-26T02:00:00+00:00",
       "referee": "C. Turpin",
       "events": [],
