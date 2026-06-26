@@ -2106,7 +2106,7 @@ function buildSingleGroupCardHtml(g) {
     const gd = row.gf - row.ga;
     const gdStr = gd > 0 ? '+' + gd : String(gd);
     html += '<div class="standings-row">' +
-      '<span class="st-team team-clickable" title="' + esName(code) + '" onclick="event.stopPropagation(); openCountryInfo(\'' + code.replace(/'/g, "\\'") + '\')"><span class="gflag">' + flag(code) + '</span><span class="gname">' + esName(code) + '</span></span>' +
+      '<span class="st-team" title="' + esName(code) + '"><span class="gflag">' + flag(code) + '</span><span class="gname">' + esName(code) + '</span></span>' +
       '<span>' + row.played + '</span>' +
       '<span>' + row.w + '</span>' +
       '<span>' + row.d + '</span>' +
