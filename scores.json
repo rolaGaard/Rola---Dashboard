@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T00:10:22.487038Z",
+  "updated": "2026-06-26T00:20:24.503653Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -21543,10 +21543,10 @@
       "referee": null
     },
     "JAPAN-SWEDEN": {
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 50,
+      "elapsed": 60,
       "kickoffUTC": "2026-06-25T23:00:00+00:00",
       "referee": "I. Barton",
       "events": [
@@ -21556,6 +21556,14 @@
           "player": "Isak Hien",
           "team": "SWEDEN",
           "minute": 32,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Daizen Maeda",
+          "team": "JAPAN",
+          "minute": 56,
           "extra": null
         }
       ],
@@ -21850,10 +21858,10 @@
       }
     },
     "TUNISIA-NETHERLANDS": {
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 2,
       "status": "2H",
-      "elapsed": 51,
+      "elapsed": 61,
       "kickoffUTC": "2026-06-25T23:00:00+00:00",
       "referee": "K. I. Garcia Mendoza",
       "events": [
@@ -21871,6 +21879,14 @@
           "player": "Brian Brobbey",
           "team": "NETHERLANDS",
           "minute": 7,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Hazem Mastouri",
+          "team": "TUNISIA",
+          "minute": 54,
           "extra": null
         }
       ],
