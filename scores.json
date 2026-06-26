@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-26T20:30:39.209735Z",
+  "updated": "2026-06-26T20:40:23.847874Z",
   "matches": {
     "SENEGAL-IRAQ": {
-      "homeGoals": 3,
+      "homeGoals": 4,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 63,
+      "elapsed": 72,
       "kickoffUTC": "2026-06-26T19:00:00+00:00",
       "referee": "Anthony Taylor, England",
       "events": [
@@ -48,6 +48,14 @@
           "team": "SENEGAL",
           "minute": 59,
           "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "P. Gueye",
+          "team": "SENEGAL",
+          "minute": 71,
+          "extra": null
         }
       ],
       "substitutions": {
@@ -71,6 +79,11 @@
             "out": "A. Al Hamadi",
             "in": "A. Yousif",
             "minute": 58
+          },
+          {
+            "out": "Z. Iqbal",
+            "in": "K. Yakob",
+            "minute": 67
           }
         ],
         "SENEGAL": [
@@ -374,7 +387,7 @@
       "homeGoals": 1,
       "awayGoals": 3,
       "status": "2H",
-      "elapsed": 67,
+      "elapsed": 76,
       "kickoffUTC": "2026-06-26T19:00:00+00:00",
       "referee": "Michael Oliver, England",
       "events": [
@@ -425,6 +438,14 @@
           "team": "NORWAY",
           "minute": 50,
           "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Tchouameni",
+          "team": "FRANCE",
+          "minute": 74,
+          "extra": null
         }
       ],
       "substitutions": {
@@ -438,6 +459,11 @@
             "out": "K. Thorstvedt",
             "in": "M. Thorsby",
             "minute": 46
+          },
+          {
+            "out": "H. Falchener",
+            "in": "S. Langas",
+            "minute": 66
           }
         ],
         "FRANCE": [
@@ -450,6 +476,11 @@
             "out": "O. Dembele",
             "in": "B. Barcola",
             "minute": 65
+          },
+          {
+            "out": "D. Upamecano",
+            "in": "I. Konate",
+            "minute": 76
           }
         ]
       },
