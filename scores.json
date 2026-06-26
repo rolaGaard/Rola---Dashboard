@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T00:20:24.503653Z",
+  "updated": "2026-06-26T00:30:40.543070Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -21544,9 +21544,9 @@
     },
     "JAPAN-SWEDEN": {
       "homeGoals": 1,
-      "awayGoals": 0,
+      "awayGoals": 1,
       "status": "2H",
-      "elapsed": 60,
+      "elapsed": 70,
       "kickoffUTC": "2026-06-25T23:00:00+00:00",
       "referee": "I. Barton",
       "events": [
@@ -21565,6 +21565,14 @@
           "team": "JAPAN",
           "minute": 56,
           "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Anthony Elanga",
+          "team": "SWEDEN",
+          "minute": 62,
+          "extra": null
         }
       ],
       "substitutions": {
@@ -21580,6 +21588,16 @@
             "out": "Ko Itakura",
             "in": "Shogo Taniguchi",
             "minute": 39
+          },
+          {
+            "out": "Ayase Ueda",
+            "in": "Koki Ogawa",
+            "minute": 66
+          },
+          {
+            "out": "Ritsu Doan",
+            "in": "Junya Ito",
+            "minute": 67
           }
         ]
       },
@@ -21859,9 +21877,9 @@
     },
     "TUNISIA-NETHERLANDS": {
       "homeGoals": 1,
-      "awayGoals": 2,
+      "awayGoals": 3,
       "status": "2H",
-      "elapsed": 61,
+      "elapsed": 72,
       "kickoffUTC": "2026-06-25T23:00:00+00:00",
       "referee": "K. I. Garcia Mendoza",
       "events": [
@@ -21888,8 +21906,35 @@
           "team": "TUNISIA",
           "minute": 54,
           "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Jan Paul van Hecke",
+          "team": "NETHERLANDS",
+          "minute": 62,
+          "extra": null
         }
       ],
+      "substitutions": {
+        "TUNISIA": [
+          {
+            "out": "Rani Khedira",
+            "in": "Mohamed Hadj Mahmoud",
+            "minute": 67
+          },
+          {
+            "out": "Anis Ben Slimane",
+            "in": "Elias Achouri",
+            "minute": 68
+          },
+          {
+            "out": "Mohamed Amine Ben Hamida",
+            "in": "Mortadha Ben Ouanes",
+            "minute": 68
+          }
+        ]
+      },
       "lineups": {
         "TUNISIA": {
           "formation": "4-2-3-1",
