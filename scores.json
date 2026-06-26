@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-26T02:30:39.347826Z",
+  "updated": "2026-06-26T02:40:21.678189Z",
   "matches": {
     "TURKIYE-USA": {
-      "homeGoals": 1,
+      "homeGoals": 2,
       "awayGoals": 1,
       "status": "1H",
-      "elapsed": 31,
+      "elapsed": 40,
       "kickoffUTC": "2026-06-26T02:00:00+00:00",
       "referee": "M. Ghorbal",
       "events": [
@@ -31,6 +31,14 @@
           "player": "Sebastian Berhalter",
           "team": "USA",
           "minute": 19,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Orkun K\u00f6k\u00e7\u00fc",
+          "team": "TURKIYE",
+          "minute": 31,
           "extra": null
         }
       ],
@@ -312,7 +320,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 31,
+      "elapsed": 40,
       "kickoffUTC": "2026-06-26T02:00:00+00:00",
       "referee": "C. Turpin",
       "events": [],
