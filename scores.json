@@ -1,425 +1,6 @@
 {
-  "updated": "2026-06-26T21:00:52.321144Z",
+  "updated": "2026-06-26T21:10:22.458738Z",
   "matches": {
-    "SENEGAL-IRAQ": {
-      "homeGoals": 5,
-      "awayGoals": 0,
-      "status": "2H",
-      "elapsed": 90,
-      "kickoffUTC": "2026-06-26T19:00:00+00:00",
-      "referee": "Anthony Taylor, England",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "H. Diarra",
-          "team": "SENEGAL",
-          "minute": 4,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Red Card",
-          "player": "R. Sulaka",
-          "team": "IRAQ",
-          "minute": 13,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "A. Seck",
-          "team": "SENEGAL",
-          "minute": 18,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "I. Sarr",
-          "team": "SENEGAL",
-          "minute": 56,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "P. Gueye",
-          "team": "SENEGAL",
-          "minute": 59,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "P. Gueye",
-          "team": "SENEGAL",
-          "minute": 71,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "A. Al Ammari",
-          "team": "IRAQ",
-          "minute": 75,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "P. Gueye",
-          "team": "SENEGAL",
-          "minute": 81,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "I. Ndiaye",
-          "team": "SENEGAL",
-          "minute": 82,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "M. Doski",
-          "team": "IRAQ",
-          "minute": 90,
-          "extra": null
-        }
-      ],
-      "substitutions": {
-        "IRAQ": [
-          {
-            "out": "A. Qasem",
-            "in": "M. Younis",
-            "minute": 16
-          },
-          {
-            "out": "A. Basil",
-            "in": "J. Hassan",
-            "minute": 46
-          },
-          {
-            "out": "A. Jasim",
-            "in": "A. Al Reeshawee",
-            "minute": 58
-          },
-          {
-            "out": "A. Al Hamadi",
-            "in": "A. Yousif",
-            "minute": 58
-          },
-          {
-            "out": "Z. Iqbal",
-            "in": "K. Yakob",
-            "minute": 67
-          }
-        ],
-        "SENEGAL": [
-          {
-            "out": "H. Diarra",
-            "in": "P. Gueye",
-            "minute": 57
-          },
-          {
-            "out": "I. Mbaye",
-            "in": "I. Ndiaye",
-            "minute": 57
-          },
-          {
-            "out": "L. Camara",
-            "in": "N. Jackson",
-            "minute": 57
-          },
-          {
-            "out": "A. Seck",
-            "in": "P. Ciss",
-            "minute": 58
-          },
-          {
-            "out": "I. Sarr",
-            "in": "A. Diao",
-            "minute": 81
-          }
-        ]
-      },
-      "lineups": {
-        "SENEGAL": {
-          "formation": "4-2-3-1",
-          "coach": "Bouna Thiaw Pape",
-          "startXI": [
-            {
-              "name": "Mory Diaw",
-              "number": 23,
-              "pos": "G"
-            },
-            {
-              "name": "Kr\u00e9pin Diatta",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Abdoulaye Seck",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Moussa Niakhat\u00e9",
-              "number": 19,
-              "pos": "D"
-            },
-            {
-              "name": "Ismail Jakobs",
-              "number": 14,
-              "pos": "D"
-            },
-            {
-              "name": "Idrissa Gana Gueye",
-              "number": 5,
-              "pos": "M"
-            },
-            {
-              "name": "Habib Diarra",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "Ibrahim Mbaye",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Lamine Camara",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Sadio Man\u00e9",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Isma\u00efla Sarr",
-              "number": 18,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Yehvann Diouf",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Mamadou Sarr",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Kalidou Koulibaly",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Antoine Mendy",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "El Hadji Malick Diouf",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "Path\u00e9 Isma\u00ebl Ciss",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Pape Matar Sarr",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Bara Sapoko Ndiaye",
-              "number": 22,
-              "pos": "M"
-            },
-            {
-              "name": "Pape Gueye",
-              "number": 26,
-              "pos": "M"
-            },
-            {
-              "name": "Iliman Ndiaye",
-              "number": 13,
-              "pos": "F"
-            },
-            {
-              "name": "Assane Diao",
-              "number": 7,
-              "pos": "F"
-            },
-            {
-              "name": "Ahmadou Bamba Dieng",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Nicolas Jackson",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "Cherif Ndiaye",
-              "number": 12,
-              "pos": "F"
-            }
-          ]
-        },
-        "IRAQ": {
-          "formation": "4-1-4-1",
-          "coach": "Graham Arnold",
-          "startXI": [
-            {
-              "name": "Ahmed Basil",
-              "number": 22,
-              "pos": "G"
-            },
-            {
-              "name": "Frans Putros",
-              "number": 26,
-              "pos": "D"
-            },
-            {
-              "name": "Akam Hashem",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Rebin Sulaka",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Merchas Doski",
-              "number": 23,
-              "pos": "D"
-            },
-            {
-              "name": "Amir Al-Ammari",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "Ali Jasim",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Ibrahim Bayesh",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Zidane Iqbal",
-              "number": 14,
-              "pos": "M"
-            },
-            {
-              "name": "Ahmed Qasem",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "Ali Al-Hamadi",
-              "number": 9,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Fahad Talib",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Jalal Hassan",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Munaf Younus",
-              "number": 6,
-              "pos": "D"
-            },
-            {
-              "name": "Hussein Ali",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Zaid Tahseen",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Ahmed Hasan Maknazi",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Mustafa Saadoon",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "Youssef Amyn",
-              "number": 7,
-              "pos": "F"
-            },
-            {
-              "name": "Kevin Yakob",
-              "number": 19,
-              "pos": "M"
-            },
-            {
-              "name": "Aimar Sher",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Zaid Ismail",
-              "number": 24,
-              "pos": "M"
-            },
-            {
-              "name": "Marko Farji",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "Mohanad Ali",
-              "number": 10,
-              "pos": "F"
-            },
-            {
-              "name": "Ali Yousif",
-              "number": 13,
-              "pos": "F"
-            },
-            {
-              "name": "Aymen Hussein",
-              "number": 18,
-              "pos": "F"
-            }
-          ]
-        }
-      }
-    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -23193,6 +22774,425 @@
         }
       }
     },
+    "SENEGAL-IRAQ": {
+      "homeGoals": 5,
+      "awayGoals": 0,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-06-26T19:00:00+00:00",
+      "referee": "Anthony Taylor, England",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "H. Diarra",
+          "team": "SENEGAL",
+          "minute": 4,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Red Card",
+          "player": "R. Sulaka",
+          "team": "IRAQ",
+          "minute": 13,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Seck",
+          "team": "SENEGAL",
+          "minute": 18,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "I. Sarr",
+          "team": "SENEGAL",
+          "minute": 56,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "P. Gueye",
+          "team": "SENEGAL",
+          "minute": 59,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "P. Gueye",
+          "team": "SENEGAL",
+          "minute": 71,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Al Ammari",
+          "team": "IRAQ",
+          "minute": 75,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "P. Gueye",
+          "team": "SENEGAL",
+          "minute": 81,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "I. Ndiaye",
+          "team": "SENEGAL",
+          "minute": 82,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "M. Doski",
+          "team": "IRAQ",
+          "minute": 90,
+          "extra": null
+        }
+      ],
+      "substitutions": {
+        "IRAQ": [
+          {
+            "out": "A. Qasem",
+            "in": "M. Younis",
+            "minute": 16
+          },
+          {
+            "out": "A. Basil",
+            "in": "J. Hassan",
+            "minute": 46
+          },
+          {
+            "out": "A. Jasim",
+            "in": "A. Al Reeshawee",
+            "minute": 58
+          },
+          {
+            "out": "A. Al Hamadi",
+            "in": "A. Yousif",
+            "minute": 58
+          },
+          {
+            "out": "Z. Iqbal",
+            "in": "K. Yakob",
+            "minute": 67
+          }
+        ],
+        "SENEGAL": [
+          {
+            "out": "H. Diarra",
+            "in": "P. Gueye",
+            "minute": 57
+          },
+          {
+            "out": "I. Mbaye",
+            "in": "I. Ndiaye",
+            "minute": 57
+          },
+          {
+            "out": "L. Camara",
+            "in": "N. Jackson",
+            "minute": 57
+          },
+          {
+            "out": "A. Seck",
+            "in": "P. Ciss",
+            "minute": 58
+          },
+          {
+            "out": "I. Sarr",
+            "in": "A. Diao",
+            "minute": 81
+          }
+        ]
+      },
+      "lineups": {
+        "SENEGAL": {
+          "formation": "4-2-3-1",
+          "coach": "Bouna Thiaw Pape",
+          "startXI": [
+            {
+              "name": "Mory Diaw",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Kr\u00e9pin Diatta",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Abdoulaye Seck",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Moussa Niakhat\u00e9",
+              "number": 19,
+              "pos": "D"
+            },
+            {
+              "name": "Ismail Jakobs",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "Idrissa Gana Gueye",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "Habib Diarra",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Ibrahim Mbaye",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Lamine Camara",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Sadio Man\u00e9",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Isma\u00efla Sarr",
+              "number": 18,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Yehvann Diouf",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Mamadou Sarr",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Kalidou Koulibaly",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Antoine Mendy",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "El Hadji Malick Diouf",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Path\u00e9 Isma\u00ebl Ciss",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Pape Matar Sarr",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Bara Sapoko Ndiaye",
+              "number": 22,
+              "pos": "M"
+            },
+            {
+              "name": "Pape Gueye",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "Iliman Ndiaye",
+              "number": 13,
+              "pos": "F"
+            },
+            {
+              "name": "Assane Diao",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Ahmadou Bamba Dieng",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Nicolas Jackson",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Cherif Ndiaye",
+              "number": 12,
+              "pos": "F"
+            }
+          ]
+        },
+        "IRAQ": {
+          "formation": "4-1-4-1",
+          "coach": "Graham Arnold",
+          "startXI": [
+            {
+              "name": "Ahmed Basil",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Frans Putros",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Akam Hashem",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Rebin Sulaka",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Merchas Doski",
+              "number": 23,
+              "pos": "D"
+            },
+            {
+              "name": "Amir Al-Ammari",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Ali Jasim",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Ibrahim Bayesh",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Zidane Iqbal",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Ahmed Qasem",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Ali Al-Hamadi",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Fahad Talib",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Jalal Hassan",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Munaf Younus",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "Hussein Ali",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Zaid Tahseen",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Ahmed Hasan Maknazi",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Mustafa Saadoon",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Youssef Amyn",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Kevin Yakob",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "Aimar Sher",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Zaid Ismail",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "Marko Farji",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Mohanad Ali",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Ali Yousif",
+              "number": 13,
+              "pos": "F"
+            },
+            {
+              "name": "Aymen Hussein",
+              "number": 18,
+              "pos": "F"
+            }
+          ]
+        }
+      }
+    },
     "NORWAY-FRANCE": {
       "homeGoals": 1,
       "awayGoals": 4,
@@ -23607,7 +23607,7 @@
       "status": "NS",
       "elapsed": null,
       "kickoffUTC": "2026-06-27T00:00:00+00:00",
-      "referee": "F. Letexier"
+      "referee": "Fran\u00e7ois Letexier, France"
     },
     "EGYPT-IRAN": {
       "homeGoals": null,
