@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-26T19:30:41.569481Z",
+  "updated": "2026-06-26T19:40:21.916960Z",
   "matches": {
     "SENEGAL-IRAQ": {
       "homeGoals": 1,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 29,
+      "elapsed": 38,
       "kickoffUTC": "2026-06-26T19:00:00+00:00",
       "referee": "Anthony Taylor, England",
       "events": [
@@ -319,9 +319,9 @@
     },
     "NORWAY-FRANCE": {
       "homeGoals": 1,
-      "awayGoals": 2,
+      "awayGoals": 3,
       "status": "1H",
-      "elapsed": 29,
+      "elapsed": 39,
       "kickoffUTC": "2026-06-26T19:00:00+00:00",
       "referee": "Michael Oliver, England",
       "events": [
@@ -355,6 +355,14 @@
           "player": "T. Aasgaard",
           "team": "NORWAY",
           "minute": 21,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "O. Dembele",
+          "team": "FRANCE",
+          "minute": 32,
           "extra": null
         }
       ],
