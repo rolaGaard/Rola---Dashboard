@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T11:42:02.965962Z",
+  "updated": "2026-06-26T11:46:19.053872Z",
   "squads": {
     "BELGIUM": [
       {
@@ -2005,7 +2005,7 @@
       {
         "name": "J. Bos",
         "number": 5,
-        "position": "Defender"
+        "position": "Midfielder"
       },
       {
         "name": "C. Burgess",
@@ -2745,7 +2745,7 @@
       {
         "name": "João Félix",
         "number": 11,
-        "position": "Attacker"
+        "position": "Midfielder"
       },
       {
         "name": "Rafael Leão",
@@ -5258,7 +5258,7 @@
       {
         "name": "O. Orunov",
         "number": 11,
-        "position": "Attacker"
+        "position": "Midfielder"
       },
       {
         "name": "D. Khamdamov",
@@ -5335,7 +5335,7 @@
       {
         "name": "G. Laye",
         "number": 4,
-        "position": "Midfielder"
+        "position": "Defender"
       },
       {
         "name": "Pedro Miguel",
