@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T00:40:24.465850Z",
+  "updated": "2026-06-26T00:50:23.614770Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -21546,7 +21546,7 @@
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 80,
+      "elapsed": 90,
       "kickoffUTC": "2026-06-25T23:00:00+00:00",
       "referee": "I. Barton",
       "events": [
@@ -21581,6 +21581,14 @@
           "team": "JAPAN",
           "minute": 77,
           "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Viktor Gy\u00f6keres",
+          "team": "SWEDEN",
+          "minute": 85,
+          "extra": null
         }
       ],
       "substitutions": {
@@ -21599,6 +21607,16 @@
             "out": "Elliot Stroud",
             "in": "Ken Sema",
             "minute": 75
+          },
+          {
+            "out": "Victor Lindel\u00f6f",
+            "in": "Carl Starfelt",
+            "minute": 87
+          },
+          {
+            "out": "Gabriel Gudmundsson",
+            "in": "Benjamin Nygren",
+            "minute": 88
           }
         ],
         "JAPAN": [
@@ -21907,7 +21925,7 @@
       "homeGoals": 1,
       "awayGoals": 3,
       "status": "2H",
-      "elapsed": 81,
+      "elapsed": 90,
       "kickoffUTC": "2026-06-25T23:00:00+00:00",
       "referee": "K. I. Garcia Mendoza",
       "events": [
@@ -21965,6 +21983,11 @@
             "out": "Ismael Gharbi",
             "in": "Firas Chaouat",
             "minute": 75
+          },
+          {
+            "out": "Hazem Mastouri",
+            "in": "Sebastian Tounekti",
+            "minute": 90
           }
         ],
         "NETHERLANDS": [
@@ -21987,6 +22010,11 @@
             "out": "Brian Brobbey",
             "in": "Memphis Depay",
             "minute": 77
+          },
+          {
+            "out": "Cody Gakpo",
+            "in": "Noa Lang",
+            "minute": 84
           }
         ]
       },
