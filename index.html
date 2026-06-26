@@ -790,7 +790,7 @@ const I18N = {
     segundoTiempo: '2DO TIEMPO', entretiempo: 'ENTRETIEMPO', tiempoExtra: 'TIEMPO EXTRA',
     penales: 'PENALES', sinDatos: 'S/D',
     detalleMostrar: '▼ detalle', detalleOcultar: '▲ ocultar',
-    goles: '⚽ GOLES', tarjetas: '🟨 TARJETAS',
+    goles: '⚽ GOLES', tarjetas: '🟨 TARJETAS', cambios: '🔄 CAMBIOS',
     enContra: ' (en contra)', penal: ' (penal)', desconocido: 'Desconocido',
     sinEventos: 'Sin eventos registrados todavía',
     noHayPartidos: 'No hay partidos en esta vista',
@@ -838,7 +838,7 @@ const I18N = {
     segundoTiempo: '2ND HALF', entretiempo: 'HALFTIME', tiempoExtra: 'EXTRA TIME',
     penales: 'PENALTIES', sinDatos: 'N/A',
     detalleMostrar: '▼ details', detalleOcultar: '▲ hide',
-    goles: '⚽ GOALS', tarjetas: '🟨 CARDS',
+    goles: '⚽ GOALS', tarjetas: '🟨 CARDS', cambios: '🔄 SUBSTITUTIONS',
     enContra: ' (own goal)', penal: ' (penalty)', desconocido: 'Unknown',
     sinEventos: 'No events recorded yet',
     noHayPartidos: 'No matches in this view',
@@ -886,7 +886,7 @@ const I18N = {
     segundoTiempo: '2º TEMPO', entretiempo: 'INTERVALO', tiempoExtra: 'PRORROGAÇÃO',
     penales: 'PÊNALTIS', sinDatos: 'S/D',
     detalleMostrar: '▼ detalhes', detalleOcultar: '▲ ocultar',
-    goles: '⚽ GOLS', tarjetas: '🟨 CARTÕES',
+    goles: '⚽ GOLS', tarjetas: '🟨 CARTÕES', cambios: '🔄 SUBSTITUIÇÕES',
     enContra: ' (contra)', penal: ' (pênalti)', desconocido: 'Desconhecido',
     sinEventos: 'Nenhum evento registrado ainda',
     noHayPartidos: 'Nenhuma partida nesta visualização',
@@ -934,7 +934,7 @@ const I18N = {
     segundoTiempo: '2. HALBZEIT', entretiempo: 'HALBZEITPAUSE', tiempoExtra: 'VERLÄNGERUNG',
     penales: 'ELFMETER', sinDatos: 'K.A.',
     detalleMostrar: '▼ Details', detalleOcultar: '▲ ausblenden',
-    goles: '⚽ TORE', tarjetas: '🟨 KARTEN',
+    goles: '⚽ TORE', tarjetas: '🟨 KARTEN', cambios: '🔄 WECHSEL',
     enContra: ' (Eigentor)', penal: ' (Elfmeter)', desconocido: 'Unbekannt',
     sinEventos: 'Noch keine Ereignisse erfasst',
     noHayPartidos: 'Keine Spiele in dieser Ansicht',
@@ -982,7 +982,7 @@ const I18N = {
     segundoTiempo: '2E HELFT', entretiempo: 'RUST', tiempoExtra: 'VERLENGING',
     penales: 'PENALTY\'S', sinDatos: 'N/B',
     detalleMostrar: '▼ details', detalleOcultar: '▲ verbergen',
-    goles: '⚽ DOELPUNTEN', tarjetas: '🟨 KAARTEN',
+    goles: '⚽ DOELPUNTEN', tarjetas: '🟨 KAARTEN', cambios: '🔄 WISSELS',
     enContra: ' (eigen doelpunt)', penal: ' (penalty)', desconocido: 'Onbekend',
     sinEventos: 'Nog geen gebeurtenissen geregistreerd',
     noHayPartidos: 'Geen wedstrijden in deze weergave',
@@ -1594,7 +1594,9 @@ function buildMatchCard(m) {
   }
 
   const events = live ? (live.events || []) : [];
-  const hasDetail = (isLive || isFinished) && events.length > 0;
+  const homeSubs = live && live.substitutions ? (live.substitutions[m.home] || []) : [];
+  const awaySubs = live && live.substitutions ? (live.substitutions[m.away] || []) : [];
+  const hasDetail = (isLive || isFinished) && (events.length > 0 || homeSubs.length > 0 || awaySubs.length > 0);
   const isExpanded = expandedMatchKey === key;
   if (isExpanded) cardClass += ' expanded';
   const clickAttr = hasDetail ? ' onclick="toggleMatchDetail(\'' + key.replace(/'/g, "\\'") + '\')"' : '';
@@ -1602,7 +1604,7 @@ function buildMatchCard(m) {
 
   let detailHtml = '';
   if (isExpanded && hasDetail) {
-    detailHtml = '<div class="match-detail">' + buildEventsDetail(events, m.home, m.away) + '</div>';
+    detailHtml = '<div class="match-detail">' + buildEventsDetail(events, m.home, m.away, homeSubs, awaySubs) + '</div>';
   }
 
   return (
@@ -1649,9 +1651,16 @@ function mapsLink(stadium, city) {
   return 'https://www.google.com/maps/search/?api=1&query=' + query;
 }
 
-function buildEventsDetail(events, homeTeam, awayTeam) {
+function buildEventsDetail(events, homeTeam, awayTeam, homeSubs, awaySubs) {
   const goals = events.filter(e => e.type === 'Goal');
   const cards = events.filter(e => e.type === 'Card');
+  homeSubs = homeSubs || [];
+  awaySubs = awaySubs || [];
+  // Juntamos los cambios de ambos equipos en una sola lista, ordenada por
+  // minuto, para mostrarlos igual que goles/tarjetas.
+  const subs = homeSubs.map(s => ({ ...s, team: homeTeam }))
+    .concat(awaySubs.map(s => ({ ...s, team: awayTeam })))
+    .sort((a, b) => (a.minute || 0) - (b.minute || 0));
 
   let html = '';
 
@@ -1690,7 +1699,27 @@ function buildEventsDetail(events, homeTeam, awayTeam) {
     });
   }
 
-  if (goals.length === 0 && cards.length === 0) {
+  if (subs.length > 0) {
+    html += '<div class="detail-section-label" style="margin-top:8px;">' + t('cambios') + '</div>';
+    subs.forEach(s => {
+      const sideClass = s.team === homeTeam ? 'detail-home' : 'detail-away';
+      const minuteStr = s.minute + "'";
+      const outName = s.out || t('desconocido');
+      const inName = s.in || t('desconocido');
+      const outHtml = s.out
+        ? '<a href="' + googleSearchLink(outName, s.team) + '" target="_blank" rel="noopener" class="player-link" onclick="event.stopPropagation()">' + outName + '</a>'
+        : outName;
+      const inHtml = s.in
+        ? '<a href="' + googleSearchLink(inName, s.team) + '" target="_blank" rel="noopener" class="player-link" onclick="event.stopPropagation()">' + inName + '</a>'
+        : inName;
+      html += '<div class="detail-row ' + sideClass + '">' +
+        '<span class="detail-minute">' + minuteStr + '</span>' +
+        '<span class="detail-player">\u{1F53A} ' + outHtml + ' \u{1F53C} ' + inHtml + '</span>' +
+      '</div>';
+    });
+  }
+
+  if (goals.length === 0 && cards.length === 0 && subs.length === 0) {
     html = '<div class="detail-empty">' + t('sinEventos') + '</div>';
   }
 
