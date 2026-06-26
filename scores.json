@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T18:20:22.763163Z",
+  "updated": "2026-06-26T18:30:39.930498Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -22780,7 +22780,280 @@
       "status": "NS",
       "elapsed": null,
       "kickoffUTC": "2026-06-26T19:00:00+00:00",
-      "referee": "Anthony Taylor, England"
+      "referee": "Anthony Taylor, England",
+      "lineups": {
+        "SENEGAL": {
+          "formation": "4-2-3-1",
+          "coach": "Bouna Thiaw Pape",
+          "startXI": [
+            {
+              "name": "Mory Diaw",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Kr\u00e9pin Diatta",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Abdoulaye Seck",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Moussa Niakhat\u00e9",
+              "number": 19,
+              "pos": "D"
+            },
+            {
+              "name": "Ismail Jakobs",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "Idrissa Gana Gueye",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "Habib Diarra",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Ibrahim Mbaye",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Lamine Camara",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Sadio Man\u00e9",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Isma\u00efla Sarr",
+              "number": 18,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Yehvann Diouf",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Mamadou Sarr",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Kalidou Koulibaly",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Antoine Mendy",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "El Hadji Malick Diouf",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Path\u00e9 Isma\u00ebl Ciss",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Pape Matar Sarr",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Bara Sapoko Ndiaye",
+              "number": 22,
+              "pos": "M"
+            },
+            {
+              "name": "Pape Gueye",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "Iliman Ndiaye",
+              "number": 13,
+              "pos": "F"
+            },
+            {
+              "name": "Assane Diao",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Ahmadou Bamba Dieng",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Nicolas Jackson",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Cherif Ndiaye",
+              "number": 12,
+              "pos": "F"
+            }
+          ]
+        },
+        "IRAQ": {
+          "formation": "4-1-4-1",
+          "coach": "Graham Arnold",
+          "startXI": [
+            {
+              "name": "Ahmed Basil",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Frans Putros",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Akam Hashem",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Rebin Sulaka",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Merchas Doski",
+              "number": 23,
+              "pos": "D"
+            },
+            {
+              "name": "Amir Al-Ammari",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Ali Jasim",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Ibrahim Bayesh",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Zidane Iqbal",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Ahmed Qasem",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Ali Al-Hamadi",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Fahad Talib",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Jalal Hassan",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Munaf Younus",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "Hussein Ali",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Zaid Tahseen",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Ahmed Hasan Maknazi",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Mustafa Saadoon",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Youssef Amyn",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Kevin Yakob",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "Aimar Sher",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Zaid Ismail",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "Marko Farji",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Mohanad Ali",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Ali Yousif",
+              "number": 13,
+              "pos": "F"
+            },
+            {
+              "name": "Aymen Hussein",
+              "number": 18,
+              "pos": "F"
+            }
+          ]
+        }
+      }
     },
     "NORWAY-FRANCE": {
       "homeGoals": null,
@@ -22788,7 +23061,285 @@
       "status": "NS",
       "elapsed": null,
       "kickoffUTC": "2026-06-26T19:00:00+00:00",
-      "referee": "Michael Oliver, England"
+      "referee": "Michael Oliver, England",
+      "lineups": {
+        "NORWAY": {
+          "formation": "4-2-3-1",
+          "coach": "Stale Solbakken",
+          "startXI": [
+            {
+              "name": "Egil Selvik",
+              "number": 13,
+              "pos": "G"
+            },
+            {
+              "name": "Fredrik Aursnes",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "Henrik S\u00e6lebakke Falchener",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Leo \u00d8stig\u00e5rd",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Fredrik Andr\u00e9 Bj\u00f8rkan",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Kristian Thorstvedt",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Patrick Berg",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Oscar Bobb",
+              "number": 22,
+              "pos": "M"
+            },
+            {
+              "name": "Thelo Aasgaard",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "Andreas Schjelderup",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "J\u00f8rgen Strand Larsen",
+              "number": 11,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "\u00d8rjan Nyland",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Sander Tangvik",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Kristoffer Ajer",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "David M\u00f8ller Wolfe",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Torbj\u00f8rn Heggem",
+              "number": 17,
+              "pos": "D"
+            },
+            {
+              "name": "Sondre Lang\u00e5s",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Marcus Pedersen",
+              "number": 16,
+              "pos": "D"
+            },
+            {
+              "name": "Morten Thorsby",
+              "number": 2,
+              "pos": "M"
+            },
+            {
+              "name": "Sander Berge",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Martin \u00d8degaard",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Julian Ryerson",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Jens Petter Hauge",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Alexander S\u00f8rloth",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Erling Haaland",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Antonio Nusa",
+              "number": 20,
+              "pos": "M"
+            }
+          ]
+        },
+        "FRANCE": {
+          "formation": "4-2-3-1",
+          "coach": "Didier Deschamps",
+          "startXI": [
+            {
+              "name": "Mike Maignan",
+              "number": 16,
+              "pos": "G"
+            },
+            {
+              "name": "Jules Kound\u00e9",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Dayot Upamecano",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Maxence Lacroix",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Theo Hern\u00e1ndez",
+              "number": 19,
+              "pos": "D"
+            },
+            {
+              "name": "Aur\u00e9lien Tchouam\u00e9ni",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Manu Kon\u00e9",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Ousmane Demb\u00e9l\u00e9",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Michael Olise",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "D\u00e9sir\u00e9 Dou\u00e9",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Kylian Mbapp\u00e9",
+              "number": 10,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Brice Samba",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Robin Risser",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Malo Gusto",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Lucas Digne",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Ibrahima Konat\u00e9",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "William Saliba",
+              "number": 17,
+              "pos": "D"
+            },
+            {
+              "name": "Lucas Hern\u00e1ndez",
+              "number": 21,
+              "pos": "D"
+            },
+            {
+              "name": "N'Golo Kant\u00e9",
+              "number": 13,
+              "pos": "M"
+            },
+            {
+              "name": "Adrien Rabiot",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Warren Za\u00efre-Emery",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Rayan Cherki",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "Maghnes Akliouche",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "Marcus Thuram",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Bradley Barcola",
+              "number": 12,
+              "pos": "F"
+            },
+            {
+              "name": "Jean-Philippe Mateta",
+              "number": 22,
+              "pos": "F"
+            }
+          ]
+        }
+      }
     },
     "URUGUAY-SPAIN": {
       "homeGoals": null,
