@@ -141,6 +141,7 @@
   .status-badge { font-weight:700; font-size:10px; letter-spacing:0.04em; border-radius:4px; padding:2px 7px; }
   .status-badge.live { color:#fff; background:#CC0000; }
   .status-badge.finished { color:#fff; background:#003087; }
+  .status-badge.hydration { color:#0a0a0a; background:#5BC8F2; margin-left:4px; }
   .group-tag { background:#f1f5f9; border-radius:4px; padding:1px 6px; font-weight:600; }
 
   /* ── Tipografía dinámica según el ancho real de cada tarjeta ──────────────
@@ -821,7 +822,7 @@ const I18N = {
     plantilla: 'Plantilla', plantillaNoDisponible: 'Plantilla no disponible por el momento.',
     alineacion: 'Alineación', proximoRival: 'Rival', formacion: 'Formación', enCancha: 'En cancha', banco: 'Banco', entroMin: 'min', sinSuplentesDisponibles: 'No quedan suplentes sin usar.',
     alineacionSinPartidos: 'No hay partidos cargados para este equipo.',
-    alineacionNoDisponible: 'Todavía no está confirmada. La FIFA la publica aproximadamente 1 hora antes del partido.', alineacionRivalNoDisponible: 'Alineación del rival todavía no disponible', arbitro: 'Árbitro',
+    alineacionNoDisponible: 'Todavía no está confirmada. La FIFA la publica aproximadamente 1 hora antes del partido.', alineacionRivalNoDisponible: 'Alineación del rival todavía no disponible', arbitro: 'Árbitro', hidratacion: 'Hidratación', hidratacionAviso: 'Estimado: FIFA fija la pausa de hidratación ~minuto 22 de cada tiempo. La API no confirma el momento exacto.',
     paisesTitulo: 'Estado del Mundial 2026', paisesCompiten: 'Siguen en carrera', paisesAfuera: 'Quedaron eliminados',
     paisesDisclaimer: 'Un equipo pasa a "Eliminados" cuando su grupo terminó los 6 partidos y quedó 3° o 4°. Por ahora no incluye eliminaciones de fases posteriores a la de grupos.', paisesSinEliminados: 'Todavía no hay equipos eliminados.',
     pj: 'PJ', g: 'G', e: 'E', p: 'P', dg: 'DG', pts: 'PTS',
@@ -869,7 +870,7 @@ const I18N = {
     plantilla: 'Squad', plantillaNoDisponible: 'Squad not available yet.',
     alineacion: 'Lineup', proximoRival: 'Opponent', formacion: 'Formation', enCancha: 'On the pitch', banco: 'Bench', entroMin: 'min', sinSuplentesDisponibles: 'No unused substitutes left.',
     alineacionSinPartidos: 'No matches loaded for this team.',
-    alineacionNoDisponible: 'Not confirmed yet. FIFA publishes it about 1 hour before kickoff.', alineacionRivalNoDisponible: 'Opponent lineup not available yet', arbitro: 'Referee',
+    alineacionNoDisponible: 'Not confirmed yet. FIFA publishes it about 1 hour before kickoff.', alineacionRivalNoDisponible: 'Opponent lineup not available yet', arbitro: 'Referee', hidratacion: 'Hydration', hidratacionAviso: 'Estimated: FIFA sets the hydration break at ~minute 22 of each half. The API does not confirm the exact moment.',
     paisesTitulo: '2026 World Cup status', paisesCompiten: 'Still in the running', paisesAfuera: 'Eliminated',
     paisesDisclaimer: 'A team moves to "Eliminated" once its group finishes all 6 matches and it placed 3rd or 4th. Doesn\'t yet account for eliminations beyond the group stage.', paisesSinEliminados: 'No teams eliminated yet.',
     pj: 'P', g: 'W', e: 'D', p: 'L', dg: 'GD', pts: 'PTS',
@@ -917,7 +918,7 @@ const I18N = {
     plantilla: 'Elenco', plantillaNoDisponible: 'Elenco não disponível por enquanto.',
     alineacion: 'Escalação', proximoRival: 'Adversário', formacion: 'Formação', enCancha: 'Em campo', banco: 'Banco', entroMin: 'min', sinSuplentesDisponibles: 'Não há mais reservas disponíveis.',
     alineacionSinPartidos: 'Não há jogos carregados para esta seleção.',
-    alineacionNoDisponible: 'Ainda não confirmada. A FIFA publica cerca de 1 hora antes do jogo.', alineacionRivalNoDisponible: 'Escalação do adversário ainda não disponível', arbitro: 'Árbitro',
+    alineacionNoDisponible: 'Ainda não confirmada. A FIFA publica cerca de 1 hora antes do jogo.', alineacionRivalNoDisponible: 'Escalação do adversário ainda não disponível', arbitro: 'Árbitro', hidratacion: 'Hidratação', hidratacionAviso: 'Estimado: a FIFA define a pausa de hidratação por volta do minuto 22 de cada tempo. A API não confirma o momento exato.',
     paisesTitulo: 'Situação da Copa do Mundo 2026', paisesCompiten: 'Seguem na disputa', paisesAfuera: 'Foram eliminados',
     paisesDisclaimer: 'Uma seleção passa para "Eliminados" quando seu grupo termina os 6 jogos e ela fica em 3° ou 4°. Por enquanto não considera eliminações além da fase de grupos.', paisesSinEliminados: 'Ainda não há seleções eliminadas.',
     pj: 'PJ', g: 'V', e: 'E', p: 'D', dg: 'SG', pts: 'PTS',
@@ -965,7 +966,7 @@ const I18N = {
     plantilla: 'Kader', plantillaNoDisponible: 'Kader derzeit nicht verfügbar.',
     alineacion: 'Aufstellung', proximoRival: 'Gegner', formacion: 'Formation', enCancha: 'Auf dem Feld', banco: 'Ersatzbank', entroMin: 'Min.', sinSuplentesDisponibles: 'Keine ungenutzten Ersatzspieler mehr.',
     alineacionSinPartidos: 'Keine Spiele für dieses Team geladen.',
-    alineacionNoDisponible: 'Noch nicht bestätigt. Die FIFA veröffentlicht sie etwa 1 Stunde vor dem Spiel.', alineacionRivalNoDisponible: 'Aufstellung des Gegners noch nicht verfügbar', arbitro: 'Schiedsrichter',
+    alineacionNoDisponible: 'Noch nicht bestätigt. Die FIFA veröffentlicht sie etwa 1 Stunde vor dem Spiel.', alineacionRivalNoDisponible: 'Aufstellung des Gegners noch nicht verfügbar', arbitro: 'Schiedsrichter', hidratacion: 'Trinkpause', hidratacionAviso: 'Geschätzt: Die FIFA legt die Trinkpause auf ca. Minute 22 jeder Halbzeit fest. Die API bestätigt den genauen Zeitpunkt nicht.',
     paisesTitulo: 'WM-2026-Stand', paisesCompiten: 'Noch im Turnier', paisesAfuera: 'Ausgeschieden',
     paisesDisclaimer: 'Ein Team gilt als "Ausgeschieden", sobald seine Gruppe alle 6 Spiele beendet hat und es Platz 3 oder 4 belegte. Ausscheiden nach der Gruppenphase wird derzeit nicht berücksichtigt.', paisesSinEliminados: 'Noch keine Teams ausgeschieden.',
     pj: 'Sp', g: 'S', e: 'U', p: 'N', dg: 'TD', pts: 'Pkt',
@@ -1013,7 +1014,7 @@ const I18N = {
     plantilla: 'Selectie', plantillaNoDisponible: 'Selectie momenteel niet beschikbaar.',
     alineacion: 'Opstelling', proximoRival: 'Tegenstander', formacion: 'Formatie', enCancha: 'Op het veld', banco: 'Bank', entroMin: 'min', sinSuplentesDisponibles: 'Geen ongebruikte wissels meer over.',
     alineacionSinPartidos: 'Geen wedstrijden geladen voor dit land.',
-    alineacionNoDisponible: 'Nog niet bevestigd. FIFA publiceert dit ongeveer 1 uur voor de wedstrijd.', alineacionRivalNoDisponible: 'Opstelling van de tegenstander nog niet beschikbaar', arbitro: 'Scheidsrechter',
+    alineacionNoDisponible: 'Nog niet bevestigd. FIFA publiceert dit ongeveer 1 uur voor de wedstrijd.', alineacionRivalNoDisponible: 'Opstelling van de tegenstander nog niet beschikbaar', arbitro: 'Scheidsrechter', hidratacion: 'Hydratatie', hidratacionAviso: 'Geschat: FIFA plant de hydratatiepauze rond minuut 22 van elke helft. De API bevestigt het exacte moment niet.',
     paisesTitulo: 'WK 2026-status', paisesCompiten: 'Nog in de strijd', paisesAfuera: 'Uitgeschakeld',
     paisesDisclaimer: 'Een land verhuist naar "Uitgeschakeld" zodra zijn groep alle 6 wedstrijden heeft afgerond en het 3e of 4e werd. Uitschakelingen na de groepsfase worden nog niet meegenomen.', paisesSinEliminados: 'Nog geen landen uitgeschakeld.',
     pj: 'G', g: 'W', e: 'G', p: 'V', dg: 'DV', pts: 'Pt',
@@ -1330,6 +1331,16 @@ function toARDateStr(utcStr){
 }
 function isLiveStatus(s){ return ['1H','2H','HT','ET','BT','P'].includes(s); }
 function isFinishedStatus(s){ return ['FT','AET','PEN'].includes(s); }
+// FIFA fija la pausa de hidratación ~minuto 22 de cada tiempo (no es un dato
+// que reporte api-football — lo estimamos nosotros). Damos un margen de
+// algunos minutos porque el árbitro puede adelantarla o atrasarla un poco
+// según el desarrollo del juego.
+function isHydrationWindow(apiStatus, elapsed) {
+  if (apiStatus === '1H') return elapsed >= 19 && elapsed <= 25;
+  if (apiStatus === '2H') return elapsed >= 64 && elapsed <= 70;
+  return false;
+}
+
 function statusLabel(apiStatus, elapsed){
   const liveStates = {'1H':t('primerTiempo'),'2H':t('segundoTiempo'),'HT':t('entretiempo'),'ET':t('tiempoExtra'),'P':t('penales')};
   if (liveStates[apiStatus]) return liveStates[apiStatus] + (elapsed ? ' · ' + elapsed + "'" : '');
@@ -1567,6 +1578,12 @@ function buildMatchCard(m) {
   if (label) {
     const badgeClass = isLive ? 'status-badge live' : (isFinished ? 'status-badge finished' : 'status-badge');
     badgeHtml = '<span class="' + badgeClass + '">' + (isLive ? '\u25CF ' : '') + label + '</span>';
+  }
+  // No es un dato real de la API (api-football no lo reporta) — es una
+  // estimación nuestra, ya que FIFA fija la pausa de hidratación ~minuto 22
+  // de cada tiempo. Si el árbitro la adelanta/atrasa, esto puede no coincidir.
+  if (isLive && live && live.elapsed !== null && live.elapsed !== undefined && isHydrationWindow(apiStatus, live.elapsed)) {
+    badgeHtml += '<span class="status-badge hydration" title="' + t('hidratacionAviso') + '">\u{1F4A7} ' + t('hidratacion') + '</span>';
   }
 
   let homeNameClass = 'team-name';
@@ -1831,13 +1848,17 @@ function render() {
     }
   } else {
     document.getElementById('search-label').innerHTML = '';
-    const sortedAll = filtered.slice().sort((a,b) => new Date(getKickoffUTC(a)) - new Date(getKickoffUTC(b)));
+    // Los jugados se ordenan del más reciente al más antiguo; el resto de
+    // las vistas, de más próximo a más lejano (orden ascendente normal).
+    const sortedAll = currentFilter === 'finished'
+      ? filtered.slice().sort((a,b) => new Date(getKickoffUTC(b)) - new Date(getKickoffUTC(a)))
+      : filtered.slice().sort((a,b) => new Date(getKickoffUTC(a)) - new Date(getKickoffUTC(b)));
 
     if (sortedAll.length === 0) {
       html = '<div class="empty-state">' + t('noHayPartidos') + '</div>';
     } else if (currentFilter === 'scheduled') {
       html += buildDateGroupedHtml(sortedAll);
-    } else if (currentFilter === 'all' || currentFilter === 'finished') {
+    } else if (currentFilter === 'all') {
       html += buildGroupGroupedHtml(sortedAll);
     } else {
       html += '<div class="match-grid">';
