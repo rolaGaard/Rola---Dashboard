@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T03:40:22.284231Z",
+  "updated": "2026-06-26T03:50:22.522338Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -22275,7 +22275,7 @@
       "homeGoals": 2,
       "awayGoals": 2,
       "status": "2H",
-      "elapsed": 78,
+      "elapsed": 87,
       "kickoffUTC": "2026-06-26T02:00:00+00:00",
       "referee": "M. Ghorbal",
       "events": [
@@ -22341,6 +22341,23 @@
             "out": "Joe Scally",
             "in": "Alex Freeman",
             "minute": 77
+          },
+          {
+            "out": "Weston McKennie",
+            "in": "Malik Tillman",
+            "minute": 86
+          }
+        ],
+        "TURKIYE": [
+          {
+            "out": "Zeki \u00c7elik",
+            "in": "\u00c7a\u011flar S\u00f6y\u00fcnc\u00fc",
+            "minute": 84
+          },
+          {
+            "out": "Kenan Y\u0131ld\u0131z",
+            "in": "Can Yilmaz Uzun",
+            "minute": 84
           }
         ]
       },
@@ -22622,7 +22639,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 78,
+      "elapsed": 87,
       "kickoffUTC": "2026-06-26T02:00:00+00:00",
       "referee": "C. Turpin",
       "events": [
@@ -22632,6 +22649,14 @@
           "player": "Jackson Irvine",
           "team": "AUSTRALIA",
           "minute": 46,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Diego Gomez",
+          "team": "PARAGUAY",
+          "minute": 77,
           "extra": null
         }
       ],
@@ -22646,6 +22671,11 @@
             "out": "Gabriel \u00c1valos",
             "in": "Alex Arce",
             "minute": 67
+          },
+          {
+            "out": "Omar Alderete",
+            "in": "Jos\u00e9 Canale",
+            "minute": 84
           }
         ],
         "AUSTRALIA": [
@@ -22653,6 +22683,16 @@
             "out": "Cristian Volpato",
             "in": "Ajdin Hrustic",
             "minute": 58
+          },
+          {
+            "out": "Jackson Irvine",
+            "in": "Paul Okon-Engstler",
+            "minute": 84
+          },
+          {
+            "out": "Nestory Irankunda",
+            "in": "Tete Yengi",
+            "minute": 84
           }
         ]
       },
