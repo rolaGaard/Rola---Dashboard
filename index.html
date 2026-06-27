@@ -2975,12 +2975,12 @@ function renderCountriesList() {
     '<div class="cl-header">🚫 ' + t('paisesTitulo') + '</div>' +
     '<div class="cl-columns">' +
       '<div class="cl-col">' +
-        '<div class="cl-col-title cl-col-in">✅ ' + t('paisesCompiten') + ' <span class="cl-count">(' + stillIn.length + ')</span></div>' +
-        '<div class="cl-list">' + leftRows + '</div>' +
-      '</div>' +
-      '<div class="cl-col">' +
         '<div class="cl-col-title cl-col-out">🚫 ' + t('paisesAfuera') + ' <span class="cl-count">(' + eliminated.length + ')</span></div>' +
         '<div class="cl-list">' + rightRows + '</div>' +
+      '</div>' +
+      '<div class="cl-col">' +
+        '<div class="cl-col-title cl-col-in">✅ ' + t('paisesCompiten') + ' <span class="cl-count">(' + stillIn.length + ')</span></div>' +
+        '<div class="cl-list">' + leftRows + '</div>' +
       '</div>' +
     '</div>' +
     '<div class="cl-disclaimer">' + t('paisesDisclaimer') + '</div>';
