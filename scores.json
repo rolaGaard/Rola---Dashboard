@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-27T03:40:22.275963Z",
+  "updated": "2026-06-27T03:50:22.378768Z",
   "matches": {
     "EGYPT-IRAN": {
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "1H",
-      "elapsed": 39,
+      "elapsed": 45,
       "kickoffUTC": "2026-06-27T03:00:00+00:00",
       "referee": "Szymon Marciniak, Poland",
       "events": [
@@ -47,6 +47,22 @@
           "player": "M. Saber",
           "team": "EGYPT",
           "minute": 20,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Y. Ibrahim",
+          "team": "EGYPT",
+          "minute": 42,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Nemati",
+          "team": "IRAN",
+          "minute": 43,
           "extra": null
         }
       ],
@@ -332,7 +348,7 @@
       "homeGoals": 0,
       "awayGoals": 1,
       "status": "1H",
-      "elapsed": 39,
+      "elapsed": 45,
       "kickoffUTC": "2026-06-27T03:00:00+00:00",
       "referee": "Adham Mohammad, Jordan",
       "events": [
