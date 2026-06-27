@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-27T22:40:22.569209Z",
+  "updated": "2026-06-27T22:50:21.956526Z",
   "matches": {
     "CROATIA-GHANA": {
-      "homeGoals": 1,
+      "homeGoals": 2,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 79,
+      "elapsed": 89,
       "kickoffUTC": "2026-06-27T21:00:00+00:00",
       "referee": "Drew Fischer, Canada",
       "events": [
@@ -32,6 +32,14 @@
           "team": "GHANA",
           "minute": 73,
           "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "N. Vlasic",
+          "team": "CROATIA",
+          "minute": 83,
+          "extra": null
         }
       ],
       "substitutions": {
@@ -55,6 +63,11 @@
             "out": "K. Sulemana",
             "in": "E. Nuamah",
             "minute": 71
+          },
+          {
+            "out": "K. Sibo",
+            "in": "C. Yirenkyi",
+            "minute": 85
           }
         ],
         "CROATIA": [
@@ -67,6 +80,11 @@
             "out": "M. Kovacic",
             "in": "M. Pasalic",
             "minute": 78
+          },
+          {
+            "out": "M. Baturina",
+            "in": "M. Pasalic",
+            "minute": 89
           }
         ]
       },
@@ -353,7 +371,7 @@
       "homeGoals": 0,
       "awayGoals": 2,
       "status": "2H",
-      "elapsed": 82,
+      "elapsed": 90,
       "kickoffUTC": "2026-06-27T21:00:00+00:00",
       "referee": "Abdulrahman Al-Jassim, Qatar",
       "events": [
@@ -388,6 +406,14 @@
           "team": "ENGLAND",
           "minute": 67,
           "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Andrade",
+          "team": "PANAMA",
+          "minute": 84,
+          "extra": null
         }
       ],
       "substitutions": {
@@ -406,6 +432,16 @@
             "out": "J. Rodriguez",
             "in": "A. Londono",
             "minute": 71
+          },
+          {
+            "out": "C. Harvey",
+            "in": "A. Quintero",
+            "minute": 88
+          },
+          {
+            "out": "J. Gutierrez",
+            "in": "E. Davis",
+            "minute": 88
           }
         ],
         "ENGLAND": [
@@ -423,6 +459,16 @@
             "out": "J. Bellingham",
             "in": "E. Eze",
             "minute": 71
+          },
+          {
+            "out": "E. Anderson",
+            "in": "J. Henderson",
+            "minute": 84
+          },
+          {
+            "out": "H. Kane",
+            "in": "O. Watkins",
+            "minute": 84
           }
         ]
       },
