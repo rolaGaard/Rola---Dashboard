@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-27T01:20:21.069569Z",
+  "updated": "2026-06-27T01:24:47.599025Z",
   "matches": {
     "URUGUAY-SPAIN": {
       "homeGoals": 0,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 56,
+      "elapsed": 60,
       "kickoffUTC": "2026-06-27T00:00:00+00:00",
       "referee": "Ismail Elfath, USA",
       "events": [
@@ -32,6 +32,14 @@
           "team": "URUGUAY",
           "minute": 54,
           "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "G. Varela",
+          "team": "URUGUAY",
+          "minute": 58,
+          "extra": null
         }
       ],
       "substitutions": {
@@ -45,6 +53,23 @@
             "out": "F. Muslera",
             "in": "S. Rochet",
             "minute": 46
+          },
+          {
+            "out": "F. Valverde",
+            "in": "F. Vinas",
+            "minute": 57
+          }
+        ],
+        "SPAIN": [
+          {
+            "out": "Pedri",
+            "in": "F. Ruiz",
+            "minute": 60
+          },
+          {
+            "out": "M. Merino",
+            "in": "D. Olmo",
+            "minute": 60
           }
         ]
       },
@@ -331,7 +356,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 56,
+      "elapsed": 61,
       "kickoffUTC": "2026-06-27T00:00:00+00:00",
       "referee": "Fran\u00e7ois Letexier, France",
       "events": [
