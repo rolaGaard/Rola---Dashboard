@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-27T02:20:21.022170Z",
+  "updated": "2026-06-27T02:30:34.638274Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -24339,7 +24339,275 @@
       "status": "NS",
       "elapsed": null,
       "kickoffUTC": "2026-06-27T03:00:00+00:00",
-      "referee": "Szymon Marciniak, Poland"
+      "referee": "Szymon Marciniak, Poland",
+      "lineups": {
+        "EGYPT": {
+          "formation": "4-2-3-1",
+          "coach": "Hossam Hassan",
+          "startXI": [
+            {
+              "name": "Mostafa Shobeir",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Mohamed Hany",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Mohamed Abdelmonem",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "Rami Rabia",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Ahmed Fatouh",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Mahmoud Saber",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Mohanad Lasheen",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Mostafa Ziko",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Mohamed Salah",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Emam Ashour",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Mahmoud Tr\u00e9z\u00e9guet",
+              "number": 7,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Mohamed El-Shenawy",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Mahdi Soliman",
+              "number": 16,
+              "pos": "G"
+            },
+            {
+              "name": "Mohamed Alaa",
+              "number": 26,
+              "pos": "G"
+            },
+            {
+              "name": "Yasser Ibrahim",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Karim Hafez",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Tarek Alaa",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Nabil Donga",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Marwan Attia",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "Haissem Hassan",
+              "number": 12,
+              "pos": "F"
+            },
+            {
+              "name": "Ibrahim Adel",
+              "number": 20,
+              "pos": "F"
+            },
+            {
+              "name": "Zizo",
+              "number": 25,
+              "pos": "F"
+            },
+            {
+              "name": "Hamza Abdelkarim",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Omar Marmoush",
+              "number": 22,
+              "pos": "F"
+            }
+          ]
+        },
+        "IRAN": {
+          "formation": "5-3-2",
+          "coach": "Amir Ghalenoei",
+          "startXI": [
+            {
+              "name": "Alireza Beiranvand",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Ramin Rezaeian",
+              "number": 23,
+              "pos": "D"
+            },
+            {
+              "name": "Hossein Kanaani",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Shoja Khalilzadeh",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Ali Nemati",
+              "number": 19,
+              "pos": "D"
+            },
+            {
+              "name": "Milad Mohammadi",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Saman Ghoddos",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Mohammad Ghorbani",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Saeid Ezatolahi",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Mehdi Taremi",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Mohammad Mohebi",
+              "number": 8,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Payam Niazmand",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Hossein Hosseini",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Ehsan Hajsafi",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Danial Eiri",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Roozbeh Cheshmi",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Saleh Hardani",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Aria Yousefi",
+              "number": 17,
+              "pos": "D"
+            },
+            {
+              "name": "Amirmohammad Razzaghinia",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "Mehdi Ghayedi",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Alireza Jahanbakhsh",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Mahdi Torabi",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Ali Alipour",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Amirhossein Hosseinzadeh",
+              "number": 18,
+              "pos": "F"
+            },
+            {
+              "name": "Shahriar Moghanlou",
+              "number": 20,
+              "pos": "F"
+            },
+            {
+              "name": "Dennis Eckert Ayensa",
+              "number": 24,
+              "pos": "F"
+            }
+          ]
+        }
+      }
     },
     "NEW ZEALAND-BELGIUM": {
       "homeGoals": null,
@@ -24347,7 +24615,275 @@
       "status": "NS",
       "elapsed": null,
       "kickoffUTC": "2026-06-27T03:00:00+00:00",
-      "referee": "Adham Mohammad, Jordan"
+      "referee": "Adham Mohammad, Jordan",
+      "lineups": {
+        "NEW ZEALAND": {
+          "formation": "4-2-3-1",
+          "coach": null,
+          "startXI": [
+            {
+              "name": "Max Crocombe",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Tim Payne",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Finn Surman",
+              "number": 16,
+              "pos": "D"
+            },
+            {
+              "name": "Tyler Bindon",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Liberato Cacace",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Marko Stameni\u0107",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Joe Bell",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Ryan Thomas",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Sarpreet Singh",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Elijah Just",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Chris Wood",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Michael Woud",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Alex Paulsen",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Nando Pijnaker",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Michael Boxall",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Francis De Vries",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Tommy Smith",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Callan Elliot",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Alex Rufer",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Callum McCowatt",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Jesse Randall",
+              "number": 21,
+              "pos": "F"
+            },
+            {
+              "name": "Lachlan Bayliss",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "Benjamin Old",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Logan Rogerson",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Kosta Barbarouses",
+              "number": 17,
+              "pos": "F"
+            },
+            {
+              "name": "Ben Waine",
+              "number": 18,
+              "pos": "F"
+            }
+          ]
+        },
+        "BELGIUM": {
+          "formation": "4-2-3-1",
+          "coach": "Rudi Garcia",
+          "startXI": [
+            {
+              "name": "Thibaut Courtois",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Timothy Castagne",
+              "number": 21,
+              "pos": "D"
+            },
+            {
+              "name": "Brandon Mechele",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Arthur Theate",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Maxim De Cuyper",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Hans Vanaken",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Youri Tielemans",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Leandro Trossard",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Kevin De Bruyne",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "J\u00e9r\u00e9my Doku",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Charles De Ketelaere",
+              "number": 17,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Senne Lammens",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Mike Penders",
+              "number": 13,
+              "pos": "G"
+            },
+            {
+              "name": "Joaquin Seys",
+              "number": 18,
+              "pos": "D"
+            },
+            {
+              "name": "Koni De Winter",
+              "number": 16,
+              "pos": "D"
+            },
+            {
+              "name": "Thomas Meunier",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Amadou Onana",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "Diego Moreira",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Dodi Lukebakio",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "Nicolas Raskin",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Axel Witsel",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Alexis Saelemaekers",
+              "number": 22,
+              "pos": "F"
+            },
+            {
+              "name": "Mat\u00edas Fern\u00e1ndez-Pardo",
+              "number": 26,
+              "pos": "F"
+            },
+            {
+              "name": "Romelu Lukaku",
+              "number": 9,
+              "pos": "F"
+            }
+          ]
+        }
+      }
     },
     "CROATIA-GHANA": {
       "homeGoals": null,
