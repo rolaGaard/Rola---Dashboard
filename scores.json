@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-27T04:50:20.346711Z",
+  "updated": "2026-06-27T05:00:50.787628Z",
   "matches": {
     "EGYPT-IRAN": {
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 86,
+      "elapsed": 90,
       "kickoffUTC": "2026-06-27T03:00:00+00:00",
       "referee": "Szymon Marciniak, Poland",
       "events": [
@@ -72,6 +72,14 @@
           "team": "IRAN",
           "minute": 79,
           "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "M. Lasheen",
+          "team": "EGYPT",
+          "minute": 90,
+          "extra": 2
         }
       ],
       "substitutions": {
@@ -112,6 +120,11 @@
             "out": "S. Ghoddos",
             "in": "S. Moghanlou",
             "minute": 67
+          },
+          {
+            "out": "M. Mohebi",
+            "in": "A. Jahanbakhsh",
+            "minute": 90
           }
         ]
       },
@@ -378,396 +391,6 @@
             {
               "name": "Dennis Eckert Ayensa",
               "number": 24,
-              "pos": "F"
-            }
-          ]
-        }
-      }
-    },
-    "NEW ZEALAND-BELGIUM": {
-      "homeGoals": 1,
-      "awayGoals": 4,
-      "status": "2H",
-      "elapsed": 88,
-      "kickoffUTC": "2026-06-27T03:00:00+00:00",
-      "referee": "Adham Mohammad, Jordan",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "L. Trossard",
-          "team": "BELGIUM",
-          "minute": 28,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "M. Stamenic",
-          "team": "NEW ZEALAND",
-          "minute": 46,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "L. Trossard",
-          "team": "BELGIUM",
-          "minute": 50,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "E. Just",
-          "team": "NEW ZEALAND",
-          "minute": 56,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "K. De Bruyne",
-          "team": "BELGIUM",
-          "minute": 66,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "E. Just",
-          "team": "NEW ZEALAND",
-          "minute": 84,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "R. Lukaku",
-          "team": "BELGIUM",
-          "minute": 86,
-          "extra": null
-        }
-      ],
-      "substitutions": {
-        "NEW ZEALAND": [
-          {
-            "out": "S. Singh",
-            "in": "J. Randall",
-            "minute": 46
-          },
-          {
-            "out": "R. Thomas",
-            "in": "B. Old",
-            "minute": 46
-          },
-          {
-            "out": "T. Payne",
-            "in": "M. Boxall",
-            "minute": 64
-          },
-          {
-            "out": "J. Bell",
-            "in": "C. McCowatt",
-            "minute": 64
-          },
-          {
-            "out": "L. Cacace",
-            "in": "F. De Vries",
-            "minute": 79
-          }
-        ],
-        "BELGIUM": [
-          {
-            "out": "J. Doku",
-            "in": "M. Fernandez-Pardo",
-            "minute": 56
-          },
-          {
-            "out": "L. Trossard",
-            "in": "A. Saelemaekers",
-            "minute": 72
-          },
-          {
-            "out": "K. De Bruyne",
-            "in": "A. Onana",
-            "minute": 72
-          },
-          {
-            "out": "C. De Ketelaere",
-            "in": "R. Lukaku",
-            "minute": 85
-          },
-          {
-            "out": "Y. Tielemans",
-            "in": "N. Raskin",
-            "minute": 85
-          }
-        ]
-      },
-      "lineups": {
-        "NEW ZEALAND": {
-          "formation": "4-2-3-1",
-          "coach": null,
-          "startXI": [
-            {
-              "name": "Max Crocombe",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Tim Payne",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Finn Surman",
-              "number": 16,
-              "pos": "D"
-            },
-            {
-              "name": "Tyler Bindon",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Liberato Cacace",
-              "number": 13,
-              "pos": "D"
-            },
-            {
-              "name": "Marko Stameni\u0107",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Joe Bell",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Ryan Thomas",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "Sarpreet Singh",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Elijah Just",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "Chris Wood",
-              "number": 9,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Michael Woud",
-              "number": 22,
-              "pos": "G"
-            },
-            {
-              "name": "Alex Paulsen",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Nando Pijnaker",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Michael Boxall",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Francis De Vries",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Tommy Smith",
-              "number": 26,
-              "pos": "D"
-            },
-            {
-              "name": "Callan Elliot",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Alex Rufer",
-              "number": 14,
-              "pos": "M"
-            },
-            {
-              "name": "Callum McCowatt",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Jesse Randall",
-              "number": 21,
-              "pos": "F"
-            },
-            {
-              "name": "Lachlan Bayliss",
-              "number": 25,
-              "pos": "M"
-            },
-            {
-              "name": "Benjamin Old",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Logan Rogerson",
-              "number": 7,
-              "pos": "F"
-            },
-            {
-              "name": "Kosta Barbarouses",
-              "number": 17,
-              "pos": "F"
-            },
-            {
-              "name": "Ben Waine",
-              "number": 18,
-              "pos": "F"
-            }
-          ]
-        },
-        "BELGIUM": {
-          "formation": "4-2-3-1",
-          "coach": "Rudi Garcia",
-          "startXI": [
-            {
-              "name": "Thibaut Courtois",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Timothy Castagne",
-              "number": 21,
-              "pos": "D"
-            },
-            {
-              "name": "Brandon Mechele",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Arthur Theate",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Maxim De Cuyper",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Hans Vanaken",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Youri Tielemans",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Leandro Trossard",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Kevin De Bruyne",
-              "number": 7,
-              "pos": "M"
-            },
-            {
-              "name": "J\u00e9r\u00e9my Doku",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "Charles De Ketelaere",
-              "number": 17,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Senne Lammens",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Mike Penders",
-              "number": 13,
-              "pos": "G"
-            },
-            {
-              "name": "Joaquin Seys",
-              "number": 18,
-              "pos": "D"
-            },
-            {
-              "name": "Koni De Winter",
-              "number": 16,
-              "pos": "D"
-            },
-            {
-              "name": "Thomas Meunier",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Amadou Onana",
-              "number": 24,
-              "pos": "M"
-            },
-            {
-              "name": "Diego Moreira",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Dodi Lukebakio",
-              "number": 14,
-              "pos": "F"
-            },
-            {
-              "name": "Nicolas Raskin",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "Axel Witsel",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Alexis Saelemaekers",
-              "number": 22,
-              "pos": "F"
-            },
-            {
-              "name": "Mat\u00edas Fern\u00e1ndez-Pardo",
-              "number": 26,
-              "pos": "F"
-            },
-            {
-              "name": "Romelu Lukaku",
-              "number": 9,
               "pos": "F"
             }
           ]
@@ -25100,6 +24723,396 @@
             {
               "name": "Saleh Al-Shehri",
               "number": 11,
+              "pos": "F"
+            }
+          ]
+        }
+      }
+    },
+    "NEW ZEALAND-BELGIUM": {
+      "homeGoals": 1,
+      "awayGoals": 5,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-06-27T03:00:00+00:00",
+      "referee": "Adham Mohammad, Jordan",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "L. Trossard",
+          "team": "BELGIUM",
+          "minute": 28,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "M. Stamenic",
+          "team": "NEW ZEALAND",
+          "minute": 46,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "L. Trossard",
+          "team": "BELGIUM",
+          "minute": 50,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "E. Just",
+          "team": "NEW ZEALAND",
+          "minute": 56,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "K. De Bruyne",
+          "team": "BELGIUM",
+          "minute": 66,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "E. Just",
+          "team": "NEW ZEALAND",
+          "minute": 84,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "R. Lukaku",
+          "team": "BELGIUM",
+          "minute": 86,
+          "extra": null
+        }
+      ],
+      "substitutions": {
+        "NEW ZEALAND": [
+          {
+            "out": "S. Singh",
+            "in": "J. Randall",
+            "minute": 46
+          },
+          {
+            "out": "R. Thomas",
+            "in": "B. Old",
+            "minute": 46
+          },
+          {
+            "out": "T. Payne",
+            "in": "M. Boxall",
+            "minute": 64
+          },
+          {
+            "out": "J. Bell",
+            "in": "C. McCowatt",
+            "minute": 64
+          },
+          {
+            "out": "L. Cacace",
+            "in": "F. De Vries",
+            "minute": 79
+          }
+        ],
+        "BELGIUM": [
+          {
+            "out": "J. Doku",
+            "in": "M. Fernandez-Pardo",
+            "minute": 56
+          },
+          {
+            "out": "L. Trossard",
+            "in": "A. Saelemaekers",
+            "minute": 72
+          },
+          {
+            "out": "K. De Bruyne",
+            "in": "A. Onana",
+            "minute": 72
+          },
+          {
+            "out": "C. De Ketelaere",
+            "in": "R. Lukaku",
+            "minute": 85
+          },
+          {
+            "out": "Y. Tielemans",
+            "in": "N. Raskin",
+            "minute": 85
+          }
+        ]
+      },
+      "lineups": {
+        "NEW ZEALAND": {
+          "formation": "4-2-3-1",
+          "coach": null,
+          "startXI": [
+            {
+              "name": "Max Crocombe",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Tim Payne",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Finn Surman",
+              "number": 16,
+              "pos": "D"
+            },
+            {
+              "name": "Tyler Bindon",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Liberato Cacace",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Marko Stameni\u0107",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Joe Bell",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Ryan Thomas",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Sarpreet Singh",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Elijah Just",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Chris Wood",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Michael Woud",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Alex Paulsen",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Nando Pijnaker",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Michael Boxall",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Francis De Vries",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Tommy Smith",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Callan Elliot",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Alex Rufer",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Callum McCowatt",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Jesse Randall",
+              "number": 21,
+              "pos": "F"
+            },
+            {
+              "name": "Lachlan Bayliss",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "Benjamin Old",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Logan Rogerson",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Kosta Barbarouses",
+              "number": 17,
+              "pos": "F"
+            },
+            {
+              "name": "Ben Waine",
+              "number": 18,
+              "pos": "F"
+            }
+          ]
+        },
+        "BELGIUM": {
+          "formation": "4-2-3-1",
+          "coach": "Rudi Garcia",
+          "startXI": [
+            {
+              "name": "Thibaut Courtois",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Timothy Castagne",
+              "number": 21,
+              "pos": "D"
+            },
+            {
+              "name": "Brandon Mechele",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Arthur Theate",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Maxim De Cuyper",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Hans Vanaken",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Youri Tielemans",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Leandro Trossard",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Kevin De Bruyne",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "J\u00e9r\u00e9my Doku",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Charles De Ketelaere",
+              "number": 17,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Senne Lammens",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Mike Penders",
+              "number": 13,
+              "pos": "G"
+            },
+            {
+              "name": "Joaquin Seys",
+              "number": 18,
+              "pos": "D"
+            },
+            {
+              "name": "Koni De Winter",
+              "number": 16,
+              "pos": "D"
+            },
+            {
+              "name": "Thomas Meunier",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Amadou Onana",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "Diego Moreira",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Dodi Lukebakio",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "Nicolas Raskin",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Axel Witsel",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Alexis Saelemaekers",
+              "number": 22,
+              "pos": "F"
+            },
+            {
+              "name": "Mat\u00edas Fern\u00e1ndez-Pardo",
+              "number": 26,
+              "pos": "F"
+            },
+            {
+              "name": "Romelu Lukaku",
+              "number": 9,
               "pos": "F"
             }
           ]
