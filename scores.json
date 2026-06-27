@@ -1,402 +1,6 @@
 {
-  "updated": "2026-06-27T05:00:50.787628Z",
+  "updated": "2026-06-27T05:06:18.678931Z",
   "matches": {
-    "EGYPT-IRAN": {
-      "homeGoals": 1,
-      "awayGoals": 1,
-      "status": "2H",
-      "elapsed": 90,
-      "kickoffUTC": "2026-06-27T03:00:00+00:00",
-      "referee": "Szymon Marciniak, Poland",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "M. Saber",
-          "team": "EGYPT",
-          "minute": 5,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Missed Penalty",
-          "player": "M. Taremi",
-          "team": "IRAN",
-          "minute": 11,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "R. Rezaeian",
-          "team": "IRAN",
-          "minute": 14,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "H. Kanaani",
-          "team": "IRAN",
-          "minute": 19,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "M. Saber",
-          "team": "EGYPT",
-          "minute": 20,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Y. Ibrahim",
-          "team": "EGYPT",
-          "minute": 42,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "A. Nemati",
-          "team": "IRAN",
-          "minute": 43,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "S. Ezatolahi",
-          "team": "IRAN",
-          "minute": 79,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "M. Lasheen",
-          "team": "EGYPT",
-          "minute": 90,
-          "extra": 2
-        }
-      ],
-      "substitutions": {
-        "EGYPT": [
-          {
-            "out": "M. Abdelmonem",
-            "in": "Y. Ibrahim",
-            "minute": 14
-          },
-          {
-            "out": "E. Ashour",
-            "in": "O. Marmoush",
-            "minute": 46
-          },
-          {
-            "out": "M. Saber",
-            "in": "M. Attia",
-            "minute": 46
-          },
-          {
-            "out": "M. Salah",
-            "in": "Zizo",
-            "minute": 57
-          },
-          {
-            "out": "M. Ziko",
-            "in": "H. Abdelkarim",
-            "minute": 76
-          }
-        ],
-        "IRAN": [
-          {
-            "out": "A. Nemati",
-            "in": "S. Hardani",
-            "minute": 46
-          },
-          {
-            "out": "S. Ghoddos",
-            "in": "S. Moghanlou",
-            "minute": 67
-          },
-          {
-            "out": "M. Mohebi",
-            "in": "A. Jahanbakhsh",
-            "minute": 90
-          }
-        ]
-      },
-      "lineups": {
-        "EGYPT": {
-          "formation": "4-2-3-1",
-          "coach": "Hossam Hassan",
-          "startXI": [
-            {
-              "name": "Mostafa Shobeir",
-              "number": 23,
-              "pos": "G"
-            },
-            {
-              "name": "Mohamed Hany",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Mohamed Abdelmonem",
-              "number": 6,
-              "pos": "D"
-            },
-            {
-              "name": "Rami Rabia",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Ahmed Fatouh",
-              "number": 13,
-              "pos": "D"
-            },
-            {
-              "name": "Mahmoud Saber",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "Mohanad Lasheen",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Mostafa Ziko",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "Mohamed Salah",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Emam Ashour",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Mahmoud Tr\u00e9z\u00e9guet",
-              "number": 7,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Mohamed El-Shenawy",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Mahdi Soliman",
-              "number": 16,
-              "pos": "G"
-            },
-            {
-              "name": "Mohamed Alaa",
-              "number": 26,
-              "pos": "G"
-            },
-            {
-              "name": "Yasser Ibrahim",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Karim Hafez",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Tarek Alaa",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Nabil Donga",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "Marwan Attia",
-              "number": 19,
-              "pos": "M"
-            },
-            {
-              "name": "Haissem Hassan",
-              "number": 12,
-              "pos": "F"
-            },
-            {
-              "name": "Ibrahim Adel",
-              "number": 20,
-              "pos": "F"
-            },
-            {
-              "name": "Zizo",
-              "number": 25,
-              "pos": "F"
-            },
-            {
-              "name": "Hamza Abdelkarim",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Omar Marmoush",
-              "number": 22,
-              "pos": "F"
-            }
-          ]
-        },
-        "IRAN": {
-          "formation": "5-3-2",
-          "coach": "Amir Ghalenoei",
-          "startXI": [
-            {
-              "name": "Alireza Beiranvand",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Ramin Rezaeian",
-              "number": 23,
-              "pos": "D"
-            },
-            {
-              "name": "Hossein Kanaani",
-              "number": 13,
-              "pos": "D"
-            },
-            {
-              "name": "Shoja Khalilzadeh",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Ali Nemati",
-              "number": 19,
-              "pos": "D"
-            },
-            {
-              "name": "Milad Mohammadi",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Saman Ghoddos",
-              "number": 14,
-              "pos": "M"
-            },
-            {
-              "name": "Mohammad Ghorbani",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "Saeid Ezatolahi",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Mehdi Taremi",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Mohammad Mohebi",
-              "number": 8,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Payam Niazmand",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Hossein Hosseini",
-              "number": 22,
-              "pos": "G"
-            },
-            {
-              "name": "Ehsan Hajsafi",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Danial Eiri",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "Roozbeh Cheshmi",
-              "number": 15,
-              "pos": "M"
-            },
-            {
-              "name": "Saleh Hardani",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Aria Yousefi",
-              "number": 17,
-              "pos": "D"
-            },
-            {
-              "name": "Amirmohammad Razzaghinia",
-              "number": 26,
-              "pos": "M"
-            },
-            {
-              "name": "Mehdi Ghayedi",
-              "number": 10,
-              "pos": "F"
-            },
-            {
-              "name": "Alireza Jahanbakhsh",
-              "number": 7,
-              "pos": "F"
-            },
-            {
-              "name": "Mahdi Torabi",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "Ali Alipour",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "Amirhossein Hosseinzadeh",
-              "number": 18,
-              "pos": "F"
-            },
-            {
-              "name": "Shahriar Moghanlou",
-              "number": 20,
-              "pos": "F"
-            },
-            {
-              "name": "Dennis Eckert Ayensa",
-              "number": 24,
-              "pos": "F"
-            }
-          ]
-        }
-      }
-    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -24729,6 +24333,402 @@
         }
       }
     },
+    "EGYPT-IRAN": {
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-06-27T03:00:00+00:00",
+      "referee": "Szymon Marciniak, Poland",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "M. Saber",
+          "team": "EGYPT",
+          "minute": 5,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Missed Penalty",
+          "player": "M. Taremi",
+          "team": "IRAN",
+          "minute": 11,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "R. Rezaeian",
+          "team": "IRAN",
+          "minute": 14,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "H. Kanaani",
+          "team": "IRAN",
+          "minute": 19,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "M. Saber",
+          "team": "EGYPT",
+          "minute": 20,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Y. Ibrahim",
+          "team": "EGYPT",
+          "minute": 42,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Nemati",
+          "team": "IRAN",
+          "minute": 43,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "S. Ezatolahi",
+          "team": "IRAN",
+          "minute": 79,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "M. Lasheen",
+          "team": "EGYPT",
+          "minute": 90,
+          "extra": 2
+        }
+      ],
+      "substitutions": {
+        "EGYPT": [
+          {
+            "out": "M. Abdelmonem",
+            "in": "Y. Ibrahim",
+            "minute": 14
+          },
+          {
+            "out": "E. Ashour",
+            "in": "O. Marmoush",
+            "minute": 46
+          },
+          {
+            "out": "M. Saber",
+            "in": "M. Attia",
+            "minute": 46
+          },
+          {
+            "out": "M. Salah",
+            "in": "Zizo",
+            "minute": 57
+          },
+          {
+            "out": "M. Ziko",
+            "in": "H. Abdelkarim",
+            "minute": 76
+          }
+        ],
+        "IRAN": [
+          {
+            "out": "A. Nemati",
+            "in": "S. Hardani",
+            "minute": 46
+          },
+          {
+            "out": "S. Ghoddos",
+            "in": "S. Moghanlou",
+            "minute": 67
+          },
+          {
+            "out": "M. Mohebi",
+            "in": "A. Jahanbakhsh",
+            "minute": 90
+          }
+        ]
+      },
+      "lineups": {
+        "EGYPT": {
+          "formation": "4-2-3-1",
+          "coach": "Hossam Hassan",
+          "startXI": [
+            {
+              "name": "Mostafa Shobeir",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Mohamed Hany",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Mohamed Abdelmonem",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "Rami Rabia",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Ahmed Fatouh",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Mahmoud Saber",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Mohanad Lasheen",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Mostafa Ziko",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Mohamed Salah",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Emam Ashour",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Mahmoud Tr\u00e9z\u00e9guet",
+              "number": 7,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Mohamed El-Shenawy",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Mahdi Soliman",
+              "number": 16,
+              "pos": "G"
+            },
+            {
+              "name": "Mohamed Alaa",
+              "number": 26,
+              "pos": "G"
+            },
+            {
+              "name": "Yasser Ibrahim",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Karim Hafez",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Tarek Alaa",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Nabil Donga",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Marwan Attia",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "Haissem Hassan",
+              "number": 12,
+              "pos": "F"
+            },
+            {
+              "name": "Ibrahim Adel",
+              "number": 20,
+              "pos": "F"
+            },
+            {
+              "name": "Zizo",
+              "number": 25,
+              "pos": "F"
+            },
+            {
+              "name": "Hamza Abdelkarim",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Omar Marmoush",
+              "number": 22,
+              "pos": "F"
+            }
+          ]
+        },
+        "IRAN": {
+          "formation": "5-3-2",
+          "coach": "Amir Ghalenoei",
+          "startXI": [
+            {
+              "name": "Alireza Beiranvand",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Ramin Rezaeian",
+              "number": 23,
+              "pos": "D"
+            },
+            {
+              "name": "Hossein Kanaani",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Shoja Khalilzadeh",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Ali Nemati",
+              "number": 19,
+              "pos": "D"
+            },
+            {
+              "name": "Milad Mohammadi",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Saman Ghoddos",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Mohammad Ghorbani",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Saeid Ezatolahi",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Mehdi Taremi",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Mohammad Mohebi",
+              "number": 8,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Payam Niazmand",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Hossein Hosseini",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Ehsan Hajsafi",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Danial Eiri",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Roozbeh Cheshmi",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Saleh Hardani",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Aria Yousefi",
+              "number": 17,
+              "pos": "D"
+            },
+            {
+              "name": "Amirmohammad Razzaghinia",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "Mehdi Ghayedi",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Alireza Jahanbakhsh",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Mahdi Torabi",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Ali Alipour",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Amirhossein Hosseinzadeh",
+              "number": 18,
+              "pos": "F"
+            },
+            {
+              "name": "Shahriar Moghanlou",
+              "number": 20,
+              "pos": "F"
+            },
+            {
+              "name": "Dennis Eckert Ayensa",
+              "number": 24,
+              "pos": "F"
+            }
+          ]
+        }
+      }
+    },
     "NEW ZEALAND-BELGIUM": {
       "homeGoals": 1,
       "awayGoals": 5,
@@ -25183,6 +25183,14 @@
       "kickoffUTC": "2026-06-29T17:00:00+00:00",
       "referee": null
     },
+    "GERMANY-PARAGUAY": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null,
+      "kickoffUTC": "2026-06-29T20:30:00+00:00",
+      "referee": null
+    },
     "NETHERLANDS-MOROCCO": {
       "homeGoals": null,
       "awayGoals": null,
@@ -25199,12 +25207,36 @@
       "kickoffUTC": "2026-06-30T17:00:00+00:00",
       "referee": null
     },
+    "FRANCE-SWEDEN": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null,
+      "kickoffUTC": "2026-06-30T21:00:00+00:00",
+      "referee": null
+    },
     "USA-BOSNIA & HERZEGOVINA": {
       "homeGoals": null,
       "awayGoals": null,
       "status": "NS",
       "elapsed": null,
       "kickoffUTC": "2026-07-02T00:00:00+00:00",
+      "referee": null
+    },
+    "AUSTRALIA-EGYPT": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null,
+      "kickoffUTC": "2026-07-03T18:00:00+00:00",
+      "referee": null
+    },
+    "ARGENTINA-CAPE VERDE": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null,
+      "kickoffUTC": "2026-07-03T22:00:00+00:00",
       "referee": null
     }
   }
