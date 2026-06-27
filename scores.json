@@ -1,393 +1,6 @@
 {
-  "updated": "2026-06-27T02:00:47.906484Z",
+  "updated": "2026-06-27T02:10:21.337407Z",
   "matches": {
-    "URUGUAY-SPAIN": {
-      "homeGoals": 0,
-      "awayGoals": 1,
-      "status": "2H",
-      "elapsed": 90,
-      "kickoffUTC": "2026-06-27T00:00:00+00:00",
-      "referee": "Ismail Elfath, USA",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "A. Baena",
-          "team": "SPAIN",
-          "minute": 42,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "A. Baena",
-          "team": "SPAIN",
-          "minute": 46,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "J. Sanabria",
-          "team": "URUGUAY",
-          "minute": 54,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "G. Varela",
-          "team": "URUGUAY",
-          "minute": 58,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "N. de la Cruz",
-          "team": "URUGUAY",
-          "minute": 90,
-          "extra": 3
-        },
-        {
-          "type": "Card",
-          "detail": "Red Card",
-          "player": "A. Canobbio",
-          "team": "URUGUAY",
-          "minute": 90,
-          "extra": 5
-        }
-      ],
-      "substitutions": {
-        "URUGUAY": [
-          {
-            "out": "M. Ugarte",
-            "in": "N. de la Cruz",
-            "minute": 45
-          },
-          {
-            "out": "F. Muslera",
-            "in": "S. Rochet",
-            "minute": 46
-          },
-          {
-            "out": "F. Valverde",
-            "in": "F. Vinas",
-            "minute": 57
-          },
-          {
-            "out": "J. Sanabria",
-            "in": "B. Rodriguez",
-            "minute": 70
-          }
-        ],
-        "SPAIN": [
-          {
-            "out": "Pedri",
-            "in": "F. Ruiz",
-            "minute": 60
-          },
-          {
-            "out": "M. Merino",
-            "in": "D. Olmo",
-            "minute": 60
-          },
-          {
-            "out": "A. Baena",
-            "in": "Y. Pino",
-            "minute": 66
-          },
-          {
-            "out": "Lamine Yamal",
-            "in": "N. Williams",
-            "minute": 76
-          },
-          {
-            "out": "M. Oyarzabal",
-            "in": "F. Torres",
-            "minute": 76
-          }
-        ]
-      },
-      "lineups": {
-        "URUGUAY": {
-          "formation": "4-2-3-1",
-          "coach": "Marcelo Bielsa",
-          "startXI": [
-            {
-              "name": "Fernando Muslera",
-              "number": 23,
-              "pos": "G"
-            },
-            {
-              "name": "Guillermo Varela",
-              "number": 13,
-              "pos": "D"
-            },
-            {
-              "name": "Sebasti\u00e1n C\u00e1ceres",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Math\u00edas Olivera",
-              "number": 16,
-              "pos": "D"
-            },
-            {
-              "name": "Juan Sanabria",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "Rodrigo Bentancur",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Manuel Ugarte",
-              "number": 5,
-              "pos": "M"
-            },
-            {
-              "name": "Agust\u00edn Canobbio",
-              "number": 14,
-              "pos": "M"
-            },
-            {
-              "name": "Federico Valverde",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Maximiliano Ara\u00fajo",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Darwin N\u00fa\u00f1ez",
-              "number": 9,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Santiago Mele",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Sergio Rochet",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Mat\u00edas Vi\u00f1a",
-              "number": 17,
-              "pos": "D"
-            },
-            {
-              "name": "Santiago Bueno",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Jos\u00e9 Mar\u00eda Gim\u00e9nez",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Ronald Ara\u00fajo",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Joaqu\u00edn Piquerez",
-              "number": 22,
-              "pos": "D"
-            },
-            {
-              "name": "Nicol\u00e1s de la Cruz",
-              "number": 7,
-              "pos": "M"
-            },
-            {
-              "name": "Brian Rodr\u00edguez",
-              "number": 18,
-              "pos": "F"
-            },
-            {
-              "name": "Emiliano Mart\u00ednez",
-              "number": 15,
-              "pos": "M"
-            },
-            {
-              "name": "Giorgian de Arrascaeta",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Facundo Pellistri",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "Federico Vi\u00f1as",
-              "number": 21,
-              "pos": "F"
-            },
-            {
-              "name": "Rodrigo Aguirre",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Rodrigo Zalazar",
-              "number": 26,
-              "pos": "M"
-            }
-          ]
-        },
-        "SPAIN": {
-          "formation": "4-3-3",
-          "coach": "Luis de la Fuente",
-          "startXI": [
-            {
-              "name": "Unai Sim\u00f3n",
-              "number": 23,
-              "pos": "G"
-            },
-            {
-              "name": "Marcos Llorente",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Pau Cubars\u00ed",
-              "number": 22,
-              "pos": "D"
-            },
-            {
-              "name": "Aymeric Laporte",
-              "number": 14,
-              "pos": "D"
-            },
-            {
-              "name": "Marc Cucurella",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Pedri",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Rodri",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "Mikel Merino",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Lamine Yamal",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Mikel Oyarzabal",
-              "number": 21,
-              "pos": "F"
-            },
-            {
-              "name": "Alex Baena",
-              "number": 15,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Joan Garc\u00eda",
-              "number": 13,
-              "pos": "G"
-            },
-            {
-              "name": "David Raya",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Marc Pubill",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Eric Garc\u00eda",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Pedro Porro",
-              "number": 12,
-              "pos": "D"
-            },
-            {
-              "name": "Pablo Gavi",
-              "number": 9,
-              "pos": "M"
-            },
-            {
-              "name": "Mart\u00edn Zubimendi",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "Nico Williams",
-              "number": 17,
-              "pos": "F"
-            },
-            {
-              "name": "Fabi\u00e1n Ruiz",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Alejandro Grimaldo",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Dani Olmo",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Borja Iglesias",
-              "number": 26,
-              "pos": "F"
-            },
-            {
-              "name": "Ferran Torres",
-              "number": 7,
-              "pos": "F"
-            },
-            {
-              "name": "Y\u00e9remy Pino",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "V\u00edctor Mu\u00f1oz",
-              "number": 25,
-              "pos": "F"
-            }
-          ]
-        }
-      }
-    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -23980,6 +23593,393 @@
         }
       }
     },
+    "URUGUAY-SPAIN": {
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-06-27T00:00:00+00:00",
+      "referee": "Ismail Elfath, USA",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Baena",
+          "team": "SPAIN",
+          "minute": 42,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Baena",
+          "team": "SPAIN",
+          "minute": 46,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "J. Sanabria",
+          "team": "URUGUAY",
+          "minute": 54,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "G. Varela",
+          "team": "URUGUAY",
+          "minute": 58,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "N. de la Cruz",
+          "team": "URUGUAY",
+          "minute": 90,
+          "extra": 3
+        },
+        {
+          "type": "Card",
+          "detail": "Red Card",
+          "player": "A. Canobbio",
+          "team": "URUGUAY",
+          "minute": 90,
+          "extra": 5
+        }
+      ],
+      "substitutions": {
+        "URUGUAY": [
+          {
+            "out": "M. Ugarte",
+            "in": "N. de la Cruz",
+            "minute": 45
+          },
+          {
+            "out": "F. Muslera",
+            "in": "S. Rochet",
+            "minute": 46
+          },
+          {
+            "out": "F. Valverde",
+            "in": "F. Vinas",
+            "minute": 57
+          },
+          {
+            "out": "J. Sanabria",
+            "in": "B. Rodriguez",
+            "minute": 70
+          }
+        ],
+        "SPAIN": [
+          {
+            "out": "Pedri",
+            "in": "F. Ruiz",
+            "minute": 60
+          },
+          {
+            "out": "M. Merino",
+            "in": "D. Olmo",
+            "minute": 60
+          },
+          {
+            "out": "A. Baena",
+            "in": "Y. Pino",
+            "minute": 66
+          },
+          {
+            "out": "Lamine Yamal",
+            "in": "N. Williams",
+            "minute": 76
+          },
+          {
+            "out": "M. Oyarzabal",
+            "in": "F. Torres",
+            "minute": 76
+          }
+        ]
+      },
+      "lineups": {
+        "URUGUAY": {
+          "formation": "4-2-3-1",
+          "coach": "Marcelo Bielsa",
+          "startXI": [
+            {
+              "name": "Fernando Muslera",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Guillermo Varela",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Sebasti\u00e1n C\u00e1ceres",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Math\u00edas Olivera",
+              "number": 16,
+              "pos": "D"
+            },
+            {
+              "name": "Juan Sanabria",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Rodrigo Bentancur",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Manuel Ugarte",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "Agust\u00edn Canobbio",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Federico Valverde",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Maximiliano Ara\u00fajo",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Darwin N\u00fa\u00f1ez",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Santiago Mele",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Sergio Rochet",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Mat\u00edas Vi\u00f1a",
+              "number": 17,
+              "pos": "D"
+            },
+            {
+              "name": "Santiago Bueno",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Jos\u00e9 Mar\u00eda Gim\u00e9nez",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Ronald Ara\u00fajo",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Joaqu\u00edn Piquerez",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "Nicol\u00e1s de la Cruz",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Brian Rodr\u00edguez",
+              "number": 18,
+              "pos": "F"
+            },
+            {
+              "name": "Emiliano Mart\u00ednez",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Giorgian de Arrascaeta",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Facundo Pellistri",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Federico Vi\u00f1as",
+              "number": 21,
+              "pos": "F"
+            },
+            {
+              "name": "Rodrigo Aguirre",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Rodrigo Zalazar",
+              "number": 26,
+              "pos": "M"
+            }
+          ]
+        },
+        "SPAIN": {
+          "formation": "4-3-3",
+          "coach": "Luis de la Fuente",
+          "startXI": [
+            {
+              "name": "Unai Sim\u00f3n",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Marcos Llorente",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Pau Cubars\u00ed",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "Aymeric Laporte",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "Marc Cucurella",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Pedri",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Rodri",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Mikel Merino",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Lamine Yamal",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Mikel Oyarzabal",
+              "number": 21,
+              "pos": "F"
+            },
+            {
+              "name": "Alex Baena",
+              "number": 15,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Joan Garc\u00eda",
+              "number": 13,
+              "pos": "G"
+            },
+            {
+              "name": "David Raya",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Marc Pubill",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Eric Garc\u00eda",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Pedro Porro",
+              "number": 12,
+              "pos": "D"
+            },
+            {
+              "name": "Pablo Gavi",
+              "number": 9,
+              "pos": "M"
+            },
+            {
+              "name": "Mart\u00edn Zubimendi",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Nico Williams",
+              "number": 17,
+              "pos": "F"
+            },
+            {
+              "name": "Fabi\u00e1n Ruiz",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Alejandro Grimaldo",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Dani Olmo",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Borja Iglesias",
+              "number": 26,
+              "pos": "F"
+            },
+            {
+              "name": "Ferran Torres",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Y\u00e9remy Pino",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "V\u00edctor Mu\u00f1oz",
+              "number": 25,
+              "pos": "F"
+            }
+          ]
+        }
+      }
+    },
     "CAPE VERDE-SAUDI ARABIA": {
       "homeGoals": 0,
       "awayGoals": 0,
@@ -24347,7 +24347,7 @@
       "status": "NS",
       "elapsed": null,
       "kickoffUTC": "2026-06-27T03:00:00+00:00",
-      "referee": "A. Makhadmeh"
+      "referee": "Adham Mohammad, Jordan"
     },
     "CROATIA-GHANA": {
       "homeGoals": null,
@@ -24419,6 +24419,14 @@
       "status": "NS",
       "elapsed": null,
       "kickoffUTC": "2026-06-30T01:00:00+00:00",
+      "referee": null
+    },
+    "IVORY COAST-NORWAY": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null,
+      "kickoffUTC": "2026-06-30T17:00:00+00:00",
       "referee": null
     },
     "USA-BOSNIA & HERZEGOVINA": {
