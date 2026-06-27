@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-27T22:20:23.530628Z",
+  "updated": "2026-06-27T22:30:38.304650Z",
   "matches": {
     "CROATIA-GHANA": {
       "homeGoals": 1,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 59,
+      "elapsed": 70,
       "kickoffUTC": "2026-06-27T21:00:00+00:00",
       "referee": "Drew Fischer, Canada",
       "events": [
@@ -15,6 +15,14 @@
           "player": "P. Sucic",
           "team": "CROATIA",
           "minute": 31,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "I. Perisic",
+          "team": "CROATIA",
+          "minute": 68,
           "extra": null
         }
       ],
@@ -29,6 +37,13 @@
             "out": "E. Owusu",
             "in": "I. Fatawu",
             "minute": 46
+          }
+        ],
+        "CROATIA": [
+          {
+            "out": "A. Budimir",
+            "in": "I. Matanovic",
+            "minute": 66
           }
         ]
       },
@@ -313,9 +328,9 @@
     },
     "PANAMA-ENGLAND": {
       "homeGoals": 0,
-      "awayGoals": 0,
+      "awayGoals": 2,
       "status": "2H",
-      "elapsed": 61,
+      "elapsed": 72,
       "kickoffUTC": "2026-06-27T21:00:00+00:00",
       "referee": "Abdulrahman Al-Jassim, Qatar",
       "events": [
@@ -332,7 +347,23 @@
           "detail": "Yellow Card",
           "player": "J. Quansah",
           "team": "ENGLAND",
-          "minute": 61,
+          "minute": 60,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "J. Bellingham",
+          "team": "ENGLAND",
+          "minute": 62,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "H. Kane",
+          "team": "ENGLAND",
+          "minute": 67,
           "extra": null
         }
       ],
@@ -342,6 +373,23 @@
             "out": "T. Rodriguez",
             "in": "J. Fajardo",
             "minute": 46
+          },
+          {
+            "out": "Y. Barcenas",
+            "in": "I. Diaz",
+            "minute": 71
+          }
+        ],
+        "ENGLAND": [
+          {
+            "out": "J. Quansah",
+            "in": "D. Spence",
+            "minute": 63
+          },
+          {
+            "out": "B. Saka",
+            "in": "N. Madueke",
+            "minute": 63
           }
         ]
       },
