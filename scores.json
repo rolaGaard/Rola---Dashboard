@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-27T01:40:21.334793Z",
+  "updated": "2026-06-27T01:50:20.772106Z",
   "matches": {
     "URUGUAY-SPAIN": {
       "homeGoals": 0,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 76,
+      "elapsed": 86,
       "kickoffUTC": "2026-06-27T00:00:00+00:00",
       "referee": "Ismail Elfath, USA",
       "events": [
@@ -80,6 +80,16 @@
             "out": "A. Baena",
             "in": "Y. Pino",
             "minute": 66
+          },
+          {
+            "out": "Lamine Yamal",
+            "in": "N. Williams",
+            "minute": 76
+          },
+          {
+            "out": "M. Oyarzabal",
+            "in": "F. Torres",
+            "minute": 76
           }
         ]
       },
@@ -366,7 +376,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 77,
+      "elapsed": 87,
       "kickoffUTC": "2026-06-27T00:00:00+00:00",
       "referee": "Fran\u00e7ois Letexier, France",
       "events": [
@@ -416,6 +426,11 @@
             "out": "S. Mandash",
             "in": "A. Al Hamdan",
             "minute": 66
+          },
+          {
+            "out": "N. Boushal",
+            "in": "M. Al Harbi",
+            "minute": 82
           }
         ],
         "CAPE VERDE": [
@@ -24308,7 +24323,7 @@
       "status": "NS",
       "elapsed": null,
       "kickoffUTC": "2026-06-27T03:00:00+00:00",
-      "referee": "S. Marciniak"
+      "referee": "Szymon Marciniak, Poland"
     },
     "NEW ZEALAND-BELGIUM": {
       "homeGoals": null,
