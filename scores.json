@@ -1,6 +1,580 @@
 {
-  "updated": "2026-06-27T23:30:38.183663Z",
+  "updated": "2026-06-27T23:40:21.356467Z",
   "matches": {
+    "COLOMBIA-PORTUGAL": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "1H",
+      "elapsed": 9,
+      "kickoffUTC": "2026-06-27T23:30:00+00:00",
+      "referee": "Alireza Faghani, Australia",
+      "events": [],
+      "lineups": {
+        "COLOMBIA": {
+          "formation": "4-3-3",
+          "coach": "Nestor Lorenzo",
+          "startXI": [
+            {
+              "name": "Camilo Vargas",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Santiago Arias",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Davinson S\u00e1nchez",
+              "number": 23,
+              "pos": "D"
+            },
+            {
+              "name": "Jhon Lucum\u00ed",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Deiver Machado",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "Gustavo Puerta",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Jefferson Lerma",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Jhon Arias",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "James Rodr\u00edguez",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Jhon C\u00f3rdoba",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Luis D\u00edaz",
+              "number": 7,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "David Ospina",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "\u00c1lvaro Montero",
+              "number": 24,
+              "pos": "G"
+            },
+            {
+              "name": "Johan Mojica",
+              "number": 17,
+              "pos": "D"
+            },
+            {
+              "name": "Willer Ditta",
+              "number": 18,
+              "pos": "D"
+            },
+            {
+              "name": "Yerry Mina",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Andr\u00e9s G\u00f3mez",
+              "number": 26,
+              "pos": "F"
+            },
+            {
+              "name": "Daniel Mu\u00f1oz",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Jaminton Campaz",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Jorge Carrascal",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Juan Fernando Quintero",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Juan Portilla",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Kevin Casta\u00f1o",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "Richard R\u00edos",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Cucho Hern\u00e1ndez",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Luis Javier Su\u00e1rez",
+              "number": 25,
+              "pos": "F"
+            }
+          ]
+        },
+        "PORTUGAL": {
+          "formation": "4-2-3-1",
+          "coach": "Roberto Martinez",
+          "startXI": [
+            {
+              "name": "Diogo Costa",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Jo\u00e3o Cancelo",
+              "number": 20,
+              "pos": "D"
+            },
+            {
+              "name": "R\u00faben Dias",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Renato Veiga",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Nuno Mendes",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "R\u00faben Neves",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Vitinha",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Pedro Neto",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Bruno Fernandes",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Jo\u00e3o F\u00e9lix",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Cristiano Ronaldo",
+              "number": 7,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Jos\u00e9 S\u00e1",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Rui Silva",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Diogo Dalot",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Gon\u00e7alo In\u00e1cio",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "Matheus Nunes",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "N\u00e9lson Semedo",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Tom\u00e1s Ara\u00fajo",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Bernardo Silva",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Francisco Trinc\u00e3o",
+              "number": 16,
+              "pos": "F"
+            },
+            {
+              "name": "Gon\u00e7alo Guedes",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Jo\u00e3o Neves",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Sam\u00fa Costa",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "Francisco Concei\u00e7\u00e3o",
+              "number": 26,
+              "pos": "F"
+            },
+            {
+              "name": "Gon\u00e7alo Ramos",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Rafael Le\u00e3o",
+              "number": 17,
+              "pos": "F"
+            }
+          ]
+        }
+      }
+    },
+    "CONGO DR-UZBEKISTAN": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "1H",
+      "elapsed": 9,
+      "kickoffUTC": "2026-06-27T23:30:00+00:00",
+      "referee": "Felix Zwayer, Germany",
+      "events": [],
+      "lineups": {
+        "CONGO DR": {
+          "formation": "4-4-2",
+          "coach": "Sebastien Desabre",
+          "startXI": [
+            {
+              "name": "Lionel Mpasi Nzau",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Aaron Wan-Bissaka",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Chancel Mbemba",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "Axel Tuanzebe",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Arthur Masuaku",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Nathana\u00ebl Mbuku",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Samuel Moutoussamy",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Noah Sadiki",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Brian Cipenga",
+              "number": 9,
+              "pos": "M"
+            },
+            {
+              "name": "Yoane Wissa",
+              "number": 20,
+              "pos": "F"
+            },
+            {
+              "name": "C\u00e9dric Bakambu",
+              "number": 17,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Matthieu Epolo",
+              "number": 21,
+              "pos": "G"
+            },
+            {
+              "name": "Timothy Fayulu",
+              "number": 16,
+              "pos": "G"
+            },
+            {
+              "name": "Dylan Batubinsika",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Gedeon Kalulu",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Joris Kayembe",
+              "number": 12,
+              "pos": "D"
+            },
+            {
+              "name": "Steve Kapuadi",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Aaron Tshibola",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Charles Pickel",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Ga\u00ebl Kakuta",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Th\u00e9o Bongonda",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Edo Kayembe",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "Ngal'ayel Mukau",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Fiston Mayele",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Meschak Elia",
+              "number": 13,
+              "pos": "F"
+            },
+            {
+              "name": "Simon Banza",
+              "number": 23,
+              "pos": "F"
+            }
+          ]
+        },
+        "UZBEKISTAN": {
+          "formation": "3-4-2-1",
+          "coach": "Fabio Cannavaro",
+          "startXI": [
+            {
+              "name": "Abduvokhid Nematov",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Abdukodir Khusanov",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Jakhongir Urozov",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Rustam Ashurmatov",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Khozhiakbar Alizhonov",
+              "number": 3,
+              "pos": "M"
+            },
+            {
+              "name": "Akmal Mozgovoy",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Otabek Shukurov",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Sherzod Nasrullaev",
+              "number": 13,
+              "pos": "M"
+            },
+            {
+              "name": "Dostonbek Khamdamov",
+              "number": 17,
+              "pos": "F"
+            },
+            {
+              "name": "Abbosbek Fayzullaev",
+              "number": 22,
+              "pos": "F"
+            },
+            {
+              "name": "Eldor Shomurodov",
+              "number": 14,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Botirali Ergashev",
+              "number": 16,
+              "pos": "G"
+            },
+            {
+              "name": "Utkir Yusupov",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Avazbek Ulmasaliyev",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Farrukh Sayfiev",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Umarbek Eshmuradov",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Bekhruz Karimov",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Azizbek Amanov",
+              "number": 20,
+              "pos": "F"
+            },
+            {
+              "name": "Jamshid Iskandarov",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Oston Urunov",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Ruslanbek Jiyanov",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Sherzod Esanov",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Abdulla Abdullaev",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Azizjon Ganiev",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "Odiljon Khamrobekov",
+              "number": 9,
+              "pos": "M"
+            },
+            {
+              "name": "Igor Sergeev",
+              "number": 21,
+              "pos": "F"
+            }
+          ]
+        }
+      }
+    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -25858,578 +26432,6 @@
             {
               "name": "Anthony Gordon",
               "number": 18,
-              "pos": "F"
-            }
-          ]
-        }
-      }
-    },
-    "COLOMBIA-PORTUGAL": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null,
-      "kickoffUTC": "2026-06-27T23:30:00+00:00",
-      "referee": "Alireza Faghani, Australia",
-      "lineups": {
-        "COLOMBIA": {
-          "formation": "4-3-3",
-          "coach": "Nestor Lorenzo",
-          "startXI": [
-            {
-              "name": "Camilo Vargas",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Santiago Arias",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Davinson S\u00e1nchez",
-              "number": 23,
-              "pos": "D"
-            },
-            {
-              "name": "Jhon Lucum\u00ed",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Deiver Machado",
-              "number": 22,
-              "pos": "D"
-            },
-            {
-              "name": "Gustavo Puerta",
-              "number": 14,
-              "pos": "M"
-            },
-            {
-              "name": "Jefferson Lerma",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "Jhon Arias",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "James Rodr\u00edguez",
-              "number": 10,
-              "pos": "F"
-            },
-            {
-              "name": "Jhon C\u00f3rdoba",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Luis D\u00edaz",
-              "number": 7,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "David Ospina",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "\u00c1lvaro Montero",
-              "number": 24,
-              "pos": "G"
-            },
-            {
-              "name": "Johan Mojica",
-              "number": 17,
-              "pos": "D"
-            },
-            {
-              "name": "Willer Ditta",
-              "number": 18,
-              "pos": "D"
-            },
-            {
-              "name": "Yerry Mina",
-              "number": 13,
-              "pos": "D"
-            },
-            {
-              "name": "Andr\u00e9s G\u00f3mez",
-              "number": 26,
-              "pos": "F"
-            },
-            {
-              "name": "Daniel Mu\u00f1oz",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Jaminton Campaz",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "Jorge Carrascal",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Juan Fernando Quintero",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Juan Portilla",
-              "number": 15,
-              "pos": "M"
-            },
-            {
-              "name": "Kevin Casta\u00f1o",
-              "number": 5,
-              "pos": "M"
-            },
-            {
-              "name": "Richard R\u00edos",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Cucho Hern\u00e1ndez",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Luis Javier Su\u00e1rez",
-              "number": 25,
-              "pos": "F"
-            }
-          ]
-        },
-        "PORTUGAL": {
-          "formation": "4-2-3-1",
-          "coach": "Roberto Martinez",
-          "startXI": [
-            {
-              "name": "Diogo Costa",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Jo\u00e3o Cancelo",
-              "number": 20,
-              "pos": "D"
-            },
-            {
-              "name": "R\u00faben Dias",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Renato Veiga",
-              "number": 13,
-              "pos": "D"
-            },
-            {
-              "name": "Nuno Mendes",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "R\u00faben Neves",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "Vitinha",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "Pedro Neto",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "Bruno Fernandes",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Jo\u00e3o F\u00e9lix",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "Cristiano Ronaldo",
-              "number": 7,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Jos\u00e9 S\u00e1",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Rui Silva",
-              "number": 22,
-              "pos": "G"
-            },
-            {
-              "name": "Diogo Dalot",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Gon\u00e7alo In\u00e1cio",
-              "number": 14,
-              "pos": "D"
-            },
-            {
-              "name": "Matheus Nunes",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "N\u00e9lson Semedo",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Tom\u00e1s Ara\u00fajo",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Bernardo Silva",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Francisco Trinc\u00e3o",
-              "number": 16,
-              "pos": "F"
-            },
-            {
-              "name": "Gon\u00e7alo Guedes",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Jo\u00e3o Neves",
-              "number": 15,
-              "pos": "M"
-            },
-            {
-              "name": "Sam\u00fa Costa",
-              "number": 24,
-              "pos": "M"
-            },
-            {
-              "name": "Francisco Concei\u00e7\u00e3o",
-              "number": 26,
-              "pos": "F"
-            },
-            {
-              "name": "Gon\u00e7alo Ramos",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Rafael Le\u00e3o",
-              "number": 17,
-              "pos": "F"
-            }
-          ]
-        }
-      }
-    },
-    "CONGO DR-UZBEKISTAN": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null,
-      "kickoffUTC": "2026-06-27T23:30:00+00:00",
-      "referee": "Felix Zwayer, Germany",
-      "lineups": {
-        "CONGO DR": {
-          "formation": "4-4-2",
-          "coach": "Sebastien Desabre",
-          "startXI": [
-            {
-              "name": "Lionel Mpasi Nzau",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Aaron Wan-Bissaka",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Chancel Mbemba",
-              "number": 22,
-              "pos": "D"
-            },
-            {
-              "name": "Axel Tuanzebe",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Arthur Masuaku",
-              "number": 26,
-              "pos": "D"
-            },
-            {
-              "name": "Nathana\u00ebl Mbuku",
-              "number": 7,
-              "pos": "M"
-            },
-            {
-              "name": "Samuel Moutoussamy",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Noah Sadiki",
-              "number": 14,
-              "pos": "M"
-            },
-            {
-              "name": "Brian Cipenga",
-              "number": 9,
-              "pos": "M"
-            },
-            {
-              "name": "Yoane Wissa",
-              "number": 20,
-              "pos": "F"
-            },
-            {
-              "name": "C\u00e9dric Bakambu",
-              "number": 17,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Matthieu Epolo",
-              "number": 21,
-              "pos": "G"
-            },
-            {
-              "name": "Timothy Fayulu",
-              "number": 16,
-              "pos": "G"
-            },
-            {
-              "name": "Dylan Batubinsika",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Gedeon Kalulu",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Joris Kayembe",
-              "number": 12,
-              "pos": "D"
-            },
-            {
-              "name": "Steve Kapuadi",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Aaron Tshibola",
-              "number": 15,
-              "pos": "M"
-            },
-            {
-              "name": "Charles Pickel",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "Ga\u00ebl Kakuta",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "Th\u00e9o Bongonda",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Edo Kayembe",
-              "number": 25,
-              "pos": "M"
-            },
-            {
-              "name": "Ngal'ayel Mukau",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Fiston Mayele",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Meschak Elia",
-              "number": 13,
-              "pos": "F"
-            },
-            {
-              "name": "Simon Banza",
-              "number": 23,
-              "pos": "F"
-            }
-          ]
-        },
-        "UZBEKISTAN": {
-          "formation": "3-4-2-1",
-          "coach": "Fabio Cannavaro",
-          "startXI": [
-            {
-              "name": "Abduvokhid Nematov",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Abdukodir Khusanov",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Jakhongir Urozov",
-              "number": 26,
-              "pos": "D"
-            },
-            {
-              "name": "Rustam Ashurmatov",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Khozhiakbar Alizhonov",
-              "number": 3,
-              "pos": "M"
-            },
-            {
-              "name": "Akmal Mozgovoy",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Otabek Shukurov",
-              "number": 7,
-              "pos": "M"
-            },
-            {
-              "name": "Sherzod Nasrullaev",
-              "number": 13,
-              "pos": "M"
-            },
-            {
-              "name": "Dostonbek Khamdamov",
-              "number": 17,
-              "pos": "F"
-            },
-            {
-              "name": "Abbosbek Fayzullaev",
-              "number": 22,
-              "pos": "F"
-            },
-            {
-              "name": "Eldor Shomurodov",
-              "number": 14,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Botirali Ergashev",
-              "number": 16,
-              "pos": "G"
-            },
-            {
-              "name": "Utkir Yusupov",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Avazbek Ulmasaliyev",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "Farrukh Sayfiev",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Umarbek Eshmuradov",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Bekhruz Karimov",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Azizbek Amanov",
-              "number": 20,
-              "pos": "F"
-            },
-            {
-              "name": "Jamshid Iskandarov",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Oston Urunov",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "Ruslanbek Jiyanov",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Sherzod Esanov",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "Abdulla Abdullaev",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "Azizjon Ganiev",
-              "number": 19,
-              "pos": "M"
-            },
-            {
-              "name": "Odiljon Khamrobekov",
-              "number": 9,
-              "pos": "M"
-            },
-            {
-              "name": "Igor Sergeev",
-              "number": 21,
               "pos": "F"
             }
           ]
