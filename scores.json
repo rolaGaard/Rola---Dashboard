@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-27T22:00:50.706626Z",
+  "updated": "2026-06-27T22:10:23.689973Z",
   "matches": {
     "CROATIA-GHANA": {
       "homeGoals": 1,
       "awayGoals": 0,
-      "status": "HT",
-      "elapsed": 45,
+      "status": "2H",
+      "elapsed": 49,
       "kickoffUTC": "2026-06-27T21:00:00+00:00",
       "referee": "Drew Fischer, Canada",
       "events": [
@@ -18,6 +18,20 @@
           "extra": null
         }
       ],
+      "substitutions": {
+        "GHANA": [
+          {
+            "out": "J. Adjetey",
+            "in": "K. Peprah",
+            "minute": 46
+          },
+          {
+            "out": "E. Owusu",
+            "in": "I. Fatawu",
+            "minute": 46
+          }
+        ]
+      },
       "lineups": {
         "CROATIA": {
           "formation": "4-2-3-1",
@@ -300,11 +314,20 @@
     "PANAMA-ENGLAND": {
       "homeGoals": 0,
       "awayGoals": 0,
-      "status": "HT",
-      "elapsed": 45,
+      "status": "2H",
+      "elapsed": 52,
       "kickoffUTC": "2026-06-27T21:00:00+00:00",
       "referee": "Abdulrahman Al-Jassim, Qatar",
       "events": [],
+      "substitutions": {
+        "PANAMA": [
+          {
+            "out": "T. Rodriguez",
+            "in": "J. Fajardo",
+            "minute": 46
+          }
+        ]
+      },
       "lineups": {
         "PANAMA": {
           "formation": "5-4-1",
