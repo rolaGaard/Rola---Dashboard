@@ -1,14 +1,32 @@
 {
-  "updated": "2026-06-27T00:40:20.530046Z",
+  "updated": "2026-06-27T00:50:20.764285Z",
   "matches": {
     "URUGUAY-SPAIN": {
       "homeGoals": 0,
-      "awayGoals": 0,
+      "awayGoals": 1,
       "status": "1H",
-      "elapsed": 37,
+      "elapsed": 45,
       "kickoffUTC": "2026-06-27T00:00:00+00:00",
       "referee": "Ismail Elfath, USA",
-      "events": [],
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Baena",
+          "team": "SPAIN",
+          "minute": 42,
+          "extra": null
+        }
+      ],
+      "substitutions": {
+        "URUGUAY": [
+          {
+            "out": "M. Ugarte",
+            "in": "N. de la Cruz",
+            "minute": 45
+          }
+        ]
+      },
       "lineups": {
         "URUGUAY": {
           "formation": "4-2-3-1",
@@ -292,7 +310,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 36,
+      "elapsed": 45,
       "kickoffUTC": "2026-06-27T00:00:00+00:00",
       "referee": "Fran\u00e7ois Letexier, France",
       "events": [
