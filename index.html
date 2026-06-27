@@ -1927,11 +1927,22 @@ function updateCounters() {
     if (status === 'scheduled') scheduledCount++;
     if (isToday) todayCount++;
   });
+  // Sumamos también los 32 partidos de la fase eliminatoria (Dieciseisavos
+  // a Final) — ya tienen fecha/estadio fijo aunque el rival sea "TBD".
+  const knockoutEntries = getAllKnockoutEntries();
+  knockoutEntries.forEach(m => {
+    const { status } = knockoutEntryStatus(m);
+    const isToday = toARDateStr(m.kickoffUTC) === todayAR;
+    if (status === 'live') liveCount++;
+    if (status === 'finished') finishedCount++;
+    if (status === 'scheduled') scheduledCount++;
+    if (isToday) todayCount++;
+  });
   document.getElementById('stat-live').textContent = liveCount;
   document.getElementById('stat-today').textContent = todayCount;
   document.getElementById('stat-finished').textContent = finishedCount;
   document.getElementById('stat-scheduled').textContent = scheduledCount;
-  document.getElementById('stat-total').textContent = SCHEDULE.length;
+  document.getElementById('stat-total').textContent = SCHEDULE.length + knockoutEntries.length;
 }
 
 function formatDateHeader(utcStr) {
@@ -1940,6 +1951,32 @@ function formatDateHeader(utcStr) {
     weekday:'long', day:'numeric', month:'long'
   });
   return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// Mezcla partidos de grupo (ya resueltos) y de eliminatoria (resueltos o
+// TBD) en una sola secuencia ordenada por fecha — para que "Próximos" y
+// "Jugados" no se vean como dos listas separadas, sino una sola integrada.
+function buildUnifiedDateGroupedHtml(groupMatches, knockoutEntries, descending) {
+  const items = [];
+  groupMatches.forEach(m => items.push({ date: getKickoffUTC(m), render: () => buildMatchCard(m) }));
+  knockoutEntries.forEach(m => items.push({ date: m.kickoffUTC, render: () => buildKnockoutCardHtml(m) }));
+  items.sort((a, b) => descending ? new Date(b.date) - new Date(a.date) : new Date(a.date) - new Date(b.date));
+
+  let html = '';
+  let currentDateKey = null;
+  items.forEach(item => {
+    const dateKey = toARDateStr(item.date);
+    if (dateKey !== currentDateKey) {
+      if (currentDateKey !== null) html += '</div></div>';
+      currentDateKey = dateKey;
+      html += '<div class="date-section">';
+      html += '<div class="date-header">' + formatDateHeader(item.date) + '</div>';
+      html += '<div class="match-grid">';
+    }
+    html += item.render();
+  });
+  if (currentDateKey !== null) html += '</div></div>';
+  return html;
 }
 
 function buildDateGroupedHtml(sortedMatches) {
@@ -2071,24 +2108,28 @@ function render() {
       ? filtered.slice().sort((a,b) => new Date(getKickoffUTC(b)) - new Date(getKickoffUTC(a)))
       : filtered.slice().sort((a,b) => new Date(getKickoffUTC(a)) - new Date(getKickoffUTC(b)));
 
-    if (sortedAll.length === 0) {
+    if (sortedAll.length === 0 && currentFilter !== 'scheduled' && currentFilter !== 'finished') {
       html = '<div class="empty-state">' + t('noHayPartidos') + '</div>';
-    } else if (currentFilter === 'scheduled' || currentFilter === 'finished') {
-      html += buildDateGroupedHtml(sortedAll);
+    } else if (currentFilter === 'scheduled') {
+      const knockoutScheduled = getAllKnockoutEntries().filter(m => knockoutEntryStatus(m).status === 'scheduled');
+      if (sortedAll.length === 0 && knockoutScheduled.length === 0) {
+        html = '<div class="empty-state">' + t('noHayPartidos') + '</div>';
+      } else {
+        html += buildUnifiedDateGroupedHtml(sortedAll, knockoutScheduled, false);
+      }
+    } else if (currentFilter === 'finished') {
+      const knockoutFinished = getAllKnockoutEntries().filter(m => knockoutEntryStatus(m).status === 'finished');
+      if (sortedAll.length === 0 && knockoutFinished.length === 0) {
+        html = '<div class="empty-state">' + t('noHayPartidos') + '</div>';
+      } else {
+        html += buildUnifiedDateGroupedHtml(sortedAll, knockoutFinished, true);
+      }
     } else if (currentFilter === 'all') {
       html += buildGroupGroupedHtml(sortedAll);
     } else {
       html += '<div class="match-grid">';
       sortedAll.forEach(m => { html += buildMatchCard(m); });
       html += '</div>';
-    }
-
-    // "Próximos" también incluye la fase eliminatoria (Dieciseisavos en
-    // adelante) — fechas y estadios ya están fijados por FIFA, aunque el
-    // rival todavía sea "TBD" hasta que se resuelva el cupo.
-    if (currentFilter === 'scheduled') {
-      html += '<div class="bracket-stage-label" style="font-size:13px; margin:24px 24px 0; padding:0 24px;">\u{1F3C6} ' + t('faseEliminatoriaTitle') + '</div>';
-      html += '<div style="padding:0 24px;">' + buildKnockoutList() + '</div>';
     }
   }
   document.getElementById('matches').innerHTML = html;
@@ -2484,6 +2525,67 @@ function buildRoundOf32() {
 // Lista de toda la fase eliminatoria (Dieciseisavos en adelante), con el
 // mismo estilo visual que las tarjetas de partidos de grupo. Si todavía no
 // se sabe qué selección juega ese cupo, muestra "TBD".
+// Junta los 32 partidos de toda la eliminatoria (Dieciseisavos a Final) en
+// una sola lista plana, cada uno con la etiqueta de su ronda.
+function getAllKnockoutEntries() {
+  const rounds = [
+    { cal: R32_CALENDAR, label: t('dieciseisavosTitle') },
+    { cal: R16_CALENDAR, label: t('octavosDeFinal') },
+    { cal: QF_CALENDAR, label: t('cuartosDeFinal') },
+    { cal: SF_CALENDAR, label: t('semifinales') },
+    { cal: THIRD_PLACE_CALENDAR, label: t('tercerPuesto') },
+    { cal: FINAL_CALENDAR, label: t('finalTitle') },
+  ];
+  let all = [];
+  rounds.forEach(r => { r.cal.forEach(m => all.push({ ...m, roundLabel: r.label })); });
+  return all;
+}
+
+// Mismo criterio de en-vivo/finalizado/programado que usamos en los
+// partidos de grupo (getEffectiveStatus), pero para un cupo de eliminatoria
+// — si todavía no se sabe quién juega (TBD), es "programado" sin más vueltas.
+function knockoutEntryStatus(m) {
+  const teamA = resolveBracketSlot(m.a);
+  const teamB = resolveBracketSlot(m.b);
+  if (!teamA || !teamB) return { status: 'scheduled', teamA: null, teamB: null };
+  const live = getLiveData({ home: teamA, away: teamB, kickoffUTC: m.kickoffUTC });
+  const apiStatus = live ? live.status : null;
+  const realKickoffUTC = (live && live.kickoffUTC) ? live.kickoffUTC : m.kickoffUTC;
+  const now = new Date();
+  const kickoff = new Date(realKickoffUTC);
+  const estimatedEnd = new Date(kickoff.getTime() + 115 * 60000);
+  const timeInferredLive = now >= kickoff && now < estimatedEnd;
+  const timeInferredFinished = now >= estimatedEnd;
+  const isLive = isLiveStatus(apiStatus) || (!isFinishedStatus(apiStatus) && timeInferredLive);
+  const isFinished = isFinishedStatus(apiStatus) || (!isLiveStatus(apiStatus) && timeInferredFinished);
+  let status = 'scheduled';
+  if (isLive) status = 'live'; else if (isFinished) status = 'finished';
+  return { status, teamA, teamB };
+}
+
+// Agrupa partidos de eliminatoria por día, igual que buildDateGroupedHtml
+// hace con los de grupo — pero usando buildKnockoutCardHtml (soporta TBD).
+function buildKnockoutDateGroupedHtml(entries, descending) {
+  const sorted = entries.slice().sort((a, b) =>
+    descending ? new Date(b.kickoffUTC) - new Date(a.kickoffUTC) : new Date(a.kickoffUTC) - new Date(b.kickoffUTC)
+  );
+  let html = '';
+  let currentDateKey = null;
+  sorted.forEach(m => {
+    const dateKey = toARDateStr(m.kickoffUTC);
+    if (dateKey !== currentDateKey) {
+      if (currentDateKey !== null) html += '</div></div>';
+      currentDateKey = dateKey;
+      html += '<div class="date-section">';
+      html += '<div class="date-header">' + formatDateHeader(m.kickoffUTC) + '</div>';
+      html += '<div class="match-grid">';
+    }
+    html += buildKnockoutCardHtml(m);
+  });
+  if (currentDateKey !== null) html += '</div></div>';
+  return html;
+}
+
 function buildKnockoutCardHtml(m) {
   const teamA = resolveBracketSlot(m.a);
   const teamB = resolveBracketSlot(m.b);
@@ -2569,7 +2671,7 @@ function buildKnockoutCardHtml(m) {
       badgeHtml +
       '<span>\u{1F550} ' + dateStr + '</span>' +
       '<a href="' + mapsLink(m.stadium, m.city) + '" target="_blank" rel="noopener" class="stadium-link" onclick="event.stopPropagation()">\u{1F4CD} ' + m.stadium + ', ' + m.city + '</a>' +
-      '<span class="group-tag">' + t('partidoNro') + ' ' + m.match + '</span>' +
+      '<span class="group-tag">' + (m.roundLabel ? m.roundLabel + ' · ' : '') + t('partidoNro') + ' ' + m.match + '</span>' +
     '</div>' +
   '</div>';
 }
@@ -2627,6 +2729,27 @@ function buildMobileStage(count, label) {
 // y quedó 3° o 4°. Mientras el grupo no esté 100% completo, no se asume
 // eliminación (no hay datos de fase eliminatoria real en este momento).
 function isTeamEliminated(code) {
+  // Eliminatoria primero: si ya jugó y perdió un partido de eliminación
+  // directa (Dieciseisavos en adelante), está eliminado sin más vueltas —
+  // no hace falta ni mirar la fase de grupos.
+  const knockoutLoss = getAllKnockoutEntries().some(m => {
+    const { status, teamA, teamB } = knockoutEntryStatus(m);
+    if (status !== 'finished') return false;
+    if (teamA !== code && teamB !== code) return false;
+    const live = getLiveData({ home: teamA, away: teamB, kickoffUTC: m.kickoffUTC });
+    if (!live || live.homeGoals === null || live.homeGoals === undefined) return false;
+    // En eliminatoria no hay empates: si hubo penales, esos definen al
+    // ganador real (el marcador normal puede haber quedado igualado).
+    let winner;
+    if (live.penaltyHome !== undefined && live.penaltyHome !== null) {
+      winner = live.penaltyHome > live.penaltyAway ? teamA : teamB;
+    } else {
+      winner = live.homeGoals > live.awayGoals ? teamA : (live.awayGoals > live.homeGoals ? teamB : null);
+    }
+    return winner && winner !== code;
+  });
+  if (knockoutLoss) return true;
+
   const anyMatch = SCHEDULE.find(m => m.home === code || m.away === code);
   if (!anyMatch) return false;
   const groupLetter = anyMatch.group;
