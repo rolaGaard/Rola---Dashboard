@@ -1,10 +1,10 @@
 {
-  "updated": "2026-06-27T00:50:20.764285Z",
+  "updated": "2026-06-27T01:00:51.729223Z",
   "matches": {
     "URUGUAY-SPAIN": {
       "homeGoals": 0,
       "awayGoals": 1,
-      "status": "1H",
+      "status": "HT",
       "elapsed": 45,
       "kickoffUTC": "2026-06-27T00:00:00+00:00",
       "referee": "Ismail Elfath, USA",
@@ -309,7 +309,7 @@
     "CAPE VERDE-SAUDI ARABIA": {
       "homeGoals": 0,
       "awayGoals": 0,
-      "status": "1H",
+      "status": "HT",
       "elapsed": 45,
       "kickoffUTC": "2026-06-27T00:00:00+00:00",
       "referee": "Fran\u00e7ois Letexier, France",
