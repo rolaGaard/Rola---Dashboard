@@ -1,10 +1,10 @@
 {
-  "updated": "2026-06-27T03:50:22.378768Z",
+  "updated": "2026-06-27T04:00:51.329840Z",
   "matches": {
     "EGYPT-IRAN": {
       "homeGoals": 1,
       "awayGoals": 1,
-      "status": "1H",
+      "status": "HT",
       "elapsed": 45,
       "kickoffUTC": "2026-06-27T03:00:00+00:00",
       "referee": "Szymon Marciniak, Poland",
@@ -347,7 +347,7 @@
     "NEW ZEALAND-BELGIUM": {
       "homeGoals": 0,
       "awayGoals": 1,
-      "status": "1H",
+      "status": "HT",
       "elapsed": 45,
       "kickoffUTC": "2026-06-27T03:00:00+00:00",
       "referee": "Adham Mohammad, Jordan",
