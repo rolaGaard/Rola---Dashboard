@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-27T22:16:46.967520Z",
+  "updated": "2026-06-27T22:20:23.530628Z",
   "matches": {
     "CROATIA-GHANA": {
       "homeGoals": 1,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 55,
+      "elapsed": 59,
       "kickoffUTC": "2026-06-27T21:00:00+00:00",
       "referee": "Drew Fischer, Canada",
       "events": [
@@ -315,7 +315,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 58,
+      "elapsed": 61,
       "kickoffUTC": "2026-06-27T21:00:00+00:00",
       "referee": "Abdulrahman Al-Jassim, Qatar",
       "events": [
@@ -325,6 +325,14 @@
           "player": "J. Fajardo",
           "team": "PANAMA",
           "minute": 53,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "J. Quansah",
+          "team": "ENGLAND",
+          "minute": 61,
           "extra": null
         }
       ],
