@@ -1,6 +1,715 @@
 {
-  "updated": "2026-06-27T01:30:35.533720Z",
+  "updated": "2026-06-27T01:40:21.334793Z",
   "matches": {
+    "URUGUAY-SPAIN": {
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "2H",
+      "elapsed": 76,
+      "kickoffUTC": "2026-06-27T00:00:00+00:00",
+      "referee": "Ismail Elfath, USA",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Baena",
+          "team": "SPAIN",
+          "minute": 42,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Baena",
+          "team": "SPAIN",
+          "minute": 46,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "J. Sanabria",
+          "team": "URUGUAY",
+          "minute": 54,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "G. Varela",
+          "team": "URUGUAY",
+          "minute": 58,
+          "extra": null
+        }
+      ],
+      "substitutions": {
+        "URUGUAY": [
+          {
+            "out": "M. Ugarte",
+            "in": "N. de la Cruz",
+            "minute": 45
+          },
+          {
+            "out": "F. Muslera",
+            "in": "S. Rochet",
+            "minute": 46
+          },
+          {
+            "out": "F. Valverde",
+            "in": "F. Vinas",
+            "minute": 57
+          },
+          {
+            "out": "J. Sanabria",
+            "in": "B. Rodriguez",
+            "minute": 70
+          }
+        ],
+        "SPAIN": [
+          {
+            "out": "Pedri",
+            "in": "F. Ruiz",
+            "minute": 60
+          },
+          {
+            "out": "M. Merino",
+            "in": "D. Olmo",
+            "minute": 60
+          },
+          {
+            "out": "A. Baena",
+            "in": "Y. Pino",
+            "minute": 66
+          }
+        ]
+      },
+      "lineups": {
+        "URUGUAY": {
+          "formation": "4-2-3-1",
+          "coach": "Marcelo Bielsa",
+          "startXI": [
+            {
+              "name": "Fernando Muslera",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Guillermo Varela",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Sebasti\u00e1n C\u00e1ceres",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Math\u00edas Olivera",
+              "number": 16,
+              "pos": "D"
+            },
+            {
+              "name": "Juan Sanabria",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Rodrigo Bentancur",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Manuel Ugarte",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "Agust\u00edn Canobbio",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Federico Valverde",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Maximiliano Ara\u00fajo",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Darwin N\u00fa\u00f1ez",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Santiago Mele",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Sergio Rochet",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Mat\u00edas Vi\u00f1a",
+              "number": 17,
+              "pos": "D"
+            },
+            {
+              "name": "Santiago Bueno",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Jos\u00e9 Mar\u00eda Gim\u00e9nez",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Ronald Ara\u00fajo",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Joaqu\u00edn Piquerez",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "Nicol\u00e1s de la Cruz",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Brian Rodr\u00edguez",
+              "number": 18,
+              "pos": "F"
+            },
+            {
+              "name": "Emiliano Mart\u00ednez",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Giorgian de Arrascaeta",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Facundo Pellistri",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Federico Vi\u00f1as",
+              "number": 21,
+              "pos": "F"
+            },
+            {
+              "name": "Rodrigo Aguirre",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Rodrigo Zalazar",
+              "number": 26,
+              "pos": "M"
+            }
+          ]
+        },
+        "SPAIN": {
+          "formation": "4-3-3",
+          "coach": "Luis de la Fuente",
+          "startXI": [
+            {
+              "name": "Unai Sim\u00f3n",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Marcos Llorente",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Pau Cubars\u00ed",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "Aymeric Laporte",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "Marc Cucurella",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Pedri",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Rodri",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Mikel Merino",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Lamine Yamal",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Mikel Oyarzabal",
+              "number": 21,
+              "pos": "F"
+            },
+            {
+              "name": "Alex Baena",
+              "number": 15,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Joan Garc\u00eda",
+              "number": 13,
+              "pos": "G"
+            },
+            {
+              "name": "David Raya",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Marc Pubill",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Eric Garc\u00eda",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Pedro Porro",
+              "number": 12,
+              "pos": "D"
+            },
+            {
+              "name": "Pablo Gavi",
+              "number": 9,
+              "pos": "M"
+            },
+            {
+              "name": "Mart\u00edn Zubimendi",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Nico Williams",
+              "number": 17,
+              "pos": "F"
+            },
+            {
+              "name": "Fabi\u00e1n Ruiz",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Alejandro Grimaldo",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Dani Olmo",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Borja Iglesias",
+              "number": 26,
+              "pos": "F"
+            },
+            {
+              "name": "Ferran Torres",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Y\u00e9remy Pino",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "V\u00edctor Mu\u00f1oz",
+              "number": 25,
+              "pos": "F"
+            }
+          ]
+        }
+      }
+    },
+    "CAPE VERDE-SAUDI ARABIA": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "2H",
+      "elapsed": 77,
+      "kickoffUTC": "2026-06-27T00:00:00+00:00",
+      "referee": "Fran\u00e7ois Letexier, France",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "S. Abdulhamid",
+          "team": "SAUDI ARABIA",
+          "minute": 4,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "W. Pina",
+          "team": "CAPE VERDE",
+          "minute": 9,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "N. Al Dawsari",
+          "team": "SAUDI ARABIA",
+          "minute": 67,
+          "extra": null
+        }
+      ],
+      "substitutions": {
+        "SAUDI ARABIA": [
+          {
+            "out": "H. Tambakti",
+            "in": "A. Lajami",
+            "minute": 33
+          },
+          {
+            "out": "A. Al Khaibari",
+            "in": "M. Al Juwayr",
+            "minute": 46
+          },
+          {
+            "out": "S. Al Dawsari",
+            "in": "M. Abu Al Shamat",
+            "minute": 66
+          },
+          {
+            "out": "S. Mandash",
+            "in": "A. Al Hamdan",
+            "minute": 66
+          }
+        ],
+        "CAPE VERDE": [
+          {
+            "out": "D. Livramento",
+            "in": "N. Da Costa",
+            "minute": 61
+          },
+          {
+            "out": "W. Semedo",
+            "in": "H. Varela",
+            "minute": 61
+          },
+          {
+            "out": "R. Mendes",
+            "in": "G. Rodrigues",
+            "minute": 71
+          },
+          {
+            "out": "J. Monteiro",
+            "in": "L. Duarte",
+            "minute": 71
+          }
+        ]
+      },
+      "lineups": {
+        "CAPE VERDE": {
+          "formation": "4-2-3-1",
+          "coach": "Pedro Leitao Brito",
+          "startXI": [
+            {
+              "name": "Vozinha",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Wagner Pina",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Diney Borges",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Pico",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Jo\u00e3o Paulo",
+              "number": 8,
+              "pos": "D"
+            },
+            {
+              "name": "Kevin Lenini",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Deroy Duarte",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Ryan Mendes",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Jamiro Monteiro",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Willy Semedo",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Dailon Rocha Livramento",
+              "number": 19,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "M\u00e1rcio Rosa",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "CJ Dos Santos",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Stopira",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Logan Costa",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Steven Moreira",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "Kelvin Pires",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Garry Rodrigues",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Laros Duarte",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Yannick Semedo",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "H\u00e9lio Varela",
+              "number": 26,
+              "pos": "F"
+            },
+            {
+              "name": "Jovane Cabral",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Nuno Da Costa",
+              "number": 21,
+              "pos": "F"
+            },
+            {
+              "name": "Gilson Tavares",
+              "number": 9,
+              "pos": "F"
+            }
+          ]
+        },
+        "SAUDI ARABIA": {
+          "formation": "4-4-2",
+          "coach": "Georgios Donis",
+          "startXI": [
+            {
+              "name": "Mohammed Al-Owais",
+              "number": 21,
+              "pos": "G"
+            },
+            {
+              "name": "Nawaf Boushal",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Abdulelah Al-Amri",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Hassan Tambakti",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Nasser Al-Dawsari",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Saud Abdulhamid",
+              "number": 12,
+              "pos": "D"
+            },
+            {
+              "name": "Abdullah Al-Khaibari",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Mohamed Kanno",
+              "number": 23,
+              "pos": "F"
+            },
+            {
+              "name": "Salem Al-Dawsari",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Firas Al-Buraikan",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Sultan Mandash",
+              "number": 20,
+              "pos": "M"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Nawaf Al-Aqidi",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Ahmed Al-Kassar",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Ali Majrashi",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Moteb Al-Harbi",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Jehad Thakri",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Hassan Kadesh",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "Ali Lajami",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Ayman Yahya",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Ziyad Aljohani",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Mohammed Abu Al-Shamat",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "Ala'a Al-Hejji",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Musab Al Juwayr",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Khalid Al-Ghannam",
+              "number": 17,
+              "pos": "F"
+            },
+            {
+              "name": "Abdullah Al-Hamdan",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Saleh Al-Shehri",
+              "number": 11,
+              "pos": "F"
+            }
+          ]
+        }
+      }
+    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -23688,687 +24397,6 @@
       "elapsed": null,
       "kickoffUTC": "2026-07-02T00:00:00+00:00",
       "referee": null
-    },
-    "URUGUAY-SPAIN": {
-      "homeGoals": 0,
-      "awayGoals": 1,
-      "status": "2H",
-      "elapsed": 66,
-      "kickoffUTC": "2026-06-27T00:00:00+00:00",
-      "referee": "Ismail Elfath, USA",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "Alejandro Baena Rodr\u00edguez",
-          "team": "SPAIN",
-          "minute": 42,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Alejandro Baena Rodr\u00edguez",
-          "team": "SPAIN",
-          "minute": 46,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Juan Sanabria",
-          "team": "URUGUAY",
-          "minute": 54,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Guillermo Varela",
-          "team": "URUGUAY",
-          "minute": 58,
-          "extra": null
-        }
-      ],
-      "substitutions": {
-        "URUGUAY": [
-          {
-            "out": "Manuel Ugarte",
-            "in": "Nicolas De la Cruz",
-            "minute": 45
-          },
-          {
-            "out": "Fernando Muslera",
-            "in": "Sergio Rochet",
-            "minute": 45
-          },
-          {
-            "out": "Federico Valverde",
-            "in": "Federico Vi\u00f1as",
-            "minute": 57
-          }
-        ],
-        "SPAIN": [
-          {
-            "out": "Pedri",
-            "in": "Fabi\u00e1n Ruiz",
-            "minute": 60
-          },
-          {
-            "out": "Mikel Merino",
-            "in": "Daniel Olmo Carvajal",
-            "minute": 60
-          }
-        ]
-      },
-      "lineups": {
-        "URUGUAY": {
-          "formation": "4-2-3-1",
-          "coach": "Marcelo Bielsa",
-          "startXI": [
-            {
-              "name": "Fernando Muslera",
-              "number": 23,
-              "pos": "G"
-            },
-            {
-              "name": "Guillermo Varela",
-              "number": 13,
-              "pos": "D"
-            },
-            {
-              "name": "Sebasti\u00e1n C\u00e1ceres",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Math\u00edas Olivera",
-              "number": 16,
-              "pos": "D"
-            },
-            {
-              "name": "Juan Sanabria",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "Rodrigo Bentancur",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Manuel Ugarte",
-              "number": 5,
-              "pos": "M"
-            },
-            {
-              "name": "Agust\u00edn Canobbio",
-              "number": 14,
-              "pos": "M"
-            },
-            {
-              "name": "Federico Valverde",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Maximiliano Ara\u00fajo",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Darwin N\u00fa\u00f1ez",
-              "number": 9,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Santiago Mele",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Sergio Rochet",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Mat\u00edas Vi\u00f1a",
-              "number": 17,
-              "pos": "D"
-            },
-            {
-              "name": "Santiago Bueno",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Jos\u00e9 Mar\u00eda Gim\u00e9nez",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Ronald Ara\u00fajo",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Joaqu\u00edn Piquerez",
-              "number": 22,
-              "pos": "D"
-            },
-            {
-              "name": "Nicol\u00e1s de la Cruz",
-              "number": 7,
-              "pos": "M"
-            },
-            {
-              "name": "Brian Rodr\u00edguez",
-              "number": 18,
-              "pos": "F"
-            },
-            {
-              "name": "Emiliano Mart\u00ednez",
-              "number": 15,
-              "pos": "M"
-            },
-            {
-              "name": "Giorgian de Arrascaeta",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Facundo Pellistri",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "Federico Vi\u00f1as",
-              "number": 21,
-              "pos": "F"
-            },
-            {
-              "name": "Rodrigo Aguirre",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Rodrigo Zalazar",
-              "number": 26,
-              "pos": "M"
-            }
-          ]
-        },
-        "SPAIN": {
-          "formation": "4-3-3",
-          "coach": "Luis de la Fuente",
-          "startXI": [
-            {
-              "name": "Unai Sim\u00f3n",
-              "number": 23,
-              "pos": "G"
-            },
-            {
-              "name": "Marcos Llorente",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Pau Cubars\u00ed",
-              "number": 22,
-              "pos": "D"
-            },
-            {
-              "name": "Aymeric Laporte",
-              "number": 14,
-              "pos": "D"
-            },
-            {
-              "name": "Marc Cucurella",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Pedri",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Rodri",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "Mikel Merino",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Lamine Yamal",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Mikel Oyarzabal",
-              "number": 21,
-              "pos": "F"
-            },
-            {
-              "name": "Alex Baena",
-              "number": 15,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Joan Garc\u00eda",
-              "number": 13,
-              "pos": "G"
-            },
-            {
-              "name": "David Raya",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Marc Pubill",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Eric Garc\u00eda",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Pedro Porro",
-              "number": 12,
-              "pos": "D"
-            },
-            {
-              "name": "Pablo Gavi",
-              "number": 9,
-              "pos": "M"
-            },
-            {
-              "name": "Mart\u00edn Zubimendi",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "Nico Williams",
-              "number": 17,
-              "pos": "F"
-            },
-            {
-              "name": "Fabi\u00e1n Ruiz",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Alejandro Grimaldo",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Dani Olmo",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Borja Iglesias",
-              "number": 26,
-              "pos": "F"
-            },
-            {
-              "name": "Ferran Torres",
-              "number": 7,
-              "pos": "F"
-            },
-            {
-              "name": "Y\u00e9remy Pino",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "V\u00edctor Mu\u00f1oz",
-              "number": 25,
-              "pos": "F"
-            }
-          ]
-        }
-      }
-    },
-    "CAPE VERDE-SAUDI ARABIA": {
-      "homeGoals": 0,
-      "awayGoals": 0,
-      "status": "2H",
-      "elapsed": 67,
-      "kickoffUTC": "2026-06-27T00:00:00+00:00",
-      "referee": "Fran\u00e7ois Letexier, France",
-      "events": [
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Saud Abdulhamid",
-          "team": "SAUDI ARABIA",
-          "minute": 4,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Wagner Pina",
-          "team": "CAPE VERDE",
-          "minute": 9,
-          "extra": null
-        }
-      ],
-      "substitutions": {
-        "SAUDI ARABIA": [
-          {
-            "out": "Hassan Al-Tambakti",
-            "in": "Ali Lajami",
-            "minute": 33
-          },
-          {
-            "out": "Abdullah Al-Khaibari",
-            "in": "Musab Al-Juwayr",
-            "minute": 45
-          },
-          {
-            "out": "Salem Al-Dawsari",
-            "in": "Mohammed Abu Al-Shamat",
-            "minute": 66
-          },
-          {
-            "out": "Sultan Mandash",
-            "in": "Abdullah Al-Hamdan",
-            "minute": 66
-          }
-        ],
-        "CAPE VERDE": [
-          {
-            "out": "Dailon Livramento",
-            "in": "Nuno Da Costa",
-            "minute": 61
-          },
-          {
-            "out": "Willy Semedo",
-            "in": "H\u00e9lio Varela",
-            "minute": 61
-          }
-        ]
-      },
-      "lineups": {
-        "CAPE VERDE": {
-          "formation": "4-2-3-1",
-          "coach": "Pedro Leitao Brito",
-          "startXI": [
-            {
-              "name": "Vozinha",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Wagner Pina",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Diney Borges",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Pico",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Jo\u00e3o Paulo",
-              "number": 8,
-              "pos": "D"
-            },
-            {
-              "name": "Kevin Lenini",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Deroy Duarte",
-              "number": 14,
-              "pos": "M"
-            },
-            {
-              "name": "Ryan Mendes",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Jamiro Monteiro",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Willy Semedo",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Dailon Rocha Livramento",
-              "number": 19,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "M\u00e1rcio Rosa",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "CJ Dos Santos",
-              "number": 23,
-              "pos": "G"
-            },
-            {
-              "name": "Stopira",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Logan Costa",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Steven Moreira",
-              "number": 22,
-              "pos": "D"
-            },
-            {
-              "name": "Kelvin Pires",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "Garry Rodrigues",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "Laros Duarte",
-              "number": 15,
-              "pos": "M"
-            },
-            {
-              "name": "Yannick Semedo",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "H\u00e9lio Varela",
-              "number": 26,
-              "pos": "F"
-            },
-            {
-              "name": "Jovane Cabral",
-              "number": 7,
-              "pos": "F"
-            },
-            {
-              "name": "Nuno Da Costa",
-              "number": 21,
-              "pos": "F"
-            },
-            {
-              "name": "Gilson Tavares",
-              "number": 9,
-              "pos": "F"
-            }
-          ]
-        },
-        "SAUDI ARABIA": {
-          "formation": "4-4-2",
-          "coach": "Georgios Donis",
-          "startXI": [
-            {
-              "name": "Mohammed Al-Owais",
-              "number": 21,
-              "pos": "G"
-            },
-            {
-              "name": "Nawaf Boushal",
-              "number": 13,
-              "pos": "D"
-            },
-            {
-              "name": "Abdulelah Al-Amri",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Hassan Tambakti",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Nasser Al-Dawsari",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Saud Abdulhamid",
-              "number": 12,
-              "pos": "D"
-            },
-            {
-              "name": "Abdullah Al-Khaibari",
-              "number": 15,
-              "pos": "M"
-            },
-            {
-              "name": "Mohamed Kanno",
-              "number": 23,
-              "pos": "F"
-            },
-            {
-              "name": "Salem Al-Dawsari",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Firas Al-Buraikan",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Sultan Mandash",
-              "number": 20,
-              "pos": "M"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Nawaf Al-Aqidi",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Ahmed Al-Kassar",
-              "number": 22,
-              "pos": "G"
-            },
-            {
-              "name": "Ali Majrashi",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Moteb Al-Harbi",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Jehad Thakri",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "Hassan Kadesh",
-              "number": 14,
-              "pos": "D"
-            },
-            {
-              "name": "Ali Lajami",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Ayman Yahya",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Ziyad Aljohani",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "Mohammed Abu Al-Shamat",
-              "number": 26,
-              "pos": "M"
-            },
-            {
-              "name": "Ala'a Al-Hejji",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "Musab Al Juwayr",
-              "number": 7,
-              "pos": "M"
-            },
-            {
-              "name": "Khalid Al-Ghannam",
-              "number": 17,
-              "pos": "F"
-            },
-            {
-              "name": "Abdullah Al-Hamdan",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Saleh Al-Shehri",
-              "number": 11,
-              "pos": "F"
-            }
-          ]
-        }
-      }
     }
   }
 }
