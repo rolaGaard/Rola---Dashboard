@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-27T00:30:36.297265Z",
+  "updated": "2026-06-27T00:40:20.530046Z",
   "matches": {
     "URUGUAY-SPAIN": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 29,
+      "elapsed": 37,
       "kickoffUTC": "2026-06-27T00:00:00+00:00",
       "referee": "Ismail Elfath, USA",
       "events": [],
@@ -292,7 +292,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 29,
+      "elapsed": 36,
       "kickoffUTC": "2026-06-27T00:00:00+00:00",
       "referee": "Fran\u00e7ois Letexier, France",
       "events": [
@@ -313,6 +313,15 @@
           "extra": null
         }
       ],
+      "substitutions": {
+        "SAUDI ARABIA": [
+          {
+            "out": "H. Tambakti",
+            "in": "A. Lajami",
+            "minute": 33
+          }
+        ]
+      },
       "lineups": {
         "CAPE VERDE": {
           "formation": "4-2-3-1",
