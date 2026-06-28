@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-28T00:20:22.749259Z",
+  "updated": "2026-06-28T00:30:38.820105Z",
   "matches": {
     "COLOMBIA-PORTUGAL": {
       "homeGoals": 0,
@@ -291,7 +291,7 @@
     "CONGO DR-UZBEKISTAN": {
       "homeGoals": 0,
       "awayGoals": 1,
-      "status": "1H",
+      "status": "HT",
       "elapsed": 45,
       "kickoffUTC": "2026-06-27T23:30:00+00:00",
       "referee": "Felix Zwayer, Germany",
@@ -319,6 +319,14 @@
           "team": "UZBEKISTAN",
           "minute": 43,
           "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "N. Mbuku",
+          "team": "CONGO DR",
+          "minute": 45,
+          "extra": 5
         }
       ],
       "lineups": {
