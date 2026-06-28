@@ -1492,8 +1492,8 @@ function isFinishedStatus(s){ return ['FT','AET','PEN'].includes(s); }
 // algunos minutos porque el árbitro puede adelantarla o atrasarla un poco
 // según el desarrollo del juego.
 function isHydrationWindow(apiStatus, elapsed) {
-  if (apiStatus === '1H') return elapsed >= 19 && elapsed <= 25;
-  if (apiStatus === '2H') return elapsed >= 64 && elapsed <= 70;
+  if (apiStatus === '1H') return elapsed >= 22 && elapsed <= 27;
+  if (apiStatus === '2H') return elapsed >= 67 && elapsed <= 72;
   return false;
 }
 
