@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-27T10:59:09.544945Z",
+  "updated": "2026-06-28T11:09:59.877695Z",
   "squads": {
     "BELGIUM": [
       {
@@ -436,7 +436,7 @@
       {
         "name": "V. Lindelöf",
         "number": 3,
-        "position": "Defender"
+        "position": "Midfielder"
       },
       {
         "name": "C. Starfelt",
@@ -446,7 +446,7 @@
       {
         "name": "H. Johansson",
         "number": 6,
-        "position": "Midfielder"
+        "position": "Defender"
       },
       {
         "name": "E. Smith",
@@ -456,7 +456,7 @@
       {
         "name": "E. Stroud",
         "number": 24,
-        "position": "Midfielder"
+        "position": "Defender"
       },
       {
         "name": "D. Svensson",
@@ -1014,7 +1014,7 @@
       {
         "name": "Álex Baena",
         "number": 15,
-        "position": "Attacker"
+        "position": "Midfielder"
       },
       {
         "name": "Dani Olmo",
@@ -1029,7 +1029,7 @@
       {
         "name": "Lamine Yamal",
         "number": 19,
-        "position": "Attacker"
+        "position": "Midfielder"
       },
       {
         "name": "Víctor Muñoz",
@@ -1360,7 +1360,7 @@
       {
         "name": "Y. Sugawara",
         "number": 2,
-        "position": "Defender"
+        "position": "Midfielder"
       },
       {
         "name": "J. Suzuki",
@@ -1385,7 +1385,7 @@
       {
         "name": "R. Doan",
         "number": 10,
-        "position": "Midfielder"
+        "position": "Attacker"
       },
       {
         "name": "D. Kamada",
@@ -2319,7 +2319,7 @@
       {
         "name": "Mohamed Kanno",
         "number": 23,
-        "position": "Midfielder"
+        "position": "Attacker"
       },
       {
         "name": "Ziyad Al Johani",
@@ -2349,7 +2349,7 @@
       {
         "name": "Sultan Mandash",
         "number": 20,
-        "position": "Attacker"
+        "position": "Midfielder"
       },
       {
         "name": "Ayman Yahya",
@@ -2406,7 +2406,7 @@
       {
         "name": "D. Raum",
         "number": 22,
-        "position": "Defender"
+        "position": "Midfielder"
       },
       {
         "name": "A. Rüdiger",
@@ -2461,7 +2461,7 @@
       {
         "name": "J. Musiala",
         "number": 10,
-        "position": "Midfielder"
+        "position": "Attacker"
       },
       {
         "name": "F. Nmecha",
@@ -2486,7 +2486,7 @@
       {
         "name": "F. Wirtz",
         "number": 17,
-        "position": "Midfielder"
+        "position": "Attacker"
       },
       {
         "name": "K. Havertz",
@@ -2862,7 +2862,7 @@
       {
         "name": "E. Skhiri",
         "number": 17,
-        "position": "Midfielder"
+        "position": "Defender"
       },
       {
         "name": "A. Ben Slimane",
@@ -3472,7 +3472,7 @@
       {
         "name": "E. Elmali",
         "number": 13,
-        "position": "Defender"
+        "position": "Midfielder"
       },
       {
         "name": "O. Kabak",
@@ -3532,7 +3532,7 @@
       {
         "name": "A. Güler",
         "number": 8,
-        "position": "Midfielder"
+        "position": "Attacker"
       },
       {
         "name": "Y. Akgün",
@@ -3629,7 +3629,7 @@
       {
         "name": "F. Aursnes",
         "number": 14,
-        "position": "Midfielder"
+        "position": "Defender"
       },
       {
         "name": "P. Berg",
@@ -3644,7 +3644,7 @@
       {
         "name": "Oscar Bobb",
         "number": 22,
-        "position": "Midfielder"
+        "position": "Attacker"
       },
       {
         "name": "M. Ødegaard",
@@ -4217,7 +4217,7 @@
       {
         "name": "N. Pépé",
         "number": 19,
-        "position": "Attacker"
+        "position": "Midfielder"
       },
       {
         "name": "E. Wahi",
@@ -4354,7 +4354,7 @@
       {
         "name": "K. Sulemana",
         "number": 22,
-        "position": "Attacker"
+        "position": "Midfielder"
       }
     ],
     "CONGO DR": [
@@ -4583,7 +4583,7 @@
       {
         "name": "O. Appollis",
         "number": 7,
-        "position": "Attacker"
+        "position": "Midfielder"
       },
       {
         "name": "L. Foster",
@@ -4598,12 +4598,12 @@
       {
         "name": "T. Maseko",
         "number": 12,
-        "position": "Attacker"
+        "position": "Midfielder"
       },
       {
         "name": "R. Mofokeng",
         "number": 10,
-        "position": "Attacker"
+        "position": "Midfielder"
       },
       {
         "name": "T. Moremi",
@@ -4827,7 +4827,7 @@
       {
         "name": "João Paulo",
         "number": 8,
-        "position": "Midfielder"
+        "position": "Defender"
       },
       {
         "name": "Kevin Pina",
@@ -5654,7 +5654,7 @@
       {
         "name": "N. Angulo",
         "number": 20,
-        "position": "Attacker"
+        "position": "Midfielder"
       },
       {
         "name": "J. Caicedo",
@@ -5786,7 +5786,7 @@
       {
         "name": "B. Aaronson",
         "number": 11,
-        "position": "Midfielder"
+        "position": "Attacker"
       },
       {
         "name": "F. Balogun",
