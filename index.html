@@ -2231,29 +2231,25 @@ function render() {
       sortedAll.forEach(m => { html += buildMatchCard(m); });
       // "Hoy" y "En vivo" también incluyen partidos de eliminatoria — el
       // contador ya los suma, faltaba mostrarlos acá.
+      let knockoutExtraCount = 0;
       if (currentFilter === 'today') {
-        getAllKnockoutEntries()
+        const knockoutToday = getAllKnockoutEntries()
           .filter(m => toARDateStr(m.kickoffUTC) === todayAR)
-          .sort((a, b) => new Date(b.kickoffUTC) - new Date(a.kickoffUTC))
-          .forEach(m => { html += buildKnockoutCardHtml(m); });
+          .sort((a, b) => new Date(b.kickoffUTC) - new Date(a.kickoffUTC));
+        knockoutExtraCount = knockoutToday.length;
+        knockoutToday.forEach(m => { html += buildKnockoutCardHtml(m); });
       } else if (currentFilter === 'live') {
-        getAllKnockoutEntries()
-          .filter(m => knockoutEntryStatus(m).status === 'live')
-          .forEach(m => { html += buildKnockoutCardHtml(m); });
+        const knockoutLive = getAllKnockoutEntries().filter(m => knockoutEntryStatus(m).status === 'live');
+        knockoutExtraCount = knockoutLive.length;
+        knockoutLive.forEach(m => { html += buildKnockoutCardHtml(m); });
       }
       html += '</div>';
+      if (sortedAll.length === 0 && knockoutExtraCount === 0) {
+        html = '<div class="empty-state">' + t('noHayPartidos') + '</div>';
+      }
     }
   }
   document.getElementById('matches').innerHTML = html;
-
-  if (currentFilter === 'today' || currentFilter === 'live') {
-    const knockoutExtra = currentFilter === 'today'
-      ? getAllKnockoutEntries().filter(m => toARDateStr(m.kickoffUTC) === todayAR)
-      : getAllKnockoutEntries().filter(m => knockoutEntryStatus(m).status === 'live');
-    if (sortedAll.length === 0 && knockoutExtra.length === 0 && !searchTerm) {
-      document.getElementById('matches').innerHTML = '<div class="empty-state">' + t('noHayPartidos') + '</div>';
-    }
-  }
 
   const updateStr = lastUpdate
     ? new Date(lastUpdate).toLocaleTimeString(dateLocale(), {hour:'2-digit',minute:'2-digit',hour12:false})
