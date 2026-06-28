@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-28T00:10:23.079194Z",
+  "updated": "2026-06-28T00:16:44.071456Z",
   "matches": {
     "COLOMBIA-PORTUGAL": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 40,
+      "elapsed": 45,
       "kickoffUTC": "2026-06-27T23:30:00+00:00",
       "referee": "Alireza Faghani, Australia",
       "events": [],
@@ -292,7 +292,7 @@
       "homeGoals": 0,
       "awayGoals": 1,
       "status": "1H",
-      "elapsed": 39,
+      "elapsed": 45,
       "kickoffUTC": "2026-06-27T23:30:00+00:00",
       "referee": "Felix Zwayer, Germany",
       "events": [
@@ -310,6 +310,14 @@
           "player": "N. Sadiki",
           "team": "CONGO DR",
           "minute": 21,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Khusanov",
+          "team": "UZBEKISTAN",
+          "minute": 43,
           "extra": null
         }
       ],
