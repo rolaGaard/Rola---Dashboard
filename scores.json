@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-27T23:50:23.846396Z",
+  "updated": "2026-06-28T00:00:55.083721Z",
   "matches": {
     "COLOMBIA-PORTUGAL": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 19,
+      "elapsed": 30,
       "kickoffUTC": "2026-06-27T23:30:00+00:00",
       "referee": "Alireza Faghani, Australia",
       "events": [],
@@ -289,10 +289,10 @@
       }
     },
     "CONGO DR-UZBEKISTAN": {
-      "homeGoals": 1,
+      "homeGoals": 0,
       "awayGoals": 1,
       "status": "1H",
-      "elapsed": 19,
+      "elapsed": 30,
       "kickoffUTC": "2026-06-27T23:30:00+00:00",
       "referee": "Felix Zwayer, Germany",
       "events": [
@@ -305,11 +305,11 @@
           "extra": null
         },
         {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "N. Mbuku",
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "N. Sadiki",
           "team": "CONGO DR",
-          "minute": 17,
+          "minute": 21,
           "extra": null
         }
       ],
