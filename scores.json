@@ -1,346 +1,6 @@
 {
-  "updated": "2026-06-28T20:50:21.696645Z",
+  "updated": "2026-06-28T21:00:49.061520Z",
   "matches": {
-    "SOUTH AFRICA-CANADA": {
-      "homeGoals": 0,
-      "awayGoals": 0,
-      "status": "2H",
-      "elapsed": 90,
-      "kickoffUTC": "2026-06-28T19:00:00+00:00",
-      "referee": "Joao Pedro Pinheiro, Portugal",
-      "events": [
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "N. Saliba",
-          "team": "CANADA",
-          "minute": 54,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "N. Sigur",
-          "team": "CANADA",
-          "minute": 67,
-          "extra": null
-        }
-      ],
-      "substitutions": {
-        "SOUTH AFRICA": [
-          {
-            "out": "R. Mofokeng",
-            "in": "T. Mbatha",
-            "minute": 46
-          },
-          {
-            "out": "E. Makgopa",
-            "in": "I. Rayners",
-            "minute": 86
-          },
-          {
-            "out": "T. Maseko",
-            "in": "T. Moremi",
-            "minute": 86
-          }
-        ],
-        "CANADA": [
-          {
-            "out": "N. Saliba",
-            "in": "N. Sigur",
-            "minute": 59
-          },
-          {
-            "out": "M. Bombito",
-            "in": "L. De Fougerolles",
-            "minute": 59
-          },
-          {
-            "out": "T. Oluwaseyi",
-            "in": "P. David",
-            "minute": 70
-          },
-          {
-            "out": "L. Millar",
-            "in": "J. Shaffelburg",
-            "minute": 70
-          },
-          {
-            "out": "T. Buchanan",
-            "in": "A. Davies",
-            "minute": 75
-          }
-        ]
-      },
-      "lineups": {
-        "SOUTH AFRICA": {
-          "formation": "4-2-3-1",
-          "coach": "Hugo Broos",
-          "startXI": [
-            {
-              "name": "Ronwen Williams",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Khuliso Mudau",
-              "number": 20,
-              "pos": "D"
-            },
-            {
-              "name": "Ime Okon",
-              "number": 21,
-              "pos": "D"
-            },
-            {
-              "name": "Mbekezeli Mbokazi",
-              "number": 14,
-              "pos": "D"
-            },
-            {
-              "name": "Aubrey Modiba",
-              "number": 6,
-              "pos": "D"
-            },
-            {
-              "name": "Teboho Mokoena",
-              "number": 4,
-              "pos": "M"
-            },
-            {
-              "name": "Sphephelo Sithole",
-              "number": 13,
-              "pos": "M"
-            },
-            {
-              "name": "Thapelo Maseko",
-              "number": 12,
-              "pos": "M"
-            },
-            {
-              "name": "Relebohile Mofokeng",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Oswin Appollis",
-              "number": 7,
-              "pos": "M"
-            },
-            {
-              "name": "Evidence Makgopa",
-              "number": 17,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Sipho Chaine",
-              "number": 16,
-              "pos": "G"
-            },
-            {
-              "name": "Ricardo Goss",
-              "number": 22,
-              "pos": "G"
-            },
-            {
-              "name": "Tholo Thabang Matuludi",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Khulumani Ndamane",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Samukelo Kabini",
-              "number": 18,
-              "pos": "D"
-            },
-            {
-              "name": "Nkosinathi Sibisi",
-              "number": 19,
-              "pos": "D"
-            },
-            {
-              "name": "Olwethu Makhanya",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Bradley Cross",
-              "number": 26,
-              "pos": "D"
-            },
-            {
-              "name": "Thalente Mbatha",
-              "number": 5,
-              "pos": "M"
-            },
-            {
-              "name": "Jayden Adams",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "Tshepang Moremi",
-              "number": 8,
-              "pos": "F"
-            },
-            {
-              "name": "Kamogelo Sebelebele",
-              "number": 25,
-              "pos": "M"
-            },
-            {
-              "name": "Lyle Foster",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Iqraam Rayners",
-              "number": 15,
-              "pos": "F"
-            }
-          ]
-        },
-        "CANADA": {
-          "formation": "4-4-2",
-          "coach": "Jesse Marsch",
-          "startXI": [
-            {
-              "name": "Maxime Cr\u00e9peau",
-              "number": 16,
-              "pos": "G"
-            },
-            {
-              "name": "Alistair Johnston",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Moise Bombito",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Derek Cornelius",
-              "number": 13,
-              "pos": "D"
-            },
-            {
-              "name": "Richie Laryea",
-              "number": 22,
-              "pos": "D"
-            },
-            {
-              "name": "Tajon Buchanan",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Nathan-Dylan Saliba",
-              "number": 25,
-              "pos": "M"
-            },
-            {
-              "name": "Stephen Eustaquio",
-              "number": 7,
-              "pos": "M"
-            },
-            {
-              "name": "Liam Millar",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "Jonathan David",
-              "number": 10,
-              "pos": "F"
-            },
-            {
-              "name": "Tani Oluwaseyi",
-              "number": 12,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Dayne St. Clair",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Owen Goodman",
-              "number": 18,
-              "pos": "G"
-            },
-            {
-              "name": "Alfie Jones",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Luc De Fougerolles",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Joel Waterman",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Alphonso Davies",
-              "number": 19,
-              "pos": "D"
-            },
-            {
-              "name": "Niko Sigur",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "Mathieu Choini\u00e8re",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Jacob Shaffelburg",
-              "number": 14,
-              "pos": "F"
-            },
-            {
-              "name": "Ali Ahmed",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Jonathan Osorio",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "Cyle Larin",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Promise David",
-              "number": 24,
-              "pos": "F"
-            },
-            {
-              "name": "Jayden Nelson",
-              "number": 26,
-              "pos": "F"
-            }
-          ]
-        }
-      }
-    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -27707,6 +27367,346 @@
             {
               "name": "Lionel Messi",
               "number": 10,
+              "pos": "F"
+            }
+          ]
+        }
+      }
+    },
+    "SOUTH AFRICA-CANADA": {
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-06-28T19:00:00+00:00",
+      "referee": "Joao Pedro Pinheiro, Portugal",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "N. Saliba",
+          "team": "CANADA",
+          "minute": 54,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "N. Sigur",
+          "team": "CANADA",
+          "minute": 67,
+          "extra": null
+        }
+      ],
+      "substitutions": {
+        "SOUTH AFRICA": [
+          {
+            "out": "R. Mofokeng",
+            "in": "T. Mbatha",
+            "minute": 46
+          },
+          {
+            "out": "E. Makgopa",
+            "in": "I. Rayners",
+            "minute": 86
+          },
+          {
+            "out": "T. Maseko",
+            "in": "T. Moremi",
+            "minute": 86
+          }
+        ],
+        "CANADA": [
+          {
+            "out": "N. Saliba",
+            "in": "N. Sigur",
+            "minute": 59
+          },
+          {
+            "out": "M. Bombito",
+            "in": "L. De Fougerolles",
+            "minute": 59
+          },
+          {
+            "out": "T. Oluwaseyi",
+            "in": "P. David",
+            "minute": 70
+          },
+          {
+            "out": "L. Millar",
+            "in": "J. Shaffelburg",
+            "minute": 70
+          },
+          {
+            "out": "T. Buchanan",
+            "in": "A. Davies",
+            "minute": 75
+          }
+        ]
+      },
+      "lineups": {
+        "SOUTH AFRICA": {
+          "formation": "4-2-3-1",
+          "coach": "Hugo Broos",
+          "startXI": [
+            {
+              "name": "Ronwen Williams",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Khuliso Mudau",
+              "number": 20,
+              "pos": "D"
+            },
+            {
+              "name": "Ime Okon",
+              "number": 21,
+              "pos": "D"
+            },
+            {
+              "name": "Mbekezeli Mbokazi",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "Aubrey Modiba",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "Teboho Mokoena",
+              "number": 4,
+              "pos": "M"
+            },
+            {
+              "name": "Sphephelo Sithole",
+              "number": 13,
+              "pos": "M"
+            },
+            {
+              "name": "Thapelo Maseko",
+              "number": 12,
+              "pos": "M"
+            },
+            {
+              "name": "Relebohile Mofokeng",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Oswin Appollis",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Evidence Makgopa",
+              "number": 17,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Sipho Chaine",
+              "number": 16,
+              "pos": "G"
+            },
+            {
+              "name": "Ricardo Goss",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Tholo Thabang Matuludi",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Khulumani Ndamane",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Samukelo Kabini",
+              "number": 18,
+              "pos": "D"
+            },
+            {
+              "name": "Nkosinathi Sibisi",
+              "number": 19,
+              "pos": "D"
+            },
+            {
+              "name": "Olwethu Makhanya",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Bradley Cross",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Thalente Mbatha",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "Jayden Adams",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Tshepang Moremi",
+              "number": 8,
+              "pos": "F"
+            },
+            {
+              "name": "Kamogelo Sebelebele",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "Lyle Foster",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Iqraam Rayners",
+              "number": 15,
+              "pos": "F"
+            }
+          ]
+        },
+        "CANADA": {
+          "formation": "4-4-2",
+          "coach": "Jesse Marsch",
+          "startXI": [
+            {
+              "name": "Maxime Cr\u00e9peau",
+              "number": 16,
+              "pos": "G"
+            },
+            {
+              "name": "Alistair Johnston",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Moise Bombito",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Derek Cornelius",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Richie Laryea",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "Tajon Buchanan",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Nathan-Dylan Saliba",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "Stephen Eustaquio",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Liam Millar",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Jonathan David",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Tani Oluwaseyi",
+              "number": 12,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Dayne St. Clair",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Owen Goodman",
+              "number": 18,
+              "pos": "G"
+            },
+            {
+              "name": "Alfie Jones",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Luc De Fougerolles",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Joel Waterman",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Alphonso Davies",
+              "number": 19,
+              "pos": "D"
+            },
+            {
+              "name": "Niko Sigur",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Mathieu Choini\u00e8re",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Jacob Shaffelburg",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "Ali Ahmed",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Jonathan Osorio",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Cyle Larin",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Promise David",
+              "number": 24,
+              "pos": "F"
+            },
+            {
+              "name": "Jayden Nelson",
+              "number": 26,
               "pos": "F"
             }
           ]
