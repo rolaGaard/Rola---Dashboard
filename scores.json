@@ -1,14 +1,23 @@
 {
-  "updated": "2026-06-28T01:10:22.553063Z",
+  "updated": "2026-06-28T01:20:23.091988Z",
   "matches": {
     "COLOMBIA-PORTUGAL": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 78,
+      "elapsed": 88,
       "kickoffUTC": "2026-06-27T23:30:00+00:00",
       "referee": "Alireza Faghani, Australia",
-      "events": [],
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "G. Puerta",
+          "team": "COLOMBIA",
+          "minute": 86,
+          "extra": null
+        }
+      ],
       "substitutions": {
         "PORTUGAL": [
           {
@@ -52,6 +61,11 @@
             "out": "J. Rodriguez",
             "in": "J. Quintero",
             "minute": 76
+          },
+          {
+            "out": "S. Arias",
+            "in": "D. Munoz",
+            "minute": 87
           }
         ]
       },
@@ -335,10 +349,10 @@
       }
     },
     "CONGO DR-UZBEKISTAN": {
-      "homeGoals": 1,
+      "homeGoals": 2,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 77,
+      "elapsed": 87,
       "kickoffUTC": "2026-06-27T23:30:00+00:00",
       "referee": "Felix Zwayer, Germany",
       "events": [
@@ -397,6 +411,14 @@
           "team": "CONGO DR",
           "minute": 68,
           "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "F. Mayele",
+          "team": "CONGO DR",
+          "minute": 78,
+          "extra": null
         }
       ],
       "substitutions": {
@@ -420,6 +442,11 @@
             "out": "N. Mbuku",
             "in": "M. Elia",
             "minute": 72
+          },
+          {
+            "out": "A. Masuaku",
+            "in": "J. Kayembe",
+            "minute": 83
           }
         ],
         "UZBEKISTAN": [
@@ -437,6 +464,16 @@
             "out": "A. Fayzullaev",
             "in": "O. Urunov",
             "minute": 73
+          },
+          {
+            "out": "J. Urozov",
+            "in": "I. Sergeev",
+            "minute": 82
+          },
+          {
+            "out": "A. Mozgovoy",
+            "in": "J. Iskanderov",
+            "minute": 82
           }
         ]
       },
