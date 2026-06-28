@@ -2167,9 +2167,10 @@ function render() {
     }
   } else {
     document.getElementById('search-label').innerHTML = '';
-    // Los jugados se ordenan del más reciente al más antiguo; el resto de
-    // las vistas, de más próximo a más lejano (orden ascendente normal).
-    const sortedAll = currentFilter === 'finished'
+    // Los jugados y los de hoy se ordenan del más reciente al más antiguo
+    // (así los que ya arrancaron o están en vivo quedan arriba); el resto
+    // de las vistas, de más próximo a más lejano (orden ascendente normal).
+    const sortedAll = (currentFilter === 'finished' || currentFilter === 'today')
       ? filtered.slice().sort((a,b) => new Date(getKickoffUTC(b)) - new Date(getKickoffUTC(a)))
       : filtered.slice().sort((a,b) => new Date(getKickoffUTC(a)) - new Date(getKickoffUTC(b)));
 
