@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-28T20:20:22.300764Z",
+  "updated": "2026-06-28T20:30:39.350022Z",
   "matches": {
     "SOUTH AFRICA-CANADA": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 60,
+      "elapsed": 70,
       "kickoffUTC": "2026-06-28T19:00:00+00:00",
       "referee": "Joao Pedro Pinheiro, Portugal",
       "events": [
@@ -15,6 +15,14 @@
           "player": "N. Saliba",
           "team": "CANADA",
           "minute": 54,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "N. Sigur",
+          "team": "CANADA",
+          "minute": 67,
           "extra": null
         }
       ],
