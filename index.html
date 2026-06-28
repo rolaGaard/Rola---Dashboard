@@ -2174,7 +2174,7 @@ function render() {
       ? filtered.slice().sort((a,b) => new Date(getKickoffUTC(b)) - new Date(getKickoffUTC(a)))
       : filtered.slice().sort((a,b) => new Date(getKickoffUTC(a)) - new Date(getKickoffUTC(b)));
 
-    if (sortedAll.length === 0 && currentFilter !== 'scheduled' && currentFilter !== 'finished') {
+    if (sortedAll.length === 0 && currentFilter !== 'scheduled' && currentFilter !== 'finished' && currentFilter !== 'today') {
       html = '<div class="empty-state">' + t('noHayPartidos') + '</div>';
     } else if (currentFilter === 'scheduled') {
       const knockoutScheduled = getAllKnockoutEntries().filter(m => knockoutEntryStatus(m).status === 'scheduled');
@@ -2195,10 +2195,25 @@ function render() {
     } else {
       html += '<div class="match-grid">';
       sortedAll.forEach(m => { html += buildMatchCard(m); });
+      // "Hoy" también incluye los partidos de eliminatoria que caigan en
+      // la fecha de hoy — el contador ya los suma, faltaba mostrarlos acá.
+      if (currentFilter === 'today') {
+        getAllKnockoutEntries()
+          .filter(m => toARDateStr(m.kickoffUTC) === todayAR)
+          .sort((a, b) => new Date(b.kickoffUTC) - new Date(a.kickoffUTC))
+          .forEach(m => { html += buildKnockoutCardHtml(m); });
+      }
       html += '</div>';
     }
   }
   document.getElementById('matches').innerHTML = html;
+
+  if (currentFilter === 'today') {
+    const knockoutToday = getAllKnockoutEntries().filter(m => toARDateStr(m.kickoffUTC) === todayAR);
+    if (sortedAll.length === 0 && knockoutToday.length === 0 && !searchTerm) {
+      document.getElementById('matches').innerHTML = '<div class="empty-state">' + t('noHayPartidos') + '</div>';
+    }
+  }
 
   const updateStr = lastUpdate
     ? new Date(lastUpdate).toLocaleTimeString(dateLocale(), {hour:'2-digit',minute:'2-digit',hour12:false})
