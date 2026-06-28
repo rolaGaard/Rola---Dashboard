@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-28T01:40:20.301678Z",
+  "updated": "2026-06-28T01:50:23.154838Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -27250,12 +27250,36 @@
       "kickoffUTC": "2026-07-01T01:00:00+00:00",
       "referee": null
     },
+    "ENGLAND-CONGO DR": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null,
+      "kickoffUTC": "2026-07-01T16:00:00+00:00",
+      "referee": null
+    },
+    "BELGIUM-SENEGAL": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null,
+      "kickoffUTC": "2026-07-01T20:00:00+00:00",
+      "referee": null
+    },
     "USA-BOSNIA & HERZEGOVINA": {
       "homeGoals": null,
       "awayGoals": null,
       "status": "NS",
       "elapsed": null,
       "kickoffUTC": "2026-07-02T00:00:00+00:00",
+      "referee": null
+    },
+    "PORTUGAL-CROATIA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null,
+      "kickoffUTC": "2026-07-02T23:00:00+00:00",
       "referee": null
     },
     "AUSTRALIA-EGYPT": {
@@ -27272,6 +27296,14 @@
       "status": "NS",
       "elapsed": null,
       "kickoffUTC": "2026-07-03T22:00:00+00:00",
+      "referee": null
+    },
+    "COLOMBIA-GHANA": {
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null,
+      "kickoffUTC": "2026-07-04T01:30:00+00:00",
       "referee": null
     }
   }
