@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-28T20:40:22.180852Z",
+  "updated": "2026-06-28T20:50:21.696645Z",
   "matches": {
     "SOUTH AFRICA-CANADA": {
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 80,
+      "elapsed": 90,
       "kickoffUTC": "2026-06-28T19:00:00+00:00",
       "referee": "Joao Pedro Pinheiro, Portugal",
       "events": [
@@ -32,6 +32,16 @@
             "out": "R. Mofokeng",
             "in": "T. Mbatha",
             "minute": 46
+          },
+          {
+            "out": "E. Makgopa",
+            "in": "I. Rayners",
+            "minute": 86
+          },
+          {
+            "out": "T. Maseko",
+            "in": "T. Moremi",
+            "minute": 86
           }
         ],
         "CANADA": [
