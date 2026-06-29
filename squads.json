@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-28T11:09:59.877695Z",
+  "updated": "2026-06-29T13:09:17.744752Z",
   "squads": {
     "BELGIUM": [
       {
@@ -394,7 +394,7 @@
       {
         "name": "I. Perisic",
         "number": 14,
-        "position": "Midfielder"
+        "position": "Defender"
       }
     ],
     "SWEDEN": [
@@ -1176,7 +1176,7 @@
       {
         "name": "B. Saka",
         "number": 7,
-        "position": "Attacker"
+        "position": "Midfielder"
       },
       {
         "name": "I. Toney",
@@ -5168,7 +5168,7 @@
       {
         "name": "K. Alijonov",
         "number": 3,
-        "position": "Defender"
+        "position": "Midfielder"
       },
       {
         "name": "R. Ashurmatov",
