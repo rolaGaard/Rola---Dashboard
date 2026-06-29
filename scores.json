@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29T23:17:20.985706Z",
+  "updated": "2026-06-29T23:20:22.982208Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -28223,7 +28223,7 @@
       "kickoffUTC": "2026-06-29T20:30:00+00:00",
       "referee": "Jalal Jayed, Morocco",
       "penaltyHome": 0,
-      "penaltyAway": 0,
+      "penaltyAway": 1,
       "events": [
         {
           "type": "Goal",
@@ -28288,6 +28288,22 @@
           "team": "PARAGUAY",
           "minute": 117,
           "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Missed Penalty",
+          "player": "K. Havertz",
+          "team": "GERMANY",
+          "minute": 120,
+          "extra": 1
+        },
+        {
+          "type": "Goal",
+          "detail": "Penalty",
+          "player": null,
+          "team": "PARAGUAY",
+          "minute": 120,
+          "extra": 1
         }
       ],
       "substitutions": {
