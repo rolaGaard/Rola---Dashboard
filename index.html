@@ -322,58 +322,121 @@
   .gflag { font-size:11px; flex-shrink:0; }
   .st-pts { font-weight:800; color:var(--gcolor, #1a1a2e); }
 
-  .bracket-stage-label {
+  /* ── Bracket visual ────────────────────────────────────────────────────── */
+  .vb-section-title {
+    color:#fff; font-size:11px; font-weight:700; letter-spacing:0.06em;
+    text-align:center; margin:18px 0 12px; text-transform:uppercase;
+  }
+
+  /* Horizontal bracket (desktop / landscape) */
+  .vb-wrap {
+    display:flex; align-items:stretch; width:100%; overflow-x:auto; gap:0;
+  }
+  .vb-half {
+    display:flex; flex:1; min-width:0;
+  }
+  .vb-left { flex-direction:row; }
+  .vb-right { flex-direction:row-reverse; }
+  .vb-round {
+    display:flex; flex-direction:column; flex:1; min-width:80px;
+  }
+  .vb-round-label {
     color:#94a3b8; font-size:8px; font-weight:700; letter-spacing:0.05em;
-    text-align:center; margin-bottom:4px;
+    text-align:center; padding:0 4px 6px; text-transform:uppercase;
   }
-  .bracket-final-box {
-    background:linear-gradient(135deg, #FFD700, #C9A227); color:#0a0a0a;
-    border-radius:8px; padding:8px 10px; text-align:center; font-weight:700;
-    font-size:11px; letter-spacing:0.03em;
+  .vb-slots { display:flex; flex-direction:column; flex:1; }
+  /* Each "group" in a round = 2 slots that connect to 1 slot in the next round */
+  .vb-group {
+    display:flex; flex-direction:column; flex:1; position:relative;
   }
+  /* The vertical bracket line connecting the pair */
+  .vb-group::after {
+    content:''; position:absolute; top:25%; bottom:25%;
+    border-right:2px solid #2a2a3a;
+  }
+  .vb-left .vb-group::after { right:0; }
+  .vb-right .vb-group::after { left:0; right:auto; }
+
+  .vb-slot {
+    flex:1; display:flex; align-items:center; padding:3px 6px; position:relative; min-height:54px;
+  }
+  /* Horizontal connector from card to the vertical line */
+  .vb-left .vb-slot::after {
+    content:''; position:absolute; right:0; top:50%;
+    width:6px; border-top:2px solid #2a2a3a;
+  }
+  .vb-right .vb-slot::after {
+    content:''; position:absolute; left:0; top:50%;
+    width:6px; border-top:2px solid #2a2a3a;
+  }
+  /* Horizontal connector FROM vertical line INTO next-round slot */
+  .vb-left .vb-connector { width:12px; display:flex; align-items:center; }
+  .vb-left .vb-connector::before {
+    content:''; display:block; height:2px; width:12px; background:#2a2a3a;
+  }
+  .vb-right .vb-connector { width:12px; display:flex; align-items:center; }
+  .vb-right .vb-connector::before {
+    content:''; display:block; height:2px; width:12px; background:#2a2a3a;
+  }
+  /* Suppress the last connector line (no next round) */
+  .vb-slot.vb-no-line::after { display:none; }
+
+  /* Compact bracket match card */
+  .vb-card {
+    width:100%; background:#1e2235; border-radius:6px; overflow:hidden;
+    border:1px solid #2a2a3a; font-size:10px;
+  }
+  .vb-card.live { border-color:#CC0000; }
+  .vb-card.finished { border-color:#003087; }
+  .vb-team {
+    display:flex; align-items:center; gap:4px; padding:4px 6px;
+  }
+  .vb-team:first-child { border-bottom:1px solid #2a2a3a; }
+  .vb-team-name { color:#e2e8f0; font-weight:600; flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .vb-team-name.winner { color:#FFD700; font-weight:800; }
+  .vb-score {
+    background:#0a0a0a; color:#fff; font-weight:800; font-size:11px;
+    padding:1px 5px; border-radius:3px; flex-shrink:0; min-width:18px; text-align:center;
+  }
+  .vb-score.live-score { background:#CC0000; }
+  .vb-card-tbd { padding:8px 6px; text-align:center; color:#64748b; font-size:9px; font-style:italic; }
+  .vb-time { font-size:9px; color:#94a3b8; display:block; text-align:center; padding:2px 4px; background:#0a0a0a; }
+
+  /* Center final */
+  .vb-center {
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:0 8px; flex-shrink:0; min-width:100px; gap:8px;
+  }
+  .vb-trophy { font-size:32px; }
+  .vb-final-label { color:#fff; font-size:9px; font-weight:700; letter-spacing:0.06em; text-align:center; }
+  .vb-final-card {
+    width:100%; background:#1e2235; border:2px solid #FFD700;
+    border-radius:8px; overflow:hidden; font-size:10px;
+  }
+  .vb-third-label { color:#94a3b8; font-size:8px; font-weight:700; letter-spacing:0.05em; text-align:center; margin-top:4px; }
+
+  /* Mobile bracket: rounds stacked vertically */
+  .vb-mobile { display:none; flex-direction:column; gap:16px; }
+  .vb-mobile-round { }
+  .vb-mobile-label {
+    color:#94a3b8; font-size:10px; font-weight:700; letter-spacing:0.05em;
+    text-transform:uppercase; margin-bottom:6px; padding-left:2px;
+  }
+  .vb-mobile-grid { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+  .vb-mobile-grid.one-col { grid-template-columns:1fr; }
+
   .bracket-note {
     text-align:center; color:#94a3b8; font-size:11px; margin-top:18px; padding:0 16px 8px;
   }
 
-  .bracket-funnel {
-    display:grid; grid-template-columns:1fr 1fr 1fr auto 1fr 1fr 1fr;
-    align-items:center; gap:4px; width:100%;
-  }
-  .bracket-side-col { display:flex; flex-direction:column; gap:4px; justify-content:center; min-width:0; }
-  .bracket-side-col.r8 { gap:4px; }
-  .bracket-side-col.r4 { gap:24px; }
-  .bracket-side-col.r2 { gap:64px; }
-  .bracket-slot {
-    background:#fff; border-radius:6px; padding:4px 4px; font-size:8.5px;
-    font-weight:600; color:#1a1a2e; text-align:center;
-    border:1px dashed #cbd5e1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
-  }
-  .bracket-side-col.r4 .bracket-slot { font-size:9px; padding:5px 5px; }
-  .bracket-side-col.r2 .bracket-slot { font-size:9px; padding:6px 5px; }
-  .bracket-center-final {
-    display:flex; flex-direction:column; align-items:center; gap:10px; padding:0 10px;
-    align-self:center;
-  }
-  .bracket-trophy { font-size:42px; }
-  .bracket-title { color:#fff; font-size:11px; font-weight:700; letter-spacing:0.06em; text-align:center; }
-
-  .qualifiers-summary { margin-top:20px; }
-  .qualifiers-grid {
-    display:grid; grid-template-columns:repeat(4,1fr); gap:8px;
-  }
-  .qualifier-card {
-    background:#fff; border-radius:8px; padding:0; overflow:hidden;
-    border:2px solid var(--gcolor, #94a3b8);
-  }
-  .qualifier-card-title {
-    font-size:9px; font-weight:700; color:#fff; letter-spacing:0.04em;
-    background:var(--gcolor, #94a3b8); padding:3px 8px;
-  }
-  .qualifier-row { font-size:10px; padding:3px 8px; color:#1a1a2e; }
-  .qteam { font-weight:700; background:#1DB954; color:#fff; border-radius:4px; padding:1px 5px; }
-  .qpending { color:#94a3b8; font-style:italic; }
   @media (max-width:700px) {
-    .qualifiers-grid { grid-template-columns:repeat(2,1fr); }
+    .bracket-layout { grid-template-columns:1fr; gap:18px; }
+    .groups-col { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }
+    .vb-wrap { display:none; }
+    .vb-mobile { display:flex; }
+  }
+  @media (min-width:701px) {
+    .vb-mobile { display:none; }
   }
 
   .thirds-disclaimer {
@@ -457,20 +520,6 @@
   }
   @media (max-width:700px) {
     .r32-grid { grid-template-columns:1fr; }
-  }
-
-  @media (max-width:700px) {
-    .bracket-layout { grid-template-columns:1fr; gap:18px; }
-    .groups-col { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }
-    .bracket-funnel { display:none; }
-    .bracket-mobile { display:flex; flex-direction:column; gap:18px; }
-    .bracket-mobile-stage { display:flex; flex-direction:column; gap:6px; }
-    .bracket-mobile-stage .bracket-stage-label { margin-bottom:2px; text-align:left; padding-left:2px; }
-    .bracket-mobile-row { display:flex; gap:8px; }
-    .bracket-mobile-row .bracket-slot { flex:1; font-size:11px; padding:8px 6px; white-space:normal; }
-  }
-  @media (min-width:701px) {
-    .bracket-mobile { display:none; }
   }
 
   @keyframes goalFlash {
@@ -949,7 +998,7 @@ const I18N = {
     enEstaVista: 'en esta vista',
     partidoEncontrado: 'partido encontrado', partidosEncontrados: 'partidos encontrados',
     porDefinir: 'Por definir',
-    campeon: 'CAMPEÓN', tercerPuesto: '3ER PUESTO', finalTitle: 'FINAL', ganadorPartido: 'Ganador partido', perdedorPartido: 'Perdedor partido', partidoNro: 'Partido N°', knockoutListDisclaimer: 'Calendario oficial de FIFA (fechas/estadios fijos). Cuando todavía no se sabe qué selección juega ese cupo, se muestra "TBD" (por confirmar).', faseEliminatoriaTitle: 'Fase Eliminatoria',
+    campeon: 'CAMPEÓN', tercerPuesto: '3ER PUESTO', finalTitle: 'FINAL', cuadroEliminatorio: 'Cuadro Eliminatorio', ganadorPartido: 'Ganador partido', perdedorPartido: 'Perdedor partido', partidoNro: 'Partido N°', knockoutListDisclaimer: 'Calendario oficial de FIFA (fechas/estadios fijos). Cuando todavía no se sabe qué selección juega ese cupo, se muestra "TBD" (por confirmar).', faseEliminatoriaTitle: 'Fase Eliminatoria',
     octavos: 'OCTAVOS', cuartos: 'CUARTOS', semis: 'SEMIS', semifinales: 'SEMIFINALES',
     cuartosDeFinal: 'CUARTOS DE FINAL', octavosDeFinal: 'OCTAVOS DE FINAL',
     bracketNote: 'El cuadro de eliminación se completa automáticamente cuando termine la fase de grupos (28 de junio)',
@@ -1000,7 +1049,7 @@ const I18N = {
     enEstaVista: 'in this view',
     partidoEncontrado: 'match found', partidosEncontrados: 'matches found',
     porDefinir: 'TBD',
-    campeon: 'CHAMPION', tercerPuesto: '3RD PLACE', finalTitle: 'FINAL', ganadorPartido: 'Winner of match', perdedorPartido: 'Loser of match', partidoNro: 'Match No.', knockoutListDisclaimer: 'Official FIFA schedule (fixed dates/venues). When it\'s not known yet which team plays that slot, it shows "TBD".', faseEliminatoriaTitle: 'Knockout Stage',
+    campeon: 'CHAMPION', tercerPuesto: '3RD PLACE', finalTitle: 'FINAL', cuadroEliminatorio: 'Knockout Bracket', ganadorPartido: 'Winner of match', perdedorPartido: 'Loser of match', partidoNro: 'Match No.', knockoutListDisclaimer: 'Official FIFA schedule (fixed dates/venues). When it\'s not known yet which team plays that slot, it shows "TBD".', faseEliminatoriaTitle: 'Knockout Stage',
     octavos: 'ROUND OF 32', cuartos: 'QUARTERS', semis: 'SEMIS', semifinales: 'SEMIFINALS',
     cuartosDeFinal: 'QUARTERFINALS', octavosDeFinal: 'ROUND OF 32',
     bracketNote: 'The knockout bracket fills in automatically once the group stage ends (June 28)',
@@ -1102,7 +1151,7 @@ const I18N = {
     enEstaVista: 'in dieser Ansicht',
     partidoEncontrado: 'Spiel gefunden', partidosEncontrados: 'Spiele gefunden',
     porDefinir: 'Noch offen',
-    campeon: 'MEISTER', tercerPuesto: '3. PLATZ', finalTitle: 'FINALE', ganadorPartido: 'Sieger Spiel', perdedorPartido: 'Verlierer Spiel', partidoNro: 'Spiel Nr.', knockoutListDisclaimer: 'Offizieller FIFA-Spielplan (feste Termine/Stadien). Solange noch nicht bekannt ist, welches Team diesen Platz spielt, wird "TBD" angezeigt.', faseEliminatoriaTitle: 'K.-o.-Phase',
+    campeon: 'MEISTER', tercerPuesto: '3. PLATZ', finalTitle: 'FINALE', cuadroEliminatorio: 'K.-o.-Bracket', ganadorPartido: 'Sieger Spiel', perdedorPartido: 'Verlierer Spiel', partidoNro: 'Spiel Nr.', knockoutListDisclaimer: 'Offizieller FIFA-Spielplan (feste Termine/Stadien). Solange noch nicht bekannt ist, welches Team diesen Platz spielt, wird "TBD" angezeigt.', faseEliminatoriaTitle: 'K.-o.-Phase',
     octavos: 'ACHTELFINALE', cuartos: 'VIERTELFINALE', semis: 'HALBFINALE', semifinales: 'HALBFINALE',
     cuartosDeFinal: 'VIERTELFINALE', octavosDeFinal: 'ACHTELFINALE',
     bracketNote: 'Der K.O.-Plan wird automatisch ausgefüllt, sobald die Gruppenphase endet (28. Juni)',
@@ -1153,7 +1202,7 @@ const I18N = {
     enEstaVista: 'in deze weergave',
     partidoEncontrado: 'wedstrijd gevonden', partidosEncontrados: 'wedstrijden gevonden',
     porDefinir: 'Nog te bepalen',
-    campeon: 'KAMPIOEN', tercerPuesto: '3E PLAATS', finalTitle: 'FINALE', ganadorPartido: 'Winnaar wedstrijd', perdedorPartido: 'Verliezer wedstrijd', partidoNro: 'Wedstrijd nr.', knockoutListDisclaimer: 'Officieel FIFA-schema (vaste data/stadions). Als nog niet bekend is welk land die plek speelt, wordt "TBD" weergegeven.', faseEliminatoriaTitle: 'Knock-outfase',
+    campeon: 'KAMPIOEN', tercerPuesto: '3E PLAATS', finalTitle: 'FINALE', cuadroEliminatorio: 'Knock-outschema', ganadorPartido: 'Winnaar wedstrijd', perdedorPartido: 'Verliezer wedstrijd', partidoNro: 'Wedstrijd nr.', knockoutListDisclaimer: 'Officieel FIFA-schema (vaste data/stadions). Als nog niet bekend is welk land die plek speelt, wordt "TBD" weergegeven.', faseEliminatoriaTitle: 'Knock-outfase',
     octavos: 'ACHTSTE FINALES', cuartos: 'KWARTFINALES', semis: 'HALVE FINALES', semifinales: 'HALVE FINALES',
     cuartosDeFinal: 'KWARTFINALES', octavosDeFinal: 'ACHTSTE FINALES',
     bracketNote: 'Het knock-outschema wordt automatisch aangevuld zodra de groepsfase is afgelopen (28 juni)',
@@ -3065,45 +3114,189 @@ function renderCountriesList() {
     '<div class="cl-disclaimer">' + t('paisesDisclaimer') + '</div>';
 }
 
+// ── Bracket visual ───────────────────────────────────────────────────────
+// Estructura fija del bracket de 32 (de acuerdo al calendario oficial de
+// la FIFA). Cada entrada define qué par de partidos de una ronda alimenta
+// al siguiente. Las claves son los números de partido del R32_CALENDAR.
+const BRACKET_LEFT = [
+  // Cuadrante 1: P73+P75 → P90 → P97 → P101 → Final
+  { r32: [73, 75], r16: 90, qf: 97, sf: 101 },
+  { r32: [74, 77], r16: 89, qf: 97, sf: 101 },
+  // Cuadrante 2: P76+P78 → P91 → P99 → P101 → Final
+  { r32: [76, 78], r16: 91, qf: 99, sf: 101 },
+  { r32: [79, 80], r16: 92, qf: 99, sf: 101 },
+];
+const BRACKET_RIGHT = [
+  { r32: [83, 84], r16: 93, qf: 98, sf: 102 },
+  { r32: [81, 82], r16: 94, qf: 98, sf: 102 },
+  { r32: [86, 88], r16: 95, qf: 100, sf: 102 },
+  { r32: [85, 87], r16: 96, qf: 100, sf: 102 },
+];
+
+// Construye la tarjeta compacta para el bracket, usando resolveKnockoutSides
+// para obtener los equipos (igual que el resto de la app — sin adivinanzas).
+function buildVbCard(matchNum, isFinal) {
+  const allCals = [...R32_CALENDAR,...R16_CALENDAR,...QF_CALENDAR,...SF_CALENDAR,...THIRD_PLACE_CALENDAR,...FINAL_CALENDAR];
+  const m = allCals.find(x => x.match === matchNum);
+  if (!m) return '<div class="vb-card"><div class="vb-card-tbd">P' + matchNum + '</div></div>';
+  const { teamA, teamB } = resolveKnockoutSides(m);
+  const live = teamA && teamB ? getLiveData({ home:teamA, away:teamB, kickoffUTC:m.kickoffUTC }) : null;
+  const apiStatus = live ? live.status : null;
+  const now = new Date();
+  const kickoff = new Date(m.kickoffUTC);
+  const end = new Date(kickoff.getTime() + 115*60000);
+  const isLive = isLiveStatus(apiStatus) || (!isFinishedStatus(apiStatus) && now>=kickoff && now<end);
+  const isFinished = isFinishedStatus(apiStatus) || (!isLiveStatus(apiStatus) && now>=end);
+  const homeGoals = live ? live.homeGoals : null;
+  const awayGoals = live ? live.awayGoals : null;
+  const hasScore = homeGoals !== null && homeGoals !== undefined;
+  const cardClass = 'vb-card' + (isFinal?' vb-final-card':'') + (isLive?' live':isFinished?' finished':'');
+
+  function teamRow(team, goals, isWinner) {
+    if (!team) return '<div class="vb-team"><span style="color:#64748b;font-size:9px">TBD</span></div>';
+    const scoreHtml = hasScore
+      ? '<span class="vb-score' + (isLive?' live-score':'') + '">' + goals + '</span>'
+      : '';
+    const shortName = esName(team).length > 12 ? countryCode(team) : esName(team);
+    return '<div class="vb-team">' +
+      flag(team) + ' ' +
+      '<span class="vb-team-name' + (isWinner?' winner':'') + '">' + shortName + '</span>' +
+      scoreHtml +
+    '</div>';
+  }
+
+  const homeWin = hasScore && isFinished && homeGoals > awayGoals;
+  const awayWin = hasScore && isFinished && awayGoals > homeGoals;
+  let penHtml = '';
+  if (live && live.penaltyHome !== null && live.penaltyHome !== undefined) {
+    penHtml = '<div class="vb-time">(' + live.penaltyHome + '-' + live.penaltyAway + ') pen</div>';
+  }
+  if (!teamA && !teamB) {
+    const dateStr = new Date(m.kickoffUTC).toLocaleString(dateLocale(),{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false});
+    return '<div class="' + cardClass + '"><div class="vb-card-tbd">' + dateStr + '</div></div>';
+  }
+  const timeStr = !hasScore && !isLive ? utcToAR(m.kickoffUTC).split(' ').slice(-1)[0] : '';
+  return '<div class="' + cardClass + '">' +
+    teamRow(teamA, homeGoals, homeWin) +
+    teamRow(teamB, awayGoals, awayWin) +
+    (timeStr ? '<div class="vb-time">' + timeStr + '</div>' : '') +
+    penHtml +
+  '</div>';
+}
+
+// Construye una mitad del bracket (izquierda o derecha).
+// El parámetro side determina hacia qué lado apuntan los conectores.
+function buildVbHalf(sections, side) {
+  const rounds = [
+    { key:'r32', label:t('dieciseisavosTitle').split('(')[0].trim() },
+    { key:'r16', label:t('octavosDeFinal') },
+    { key:'qf', label:t('cuartosDeFinal') },
+    { key:'sf', label:t('semifinales') },
+  ];
+
+  let html = '<div class="vb-half vb-' + side + '">';
+
+  // Función que decide si agregar conector entre rondas
+  const roundOrder = side === 'left' ? rounds : [...rounds].reverse();
+
+  roundOrder.forEach((round, ri) => {
+    // Entre columnas de rondas, ponemos un mini-conector horizontal
+    if (ri > 0) {
+      html += '<div class="vb-connector"></div>';
+    }
+    html += '<div class="vb-round"><div class="vb-round-label">' + round.label + '</div><div class="vb-slots">';
+
+    if (round.key === 'r32') {
+      // 8 slots en 4 grupos de 2
+      sections.forEach(sec => {
+        html += '<div class="vb-group">';
+        sec.r32.forEach(mNum => {
+          html += '<div class="vb-slot">' + buildVbCard(mNum, false) + '</div>';
+        });
+        html += '</div>';
+      });
+    } else if (round.key === 'r16') {
+      // 4 slots en 2 grupos de 2 (los r16 de sec[0]+sec[1] y sec[2]+sec[3])
+      [[0,1],[2,3]].forEach(idxPair => {
+        html += '<div class="vb-group">';
+        idxPair.forEach(i => {
+          html += '<div class="vb-slot">' + buildVbCard(sections[i].r16, false) + '</div>';
+        });
+        html += '</div>';
+      });
+    } else if (round.key === 'qf') {
+      // 2 slots en 1 grupo
+      html += '<div class="vb-group">';
+      const qfNums = [...new Set(sections.map(s => s.qf))];
+      qfNums.forEach(qf => {
+        html += '<div class="vb-slot">' + buildVbCard(qf, false) + '</div>';
+      });
+      html += '</div>';
+    } else if (round.key === 'sf') {
+      // 1 slot solo (va al centro directamente)
+      const sfNum = sections[0].sf;
+      html += '<div class="vb-group"><div class="vb-slot vb-no-line">' + buildVbCard(sfNum, false) + '</div></div>';
+    }
+
+    html += '</div></div>';
+  });
+
+  html += '</div>';
+  return html;
+}
+
+// Bracket compacto para mobile (rondas apiladas verticalmente)
+function buildVbMobile() {
+  const allCals = [...R32_CALENDAR,...R16_CALENDAR,...QF_CALENDAR,...SF_CALENDAR,...THIRD_PLACE_CALENDAR,...FINAL_CALENDAR];
+  const rounds = [
+    { label: t('dieciseisavosTitle').split('(')[0].trim(), matches: R32_CALENDAR.map(m=>m.match) },
+    { label: t('octavosDeFinal'), matches: R16_CALENDAR.map(m=>m.match) },
+    { label: t('cuartosDeFinal'), matches: QF_CALENDAR.map(m=>m.match) },
+    { label: t('semifinales'), matches: SF_CALENDAR.map(m=>m.match) },
+    { label: t('finalTitle'), matches: FINAL_CALENDAR.map(m=>m.match) },
+    { label: t('tercerPuesto'), matches: THIRD_PLACE_CALENDAR.map(m=>m.match) },
+  ];
+  let html = '<div class="vb-mobile">';
+  rounds.forEach(round => {
+    const cols = round.matches.length === 1 ? ' one-col' : '';
+    html += '<div class="vb-mobile-round"><div class="vb-mobile-label">' + round.label + '</div>';
+    html += '<div class="vb-mobile-grid' + cols + '">';
+    round.matches.forEach(mNum => { html += buildVbCard(mNum, false); });
+    html += '</div></div>';
+  });
+  html += '</div>';
+  return html;
+}
+
 function renderBracket() {
-  const allGroups = ['A','B','C','D','E','F','G','H','I','J','K','L'];
   const leftGroups = ['A','B','C','D','E','F'];
   const rightGroups = ['G','H','I','J','K','L'];
 
-  let html = buildRoundOf32();
-  html += buildThirdPlaceTable();
-  html += buildKnockoutList();
-  html += '<div class="bracket-note">' + t('bracketNote') + '</div>';
-
-  html += '<div class="bracket-funnel">';
-  html += buildSlotsCol(8, 'r8', t('octavos'));
-  html += buildSlotsCol(4, 'r4', t('cuartos'));
-  html += buildSlotsCol(2, 'r2', t('semis'));
-  html += '<div class="bracket-center-final">';
-  html += '<div class="bracket-trophy">🏆</div>';
-  html += '<div class="bracket-title">' + t('campeon') + '</div>';
-  html += '<div class="bracket-final-box">' + t('porDefinir') + '</div>';
-  html += '<div class="bracket-stage-label" style="margin-top:10px;">' + t('tercerPuesto') + '</div>';
-  html += '<div class="bracket-slot">' + t('porDefinir') + '</div>';
-  html += '</div>';
-  html += buildSlotsCol(2, 'r2', t('semis'));
-  html += buildSlotsCol(4, 'r4', t('cuartos'));
-  html += buildSlotsCol(8, 'r8', t('octavos'));
-  html += '</div>';
-
-  let mobileHtml = '<div class="bracket-mobile">';
-  mobileHtml += '<div style="text-align:center;"><div class="bracket-trophy">🏆</div><div class="bracket-title">' + t('campeon') + '</div>';
-  mobileHtml += '<div class="bracket-final-box" style="margin:8px auto; max-width:200px;">' + t('porDefinir') + '</div>';
-  mobileHtml += '<div class="bracket-stage-label" style="margin-top:8px;">' + t('tercerPuesto') + '</div>';
-  mobileHtml += '<div class="bracket-slot" style="max-width:200px; margin:4px auto;">' + t('porDefinir') + '</div></div>';
-  mobileHtml += buildMobileStage(4, t('semifinales'));
-  mobileHtml += buildMobileStage(8, t('cuartosDeFinal'));
-  mobileHtml += buildMobileStage(16, t('octavosDeFinal'));
-  mobileHtml += '</div>';
-
+  // 1. Tablas de grupos (costados, igual que siempre)
   let groupsHtml = '<div class="bracket-layout">';
   groupsHtml += '<div class="groups-col">' + buildGroupsColumn(leftGroups) + '</div>';
-  groupsHtml += '<div>' + html + mobileHtml + '</div>';
+
+  // 2. Bracket visual en el centro
+  let bracketHtml = '<div class="vb-section-title">🏆 ' + t('cuadroEliminatorio') + '</div>';
+
+  // Horizontal bracket (desktop)
+  bracketHtml += '<div class="vb-wrap">';
+  bracketHtml += buildVbHalf(BRACKET_LEFT, 'left');
+  // Centro: Final + 3er puesto
+  bracketHtml += '<div class="vb-center">';
+  bracketHtml += '<div class="vb-trophy">🏆</div>';
+  bracketHtml += '<div class="vb-final-label">' + t('campeon') + '</div>';
+  bracketHtml += buildVbCard(104, true);
+  bracketHtml += '<div class="vb-third-label">' + t('tercerPuesto') + '</div>';
+  bracketHtml += buildVbCard(103, false);
+  bracketHtml += '</div>';
+  bracketHtml += buildVbHalf(BRACKET_RIGHT, 'right');
+  bracketHtml += '</div>';
+
+  // Mobile bracket (apilado vertical)
+  bracketHtml += buildVbMobile();
+
+  groupsHtml += '<div>' + bracketHtml + '</div>';
   groupsHtml += '<div class="groups-col">' + buildGroupsColumn(rightGroups) + '</div>';
   groupsHtml += '</div>';
 
