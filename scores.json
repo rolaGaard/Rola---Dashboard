@@ -1,18 +1,18 @@
 {
-  "updated": "2026-06-29T23:00:52.597748Z",
+  "updated": "2026-06-29T23:10:23.601734Z",
   "matches": {
     "GERMANY-PARAGUAY": {
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "ET",
-      "elapsed": 111,
+      "elapsed": 120,
       "kickoffUTC": "2026-06-29T20:30:00+00:00",
       "referee": "Jalal Jayed, Morocco",
       "events": [
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "J. Enciso",
+          "player": "Julio Enciso",
           "team": "PARAGUAY",
           "minute": 42,
           "extra": null
@@ -20,7 +20,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "K. Havertz",
+          "player": "Kai Havertz",
           "team": "GERMANY",
           "minute": 54,
           "extra": null
@@ -28,7 +28,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "A. Cubas",
+          "player": "Andr\u00e9s Cubas",
           "team": "PARAGUAY",
           "minute": 65,
           "extra": null
@@ -36,15 +36,7 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "J. Nagelsmann",
-          "team": "GERMANY",
-          "minute": 105,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "G. Alfaro",
+          "player": "Gustavo Julio Alfaro",
           "team": "PARAGUAY",
           "minute": 105,
           "extra": null
@@ -52,59 +44,93 @@
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "K. Havertz",
+          "player": "Julian Nagelsmann",
           "team": "GERMANY",
           "minute": 106,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Kai Havertz",
+          "team": "GERMANY",
+          "minute": 106,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Jamal Musiala",
+          "team": "GERMANY",
+          "minute": 115,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Mat\u00edas Galarza",
+          "team": "PARAGUAY",
+          "minute": 117,
           "extra": null
         }
       ],
       "substitutions": {
         "GERMANY": [
           {
-            "out": "F. Nmecha",
-            "in": "L. Goretzka",
-            "minute": 46
+            "out": "Felix Nmecha",
+            "in": "Leon Goretzka",
+            "minute": 45
           },
           {
-            "out": "D. Undav",
-            "in": "J. Musiala",
+            "out": "Deniz Undav",
+            "in": "Jamal Musiala",
             "minute": 63
           },
           {
-            "out": "A. Pavlovic",
-            "in": "W. Anton",
+            "out": "Aleksandar Pavlovi\u0107",
+            "in": "Waldemar Anton",
             "minute": 79
           },
           {
-            "out": "L. Sane",
-            "in": "N. Woltemade",
+            "out": "Leroy San\u00e9",
+            "in": "Nick Woltemade",
             "minute": 88
+          },
+          {
+            "out": "Florian Wirtz",
+            "in": "Nadiem Amiri",
+            "minute": 110
+          },
+          {
+            "out": "Antonio R\u00fcdiger",
+            "in": "Malick Thiaw",
+            "minute": 110
           }
         ],
         "PARAGUAY": [
           {
-            "out": "G. Avalos",
-            "in": "G. Caballero",
+            "out": "Gabriel \u00c1valos",
+            "in": "Gustavo Caballero",
             "minute": 55
           },
           {
-            "out": "J. Enciso",
-            "in": "Mauricio",
+            "out": "Julio Enciso",
+            "in": "Maur\u00edcio Magalh\u00e3es Prado",
             "minute": 57
           },
           {
-            "out": "M. Almiron",
-            "in": "G. Velazquez",
-            "minute": 91
+            "out": "Miguel Almir\u00f3n",
+            "in": "Gustavo Vel\u00e1zquez",
+            "minute": 90
           },
           {
-            "out": "J. Caceres",
-            "in": "B. Ojeda",
+            "out": "Juan Caceres",
+            "in": "Braian Ojeda",
             "minute": 99
           },
           {
-            "out": "D. Bobadilla",
-            "in": "A. Sanabria",
+            "out": "Damian Bobadilla",
+            "in": "Antonio Sanabria",
             "minute": 99
           }
         ]
