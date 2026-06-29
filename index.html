@@ -2227,7 +2227,7 @@ function render() {
 
   updateCounters();
 
-  const descending = currentFilter === 'finished' || currentFilter === 'today';
+  const descending = currentFilter === 'finished';
   const sorted = filtered.slice().sort((a, b) => {
     const ka = getUnifiedKickoff(a), kb = getUnifiedKickoff(b);
     return descending ? new Date(kb) - new Date(ka) : new Date(ka) - new Date(kb);
