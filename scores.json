@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29T16:20:48.392440Z",
+  "updated": "2026-06-29T16:30:39.999229Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
@@ -27719,7 +27719,280 @@
       "status": "NS",
       "elapsed": null,
       "kickoffUTC": "2026-06-29T17:00:00+00:00",
-      "referee": "Maurizio Mariani, Italy"
+      "referee": "Maurizio Mariani, Italy",
+      "lineups": {
+        "BRAZIL": {
+          "formation": "4-3-3",
+          "coach": "Carlo Ancelotti",
+          "startXI": [
+            {
+              "name": "Alisson",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Danilo",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Marquinhos",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Gabriel Magalh\u00e3es",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Douglas Santos",
+              "number": 16,
+              "pos": "D"
+            },
+            {
+              "name": "Bruno Guimar\u00e3es",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Casemiro",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "Lucas Paquet\u00e1",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Rayan",
+              "number": 26,
+              "pos": "F"
+            },
+            {
+              "name": "Matheus Cunha",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Vin\u00edcius J\u00fanior",
+              "number": 7,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Ederson",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Weverton",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Alex Sandro",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "Bremer",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "L\u00e9o Pereira",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Roger Iba\u00f1ez",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "\u00c9derson",
+              "number": 2,
+              "pos": "M"
+            },
+            {
+              "name": "Fabinho",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Luiz Henrique",
+              "number": 21,
+              "pos": "F"
+            },
+            {
+              "name": "Danilo Santos",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Endrick",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Gabriel Martinelli",
+              "number": 22,
+              "pos": "F"
+            },
+            {
+              "name": "Igor Thiago",
+              "number": 25,
+              "pos": "F"
+            },
+            {
+              "name": "Neymar",
+              "number": 10,
+              "pos": "F"
+            }
+          ]
+        },
+        "JAPAN": {
+          "formation": "3-4-2-1",
+          "coach": "Hajime Moriyasu",
+          "startXI": [
+            {
+              "name": "Zion Suzuki",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Takehiro Tomiyasu",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "Shogo Taniguchi",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Hiroki It\u014d",
+              "number": 21,
+              "pos": "D"
+            },
+            {
+              "name": "Ritsu Doan",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Kaishu Sano",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "Daichi Kamada",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Keito Nakamura",
+              "number": 13,
+              "pos": "M"
+            },
+            {
+              "name": "Junya Ito",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "Daizen Maeda",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Ayase Ueda",
+              "number": 18,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Keisuke Osako",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Tomoki Hayakawa",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Yukinari Sugawara",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Ko Itakura",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Yuto Nagatomo",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Tsuyoshi Watanabe",
+              "number": 16,
+              "pos": "D"
+            },
+            {
+              "name": "Ayumu Seko",
+              "number": 20,
+              "pos": "D"
+            },
+            {
+              "name": "Junnosuke Suzuki",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Ao Tanaka",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Yuito Suzuki",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Takefusa Kubo",
+              "number": 8,
+              "pos": "F"
+            },
+            {
+              "name": "Shuto Machino",
+              "number": 6,
+              "pos": "F"
+            },
+            {
+              "name": "Koki Ogawa",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Kento Shiogai",
+              "number": 26,
+              "pos": "F"
+            },
+            {
+              "name": "Keisuke Goto",
+              "number": 9,
+              "pos": "F"
+            }
+          ]
+        }
+      }
     },
     "GERMANY-PARAGUAY": {
       "homeGoals": null,
