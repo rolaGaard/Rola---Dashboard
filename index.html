@@ -875,7 +875,7 @@
     <img class="header-icon" src="icons/icon-192.png" alt="rolaGaard">
     <div class="header-text">
       <div class="header-title">Mundial 2026</div>
-      <div class="header-by">by rolaGaard &nbsp;<span class="app-version">v2.1</span></div>
+      <div class="header-by">by rolaGaard &nbsp;<span class="app-version">v2.2</span></div>
       <div class="header-sub" id="header-sub">USA · Canadá · México</div>
     </div>
   </div>
@@ -3207,7 +3207,10 @@ function buildVbCard(matchNum, isFinal) {
     const dateStr = new Date(m.kickoffUTC).toLocaleString(dateLocale(),{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false});
     return '<div class="' + cardClass + '"><div class="vb-card-tbd">' + dateStr + '</div></div>';
   }
-  const timeStr = !hasScore && !isLive ? utcToAR(m.kickoffUTC).split(' ').slice(-1)[0] : '';
+  const arFull = utcToAR(m.kickoffUTC); // ej: "lun 28 jun, 16:00"
+  const arDate = new Date(m.kickoffUTC).toLocaleString(dateLocale(), { timeZone:'America/Argentina/Buenos_Aires', day:'2-digit', month:'short' });
+  const arHour = arFull.split(' ').slice(-1)[0].split(':')[0]; // solo HH
+  const timeStr = !hasScore && !isLive ? (arDate + ' / ' + arHour + ' hs') : '';
   return '<div class="' + cardClass + '">' +
     teamRow(teamA, homeGoals, homeWin) +
     teamRow(teamB, awayGoals, awayWin) +
