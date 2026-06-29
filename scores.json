@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-29T18:10:25.478859Z",
+  "updated": "2026-06-29T18:20:22.018794Z",
   "matches": {
     "BRAZIL-JAPAN": {
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 49,
+      "elapsed": 59,
       "kickoffUTC": "2026-06-29T17:00:00+00:00",
       "referee": "Maurizio Mariani, Italy",
       "events": [
@@ -47,6 +47,14 @@
           "player": "Danilo",
           "team": "BRAZIL",
           "minute": 48,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Casemiro",
+          "team": "BRAZIL",
+          "minute": 56,
           "extra": null
         }
       ],
