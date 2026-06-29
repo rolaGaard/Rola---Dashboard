@@ -875,7 +875,7 @@
     <img class="header-icon" src="icons/icon-192.png" alt="rolaGaard">
     <div class="header-text">
       <div class="header-title">Mundial 2026</div>
-      <div class="header-by">by rolaGaard &nbsp;<span class="app-version">v2.2</span></div>
+      <div class="header-by">by rolaGaard &nbsp;<span class="app-version">v2.3</span></div>
       <div class="header-sub" id="header-sub">USA · Canadá · México</div>
     </div>
   </div>
@@ -1742,8 +1742,10 @@ function getQualifier(groupLetter, position) {
 }
 
 function buildMatchCard(m) {
-  const key = m.home && m.away ? matchKey(m.home, m.away) : ('ko_' + (m.kickoffUTC || ''));
-  const live = (m.home && m.away) ? getLiveData(m) : null;
+  const key = m.home && m.away
+    ? (m.isKnockout ? 'ko_' + m.kickoffUTC : matchKey(m.home, m.away))
+    : ('ko_' + (m.kickoffUTC || ''));
+  const live = (m.home && m.away) ? getLiveData(m.isKnockout ? { home: m.home, away: m.away, kickoffUTC: m.kickoffUTC } : m) : null;
   const apiStatus = live ? live.status : null;
   const homeGoals = live ? live.homeGoals : null;
   const awayGoals = live ? live.awayGoals : null;
@@ -2014,30 +2016,19 @@ function getEffectiveStatus(m) {
 function updateCounters() {
   const todayAR = toARDateStr(new Date().toISOString());
   let liveCount = 0, finishedCount = 0, todayCount = 0, scheduledCount = 0;
-  SCHEDULE.forEach(m => {
-    const status = getEffectiveStatus(m);
-    const isToday = toARDateStr(getKickoffUTC(m)) === todayAR;
+  getAllMatchesUnified().forEach(m => {
+    const status = getUnifiedStatus(m);
+    const kickoff = getUnifiedKickoff(m);
     if (status === 'live') liveCount++;
     if (status === 'finished') finishedCount++;
     if (status === 'scheduled') scheduledCount++;
-    if (isToday) todayCount++;
-  });
-  // Sumamos también los 32 partidos de la fase eliminatoria (Dieciseisavos
-  // a Final) — ya tienen fecha/estadio fijo aunque el rival sea "TBD".
-  const knockoutEntries = getAllKnockoutEntries();
-  knockoutEntries.forEach(m => {
-    const { status } = knockoutEntryStatus(m);
-    const isToday = toARDateStr(m.kickoffUTC) === todayAR;
-    if (status === 'live') liveCount++;
-    if (status === 'finished') finishedCount++;
-    if (status === 'scheduled') scheduledCount++;
-    if (isToday) todayCount++;
+    if (toARDateStr(kickoff) === todayAR) todayCount++;
   });
   document.getElementById('stat-live').textContent = liveCount;
   document.getElementById('stat-today').textContent = todayCount;
   document.getElementById('stat-finished').textContent = finishedCount;
   document.getElementById('stat-scheduled').textContent = scheduledCount;
-  document.getElementById('stat-total').textContent = SCHEDULE.length + knockoutEntries.length;
+  document.getElementById('stat-total').textContent = SCHEDULE.length + getAllKnockoutEntries().length;
 }
 
 function formatDateHeader(utcStr) {
@@ -2137,13 +2128,53 @@ function buildGroupGroupedHtml(sortedMatches) {
 // Progreso real del Mundial: partidos jugados (de los 104 totales, grupos +
 // eliminatoria) sobre el total — la barra se actualiza cada vez que se
 // renderiza, así que sigue avanzando sola a medida que se juegan partidos.
+// ── Fuente unificada de todos los partidos (grupos + eliminatoria) ────────
+function getAllMatchesUnified() {
+  const groupMatches = SCHEDULE.map(m => ({ ...m, isKnockout: false }));
+  const knockoutMatches = getAllKnockoutEntries().map(m => {
+    const { teamA, teamB } = resolveKnockoutSides(m);
+    return {
+      home: teamA || null, away: teamB || null,
+      homeTBDLabel: teamA ? null : bracketSlotLabel(m.a),
+      awayTBDLabel: teamB ? null : bracketSlotLabel(m.b),
+      kickoffUTC: m.kickoffUTC, stadium: m.stadium, city: m.city,
+      group: null, roundLabel: m.roundLabel, matchNum: m.match, isKnockout: true,
+    };
+  });
+  return [...groupMatches, ...knockoutMatches];
+}
+
+function getUnifiedStatus(m) {
+  if (!m.isKnockout) return getEffectiveStatus(m);
+  if (!m.home || !m.away) return 'scheduled';
+  const live = getLiveData({ home: m.home, away: m.away, kickoffUTC: m.kickoffUTC });
+  const apiStatus = live ? live.status : null;
+  const now = new Date(), kickoff = new Date(m.kickoffUTC), end = new Date(kickoff.getTime() + 115 * 60000);
+  const isLiveM = isLiveStatus(apiStatus) || (!isFinishedStatus(apiStatus) && now >= kickoff && now < end);
+  const isFinishedM = isFinishedStatus(apiStatus) || (!isLiveStatus(apiStatus) && now >= end);
+  return isLiveM ? 'live' : isFinishedM ? 'finished' : 'scheduled';
+}
+
+function getUnifiedKickoff(m) {
+  return m.isKnockout ? m.kickoffUTC : getKickoffUTC(m);
+}
+
+function matchesSearchTerm(m, term) {
+  if (!term) return true;
+  const teams = [m.home, m.away].filter(Boolean);
+  if (teams.length === 0) return false;
+  return teams.some(team => {
+    const codes = COUNTRY_CODES[team] || [];
+    return esName(team).toLowerCase().includes(term)
+      || team.toLowerCase().includes(term)
+      || codes.some(c => c.toLowerCase() === term);
+  });
+}
+
 function updateTournamentProgress() {
-  let finished = 0;
-  SCHEDULE.forEach(m => { if (getEffectiveStatus(m) === 'finished') finished++; });
-  const knockoutEntries = getAllKnockoutEntries();
-  knockoutEntries.forEach(m => { if (knockoutEntryStatus(m).status === 'finished') finished++; });
-  const total = SCHEDULE.length + knockoutEntries.length;
-  const pct = total > 0 ? Math.min(100, (finished / total) * 100) : 0;
+  const all = getAllMatchesUnified();
+  const finished = all.filter(m => getUnifiedStatus(m) === 'finished').length;
+  const pct = all.length > 0 ? Math.min(100, (finished / all.length) * 100) : 0;
   const fillEl = document.getElementById('progress-fill');
   if (fillEl) fillEl.style.width = pct + '%';
 }
@@ -2158,9 +2189,7 @@ function render() {
     document.getElementById('bracket-view').style.display = 'none';
     document.getElementById('countries-view').style.display = 'none';
     document.getElementById('stats-view').style.display = '';
-    renderStatsView();
-    updateCounters();
-    return;
+    renderStatsView(); updateCounters(); return;
   }
   document.getElementById('stats-view').style.display = 'none';
 
@@ -2169,9 +2198,7 @@ function render() {
     document.getElementById('matches').style.display = 'none';
     document.getElementById('bracket-view').style.display = 'none';
     document.getElementById('countries-view').style.display = '';
-    renderCountriesList();
-    updateCounters();
-    return;
+    renderCountriesList(); updateCounters(); return;
   }
   document.getElementById('countries-view').style.display = 'none';
 
@@ -2179,147 +2206,100 @@ function render() {
     document.querySelector('.search-wrap').style.display = 'none';
     document.getElementById('matches').style.display = 'none';
     document.getElementById('bracket-view').style.display = '';
-    renderBracket();
-    updateCounters();
-    return;
+    renderBracket(); updateCounters(); return;
   }
   document.querySelector('.search-wrap').style.display = '';
   document.getElementById('matches').style.display = '';
   document.getElementById('bracket-view').style.display = 'none';
 
-  const filtered = SCHEDULE.filter(m => {
-    let matchesSearch = true;
-    if (searchTerm) {
-      const homeCodes = COUNTRY_CODES[m.home] || [];
-      const awayCodes = COUNTRY_CODES[m.away] || [];
-      const homeMatch = esName(m.home).toLowerCase().includes(searchTerm)
-        || m.home.toLowerCase().includes(searchTerm)
-        || homeCodes.some(c => c.toLowerCase() === searchTerm);
-      const awayMatch = esName(m.away).toLowerCase().includes(searchTerm)
-        || m.away.toLowerCase().includes(searchTerm)
-        || awayCodes.some(c => c.toLowerCase() === searchTerm);
-      matchesSearch = homeMatch || awayMatch;
-    }
-    if (!matchesSearch) return false;
-
-    const status = getEffectiveStatus(m);
-    const isToday = toARDateStr(getKickoffUTC(m)) === todayAR;
+  const allMatches = getAllMatchesUnified();
+  const filtered = allMatches.filter(m => {
+    if (!matchesSearchTerm(m, searchTerm)) return false;
+    const status = getUnifiedStatus(m);
+    const kickoff = getUnifiedKickoff(m);
     if (currentFilter === 'all') return true;
     if (currentFilter === 'live') return status === 'live';
-    if (currentFilter === 'today') return isToday;
+    if (currentFilter === 'today') return toARDateStr(kickoff) === todayAR;
     if (currentFilter === 'finished') return status === 'finished';
     if (currentFilter === 'scheduled') return status === 'scheduled';
     return true;
-  });
-
-  // La búsqueda y los filtros también deben encontrar partidos de
-  // eliminatoria — si un equipo ya está jugando ahí, buscar su nombre (o
-  // mirar "En vivo"/"Hoy"/etc.) tiene que traerlo igual que a los de grupo.
-  const knockoutFiltered = getAllKnockoutEntries().filter(m => {
-    const { status, teamA, teamB } = knockoutEntryStatus(m);
-    if (searchTerm) {
-      if (!teamA || !teamB) return false; // un TBD no tiene nombre para buscar
-      const homeCodes = COUNTRY_CODES[teamA] || [];
-      const awayCodes = COUNTRY_CODES[teamB] || [];
-      const homeMatch = esName(teamA).toLowerCase().includes(searchTerm)
-        || teamA.toLowerCase().includes(searchTerm)
-        || homeCodes.some(c => c.toLowerCase() === searchTerm);
-      const awayMatch = esName(teamB).toLowerCase().includes(searchTerm)
-        || teamB.toLowerCase().includes(searchTerm)
-        || awayCodes.some(c => c.toLowerCase() === searchTerm);
-      if (!(homeMatch || awayMatch)) return false;
-    }
-    if (currentFilter === 'all') return true;
-    if (currentFilter === 'live') return status === 'live';
-    if (currentFilter === 'today') return toARDateStr(m.kickoffUTC) === todayAR;
-    if (currentFilter === 'finished') return status === 'finished';
-    if (currentFilter === 'scheduled') return status === 'scheduled';
-    return true;
-  });
-
-  const grouped = {};
-  filtered.forEach(m => {
-    if (!grouped[m.group]) grouped[m.group] = [];
-    grouped[m.group].push(m);
   });
 
   updateCounters();
 
+  const descending = currentFilter === 'finished' || currentFilter === 'today';
+  const sorted = filtered.slice().sort((a, b) => {
+    const ka = getUnifiedKickoff(a), kb = getUnifiedKickoff(b);
+    return descending ? new Date(kb) - new Date(ka) : new Date(ka) - new Date(kb);
+  });
+
   let html = '';
-  if (searchTerm) {
-    const items = filtered.map(m => ({ date: getKickoffUTC(m), render: () => buildMatchCard(m) }))
-      .concat(knockoutFiltered.map(m => ({ date: m.kickoffUTC, render: () => buildKnockoutCardHtml(m) })));
-    items.sort((a, b) => new Date(a.date) - new Date(b.date));
-    if (items.length === 0) {
-      html = '<div class="empty-state">' + t('noEncontrados') + ' "' + searchTerm + '" ' + t('enEstaVista') + '</div>';
-      document.getElementById('search-label').innerHTML = '';
-    } else {
-      html += '<div class="match-grid">';
-      items.forEach(item => { html += item.render(); });
-      html += '</div>';
-      const foundWord = items.length !== 1 ? t('partidosEncontrados') : t('partidoEncontrado');
-      document.getElementById('search-label').innerHTML = '<b>' + items.length + '</b> ' + foundWord;
-    }
+  if (filtered.length === 0) {
+    html = searchTerm
+      ? '<div class="empty-state">' + t('noEncontrados') + ' "' + searchTerm + '" ' + t('enEstaVista') + '</div>'
+      : '<div class="empty-state">' + t('noHayPartidos') + '</div>';
+    document.getElementById('search-label').innerHTML = '';
+  } else if (searchTerm) {
+    document.getElementById('search-label').innerHTML = '<b>' + filtered.length + '</b> ' + (filtered.length !== 1 ? t('partidosEncontrados') : t('partidoEncontrado'));
+    html = '<div class="match-grid">';
+    sorted.forEach(m => { html += buildMatchCard(m); });
+    html += '</div>';
+  } else if (currentFilter === 'all') {
+    document.getElementById('search-label').innerHTML = '';
+    html = buildUnifiedGroupedHtml(sorted);
   } else {
     document.getElementById('search-label').innerHTML = '';
-    // Los jugados y los de hoy se ordenan del más reciente al más antiguo
-    // (así los que ya arrancaron o están en vivo quedan arriba); el resto
-    // de las vistas, de más próximo a más lejano (orden ascendente normal).
-    const sortedAll = (currentFilter === 'finished' || currentFilter === 'today')
-      ? filtered.slice().sort((a,b) => new Date(getKickoffUTC(b)) - new Date(getKickoffUTC(a)))
-      : filtered.slice().sort((a,b) => new Date(getKickoffUTC(a)) - new Date(getKickoffUTC(b)));
-
-    if (sortedAll.length === 0 && currentFilter !== 'scheduled' && currentFilter !== 'finished' && currentFilter !== 'today' && currentFilter !== 'live') {
-      html = '<div class="empty-state">' + t('noHayPartidos') + '</div>';
-    } else if (currentFilter === 'scheduled') {
-      const knockoutScheduled = getAllKnockoutEntries().filter(m => knockoutEntryStatus(m).status === 'scheduled');
-      if (sortedAll.length === 0 && knockoutScheduled.length === 0) {
-        html = '<div class="empty-state">' + t('noHayPartidos') + '</div>';
-      } else {
-        html += buildUnifiedDateGroupedHtml(sortedAll, knockoutScheduled, false);
-      }
-    } else if (currentFilter === 'finished') {
-      const knockoutFinished = getAllKnockoutEntries().filter(m => knockoutEntryStatus(m).status === 'finished');
-      if (sortedAll.length === 0 && knockoutFinished.length === 0) {
-        html = '<div class="empty-state">' + t('noHayPartidos') + '</div>';
-      } else {
-        html += buildUnifiedDateGroupedHtml(sortedAll, knockoutFinished, true);
-      }
-    } else if (currentFilter === 'all') {
-      html += buildGroupGroupedHtml(sortedAll);
-    } else {
-      html += '<div class="match-grid">';
-      sortedAll.forEach(m => { html += buildMatchCard(m); });
-      // "Hoy" y "En vivo" también incluyen partidos de eliminatoria — el
-      // contador ya los suma, faltaba mostrarlos acá.
-      let knockoutExtraCount = 0;
-      if (currentFilter === 'today') {
-        const knockoutToday = getAllKnockoutEntries()
-          .filter(m => toARDateStr(m.kickoffUTC) === todayAR)
-          .sort((a, b) => new Date(b.kickoffUTC) - new Date(a.kickoffUTC));
-        knockoutExtraCount = knockoutToday.length;
-        knockoutToday.forEach(m => { html += buildKnockoutCardHtml(m); });
-      } else if (currentFilter === 'live') {
-        const knockoutLive = getAllKnockoutEntries().filter(m => knockoutEntryStatus(m).status === 'live');
-        knockoutExtraCount = knockoutLive.length;
-        knockoutLive.forEach(m => { html += buildKnockoutCardHtml(m); });
-      }
-      html += '</div>';
-      if (sortedAll.length === 0 && knockoutExtraCount === 0) {
-        html = '<div class="empty-state">' + t('noHayPartidos') + '</div>';
-      }
-    }
+    html = buildUnifiedByDateHtml(sorted);
   }
-  document.getElementById('matches').innerHTML = html;
 
+  document.getElementById('matches').innerHTML = html;
   const updateStr = lastUpdate
     ? new Date(lastUpdate).toLocaleTimeString(dateLocale(), {hour:'2-digit',minute:'2-digit',hour12:false})
     : '--:--';
   document.getElementById('footer').textContent = t('datosFooter') + ' ' + updateStr;
+  if (pendingFlashKey) setTimeout(() => { pendingFlashKey = null; }, 3000);
+}
 
-  if (pendingFlashKey) {
-    setTimeout(() => { pendingFlashKey = null; }, 3000);
-  }
+function buildUnifiedGroupedHtml(sorted) {
+  let html = '';
+  const byGroup = {};
+  sorted.filter(m => !m.isKnockout).forEach(m => {
+    if (!byGroup[m.group]) byGroup[m.group] = [];
+    byGroup[m.group].push(m);
+  });
+  Object.keys(byGroup).sort().forEach(g => {
+    const color = GROUP_COLORS[g] || '#94a3b8';
+    html += '<div class="date-section"><div class="date-header" style="border-left:3px solid ' + color + ';">' + t('grupo') + ' ' + g + '</div><div class="match-grid">';
+    byGroup[g].forEach(m => { html += buildMatchCard(m); });
+    html += '</div></div>';
+  });
+  const byRound = {};
+  sorted.filter(m => m.isKnockout).forEach(m => {
+    const key = m.roundLabel || 'Eliminatoria';
+    if (!byRound[key]) byRound[key] = [];
+    byRound[key].push(m);
+  });
+  Object.keys(byRound).forEach(round => {
+    html += '<div class="date-section"><div class="date-header">' + round + '</div><div class="match-grid">';
+    byRound[round].forEach(m => { html += buildMatchCard(m); });
+    html += '</div></div>';
+  });
+  return html;
+}
+
+function buildUnifiedByDateHtml(sorted) {
+  let html = '', currentDateKey = null;
+  sorted.forEach(m => {
+    const dateKey = toARDateStr(getUnifiedKickoff(m));
+    if (dateKey !== currentDateKey) {
+      if (currentDateKey !== null) html += '</div></div>';
+      currentDateKey = dateKey;
+      html += '<div class="date-section"><div class="date-header">' + formatDateHeader(getUnifiedKickoff(m)) + '</div><div class="match-grid">';
+    }
+    html += buildMatchCard(m);
+  });
+  if (currentDateKey !== null) html += '</div></div>';
+  return html;
 }
 
 function updateClock() {
@@ -3578,25 +3558,46 @@ function buildSquadHtml(code) {
 // el próximo programado (aunque la alineación ahí puede no estar
 // disponible todavía — la API la publica ~1h antes del partido).
 function findRelevantLineupMatch(code, forcedMatchKey) {
+  // Si el forcedMatchKey referencia un partido de eliminatoria (clave ko_kickoff),
+  // buscamos ESE partido específico — si ya fue jugado, mostramos su lineup;
+  // si todavía no, no mostramos lineup (igual que un partido de grupo sin jugar).
+  if (forcedMatchKey && forcedMatchKey.startsWith('ko_')) {
+    const kickoff = forcedMatchKey.slice(3);
+    const liveEntry = findKnockoutLiveEntry(kickoff);
+    if (!liveEntry) return null; // no fue jugado todavía
+    // Construimos un objeto compatible con lo que espera getLineupData
+    return { home: liveEntry.home, away: liveEntry.away, kickoffUTC: kickoff, isKnockout: true };
+  }
+
   const teamMatches = SCHEDULE.filter(m => m.home === code || m.away === code);
   if (teamMatches.length === 0) return null;
 
-  // Si nos llaman desde una tarjeta de partido puntual, mostramos ESE
-  // partido exacto — no "el más relevante en general" (que podía traer
-  // otro partido distinto del que el usuario estaba mirando).
   if (forcedMatchKey) {
     const forced = teamMatches.find(m => matchKey(m.home, m.away) === forcedMatchKey);
     if (forced) return forced;
   }
 
-  const withLineups = teamMatches.filter(m => {
-    const live = getLiveData(m);
+  // Partidos de eliminatoria ya jugados donde participa este equipo
+  const knockoutPlayed = getAllMatchesUnified().filter(m =>
+    m.isKnockout && (m.home === code || m.away === code) && getUnifiedStatus(m) === 'finished'
+  );
+
+  const withLineups = [
+    ...teamMatches,
+    ...knockoutPlayed,
+  ].filter(m => {
+    const live = m.isKnockout
+      ? getLiveData({ home: m.home, away: m.away, kickoffUTC: m.kickoffUTC })
+      : getLiveData(m);
     return live && live.lineups && live.lineups[code];
   });
+
   if (withLineups.length > 0) {
-    // El más reciente/actual: el de mayor kickoff entre los que ya tienen datos
-    return withLineups.sort((a, b) => new Date(getKickoffUTC(b)) - new Date(getKickoffUTC(a)))[0];
+    return withLineups.sort((a, b) =>
+      new Date(getUnifiedKickoff(b)) - new Date(getUnifiedKickoff(a))
+    )[0];
   }
+
   // Si ninguno tiene alineación todavía, mostramos el próximo partido sin jugar
   const upcoming = teamMatches
     .filter(m => !getMatchResult(m).isFinished)
