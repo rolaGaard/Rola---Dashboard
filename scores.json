@@ -1,433 +1,6 @@
 {
-  "updated": "2026-06-29T23:10:23.601734Z",
+  "updated": "2026-06-29T23:17:20.985706Z",
   "matches": {
-    "GERMANY-PARAGUAY": {
-      "homeGoals": 1,
-      "awayGoals": 1,
-      "status": "ET",
-      "elapsed": 120,
-      "kickoffUTC": "2026-06-29T20:30:00+00:00",
-      "referee": "Jalal Jayed, Morocco",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "Julio Enciso",
-          "team": "PARAGUAY",
-          "minute": 42,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "Kai Havertz",
-          "team": "GERMANY",
-          "minute": 54,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Andr\u00e9s Cubas",
-          "team": "PARAGUAY",
-          "minute": 65,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Gustavo Julio Alfaro",
-          "team": "PARAGUAY",
-          "minute": 105,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Julian Nagelsmann",
-          "team": "GERMANY",
-          "minute": 106,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Kai Havertz",
-          "team": "GERMANY",
-          "minute": 106,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Jamal Musiala",
-          "team": "GERMANY",
-          "minute": 115,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "Mat\u00edas Galarza",
-          "team": "PARAGUAY",
-          "minute": 117,
-          "extra": null
-        }
-      ],
-      "substitutions": {
-        "GERMANY": [
-          {
-            "out": "Felix Nmecha",
-            "in": "Leon Goretzka",
-            "minute": 45
-          },
-          {
-            "out": "Deniz Undav",
-            "in": "Jamal Musiala",
-            "minute": 63
-          },
-          {
-            "out": "Aleksandar Pavlovi\u0107",
-            "in": "Waldemar Anton",
-            "minute": 79
-          },
-          {
-            "out": "Leroy San\u00e9",
-            "in": "Nick Woltemade",
-            "minute": 88
-          },
-          {
-            "out": "Florian Wirtz",
-            "in": "Nadiem Amiri",
-            "minute": 110
-          },
-          {
-            "out": "Antonio R\u00fcdiger",
-            "in": "Malick Thiaw",
-            "minute": 110
-          }
-        ],
-        "PARAGUAY": [
-          {
-            "out": "Gabriel \u00c1valos",
-            "in": "Gustavo Caballero",
-            "minute": 55
-          },
-          {
-            "out": "Julio Enciso",
-            "in": "Maur\u00edcio Magalh\u00e3es Prado",
-            "minute": 57
-          },
-          {
-            "out": "Miguel Almir\u00f3n",
-            "in": "Gustavo Vel\u00e1zquez",
-            "minute": 90
-          },
-          {
-            "out": "Juan Caceres",
-            "in": "Braian Ojeda",
-            "minute": 99
-          },
-          {
-            "out": "Damian Bobadilla",
-            "in": "Antonio Sanabria",
-            "minute": 99
-          }
-        ]
-      },
-      "lineups": {
-        "GERMANY": {
-          "formation": "4-2-3-1",
-          "coach": "Julian Nagelsmann",
-          "startXI": [
-            {
-              "name": "Manuel Neuer",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Joshua Kimmich",
-              "number": 6,
-              "pos": "D"
-            },
-            {
-              "name": "Antonio R\u00fcdiger",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Jonathan Tah",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Nathaniel Brown",
-              "number": 18,
-              "pos": "D"
-            },
-            {
-              "name": "Felix Nmecha",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "Aleksandar Pavlovi\u0107",
-              "number": 5,
-              "pos": "M"
-            },
-            {
-              "name": "Leroy San\u00e9",
-              "number": 19,
-              "pos": "M"
-            },
-            {
-              "name": "Kai Havertz",
-              "number": 7,
-              "pos": "F"
-            },
-            {
-              "name": "Florian Wirtz",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Deniz Undav",
-              "number": 26,
-              "pos": "M"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Alexander N\u00fcbel",
-              "number": 21,
-              "pos": "G"
-            },
-            {
-              "name": "Oliver Baumann",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "David Raum",
-              "number": 22,
-              "pos": "D"
-            },
-            {
-              "name": "Waldemar Anton",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Malick Thiaw",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Pascal Gro\u00df",
-              "number": 13,
-              "pos": "M"
-            },
-            {
-              "name": "Angelo Stiller",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "Assan Ou\u00e9draogo",
-              "number": 25,
-              "pos": "M"
-            },
-            {
-              "name": "Jamal Musiala",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Jamie Leweling",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Leon Goretzka",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Nadiem Amiri",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Nick Woltemade",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "Maximilian Beier",
-              "number": 14,
-              "pos": "F"
-            }
-          ],
-          "colors": {
-            "player": {
-              "primary": "ffffff",
-              "number": "000000",
-              "border": "ffffff"
-            },
-            "goalkeeper": {
-              "primary": "4f9b9c",
-              "number": "ecede8",
-              "border": "4f9b9c"
-            }
-          }
-        },
-        "PARAGUAY": {
-          "formation": "4-5-1",
-          "coach": "Gustavo Alfaro",
-          "startXI": [
-            {
-              "name": "Orlando Gill",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Juan C\u00e1ceres",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Gustavo G\u00f3mez",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Jos\u00e9 Canale",
-              "number": 13,
-              "pos": "D"
-            },
-            {
-              "name": "Junior Alonso",
-              "number": 6,
-              "pos": "D"
-            },
-            {
-              "name": "Miguel Almir\u00f3n",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Dami\u00e1n Bobadilla",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "Andr\u00e9s Cubas",
-              "number": 14,
-              "pos": "M"
-            },
-            {
-              "name": "Mat\u00edas Galarza",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "Julio Enciso",
-              "number": 19,
-              "pos": "M"
-            },
-            {
-              "name": "Gabriel \u00c1valos",
-              "number": 21,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Gast\u00f3n Olveira",
-              "number": 22,
-              "pos": "G"
-            },
-            {
-              "name": "Roberto Fern\u00e1ndez",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Gustavo Vel\u00e1zquez",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Omar Alderete",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Fabi\u00e1n Balbuena",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Alexandro Maidana",
-              "number": 26,
-              "pos": "D"
-            },
-            {
-              "name": "Mauricio",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "Braian Ojeda",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Gustavo Caballero",
-              "number": 24,
-              "pos": "F"
-            },
-            {
-              "name": "Alejandro Romero",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Ram\u00f3n Sosa",
-              "number": 7,
-              "pos": "F"
-            },
-            {
-              "name": "Antonio Sanabria",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Alex Arce",
-              "number": 18,
-              "pos": "F"
-            },
-            {
-              "name": "Isidro Pitta",
-              "number": 25,
-              "pos": "F"
-            }
-          ],
-          "colors": {
-            "player": {
-              "primary": "252633",
-              "number": "ffffff",
-              "border": "252633"
-            },
-            "goalkeeper": {
-              "primary": "f09c3e",
-              "number": "0a0a0a",
-              "border": "f09c3e"
-            }
-          }
-        }
-      }
-    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -28641,6 +28214,440 @@
       "elapsed": null,
       "kickoffUTC": "2026-07-04T01:30:00+00:00",
       "referee": null
+    },
+    "GERMANY-PARAGUAY": {
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "status": "P",
+      "elapsed": null,
+      "kickoffUTC": "2026-06-29T20:30:00+00:00",
+      "referee": "Jalal Jayed, Morocco",
+      "penaltyHome": 0,
+      "penaltyAway": 0,
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "J. Enciso",
+          "team": "PARAGUAY",
+          "minute": 42,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "K. Havertz",
+          "team": "GERMANY",
+          "minute": 54,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Cubas",
+          "team": "PARAGUAY",
+          "minute": 65,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "G. Alfaro",
+          "team": "PARAGUAY",
+          "minute": 105,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "J. Nagelsmann",
+          "team": "GERMANY",
+          "minute": 105,
+          "extra": 1
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "K. Havertz",
+          "team": "GERMANY",
+          "minute": 106,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "J. Musiala",
+          "team": "GERMANY",
+          "minute": 115,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "M. Galarza",
+          "team": "PARAGUAY",
+          "minute": 117,
+          "extra": null
+        }
+      ],
+      "substitutions": {
+        "GERMANY": [
+          {
+            "out": "F. Nmecha",
+            "in": "L. Goretzka",
+            "minute": 46
+          },
+          {
+            "out": "D. Undav",
+            "in": "J. Musiala",
+            "minute": 63
+          },
+          {
+            "out": "A. Pavlovic",
+            "in": "W. Anton",
+            "minute": 79
+          },
+          {
+            "out": "L. Sane",
+            "in": "N. Woltemade",
+            "minute": 88
+          },
+          {
+            "out": "F. Wirtz",
+            "in": "N. Amiri",
+            "minute": 110
+          },
+          {
+            "out": "A. Rudiger",
+            "in": "M. Thiaw",
+            "minute": 110
+          }
+        ],
+        "PARAGUAY": [
+          {
+            "out": "G. Avalos",
+            "in": "G. Caballero",
+            "minute": 55
+          },
+          {
+            "out": "J. Enciso",
+            "in": "Mauricio",
+            "minute": 57
+          },
+          {
+            "out": "M. Almiron",
+            "in": "G. Velazquez",
+            "minute": 91
+          },
+          {
+            "out": "J. Caceres",
+            "in": "B. Ojeda",
+            "minute": 99
+          },
+          {
+            "out": "D. Bobadilla",
+            "in": "A. Sanabria",
+            "minute": 99
+          },
+          {
+            "out": "J. Alonso",
+            "in": "Fabian Balbuena",
+            "minute": 120
+          }
+        ]
+      },
+      "lineups": {
+        "GERMANY": {
+          "formation": "4-2-3-1",
+          "coach": "Julian Nagelsmann",
+          "startXI": [
+            {
+              "name": "Manuel Neuer",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Joshua Kimmich",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "Antonio R\u00fcdiger",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Jonathan Tah",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Nathaniel Brown",
+              "number": 18,
+              "pos": "D"
+            },
+            {
+              "name": "Felix Nmecha",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Aleksandar Pavlovi\u0107",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "Leroy San\u00e9",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "Kai Havertz",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Florian Wirtz",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Deniz Undav",
+              "number": 26,
+              "pos": "M"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Alexander N\u00fcbel",
+              "number": 21,
+              "pos": "G"
+            },
+            {
+              "name": "Oliver Baumann",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "David Raum",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "Waldemar Anton",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Malick Thiaw",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Pascal Gro\u00df",
+              "number": 13,
+              "pos": "M"
+            },
+            {
+              "name": "Angelo Stiller",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Assan Ou\u00e9draogo",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "Jamal Musiala",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Jamie Leweling",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Leon Goretzka",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Nadiem Amiri",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Nick Woltemade",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Maximilian Beier",
+              "number": 14,
+              "pos": "F"
+            }
+          ],
+          "colors": {
+            "player": {
+              "primary": "ffffff",
+              "number": "000000",
+              "border": "ffffff"
+            },
+            "goalkeeper": {
+              "primary": "4f9b9c",
+              "number": "ecede8",
+              "border": "4f9b9c"
+            }
+          }
+        },
+        "PARAGUAY": {
+          "formation": "4-5-1",
+          "coach": "Gustavo Alfaro",
+          "startXI": [
+            {
+              "name": "Orlando Gill",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Juan C\u00e1ceres",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Gustavo G\u00f3mez",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Jos\u00e9 Canale",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Junior Alonso",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "Miguel Almir\u00f3n",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Dami\u00e1n Bobadilla",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Andr\u00e9s Cubas",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Mat\u00edas Galarza",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Julio Enciso",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "Gabriel \u00c1valos",
+              "number": 21,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Gast\u00f3n Olveira",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Roberto Fern\u00e1ndez",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Gustavo Vel\u00e1zquez",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Omar Alderete",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Fabi\u00e1n Balbuena",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Alexandro Maidana",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Mauricio",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Braian Ojeda",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Gustavo Caballero",
+              "number": 24,
+              "pos": "F"
+            },
+            {
+              "name": "Alejandro Romero",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Ram\u00f3n Sosa",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Antonio Sanabria",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Alex Arce",
+              "number": 18,
+              "pos": "F"
+            },
+            {
+              "name": "Isidro Pitta",
+              "number": 25,
+              "pos": "F"
+            }
+          ],
+          "colors": {
+            "player": {
+              "primary": "252633",
+              "number": "ffffff",
+              "border": "252633"
+            },
+            "goalkeeper": {
+              "primary": "f09c3e",
+              "number": "0a0a0a",
+              "border": "f09c3e"
+            }
+          }
+        }
+      }
     }
   }
 }
