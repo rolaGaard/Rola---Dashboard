@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-29T22:30:35.649254Z",
+  "updated": "2026-06-29T22:40:24.496109Z",
   "matches": {
     "GERMANY-PARAGUAY": {
       "homeGoals": 1,
       "awayGoals": 1,
-      "status": "BT",
-      "elapsed": null,
+      "status": "ET",
+      "elapsed": 98,
       "kickoffUTC": "2026-06-29T20:30:00+00:00",
       "referee": "Jalal Jayed, Morocco",
       "events": [
@@ -67,6 +67,11 @@
             "out": "J. Enciso",
             "in": "Mauricio",
             "minute": 57
+          },
+          {
+            "out": "M. Almiron",
+            "in": "G. Velazquez",
+            "minute": 91
           }
         ]
       },
