@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-29T22:20:23.844545Z",
+  "updated": "2026-06-29T22:30:35.649254Z",
   "matches": {
     "GERMANY-PARAGUAY": {
       "homeGoals": 1,
       "awayGoals": 1,
-      "status": "2H",
-      "elapsed": 87,
+      "status": "BT",
+      "elapsed": null,
       "kickoffUTC": "2026-06-29T20:30:00+00:00",
       "referee": "Jalal Jayed, Morocco",
       "events": [
@@ -50,6 +50,11 @@
             "out": "A. Pavlovic",
             "in": "W. Anton",
             "minute": 79
+          },
+          {
+            "out": "L. Sane",
+            "in": "N. Woltemade",
+            "minute": 88
           }
         ],
         "PARAGUAY": [
