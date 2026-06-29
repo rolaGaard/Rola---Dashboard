@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-29T22:50:22.952751Z",
+  "updated": "2026-06-29T23:00:52.597748Z",
   "matches": {
     "GERMANY-PARAGUAY": {
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "ET",
-      "elapsed": 108,
+      "elapsed": 111,
       "kickoffUTC": "2026-06-29T20:30:00+00:00",
       "referee": "Jalal Jayed, Morocco",
       "events": [
@@ -31,6 +31,30 @@
           "player": "A. Cubas",
           "team": "PARAGUAY",
           "minute": 65,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "J. Nagelsmann",
+          "team": "GERMANY",
+          "minute": 105,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "G. Alfaro",
+          "team": "PARAGUAY",
+          "minute": 105,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "K. Havertz",
+          "team": "GERMANY",
+          "minute": 106,
           "extra": null
         }
       ],
