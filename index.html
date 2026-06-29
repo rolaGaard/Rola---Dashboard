@@ -43,6 +43,7 @@
   .header-text { display:flex; flex-direction:column; gap:1px; }
   .header-title { color:#fff; font-size:clamp(17px,2.4vw,28px); font-weight:700; line-height:1.15; }
   .header-by { color:#94a3b8; font-size:clamp(11px,1.3vw,15px); font-weight:500; }
+  .app-version { color:#64748b; }
   .header-sub { color:#94a3b8; font-size:clamp(11px,1.3vw,15px); margin-top:2px; }
   .header-right { display:flex; flex-direction:column; align-items:flex-end; gap:10px; }
   .header-clock { text-align:right; }
@@ -267,7 +268,7 @@
     background:#fff; border-radius:14px; padding:16px; box-shadow:0 1px 3px rgba(0,0,0,0.08);
   }
   .cl-col-title {
-    font-size:13px; font-weight:800; padding-bottom:10px; margin-bottom:8px;
+    font-size:26px; font-weight:800; padding-bottom:10px; margin-bottom:8px;
     border-bottom:2px solid #f1f5f9; display:flex; align-items:center; gap:6px;
   }
   .cl-col-in { color:#1DB954; }
@@ -820,7 +821,7 @@
     <img class="header-icon" src="icons/icon-192.png" alt="rolaGaard">
     <div class="header-text">
       <div class="header-title">Mundial 2026</div>
-      <div class="header-by">by rolaGaard</div>
+      <div class="header-by">by rolaGaard &nbsp;<span class="app-version">v2.0</span></div>
       <div class="header-sub" id="header-sub">USA · Canadá · México</div>
     </div>
   </div>
@@ -974,7 +975,7 @@ const I18N = {
     alineacion: 'Alineación', proximoRival: 'Rival', formacion: 'Formación', enCancha: 'En cancha', banco: 'Banco', entroMin: 'min', sinSuplentesDisponibles: 'No quedan suplentes sin usar.',
     alineacionSinPartidos: 'No hay partidos cargados para este equipo.',
     alineacionNoDisponible: 'Todavía no está confirmada. La FIFA la publica aproximadamente 1 hora antes del partido.', alineacionRivalNoDisponible: 'Alineación del rival todavía no disponible', arbitro: 'Árbitro', hidratacion: 'Hidratación', hidratacionAviso: 'Estimado: FIFA fija la pausa de hidratación ~minuto 22 de cada tiempo. La API no confirma el momento exacto.',
-    paisesTitulo: 'Estado del Mundial 2026', paisesCompiten: 'Siguen en carrera', paisesAfuera: 'Quedaron eliminados',
+    paisesTitulo: 'Estado del Mundial 2026', paisesCompiten: 'En Carrera', paisesAfuera: 'Eliminados',
     paisesDisclaimer: 'Un equipo en 4° queda eliminado al terminar su grupo. Uno en 3° recién se sabe si queda eliminado cuando terminan los 12 grupos (depende de si entra entre los 8 mejores terceros). Por ahora no incluye eliminaciones de fases posteriores a dieciseisavos.', paisesSinEliminados: 'Todavía no hay equipos eliminados.',
     pj: 'PJ', g: 'G', e: 'E', p: 'P', dg: 'DG', pts: 'PTS',
   },
@@ -1025,7 +1026,7 @@ const I18N = {
     alineacion: 'Lineup', proximoRival: 'Opponent', formacion: 'Formation', enCancha: 'On the pitch', banco: 'Bench', entroMin: 'min', sinSuplentesDisponibles: 'No unused substitutes left.',
     alineacionSinPartidos: 'No matches loaded for this team.',
     alineacionNoDisponible: 'Not confirmed yet. FIFA publishes it about 1 hour before kickoff.', alineacionRivalNoDisponible: 'Opponent lineup not available yet', arbitro: 'Referee', hidratacion: 'Hydration', hidratacionAviso: 'Estimated: FIFA sets the hydration break at ~minute 22 of each half. The API does not confirm the exact moment.',
-    paisesTitulo: '2026 World Cup status', paisesCompiten: 'Still in the running', paisesAfuera: 'Eliminated',
+    paisesTitulo: '2026 World Cup status', paisesCompiten: 'Still Running', paisesAfuera: 'Eliminated',
     paisesDisclaimer: 'A team in 4th is eliminated once its group finishes. A team in 3rd is only confirmed once all 12 groups finish (depends on making the best-8 thirds). Doesn\'t yet account for eliminations past the Round of 32.', paisesSinEliminados: 'No teams eliminated yet.',
     pj: 'P', g: 'W', e: 'D', p: 'L', dg: 'GD', pts: 'PTS',
   },
@@ -1076,7 +1077,7 @@ const I18N = {
     alineacion: 'Escalação', proximoRival: 'Adversário', formacion: 'Formação', enCancha: 'Em campo', banco: 'Banco', entroMin: 'min', sinSuplentesDisponibles: 'Não há mais reservas disponíveis.',
     alineacionSinPartidos: 'Não há jogos carregados para esta seleção.',
     alineacionNoDisponible: 'Ainda não confirmada. A FIFA publica cerca de 1 hora antes do jogo.', alineacionRivalNoDisponible: 'Escalação do adversário ainda não disponível', arbitro: 'Árbitro', hidratacion: 'Hidratação', hidratacionAviso: 'Estimado: a FIFA define a pausa de hidratação por volta do minuto 22 de cada tempo. A API não confirma o momento exato.',
-    paisesTitulo: 'Situação da Copa do Mundo 2026', paisesCompiten: 'Seguem na disputa', paisesAfuera: 'Foram eliminados',
+    paisesTitulo: 'Situação da Copa do Mundo 2026', paisesCompiten: 'Em Disputa', paisesAfuera: 'Eliminados',
     paisesDisclaimer: 'Uma seleção em 4° é eliminada quando seu grupo termina. Uma em 3° só se confirma quando os 12 grupos terminam (depende de entrar entre os 8 melhores terceiros). Por enquanto não considera eliminações além dos dezesseis avos.', paisesSinEliminados: 'Ainda não há seleções eliminadas.',
     pj: 'PJ', g: 'V', e: 'E', p: 'D', dg: 'SG', pts: 'PTS',
   },
@@ -1127,7 +1128,7 @@ const I18N = {
     alineacion: 'Aufstellung', proximoRival: 'Gegner', formacion: 'Formation', enCancha: 'Auf dem Feld', banco: 'Ersatzbank', entroMin: 'Min.', sinSuplentesDisponibles: 'Keine ungenutzten Ersatzspieler mehr.',
     alineacionSinPartidos: 'Keine Spiele für dieses Team geladen.',
     alineacionNoDisponible: 'Noch nicht bestätigt. Die FIFA veröffentlicht sie etwa 1 Stunde vor dem Spiel.', alineacionRivalNoDisponible: 'Aufstellung des Gegners noch nicht verfügbar', arbitro: 'Schiedsrichter', hidratacion: 'Trinkpause', hidratacionAviso: 'Geschätzt: Die FIFA legt die Trinkpause auf ca. Minute 22 jeder Halbzeit fest. Die API bestätigt den genauen Zeitpunkt nicht.',
-    paisesTitulo: 'WM-2026-Stand', paisesCompiten: 'Noch im Turnier', paisesAfuera: 'Ausgeschieden',
+    paisesTitulo: 'WM-2026-Stand', paisesCompiten: 'Im Turnier', paisesAfuera: 'Ausgeschieden',
     paisesDisclaimer: 'Ein Team auf Platz 4 ist nach Ende seiner Gruppe ausgeschieden. Bei Platz 3 steht das erst fest, wenn alle 12 Gruppen beendet sind (abhängig von den besten 8 Drittplatzierten). Ausscheiden nach der Runde der 32 wird noch nicht berücksichtigt.', paisesSinEliminados: 'Noch keine Teams ausgeschieden.',
     pj: 'Sp', g: 'S', e: 'U', p: 'N', dg: 'TD', pts: 'Pkt',
   },
@@ -1178,7 +1179,7 @@ const I18N = {
     alineacion: 'Opstelling', proximoRival: 'Tegenstander', formacion: 'Formatie', enCancha: 'Op het veld', banco: 'Bank', entroMin: 'min', sinSuplentesDisponibles: 'Geen ongebruikte wissels meer over.',
     alineacionSinPartidos: 'Geen wedstrijden geladen voor dit land.',
     alineacionNoDisponible: 'Nog niet bevestigd. FIFA publiceert dit ongeveer 1 uur voor de wedstrijd.', alineacionRivalNoDisponible: 'Opstelling van de tegenstander nog niet beschikbaar', arbitro: 'Scheidsrechter', hidratacion: 'Hydratatie', hidratacionAviso: 'Geschat: FIFA plant de hydratatiepauze rond minuut 22 van elke helft. De API bevestigt het exacte moment niet.',
-    paisesTitulo: 'WK 2026-status', paisesCompiten: 'Nog in de strijd', paisesAfuera: 'Uitgeschakeld',
+    paisesTitulo: 'WK 2026-status', paisesCompiten: 'In de strijd', paisesAfuera: 'Uitgeschakeld',
     paisesDisclaimer: 'Een land op de 4e plek is uitgeschakeld zodra zijn groep is afgelopen. Bij de 3e plek staat dit pas vast als alle 12 groepen klaar zijn (hangt af van de beste 8 derde plekken). Uitschakelingen na de ronde van 32 worden nog niet meegenomen.', paisesSinEliminados: 'Nog geen landen uitgeschakeld.',
     pj: 'G', g: 'W', e: 'G', p: 'V', dg: 'DV', pts: 'Pt',
   },
@@ -1687,8 +1688,8 @@ function getQualifier(groupLetter, position) {
 }
 
 function buildMatchCard(m) {
-  const key = matchKey(m.home, m.away);
-  const live = getLiveData(m);
+  const key = m.home && m.away ? matchKey(m.home, m.away) : ('ko_' + (m.kickoffUTC || ''));
+  const live = (m.home && m.away) ? getLiveData(m) : null;
   const apiStatus = live ? live.status : null;
   const homeGoals = live ? live.homeGoals : null;
   const awayGoals = live ? live.awayGoals : null;
@@ -1773,27 +1774,33 @@ function buildMatchCard(m) {
   return (
     '<div class="' + cardClass + '"' + clickAttr + '>' +
       '<div class="match-row">' +
-        '<div class="team team-clickable" title="' + esName(m.home) + '" onclick="event.stopPropagation(); openCountryInfo(\'' + m.home.replace(/'/g, "\\'") + '\', \'' + key.replace(/'/g, "\\'") + '\')">' +
-          '<span class="team-flag">' + flag(m.home) + '</span>' +
-          '<span class="' + homeNameClass + '">' + esName(m.home) + '</span>' +
-          '<span class="team-code">' + countryCode(m.home) + '</span>' +
-          worldCupStars(m.home) +
-        '</div>' +
+        (m.home
+          ? '<div class="team team-clickable" title="' + esName(m.home) + '" onclick="event.stopPropagation(); openCountryInfo(\'' + m.home.replace(/'/g, "\\'") + '\', \'' + key.replace(/'/g, "\\'") + '\')">' +
+              '<span class="team-flag">' + flag(m.home) + '</span>' +
+              '<span class="' + homeNameClass + '">' + esName(m.home) + '</span>' +
+              '<span class="team-code">' + countryCode(m.home) + '</span>' +
+              worldCupStars(m.home) +
+            '</div>'
+          : '<div class="team"><span class="team-flag">\u2753</span><span class="team-name">TBD</span><span class="team-code">' + (m.homeTBDLabel || '') + '</span></div>'
+        ) +
         '<div class="score-center">' +
           '<div class="' + scoreClass + '">' + scoreText + '</div>' +
         '</div>' +
-        '<div class="team team-clickable" title="' + esName(m.away) + '" onclick="event.stopPropagation(); openCountryInfo(\'' + m.away.replace(/'/g, "\\'") + '\', \'' + key.replace(/'/g, "\\'") + '\')">' +
-          '<span class="team-flag">' + flag(m.away) + '</span>' +
-          '<span class="' + awayNameClass + '">' + esName(m.away) + '</span>' +
-          '<span class="team-code">' + countryCode(m.away) + '</span>' +
-          worldCupStars(m.away) +
-        '</div>' +
+        (m.away
+          ? '<div class="team team-clickable" title="' + esName(m.away) + '" onclick="event.stopPropagation(); openCountryInfo(\'' + m.away.replace(/'/g, "\\'") + '\', \'' + key.replace(/'/g, "\\'") + '\')">' +
+              '<span class="team-flag">' + flag(m.away) + '</span>' +
+              '<span class="' + awayNameClass + '">' + esName(m.away) + '</span>' +
+              '<span class="team-code">' + countryCode(m.away) + '</span>' +
+              worldCupStars(m.away) +
+            '</div>'
+          : '<div class="team"><span class="team-flag">\u2753</span><span class="team-name">TBD</span><span class="team-code">' + (m.awayTBDLabel || '') + '</span></div>'
+        ) +
       '</div>' +
       '<div class="match-meta">' +
         badgeHtml +
         '<span>\u{1F550} ' + arTime + '</span>' +
         '<a href="' + mapsLink(m.stadium, m.city) + '" target="_blank" rel="noopener" class="stadium-link" onclick="event.stopPropagation()">\u{1F4CD} ' + m.stadium + ', ' + m.city + '</a>' +
-        '<span class="group-tag">' + t('grupo') + ' ' + m.group + '</span>' +
+        '<span class="group-tag">' + (m.roundLabel ? m.roundLabel : m.group ? t('grupo') + ' ' + m.group : '') + '</span>' +
         (hasDetail ? '<span class="detail-hint">' + (isExpanded ? t('detalleOcultar') : t('detalleMostrar')) + '</span>' : '') +
       '</div>' +
       detailHtml +
@@ -2799,93 +2806,22 @@ function buildKnockoutDateGroupedHtml(entries, descending) {
   return html;
 }
 
+// buildKnockoutCardHtml convierte un partido de eliminatoria al mismo
+// formato que usa buildMatchCard — así hay una sola función de render.
 function buildKnockoutCardHtml(m) {
   const { teamA, teamB } = resolveKnockoutSides(m);
-  const dateStr = new Date(m.kickoffUTC).toLocaleString(dateLocale(), {
-    weekday:'short', day:'numeric', month:'short', hour:'2-digit', minute:'2-digit', hour12:false
-  });
-  const timeOnly = dateStr.split(' ').slice(-1)[0];
-
-  function teamSideHtml(team, label, nameClass) {
-    if (team) {
-      return '<div class="team team-clickable" title="' + esName(team) + '" onclick="event.stopPropagation(); openCountryInfo(\'' + team.replace(/'/g, "\\'") + '\')">' +
-        '<span class="team-flag">' + flag(team) + '</span>' +
-        '<span class="' + nameClass + '">' + esName(team) + '</span>' +
-        '<span class="team-code">' + countryCode(team) + '</span>' +
-        worldCupStars(team) +
-      '</div>';
-    }
-    return '<div class="team">' +
-      '<span class="team-flag">\u2753</span>' +
-      '<span class="team-name">TBD</span>' +
-      '<span class="team-code" title="' + label + '">' + label + '</span>' +
-    '</div>';
-  }
-
-  let homeNameClass = 'team-name', awayNameClass = 'team-name';
-  let scoreClass = 'score-box';
-  let scoreText = timeOnly;
-  let badgeHtml = '';
-
-  // Si ya sabemos qué dos selecciones juegan este cupo, buscamos el
-  // resultado real igual que en los partidos de grupo (misma API, mismo
-  // scores.json — acá no hace falta nada nuevo, solo consultarlo).
-  if (teamA && teamB) {
-    const fakeMatch = { home: teamA, away: teamB, kickoffUTC: m.kickoffUTC, stadium: m.stadium, city: m.city };
-    const live = getLiveData(fakeMatch);
-    const apiStatus = live ? live.status : null;
-    const homeGoals = live ? live.homeGoals : null;
-    const awayGoals = live ? live.awayGoals : null;
-    const realKickoffUTC = (live && live.kickoffUTC) ? live.kickoffUTC : m.kickoffUTC;
-    const now = new Date();
-    const kickoff = new Date(realKickoffUTC);
-    const estimatedEnd = new Date(kickoff.getTime() + 115 * 60000);
-    const timeInferredLive = now >= kickoff && now < estimatedEnd;
-    const timeInferredFinished = now >= estimatedEnd;
-    const isLive = isLiveStatus(apiStatus) || (!isFinishedStatus(apiStatus) && timeInferredLive);
-    const isFinished = isFinishedStatus(apiStatus) || (!isLiveStatus(apiStatus) && timeInferredFinished);
-    const hasScore = homeGoals !== null && homeGoals !== undefined;
-
-    scoreClass = isLive ? 'score-box live' : 'score-box';
-    if (hasScore) {
-      scoreText = homeGoals + ' - ' + awayGoals;
-      if (live && live.penaltyHome !== undefined && live.penaltyHome !== null) {
-        scoreText += ' (' + live.penaltyHome + '-' + live.penaltyAway + ')';
-      }
-    } else if (isFinished) {
-      scoreText = t('sinDatos');
-    } else if (isLive) {
-      scoreText = '0 - 0';
-    }
-
-    if (isFinished && hasScore) {
-      if (homeGoals > awayGoals) homeNameClass = 'team-name team-name-winner';
-      else if (awayGoals > homeGoals) awayNameClass = 'team-name team-name-winner';
-    }
-
-    const label = statusLabel(apiStatus, live ? live.elapsed : null);
-    if (label) {
-      const badgeClass = isLive ? 'status-badge live' : (isFinished ? 'status-badge finished' : 'status-badge');
-      badgeHtml = '<span class="' + badgeClass + '">' + (isLive ? '\u25CF ' : '') + label + '</span>';
-    }
-    if (isLive && live && live.elapsed !== null && live.elapsed !== undefined && isHydrationWindow(apiStatus, live.elapsed)) {
-      badgeHtml += '<span class="status-badge hydration" title="' + t('hidratacionAviso') + '">\u{1F4A7} ' + t('hidratacion') + '</span>';
-    }
-  }
-
-  return '<div class="match-card">' +
-    '<div class="match-row">' +
-      teamSideHtml(teamA, bracketSlotLabel(m.a), homeNameClass) +
-      '<div class="score-center"><div class="' + scoreClass + '">' + scoreText + '</div></div>' +
-      teamSideHtml(teamB, bracketSlotLabel(m.b), awayNameClass) +
-    '</div>' +
-    '<div class="match-meta">' +
-      badgeHtml +
-      '<span>\u{1F550} ' + dateStr + '</span>' +
-      '<a href="' + mapsLink(m.stadium, m.city) + '" target="_blank" rel="noopener" class="stadium-link" onclick="event.stopPropagation()">\u{1F4CD} ' + m.stadium + ', ' + m.city + '</a>' +
-      '<span class="group-tag">' + (m.roundLabel ? m.roundLabel + ' · ' : '') + t('partidoNro') + ' ' + m.match + '</span>' +
-    '</div>' +
-  '</div>';
+  const normalized = {
+    home: teamA || null,
+    away: teamB || null,
+    homeTBDLabel: teamA ? null : bracketSlotLabel(m.a),
+    awayTBDLabel: teamB ? null : bracketSlotLabel(m.b),
+    kickoffUTC: m.kickoffUTC,
+    stadium: m.stadium,
+    city: m.city,
+    group: null,
+    roundLabel: (m.roundLabel || '') + ' · ' + t('partidoNro') + ' ' + m.match,
+  };
+  return buildMatchCard(normalized);
 }
 
 function buildKnockoutList() {
@@ -3083,13 +3019,12 @@ function renderStatsView() {
   if (scorers.length === 0) {
     html += '<div class="ci-pitch-empty">' + t('sinDatosAun') + '</div>';
   } else {
-    html += '<table class="thirds-table"><tr><th>#</th><th style="text-align:left;"></th><th>' + t('goles') + '</th></tr>';
+    html += '<table class="thirds-table"><tr><th>#</th><th style="text-align:left;"></th><th style="text-align:right;">'+t('goles')+'</th></tr>';
     scorers.forEach((s, idx) => {
       html += '<tr class="thirds-row">' +
         '<td class="thirds-rank">' + (idx + 1) + '</td>' +
-        '<td class="thirds-team" style="text-align:left;">' + '<a href="' + googleSearchLink(s.player, s.team) + '" target="_blank" rel="noopener" class="player-link">' + s.player + '</a>' +
-          ' <span class="stats-team-tag">' + flag(s.team) + ' ' + esName(s.team) + '</span></td>' +
-        '<td><b>' + s.goals + '</b></td>' +
+        '<td class="thirds-team" style="text-align:left;">' + flag(s.team) + ' <a href="' + googleSearchLink(s.player, s.team) + '" target="_blank" rel="noopener" class="player-link">' + s.player + '</a></td>' +
+        '<td style="text-align:right;"><b>' + s.goals + '</b></td>' +
       '</tr>';
     });
     html += '</table>';
