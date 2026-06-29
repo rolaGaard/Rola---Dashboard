@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-29T18:00:54.689376Z",
+  "updated": "2026-06-29T18:10:25.478859Z",
   "matches": {
     "BRAZIL-JAPAN": {
       "homeGoals": 0,
       "awayGoals": 1,
-      "status": "HT",
-      "elapsed": 45,
+      "status": "2H",
+      "elapsed": 49,
       "kickoffUTC": "2026-06-29T17:00:00+00:00",
       "referee": "Maurizio Mariani, Italy",
       "events": [
@@ -40,8 +40,25 @@
           "team": "JAPAN",
           "minute": 45,
           "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Danilo",
+          "team": "BRAZIL",
+          "minute": 48,
+          "extra": null
         }
       ],
+      "substitutions": {
+        "BRAZIL": [
+          {
+            "out": "Lucas Paqueta",
+            "in": "Endrick",
+            "minute": 46
+          }
+        ]
+      },
       "lineups": {
         "BRAZIL": {
           "formation": "4-3-3",
