@@ -870,7 +870,7 @@
     <img class="header-icon" src="icons/icon-192.png" alt="rolaGaard">
     <div class="header-text">
       <div class="header-title">Mundial 2026</div>
-      <div class="header-by">by rolaGaard &nbsp;<span class="app-version">v2.0</span></div>
+      <div class="header-by">by rolaGaard &nbsp;<span class="app-version">v2.1</span></div>
       <div class="header-sub" id="header-sub">USA · Canadá · México</div>
     </div>
   </div>
@@ -2739,11 +2739,39 @@ function resolveKnockoutSides(calendarEntry) {
 
 function resolveBracketSlot(spec) {
   if (spec.startsWith('third')) return thirdTeamForGroup(spec.slice(5));
-  // 'Wxx'/'Lxx' (ganador/perdedor del partido N° xx, de 2 o 3 cifras) son
-  // partidos de eliminatoria todavía sin jugar — pero ¡ojo! el Grupo L
-  // también empieza con "L" (ej. 'L1' = 1° del Grupo L), así que hay que
-  // distinguirlos por la cantidad de dígitos, no solo por la primera letra.
-  if (/^[WL]\d{2,3}$/.test(spec)) return null;
+  // 'Wxx'/'Lxx' (ganador/perdedor del partido N° xx, de 2 o 3 cifras) —
+  // si ese partido ya se jugó y tenemos el resultado en scores.json,
+  // podemos deducir quién ganó sin esperar a que la API lo confirme en el
+  // slot del partido siguiente. Si todavía no se jugó, devolvemos null.
+  if (/^[WL]\d{2,3}$/.test(spec)) {
+    const isWinner = spec[0] === 'W';
+    const refMatchNum = parseInt(spec.slice(1), 10);
+    const allCals = [...R32_CALENDAR,...R16_CALENDAR,...QF_CALENDAR,...SF_CALENDAR,...THIRD_PLACE_CALENDAR,...FINAL_CALENDAR];
+    const refMatch = allCals.find(m => m.match === refMatchNum);
+    if (!refMatch) return null;
+    const { teamA, teamB } = resolveKnockoutSides(refMatch);
+    if (!teamA || !teamB) return null;
+    const live = getLiveData({ home: teamA, away: teamB, kickoffUTC: refMatch.kickoffUTC });
+    if (!live) return null;
+    const apiStatus = live.status;
+    const now = new Date();
+    const end = new Date(new Date(refMatch.kickoffUTC).getTime() + 115*60000);
+    const isFinished = isFinishedStatus(apiStatus) || (!isLiveStatus(apiStatus) && now >= end);
+    if (!isFinished) return null;
+    const homeGoals = live.homeGoals ?? 0;
+    const awayGoals = live.awayGoals ?? 0;
+    const penH = live.penaltyHome ?? null;
+    const penA = live.penaltyAway ?? null;
+    let winner, loser;
+    if (penH !== null) {
+      winner = penH > penA ? teamA : teamB;
+      loser  = penH > penA ? teamB : teamA;
+    } else {
+      winner = homeGoals >= awayGoals ? teamA : teamB;
+      loser  = homeGoals >= awayGoals ? teamB : teamA;
+    }
+    return isWinner ? winner : loser;
+  }
   const g = spec[0];
   const pos = parseInt(spec[1], 10);
   return getQualifier(g, pos) || null;
