@@ -1,18 +1,18 @@
 {
-  "updated": "2026-06-30T03:30:38.560353Z",
+  "updated": "2026-06-30T03:40:22.143693Z",
   "matches": {
     "NETHERLANDS-MOROCCO": {
       "homeGoals": 1,
       "awayGoals": 1,
-      "status": "ET",
-      "elapsed": 113,
+      "status": "BT",
+      "elapsed": null,
       "kickoffUTC": "2026-06-30T01:00:00+00:00",
       "referee": "Wilton Pereira Sampaio, Brazil",
       "events": [
         {
           "type": "Card",
           "detail": "Yellow Card",
-          "player": "Issa Diop",
+          "player": "I. Diop",
           "team": "MOROCCO",
           "minute": 47,
           "extra": null
@@ -20,7 +20,7 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "Cody Gakpo",
+          "player": "C. Gakpo",
           "team": "NETHERLANDS",
           "minute": 72,
           "extra": null
@@ -28,64 +28,69 @@
         {
           "type": "Goal",
           "detail": "Normal Goal",
-          "player": "Issa Diop",
+          "player": "I. Diop",
           "team": "MOROCCO",
-          "minute": 91,
-          "extra": null
+          "minute": 90,
+          "extra": 1
         }
       ],
       "substitutions": {
         "NETHERLANDS": [
           {
-            "out": "Nathan Ak\u00e9",
-            "in": "Teun Koopmeiners",
+            "out": "N. Ake",
+            "in": "T. Koopmeiners",
             "minute": 71
           },
           {
-            "out": "Brian Brobbey",
-            "in": "Wout Weghorst",
+            "out": "B. Brobbey",
+            "in": "W. Weghorst",
             "minute": 71
           },
           {
-            "out": "Micky van de Ven",
-            "in": "Jorrel Hato",
+            "out": "M. van de Ven",
+            "in": "J. Hato",
             "minute": 86
           },
           {
-            "out": "Ryan Gravenberch",
-            "in": "Quinten Timber",
+            "out": "R. Gravenberch",
+            "in": "Q. Timber",
             "minute": 86
           },
           {
-            "out": "Frenkie de Jong",
-            "in": "Marten de Roon",
+            "out": "F. de Jong",
+            "in": "M. De Roon",
             "minute": 110
+          },
+          {
+            "out": "C. Gakpo",
+            "in": "J. Kluivert",
+            "minute": 113
           }
         ],
         "MOROCCO": [
           {
-            "out": "Chadi Riad",
-            "in": "Anass Salah-Eddine",
+            "out": "C. Riad",
+            "in": "A. Salah-Eddine",
             "minute": 75
           },
           {
-            "out": "Brahim D\u00edaz",
-            "in": "Gessime Yassine",
+            "out": "B. Diaz",
+            "in": "G. Yassine",
             "minute": 79
           },
           {
-            "out": "Ayyoub Bouaddi",
-            "in": "Samir El-Mourabet",
+            "out": "A. Bouaddi",
+            "in": "S. El Mourabet",
             "minute": 79
           },
           {
-            "out": "Azzedine Ounahi",
-            "in": "Soufiane Rahimi",
+            "out": "A. Ounahi",
+            "in": "S. Rahimi",
             "minute": 86
           },
           {
-            "out": "Bilal El Khannouss",
-            "in": "Chemsdine Talbi",
+            "out": "B. El Khannouss",
+            "in": "C. Talbi",
             "minute": 87
           }
         ]
