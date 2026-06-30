@@ -1,386 +1,6 @@
 {
-  "updated": "2026-06-30T18:50:25.221572Z",
+  "updated": "2026-06-30T19:00:55.736883Z",
   "matches": {
-    "IVORY COAST-NORWAY": {
-      "homeGoals": 1,
-      "awayGoals": 2,
-      "status": "2H",
-      "elapsed": 90,
-      "kickoffUTC": "2026-06-30T17:00:00+00:00",
-      "referee": "Jes\u00fas Valenzuela, Venezuela",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "A. Nusa",
-          "team": "NORWAY",
-          "minute": 39,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "A. Nusa",
-          "team": "NORWAY",
-          "minute": 45,
-          "extra": 1
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "A. Diallo",
-          "team": "IVORY COAST",
-          "minute": 74,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "E. Haaland",
-          "team": "NORWAY",
-          "minute": 86,
-          "extra": null
-        }
-      ],
-      "substitutions": {
-        "IVORY COAST": [
-          {
-            "out": "C. Inao Oulai",
-            "in": "A. Diallo",
-            "minute": 60
-          },
-          {
-            "out": "A. Bonny",
-            "in": "E. Wahi",
-            "minute": 60
-          },
-          {
-            "out": "N. Pepe",
-            "in": "O. Diakite",
-            "minute": 87
-          }
-        ],
-        "NORWAY": [
-          {
-            "out": "A. Sorloth",
-            "in": "O. Bobb",
-            "minute": 71
-          },
-          {
-            "out": "A. Nusa",
-            "in": "A. Schjelderup",
-            "minute": 71
-          },
-          {
-            "out": "M. Pedersen",
-            "in": "F. Aursnes",
-            "minute": 83
-          }
-        ]
-      },
-      "lineups": {
-        "IVORY COAST": {
-          "formation": "4-1-4-1",
-          "coach": "Emerse Fae",
-          "startXI": [
-            {
-              "name": "Yahia Fofana",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Gu\u00e9la Dou\u00e9",
-              "number": 17,
-              "pos": "D"
-            },
-            {
-              "name": "Odilon Kossounou",
-              "number": 7,
-              "pos": "D"
-            },
-            {
-              "name": "Emmanuel Agbadou",
-              "number": 20,
-              "pos": "D"
-            },
-            {
-              "name": "Ghislain Konan",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Ibrahim Sangar\u00e9",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "Nicolas P\u00e9p\u00e9",
-              "number": 19,
-              "pos": "M"
-            },
-            {
-              "name": "Franck Kessi\u00e9",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Christ Inao Oula\u00ef",
-              "number": 26,
-              "pos": "M"
-            },
-            {
-              "name": "Yan Diomande",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "Ange-Yoan Bonny",
-              "number": 9,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Mohamed Kon\u00e9",
-              "number": 16,
-              "pos": "G"
-            },
-            {
-              "name": "Alban Lafont",
-              "number": 23,
-              "pos": "G"
-            },
-            {
-              "name": "Ousmane Diomande",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Wilfried Singo",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Christopher Operi",
-              "number": 13,
-              "pos": "D"
-            },
-            {
-              "name": "Evan Ndicka",
-              "number": 21,
-              "pos": "D"
-            },
-            {
-              "name": "Jean Micha\u00ebl Seri",
-              "number": 4,
-              "pos": "M"
-            },
-            {
-              "name": "Seko Fofana",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Parfait Guiagon",
-              "number": 25,
-              "pos": "M"
-            },
-            {
-              "name": "Simon Adingra",
-              "number": 10,
-              "pos": "F"
-            },
-            {
-              "name": "Amad Diallo",
-              "number": 15,
-              "pos": "F"
-            },
-            {
-              "name": "Bazoumana Tour\u00e9",
-              "number": 24,
-              "pos": "F"
-            },
-            {
-              "name": "Elye Wahi",
-              "number": 12,
-              "pos": "F"
-            },
-            {
-              "name": "Oumar Diakit\u00e9",
-              "number": 14,
-              "pos": "F"
-            },
-            {
-              "name": "Evann Guessand",
-              "number": 22,
-              "pos": "F"
-            }
-          ],
-          "colors": {
-            "player": {
-              "primary": "ff7c0a",
-              "number": "ffffff",
-              "border": "ff7c0a"
-            },
-            "goalkeeper": {
-              "primary": "58d8fb",
-              "number": "1d1a1a",
-              "border": "58d8fb"
-            }
-          }
-        },
-        "NORWAY": {
-          "formation": "4-3-3",
-          "coach": "Stale Solbakken",
-          "startXI": [
-            {
-              "name": "\u00d8rjan Nyland",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Marcus Pedersen",
-              "number": 16,
-              "pos": "D"
-            },
-            {
-              "name": "Kristoffer Ajer",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Torbj\u00f8rn Heggem",
-              "number": 17,
-              "pos": "D"
-            },
-            {
-              "name": "David M\u00f8ller Wolfe",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Martin \u00d8degaard",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Sander Berge",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Patrick Berg",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Alexander S\u00f8rloth",
-              "number": 7,
-              "pos": "F"
-            },
-            {
-              "name": "Erling Haaland",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Antonio Nusa",
-              "number": 20,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Sander Tangvik",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Egil Selvik",
-              "number": 13,
-              "pos": "G"
-            },
-            {
-              "name": "Leo \u00d8stig\u00e5rd",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Fredrik Andr\u00e9 Bj\u00f8rkan",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Sondre Lang\u00e5s",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Henrik S\u00e6lebakke Falchener",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "Morten Thorsby",
-              "number": 2,
-              "pos": "M"
-            },
-            {
-              "name": "Fredrik Aursnes",
-              "number": 14,
-              "pos": "M"
-            },
-            {
-              "name": "Kristian Thorstvedt",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "Thelo Aasgaard",
-              "number": 19,
-              "pos": "M"
-            },
-            {
-              "name": "Andreas Schjelderup",
-              "number": 21,
-              "pos": "F"
-            },
-            {
-              "name": "Oscar Bobb",
-              "number": 22,
-              "pos": "M"
-            },
-            {
-              "name": "Julian Ryerson",
-              "number": 26,
-              "pos": "D"
-            },
-            {
-              "name": "J\u00f8rgen Strand Larsen",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "Jens Petter Hauge",
-              "number": 23,
-              "pos": "M"
-            }
-          ],
-          "colors": {
-            "player": {
-              "primary": "e9e9eb",
-              "number": "000000",
-              "border": "e9e9eb"
-            },
-            "goalkeeper": {
-              "primary": "3da509",
-              "number": "000000",
-              "border": "3da509"
-            }
-          }
-        }
-      }
-    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -29383,6 +29003,386 @@
               "primary": "99bff0",
               "number": "000000",
               "border": "99bff0"
+            }
+          }
+        }
+      }
+    },
+    "IVORY COAST-NORWAY": {
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-06-30T17:00:00+00:00",
+      "referee": "Jes\u00fas Valenzuela, Venezuela",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Nusa",
+          "team": "NORWAY",
+          "minute": 39,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Nusa",
+          "team": "NORWAY",
+          "minute": 45,
+          "extra": 1
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "A. Diallo",
+          "team": "IVORY COAST",
+          "minute": 74,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "E. Haaland",
+          "team": "NORWAY",
+          "minute": 86,
+          "extra": null
+        }
+      ],
+      "substitutions": {
+        "IVORY COAST": [
+          {
+            "out": "C. Inao Oulai",
+            "in": "A. Diallo",
+            "minute": 60
+          },
+          {
+            "out": "A. Bonny",
+            "in": "E. Wahi",
+            "minute": 60
+          },
+          {
+            "out": "N. Pepe",
+            "in": "O. Diakite",
+            "minute": 87
+          }
+        ],
+        "NORWAY": [
+          {
+            "out": "A. Sorloth",
+            "in": "O. Bobb",
+            "minute": 71
+          },
+          {
+            "out": "A. Nusa",
+            "in": "A. Schjelderup",
+            "minute": 71
+          },
+          {
+            "out": "M. Pedersen",
+            "in": "F. Aursnes",
+            "minute": 83
+          }
+        ]
+      },
+      "lineups": {
+        "IVORY COAST": {
+          "formation": "4-1-4-1",
+          "coach": "Emerse Fae",
+          "startXI": [
+            {
+              "name": "Yahia Fofana",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Gu\u00e9la Dou\u00e9",
+              "number": 17,
+              "pos": "D"
+            },
+            {
+              "name": "Odilon Kossounou",
+              "number": 7,
+              "pos": "D"
+            },
+            {
+              "name": "Emmanuel Agbadou",
+              "number": 20,
+              "pos": "D"
+            },
+            {
+              "name": "Ghislain Konan",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Ibrahim Sangar\u00e9",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Nicolas P\u00e9p\u00e9",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "Franck Kessi\u00e9",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Christ Inao Oula\u00ef",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "Yan Diomande",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Ange-Yoan Bonny",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Mohamed Kon\u00e9",
+              "number": 16,
+              "pos": "G"
+            },
+            {
+              "name": "Alban Lafont",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Ousmane Diomande",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Wilfried Singo",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Christopher Operi",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Evan Ndicka",
+              "number": 21,
+              "pos": "D"
+            },
+            {
+              "name": "Jean Micha\u00ebl Seri",
+              "number": 4,
+              "pos": "M"
+            },
+            {
+              "name": "Seko Fofana",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Parfait Guiagon",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "Simon Adingra",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Amad Diallo",
+              "number": 15,
+              "pos": "F"
+            },
+            {
+              "name": "Bazoumana Tour\u00e9",
+              "number": 24,
+              "pos": "F"
+            },
+            {
+              "name": "Elye Wahi",
+              "number": 12,
+              "pos": "F"
+            },
+            {
+              "name": "Oumar Diakit\u00e9",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "Evann Guessand",
+              "number": 22,
+              "pos": "F"
+            }
+          ],
+          "colors": {
+            "player": {
+              "primary": "ff7c0a",
+              "number": "ffffff",
+              "border": "ff7c0a"
+            },
+            "goalkeeper": {
+              "primary": "58d8fb",
+              "number": "1d1a1a",
+              "border": "58d8fb"
+            }
+          }
+        },
+        "NORWAY": {
+          "formation": "4-3-3",
+          "coach": "Stale Solbakken",
+          "startXI": [
+            {
+              "name": "\u00d8rjan Nyland",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Marcus Pedersen",
+              "number": 16,
+              "pos": "D"
+            },
+            {
+              "name": "Kristoffer Ajer",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Torbj\u00f8rn Heggem",
+              "number": 17,
+              "pos": "D"
+            },
+            {
+              "name": "David M\u00f8ller Wolfe",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Martin \u00d8degaard",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Sander Berge",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Patrick Berg",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Alexander S\u00f8rloth",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Erling Haaland",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Antonio Nusa",
+              "number": 20,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Sander Tangvik",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Egil Selvik",
+              "number": 13,
+              "pos": "G"
+            },
+            {
+              "name": "Leo \u00d8stig\u00e5rd",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Fredrik Andr\u00e9 Bj\u00f8rkan",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Sondre Lang\u00e5s",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Henrik S\u00e6lebakke Falchener",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Morten Thorsby",
+              "number": 2,
+              "pos": "M"
+            },
+            {
+              "name": "Fredrik Aursnes",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Kristian Thorstvedt",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Thelo Aasgaard",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "Andreas Schjelderup",
+              "number": 21,
+              "pos": "F"
+            },
+            {
+              "name": "Oscar Bobb",
+              "number": 22,
+              "pos": "M"
+            },
+            {
+              "name": "Julian Ryerson",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "J\u00f8rgen Strand Larsen",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Jens Petter Hauge",
+              "number": 23,
+              "pos": "M"
+            }
+          ],
+          "colors": {
+            "player": {
+              "primary": "e9e9eb",
+              "number": "000000",
+              "border": "e9e9eb"
+            },
+            "goalkeeper": {
+              "primary": "3da509",
+              "number": "000000",
+              "border": "3da509"
             }
           }
         }
