@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-30T22:30:39.366567Z",
+  "updated": "2026-06-30T22:40:20.204182Z",
   "matches": {
     "FRANCE-SWEDEN": {
-      "homeGoals": 2,
+      "homeGoals": 3,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 72,
+      "elapsed": 81,
       "kickoffUTC": "2026-06-30T21:00:00+00:00",
       "referee": "Danny Makkelie, Netherlands",
       "events": [
@@ -24,6 +24,14 @@
           "team": "FRANCE",
           "minute": 53,
           "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "K. Mbappe",
+          "team": "FRANCE",
+          "minute": 74,
+          "extra": null
         }
       ],
       "substitutions": {
@@ -37,6 +45,23 @@
             "out": "L. Bergvall",
             "in": "B. Zeneli",
             "minute": 66
+          }
+        ],
+        "FRANCE": [
+          {
+            "out": "J. Kounde",
+            "in": "M. Gusto",
+            "minute": 75
+          },
+          {
+            "out": "O. Dembele",
+            "in": "D. Doue",
+            "minute": 75
+          },
+          {
+            "out": "L. Digne",
+            "in": "T. Hernandez",
+            "minute": 78
           }
         ]
       },
