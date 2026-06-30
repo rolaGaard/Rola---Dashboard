@@ -1,14 +1,23 @@
 {
-  "updated": "2026-06-30T21:40:25.406778Z",
+  "updated": "2026-06-30T21:50:26.384679Z",
   "matches": {
     "FRANCE-SWEDEN": {
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 0,
-      "status": "1H",
-      "elapsed": 40,
+      "status": "HT",
+      "elapsed": 45,
       "kickoffUTC": "2026-06-30T21:00:00+00:00",
       "referee": "Danny Makkelie, Netherlands",
-      "events": [],
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "K. Mbappe",
+          "team": "FRANCE",
+          "minute": 45,
+          "extra": null
+        }
+      ],
       "lineups": {
         "FRANCE": {
           "formation": "4-2-3-1",
