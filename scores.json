@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-30T18:20:27.702623Z",
+  "updated": "2026-06-30T18:30:41.349118Z",
   "matches": {
     "IVORY COAST-NORWAY": {
       "homeGoals": 0,
       "awayGoals": 1,
       "status": "2H",
-      "elapsed": 61,
+      "elapsed": 71,
       "kickoffUTC": "2026-06-30T17:00:00+00:00",
       "referee": "Jes\u00fas Valenzuela, Venezuela",
       "events": [
@@ -26,6 +26,20 @@
           "extra": 1
         }
       ],
+      "substitutions": {
+        "IVORY COAST": [
+          {
+            "out": "C. Inao Oulai",
+            "in": "A. Diallo",
+            "minute": 60
+          },
+          {
+            "out": "A. Bonny",
+            "in": "E. Wahi",
+            "minute": 60
+          }
+        ]
+      },
       "lineups": {
         "IVORY COAST": {
           "formation": "4-1-4-1",
