@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-30T03:00:52.695633Z",
+  "updated": "2026-06-30T03:10:21.795130Z",
   "matches": {
     "NETHERLANDS-MOROCCO": {
       "homeGoals": 1,
       "awayGoals": 1,
-      "status": "BT",
-      "elapsed": null,
+      "status": "ET",
+      "elapsed": 96,
       "kickoffUTC": "2026-06-30T01:00:00+00:00",
       "referee": "Wilton Pereira Sampaio, Brazil",
       "events": [
@@ -75,7 +75,7 @@
           },
           {
             "out": "A. Ounahi",
-            "in": "A. Sbai",
+            "in": "S. Rahimi",
             "minute": 86
           },
           {
