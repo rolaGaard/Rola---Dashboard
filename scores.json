@@ -1,6 +1,312 @@
 {
-  "updated": "2026-06-30T20:50:25.158292Z",
+  "updated": "2026-06-30T21:00:52.204687Z",
   "matches": {
+    "FRANCE-SWEDEN": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "1H",
+      "elapsed": 1,
+      "kickoffUTC": "2026-06-30T21:00:00+00:00",
+      "referee": "Danny Makkelie, Netherlands",
+      "events": [],
+      "lineups": {
+        "FRANCE": {
+          "formation": "4-2-3-1",
+          "coach": "Didier Deschamps",
+          "startXI": [
+            {
+              "name": "Mike Maignan",
+              "number": 16,
+              "pos": "G"
+            },
+            {
+              "name": "Jules Kound\u00e9",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Dayot Upamecano",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "William Saliba",
+              "number": 17,
+              "pos": "D"
+            },
+            {
+              "name": "Lucas Digne",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Aur\u00e9lien Tchouam\u00e9ni",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Adrien Rabiot",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Ousmane Demb\u00e9l\u00e9",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Michael Olise",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Bradley Barcola",
+              "number": 12,
+              "pos": "M"
+            },
+            {
+              "name": "Kylian Mbapp\u00e9",
+              "number": 10,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Robin Risser",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Brice Samba",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Malo Gusto",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Lucas Hern\u00e1ndez",
+              "number": 21,
+              "pos": "D"
+            },
+            {
+              "name": "Maxence Lacroix",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Ibrahima Konat\u00e9",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Theo Hern\u00e1ndez",
+              "number": 19,
+              "pos": "D"
+            },
+            {
+              "name": "Manu Kon\u00e9",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Rayan Cherki",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "Maghnes Akliouche",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "Warren Za\u00efre-Emery",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "N'Golo Kant\u00e9",
+              "number": 13,
+              "pos": "M"
+            },
+            {
+              "name": "Jean-Philippe Mateta",
+              "number": 22,
+              "pos": "F"
+            },
+            {
+              "name": "D\u00e9sir\u00e9 Dou\u00e9",
+              "number": 20,
+              "pos": "F"
+            },
+            {
+              "name": "Marcus Thuram",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "colors": {
+            "player": {
+              "primary": "1a55bd",
+              "number": "ffffff",
+              "border": "1a55bd"
+            },
+            "goalkeeper": {
+              "primary": "1b191e",
+              "number": "faf9f9",
+              "border": "1b191e"
+            }
+          }
+        },
+        "SWEDEN": {
+          "formation": "3-4-2-1",
+          "coach": "Graham Potter",
+          "startXI": [
+            {
+              "name": "Jacob Widell Zetterstr\u00f6m",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Gustaf Lagerbielke",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Victor Lindel\u00f6f",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Gabriel Gudmundsson",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Daniel Svensson",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Yasin Ayari",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Lucas Bergvall",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Elliot Stroud",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "Anthony Elanga",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Alexander Isak",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Viktor Gy\u00f6keres",
+              "number": 17,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Kristoffer Nordfeldt",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Viktor Johansson",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Hjalmar Ekdal",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "Eric Smith",
+              "number": 20,
+              "pos": "D"
+            },
+            {
+              "name": "Carl Starfelt",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Besfort Zeneli",
+              "number": 22,
+              "pos": "M"
+            },
+            {
+              "name": "Herman Johansson",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Ken Sema",
+              "number": 13,
+              "pos": "M"
+            },
+            {
+              "name": "Taha Abdi Ali",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "Jesper Karlstr\u00f6m",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Mattias Svanberg",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "Benjamin Nygren",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Gustaf Nilsson",
+              "number": 25,
+              "pos": "F"
+            },
+            {
+              "name": "Alexander Bernhardsson",
+              "number": 21,
+              "pos": "F"
+            }
+          ],
+          "colors": {
+            "player": {
+              "primary": "f9de52",
+              "number": "000000",
+              "border": "f9de52"
+            },
+            "goalkeeper": {
+              "primary": "cdc9c6",
+              "number": "1d1d1d",
+              "border": "cdc9c6"
+            }
+          }
+        }
+      }
+    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -29383,311 +29689,6 @@
               "primary": "3da509",
               "number": "000000",
               "border": "3da509"
-            }
-          }
-        }
-      }
-    },
-    "FRANCE-SWEDEN": {
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "NS",
-      "elapsed": null,
-      "kickoffUTC": "2026-06-30T21:00:00+00:00",
-      "referee": "Danny Makkelie, Netherlands",
-      "lineups": {
-        "FRANCE": {
-          "formation": "4-2-3-1",
-          "coach": "Didier Deschamps",
-          "startXI": [
-            {
-              "name": "Mike Maignan",
-              "number": 16,
-              "pos": "G"
-            },
-            {
-              "name": "Jules Kound\u00e9",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Dayot Upamecano",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "William Saliba",
-              "number": 17,
-              "pos": "D"
-            },
-            {
-              "name": "Lucas Digne",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Aur\u00e9lien Tchouam\u00e9ni",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Adrien Rabiot",
-              "number": 14,
-              "pos": "M"
-            },
-            {
-              "name": "Ousmane Demb\u00e9l\u00e9",
-              "number": 7,
-              "pos": "M"
-            },
-            {
-              "name": "Michael Olise",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "Bradley Barcola",
-              "number": 12,
-              "pos": "M"
-            },
-            {
-              "name": "Kylian Mbapp\u00e9",
-              "number": 10,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Robin Risser",
-              "number": 23,
-              "pos": "G"
-            },
-            {
-              "name": "Brice Samba",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Malo Gusto",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Lucas Hern\u00e1ndez",
-              "number": 21,
-              "pos": "D"
-            },
-            {
-              "name": "Maxence Lacroix",
-              "number": 26,
-              "pos": "D"
-            },
-            {
-              "name": "Ibrahima Konat\u00e9",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Theo Hern\u00e1ndez",
-              "number": 19,
-              "pos": "D"
-            },
-            {
-              "name": "Manu Kon\u00e9",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Rayan Cherki",
-              "number": 24,
-              "pos": "M"
-            },
-            {
-              "name": "Maghnes Akliouche",
-              "number": 25,
-              "pos": "M"
-            },
-            {
-              "name": "Warren Za\u00efre-Emery",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "N'Golo Kant\u00e9",
-              "number": 13,
-              "pos": "M"
-            },
-            {
-              "name": "Jean-Philippe Mateta",
-              "number": 22,
-              "pos": "F"
-            },
-            {
-              "name": "D\u00e9sir\u00e9 Dou\u00e9",
-              "number": 20,
-              "pos": "F"
-            },
-            {
-              "name": "Marcus Thuram",
-              "number": 9,
-              "pos": "F"
-            }
-          ],
-          "colors": {
-            "player": {
-              "primary": "1a55bd",
-              "number": "ffffff",
-              "border": "1a55bd"
-            },
-            "goalkeeper": {
-              "primary": "1b191e",
-              "number": "faf9f9",
-              "border": "1b191e"
-            }
-          }
-        },
-        "SWEDEN": {
-          "formation": "3-4-2-1",
-          "coach": "Graham Potter",
-          "startXI": [
-            {
-              "name": "Jacob Widell Zetterstr\u00f6m",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Gustaf Lagerbielke",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Victor Lindel\u00f6f",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Gabriel Gudmundsson",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Daniel Svensson",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Yasin Ayari",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "Lucas Bergvall",
-              "number": 7,
-              "pos": "M"
-            },
-            {
-              "name": "Elliot Stroud",
-              "number": 24,
-              "pos": "M"
-            },
-            {
-              "name": "Anthony Elanga",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "Alexander Isak",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Viktor Gy\u00f6keres",
-              "number": 17,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Kristoffer Nordfeldt",
-              "number": 23,
-              "pos": "G"
-            },
-            {
-              "name": "Viktor Johansson",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Hjalmar Ekdal",
-              "number": 14,
-              "pos": "D"
-            },
-            {
-              "name": "Eric Smith",
-              "number": 20,
-              "pos": "D"
-            },
-            {
-              "name": "Carl Starfelt",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Besfort Zeneli",
-              "number": 22,
-              "pos": "M"
-            },
-            {
-              "name": "Herman Johansson",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Ken Sema",
-              "number": 13,
-              "pos": "M"
-            },
-            {
-              "name": "Taha Abdi Ali",
-              "number": 26,
-              "pos": "M"
-            },
-            {
-              "name": "Jesper Karlstr\u00f6m",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "Mattias Svanberg",
-              "number": 19,
-              "pos": "M"
-            },
-            {
-              "name": "Benjamin Nygren",
-              "number": 10,
-              "pos": "F"
-            },
-            {
-              "name": "Gustaf Nilsson",
-              "number": 25,
-              "pos": "F"
-            },
-            {
-              "name": "Alexander Bernhardsson",
-              "number": 21,
-              "pos": "F"
-            }
-          ],
-          "colors": {
-            "player": {
-              "primary": "f9de52",
-              "number": "000000",
-              "border": "f9de52"
-            },
-            "goalkeeper": {
-              "primary": "cdc9c6",
-              "number": "1d1d1d",
-              "border": "cdc9c6"
             }
           }
         }
