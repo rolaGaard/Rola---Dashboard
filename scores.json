@@ -1,326 +1,6 @@
 {
-  "updated": "2026-06-30T02:10:22.153146Z",
+  "updated": "2026-06-30T02:20:22.210908Z",
   "matches": {
-    "NETHERLANDS-MOROCCO": {
-      "homeGoals": 0,
-      "awayGoals": 0,
-      "status": "2H",
-      "elapsed": 48,
-      "kickoffUTC": "2026-06-30T01:00:00+00:00",
-      "referee": "Wilton Pereira Sampaio, Brazil",
-      "events": [
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "I. Diop",
-          "team": "MOROCCO",
-          "minute": 47,
-          "extra": null
-        }
-      ],
-      "lineups": {
-        "NETHERLANDS": {
-          "formation": "3-4-2-1",
-          "coach": "Ronald Koeman",
-          "startXI": [
-            {
-              "name": "Bart Verbruggen",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Jan Paul van Hecke",
-              "number": 6,
-              "pos": "D"
-            },
-            {
-              "name": "Virgil van Dijk",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Nathan Ak\u00e9",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Denzel Dumfries",
-              "number": 22,
-              "pos": "M"
-            },
-            {
-              "name": "Ryan Gravenberch",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Frenkie de Jong",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "Micky van de Ven",
-              "number": 15,
-              "pos": "M"
-            },
-            {
-              "name": "Crysencio Summerville",
-              "number": 24,
-              "pos": "F"
-            },
-            {
-              "name": "Cody Gakpo",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "Brian Brobbey",
-              "number": 19,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Mark Flekken",
-              "number": 23,
-              "pos": "G"
-            },
-            {
-              "name": "Robin Roefs",
-              "number": 13,
-              "pos": "G"
-            },
-            {
-              "name": "Jorrel Hato",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "Lutsharel Geertruida",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Mats Wieffer",
-              "number": 12,
-              "pos": "M"
-            },
-            {
-              "name": "Guus Til",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "Justin Kluivert",
-              "number": 7,
-              "pos": "F"
-            },
-            {
-              "name": "Marten de Roon",
-              "number": 3,
-              "pos": "M"
-            },
-            {
-              "name": "Quinten Timber",
-              "number": 26,
-              "pos": "M"
-            },
-            {
-              "name": "Teun Koopmeiners",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Tijjani Reijnders",
-              "number": 14,
-              "pos": "M"
-            },
-            {
-              "name": "Donyell Malen",
-              "number": 18,
-              "pos": "F"
-            },
-            {
-              "name": "Memphis Depay",
-              "number": 10,
-              "pos": "F"
-            },
-            {
-              "name": "Wout Weghorst",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Noa Lang",
-              "number": 17,
-              "pos": "F"
-            }
-          ],
-          "colors": {
-            "player": {
-              "primary": "ff6803",
-              "number": "000000",
-              "border": "ff6803"
-            },
-            "goalkeeper": {
-              "primary": "5886c6",
-              "number": "f9f1f1",
-              "border": "5886c6"
-            }
-          }
-        },
-        "MOROCCO": {
-          "formation": "4-2-3-1",
-          "coach": "Mohamed Ouahbi",
-          "startXI": [
-            {
-              "name": "Yassine Bounou",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Achraf Hakimi",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Issa Diop",
-              "number": 14,
-              "pos": "D"
-            },
-            {
-              "name": "Chadi Riad",
-              "number": 18,
-              "pos": "D"
-            },
-            {
-              "name": "Noussair Mazraoui",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Neil El Aynaoui",
-              "number": 24,
-              "pos": "M"
-            },
-            {
-              "name": "Ayyoub Bouaddi",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Brahim D\u00edaz",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Azzedine Ounahi",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Bilal El Khannouss",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "Ismael Saibari",
-              "number": 11,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Ahmed Reda Tagnaouti",
-              "number": 22,
-              "pos": "G"
-            },
-            {
-              "name": "Munir El Kajoui",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Anass Salah-Eddine",
-              "number": 26,
-              "pos": "D"
-            },
-            {
-              "name": "Marwane Saadane",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Redouane Halhal",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "Youssef Belammari",
-              "number": 19,
-              "pos": "D"
-            },
-            {
-              "name": "Zakaria El Ouahdi",
-              "number": 13,
-              "pos": "D"
-            },
-            {
-              "name": "Amine Sbai",
-              "number": 17,
-              "pos": "F"
-            },
-            {
-              "name": "Chemsdine Talbi",
-              "number": 7,
-              "pos": "F"
-            },
-            {
-              "name": "Gessime Yassine",
-              "number": 16,
-              "pos": "F"
-            },
-            {
-              "name": "Samir El Mourabet",
-              "number": 15,
-              "pos": "M"
-            },
-            {
-              "name": "Sofyan Amrabat",
-              "number": 4,
-              "pos": "M"
-            },
-            {
-              "name": "Ayoub El Kaabi",
-              "number": 20,
-              "pos": "F"
-            },
-            {
-              "name": "Ayoube Amaimouni Echghouyab",
-              "number": 21,
-              "pos": "F"
-            },
-            {
-              "name": "Soufiane Rahimi",
-              "number": 9,
-              "pos": "F"
-            }
-          ],
-          "colors": {
-            "player": {
-              "primary": "e60000",
-              "number": "ffffff",
-              "border": "e60000"
-            },
-            "goalkeeper": {
-              "primary": "99bff0",
-              "number": "000000",
-              "border": "99bff0"
-            }
-          }
-        }
-      }
-    },
     "MEXICO-SOUTH AFRICA": {
       "homeGoals": 2,
       "awayGoals": 0,
@@ -28976,6 +28656,326 @@
       "elapsed": null,
       "kickoffUTC": "2026-07-04T01:30:00+00:00",
       "referee": null
+    },
+    "NETHERLANDS-MOROCCO": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "2H",
+      "elapsed": 58,
+      "kickoffUTC": "2026-06-30T01:00:00+00:00",
+      "referee": "Wilton Pereira Sampaio, Brazil",
+      "events": [
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "Issa Diop",
+          "team": "MOROCCO",
+          "minute": 47,
+          "extra": null
+        }
+      ],
+      "lineups": {
+        "NETHERLANDS": {
+          "formation": "3-4-2-1",
+          "coach": "Ronald Koeman",
+          "startXI": [
+            {
+              "name": "Bart Verbruggen",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Jan Paul van Hecke",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "Virgil van Dijk",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Nathan Ak\u00e9",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Denzel Dumfries",
+              "number": 22,
+              "pos": "M"
+            },
+            {
+              "name": "Ryan Gravenberch",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Frenkie de Jong",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Micky van de Ven",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Crysencio Summerville",
+              "number": 24,
+              "pos": "F"
+            },
+            {
+              "name": "Cody Gakpo",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Brian Brobbey",
+              "number": 19,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Mark Flekken",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Robin Roefs",
+              "number": 13,
+              "pos": "G"
+            },
+            {
+              "name": "Jorrel Hato",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Lutsharel Geertruida",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Mats Wieffer",
+              "number": 12,
+              "pos": "M"
+            },
+            {
+              "name": "Guus Til",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Justin Kluivert",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Marten de Roon",
+              "number": 3,
+              "pos": "M"
+            },
+            {
+              "name": "Quinten Timber",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "Teun Koopmeiners",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Tijjani Reijnders",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Donyell Malen",
+              "number": 18,
+              "pos": "F"
+            },
+            {
+              "name": "Memphis Depay",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Wout Weghorst",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Noa Lang",
+              "number": 17,
+              "pos": "F"
+            }
+          ],
+          "colors": {
+            "player": {
+              "primary": "ff6803",
+              "number": "000000",
+              "border": "ff6803"
+            },
+            "goalkeeper": {
+              "primary": "5886c6",
+              "number": "f9f1f1",
+              "border": "5886c6"
+            }
+          }
+        },
+        "MOROCCO": {
+          "formation": "4-2-3-1",
+          "coach": "Mohamed Ouahbi",
+          "startXI": [
+            {
+              "name": "Yassine Bounou",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Achraf Hakimi",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Issa Diop",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "Chadi Riad",
+              "number": 18,
+              "pos": "D"
+            },
+            {
+              "name": "Noussair Mazraoui",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Neil El Aynaoui",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "Ayyoub Bouaddi",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Brahim D\u00edaz",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Azzedine Ounahi",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Bilal El Khannouss",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Ismael Saibari",
+              "number": 11,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Ahmed Reda Tagnaouti",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Munir El Kajoui",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Anass Salah-Eddine",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Marwane Saadane",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Redouane Halhal",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Youssef Belammari",
+              "number": 19,
+              "pos": "D"
+            },
+            {
+              "name": "Zakaria El Ouahdi",
+              "number": 13,
+              "pos": "D"
+            },
+            {
+              "name": "Amine Sbai",
+              "number": 17,
+              "pos": "F"
+            },
+            {
+              "name": "Chemsdine Talbi",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Gessime Yassine",
+              "number": 16,
+              "pos": "F"
+            },
+            {
+              "name": "Samir El Mourabet",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Sofyan Amrabat",
+              "number": 4,
+              "pos": "M"
+            },
+            {
+              "name": "Ayoub El Kaabi",
+              "number": 20,
+              "pos": "F"
+            },
+            {
+              "name": "Ayoube Amaimouni Echghouyab",
+              "number": 21,
+              "pos": "F"
+            },
+            {
+              "name": "Soufiane Rahimi",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "colors": {
+            "player": {
+              "primary": "e60000",
+              "number": "ffffff",
+              "border": "e60000"
+            },
+            "goalkeeper": {
+              "primary": "99bff0",
+              "number": "000000",
+              "border": "99bff0"
+            }
+          }
+        }
+      }
     }
   }
 }
