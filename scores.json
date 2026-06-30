@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-30T22:00:55.381657Z",
+  "updated": "2026-06-30T22:10:24.247636Z",
   "matches": {
     "FRANCE-SWEDEN": {
       "homeGoals": 1,
       "awayGoals": 0,
-      "status": "HT",
-      "elapsed": 45,
+      "status": "2H",
+      "elapsed": 51,
       "kickoffUTC": "2026-06-30T21:00:00+00:00",
       "referee": "Danny Makkelie, Netherlands",
       "events": [
