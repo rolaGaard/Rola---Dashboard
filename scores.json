@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-30T22:20:24.889237Z",
+  "updated": "2026-06-30T22:30:39.366567Z",
   "matches": {
     "FRANCE-SWEDEN": {
       "homeGoals": 2,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 61,
+      "elapsed": 72,
       "kickoffUTC": "2026-06-30T21:00:00+00:00",
       "referee": "Danny Makkelie, Netherlands",
       "events": [
@@ -26,6 +26,20 @@
           "extra": null
         }
       ],
+      "substitutions": {
+        "SWEDEN": [
+          {
+            "out": "E. Stroud",
+            "in": "T. Ali",
+            "minute": 66
+          },
+          {
+            "out": "L. Bergvall",
+            "in": "B. Zeneli",
+            "minute": 66
+          }
+        ]
+      },
       "lineups": {
         "FRANCE": {
           "formation": "4-2-3-1",
