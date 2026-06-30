@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-30T22:40:20.204182Z",
+  "updated": "2026-06-30T22:50:24.583856Z",
   "matches": {
     "FRANCE-SWEDEN": {
       "homeGoals": 3,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 81,
+      "elapsed": 90,
       "kickoffUTC": "2026-06-30T21:00:00+00:00",
       "referee": "Danny Makkelie, Netherlands",
       "events": [
@@ -45,6 +45,21 @@
             "out": "L. Bergvall",
             "in": "B. Zeneli",
             "minute": 66
+          },
+          {
+            "out": "D. Svensson",
+            "in": "M. Svanberg",
+            "minute": 82
+          },
+          {
+            "out": "Y. Ayari",
+            "in": "B. Nygren",
+            "minute": 82
+          },
+          {
+            "out": "A. Isak",
+            "in": "G. Nilsson",
+            "minute": 89
           }
         ],
         "FRANCE": [
@@ -62,6 +77,16 @@
             "out": "L. Digne",
             "in": "T. Hernandez",
             "minute": 78
+          },
+          {
+            "out": "K. Mbappe",
+            "in": "J. Mateta",
+            "minute": 85
+          },
+          {
+            "out": "M. Olise",
+            "in": "R. Cherki",
+            "minute": 85
           }
         ]
       },
