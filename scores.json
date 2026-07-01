@@ -1,387 +1,6 @@
 {
-  "updated": "2026-07-01T17:59:10.238690Z",
+  "updated": "2026-07-01T18:00:54.939201Z",
   "matches": {
-    "ENGLAND-CONGO DR": {
-      "fixtureId": 1567307,
-      "round": "Round of 32",
-      "homeGoals": 2,
-      "awayGoals": 1,
-      "status": "2H",
-      "elapsed": 90,
-      "kickoffUTC": "2026-07-01T16:00:00+00:00",
-      "referee": "Adham Mohammad, Jordan",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "B. Cipenga",
-          "team": "CONGO DR",
-          "minute": 7,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "J. Bellingham",
-          "team": "ENGLAND",
-          "minute": 19,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "N. Sadiki",
-          "team": "CONGO DR",
-          "minute": 28,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "H. Kane",
-          "team": "ENGLAND",
-          "minute": 75,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "H. Kane",
-          "team": "ENGLAND",
-          "minute": 86,
-          "extra": null
-        }
-      ],
-      "substitutions": {
-        "ENGLAND": [
-          {
-            "out": "M. Rashford",
-            "in": "A. Gordon",
-            "minute": 61
-          },
-          {
-            "out": "N. Madueke",
-            "in": "B. Saka",
-            "minute": 61
-          },
-          {
-            "out": "D. Spence",
-            "in": "E. Eze",
-            "minute": 70
-          },
-          {
-            "out": "D. Rice",
-            "in": "J. Stones",
-            "minute": 90
-          }
-        ],
-        "CONGO DR": [
-          {
-            "out": "N. Mbuku",
-            "in": "M. Elia",
-            "minute": 64
-          },
-          {
-            "out": "N. Mukau",
-            "in": "E. Kayembe",
-            "minute": 76
-          },
-          {
-            "out": "B. Cipenga",
-            "in": "T. Bongonda",
-            "minute": 76
-          },
-          {
-            "out": "A. Masuaku",
-            "in": "J. Kayembe",
-            "minute": 89
-          },
-          {
-            "out": "S. Moutoussamy",
-            "in": "F. Mayele",
-            "minute": 89
-          }
-        ]
-      },
-      "lineups": {
-        "ENGLAND": {
-          "formation": "4-2-3-1",
-          "coach": "Thomas Tuchel",
-          "startXI": [
-            {
-              "name": "Jordan Pickford",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Djed Spence",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "Ezri Konsa",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Marc Gu\u00e9hi",
-              "number": 6,
-              "pos": "D"
-            },
-            {
-              "name": "Nico O'Reilly",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Elliot Anderson",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Declan Rice",
-              "number": 4,
-              "pos": "M"
-            },
-            {
-              "name": "Noni Madueke",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Jude Bellingham",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Marcus Rashford",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "Harry Kane",
-              "number": 9,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "James Trafford",
-              "number": 23,
-              "pos": "G"
-            },
-            {
-              "name": "Dean Henderson",
-              "number": 13,
-              "pos": "G"
-            },
-            {
-              "name": "Trevoh Chalobah",
-              "number": 12,
-              "pos": "D"
-            },
-            {
-              "name": "John Stones",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Dan Burn",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Reece James",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Jarell Quansah",
-              "number": 26,
-              "pos": "D"
-            },
-            {
-              "name": "Eberechi Eze",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "Jordan Henderson",
-              "number": 14,
-              "pos": "M"
-            },
-            {
-              "name": "Morgan Rogers",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Kobbie Mainoo",
-              "number": 16,
-              "pos": "M"
-            },
-            {
-              "name": "Ollie Watkins",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Anthony Gordon",
-              "number": 18,
-              "pos": "F"
-            },
-            {
-              "name": "Bukayo Saka",
-              "number": 7,
-              "pos": "F"
-            },
-            {
-              "name": "Ivan Toney",
-              "number": 22,
-              "pos": "F"
-            }
-          ]
-        },
-        "CONGO DR": {
-          "formation": "4-3-3",
-          "coach": "Sebastien Desabre",
-          "startXI": [
-            {
-              "name": "Lionel Mpasi Nzau",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Aaron Wan-Bissaka",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Chancel Mbemba",
-              "number": 22,
-              "pos": "D"
-            },
-            {
-              "name": "Axel Tuanzebe",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Arthur Masuaku",
-              "number": 26,
-              "pos": "D"
-            },
-            {
-              "name": "Ngal'ayel Mukau",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Samuel Moutoussamy",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Noah Sadiki",
-              "number": 14,
-              "pos": "M"
-            },
-            {
-              "name": "Nathana\u00ebl Mbuku",
-              "number": 7,
-              "pos": "F"
-            },
-            {
-              "name": "Yoane Wissa",
-              "number": 20,
-              "pos": "F"
-            },
-            {
-              "name": "Brian Cipenga",
-              "number": 9,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Matthieu Epolo",
-              "number": 21,
-              "pos": "G"
-            },
-            {
-              "name": "Timothy Fayulu",
-              "number": 16,
-              "pos": "G"
-            },
-            {
-              "name": "Dylan Batubinsika",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Gedeon Kalulu",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "Joris Kayembe",
-              "number": 12,
-              "pos": "D"
-            },
-            {
-              "name": "Steve Kapuadi",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Ga\u00ebl Kakuta",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "Charles Pickel",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "Th\u00e9o Bongonda",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Aaron Tshibola",
-              "number": 15,
-              "pos": "M"
-            },
-            {
-              "name": "Edo Kayembe",
-              "number": 25,
-              "pos": "M"
-            },
-            {
-              "name": "Fiston Mayele",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "C\u00e9dric Bakambu",
-              "number": 17,
-              "pos": "F"
-            },
-            {
-              "name": "Simon Banza",
-              "number": 23,
-              "pos": "F"
-            },
-            {
-              "name": "Meschak Elia",
-              "number": 13,
-              "pos": "F"
-            }
-          ]
-        }
-      }
-    },
     "MEXICO-SOUTH AFRICA": {
       "fixtureId": 1489369,
       "round": "Group Stage - 1",
@@ -30727,6 +30346,387 @@
               "border": "5f9c6e"
             }
           }
+        }
+      }
+    },
+    "ENGLAND-CONGO DR": {
+      "fixtureId": 1567307,
+      "round": "Round of 32",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-07-01T16:00:00+00:00",
+      "referee": "Adham Mohammad, Jordan",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "B. Cipenga",
+          "team": "CONGO DR",
+          "minute": 7,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "J. Bellingham",
+          "team": "ENGLAND",
+          "minute": 19,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "N. Sadiki",
+          "team": "CONGO DR",
+          "minute": 28,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "H. Kane",
+          "team": "ENGLAND",
+          "minute": 75,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "H. Kane",
+          "team": "ENGLAND",
+          "minute": 86,
+          "extra": null
+        }
+      ],
+      "substitutions": {
+        "ENGLAND": [
+          {
+            "out": "M. Rashford",
+            "in": "A. Gordon",
+            "minute": 61
+          },
+          {
+            "out": "N. Madueke",
+            "in": "B. Saka",
+            "minute": 61
+          },
+          {
+            "out": "D. Spence",
+            "in": "E. Eze",
+            "minute": 70
+          },
+          {
+            "out": "D. Rice",
+            "in": "J. Stones",
+            "minute": 90
+          }
+        ],
+        "CONGO DR": [
+          {
+            "out": "N. Mbuku",
+            "in": "M. Elia",
+            "minute": 64
+          },
+          {
+            "out": "N. Mukau",
+            "in": "E. Kayembe",
+            "minute": 76
+          },
+          {
+            "out": "B. Cipenga",
+            "in": "T. Bongonda",
+            "minute": 76
+          },
+          {
+            "out": "A. Masuaku",
+            "in": "J. Kayembe",
+            "minute": 89
+          },
+          {
+            "out": "S. Moutoussamy",
+            "in": "F. Mayele",
+            "minute": 89
+          }
+        ]
+      },
+      "lineups": {
+        "ENGLAND": {
+          "formation": "4-2-3-1",
+          "coach": "Thomas Tuchel",
+          "startXI": [
+            {
+              "name": "Jordan Pickford",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Djed Spence",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Ezri Konsa",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Marc Gu\u00e9hi",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "Nico O'Reilly",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Elliot Anderson",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Declan Rice",
+              "number": 4,
+              "pos": "M"
+            },
+            {
+              "name": "Noni Madueke",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Jude Bellingham",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Marcus Rashford",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Harry Kane",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "James Trafford",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Dean Henderson",
+              "number": 13,
+              "pos": "G"
+            },
+            {
+              "name": "Trevoh Chalobah",
+              "number": 12,
+              "pos": "D"
+            },
+            {
+              "name": "John Stones",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Dan Burn",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Reece James",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Jarell Quansah",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Eberechi Eze",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Jordan Henderson",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Morgan Rogers",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Kobbie Mainoo",
+              "number": 16,
+              "pos": "M"
+            },
+            {
+              "name": "Ollie Watkins",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Anthony Gordon",
+              "number": 18,
+              "pos": "F"
+            },
+            {
+              "name": "Bukayo Saka",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Ivan Toney",
+              "number": 22,
+              "pos": "F"
+            }
+          ]
+        },
+        "CONGO DR": {
+          "formation": "4-3-3",
+          "coach": "Sebastien Desabre",
+          "startXI": [
+            {
+              "name": "Lionel Mpasi Nzau",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Aaron Wan-Bissaka",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Chancel Mbemba",
+              "number": 22,
+              "pos": "D"
+            },
+            {
+              "name": "Axel Tuanzebe",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Arthur Masuaku",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Ngal'ayel Mukau",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Samuel Moutoussamy",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Noah Sadiki",
+              "number": 14,
+              "pos": "M"
+            },
+            {
+              "name": "Nathana\u00ebl Mbuku",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Yoane Wissa",
+              "number": 20,
+              "pos": "F"
+            },
+            {
+              "name": "Brian Cipenga",
+              "number": 9,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Matthieu Epolo",
+              "number": 21,
+              "pos": "G"
+            },
+            {
+              "name": "Timothy Fayulu",
+              "number": 16,
+              "pos": "G"
+            },
+            {
+              "name": "Dylan Batubinsika",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Gedeon Kalulu",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "Joris Kayembe",
+              "number": 12,
+              "pos": "D"
+            },
+            {
+              "name": "Steve Kapuadi",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Ga\u00ebl Kakuta",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Charles Pickel",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Th\u00e9o Bongonda",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Aaron Tshibola",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Edo Kayembe",
+              "number": 25,
+              "pos": "M"
+            },
+            {
+              "name": "Fiston Mayele",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "C\u00e9dric Bakambu",
+              "number": 17,
+              "pos": "F"
+            },
+            {
+              "name": "Simon Banza",
+              "number": 23,
+              "pos": "F"
+            },
+            {
+              "name": "Meschak Elia",
+              "number": 13,
+              "pos": "F"
+            }
+          ]
         }
       }
     },
