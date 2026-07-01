@@ -301,25 +301,27 @@
     align-items:start; width:100%;
   }
   .rotate-toast {
-    position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
+    position:fixed; top:0; left:0; right:0; bottom:0;
     z-index:9999; pointer-events:none;
-    display:flex; flex-direction:column; align-items:center; gap:8px;
-    animation: rotate-fade 1.8s ease forwards;
+    display:flex; align-items:center; justify-content:center;
+    opacity:0; transition:none;
   }
-  .rotate-icon {
-    font-size:52px;
-    animation: rotate-phone 1.8s ease forwards;
+  .rotate-toast.visible {
+    animation: rotate-fade-wrap 2s ease forwards;
+  }
+  .rotate-toast.visible .rotate-icon {
+    animation: rotate-phone 2s ease forwards;
   }
   @keyframes rotate-phone {
-    0%   { transform: rotate(0deg); opacity:0; }
-    20%  { transform: rotate(0deg); opacity:1; }
-    70%  { transform: rotate(90deg); opacity:1; }
-    100% { transform: rotate(90deg); opacity:0; }
+    0%   { transform:rotate(0deg);  opacity:0; }
+    15%  { transform:rotate(0deg);  opacity:1; }
+    65%  { transform:rotate(90deg); opacity:1; }
+    100% { transform:rotate(90deg); opacity:0; }
   }
-  @keyframes rotate-fade {
+  @keyframes rotate-fade-wrap {
     0%   { opacity:0; }
     15%  { opacity:1; }
-    75%  { opacity:1; }
+    65%  { opacity:1; }
     100% { opacity:0; }
   }
   .groups-below {
@@ -966,8 +968,8 @@
 
 <div id="group-zoom-modal" class="shortcut-instructions" style="display:none;">
 
-<div id="rotate-toast" class="rotate-toast" style="display:none;">
-  <div class="rotate-icon">📱</div>
+<div id="rotate-toast" class="rotate-toast">
+  <div class="rotate-icon" style="font-size:64px;">📱</div>
 </div>
   <div class="shortcut-instructions-box group-zoom-box">
     <button id="group-zoom-close" class="cookie-banner-close" aria-label="Cerrar">✕</button>
@@ -2271,18 +2273,12 @@ function render() {
     // En portrait, mostrar el hint de rotación solo la primera vez
     if (window.innerHeight > window.innerWidth) {
       const toast = document.getElementById('rotate-toast');
-      if (toast && !toast._shown) {
-        toast._shown = true;
-        // Reiniciar la animación CSS forzando un reflow
-        toast.style.display = 'flex';
-        const icon = toast.querySelector('.rotate-icon');
-        icon.style.animation = 'none';
-        icon.offsetHeight; // fuerza reflow
-        icon.style.animation = '';
-        toast.style.animation = 'none';
-        toast.offsetHeight;
-        toast.style.animation = '';
-        setTimeout(() => { toast.style.display = 'none'; }, 1900);
+      if (toast) {
+        toast.classList.remove('visible');
+        toast.offsetHeight; // fuerza reflow para reiniciar animación
+        toast.classList.add('visible');
+        clearTimeout(toast._timer);
+        toast._timer = setTimeout(() => toast.classList.remove('visible'), 2100);
       }
     }
     updateCounters(); return;
