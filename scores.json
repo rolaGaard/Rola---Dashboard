@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T21:18:11.423957Z",
+  "updated": "2026-07-01T21:19:13.980880Z",
   "matches": {
     "BELGIUM-SENEGAL": {
       "fixtureId": 1567308,
@@ -7,7 +7,7 @@
       "homeGoals": 0,
       "awayGoals": 2,
       "status": "2H",
-      "elapsed": 56,
+      "elapsed": 57,
       "kickoffUTC": "2026-07-01T20:00:00+00:00",
       "referee": "Said Martinez, Honduras",
       "events": [
@@ -34,6 +34,16 @@
             "out": "C. De Ketelaere",
             "in": "R. Lukaku",
             "minute": 46
+          },
+          {
+            "out": "K. De Bruyne",
+            "in": "N. Raskin",
+            "minute": 56
+          },
+          {
+            "out": "J. Doku",
+            "in": "D. Lukebakio",
+            "minute": 56
           }
         ]
       },
