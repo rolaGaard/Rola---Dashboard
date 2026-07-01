@@ -1,13 +1,13 @@
 {
-  "updated": "2026-07-01T21:13:10.436064Z",
+  "updated": "2026-07-01T21:14:12.836960Z",
   "matches": {
     "BELGIUM-SENEGAL": {
       "fixtureId": 1567308,
       "round": "Round of 32",
       "homeGoals": 0,
-      "awayGoals": 1,
+      "awayGoals": 2,
       "status": "2H",
-      "elapsed": 51,
+      "elapsed": 52,
       "kickoffUTC": "2026-07-01T20:00:00+00:00",
       "referee": "Said Martinez, Honduras",
       "events": [
@@ -17,6 +17,14 @@
           "player": "H. Diarra",
           "team": "SENEGAL",
           "minute": 25,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "I. Sarr",
+          "team": "SENEGAL",
+          "minute": 51,
           "extra": null
         }
       ],
