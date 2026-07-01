@@ -1,424 +1,6 @@
 {
-  "updated": "2026-07-01T04:01:10.078775Z",
+  "updated": "2026-07-01T04:02:11.847671Z",
   "matches": {
-    "MEXICO-ECUADOR": {
-      "fixtureId": 1567306,
-      "round": "Round of 32",
-      "homeGoals": 2,
-      "awayGoals": 0,
-      "status": "2H",
-      "elapsed": 90,
-      "kickoffUTC": "2026-07-01T01:00:00+00:00",
-      "referee": "Slavko Vin\u010di\u0107, Slovenia",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "J. Quinones",
-          "team": "MEXICO",
-          "minute": 22,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "R. Jimenez",
-          "team": "MEXICO",
-          "minute": 31,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "A. Franco",
-          "team": "ECUADOR",
-          "minute": 45,
-          "extra": 1
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "K. Paez",
-          "team": "ECUADOR",
-          "minute": 90,
-          "extra": 3
-        },
-        {
-          "type": "Card",
-          "detail": "Red Card",
-          "player": "P. Hincapie",
-          "team": "ECUADOR",
-          "minute": 90,
-          "extra": 5
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "M. Caicedo",
-          "team": "ECUADOR",
-          "minute": 90,
-          "extra": 9
-        }
-      ],
-      "substitutions": {
-        "ECUADOR": [
-          {
-            "out": "A. Franco",
-            "in": "Y. Medina",
-            "minute": 46
-          },
-          {
-            "out": "J. Ordonez",
-            "in": "A. Preciado",
-            "minute": 46
-          },
-          {
-            "out": "E. Valencia",
-            "in": "K. Rodriguez",
-            "minute": 59
-          },
-          {
-            "out": "J. Yeboah",
-            "in": "J. Caicedo",
-            "minute": 79
-          },
-          {
-            "out": "N. Angulo",
-            "in": "K. Paez",
-            "minute": 79
-          }
-        ],
-        "MEXICO": [
-          {
-            "out": "G. Mora",
-            "in": "B. Gutierrez",
-            "minute": 58
-          },
-          {
-            "out": "L. Romo",
-            "in": "O. Vargas",
-            "minute": 73
-          },
-          {
-            "out": "R. Jimenez",
-            "in": "S. Gimenez",
-            "minute": 74
-          },
-          {
-            "out": "J. Quinones",
-            "in": "O. Pineda",
-            "minute": 80
-          },
-          {
-            "out": "R. Alvarado",
-            "in": "I. Reyes",
-            "minute": 80
-          }
-        ]
-      },
-      "lineups": {
-        "MEXICO": {
-          "formation": "4-3-3",
-          "coach": "Javier Aguirre",
-          "startXI": [
-            {
-              "name": "Ra\u00fal Rangel",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Jorge S\u00e1nchez",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "C\u00e9sar Montes",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Johan V\u00e1squez",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Jes\u00fas Gallardo",
-              "number": 23,
-              "pos": "D"
-            },
-            {
-              "name": "Gilberto Mora",
-              "number": 19,
-              "pos": "M"
-            },
-            {
-              "name": "Erik Lira",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Luis Romo",
-              "number": 7,
-              "pos": "M"
-            },
-            {
-              "name": "Roberto Alvarado",
-              "number": 25,
-              "pos": "F"
-            },
-            {
-              "name": "Ra\u00fal Jim\u00e9nez",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Juli\u00e1n Qui\u00f1ones",
-              "number": 16,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Carlos Acevedo",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Guillermo Ochoa",
-              "number": 13,
-              "pos": "G"
-            },
-            {
-              "name": "Israel Reyes",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Mateo Ch\u00e1vez",
-              "number": 20,
-              "pos": "D"
-            },
-            {
-              "name": "Edson \u00c1lvarez",
-              "number": 4,
-              "pos": "M"
-            },
-            {
-              "name": "Luis Ch\u00e1vez",
-              "number": 24,
-              "pos": "M"
-            },
-            {
-              "name": "\u00c1lvaro Fidalgo",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Orbel\u00edn Pineda",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Obed Vargas",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "Brian Guti\u00e9rrez",
-              "number": 26,
-              "pos": "M"
-            },
-            {
-              "name": "C\u00e9sar Huerta",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "Alexis Vega",
-              "number": 10,
-              "pos": "F"
-            },
-            {
-              "name": "Armando Gonz\u00e1lez",
-              "number": 14,
-              "pos": "F"
-            },
-            {
-              "name": "Guillermo Mart\u00ednez",
-              "number": 22,
-              "pos": "F"
-            },
-            {
-              "name": "Santiago Gim\u00e9nez",
-              "number": 11,
-              "pos": "F"
-            }
-          ],
-          "colors": {
-            "player": {
-              "primary": "298b77",
-              "number": "ffffff",
-              "border": "298b77"
-            },
-            "goalkeeper": {
-              "primary": "d54882",
-              "number": "ebebeb",
-              "border": "d54882"
-            }
-          }
-        },
-        "ECUADOR": {
-          "formation": "4-4-2",
-          "coach": "Sebastian Beccacece",
-          "startXI": [
-            {
-              "name": "Hern\u00e1n Gal\u00edndez",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Alan Franco",
-              "number": 21,
-              "pos": "D"
-            },
-            {
-              "name": "Joel Ord\u00f3\u00f1ez",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Willian Pacho",
-              "number": 6,
-              "pos": "D"
-            },
-            {
-              "name": "Piero Hincapi\u00e9",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "John Yeboah",
-              "number": 9,
-              "pos": "M"
-            },
-            {
-              "name": "Mois\u00e9s Caicedo",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "Pedro Vite",
-              "number": 15,
-              "pos": "M"
-            },
-            {
-              "name": "Nilson Angulo",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Gonzalo Plata",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Enner Valencia",
-              "number": 13,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Mois\u00e9s Ram\u00edrez",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Gonzalo Valle",
-              "number": 22,
-              "pos": "G"
-            },
-            {
-              "name": "Jackson Porozo",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "F\u00e9lix Torres",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Yaimar Medina",
-              "number": 26,
-              "pos": "D"
-            },
-            {
-              "name": "Jordy Alcivar",
-              "number": 5,
-              "pos": "M"
-            },
-            {
-              "name": "Kendry P\u00e1ez",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Denil Castillo",
-              "number": 18,
-              "pos": "M"
-            },
-            {
-              "name": "\u00c1ngelo Preciado",
-              "number": 17,
-              "pos": "D"
-            },
-            {
-              "name": "Pervis Estupi\u00f1\u00e1n",
-              "number": 7,
-              "pos": "D"
-            },
-            {
-              "name": "Anthony Valencia",
-              "number": 8,
-              "pos": "F"
-            },
-            {
-              "name": "Alan Minda",
-              "number": 14,
-              "pos": "F"
-            },
-            {
-              "name": "Jordy Caicedo",
-              "number": 16,
-              "pos": "F"
-            },
-            {
-              "name": "Kevin Rodriguez",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "Jeremy Arevalo",
-              "number": 24,
-              "pos": "F"
-            }
-          ],
-          "colors": {
-            "player": {
-              "primary": "ebd31e",
-              "number": "0a2175",
-              "border": "ebd31e"
-            },
-            "goalkeeper": {
-              "primary": "5f9c6e",
-              "number": "ffffff",
-              "border": "5f9c6e"
-            }
-          }
-        }
-      }
-    },
     "MEXICO-SOUTH AFRICA": {
       "fixtureId": 1489369,
       "round": "Group Stage - 1",
@@ -1205,7 +787,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-12T19:00:00+00:00",
-      "referee": "F. Tello",
+      "referee": "Facundo Raul Tello Figueroa, Argentina",
       "events": [
         {
           "type": "Card",
@@ -1607,7 +1189,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-13T01:00:00+00:00",
-      "referee": "D. Makkelie",
+      "referee": "Danny Makkelie, Netherlands",
       "events": [
         {
           "type": "Goal",
@@ -2036,7 +1618,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-13T19:00:00+00:00",
-      "referee": "S. Martinez",
+      "referee": "Said Martinez, Honduras",
       "events": [
         {
           "type": "Card",
@@ -2422,7 +2004,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-13T22:00:00+00:00",
-      "referee": "S. Vincic",
+      "referee": "Slavko Vin\u010di\u0107, Slovenia",
       "events": [
         {
           "type": "Goal",
@@ -2795,7 +2377,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-14T01:00:00+00:00",
-      "referee": "M. Ghorbal",
+      "referee": "Mustapha Ghorbal, Algeria",
       "events": [
         {
           "type": "Goal",
@@ -3171,7 +2753,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-14T04:00:00+00:00",
-      "referee": "J. Valenzuela",
+      "referee": "Jes\u00fas Valenzuela, Venezuela",
       "events": [
         {
           "type": "Goal",
@@ -3541,7 +3123,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-14T17:00:00+00:00",
-      "referee": "J. Jayed",
+      "referee": "Jalal Jayed, Morocco",
       "events": [
         {
           "type": "Goal",
@@ -3941,7 +3523,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-14T20:00:00+00:00",
-      "referee": "I. Elfath",
+      "referee": "Ismail Elfath, USA",
       "events": [
         {
           "type": "Goal",
@@ -4343,7 +3925,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-14T23:00:00+00:00",
-      "referee": "F. Letexier",
+      "referee": "Fran\u00e7ois Letexier, France",
       "events": [
         {
           "type": "Card",
@@ -4724,7 +4306,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-15T02:00:00+00:00",
-      "referee": "Y. Perez",
+      "referee": "Yael Falcon Perez, Argentina",
       "events": [
         {
           "type": "Goal",
@@ -5126,7 +4708,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-15T16:00:00+00:00",
-      "referee": "A. Makhadmeh",
+      "referee": "Adham Mohammad, Jordan",
       "events": [
         {
           "type": "Card",
@@ -5483,7 +5065,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-15T19:00:00+00:00",
-      "referee": "R. Abatti",
+      "referee": "Ramon Abatti Abel, Brazil",
       "events": [
         {
           "type": "Card",
@@ -5872,7 +5454,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-15T22:00:00+00:00",
-      "referee": "M. Mariani",
+      "referee": "Maurizio Mariani, Italy",
       "events": [
         {
           "type": "Goal",
@@ -6232,7 +5814,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-16T01:00:00+00:00",
-      "referee": "C. A. Ramos",
+      "referee": "C\u00e9sar Ramos Palazuelos, Mexico",
       "events": [
         {
           "type": "Goal",
@@ -30344,6 +29926,424 @@
               "primary": "cdc9c6",
               "number": "1d1d1d",
               "border": "cdc9c6"
+            }
+          }
+        }
+      }
+    },
+    "MEXICO-ECUADOR": {
+      "fixtureId": 1567306,
+      "round": "Round of 32",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "status": "FT",
+      "elapsed": 90,
+      "kickoffUTC": "2026-07-01T01:00:00+00:00",
+      "referee": "Slavko Vin\u010di\u0107, Slovenia",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "J. Quinones",
+          "team": "MEXICO",
+          "minute": 22,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "R. Jimenez",
+          "team": "MEXICO",
+          "minute": 31,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Franco",
+          "team": "ECUADOR",
+          "minute": 45,
+          "extra": 1
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "K. Paez",
+          "team": "ECUADOR",
+          "minute": 90,
+          "extra": 3
+        },
+        {
+          "type": "Card",
+          "detail": "Red Card",
+          "player": "P. Hincapie",
+          "team": "ECUADOR",
+          "minute": 90,
+          "extra": 5
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "M. Caicedo",
+          "team": "ECUADOR",
+          "minute": 90,
+          "extra": 9
+        }
+      ],
+      "substitutions": {
+        "ECUADOR": [
+          {
+            "out": "A. Franco",
+            "in": "Y. Medina",
+            "minute": 46
+          },
+          {
+            "out": "J. Ordonez",
+            "in": "A. Preciado",
+            "minute": 46
+          },
+          {
+            "out": "E. Valencia",
+            "in": "K. Rodriguez",
+            "minute": 59
+          },
+          {
+            "out": "J. Yeboah",
+            "in": "J. Caicedo",
+            "minute": 79
+          },
+          {
+            "out": "N. Angulo",
+            "in": "K. Paez",
+            "minute": 79
+          }
+        ],
+        "MEXICO": [
+          {
+            "out": "G. Mora",
+            "in": "B. Gutierrez",
+            "minute": 58
+          },
+          {
+            "out": "L. Romo",
+            "in": "O. Vargas",
+            "minute": 73
+          },
+          {
+            "out": "R. Jimenez",
+            "in": "S. Gimenez",
+            "minute": 74
+          },
+          {
+            "out": "J. Quinones",
+            "in": "O. Pineda",
+            "minute": 80
+          },
+          {
+            "out": "R. Alvarado",
+            "in": "I. Reyes",
+            "minute": 80
+          }
+        ]
+      },
+      "lineups": {
+        "MEXICO": {
+          "formation": "4-3-3",
+          "coach": "Javier Aguirre",
+          "startXI": [
+            {
+              "name": "Ra\u00fal Rangel",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Jorge S\u00e1nchez",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "C\u00e9sar Montes",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Johan V\u00e1squez",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Jes\u00fas Gallardo",
+              "number": 23,
+              "pos": "D"
+            },
+            {
+              "name": "Gilberto Mora",
+              "number": 19,
+              "pos": "M"
+            },
+            {
+              "name": "Erik Lira",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Luis Romo",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "Roberto Alvarado",
+              "number": 25,
+              "pos": "F"
+            },
+            {
+              "name": "Ra\u00fal Jim\u00e9nez",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Juli\u00e1n Qui\u00f1ones",
+              "number": 16,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Carlos Acevedo",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Guillermo Ochoa",
+              "number": 13,
+              "pos": "G"
+            },
+            {
+              "name": "Israel Reyes",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Mateo Ch\u00e1vez",
+              "number": 20,
+              "pos": "D"
+            },
+            {
+              "name": "Edson \u00c1lvarez",
+              "number": 4,
+              "pos": "M"
+            },
+            {
+              "name": "Luis Ch\u00e1vez",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "\u00c1lvaro Fidalgo",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Orbel\u00edn Pineda",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Obed Vargas",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "Brian Guti\u00e9rrez",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "C\u00e9sar Huerta",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Alexis Vega",
+              "number": 10,
+              "pos": "F"
+            },
+            {
+              "name": "Armando Gonz\u00e1lez",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "Guillermo Mart\u00ednez",
+              "number": 22,
+              "pos": "F"
+            },
+            {
+              "name": "Santiago Gim\u00e9nez",
+              "number": 11,
+              "pos": "F"
+            }
+          ],
+          "colors": {
+            "player": {
+              "primary": "298b77",
+              "number": "ffffff",
+              "border": "298b77"
+            },
+            "goalkeeper": {
+              "primary": "d54882",
+              "number": "ebebeb",
+              "border": "d54882"
+            }
+          }
+        },
+        "ECUADOR": {
+          "formation": "4-4-2",
+          "coach": "Sebastian Beccacece",
+          "startXI": [
+            {
+              "name": "Hern\u00e1n Gal\u00edndez",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Alan Franco",
+              "number": 21,
+              "pos": "D"
+            },
+            {
+              "name": "Joel Ord\u00f3\u00f1ez",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Willian Pacho",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "Piero Hincapi\u00e9",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "John Yeboah",
+              "number": 9,
+              "pos": "M"
+            },
+            {
+              "name": "Mois\u00e9s Caicedo",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Pedro Vite",
+              "number": 15,
+              "pos": "M"
+            },
+            {
+              "name": "Nilson Angulo",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Gonzalo Plata",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Enner Valencia",
+              "number": 13,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Mois\u00e9s Ram\u00edrez",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Gonzalo Valle",
+              "number": 22,
+              "pos": "G"
+            },
+            {
+              "name": "Jackson Porozo",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "F\u00e9lix Torres",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Yaimar Medina",
+              "number": 26,
+              "pos": "D"
+            },
+            {
+              "name": "Jordy Alcivar",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "Kendry P\u00e1ez",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Denil Castillo",
+              "number": 18,
+              "pos": "M"
+            },
+            {
+              "name": "\u00c1ngelo Preciado",
+              "number": 17,
+              "pos": "D"
+            },
+            {
+              "name": "Pervis Estupi\u00f1\u00e1n",
+              "number": 7,
+              "pos": "D"
+            },
+            {
+              "name": "Anthony Valencia",
+              "number": 8,
+              "pos": "F"
+            },
+            {
+              "name": "Alan Minda",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "Jordy Caicedo",
+              "number": 16,
+              "pos": "F"
+            },
+            {
+              "name": "Kevin Rodriguez",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Jeremy Arevalo",
+              "number": 24,
+              "pos": "F"
+            }
+          ],
+          "colors": {
+            "player": {
+              "primary": "ebd31e",
+              "number": "0a2175",
+              "border": "ebd31e"
+            },
+            "goalkeeper": {
+              "primary": "5f9c6e",
+              "number": "ffffff",
+              "border": "5f9c6e"
             }
           }
         }
