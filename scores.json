@@ -1,11 +1,11 @@
 {
-  "updated": "2026-07-01T02:40:24.791012Z",
+  "updated": "2026-07-01T02:50:24.069265Z",
   "matches": {
     "MEXICO-ECUADOR": {
       "homeGoals": 2,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 40,
+      "elapsed": 45,
       "kickoffUTC": "2026-07-01T01:00:00+00:00",
       "referee": "Slavko Vin\u010di\u0107, Slovenia",
       "events": [
@@ -24,6 +24,14 @@
           "team": "MEXICO",
           "minute": 31,
           "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "A. Franco",
+          "team": "ECUADOR",
+          "minute": 45,
+          "extra": 1
         }
       ],
       "lineups": {
