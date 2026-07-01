@@ -906,7 +906,7 @@
     <img class="header-icon" src="icons/icon-192.png" alt="rolaGaard">
     <div class="header-text">
       <div class="header-title">Mundial 2026</div>
-      <div class="header-by">by rolaGaard &nbsp;<span class="app-version">v2.3</span></div>
+      <div class="header-by">by rolaGaard &nbsp;<span class="app-version">v2.4</span></div>
       <div class="header-sub" id="header-sub">USA · Canadá · México</div>
     </div>
   </div>
@@ -2273,7 +2273,15 @@ function render() {
       const toast = document.getElementById('rotate-toast');
       if (toast && !toast._shown) {
         toast._shown = true;
+        // Reiniciar la animación CSS forzando un reflow
         toast.style.display = 'flex';
+        const icon = toast.querySelector('.rotate-icon');
+        icon.style.animation = 'none';
+        icon.offsetHeight; // fuerza reflow
+        icon.style.animation = '';
+        toast.style.animation = 'none';
+        toast.offsetHeight;
+        toast.style.animation = '';
         setTimeout(() => { toast.style.display = 'none'; }, 1900);
       }
     }
