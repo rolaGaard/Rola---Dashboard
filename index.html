@@ -908,7 +908,7 @@
     <img class="header-icon" src="icons/icon-192.png" alt="rolaGaard">
     <div class="header-text">
       <div class="header-title">Mundial 2026</div>
-      <div class="header-by">by rolaGaard &nbsp;<span class="app-version">v2.5</span></div>
+      <div class="header-by">by rolaGaard &nbsp;<span class="app-version">v2.6</span></div>
       <div class="header-sub" id="header-sub">USA · Canadá · México</div>
     </div>
   </div>
@@ -968,8 +968,12 @@
 
 <div id="group-zoom-modal" class="shortcut-instructions" style="display:none;">
 
-<div id="rotate-toast" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;pointer-events:none;display:flex;align-items:center;justify-content:center;">
-  <span id="rotate-toast-icon" style="font-size:72px;opacity:0;display:block;">📱</span>
+<div id="rotate-toast" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;pointer-events:none;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.55);">
+  <svg id="rotate-toast-icon" width="80" height="80" viewBox="0 0 80 80" style="opacity:0;transform:rotate(0deg);">
+    <rect x="20" y="8" width="40" height="64" rx="6" fill="none" stroke="white" stroke-width="3"/>
+    <rect x="30" y="12" width="20" height="3" rx="1.5" fill="white"/>
+    <circle cx="40" cy="65" r="3" fill="white"/>
+  </svg>
 </div>
   <div class="shortcut-instructions-box group-zoom-box">
     <button id="group-zoom-close" class="cookie-banner-close" aria-label="Cerrar">✕</button>
