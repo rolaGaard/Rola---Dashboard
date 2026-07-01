@@ -3391,7 +3391,7 @@ function renderBracket() {
   bracketHtml += '<div class="vb-third-label">' + t('tercerPuesto') + '</div>';
   bracketHtml += buildVbCardFromMatch(resolveVbMatch(thirdCal));
   bracketHtml += '</div>';
-  bracketHtml += buildVbHalfFromSections([...right].reverse(), 'right', labels16, labels8, labels4, labelsSF);
+  bracketHtml += buildVbHalfFromSections(right, 'right', labels16, labels8, labels4, labelsSF);
   bracketHtml += '</div>';
   bracketHtml += buildVbMobileDynamic();
 
