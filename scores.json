@@ -1,11 +1,11 @@
 {
-  "updated": "2026-07-01T02:30:38.421406Z",
+  "updated": "2026-07-01T02:40:24.791012Z",
   "matches": {
     "MEXICO-ECUADOR": {
-      "homeGoals": 1,
+      "homeGoals": 2,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 30,
+      "elapsed": 40,
       "kickoffUTC": "2026-07-01T01:00:00+00:00",
       "referee": "Slavko Vin\u010di\u0107, Slovenia",
       "events": [
@@ -15,6 +15,14 @@
           "player": "J. Quinones",
           "team": "MEXICO",
           "minute": 22,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "R. Jimenez",
+          "team": "MEXICO",
+          "minute": 31,
           "extra": null
         }
       ],
