@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T03:57:09.541305Z",
+  "updated": "2026-07-01T03:58:12.572299Z",
   "matches": {
     "MEXICO-ECUADOR": {
       "fixtureId": 1567306,
@@ -42,6 +42,14 @@
           "team": "ECUADOR",
           "minute": 90,
           "extra": 3
+        },
+        {
+          "type": "Card",
+          "detail": "Red Card",
+          "player": "P. Hincapie",
+          "team": "ECUADOR",
+          "minute": 90,
+          "extra": 5
         }
       ],
       "substitutions": {
