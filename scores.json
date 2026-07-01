@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T21:34:12.482412Z",
+  "updated": "2026-07-01T21:35:16.568282Z",
   "matches": {
     "BELGIUM-SENEGAL": {
       "fixtureId": 1567308,
@@ -7,7 +7,7 @@
       "homeGoals": 0,
       "awayGoals": 2,
       "status": "2H",
-      "elapsed": 72,
+      "elapsed": 73,
       "kickoffUTC": "2026-07-01T20:00:00+00:00",
       "referee": "Said Martinez, Honduras",
       "events": [
@@ -72,6 +72,11 @@
             "out": "P. Gueye",
             "in": "L. Camara",
             "minute": 66
+          },
+          {
+            "out": "I. Ndiaye",
+            "in": "I. Mbaye",
+            "minute": 73
           }
         ]
       },
