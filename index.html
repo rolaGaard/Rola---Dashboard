@@ -337,57 +337,47 @@
   .vb-wrap {
     display:flex; align-items:stretch; width:100%; overflow-x:hidden; gap:0;
   }
-  .vb-half {
-    display:flex; flex:1; min-width:0;
-  }
-  /* Izquierda: columnas de izquierda a derecha (R32→R16→QF→SF→centro) */
+  .vb-half { display:flex; flex:1; min-width:0; }
+  /* Ambos lados en row normal — el JS ya pasa las rondas en el orden
+     visual correcto para cada lado (izq: R32→SF, der: SF→R32) */
   .vb-left { flex-direction:row; }
-  /* Derecha: columnas de derecha a izquierda (R32→R16→QF→SF→centro).
-     row-reverse invierte el orden visual pero el JS ya pasa los rounds
-     en el orden correcto (SF primero, R32 último) */
-  .vb-right { flex-direction:row-reverse; }
-  .vb-round {
-    display:flex; flex-direction:column; flex:1; min-width:0;
-  }
+  .vb-right { flex-direction:row; }
+
+  .vb-round { display:flex; flex-direction:column; flex:1; min-width:0; }
   .vb-round-label {
     color:#94a3b8; font-size:clamp(6px,0.7vw,8px); font-weight:700; letter-spacing:0.04em;
     text-align:center; padding:0 2px 4px; text-transform:uppercase; line-height:1.2;
   }
   .vb-slots { display:flex; flex-direction:column; flex:1; }
-  .vb-group {
-    display:flex; flex-direction:column; flex:1; position:relative;
-  }
-  /* La línea vertical conectora va del lado que mira hacia la siguiente ronda */
+  .vb-group { display:flex; flex-direction:column; flex:1; position:relative; }
+
+  /* Línea vertical que conecta el par de slots — siempre en el borde
+     que mira hacia el centro (derecha para izq, izquierda para der) */
   .vb-left .vb-group::after {
     content:''; position:absolute; top:25%; bottom:25%;
-    right:0; border-right:2px solid #2a2a3a;
+    right:0; border-right:2px solid #3a3a4a;
   }
-  /* En el lado derecho, con row-reverse, "la siguiente ronda" está visualmente
-     a la izquierda de la columna actual — pero el ::after se posiciona en
-     el DOM original, que es al revés. Usamos left:0 para que la línea
-     aparezca en el borde que converge al centro. */
   .vb-right .vb-group::after {
     content:''; position:absolute; top:25%; bottom:25%;
-    left:0; border-left:2px solid #2a2a3a;
+    left:0; border-left:2px solid #3a3a4a;
   }
+
   .vb-slot {
     flex:1; display:flex; align-items:center; padding:2px 4px; position:relative;
     min-height:clamp(40px, 6vh, 60px);
   }
-  /* Línea horizontal desde la tarjeta hasta la línea vertical del grupo */
+  /* Línea horizontal desde la tarjeta hasta la línea vertical */
   .vb-left .vb-slot::after {
     content:''; position:absolute; right:0; top:50%;
-    width:4px; border-top:2px solid #2a2a3a;
+    width:4px; border-top:2px solid #3a3a4a;
   }
   .vb-right .vb-slot::after {
     content:''; position:absolute; left:0; top:50%;
-    width:4px; border-top:2px solid #2a2a3a;
+    width:4px; border-top:2px solid #3a3a4a;
   }
-  /* Conector horizontal entre columnas de rondas */
-  .vb-left .vb-connector { width:8px; display:flex; align-items:center; flex-shrink:0; }
-  .vb-left .vb-connector::before { content:''; display:block; height:2px; width:8px; background:#2a2a3a; }
-  .vb-right .vb-connector { width:8px; display:flex; align-items:center; flex-shrink:0; }
-  .vb-right .vb-connector::before { content:''; display:block; height:2px; width:8px; background:#2a2a3a; }
+  /* Conector entre columnas de rondas */
+  .vb-connector { width:8px; flex-shrink:0; display:flex; align-items:center; }
+  .vb-connector::before { content:''; display:block; height:2px; width:8px; background:#3a3a4a; }
   .vb-slot.vb-no-line::after { display:none; }
 
   /* Tarjeta del bracket — escala con el ancho disponible */
@@ -3303,9 +3293,18 @@ function buildBracketSections() {
 }
 
 function buildVbHalfFromSections(sections, side, label16, label8, label4, labelSF) {
-  const rounds = side === 'left'
-    ? [{ label: label16, key: 'r32' }, { label: label8, key: 'r16' }, { label: label4, key: 'qf' }, { label: labelSF, key: 'sf' }]
-    : [{ label: labelSF, key: 'sf' }, { label: label4, key: 'qf' }, { label: label8, key: 'r16' }, { label: label16, key: 'r32' }];
+  // Izquierda: R32 → R16 → QF → SF (de afuera hacia el centro)
+  // Derecha:   SF → QF → R16 → R32 (también de afuera hacia el centro,
+  //            visualmente a la derecha del centro, leyéndose de izq a der)
+  // Con ambos en flex-direction:row (sin row-reverse), el lado derecho
+  // pasa las rondas en orden inverso para que quede SF más cerca del centro.
+  const roundsBase = [
+    { label: label16, key: 'r32' },
+    { label: label8,  key: 'r16' },
+    { label: label4,  key: 'qf'  },
+    { label: labelSF, key: 'sf'  },
+  ];
+  const rounds = side === 'left' ? roundsBase : [...roundsBase].reverse();
 
   let html = '<div class="vb-half vb-' + side + '">';
   rounds.forEach((round, ri) => {
@@ -3322,8 +3321,7 @@ function buildVbHalfFromSections(sections, side, label16, label8, label4, labelS
         html += '</div>';
       });
     } else if (round.key === 'r16') {
-      const r16Pairs = [[0,1],[2,3]];
-      r16Pairs.forEach(pair => {
+      [[0,1],[2,3]].forEach(pair => {
         html += '<div class="vb-group">';
         pair.forEach(i => {
           const cal = R16_CALENDAR.find(m => m.match === sections[i].r16);
