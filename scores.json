@@ -1,13 +1,13 @@
 {
-  "updated": "2026-07-01T21:48:11.844779Z",
+  "updated": "2026-07-01T21:49:12.020550Z",
   "matches": {
     "BELGIUM-SENEGAL": {
       "fixtureId": 1567308,
       "round": "Round of 32",
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 2,
       "status": "2H",
-      "elapsed": 86,
+      "elapsed": 87,
       "kickoffUTC": "2026-07-01T20:00:00+00:00",
       "referee": "Said Martinez, Honduras",
       "events": [
@@ -41,6 +41,14 @@
           "player": "L. Camara",
           "team": "SENEGAL",
           "minute": 67,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "R. Lukaku",
+          "team": "BELGIUM",
+          "minute": 86,
           "extra": null
         }
       ],
