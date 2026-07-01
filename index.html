@@ -3191,153 +3191,122 @@ function renderCountriesList() {
 // Estructura fija del bracket de 32 (de acuerdo al calendario oficial de
 // la FIFA). Cada entrada define qué par de partidos de una ronda alimenta
 // al siguiente. Las claves son los números de partido del R32_CALENDAR.
-const BRACKET_LEFT = [
-  // Cuadrante 1: P73+P75 → P90 → P97 → P101 → Final
-  { r32: [73, 75], r16: 90, qf: 97, sf: 101 },
-  { r32: [74, 77], r16: 89, qf: 97, sf: 101 },
-  // Cuadrante 2: P76+P78 → P91 → P99 → P101 → Final
-  { r32: [76, 78], r16: 91, qf: 99, sf: 101 },
-  { r32: [79, 80], r16: 92, qf: 99, sf: 101 },
-];
-const BRACKET_RIGHT = [
-  { r32: [83, 84], r16: 93, qf: 98, sf: 102 },
-  { r32: [81, 82], r16: 94, qf: 98, sf: 102 },
-  { r32: [86, 88], r16: 95, qf: 100, sf: 102 },
-  { r32: [85, 87], r16: 96, qf: 100, sf: 102 },
-];
+// ── Bracket 100% dinámico desde liveData ────────────────────────────────
+// Lee el campo `round` que la API devuelve para cada partido y construye
+// el árbol automáticamente — sin tablas hardcodeadas. Si un partido todavía
+// no está en scores.json, muestra "NO DATA".
+//
+// El orden dentro de cada ronda se determina por kickoffUTC — la API
+// devuelve los partidos en el orden del bracket de la FIFA.
 
-// Construye la tarjeta compacta para el bracket, usando resolveKnockoutSides
-// para obtener los equipos (igual que el resto de la app — sin adivinanzas).
-function buildVbCard(matchNum, isFinal) {
-  const allCals = [...R32_CALENDAR,...R16_CALENDAR,...QF_CALENDAR,...SF_CALENDAR,...THIRD_PLACE_CALENDAR,...FINAL_CALENDAR];
-  const m = allCals.find(x => x.match === matchNum);
-  if (!m) return '<div class="vb-card"><div class="vb-card-tbd">P' + matchNum + '</div></div>';
-  const { teamA, teamB } = resolveKnockoutSides(m);
-  const live = teamA && teamB ? getLiveData({ home:teamA, away:teamB, kickoffUTC:m.kickoffUTC }) : null;
-  const apiStatus = live ? live.status : null;
-  const now = new Date();
-  const kickoff = new Date(m.kickoffUTC);
-  const end = new Date(kickoff.getTime() + 115*60000);
-  const isLive = isLiveStatus(apiStatus) || (!isFinishedStatus(apiStatus) && now>=kickoff && now<end);
-  const isFinished = isFinishedStatus(apiStatus) || (!isLiveStatus(apiStatus) && now>=end);
-  const homeGoals = live ? live.homeGoals : null;
-  const awayGoals = live ? live.awayGoals : null;
-  const hasScore = homeGoals !== null && homeGoals !== undefined;
-  const cardClass = 'vb-card' + (isFinal?' vb-final-card':'') + (isLive?' live':isFinished?' finished':'');
+const ROUND_ORDER = ['Round of 32','Round of 16','Quarter-finals','Semi-finals'];
+const ROUND_COUNT = {
+  'Round of 32':16,'Round of 16':8,'Quarter-finals':4,'Semi-finals':2,
+  'Final':1,'3rd Place Final':1,
+};
+const ROUND_LABELS_MAP = () => ({
+  'Round of 32':    t('dieciseisavosTitle').split('(')[0].trim(),
+  'Round of 16':    t('octavosDeFinal'),
+  'Quarter-finals': t('cuartosDeFinal'),
+  'Semi-finals':    t('semifinales'),
+  'Final':          t('finalTitle'),
+  '3rd Place Final':t('tercerPuesto'),
+});
 
-  function teamRow(team, goals, isWinner) {
-    if (!team) return '<div class="vb-team"><span style="color:#64748b;font-size:9px">TBD</span></div>';
-    const scoreHtml = hasScore
-      ? '<span class="vb-score' + (isLive?' live-score':'') + '">' + goals + '</span>'
-      : '';
-    return '<div class="vb-team">' +
-      flag(team) +
-      '<span class="vb-team-name' + (isWinner?' winner':'') + '">' + countryCode(team) + '</span>' +
-      scoreHtml +
-    '</div>';
-  }
-
-  const homeWin = hasScore && isFinished && homeGoals > awayGoals;
-  const awayWin = hasScore && isFinished && awayGoals > homeGoals;
-  let penHtml = '';
-  if (live && live.penaltyHome !== null && live.penaltyHome !== undefined) {
-    penHtml = '<div class="vb-time">(' + live.penaltyHome + '-' + live.penaltyAway + ') pen</div>';
-  }
-  if (!teamA && !teamB) {
-    const dateStr = new Date(m.kickoffUTC).toLocaleString(dateLocale(),{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false});
-    return '<div class="' + cardClass + '"><div class="vb-card-tbd">' + dateStr + '</div></div>';
-  }
-  const arFull = utcToAR(m.kickoffUTC); // ej: "lun 28 jun, 16:00"
-  const arDate = new Date(m.kickoffUTC).toLocaleString(dateLocale(), { timeZone:'America/Argentina/Buenos_Aires', day:'2-digit', month:'short' });
-  const arHour = arFull.split(' ').slice(-1)[0].split(':')[0]; // solo HH
-  const timeStr = !hasScore && !isLive ? (arDate + ' / ' + arHour + ' hs') : '';
-  return '<div class="' + cardClass + '">' +
-    teamRow(teamA, homeGoals, homeWin) +
-    teamRow(teamB, awayGoals, awayWin) +
-    (timeStr ? '<div class="vb-time">' + timeStr + '</div>' : '') +
-    penHtml +
-  '</div>';
+function getKnockoutByRound() {
+  const byRound = {};
+  if (!liveData) return byRound;
+  Object.entries(liveData).forEach(([key, m]) => {
+    if (!m.round) return;
+    const r = m.round;
+    if (!byRound[r]) byRound[r] = [];
+    const dash = key.indexOf('-');
+    byRound[r].push({
+      key, kickoffUTC: m.kickoffUTC,
+      home: key.slice(0, dash), away: key.slice(dash + 1),
+      homeGoals: m.homeGoals, awayGoals: m.awayGoals,
+      status: m.status, elapsed: m.elapsed,
+      penaltyHome: m.penaltyHome, penaltyAway: m.penaltyAway,
+    });
+  });
+  Object.keys(byRound).forEach(r =>
+    byRound[r].sort((a, b) => new Date(a.kickoffUTC) - new Date(b.kickoffUTC))
+  );
+  return byRound;
 }
 
-// Construye una mitad del bracket (izquierda o derecha).
-// El parámetro side determina hacia qué lado apuntan los conectores.
-function buildVbHalf(sections, side) {
-  const rounds = [
-    { key:'r32', label:t('dieciseisavosTitle').split('(')[0].trim() },
-    { key:'r16', label:t('octavosDeFinal') },
-    { key:'qf', label:t('cuartosDeFinal') },
-    { key:'sf', label:t('semifinales') },
-  ];
+function buildVbCardFromMatch(match) {
+  if (!match) return '<div class="vb-card"><div class="vb-card-tbd">NO DATA</div></div>';
+  const { home, away, homeGoals, awayGoals, status, penaltyHome, penaltyAway, kickoffUTC } = match;
+  const now = new Date();
+  const kickoff = new Date(kickoffUTC);
+  const end = new Date(kickoff.getTime() + 115 * 60000);
+  const isLive = isLiveStatus(status) || (!isFinishedStatus(status) && now >= kickoff && now < end);
+  const isFinished = isFinishedStatus(status) || (!isLiveStatus(status) && now >= end);
+  const hasScore = homeGoals !== null && homeGoals !== undefined;
+  const cardClass = 'vb-card' + (isLive ? ' live' : isFinished ? ' finished' : '');
+  const homeWin = hasScore && isFinished && homeGoals > awayGoals;
+  const awayWin = hasScore && isFinished && awayGoals > homeGoals;
 
+  function teamRow(team, goals, isWinner) {
+    if (!team) return '<div class="vb-team"><span style="color:#64748b;font-size:9px">?</span></div>';
+    const scoreHtml = hasScore
+      ? '<span class="vb-score' + (isLive ? ' live-score' : '') + '">' + goals + '</span>' : '';
+    return '<div class="vb-team">' + flag(team) +
+      '<span class="vb-team-name' + (isWinner ? ' winner' : '') + '">' + countryCode(team) + '</span>' +
+      scoreHtml + '</div>';
+  }
+
+  let penHtml = '';
+  if (penaltyHome !== null && penaltyHome !== undefined) {
+    penHtml = '<div class="vb-time">(' + penaltyHome + '-' + penaltyAway + ') pen</div>';
+  }
+  const timeStr = !hasScore && !isLive
+    ? new Date(kickoffUTC).toLocaleTimeString(dateLocale(), { hour: '2-digit', minute: '2-digit', hour12: false })
+    : '';
+  return '<div class="' + cardClass + '">' +
+    teamRow(home, homeGoals, homeWin) +
+    teamRow(away, awayGoals, awayWin) +
+    (timeStr ? '<div class="vb-time">' + timeStr + '</div>' : '') +
+    penHtml + '</div>';
+}
+
+function buildVbHalfDynamic(byRound, side) {
+  const rounds = side === 'left' ? ROUND_ORDER : [...ROUND_ORDER].reverse();
+  const labels = ROUND_LABELS_MAP();
   let html = '<div class="vb-half vb-' + side + '">';
-
-  // Para el lado derecho NO invertimos el array — el CSS row-reverse ya lo
-  // muestra de afuera (R32) hacia adentro (SF), que es lo correcto.
-  const roundOrder = rounds;
-
-  roundOrder.forEach((round, ri) => {
-    // Entre columnas de rondas, ponemos un mini-conector horizontal
-    if (ri > 0) {
-      html += '<div class="vb-connector"></div>';
-    }
-    html += '<div class="vb-round"><div class="vb-round-label">' + round.label + '</div><div class="vb-slots">';
-
-    if (round.key === 'r32') {
-      // 8 slots en 4 grupos de 2
-      sections.forEach(sec => {
-        html += '<div class="vb-group">';
-        sec.r32.forEach(mNum => {
-          html += '<div class="vb-slot">' + buildVbCard(mNum, false) + '</div>';
-        });
-        html += '</div>';
-      });
-    } else if (round.key === 'r16') {
-      // 4 slots en 2 grupos de 2 (los r16 de sec[0]+sec[1] y sec[2]+sec[3])
-      [[0,1],[2,3]].forEach(idxPair => {
-        html += '<div class="vb-group">';
-        idxPair.forEach(i => {
-          html += '<div class="vb-slot">' + buildVbCard(sections[i].r16, false) + '</div>';
-        });
-        html += '</div>';
-      });
-    } else if (round.key === 'qf') {
-      // 2 slots en 1 grupo
+  rounds.forEach((roundName, ri) => {
+    if (ri > 0) html += '<div class="vb-connector"></div>';
+    html += '<div class="vb-round"><div class="vb-round-label">' + (labels[roundName] || roundName) + '</div><div class="vb-slots">';
+    const half = (ROUND_COUNT[roundName] || 0) / 2;
+    const all = byRound[roundName] || [];
+    const matches = side === 'left' ? all.slice(0, half) : all.slice(half);
+    for (let i = 0; i < half; i += 2) {
+      const noLine = (i + 2 >= half);
       html += '<div class="vb-group">';
-      const qfNums = [...new Set(sections.map(s => s.qf))];
-      qfNums.forEach(qf => {
-        html += '<div class="vb-slot">' + buildVbCard(qf, false) + '</div>';
-      });
+      html += '<div class="vb-slot">' + buildVbCardFromMatch(matches[i] || null) + '</div>';
+      html += '<div class="vb-slot' + (noLine ? ' vb-no-line' : '') + '">' + buildVbCardFromMatch(matches[i + 1] || null) + '</div>';
       html += '</div>';
-    } else if (round.key === 'sf') {
-      // 1 slot solo (va al centro directamente)
-      const sfNum = sections[0].sf;
-      html += '<div class="vb-group"><div class="vb-slot vb-no-line">' + buildVbCard(sfNum, false) + '</div></div>';
     }
-
     html += '</div></div>';
   });
-
   html += '</div>';
   return html;
 }
 
-// Bracket compacto para mobile (rondas apiladas verticalmente)
-function buildVbMobile() {
-  const allCals = [...R32_CALENDAR,...R16_CALENDAR,...QF_CALENDAR,...SF_CALENDAR,...THIRD_PLACE_CALENDAR,...FINAL_CALENDAR];
-  const rounds = [
-    { label: t('dieciseisavosTitle').split('(')[0].trim(), matches: R32_CALENDAR.map(m=>m.match) },
-    { label: t('octavosDeFinal'), matches: R16_CALENDAR.map(m=>m.match) },
-    { label: t('cuartosDeFinal'), matches: QF_CALENDAR.map(m=>m.match) },
-    { label: t('semifinales'), matches: SF_CALENDAR.map(m=>m.match) },
-    { label: t('finalTitle'), matches: FINAL_CALENDAR.map(m=>m.match) },
-    { label: t('tercerPuesto'), matches: THIRD_PLACE_CALENDAR.map(m=>m.match) },
-  ];
+function buildVbMobileDynamic(byRound) {
+  const labels = ROUND_LABELS_MAP();
+  const allRounds = [...ROUND_ORDER, 'Final', '3rd Place Final'];
   let html = '<div class="vb-mobile">';
-  rounds.forEach(round => {
-    const cols = round.matches.length === 1 ? ' one-col' : '';
-    html += '<div class="vb-mobile-round"><div class="vb-mobile-label">' + round.label + '</div>';
+  allRounds.forEach(roundName => {
+    const matches = byRound[roundName] || [];
+    const expected = ROUND_COUNT[roundName] || 0;
+    const cols = expected === 1 ? ' one-col' : '';
+    html += '<div class="vb-mobile-round"><div class="vb-mobile-label">' + (labels[roundName] || roundName) + '</div>';
     html += '<div class="vb-mobile-grid' + cols + '">';
-    round.matches.forEach(mNum => { html += buildVbCard(mNum, false); });
+    for (let i = 0; i < Math.max(expected, matches.length); i++) {
+      html += buildVbCardFromMatch(matches[i] || null);
+    }
     html += '</div></div>';
   });
   html += '</div>';
@@ -3347,30 +3316,26 @@ function buildVbMobile() {
 function renderBracket() {
   const leftGroups = ['A','B','C','D','E','F'];
   const rightGroups = ['G','H','I','J','K','L'];
+  const byRound = getKnockoutByRound();
+  const finalMatches = byRound['Final'] || [];
+  const thirdMatches = byRound['3rd Place Final'] || [];
 
-  // 1. Tablas de grupos (costados, igual que siempre)
   let groupsHtml = '<div class="bracket-layout">';
   groupsHtml += '<div class="groups-col">' + buildGroupsColumn(leftGroups) + '</div>';
 
-  // 2. Bracket visual en el centro
-  let bracketHtml = '<div class="vb-section-title">🏆 ' + t('cuadroEliminatorio') + '</div>';
-
-  // Horizontal bracket (desktop)
+  let bracketHtml = '<div class="vb-section-title">\u{1F3C6} ' + t('cuadroEliminatorio') + '</div>';
   bracketHtml += '<div class="vb-wrap">';
-  bracketHtml += buildVbHalf(BRACKET_LEFT, 'left');
-  // Centro: Final + 3er puesto
+  bracketHtml += buildVbHalfDynamic(byRound, 'left');
   bracketHtml += '<div class="vb-center">';
-  bracketHtml += '<div class="vb-trophy">🏆</div>';
+  bracketHtml += '<div class="vb-trophy">\u{1F3C6}</div>';
   bracketHtml += '<div class="vb-final-label">' + t('campeon') + '</div>';
-  bracketHtml += buildVbCard(104, true);
+  bracketHtml += buildVbCardFromMatch(finalMatches[0] || null);
   bracketHtml += '<div class="vb-third-label">' + t('tercerPuesto') + '</div>';
-  bracketHtml += buildVbCard(103, false);
+  bracketHtml += buildVbCardFromMatch(thirdMatches[0] || null);
   bracketHtml += '</div>';
-  bracketHtml += buildVbHalf(BRACKET_RIGHT, 'right');
+  bracketHtml += buildVbHalfDynamic(byRound, 'right');
   bracketHtml += '</div>';
-
-  // Mobile bracket (apilado vertical)
-  bracketHtml += buildVbMobile();
+  bracketHtml += buildVbMobileDynamic(byRound);
 
   groupsHtml += '<div>' + bracketHtml + '</div>';
   groupsHtml += '<div class="groups-col">' + buildGroupsColumn(rightGroups) + '</div>';
