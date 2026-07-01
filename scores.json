@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T22:08:13.859263Z",
+  "updated": "2026-07-01T22:09:10.725397Z",
   "matches": {
     "BELGIUM-SENEGAL": {
       "fixtureId": 1567308,
@@ -7,7 +7,7 @@
       "homeGoals": 2,
       "awayGoals": 2,
       "status": "ET",
-      "elapsed": 93,
+      "elapsed": 100,
       "kickoffUTC": "2026-07-01T20:00:00+00:00",
       "referee": "Said Martinez, Honduras",
       "events": [
@@ -111,6 +111,16 @@
             "out": "H. Diarra",
             "in": "P. M. Sarr",
             "minute": 73
+          },
+          {
+            "out": "S. Mane",
+            "in": "N. Jackson",
+            "minute": 94
+          },
+          {
+            "out": "I. Jakobs",
+            "in": "M. Diouf",
+            "minute": 94
           }
         ]
       },
