@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T22:24:11.622696Z",
+  "updated": "2026-07-01T22:25:15.810903Z",
   "matches": {
     "BELGIUM-SENEGAL": {
       "fixtureId": 1567308,
@@ -7,7 +7,7 @@
       "homeGoals": 2,
       "awayGoals": 2,
       "status": "ET",
-      "elapsed": 94,
+      "elapsed": 108,
       "kickoffUTC": "2026-07-01T20:00:00+00:00",
       "referee": "Said Martinez, Honduras",
       "events": [
