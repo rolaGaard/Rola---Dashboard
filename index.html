@@ -338,10 +338,8 @@
     display:flex; align-items:stretch; width:100%; overflow-x:hidden; gap:0;
   }
   .vb-half { display:flex; flex:1; min-width:0; }
-  /* Ambos lados en row normal — el JS ya pasa las rondas en el orden
-     visual correcto para cada lado (izq: R32→SF, der: SF→R32) */
   .vb-left { flex-direction:row; }
-  .vb-right { flex-direction:row; }
+  .vb-right { flex-direction:row-reverse; }
 
   .vb-round { display:flex; flex-direction:column; flex:1; min-width:0; }
   .vb-round-label {
@@ -357,22 +355,23 @@
     content:''; position:absolute; top:25%; bottom:25%;
     right:0; border-right:2px solid #3a3a4a;
   }
+  /* Con row-reverse, right:0 en el DOM aparece visualmente a la IZQUIERDA
+     de cada columna — que es el lado que mira hacia el centro */
   .vb-right .vb-group::after {
     content:''; position:absolute; top:25%; bottom:25%;
-    left:0; border-left:2px solid #3a3a4a;
+    right:0; border-right:2px solid #3a3a4a;
   }
-
   .vb-slot {
     flex:1; display:flex; align-items:center; padding:2px 4px; position:relative;
     min-height:clamp(40px, 6vh, 60px);
   }
-  /* Línea horizontal desde la tarjeta hasta la línea vertical */
   .vb-left .vb-slot::after {
     content:''; position:absolute; right:0; top:50%;
     width:4px; border-top:2px solid #3a3a4a;
   }
+  /* Mismo: right:0 en DOM = visualmente izquierda con row-reverse */
   .vb-right .vb-slot::after {
-    content:''; position:absolute; left:0; top:50%;
+    content:''; position:absolute; right:0; top:50%;
     width:4px; border-top:2px solid #3a3a4a;
   }
   /* Conector entre columnas de rondas */
@@ -3293,18 +3292,10 @@ function buildBracketSections() {
 }
 
 function buildVbHalfFromSections(sections, side, label16, label8, label4, labelSF) {
-  // Izquierda: R32 → R16 → QF → SF (de afuera hacia el centro)
-  // Derecha:   SF → QF → R16 → R32 (también de afuera hacia el centro,
-  //            visualmente a la derecha del centro, leyéndose de izq a der)
-  // Con ambos en flex-direction:row (sin row-reverse), el lado derecho
-  // pasa las rondas en orden inverso para que quede SF más cerca del centro.
-  const roundsBase = [
-    { label: label16, key: 'r32' },
-    { label: label8,  key: 'r16' },
-    { label: label4,  key: 'qf'  },
-    { label: labelSF, key: 'sf'  },
-  ];
-  const rounds = side === 'left' ? roundsBase : [...roundsBase].reverse();
+  // Izquierda: R32→R16→QF→SF en el DOM = visual izquierda a derecha
+  // Derecha: R32→R16→QF→SF en el DOM, pero row-reverse los muestra
+  //          de derecha a izquierda (R32 en extremo derecho, SF cerca del centro)
+  const rounds = roundsBase;
 
   let html = '<div class="vb-half vb-' + side + '">';
   rounds.forEach((round, ri) => {
