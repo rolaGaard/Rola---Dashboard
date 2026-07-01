@@ -1,416 +1,6 @@
 {
-  "updated": "2026-07-01T22:49:11.587534Z",
+  "updated": "2026-07-01T22:50:25.158918Z",
   "matches": {
-    "BELGIUM-SENEGAL": {
-      "fixtureId": 1567308,
-      "round": "Round of 32",
-      "homeGoals": 3,
-      "awayGoals": 2,
-      "status": "ET",
-      "elapsed": 131,
-      "kickoffUTC": "2026-07-01T20:00:00+00:00",
-      "referee": "Said Martinez, Honduras",
-      "events": [
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "H. Diarra",
-          "team": "SENEGAL",
-          "minute": 25,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "I. Sarr",
-          "team": "SENEGAL",
-          "minute": 51,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "B. Mechele",
-          "team": "BELGIUM",
-          "minute": 64,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "L. Camara",
-          "team": "SENEGAL",
-          "minute": 67,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "R. Lukaku",
-          "team": "BELGIUM",
-          "minute": 86,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Normal Goal",
-          "player": "Y. Tielemans",
-          "team": "BELGIUM",
-          "minute": 89,
-          "extra": null
-        },
-        {
-          "type": "Card",
-          "detail": "Yellow Card",
-          "player": "R. Garcia",
-          "team": "BELGIUM",
-          "minute": 90,
-          "extra": null
-        },
-        {
-          "type": "Goal",
-          "detail": "Penalty",
-          "player": "Y. Tielemans",
-          "team": "BELGIUM",
-          "minute": 120,
-          "extra": 5
-        }
-      ],
-      "substitutions": {
-        "BELGIUM": [
-          {
-            "out": "C. De Ketelaere",
-            "in": "R. Lukaku",
-            "minute": 46
-          },
-          {
-            "out": "K. De Bruyne",
-            "in": "N. Raskin",
-            "minute": 56
-          },
-          {
-            "out": "J. Doku",
-            "in": "D. Lukebakio",
-            "minute": 56
-          },
-          {
-            "out": "H. Vanaken",
-            "in": "D. Moreira",
-            "minute": 63
-          },
-          {
-            "out": "M. De Cuyper",
-            "in": "T. Meunier",
-            "minute": 78
-          },
-          {
-            "out": "L. Trossard",
-            "in": "A. Onana",
-            "minute": 109
-          }
-        ],
-        "SENEGAL": [
-          {
-            "out": "P. Gueye",
-            "in": "L. Camara",
-            "minute": 66
-          },
-          {
-            "out": "I. Ndiaye",
-            "in": "I. Mbaye",
-            "minute": 73
-          },
-          {
-            "out": "H. Diarra",
-            "in": "P. M. Sarr",
-            "minute": 73
-          },
-          {
-            "out": "S. Mane",
-            "in": "N. Jackson",
-            "minute": 93
-          },
-          {
-            "out": "I. Jakobs",
-            "in": "M. Diouf",
-            "minute": 93
-          },
-          {
-            "out": "I. Gueye",
-            "in": "B. Sapoko Ndiaye",
-            "minute": 96
-          }
-        ]
-      },
-      "lineups": {
-        "BELGIUM": {
-          "formation": "4-2-3-1",
-          "coach": "Rudi Garcia",
-          "startXI": [
-            {
-              "name": "Thibaut Courtois",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Timothy Castagne",
-              "number": 21,
-              "pos": "D"
-            },
-            {
-              "name": "Brandon Mechele",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Arthur Theate",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Maxim De Cuyper",
-              "number": 5,
-              "pos": "D"
-            },
-            {
-              "name": "Youri Tielemans",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Hans Vanaken",
-              "number": 20,
-              "pos": "M"
-            },
-            {
-              "name": "Leandro Trossard",
-              "number": 10,
-              "pos": "M"
-            },
-            {
-              "name": "Kevin De Bruyne",
-              "number": 7,
-              "pos": "M"
-            },
-            {
-              "name": "J\u00e9r\u00e9my Doku",
-              "number": 11,
-              "pos": "M"
-            },
-            {
-              "name": "Charles De Ketelaere",
-              "number": 17,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Mike Penders",
-              "number": 13,
-              "pos": "G"
-            },
-            {
-              "name": "Senne Lammens",
-              "number": 12,
-              "pos": "G"
-            },
-            {
-              "name": "Thomas Meunier",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Koni De Winter",
-              "number": 16,
-              "pos": "D"
-            },
-            {
-              "name": "Joaquin Seys",
-              "number": 18,
-              "pos": "D"
-            },
-            {
-              "name": "Nathan Ngoy",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "Axel Witsel",
-              "number": 6,
-              "pos": "M"
-            },
-            {
-              "name": "Diego Moreira",
-              "number": 19,
-              "pos": "F"
-            },
-            {
-              "name": "Alexis Saelemaekers",
-              "number": 22,
-              "pos": "F"
-            },
-            {
-              "name": "Nicolas Raskin",
-              "number": 23,
-              "pos": "M"
-            },
-            {
-              "name": "Amadou Onana",
-              "number": 24,
-              "pos": "M"
-            },
-            {
-              "name": "Dodi Lukebakio",
-              "number": 14,
-              "pos": "F"
-            },
-            {
-              "name": "Romelu Lukaku",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Mat\u00edas Fern\u00e1ndez-Pardo",
-              "number": 26,
-              "pos": "F"
-            }
-          ]
-        },
-        "SENEGAL": {
-          "formation": "4-3-3",
-          "coach": "Bouna Thiaw Pape",
-          "startXI": [
-            {
-              "name": "Mory Diaw",
-              "number": 23,
-              "pos": "G"
-            },
-            {
-              "name": "Kr\u00e9pin Diatta",
-              "number": 15,
-              "pos": "D"
-            },
-            {
-              "name": "Path\u00e9 Isma\u00ebl Ciss",
-              "number": 6,
-              "pos": "D"
-            },
-            {
-              "name": "Moussa Niakhat\u00e9",
-              "number": 19,
-              "pos": "D"
-            },
-            {
-              "name": "Ismail Jakobs",
-              "number": 14,
-              "pos": "D"
-            },
-            {
-              "name": "Habib Diarra",
-              "number": 21,
-              "pos": "M"
-            },
-            {
-              "name": "Idrissa Gana Gueye",
-              "number": 5,
-              "pos": "M"
-            },
-            {
-              "name": "Pape Gueye",
-              "number": 26,
-              "pos": "M"
-            },
-            {
-              "name": "Iliman Ndiaye",
-              "number": 13,
-              "pos": "F"
-            },
-            {
-              "name": "Isma\u00efla Sarr",
-              "number": 18,
-              "pos": "F"
-            },
-            {
-              "name": "Sadio Man\u00e9",
-              "number": 10,
-              "pos": "F"
-            }
-          ],
-          "substitutes": [
-            {
-              "name": "Yehvann Diouf",
-              "number": 1,
-              "pos": "G"
-            },
-            {
-              "name": "Kalidou Koulibaly",
-              "number": 3,
-              "pos": "D"
-            },
-            {
-              "name": "Abdoulaye Seck",
-              "number": 4,
-              "pos": "D"
-            },
-            {
-              "name": "Antoine Mendy",
-              "number": 24,
-              "pos": "D"
-            },
-            {
-              "name": "El Hadji Malick Diouf",
-              "number": 25,
-              "pos": "D"
-            },
-            {
-              "name": "Mamadou Sarr",
-              "number": 2,
-              "pos": "D"
-            },
-            {
-              "name": "Pape Matar Sarr",
-              "number": 17,
-              "pos": "M"
-            },
-            {
-              "name": "Lamine Camara",
-              "number": 8,
-              "pos": "M"
-            },
-            {
-              "name": "Bara Sapoko Ndiaye",
-              "number": 22,
-              "pos": "M"
-            },
-            {
-              "name": "Assane Diao",
-              "number": 7,
-              "pos": "F"
-            },
-            {
-              "name": "Ahmadou Bamba Dieng",
-              "number": 9,
-              "pos": "F"
-            },
-            {
-              "name": "Nicolas Jackson",
-              "number": 11,
-              "pos": "F"
-            },
-            {
-              "name": "Cherif Ndiaye",
-              "number": 12,
-              "pos": "F"
-            },
-            {
-              "name": "Ibrahim Mbaye",
-              "number": 20,
-              "pos": "F"
-            }
-          ]
-        }
-      }
-    },
     "MEXICO-SOUTH AFRICA": {
       "fixtureId": 1489369,
       "round": "Group Stage - 1",
@@ -31134,6 +30724,416 @@
             {
               "name": "Meschak Elia",
               "number": 13,
+              "pos": "F"
+            }
+          ]
+        }
+      }
+    },
+    "BELGIUM-SENEGAL": {
+      "fixtureId": 1567308,
+      "round": "Round of 32",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "status": "AET",
+      "elapsed": 120,
+      "kickoffUTC": "2026-07-01T20:00:00+00:00",
+      "referee": "Said Martinez, Honduras",
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "H. Diarra",
+          "team": "SENEGAL",
+          "minute": 25,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "I. Sarr",
+          "team": "SENEGAL",
+          "minute": 51,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "B. Mechele",
+          "team": "BELGIUM",
+          "minute": 64,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "L. Camara",
+          "team": "SENEGAL",
+          "minute": 67,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "R. Lukaku",
+          "team": "BELGIUM",
+          "minute": 86,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Y. Tielemans",
+          "team": "BELGIUM",
+          "minute": 89,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "R. Garcia",
+          "team": "BELGIUM",
+          "minute": 90,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Penalty",
+          "player": "Y. Tielemans",
+          "team": "BELGIUM",
+          "minute": 120,
+          "extra": 5
+        }
+      ],
+      "substitutions": {
+        "BELGIUM": [
+          {
+            "out": "C. De Ketelaere",
+            "in": "R. Lukaku",
+            "minute": 46
+          },
+          {
+            "out": "K. De Bruyne",
+            "in": "N. Raskin",
+            "minute": 56
+          },
+          {
+            "out": "J. Doku",
+            "in": "D. Lukebakio",
+            "minute": 56
+          },
+          {
+            "out": "H. Vanaken",
+            "in": "D. Moreira",
+            "minute": 63
+          },
+          {
+            "out": "M. De Cuyper",
+            "in": "T. Meunier",
+            "minute": 78
+          },
+          {
+            "out": "L. Trossard",
+            "in": "A. Onana",
+            "minute": 109
+          }
+        ],
+        "SENEGAL": [
+          {
+            "out": "P. Gueye",
+            "in": "L. Camara",
+            "minute": 66
+          },
+          {
+            "out": "I. Ndiaye",
+            "in": "I. Mbaye",
+            "minute": 73
+          },
+          {
+            "out": "H. Diarra",
+            "in": "P. M. Sarr",
+            "minute": 73
+          },
+          {
+            "out": "S. Mane",
+            "in": "N. Jackson",
+            "minute": 93
+          },
+          {
+            "out": "I. Jakobs",
+            "in": "M. Diouf",
+            "minute": 93
+          },
+          {
+            "out": "I. Gueye",
+            "in": "B. Sapoko Ndiaye",
+            "minute": 96
+          }
+        ]
+      },
+      "lineups": {
+        "BELGIUM": {
+          "formation": "4-2-3-1",
+          "coach": "Rudi Garcia",
+          "startXI": [
+            {
+              "name": "Thibaut Courtois",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Timothy Castagne",
+              "number": 21,
+              "pos": "D"
+            },
+            {
+              "name": "Brandon Mechele",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Arthur Theate",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Maxim De Cuyper",
+              "number": 5,
+              "pos": "D"
+            },
+            {
+              "name": "Youri Tielemans",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Hans Vanaken",
+              "number": 20,
+              "pos": "M"
+            },
+            {
+              "name": "Leandro Trossard",
+              "number": 10,
+              "pos": "M"
+            },
+            {
+              "name": "Kevin De Bruyne",
+              "number": 7,
+              "pos": "M"
+            },
+            {
+              "name": "J\u00e9r\u00e9my Doku",
+              "number": 11,
+              "pos": "M"
+            },
+            {
+              "name": "Charles De Ketelaere",
+              "number": 17,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Mike Penders",
+              "number": 13,
+              "pos": "G"
+            },
+            {
+              "name": "Senne Lammens",
+              "number": 12,
+              "pos": "G"
+            },
+            {
+              "name": "Thomas Meunier",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Koni De Winter",
+              "number": 16,
+              "pos": "D"
+            },
+            {
+              "name": "Joaquin Seys",
+              "number": 18,
+              "pos": "D"
+            },
+            {
+              "name": "Nathan Ngoy",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Axel Witsel",
+              "number": 6,
+              "pos": "M"
+            },
+            {
+              "name": "Diego Moreira",
+              "number": 19,
+              "pos": "F"
+            },
+            {
+              "name": "Alexis Saelemaekers",
+              "number": 22,
+              "pos": "F"
+            },
+            {
+              "name": "Nicolas Raskin",
+              "number": 23,
+              "pos": "M"
+            },
+            {
+              "name": "Amadou Onana",
+              "number": 24,
+              "pos": "M"
+            },
+            {
+              "name": "Dodi Lukebakio",
+              "number": 14,
+              "pos": "F"
+            },
+            {
+              "name": "Romelu Lukaku",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Mat\u00edas Fern\u00e1ndez-Pardo",
+              "number": 26,
+              "pos": "F"
+            }
+          ]
+        },
+        "SENEGAL": {
+          "formation": "4-3-3",
+          "coach": "Bouna Thiaw Pape",
+          "startXI": [
+            {
+              "name": "Mory Diaw",
+              "number": 23,
+              "pos": "G"
+            },
+            {
+              "name": "Kr\u00e9pin Diatta",
+              "number": 15,
+              "pos": "D"
+            },
+            {
+              "name": "Path\u00e9 Isma\u00ebl Ciss",
+              "number": 6,
+              "pos": "D"
+            },
+            {
+              "name": "Moussa Niakhat\u00e9",
+              "number": 19,
+              "pos": "D"
+            },
+            {
+              "name": "Ismail Jakobs",
+              "number": 14,
+              "pos": "D"
+            },
+            {
+              "name": "Habib Diarra",
+              "number": 21,
+              "pos": "M"
+            },
+            {
+              "name": "Idrissa Gana Gueye",
+              "number": 5,
+              "pos": "M"
+            },
+            {
+              "name": "Pape Gueye",
+              "number": 26,
+              "pos": "M"
+            },
+            {
+              "name": "Iliman Ndiaye",
+              "number": 13,
+              "pos": "F"
+            },
+            {
+              "name": "Isma\u00efla Sarr",
+              "number": 18,
+              "pos": "F"
+            },
+            {
+              "name": "Sadio Man\u00e9",
+              "number": 10,
+              "pos": "F"
+            }
+          ],
+          "substitutes": [
+            {
+              "name": "Yehvann Diouf",
+              "number": 1,
+              "pos": "G"
+            },
+            {
+              "name": "Kalidou Koulibaly",
+              "number": 3,
+              "pos": "D"
+            },
+            {
+              "name": "Abdoulaye Seck",
+              "number": 4,
+              "pos": "D"
+            },
+            {
+              "name": "Antoine Mendy",
+              "number": 24,
+              "pos": "D"
+            },
+            {
+              "name": "El Hadji Malick Diouf",
+              "number": 25,
+              "pos": "D"
+            },
+            {
+              "name": "Mamadou Sarr",
+              "number": 2,
+              "pos": "D"
+            },
+            {
+              "name": "Pape Matar Sarr",
+              "number": 17,
+              "pos": "M"
+            },
+            {
+              "name": "Lamine Camara",
+              "number": 8,
+              "pos": "M"
+            },
+            {
+              "name": "Bara Sapoko Ndiaye",
+              "number": 22,
+              "pos": "M"
+            },
+            {
+              "name": "Assane Diao",
+              "number": 7,
+              "pos": "F"
+            },
+            {
+              "name": "Ahmadou Bamba Dieng",
+              "number": 9,
+              "pos": "F"
+            },
+            {
+              "name": "Nicolas Jackson",
+              "number": 11,
+              "pos": "F"
+            },
+            {
+              "name": "Cherif Ndiaye",
+              "number": 12,
+              "pos": "F"
+            },
+            {
+              "name": "Ibrahim Mbaye",
+              "number": 20,
               "pos": "F"
             }
           ]
