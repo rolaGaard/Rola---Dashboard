@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T22:43:09.758816Z",
+  "updated": "2026-07-01T22:44:13.920352Z",
   "matches": {
     "BELGIUM-SENEGAL": {
       "fixtureId": 1567308,
@@ -7,7 +7,7 @@
       "homeGoals": 3,
       "awayGoals": 2,
       "status": "ET",
-      "elapsed": 125,
+      "elapsed": 127,
       "kickoffUTC": "2026-07-01T20:00:00+00:00",
       "referee": "Said Martinez, Honduras",
       "events": [
@@ -66,6 +66,14 @@
           "team": "BELGIUM",
           "minute": 90,
           "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Penalty",
+          "player": "Y. Tielemans",
+          "team": "BELGIUM",
+          "minute": 120,
+          "extra": 5
         }
       ],
       "substitutions": {
