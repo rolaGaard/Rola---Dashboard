@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T05:07:11.034440Z",
+  "updated": "2026-07-01T05:08:13.570849Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "fixtureId": 1489369,
@@ -30447,6 +30447,16 @@
       "status": "NS",
       "elapsed": null,
       "kickoffUTC": "2026-07-04T17:00:00+00:00",
+      "referee": null
+    },
+    "PARAGUAY-FRANCE": {
+      "fixtureId": 1569870,
+      "round": "Round of 16",
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "NS",
+      "elapsed": null,
+      "kickoffUTC": "2026-07-04T21:00:00+00:00",
       "referee": null
     },
     "BRAZIL-NORWAY": {
