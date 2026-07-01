@@ -1,16 +1,25 @@
 {
-  "updated": "2026-07-01T16:07:11.610915Z",
+  "updated": "2026-07-01T16:08:13.606511Z",
   "matches": {
     "ENGLAND-CONGO DR": {
       "fixtureId": 1567307,
       "round": "Round of 32",
       "homeGoals": 0,
-      "awayGoals": 0,
+      "awayGoals": 1,
       "status": "1H",
-      "elapsed": 7,
+      "elapsed": 8,
       "kickoffUTC": "2026-07-01T16:00:00+00:00",
       "referee": "Adham Mohammad, Jordan",
-      "events": [],
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "B. Cipenga",
+          "team": "CONGO DR",
+          "minute": 7,
+          "extra": null
+        }
+      ],
       "lineups": {
         "ENGLAND": {
           "formation": "4-2-3-1",
