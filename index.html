@@ -908,7 +908,7 @@
     <img class="header-icon" src="icons/icon-192.png" alt="rolaGaard">
     <div class="header-text">
       <div class="header-title">Mundial 2026</div>
-      <div class="header-by">by rolaGaard &nbsp;<span class="app-version">v2.4</span></div>
+      <div class="header-by">by rolaGaard &nbsp;<span class="app-version">v2.5</span></div>
       <div class="header-sub" id="header-sub">USA · Canadá · México</div>
     </div>
   </div>
@@ -968,8 +968,8 @@
 
 <div id="group-zoom-modal" class="shortcut-instructions" style="display:none;">
 
-<div id="rotate-toast" class="rotate-toast">
-  <div class="rotate-icon" style="font-size:64px;">📱</div>
+<div id="rotate-toast" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;pointer-events:none;display:flex;align-items:center;justify-content:center;">
+  <span id="rotate-toast-icon" style="font-size:72px;opacity:0;display:block;">📱</span>
 </div>
   <div class="shortcut-instructions-box group-zoom-box">
     <button id="group-zoom-close" class="cookie-banner-close" aria-label="Cerrar">✕</button>
@@ -2272,14 +2272,26 @@ function render() {
     renderBracket();
     // En portrait, mostrar el hint de rotación solo la primera vez
     if (window.innerHeight > window.innerWidth) {
-      const toast = document.getElementById('rotate-toast');
-      if (toast) {
-        toast.classList.remove('visible');
-        toast.offsetHeight; // fuerza reflow para reiniciar animación
-        toast.classList.add('visible');
-        clearTimeout(toast._timer);
-        toast._timer = setTimeout(() => toast.classList.remove('visible'), 2100);
-      }
+      const icon = document.getElementById('rotate-toast-icon');
+      if (!icon) return;
+      // Reset completo
+      icon.style.transition = 'none';
+      icon.style.transform = 'rotate(0deg)';
+      icon.style.opacity = '0';
+      icon.offsetHeight; // reflow
+      // Aparecer
+      icon.style.transition = 'opacity 0.3s ease';
+      icon.style.opacity = '1';
+      // Rotar
+      setTimeout(() => {
+        icon.style.transition = 'transform 0.8s ease';
+        icon.style.transform = 'rotate(90deg)';
+      }, 400);
+      // Desaparecer
+      setTimeout(() => {
+        icon.style.transition = 'opacity 0.4s ease';
+        icon.style.opacity = '0';
+      }, 1400);
     }
     updateCounters(); return;
   }
