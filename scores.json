@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T04:02:11.847671Z",
+  "updated": "2026-07-01T04:03:11.150428Z",
   "matches": {
     "MEXICO-SOUTH AFRICA": {
       "fixtureId": 1489369,
@@ -6553,7 +6553,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-16T22:00:00+00:00",
-      "referee": "P. Atcho",
+      "referee": "Pierre Ghislain Atcho, Gabon",
       "events": [
         {
           "type": "Goal",
@@ -6947,7 +6947,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-17T01:00:00+00:00",
-      "referee": "S. Marciniak",
+      "referee": "Szymon Marciniak, Poland",
       "events": [
         {
           "type": "Goal",
@@ -7317,7 +7317,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-17T04:00:00+00:00",
-      "referee": "D. Beida",
+      "referee": "Dahane Beida, Mauritania",
       "events": [
         {
           "type": "Goal",
@@ -7703,7 +7703,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-17T17:00:00+00:00",
-      "referee": "A. Al Jassim",
+      "referee": "Abdulrahman Al-Jassim, Qatar",
       "events": [
         {
           "type": "Goal",
@@ -8092,7 +8092,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-17T20:00:00+00:00",
-      "referee": "C. Turpin",
+      "referee": "Clement Turpin, France",
       "events": [
         {
           "type": "Goal",
@@ -8481,7 +8481,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-17T23:00:00+00:00",
-      "referee": "G. Nyberg",
+      "referee": "Glenn Nyberg, Sweden",
       "events": [
         {
           "type": "Card",
@@ -8849,7 +8849,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-18T02:00:00+00:00",
-      "referee": "A. Taylor",
+      "referee": "Anthony Taylor, England",
       "events": [
         {
           "type": "Card",
@@ -9243,7 +9243,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-18T16:00:00+00:00",
-      "referee": "T. Penso",
+      "referee": "Tori Penso, USA",
       "events": [
         {
           "type": "Goal",
@@ -9604,7 +9604,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-18T19:00:00+00:00",
-      "referee": "J. Pinheiro",
+      "referee": "Joao Pedro Pinheiro, Portugal",
       "events": [
         {
           "type": "Card",
@@ -10017,7 +10017,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-18T22:00:00+00:00",
-      "referee": "C. Garay",
+      "referee": "Cristian Garay, Chile",
       "events": [
         {
           "type": "Card",
@@ -10446,7 +10446,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-19T01:00:00+00:00",
-      "referee": "G. Tejera",
+      "referee": "Gustavo Tejera, Uruguay",
       "events": [
         {
           "type": "Card",
@@ -10811,7 +10811,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-19T19:00:00+00:00",
-      "referee": "F. Zwayer",
+      "referee": "Felix Zwayer, Germany",
       "events": [
         {
           "type": "Goal",
@@ -11224,7 +11224,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-19T22:00:00+00:00",
-      "referee": "I. Tantashev",
+      "referee": "Ilgiz Tantashev, Uzbekistan",
       "events": [
         {
           "type": "Goal",
@@ -11589,7 +11589,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-20T00:30:00+00:00",
-      "referee": "A. Hernandez",
+      "referee": "Alejandro Hernandez, Spain",
       "events": [
         {
           "type": "Card",
@@ -11986,7 +11986,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-20T03:00:00+00:00",
-      "referee": "I. Barton",
+      "referee": "Iv\u00e1n Barton, El Salvador",
       "events": [
         {
           "type": "Goal",
@@ -12364,7 +12364,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-20T17:00:00+00:00",
-      "referee": "M. Oliver",
+      "referee": "Michael Oliver, England",
       "events": [
         {
           "type": "Goal",
@@ -12777,7 +12777,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-20T20:00:00+00:00",
-      "referee": "J. Benitez",
+      "referee": "Juan Gabriel Benitez, Paraguay",
       "events": [
         {
           "type": "Goal",
@@ -13147,7 +13147,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-21T00:00:00+00:00",
-      "referee": "Ma Ning",
+      "referee": "Ma Ning, China",
       "events": [
         {
           "type": "Card",
@@ -13536,7 +13536,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-21T04:00:00+00:00",
-      "referee": "I. Kovacs",
+      "referee": "Istvan Kovacs, Romania",
       "events": [
         {
           "type": "Goal",
@@ -13904,7 +13904,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-21T16:00:00+00:00",
-      "referee": "R. Claus",
+      "referee": "Raphael Claus, Brazil",
       "events": [
         {
           "type": "Goal",
@@ -14298,7 +14298,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-21T19:00:00+00:00",
-      "referee": "D. Herrera",
+      "referee": "Dario Herrera, Argentina",
       "events": [
         {
           "type": "Card",
@@ -14658,7 +14658,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-21T22:00:00+00:00",
-      "referee": "E. Eskas",
+      "referee": "Espen Eskas, Norway",
       "events": [
         {
           "type": "Card",
@@ -15048,7 +15048,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-22T01:00:00+00:00",
-      "referee": "O. Alali",
+      "referee": "Omar Mohamed Al Ali, United Arab Emirates",
       "events": [
         {
           "type": "Goal",
@@ -15455,7 +15455,7 @@
       "status": "FT",
       "elapsed": 90,
       "kickoffUTC": "2026-06-22T17:00:00+00:00",
-      "referee": "A. Omar",
+      "referee": "Amin Mohamed Omar, Egypt",
       "events": [
         {
           "type": "Goal",
