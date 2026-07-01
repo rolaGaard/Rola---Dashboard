@@ -359,7 +359,7 @@
      de cada columna — que es el lado que mira hacia el centro */
   .vb-right .vb-group::after {
     content:''; position:absolute; top:25%; bottom:25%;
-    right:0; border-right:2px solid #3a3a4a;
+    left:0; border-left:2px solid #3a3a4a;
   }
   .vb-slot {
     flex:1; display:flex; align-items:center; padding:2px 4px; position:relative;
@@ -369,9 +369,8 @@
     content:''; position:absolute; right:0; top:50%;
     width:4px; border-top:2px solid #3a3a4a;
   }
-  /* Mismo: right:0 en DOM = visualmente izquierda con row-reverse */
   .vb-right .vb-slot::after {
-    content:''; position:absolute; right:0; top:50%;
+    content:''; position:absolute; left:0; top:50%;
     width:4px; border-top:2px solid #3a3a4a;
   }
   /* Conector entre columnas de rondas */
@@ -3390,7 +3389,7 @@ function renderBracket() {
   bracketHtml += '<div class="vb-third-label">' + t('tercerPuesto') + '</div>';
   bracketHtml += buildVbCardFromMatch(resolveVbMatch(thirdCal));
   bracketHtml += '</div>';
-  bracketHtml += buildVbHalfFromSections(right, 'right', labels16, labels8, labels4, labelsSF);
+  bracketHtml += buildVbHalfFromSections([...right].reverse(), 'right', labels16, labels8, labels4, labelsSF);
   bracketHtml += '</div>';
   bracketHtml += buildVbMobileDynamic();
 
