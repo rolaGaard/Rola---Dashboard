@@ -186,6 +186,8 @@ jobs:
               prev_entry = previous_scores.get(key, {})
 
               entry = {
+                  'fixtureId': fixture.get('id'),
+                  'round': fx.get('league', {}).get('round'),
                   'homeGoals': goals['home'],
                   'awayGoals': goals['away'],
                   'status': status,
