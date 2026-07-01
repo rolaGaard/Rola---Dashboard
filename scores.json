@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T21:51:10.356868Z",
+  "updated": "2026-07-01T21:52:13.656339Z",
   "matches": {
     "BELGIUM-SENEGAL": {
       "fixtureId": 1567308,
@@ -7,7 +7,7 @@
       "homeGoals": 2,
       "awayGoals": 2,
       "status": "2H",
-      "elapsed": 89,
+      "elapsed": 90,
       "kickoffUTC": "2026-07-01T20:00:00+00:00",
       "referee": "Said Martinez, Honduras",
       "events": [
@@ -49,6 +49,14 @@
           "player": "R. Lukaku",
           "team": "BELGIUM",
           "minute": 86,
+          "extra": null
+        },
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "Y. Tielemans",
+          "team": "BELGIUM",
+          "minute": 89,
           "extra": null
         }
       ],
