@@ -1,11 +1,11 @@
 {
-  "updated": "2026-07-01T03:07:09.973630Z",
+  "updated": "2026-07-01T03:08:11.580480Z",
   "matches": {
     "MEXICO-ECUADOR": {
       "homeGoals": 2,
       "awayGoals": 0,
-      "status": "HT",
-      "elapsed": 45,
+      "status": "2H",
+      "elapsed": 46,
       "kickoffUTC": "2026-07-01T01:00:00+00:00",
       "referee": "Slavko Vin\u010di\u0107, Slovenia",
       "events": [
@@ -34,6 +34,20 @@
           "extra": 1
         }
       ],
+      "substitutions": {
+        "ECUADOR": [
+          {
+            "out": "A. Franco",
+            "in": "A. Preciado",
+            "minute": 46
+          },
+          {
+            "out": "J. Ordonez",
+            "in": "Y. Medina",
+            "minute": 46
+          }
+        ]
+      },
       "lineups": {
         "MEXICO": {
           "formation": "4-3-3",
