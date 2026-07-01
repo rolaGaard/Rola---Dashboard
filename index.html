@@ -340,7 +340,11 @@
   .vb-half {
     display:flex; flex:1; min-width:0;
   }
+  /* Izquierda: columnas de izquierda a derecha (R32→R16→QF→SF→centro) */
   .vb-left { flex-direction:row; }
+  /* Derecha: columnas de derecha a izquierda (R32→R16→QF→SF→centro).
+     row-reverse invierte el orden visual pero el JS ya pasa los rounds
+     en el orden correcto (SF primero, R32 último) */
   .vb-right { flex-direction:row-reverse; }
   .vb-round {
     display:flex; flex-direction:column; flex:1; min-width:0;
@@ -353,17 +357,24 @@
   .vb-group {
     display:flex; flex-direction:column; flex:1; position:relative;
   }
-  .vb-group::after {
+  /* La línea vertical conectora va del lado que mira hacia la siguiente ronda */
+  .vb-left .vb-group::after {
     content:''; position:absolute; top:25%; bottom:25%;
-    border-right:2px solid #2a2a3a;
+    right:0; border-right:2px solid #2a2a3a;
   }
-  .vb-left .vb-group::after { right:0; }
-  .vb-right .vb-group::after { left:0; right:auto; }
-
+  /* En el lado derecho, con row-reverse, "la siguiente ronda" está visualmente
+     a la izquierda de la columna actual — pero el ::after se posiciona en
+     el DOM original, que es al revés. Usamos left:0 para que la línea
+     aparezca en el borde que converge al centro. */
+  .vb-right .vb-group::after {
+    content:''; position:absolute; top:25%; bottom:25%;
+    left:0; border-left:2px solid #2a2a3a;
+  }
   .vb-slot {
     flex:1; display:flex; align-items:center; padding:2px 4px; position:relative;
     min-height:clamp(40px, 6vh, 60px);
   }
+  /* Línea horizontal desde la tarjeta hasta la línea vertical del grupo */
   .vb-left .vb-slot::after {
     content:''; position:absolute; right:0; top:50%;
     width:4px; border-top:2px solid #2a2a3a;
@@ -372,6 +383,7 @@
     content:''; position:absolute; left:0; top:50%;
     width:4px; border-top:2px solid #2a2a3a;
   }
+  /* Conector horizontal entre columnas de rondas */
   .vb-left .vb-connector { width:8px; display:flex; align-items:center; flex-shrink:0; }
   .vb-left .vb-connector::before { content:''; display:block; height:2px; width:8px; background:#2a2a3a; }
   .vb-right .vb-connector { width:8px; display:flex; align-items:center; flex-shrink:0; }
