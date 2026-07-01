@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T21:25:15.936026Z",
+  "updated": "2026-07-01T21:26:12.055352Z",
   "matches": {
     "BELGIUM-SENEGAL": {
       "fixtureId": 1567308,
@@ -7,7 +7,7 @@
       "homeGoals": 0,
       "awayGoals": 2,
       "status": "2H",
-      "elapsed": 63,
+      "elapsed": 64,
       "kickoffUTC": "2026-07-01T20:00:00+00:00",
       "referee": "Said Martinez, Honduras",
       "events": [
@@ -25,6 +25,14 @@
           "player": "I. Sarr",
           "team": "SENEGAL",
           "minute": 51,
+          "extra": null
+        },
+        {
+          "type": "Card",
+          "detail": "Yellow Card",
+          "player": "B. Mechele",
+          "team": "BELGIUM",
+          "minute": 64,
           "extra": null
         }
       ],
@@ -44,6 +52,11 @@
             "out": "J. Doku",
             "in": "D. Lukebakio",
             "minute": 56
+          },
+          {
+            "out": "H. Vanaken",
+            "in": "D. Moreira",
+            "minute": 63
           }
         ]
       },
