@@ -967,14 +967,6 @@
 </div>
 
 <div id="group-zoom-modal" class="shortcut-instructions" style="display:none;">
-
-<div id="rotate-toast" style="display:none;text-align:center;padding:24px 0 8px;">
-  <svg id="rotate-toast-icon" width="60" height="60" viewBox="0 0 80 80">
-    <rect x="20" y="8" width="40" height="64" rx="6" fill="none" stroke="#94a3b8" stroke-width="3"/>
-    <rect x="30" y="12" width="20" height="3" rx="1.5" fill="#94a3b8"/>
-    <circle cx="40" cy="65" r="3" fill="#94a3b8"/>
-  </svg>
-</div>
   <div class="shortcut-instructions-box group-zoom-box">
     <button id="group-zoom-close" class="cookie-banner-close" aria-label="Cerrar">✕</button>
     <div id="group-zoom-content"></div>
@@ -1003,6 +995,13 @@
 
 <div class="matches-container" id="matches"></div>
 
+<div id="rotate-toast" style="display:none;text-align:center;padding:24px 0 8px;">
+  <svg id="rotate-toast-icon" width="60" height="60" viewBox="0 0 80 80">
+    <rect x="20" y="8" width="40" height="64" rx="6" fill="none" stroke="#94a3b8" stroke-width="3"/>
+    <rect x="30" y="12" width="20" height="3" rx="1.5" fill="#94a3b8"/>
+    <circle cx="40" cy="65" r="3" fill="#94a3b8"/>
+  </svg>
+</div>
 <div class="bracket-view" id="bracket-view" style="display:none;"></div>
 
 <div class="countries-view" id="countries-view" style="display:none;"></div>
@@ -2274,37 +2273,33 @@ function render() {
     document.getElementById('matches').style.display = 'none';
     document.getElementById('bracket-view').style.display = '';
     renderBracket();
-    // En portrait, mostrar el hint de rotación solo la primera vez
     if (window.innerHeight > window.innerWidth) {
       const toast = document.getElementById('rotate-toast');
       const icon = document.getElementById('rotate-toast-icon');
-      if (!toast || !icon) return;
-      // Mostrar el contenedor
-      toast.style.display = 'block';
-      // Reset
-      icon.style.transition = 'none';
-      icon.style.transform = 'rotate(0deg)';
-      icon.style.opacity = '0';
-      icon.offsetHeight;
-      // Aparecer
-      icon.style.transition = 'opacity 0.3s ease';
-      icon.style.opacity = '1';
-      // Rotar
-      setTimeout(() => {
-        icon.style.transition = 'transform 0.9s ease';
-        icon.style.transform = 'rotate(90deg)';
-      }, 400);
-      // Desaparecer y ocultar
-      setTimeout(() => {
-        icon.style.transition = 'opacity 0.4s ease';
+      if (toast && icon) {
+        toast.style.display = 'block';
+        icon.style.transition = 'none';
+        icon.style.transform = 'rotate(0deg)';
         icon.style.opacity = '0';
-      }, 1500);
-      setTimeout(() => {
-        toast.style.display = 'none';
-      }, 2000);
+        icon.offsetHeight;
+        icon.style.transition = 'opacity 0.3s ease';
+        icon.style.opacity = '1';
+        setTimeout(() => {
+          icon.style.transition = 'transform 0.9s ease';
+          icon.style.transform = 'rotate(90deg)';
+        }, 400);
+        setTimeout(() => {
+          icon.style.transition = 'opacity 0.4s ease';
+          icon.style.opacity = '0';
+        }, 1500);
+        setTimeout(() => {
+          toast.style.display = 'none';
+        }, 2000);
+      }
     }
     updateCounters(); return;
   }
+  document.getElementById('rotate-toast').style.display = 'none';
   document.querySelector('.search-wrap').style.display = '';
   document.getElementById('matches').style.display = '';
   document.getElementById('bracket-view').style.display = 'none';
@@ -3443,8 +3438,7 @@ function renderBracket() {
   const labels4 = t('cuartosDeFinal');
   const labelsSF = t('semifinales');
 
-  let bracketHtml = document.getElementById('rotate-toast').outerHTML +
-    '<div class="vb-section-title">\u{1F3C6} ' + t('cuadroEliminatorio') + '</div>';
+  let bracketHtml = '<div class="vb-section-title">\u{1F3C6} ' + t('cuadroEliminatorio') + '</div>';
   bracketHtml += '<div class="vb-wrap">';
   bracketHtml += buildVbHalfFromSections(left, 'left', labels16, labels8, labels4, labelsSF);
 
