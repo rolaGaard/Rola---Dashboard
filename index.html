@@ -3291,10 +3291,12 @@ function buildBracketSections() {
 }
 
 function buildVbHalfFromSections(sections, side, label16, label8, label4, labelSF) {
-  // Izquierda: R32→R16→QF→SF en el DOM = visual izquierda a derecha
-  // Derecha: R32→R16→QF→SF en el DOM, pero row-reverse los muestra
-  //          de derecha a izquierda (R32 en extremo derecho, SF cerca del centro)
-  const rounds = roundsBase;
+  const rounds = [
+    { label: label16, key: 'r32' },
+    { label: label8,  key: 'r16' },
+    { label: label4,  key: 'qf'  },
+    { label: labelSF, key: 'sf'  },
+  ];
 
   let html = '<div class="vb-half vb-' + side + '">';
   rounds.forEach((round, ri) => {
