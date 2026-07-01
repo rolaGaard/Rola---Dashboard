@@ -2,10 +2,17 @@ name: Update World Cup Scores
 
 on:
   schedule:
-    # Runs every 10 minutes, but only during match window (16:00-08:00 UTC = 13:00-05:00 AR)
-    # GitHub Actions cron is UTC. We run every 10 min across the full day window
-    # and the script itself decides whether AR time is within match hours.
-    - cron: '*/10 * * * *'
+    # Runs every 1 minute, but only during match window (16:00-08:00 UTC = 13:00-05:00 AR)
+    # GitHub Actions cron is UTC. We run every minute across the full day
+    # window and the script itself decides whether AR time is within match
+    # hours. 1 minuto es el mínimo técnico posible en cron (no hay
+    # resolución por debajo del minuto).
+    # NOTA: el disparador principal real es cron-job.org llamando a
+    # workflow_dispatch cada 1 min (más confiable que el cron nativo de
+    # GitHub Actions, que documentadamente puede demorarse 1-2 horas). Este
+    # cron de acá es solo un respaldo — si cambiás el intervalo, ajustalo
+    # también en cron-job.org.
+    - cron: '* * * * *'
   workflow_dispatch: {}
 
 jobs:
@@ -147,7 +154,6 @@ jobs:
                           'coach': (side.get('coach') or {}).get('name'),
                           'startXI': start_xi,
                           'substitutes': subs,
-                          'colors': (side.get('team') or {}).get('colors'),
                       }
                   return result
               except Exception as e:
