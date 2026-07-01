@@ -1,13 +1,13 @@
 {
-  "updated": "2026-07-01T21:07:11.113560Z",
+  "updated": "2026-07-01T21:08:12.860510Z",
   "matches": {
     "BELGIUM-SENEGAL": {
       "fixtureId": 1567308,
       "round": "Round of 32",
       "homeGoals": 0,
       "awayGoals": 1,
-      "status": "HT",
-      "elapsed": 45,
+      "status": "2H",
+      "elapsed": 46,
       "kickoffUTC": "2026-07-01T20:00:00+00:00",
       "referee": "Said Martinez, Honduras",
       "events": [
@@ -20,6 +20,15 @@
           "extra": null
         }
       ],
+      "substitutions": {
+        "BELGIUM": [
+          {
+            "out": "C. De Ketelaere",
+            "in": "R. Lukaku",
+            "minute": 46
+          }
+        ]
+      },
       "lineups": {
         "BELGIUM": {
           "formation": "4-2-3-1",
