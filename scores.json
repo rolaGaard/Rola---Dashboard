@@ -1,13 +1,13 @@
 {
-  "updated": "2026-07-01T17:08:12.898345Z",
+  "updated": "2026-07-01T17:09:10.436077Z",
   "matches": {
     "ENGLAND-CONGO DR": {
       "fixtureId": 1567307,
       "round": "Round of 32",
       "homeGoals": 0,
       "awayGoals": 1,
-      "status": "HT",
-      "elapsed": 45,
+      "status": "2H",
+      "elapsed": 46,
       "kickoffUTC": "2026-07-01T16:00:00+00:00",
       "referee": "Adham Mohammad, Jordan",
       "events": [
