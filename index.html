@@ -339,7 +339,7 @@
   }
   .vb-half { display:flex; flex:1; min-width:0; }
   .vb-left { flex-direction:row; }
-  .vb-right { flex-direction:row-reverse; }
+  .vb-right { flex-direction:row; }
 
   .vb-round { display:flex; flex-direction:column; flex:1; min-width:0; }
   .vb-round-label {
@@ -359,7 +359,7 @@
      de cada columna — que es el lado que mira hacia el centro */
   .vb-right .vb-group::after {
     content:''; position:absolute; top:25%; bottom:25%;
-    left:0; border-left:2px solid #3a3a4a;
+    right:0; border-right:2px solid #3a3a4a;
   }
   .vb-slot {
     flex:1; display:flex; align-items:center; padding:2px 4px; position:relative;
@@ -370,7 +370,7 @@
     width:4px; border-top:2px solid #3a3a4a;
   }
   .vb-right .vb-slot::after {
-    content:''; position:absolute; left:0; top:50%;
+    content:''; position:absolute; right:0; top:50%;
     width:4px; border-top:2px solid #3a3a4a;
   }
   /* Conector entre columnas de rondas */
@@ -3291,12 +3291,14 @@ function buildBracketSections() {
 }
 
 function buildVbHalfFromSections(sections, side, label16, label8, label4, labelSF) {
-  const rounds = [
+  const roundsLeft = [
     { label: label16, key: 'r32' },
     { label: label8,  key: 'r16' },
     { label: label4,  key: 'qf'  },
     { label: labelSF, key: 'sf'  },
   ];
+  // Derecha: SF primero (cerca del centro), R32 último (extremo derecho)
+  const rounds = side === 'left' ? roundsLeft : [...roundsLeft].reverse();
 
   let html = '<div class="vb-half vb-' + side + '">';
   rounds.forEach((round, ri) => {
