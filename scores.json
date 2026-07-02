@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02T01:17:09.803480Z",
+  "updated": "2026-07-02T01:18:11.638682Z",
   "matches": {
     "USA-BOSNIA & HERZEGOVINA": {
       "fixtureId": 1562586,
@@ -7,7 +7,7 @@
       "homeGoals": 1,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 51,
+      "elapsed": 52,
       "kickoffUTC": "2026-07-02T00:00:00+00:00",
       "referee": "Raphael Claus, Brazil",
       "events": [
@@ -26,6 +26,16 @@
             "out": "A. Gigovic",
             "in": "E. Bajraktarevic",
             "minute": 51
+          },
+          {
+            "out": "I. Sunjic",
+            "in": "B. Tahirovic",
+            "minute": 51
+          },
+          {
+            "out": "E. Dzeko",
+            "in": "E. Mahmic",
+            "minute": 52
           }
         ]
       },
