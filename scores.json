@@ -1,16 +1,25 @@
 {
-  "updated": "2026-07-02T00:44:11.574609Z",
+  "updated": "2026-07-02T00:45:25.427356Z",
   "matches": {
     "USA-BOSNIA & HERZEGOVINA": {
       "fixtureId": 1562586,
       "round": "Round of 32",
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 0,
       "status": "1H",
-      "elapsed": 44,
+      "elapsed": 45,
       "kickoffUTC": "2026-07-02T00:00:00+00:00",
       "referee": "Raphael Claus, Brazil",
-      "events": [],
+      "events": [
+        {
+          "type": "Goal",
+          "detail": "Normal Goal",
+          "player": "F. Balogun",
+          "team": "USA",
+          "minute": 45,
+          "extra": null
+        }
+      ],
       "lineups": {
         "USA": {
           "formation": "4-2-3-1",
