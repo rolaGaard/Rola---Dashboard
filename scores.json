@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02T01:18:11.638682Z",
+  "updated": "2026-07-02T01:19:09.233450Z",
   "matches": {
     "USA-BOSNIA & HERZEGOVINA": {
       "fixtureId": 1562586,
@@ -7,7 +7,7 @@
       "homeGoals": 1,
       "awayGoals": 0,
       "status": "2H",
-      "elapsed": 52,
+      "elapsed": 53,
       "kickoffUTC": "2026-07-02T00:00:00+00:00",
       "referee": "Raphael Claus, Brazil",
       "events": [
@@ -35,7 +35,7 @@
           {
             "out": "E. Dzeko",
             "in": "E. Mahmic",
-            "minute": 52
+            "minute": 51
           }
         ]
       },
